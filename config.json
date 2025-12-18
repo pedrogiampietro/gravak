@@ -1,0 +1,72 @@
+{
+  "HMAC": {
+    "SHARED_SECRET": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "LOGIN": {
+    "PORT": 1337,
+    "HOST": "127.0.0.1",
+    "TOKEN_VALID_MS": 3000
+  },
+  "IPC": {
+    "RECONNECT_MS": 1000,
+    "HOST": "127.0.0.1",
+    "PORT": 2000,
+    "SOCKET": "game.sock"
+  },
+  "LOGGING": {
+    "INTERVAL": 20,
+    "NETWORK_TELEMETRY": true,
+    "FILEPATH": "server.log"
+  },
+  "DATABASE": {
+    "ACCOUNT_DATABASE": "accounts.db",
+    "DEFAULT_CHARACTER": {
+      "ENABLED": true,
+      "ACCOUNT": "111111",
+      "PASSWORD": "tibia",
+      "SEX": "male",
+      "NAME": "God"
+    }
+  },
+  "SERVER": {
+    "COMPRESSION": {
+      "ENABLED": true,
+      "THRESHOLD": 1024,
+      "LEVEL": 1
+    },
+    "ON_ALREADY_ONLINE": "replace",
+    "EXTERNAL_HOST": "ws://127.0.0.1:2222",
+    "VERSION": "0.0.0",
+    "CLIENT_VERSION": "740",
+    "DATE": "2022-03-24",
+    "PORT": 2222,
+    "HOST": "127.0.0.1",
+    "ALLOW_MAXIMUM_CONNECTIONS": 50,
+    "MS_TICK_INTERVAL": 50,
+    "MS_SHUTDOWN_SCHEDULE": 1000,
+    "MAX_PACKET_SIZE": 1024
+  },
+  "WORLD": {
+    "GLOBAL_COOLDOWN_MS": 1000,
+    "WORLD_FILE": "Tibia74.otbm",
+    "IDLE": {
+      "WARN_SECONDS": 300,
+      "KICK_SECONDS": 60
+    },
+    "CHUNK": {
+      "WIDTH": 9,
+      "HEIGHT": 7,
+      "DEPTH": 8
+    },
+    "CLOCK": {
+      "SPEED": 6,
+      "START": "08:00"
+    },
+    "SPAWNS": {
+      "ENABLED": false
+    },
+    "NPCS": {
+      "ENABLED": false
+    }
+  }
+}

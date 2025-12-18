@@ -1,0 +1,11 @@
+{
+  "cipfried": {
+    "position": {
+      "x": 32097,
+      "y": 32219,
+      "z": 8
+    },
+    "enabled": true,
+    "definition": "cipfried.json"
+  }
+}

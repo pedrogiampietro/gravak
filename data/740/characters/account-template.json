@@ -1,0 +1,106 @@
+{
+  "creatureStatistics": {
+    "attack": 4,
+    "attackSlowness": 20,
+    "defense": 2,
+    "direction": 2,
+    "health": 50,
+    "maxHealth": 50,
+    "name": null,
+    "outfit": {
+      "id": null,
+      "details": {
+        "head": 78,
+        "body": 69,
+        "legs": 58,
+        "feet": 76
+      },
+      "mount": 0,
+      "mounted": false,
+      "addonOne": false,
+      "addonTwo": false
+    },
+    "speed": 1020
+  },
+  "inbox": [],
+  "depot": [
+    {
+      "id": 2594
+    },
+    null,
+    null,
+    null
+  ],
+  "characterStatistics": {
+    "position": {
+      "x": 32180,
+      "y": 31934,
+      "z": 8
+    },
+    "admin": false,
+    "sex": 0,
+    "templePosition": {
+      "x": 32097,
+      "y": 32215,
+      "z": 8
+    },
+    "maxCapacity": 20000,
+    "level": 1,
+    "experience": 0,
+    "availableMounts": [],
+    "availableOutfits": []
+  },
+  "spellbook": {
+    "availableSpells": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9
+    ],
+    "cooldowns": []
+  },
+  "keyring": [],
+  "equipment": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+      "id": 1988,
+      "duration": null,
+      "items": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    null,
+    null,
+    null
+  ],
+  "friends": []
+}
