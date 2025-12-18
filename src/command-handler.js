@@ -3,7 +3,7 @@
 const Position = requireModule("position");
 const { ServerMessagePacket } = requireModule("protocol");
 
-const CommandHandler = function () {};
+const CommandHandler = function () { };
 
 CommandHandler.prototype.WAYPOINTS = new Object({
   rookgaard: new Position(32097, 32219, 8),
@@ -237,6 +237,35 @@ CommandHandler.prototype.handle = function (player, message) {
 
   if (message[0] === "/addskill") {
     return this.handleCommandAddSkill(player, message[1], message[2]);
+  }
+
+  // Create item command: /i [item_id] [count]
+  if (message[0] === "/i") {
+    let itemId = Number(message[1]);
+    let count = Number(message[2]) || 1;
+
+    // Validate item ID
+    if (isNaN(itemId) || itemId <= 0) {
+      return player.sendCancelMessage("Invalid item ID. Usage: /i [item_id] [count]");
+    }
+
+    // Create the item
+    let thing = gameServer.database.createThing(itemId);
+
+    if (thing === null) {
+      return player.sendCancelMessage("Item with ID " + itemId + " does not exist.");
+    }
+
+    // Set count for stackable items
+    if (thing.isStackable() && count > 1) {
+      thing.setCount(Math.min(count, 100)); // Max 100 for stackable items
+    }
+
+    // Add the item to the player's position
+    gameServer.world.addTopThing(player.getPosition(), thing);
+
+    // Send success message
+    return player.sendCancelMessage("Created item " + itemId + (count > 1 ? " x" + count : ""));
   }
 };
 

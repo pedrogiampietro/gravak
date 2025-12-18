@@ -4,7 +4,7 @@ const Outfit = requireModule("outfit");
 const Packet = requireModule("packet");
 const Position = requireModule("position");
 
-const PacketReader = function(buffer) {
+const PacketReader = function (buffer) {
 
   /*
    * Class PacketReader
@@ -22,7 +22,7 @@ const PacketReader = function(buffer) {
 PacketReader.prototype = Object.create(Packet.prototype);
 PacketReader.constructor = PacketReader;
 
-PacketReader.prototype.readBuyOffer = function() {
+PacketReader.prototype.readBuyOffer = function () {
 
   /*
    * Function PacketReader.readBuyOffer
@@ -38,7 +38,7 @@ PacketReader.prototype.readBuyOffer = function() {
 
 }
 
-PacketReader.prototype.readMoveItem = function(player) {
+PacketReader.prototype.readMoveItem = function (player) {
 
   /*
    * Function PacketReader.readMoveItem
@@ -55,7 +55,7 @@ PacketReader.prototype.readMoveItem = function(player) {
 
 }
 
-PacketReader.prototype.readAccountDetails = function() {
+PacketReader.prototype.readAccountDetails = function () {
 
   /*
    * Function PacketReader.readAccountDetails
@@ -69,7 +69,7 @@ PacketReader.prototype.readAccountDetails = function() {
 
 }
 
-PacketReader.prototype.readClientMessage = function() {
+PacketReader.prototype.readClientMessage = function () {
 
   /*
    * Function PacketReader.readClientMessage
@@ -84,7 +84,7 @@ PacketReader.prototype.readClientMessage = function() {
 
 }
 
-PacketReader.prototype.readPrivateMessage = function() {
+PacketReader.prototype.readPrivateMessage = function () {
 
   /*
    * Function PacketReader.readPrivateMessage
@@ -98,7 +98,7 @@ PacketReader.prototype.readPrivateMessage = function() {
 
 }
 
-PacketReader.prototype.readItemUseWith = function(player) {
+PacketReader.prototype.readItemUseWith = function (player) {
 
   /*
    * Function PacketReader.readItemUseWith
@@ -114,7 +114,7 @@ PacketReader.prototype.readItemUseWith = function(player) {
 
 }
 
-PacketReader.prototype.isReadable = function() {
+PacketReader.prototype.isReadable = function () {
 
   /*
    * Function PacketReader.readable
@@ -125,7 +125,7 @@ PacketReader.prototype.isReadable = function() {
 
 }
 
-PacketReader.prototype.seek = function(offset) {
+PacketReader.prototype.seek = function (offset) {
 
   /*
    * Public Function PacketReader.seek
@@ -136,7 +136,7 @@ PacketReader.prototype.seek = function(offset) {
 
 }
 
-PacketReader.prototype.readPositionAndIndex = function(player) {
+PacketReader.prototype.readPositionAndIndex = function (player) {
 
   /*
    * Public Function PacketReader.readPositionAndIndex
@@ -150,17 +150,26 @@ PacketReader.prototype.readPositionAndIndex = function(player) {
 
 }
 
-PacketReader.prototype.readMoveEvent = function(player) {
+PacketReader.prototype.readMoveEvent = function (player) {
 
   /*
    * Public Function PacketReader.readMoveEvent
    * Read an item movement event (from tile, container, equipment)
    */
 
-  switch(this.readUInt8()) {
+  let type = this.readUInt8();
+  console.log("=== DEBUG readMoveEvent ===");
+  console.log("Type:", type);
+
+  switch (type) {
     case 0:
-      this.readUInt16();
-      return player.containerManager.getContainerFromId(this.readUInt32());
+      let padding = this.readUInt16();
+      let containerId = this.readUInt32();
+      console.log("Container ID:", containerId);
+      let container = player.containerManager.getContainerFromId(containerId);
+      console.log("Container found:", container ? container.constructor.name : null);
+      console.log("Opened containers:", Array.from(player.containerManager.__openedContainers.keys()));
+      return container;
     case 1:
       return process.gameServer.world.getTileFromWorldPosition(this.readWorldPosition());
     default:
@@ -169,7 +178,7 @@ PacketReader.prototype.readMoveEvent = function(player) {
 
 }
 
-PacketReader.prototype.readString16 = function() {
+PacketReader.prototype.readString16 = function () {
 
   /*
    * Public Function PacketReader.readString16
@@ -184,7 +193,7 @@ PacketReader.prototype.readString16 = function() {
 
 }
 
-PacketReader.prototype.readString = function() {
+PacketReader.prototype.readString = function () {
 
   /*
    * Public Function PacketReader.readString
@@ -199,7 +208,7 @@ PacketReader.prototype.readString = function() {
 
 }
 
-PacketReader.prototype.readUInt8 = function() {
+PacketReader.prototype.readUInt8 = function () {
 
   /*
    * Public Function PacketReader.readUInt8
@@ -213,7 +222,7 @@ PacketReader.prototype.readUInt8 = function() {
 
 }
 
-PacketReader.prototype.readUInt16 = function() {
+PacketReader.prototype.readUInt16 = function () {
 
   /*
    * Public Function PacketReader.readUInt16
@@ -227,7 +236,7 @@ PacketReader.prototype.readUInt16 = function() {
 
 }
 
-PacketReader.prototype.readUInt32 = function() {
+PacketReader.prototype.readUInt32 = function () {
 
   /*
    * Public Function PacketReader.readUInt32
@@ -241,7 +250,7 @@ PacketReader.prototype.readUInt32 = function() {
 
 }
 
-PacketReader.prototype.readBoolean = function() {
+PacketReader.prototype.readBoolean = function () {
 
   /*
    * Public Function PacketReader.readBoolean
@@ -252,7 +261,7 @@ PacketReader.prototype.readBoolean = function() {
 
 }
 
-PacketReader.prototype.readOutfit = function() {
+PacketReader.prototype.readOutfit = function () {
 
   /*
    * Public Function PacketReader.readOutfit
@@ -261,7 +270,7 @@ PacketReader.prototype.readOutfit = function() {
 
   return new Outfit({
     "id": this.readUInt16(),
-    "details":  {
+    "details": {
       "head": this.readUInt8(),
       "body": this.readUInt8(),
       "legs": this.readUInt8(),
@@ -275,7 +284,7 @@ PacketReader.prototype.readOutfit = function() {
 
 }
 
-PacketReader.prototype.readWorldPosition = function() {
+PacketReader.prototype.readWorldPosition = function () {
 
   /*
    * Function PacketReader.readWorldPosition

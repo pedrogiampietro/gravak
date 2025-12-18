@@ -735,7 +735,21 @@ Player.prototype.hasSufficientCapacity = function (thing) {
    * Returns true if the player has sufficient capacity to carry the thing
    */
 
-  return this.getCapacity() >= thing.getWeight();
+  // Get capacity in oz
+  let capacity = this.getCapacity();
+
+  // Get weight - in Tibia, weight is stored in 1/100 oz units (e.g., 750 = 7.50 oz)
+  // So we need to convert to oz by dividing by 100
+  let weightInUnits = thing.getWeight();
+  let weightInOz = weightInUnits / 100;
+
+  console.log("=== DEBUG CAPACITY CHECK ===");
+  console.log("Player capacity (oz):", capacity);
+  console.log("Item weight (units):", weightInUnits);
+  console.log("Item weight (oz):", weightInOz);
+  console.log("Has sufficient:", capacity >= weightInOz);
+
+  return capacity >= weightInOz;
 };
 
 Player.prototype.payWithResource = function (currencyId, price) {
@@ -807,20 +821,33 @@ Player.prototype.changeCapacity = function (value) {
    * Note: value is in 1/100 oz units (from item weights)
    */
 
+  console.log("=== DEBUG CHANGE CAPACITY ===");
+  console.log("Value received (units):", value);
+
   // Guard: check if CAPACITY property exists
   let currentCapacity = this.getProperty(CONST.PROPERTIES.CAPACITY);
   if (currentCapacity === null) {
+    console.log("CAPACITY property doesn't exist, skipping");
     // Property doesn't exist yet, skip during initialization
     return;
   }
 
+  console.log("Current capacity (oz):", currentCapacity);
+
   // Convert value from 1/100 oz to oz for capacity change
-  let valueInOz = Math.floor(value / 100);
+  // Use Math.trunc() instead of Math.floor() for symmetric truncation
+  // Math.floor(-7.5) = -8, Math.floor(7.5) = 7 (asymmetric!)
+  // Math.trunc(-7.5) = -7, Math.trunc(7.5) = 7 (symmetric!)
+  let valueInOz = Math.trunc(value / 100);
+  console.log("Value to change (oz):", valueInOz);
 
   // Calculate new capacity, ensuring it doesn't go below 0
   let newCapacity = Math.max(0, currentCapacity + valueInOz);
+  console.log("New capacity (oz):", newCapacity);
+  console.log("CONST.PROPERTIES.CAPACITY:", CONST.PROPERTIES.CAPACITY);
 
   this.setProperty(CONST.PROPERTIES.CAPACITY, newCapacity);
+  console.log("setProperty called for CAPACITY");
 };
 
 Player.prototype.__updateCurrentCapacity = function () {

@@ -1,4 +1,4 @@
-const PacketHandler = function() {
+const PacketHandler = function () {
 
   /*
    * Class PacketHandler
@@ -8,24 +8,36 @@ const PacketHandler = function() {
 
 }
 
-PacketHandler.prototype.handlePropertyChange = function(packet) {
+PacketHandler.prototype.handlePropertyChange = function (packet) {
 
   let creature = gameClient.world.getCreature(packet.guid);
 
-  if(creature === null) {
+  if (creature === null) {
     return;
   }
 
-  switch(packet.property) {
-    case CONST.PROPERTIES.HEALTH: 
+  switch (packet.property) {
+    case CONST.PROPERTIES.HEALTH:
       return creature.state.health = packet.value;
-    case CONST.PROPERTIES.HEALTH_MAX: 
+    case CONST.PROPERTIES.HEALTH_MAX:
       return creature.maxHealth = packet.value;
+    case CONST.PROPERTIES.MANA:
+      return creature.state.mana = packet.value;
+    case CONST.PROPERTIES.MANA_MAX:
+      return creature.state.maxMana = packet.value;
+    case CONST.PROPERTIES.CAPACITY:
+      console.log("=== CLIENT: Received CAPACITY update ===");
+      console.log("Creature:", creature.constructor.name);
+      console.log("New value:", packet.value);
+      if (creature === gameClient.player) {
+        creature.state.capacity = packet.value;
+      }
+      return;
   }
 
 }
 
-PacketHandler.prototype.handleWorldTime = function(time) {
+PacketHandler.prototype.handleWorldTime = function (time) {
 
   /*
    * Function PacketHandler.handleWorldTime
@@ -36,7 +48,7 @@ PacketHandler.prototype.handleWorldTime = function(time) {
 
 }
 
-PacketHandler.prototype.handleSetTarget = function(id) {
+PacketHandler.prototype.handleSetTarget = function (id) {
 
   /*
    * Function PacketHandler.handleSetTarget
@@ -44,14 +56,14 @@ PacketHandler.prototype.handleSetTarget = function(id) {
    */
 
   // An identifier of zero means null
-  if(id === 0) {
+  if (id === 0) {
     return gameClient.player.setTarget(null);
   }
 
   // Set the target creature if it exists
   let creature = gameClient.world.getCreature(id);
 
-  if(creature === null) {
+  if (creature === null) {
     return;
   }
 
@@ -59,7 +71,7 @@ PacketHandler.prototype.handleSetTarget = function(id) {
 
 }
 
-PacketHandler.prototype.handleCombatLock = function(bool) {
+PacketHandler.prototype.handleCombatLock = function (bool) {
 
   /*
    * Function PacketHandler.handleCombatLock
@@ -76,7 +88,7 @@ PacketHandler.prototype.handleCombatLock = function(bool) {
 
 }
 
-PacketHandler.prototype.handleCondition = function(packet) {
+PacketHandler.prototype.handleCondition = function (packet) {
 
   /*
    * Function PacketHandler.handleCondition
@@ -85,12 +97,12 @@ PacketHandler.prototype.handleCondition = function(packet) {
 
   let creature = gameClient.world.getCreature(packet.guid);
 
-  if(creature === null) {
+  if (creature === null) {
     return;
   }
 
   // Determine what to do
-  if(packet.toggle) {
+  if (packet.toggle) {
     creature.addCondition(packet.cid);
   } else {
     creature.removeCondition(packet.cid);
@@ -98,7 +110,7 @@ PacketHandler.prototype.handleCondition = function(packet) {
 
 }
 
-PacketHandler.prototype.handleTradeOffer = function(packet) {
+PacketHandler.prototype.handleTradeOffer = function (packet) {
 
   /*
    * Function PacketHandler.handleTradeOffer
@@ -109,7 +121,7 @@ PacketHandler.prototype.handleTradeOffer = function(packet) {
 
 }
 
-PacketHandler.prototype.handlePlayerStatistics = function(packet) {
+PacketHandler.prototype.handlePlayerStatistics = function (packet) {
 
   /*
    * Function PacketHandler.handlePlayerStatistics
@@ -117,7 +129,7 @@ PacketHandler.prototype.handlePlayerStatistics = function(packet) {
    */
 
   // Ignore these packets
-  if(gameClient.player === null) {
+  if (gameClient.player === null) {
     return;
   }
 
@@ -129,7 +141,7 @@ PacketHandler.prototype.handlePlayerStatistics = function(packet) {
 
 }
 
-PacketHandler.prototype.handleOpenChannel = function(packet) {
+PacketHandler.prototype.handleOpenChannel = function (packet) {
 
   /*
    * Function PacketHandler.handleOpenChannel
@@ -140,25 +152,25 @@ PacketHandler.prototype.handleOpenChannel = function(packet) {
 
 }
 
-PacketHandler.prototype.handleAddAchievement = function(packet) {
+PacketHandler.prototype.handleAddAchievement = function (packet) {
 
   /*
    * Function PacketHandler.handleAddAchievement
    * Handles incoming packet to send a distance effect from a position to a position
    */
 
-  setTimeout(function() {
+  setTimeout(function () {
     document.getElementById("achievement").innerHTML = packet.title + "<hr>" + packet.description;
     document.getElementById("achievement").className = "canvas-notification visible";
   }, 1000);
 
-  setTimeout(function() {
+  setTimeout(function () {
     document.getElementById("achievement").className = "canvas-notification hidden";
   }, 2000);
 
 }
 
-PacketHandler.prototype.handleSendDistanceEffect = function(packet) {
+PacketHandler.prototype.handleSendDistanceEffect = function (packet) {
 
   /*
    * Function PacketHandler.handleSendDistanceEffect
@@ -169,7 +181,7 @@ PacketHandler.prototype.handleSendDistanceEffect = function(packet) {
 
 }
 
-PacketHandler.prototype.handleSendMagicEffect = function(packet) {
+PacketHandler.prototype.handleSendMagicEffect = function (packet) {
 
   /*
    * Function PacketHandler.handleSendMagicEffect
@@ -180,13 +192,13 @@ PacketHandler.prototype.handleSendMagicEffect = function(packet) {
 
 }
 
-PacketHandler.prototype.handleTransformTile = function(packet) {
+PacketHandler.prototype.handleTransformTile = function (packet) {
 
   gameClient.world.handleTransformTile(packet);
 
 }
 
-PacketHandler.prototype.handleAcceptLogin = function(packet) {
+PacketHandler.prototype.handleAcceptLogin = function (packet) {
 
   /*
    * Function PacketHandler.handleAcceptLogin
@@ -197,7 +209,7 @@ PacketHandler.prototype.handleAcceptLogin = function(packet) {
 
 }
 
-PacketHandler.prototype.handleRemoveFriend = function(name) {
+PacketHandler.prototype.handleRemoveFriend = function (name) {
 
   /*
    * Function PacketHandler.handleRemoveFriend
@@ -208,7 +220,7 @@ PacketHandler.prototype.handleRemoveFriend = function(name) {
 
 }
 
-PacketHandler.prototype.handleAddFriend = function(name) {
+PacketHandler.prototype.handleAddFriend = function (name) {
 
   /*
    * Function PacketHandler.handleAddFriend
@@ -219,7 +231,7 @@ PacketHandler.prototype.handleAddFriend = function(name) {
 
 }
 
-PacketHandler.prototype.handleCancelMessage = function(packet) {
+PacketHandler.prototype.handleCancelMessage = function (packet) {
 
   /*
    * Function PacketHandler.handleCancelMessage
@@ -230,7 +242,7 @@ PacketHandler.prototype.handleCancelMessage = function(packet) {
 
 }
 
-PacketHandler.prototype.handleServerData = function(packet) {
+PacketHandler.prototype.handleServerData = function (packet) {
 
   /*
    * Function PacketHandler.handleServerData
@@ -241,11 +253,11 @@ PacketHandler.prototype.handleServerData = function(packet) {
 
 }
 
-PacketHandler.prototype.handleEmote = function(packet) {
+PacketHandler.prototype.handleEmote = function (packet) {
 
   let sourceCreature = gameClient.world.getCreature(packet.id);
 
-  if(sourceCreature === null) {
+  if (sourceCreature === null) {
     return;
   }
 
@@ -257,7 +269,7 @@ PacketHandler.prototype.handleEmote = function(packet) {
 
 }
 
-PacketHandler.prototype.handleIncreaseHealth = function(packet) {
+PacketHandler.prototype.handleIncreaseHealth = function (packet) {
 
   /*
    * Function PacketHandler.handleIncreaseHealth
@@ -267,15 +279,15 @@ PacketHandler.prototype.handleIncreaseHealth = function(packet) {
   // Get the creature this applies to
   let sourceCreature = gameClient.world.getCreature(packet.id);
 
-  if(sourceCreature === null) {
+  if (sourceCreature === null) {
     return;
   }
 
   // Limit the health addition to the maximum player health
   let health = Math.min(packet.amount, sourceCreature.maxHealth - sourceCreature.state.health);
 
-  if(health === 0) {
-    return; 
+  if (health === 0) {
+    return;
   }
 
   // Increase the creature health
@@ -289,7 +301,7 @@ PacketHandler.prototype.handleIncreaseHealth = function(packet) {
   );
 
   // If self: add a message to the console
-  if(gameClient.player === sourceCreature) {
+  if (gameClient.player === sourceCreature) {
 
     gameClient.interface.channelManager.addConsoleMessage(
       "You heal for %s health.".format(health),
@@ -300,7 +312,7 @@ PacketHandler.prototype.handleIncreaseHealth = function(packet) {
 
 }
 
-PacketHandler.prototype.handleEnterZone = function(packet) {
+PacketHandler.prototype.handleEnterZone = function (packet) {
 
   /*
    * Function PacketHandler.handleEnterZone
@@ -314,7 +326,7 @@ PacketHandler.prototype.handleEnterZone = function(packet) {
 
 }
 
-PacketHandler.prototype.handleLatency = function() {
+PacketHandler.prototype.handleLatency = function () {
 
   /*
    * Function GameClient.handlePong
@@ -325,7 +337,7 @@ PacketHandler.prototype.handleLatency = function() {
 
 }
 
-PacketHandler.prototype.handleChunk = function(chunk) {
+PacketHandler.prototype.handleChunk = function (chunk) {
 
   /*
    * Function World.handleChunk
@@ -333,8 +345,8 @@ PacketHandler.prototype.handleChunk = function(chunk) {
    */
 
   // Do not accept any chunks that are somehow already active
-  for(let i = 0; i < gameClient.world.chunks.length; i++) {
-    if(chunk.id === gameClient.world.chunks[i].id) {
+  for (let i = 0; i < gameClient.world.chunks.length; i++) {
+    if (chunk.id === gameClient.world.chunks[i].id) {
       return;
     }
   }
@@ -350,7 +362,7 @@ PacketHandler.prototype.handleChunk = function(chunk) {
 
 }
 
-PacketHandler.prototype.handleRemoveItem = function(packet) {
+PacketHandler.prototype.handleRemoveItem = function (packet) {
 
   /*
    * Function World.removeItem
@@ -359,7 +371,7 @@ PacketHandler.prototype.handleRemoveItem = function(packet) {
 
   let tile = gameClient.world.getTileFromWorldPosition(packet.position);
 
-  if(tile === null) {
+  if (tile === null) {
     return;
   }
 
@@ -367,19 +379,19 @@ PacketHandler.prototype.handleRemoveItem = function(packet) {
 
 }
 
-PacketHandler.prototype.handleAdvanceLevel = function() {
+PacketHandler.prototype.handleAdvanceLevel = function () {
 
   gameClient.player.advanceLevel();
 
 }
 
-PacketHandler.prototype.handleServerError = function(message) {
+PacketHandler.prototype.handleServerError = function (message) {
 
   return gameClient.interface.modalManager.open("floater-connecting", message);
 
 }
 
-PacketHandler.prototype.handleServerMessage = function(string) {
+PacketHandler.prototype.handleServerMessage = function (string) {
 
   /*
    * Function PacketHandler.handleServerMessage
@@ -391,21 +403,21 @@ PacketHandler.prototype.handleServerMessage = function(string) {
 
 }
 
-PacketHandler.prototype.getTileUppie = function(position) {
+PacketHandler.prototype.getTileUppie = function (position) {
 
   let tile = gameClient.world.getTileFromWorldPosition(position);
 
-  if(!tile.isOccupied()) {
+  if (!tile.isOccupied()) {
     return tile;
   }
 
   // Elevation change handling from high to low
-  if(tile.id === 0) {
+  if (tile.id === 0) {
     return gameClient.world.getTileFromWorldPosition(position.down());
   }
 
   // Elevation change handling from low to high
-  if(gameClient.player.getTile().hasMaximumElevation()) {
+  if (gameClient.player.getTile().hasMaximumElevation()) {
     return gameClient.world.getTileFromWorldPosition(position.up());
   }
 
@@ -413,7 +425,7 @@ PacketHandler.prototype.getTileUppie = function(position) {
 
 }
 
-PacketHandler.prototype.clientSideMoveCheck = function(position) {
+PacketHandler.prototype.clientSideMoveCheck = function (position) {
 
   /*
    * Function PacketHandler.clientSideMoveCheck
@@ -423,42 +435,42 @@ PacketHandler.prototype.clientSideMoveCheck = function(position) {
   // Get the tile from the position to be moved to
   let tile = gameClient.world.getTileFromWorldPosition(position);
 
-  if(tile.monsters.size > 0) {
+  if (tile.monsters.size > 0) {
     return true;
   }
 
   // Elevation change handling from high to low
-  if(tile.id === 0) {
+  if (tile.id === 0) {
 
-    if(gameClient.player.__position.isDiagonal(position)) {
+    if (gameClient.player.__position.isDiagonal(position)) {
       return true;
     }
 
     let belowTile = gameClient.world.getTileFromWorldPosition(position.down());
 
-    if(belowTile !== null && belowTile.hasMaximumElevation() && !belowTile.isOccupied()) {
+    if (belowTile !== null && belowTile.hasMaximumElevation() && !belowTile.isOccupied()) {
       return false;
     }
 
   }
 
   // Elevation change handling from low to high
-  if(gameClient.player.getTile().hasMaximumElevation()) {
+  if (gameClient.player.getTile().hasMaximumElevation()) {
 
-    if(gameClient.player.__position.isDiagonal(position)) {
+    if (gameClient.player.__position.isDiagonal(position)) {
       return true;
     }
 
     let upTile = gameClient.world.getTileFromWorldPosition(position.up());
     let aboveTile = gameClient.world.getTileFromWorldPosition(gameClient.player.__position.up());
-    if((aboveTile === null || aboveTile.id === 0) && upTile !== null && !upTile.isOccupied()) {
+    if ((aboveTile === null || aboveTile.id === 0) && upTile !== null && !upTile.isOccupied()) {
       return false;
     }
 
   }
 
   // Client-side check whether the tile is occupied
-  if(tile.isOccupied()) {
+  if (tile.isOccupied()) {
     return true;
   }
 
@@ -466,7 +478,7 @@ PacketHandler.prototype.clientSideMoveCheck = function(position) {
 
 }
 
-PacketHandler.prototype.handlePlayerMove = function(position) {
+PacketHandler.prototype.handlePlayerMove = function (position) {
 
   /*
    * Function PacketHandler.handlePlayerMove
@@ -474,7 +486,7 @@ PacketHandler.prototype.handlePlayerMove = function(position) {
    */
 
   // Do a client side check on the movement to block requests to the server
-  if(this.clientSideMoveCheck(position)) {
+  if (this.clientSideMoveCheck(position)) {
     return gameClient.interface.setCancelMessage("You cannot walk here.");
   }
 
@@ -487,7 +499,7 @@ PacketHandler.prototype.handlePlayerMove = function(position) {
 
 }
 
-PacketHandler.prototype.handleDamageEvent = function(packet) {
+PacketHandler.prototype.handleDamageEvent = function (packet) {
 
   /*
    * Function PacketHandler.handleDamageEvent
@@ -499,12 +511,12 @@ PacketHandler.prototype.handleDamageEvent = function(packet) {
   let targetCreature = gameClient.world.getCreature(packet.target);
 
   // Fields
-  if(packet.source === 0 && targetCreature !== null) {
+  if (packet.source === 0 && targetCreature !== null) {
     return this.__handleDamageEnvironment(targetCreature, packet.damage, packet.color);
   }
 
   // No information on these?
-  if(sourceCreature === null || targetCreature === null) {
+  if (sourceCreature === null || targetCreature === null) {
     return;
   }
 
@@ -512,7 +524,7 @@ PacketHandler.prototype.handleDamageEvent = function(packet) {
   targetCreature.addAnimation(1);
 
   // Add attacked animation with a black box around the source creature
-  if(targetCreature === gameClient.player && sourceCreature !== gameClient.player) {
+  if (targetCreature === gameClient.player && sourceCreature !== gameClient.player) {
     sourceCreature.addBoxAnimation(Interface.prototype.COLORS.BLACK);
   }
 
@@ -520,14 +532,14 @@ PacketHandler.prototype.handleDamageEvent = function(packet) {
   targetCreature.increaseHealth(-packet.damage);
 
   // Add console message of damage event
-  if(gameClient.player === targetCreature) {
+  if (gameClient.player === targetCreature) {
 
     gameClient.interface.channelManager.addConsoleMessage(
       "You lose %s health to a %s.".format(packet.damage, sourceCreature.name),
       Interface.prototype.COLORS.WHITE
     );
 
-  } else if(gameClient.player === sourceCreature) {
+  } else if (gameClient.player === sourceCreature) {
 
     gameClient.interface.channelManager.addConsoleMessage(
       "You deal %s damage to a %s.".format(packet.damage, targetCreature.name),
@@ -545,7 +557,7 @@ PacketHandler.prototype.handleDamageEvent = function(packet) {
 
 }
 
-PacketHandler.prototype.handleChangeOutfit = function(packet) {
+PacketHandler.prototype.handleChangeOutfit = function (packet) {
 
   /*
    * Function GameClient.handleChangeOutfit
@@ -555,7 +567,7 @@ PacketHandler.prototype.handleChangeOutfit = function(packet) {
   // Fetch the entity by the passed identifier and update its outfit
   let creature = gameClient.world.getCreature(packet.id);
 
-  if(creature === null) {
+  if (creature === null) {
     return;
   }
 
@@ -563,14 +575,14 @@ PacketHandler.prototype.handleChangeOutfit = function(packet) {
 
 }
 
-PacketHandler.prototype.getLiquidText = function(liquidType) {
+PacketHandler.prototype.getLiquidText = function (liquidType) {
 
   /*
    * Function PacketHandler.getLiquidText
    * Maps the liquid identifier to readable text
    */
 
-  switch(liquidType) {
+  switch (liquidType) {
     case 0:
       return null;
     case 1:
@@ -613,7 +625,7 @@ PacketHandler.prototype.getLiquidText = function(liquidType) {
 
 }
 
-PacketHandler.prototype.handleLiquidMessage = function(packet) {
+PacketHandler.prototype.handleLiquidMessage = function (packet) {
 
   /*
    * Function PacketHandler.handleLiquidMessage
@@ -622,7 +634,7 @@ PacketHandler.prototype.handleLiquidMessage = function(packet) {
 
   let liquid = this.getLiquidText(packet.count);
 
-  if(liquid === null) {
+  if (liquid === null) {
     return "You see an empty %s.".format(packet.name);
   }
 
@@ -630,7 +642,7 @@ PacketHandler.prototype.handleLiquidMessage = function(packet) {
 
 }
 
-PacketHandler.prototype.getItemDescription = function(packet) {
+PacketHandler.prototype.getItemDescription = function (packet) {
 
   /*
    * Function PacketHandler.getItemDescription
@@ -639,17 +651,17 @@ PacketHandler.prototype.getItemDescription = function(packet) {
 
   let thing = new Item(packet.cid);
 
-  if(thing.isFluidContainer() || thing.isSplash()) {
+  if (thing.isFluidContainer() || thing.isSplash()) {
     return this.handleLiquidMessage(packet);
   }
 
   // Single
-  if(packet.count === 0 || packet.count === 1) {
+  if (packet.count === 0 || packet.count === 1) {
     return "You see %s %s.".format(packet.article, packet.name);
   }
 
   // Counts, singular and plural
-  if(packet.name.slice(-1) === "s") {
+  if (packet.name.slice(-1) === "s") {
     return "You see %s %ses.".format(packet.count, packet.name);
   } else {
     return "You see %s %ss.".format(packet.count, packet.name);
@@ -657,7 +669,7 @@ PacketHandler.prototype.getItemDescription = function(packet) {
 
 }
 
-PacketHandler.prototype.handleCharacterInformation = function(packet) {
+PacketHandler.prototype.handleCharacterInformation = function (packet) {
 
   /*
    * Function PacketHandler.handleCharacterInformation
@@ -680,7 +692,7 @@ PacketHandler.prototype.handleCharacterInformation = function(packet) {
 
 }
 
-PacketHandler.prototype.handleItemInformation = function(packet) {
+PacketHandler.prototype.handleItemInformation = function (packet) {
 
   /*
    * Function PacketHandler.handleItemInformation
@@ -691,33 +703,33 @@ PacketHandler.prototype.handleItemInformation = function(packet) {
   let thing = new Thing(packet.cid);
 
   // Add the description
-  if(packet.description) {
+  if (packet.description) {
     message += " %s".format(packet.description);
   }
 
   // Distance information
-  if(packet.distanceReadable) {
+  if (packet.distanceReadable) {
     message += " %s".format(packet.distanceReadable);
   }
 
-  if(packet.weight) {
-    if(thing.isStackable() && packet.count > 1) {
+  if (packet.weight) {
+    if (thing.isStackable() && packet.count > 1) {
       message += " They weigh %soz.".format((1E-2 * packet.weight).toFixed(2));
     } else {
       message += " It weighs %soz.".format((1E-2 * packet.weight).toFixed(2));
     }
   }
 
-  if(packet.armor !== 0) {
+  if (packet.armor !== 0) {
     message += " (Armor: %s)".format(packet.armor);
   }
 
-  if(packet.attack !== 0) {
+  if (packet.attack !== 0) {
     message += " (Attack: %s)".format(packet.attack);
   }
 
   // When debugging lets show the client and server identifier
-  if(gameClient.renderer.debugger.isActive()) {
+  if (gameClient.renderer.debugger.isActive()) {
     message += " (SID: %s, CID: %s)".format(packet.sid, packet.cid);
   }
 
@@ -735,7 +747,7 @@ PacketHandler.prototype.handleItemInformation = function(packet) {
 
 }
 
-PacketHandler.prototype.handleEntityRemove = function(id) {
+PacketHandler.prototype.handleEntityRemove = function (id) {
 
   /*
    * Function PacketHandler.handleEntityRemove
@@ -744,19 +756,19 @@ PacketHandler.prototype.handleEntityRemove = function(id) {
 
   let creature = gameClient.world.getCreature(id);
 
-  if(creature === null) {
+  if (creature === null) {
     return
   }
 
   // Never dereference self
-  if(gameClient.isSelf(creature)) {
+  if (gameClient.isSelf(creature)) {
     return;
   }
 
   // Get the tile of the creature
   let tile = gameClient.world.getTileFromWorldPosition(creature.getPosition());
 
-  if(tile === null) {
+  if (tile === null) {
     return;
   }
 
@@ -764,7 +776,7 @@ PacketHandler.prototype.handleEntityRemove = function(id) {
   tile.monsters.delete(creature);
 
   // Delete the target of the creature
-  if(gameClient.player.__target === creature) {
+  if (gameClient.player.__target === creature) {
     gameClient.player.setTarget(null);
   }
 
@@ -777,7 +789,7 @@ PacketHandler.prototype.handleEntityRemove = function(id) {
 
 }
 
-PacketHandler.prototype.handleContainerItemRemove = function(packet) {
+PacketHandler.prototype.handleContainerItemRemove = function (packet) {
 
   /*
    * Function GameClient.handleContainerItemRemove
@@ -786,7 +798,7 @@ PacketHandler.prototype.handleContainerItemRemove = function(packet) {
 
   let container = gameClient.player.getContainer(packet.containerIndex);
 
-  if(container === null) {
+  if (container === null) {
     return;
   }
 
@@ -794,7 +806,7 @@ PacketHandler.prototype.handleContainerItemRemove = function(packet) {
 
 }
 
-PacketHandler.prototype.handleContainerAddItem = function(packet) {
+PacketHandler.prototype.handleContainerAddItem = function (packet) {
 
   /*
    * Function GameClient.handleContainerAddItem
@@ -804,7 +816,7 @@ PacketHandler.prototype.handleContainerAddItem = function(packet) {
   // Get the container from the plyer from the index
   let container = gameClient.player.getContainer(packet.containerId);
 
-  if(container === null) {
+  if (container === null) {
     return;
   }
 
@@ -812,7 +824,7 @@ PacketHandler.prototype.handleContainerAddItem = function(packet) {
 
 }
 
-PacketHandler.prototype.handleContainerOpen = function(packet) {
+PacketHandler.prototype.handleContainerOpen = function (packet) {
 
   /*
    * Function PacketHandler.handleContainerOpen
@@ -833,7 +845,7 @@ PacketHandler.prototype.handleContainerOpen = function(packet) {
 
 }
 
-PacketHandler.prototype.handleContainerClose = function(id) {
+PacketHandler.prototype.handleContainerClose = function (id) {
 
   /*
    * Function PacketHandler.handleContainerClose
@@ -842,7 +854,7 @@ PacketHandler.prototype.handleContainerClose = function(id) {
 
   let container = gameClient.player.getContainer(id);
 
-  if(container === null) {
+  if (container === null) {
     return;
   }
 
@@ -851,7 +863,7 @@ PacketHandler.prototype.handleContainerClose = function(id) {
 
 }
 
-PacketHandler.prototype.handlePlayerDisconnect = function(name) {
+PacketHandler.prototype.handlePlayerDisconnect = function (name) {
 
   /*
    * Function PacketHandler.handlePlayerDisconnect
@@ -862,7 +874,7 @@ PacketHandler.prototype.handlePlayerDisconnect = function(name) {
 
 }
 
-PacketHandler.prototype.handlePlayerConnect = function(name) {
+PacketHandler.prototype.handlePlayerConnect = function (name) {
 
   /*
    * Function PacketHandler.handlePlayerConnect
@@ -873,7 +885,7 @@ PacketHandler.prototype.handlePlayerConnect = function(name) {
 
 }
 
-PacketHandler.prototype.handleCreatureServerMove = function(packet) {
+PacketHandler.prototype.handleCreatureServerMove = function (packet) {
 
   /*
    * Function PacketHandler.handleCreatureServerMove
@@ -884,7 +896,7 @@ PacketHandler.prototype.handleCreatureServerMove = function(packet) {
   let entity = gameClient.world.getCreature(packet.id);
 
   // Cannot move unknown entities: this should not happen
-  if(entity === null) {
+  if (entity === null) {
     return;
   }
 
@@ -893,7 +905,7 @@ PacketHandler.prototype.handleCreatureServerMove = function(packet) {
 
   // If the entity being reference is the player: we confirm the client-side walking and check existing references against entities
   // This means that we can drop references to entities that no longer share a neighbouring sector with us
-  if(gameClient.isSelf(entity)) {
+  if (gameClient.isSelf(entity)) {
     gameClient.player.confirmClientWalk();
     gameClient.world.checkEntityReferences();
     gameClient.world.checkChunks();
@@ -901,7 +913,7 @@ PacketHandler.prototype.handleCreatureServerMove = function(packet) {
 
 }
 
-PacketHandler.prototype.handleReadText = function(packet) {
+PacketHandler.prototype.handleReadText = function (packet) {
 
   /*
    * Function PacketHandler.handleReadText
@@ -913,7 +925,7 @@ PacketHandler.prototype.handleReadText = function(packet) {
 
 }
 
-PacketHandler.prototype.handleChannelMessage = function(packet) {
+PacketHandler.prototype.handleChannelMessage = function (packet) {
 
   /*
    * Function PacketHandler.handleChannelMessage
@@ -922,7 +934,7 @@ PacketHandler.prototype.handleChannelMessage = function(packet) {
 
   let channel = gameClient.interface.channelManager.getChannelById(packet.id);
 
-  if(channel === null) {
+  if (channel === null) {
     return;
   }
 
@@ -931,7 +943,7 @@ PacketHandler.prototype.handleChannelMessage = function(packet) {
 
 }
 
-PacketHandler.prototype.handleDefaultMessage = function(packet) {
+PacketHandler.prototype.handleDefaultMessage = function (packet) {
 
   /*
    * Function GameClient.handleDefaultMessage
@@ -941,12 +953,12 @@ PacketHandler.prototype.handleDefaultMessage = function(packet) {
   let entity = gameClient.world.getCreature(packet.id);
 
   // The entity for this packet does not exist..
-  if(entity === null) {
+  if (entity === null) {
     return;
   }
 
   // Only when visible (client-side check)
-  if(!gameClient.player.canSeeSmall(entity)) {
+  if (!gameClient.player.canSeeSmall(entity)) {
     return;
   }
 
@@ -954,7 +966,7 @@ PacketHandler.prototype.handleDefaultMessage = function(packet) {
 
 }
 
-PacketHandler.prototype.handleEntityTeleport = function(packet) {
+PacketHandler.prototype.handleEntityTeleport = function (packet) {
 
   /*
    * Function GameClient.handleEntityTeleport
@@ -964,7 +976,7 @@ PacketHandler.prototype.handleEntityTeleport = function(packet) {
   let entity = gameClient.world.getCreature(packet.id);
 
   // The entity does not exist
-  if(entity === null) {
+  if (entity === null) {
     return;
   }
 
@@ -972,13 +984,13 @@ PacketHandler.prototype.handleEntityTeleport = function(packet) {
   entity.setPosition(packet.position);
 
   // Special handler if the player is the one that is teleported
-  if(gameClient.isSelf(entity)) {
+  if (gameClient.isSelf(entity)) {
     gameClient.world.handleSelfTeleport();
   }
 
 }
 
-PacketHandler.prototype.handleEntityReference = function(packet) {
+PacketHandler.prototype.handleEntityReference = function (packet) {
 
   /*
    * Function GameClient.handleEntityReference
@@ -986,7 +998,7 @@ PacketHandler.prototype.handleEntityReference = function(packet) {
    */
 
   // Do not reference self but add
-  if(gameClient.player && packet.id === gameClient.player.id) {
+  if (gameClient.player && packet.id === gameClient.player.id) {
     return gameClient.world.addCreature(gameClient.player);
   }
 
@@ -995,7 +1007,7 @@ PacketHandler.prototype.handleEntityReference = function(packet) {
 
 }
 
-PacketHandler.prototype.handleCreatureTurn = function(packet) {
+PacketHandler.prototype.handleCreatureTurn = function (packet) {
 
   /*
    * Function PacketHandler.handleCreatureTurn
@@ -1004,7 +1016,7 @@ PacketHandler.prototype.handleCreatureTurn = function(packet) {
 
   let creature = gameClient.world.getCreature(packet.id);
 
-  if(creature === null) {
+  if (creature === null) {
     return;
   }
 
@@ -1012,7 +1024,7 @@ PacketHandler.prototype.handleCreatureTurn = function(packet) {
 
 }
 
-PacketHandler.prototype.handleReceivePrivateMessage = function(packet) {
+PacketHandler.prototype.handleReceivePrivateMessage = function (packet) {
 
   /*
    * Function GameClient.handleReceivePrivateMessage
@@ -1023,7 +1035,7 @@ PacketHandler.prototype.handleReceivePrivateMessage = function(packet) {
   let channel = gameClient.interface.channelManager.getChannel(packet.name);
 
   // If it does not exist: set it to the Default channel
-  if(channel === null) {
+  if (channel === null) {
     channel = gameClient.interface.channelManager.getChannel("Default");
   }
 
@@ -1031,7 +1043,7 @@ PacketHandler.prototype.handleReceivePrivateMessage = function(packet) {
 
 }
 
-PacketHandler.prototype.handleGainExperience = function(packet) {
+PacketHandler.prototype.handleGainExperience = function (packet) {
 
   /*
    * Function PacketHandler.handleGainExperience
@@ -1041,7 +1053,7 @@ PacketHandler.prototype.handleGainExperience = function(packet) {
   // Get the creature from the list of known creatures
   let creature = gameClient.world.getCreature(packet.id);
 
-  if(creature === null) {
+  if (creature === null) {
     return console.error("Received experience gain for unknown creature.");
   }
 
@@ -1053,7 +1065,7 @@ PacketHandler.prototype.handleGainExperience = function(packet) {
   );
 
   // Only for self
-  if(gameClient.player !== creature) {
+  if (gameClient.player !== creature) {
     return;
   }
 
@@ -1064,10 +1076,10 @@ PacketHandler.prototype.handleGainExperience = function(packet) {
 
   // Add the experience
   creature.addExperience(packet.experience);
- 
+
 }
 
-PacketHandler.prototype.handleItemAdd = function(packet) {
+PacketHandler.prototype.handleItemAdd = function (packet) {
 
   /*
    * Function GameClient.handleItemAdd
@@ -1078,12 +1090,12 @@ PacketHandler.prototype.handleItemAdd = function(packet) {
   let thing = new Thing(packet.id, packet.count);
 
   // Create a new book or item
-  if(thing.hasFlag(PropBitFlag.prototype.flags.DatFlagWritableOnce | PropBitFlag.prototype.flags.DatFlagWritable)) {
+  if (thing.hasFlag(PropBitFlag.prototype.flags.DatFlagWritableOnce | PropBitFlag.prototype.flags.DatFlagWritable)) {
     return gameClient.world.addItem(packet.position, new Book(packet.id), packet.slot);
   }
 
   // Create a new fluid container
-  if(thing.isFluidContainer() || thing.isSplash()) {
+  if (thing.isFluidContainer() || thing.isSplash()) {
     return gameClient.world.addItem(packet.position, new FluidThing(packet.id, packet.count), packet.slot);
   }
 
@@ -1092,7 +1104,7 @@ PacketHandler.prototype.handleItemAdd = function(packet) {
 
 }
 
-PacketHandler.prototype.__handleDamageEnvironment = function(targetCreature, damage, color) {
+PacketHandler.prototype.__handleDamageEnvironment = function (targetCreature, damage, color) {
 
   /*
    * Function PacketHandler.__handleDamageEnvironment
@@ -1105,13 +1117,13 @@ PacketHandler.prototype.__handleDamageEnvironment = function(targetCreature, dam
     targetCreature.getPosition(),
     color
   );
-  
+
   // Show damage
   gameClient.interface.channelManager.addConsoleMessage(
     "You lose %s health.".format(damage),
     Interface.prototype.COLORS.WHITE
   );
-  
+
   targetCreature.increaseHealth(-damage);
 
 }

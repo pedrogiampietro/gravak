@@ -6,7 +6,7 @@ const Keyring = requireModule("keyring");
 const Thing = requireModule("thing");
 const Inbox = requireModule("inbox");
 
-const ContainerManager = function(player, containers) {
+const ContainerManager = function (player, containers) {
 
   /*
    * Class ContainerManager
@@ -39,7 +39,7 @@ const ContainerManager = function(player, containers) {
 
 ContainerManager.prototype.MAXIMUM_OPENED_CONTAINERS = 5;
 
-ContainerManager.prototype.toJSON = function() {
+ContainerManager.prototype.toJSON = function () {
 
   /*
    * Function ContainerManager.toJSON
@@ -55,7 +55,7 @@ ContainerManager.prototype.toJSON = function() {
 
 }
 
-ContainerManager.prototype.getContainerFromId = function(cid) {
+ContainerManager.prototype.getContainerFromId = function (cid) {
 
   /*
    * Function Player.getContainerFromId
@@ -63,7 +63,7 @@ ContainerManager.prototype.getContainerFromId = function(cid) {
    */
 
   // Simple mapping of the container identifier
-  switch(cid) {
+  switch (cid) {
     case CONST.CONTAINER.DEPOT: return (this.depot.isClosed() ? null : this.depot);
     case CONST.CONTAINER.EQUIPMENT: return this.equipment;
     case CONST.CONTAINER.KEYRING: return this.keyring;
@@ -72,7 +72,7 @@ ContainerManager.prototype.getContainerFromId = function(cid) {
 
 }
 
-ContainerManager.prototype.toggleContainer = function(container) {
+ContainerManager.prototype.toggleContainer = function (container) {
 
   /*
    * Function ContainerManager.toggleContainer
@@ -80,11 +80,11 @@ ContainerManager.prototype.toggleContainer = function(container) {
    */
 
   // Either open or close it
-  if(this.__openedContainers.has(container.id)) {
+  if (this.__openedContainers.has(container.id)) {
     return this.closeContainer(container);
   }
 
-  if(container.isDepot() && this.__openedContainers.has(CONST.CONTAINER.DEPOT)) {
+  if (container.isDepot() && this.__openedContainers.has(CONST.CONTAINER.DEPOT)) {
     return this.closeContainer(this.depot);
   }
 
@@ -92,7 +92,7 @@ ContainerManager.prototype.toggleContainer = function(container) {
 
 }
 
-ContainerManager.prototype.cleanup = function() {
+ContainerManager.prototype.cleanup = function () {
 
   /*
    * Function ContainerManager.cleanup
@@ -104,7 +104,7 @@ ContainerManager.prototype.cleanup = function() {
 
 }
 
-ContainerManager.prototype.checkContainer = function(container) {
+ContainerManager.prototype.checkContainer = function (container) {
 
   /*
    * Function ContainerManager.checkContainer
@@ -115,23 +115,23 @@ ContainerManager.prototype.checkContainer = function(container) {
   let parentThing = container.getTopParent();
 
   // The parent is the player and can always remain opened
-  if(parentThing === this.__player) {
+  if (parentThing === this.__player) {
     return;
   }
 
   // If the parent is a depot but the depot is closed we need to eliminate the container
-  if(parentThing === this.depot && this.depot.isClosed()) {
+  if (parentThing === this.depot && this.depot.isClosed()) {
     return this.closeContainer(container);
   }
 
   // The container is on a tile and not besides the player anymore
-  if(!this.__player.isBesidesThing(parentThing)) {
+  if (!this.__player.isBesidesThing(parentThing)) {
     return this.closeContainer(container);
   }
 
 }
 
-ContainerManager.prototype.checkContainers = function() {
+ContainerManager.prototype.checkContainers = function () {
 
   /*
    * Function ContainerManager.checkContainers
@@ -142,23 +142,26 @@ ContainerManager.prototype.checkContainers = function() {
 
 }
 
-ContainerManager.prototype.closeContainer = function(container) {
+ContainerManager.prototype.closeContainer = function (container) {
 
   /*
    * Function ContainerManager.closeContainer
    * Closes a container and writes it to disk
    */
 
+  // Use container.container.guid as key (matches __openContainer)
+  let containerGuid = container.container ? container.container.guid : container.id;
+
   // Guard
-  if(!this.__openedContainers.has(container.id)) {
+  if (!this.__openedContainers.has(containerGuid)) {
     return;
   }
 
   // Deference the container in a circular way
-  this.__openedContainers.delete(container.id);
+  this.__openedContainers.delete(containerGuid);
 
   // Close the container
-  if(container === this.depot) {
+  if (container === this.depot) {
     this.depot.openAtPosition(null);
     this.__player.closeContainer(this.depot.container);
   } else {
@@ -167,14 +170,14 @@ ContainerManager.prototype.closeContainer = function(container) {
 
 }
 
-ContainerManager.prototype.__getContainer = function(cid) { 
+ContainerManager.prototype.__getContainer = function (cid) {
 
   /*
    * Function ContainerManager.__getContainer
    * Finds a container by completing a linear search in all opened containers
    */
 
-  if(!this.__openedContainers.has(cid)) {
+  if (!this.__openedContainers.has(cid)) {
     return null;
   }
 
@@ -182,7 +185,7 @@ ContainerManager.prototype.__getContainer = function(cid) {
 
 }
 
-ContainerManager.prototype.openKeyring = function() {
+ContainerManager.prototype.openKeyring = function () {
 
   /*
    * Function ContainerManager.openKeyring
@@ -190,7 +193,7 @@ ContainerManager.prototype.openKeyring = function() {
    */
 
   // If already opened, close it
-  if(this.__openedContainers.has(CONST.CONTAINER.KEYRING)) {
+  if (this.__openedContainers.has(CONST.CONTAINER.KEYRING)) {
     this.__openedContainers.delete(CONST.CONTAINER.KEYRING);
     this.__player.closeContainer(this.keyring.container);
     return;
@@ -202,31 +205,31 @@ ContainerManager.prototype.openKeyring = function() {
 
 }
 
-ContainerManager.prototype.__openContainer = function(container) {
+ContainerManager.prototype.__openContainer = function (container) {
 
   /*
    * Function ContainerManager.__openContainer
    * Writes packet to open a container
    */
 
-  // Is already opened
-  if(this.__openedContainers.has(container.id)) {
+  // Is already opened - use container.container.guid as key (matches packet protocol)
+  if (this.__openedContainers.has(container.container.guid)) {
     return;
   }
 
   // A maximum of N containers can be referenced
-  if(this.__openedContainers.size >= this.MAXIMUM_OPENED_CONTAINERS) {
+  if (this.__openedContainers.size >= this.MAXIMUM_OPENED_CONTAINERS) {
     return this.__player.sendCancelMessage("You cannot open any more containers.");
   }
 
   // Sanity check for opening two depots
-  if(container.isDepot() && !this.depot.isClosed()) {
+  if (container.isDepot() && !this.depot.isClosed()) {
     return this.__player.sendCancelMessage("You already have another depot opened.");
   }
 
-  // Open the depot or a simple container
-  if(!container.isDepot()) {
-    this.__openedContainers.set(container.id, container);
+  // Open the depot or a simple container - use container.container.guid as key
+  if (!container.isDepot()) {
+    this.__openedContainers.set(container.container.guid, container);
     return this.__player.openContainer(container.id, container.getName(), container.container);
   }
 

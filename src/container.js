@@ -4,7 +4,7 @@ const Item = requireModule("item");
 const BaseContainer = requireModule("base-container");
 const { ContainerOpenPacket, ContainerClosePacket } = requireModule("protocol");
 
-const Container = function(id, size) {
+const Container = function (id, size) {
 
   /*
    * Function Container
@@ -34,7 +34,7 @@ Container.prototype = Object.create(Item.prototype);
 Container.prototype.constructor = Container;
 Container.prototype.MAXIMUM_DEPTH = 2;
 
-Container.prototype.getNumberItems = function() {
+Container.prototype.getNumberItems = function () {
 
   /*
    * Function Container.getNumberItems
@@ -45,7 +45,7 @@ Container.prototype.getNumberItems = function() {
 
 }
 
-Container.prototype.addFirstEmpty = function(thing) {
+Container.prototype.addFirstEmpty = function (thing) {
 
   /*
    * Function Container.addFirstEmpty
@@ -53,17 +53,17 @@ Container.prototype.addFirstEmpty = function(thing) {
    */
 
   // The container is frozen and cannot be interacted with
-  if(this.frozen) {
+  if (this.frozen) {
     return false;
   }
 
   // Guard
-  if(!thing.isPickupable()) {
+  if (!thing.isPickupable()) {
     return false;
   }
 
   // Can not add to a full container..
-  if(this.container.isFull()) {
+  if (this.container.isFull()) {
     return false;
   }
 
@@ -72,7 +72,7 @@ Container.prototype.addFirstEmpty = function(thing) {
 
 }
 
-Container.prototype.hasIdentifier = function(cid) {
+Container.prototype.hasIdentifier = function (cid) {
 
   /*
    * Function Container.hasIdentifier
@@ -83,7 +83,7 @@ Container.prototype.hasIdentifier = function(cid) {
 
 }
 
-Container.prototype.checkPlayersAdjacency = function() {
+Container.prototype.checkPlayersAdjacency = function () {
 
   /*
    * Function Container.checkPlayersAdjacency
@@ -94,15 +94,15 @@ Container.prototype.checkPlayersAdjacency = function() {
   this.container.spectators.forEach(player => player.containerManager.checkContainer(this));
 
   // Recursion over all containers within the container: those would need to be closed as well
-  this.container.__slots.forEach(function(item) {
+  this.container.__slots.forEach(function (item) {
 
     // Do not need to check these items
-    if(item === null) {
+    if (item === null) {
       return;
     }
 
     // Found another container: recursive handling
-    if(item.constructor === Container) {
+    if (item.constructor === Container) {
       item.checkPlayersAdjacency();
     }
 
@@ -110,7 +110,7 @@ Container.prototype.checkPlayersAdjacency = function() {
 
 }
 
-Container.prototype.peekIndex = function(index) {
+Container.prototype.peekIndex = function (index) {
 
   /*
    * Function Container.peekIndex
@@ -121,7 +121,7 @@ Container.prototype.peekIndex = function(index) {
 
 }
 
-Container.prototype.removeIndex = function(index, amount) {
+Container.prototype.removeIndex = function (index, amount) {
 
   /*
    * Function Container.removeIndex
@@ -129,11 +129,11 @@ Container.prototype.removeIndex = function(index, amount) {
    */
 
   // The container is frozen and cannot be interacted with
-  if(this.frozen) {
+  if (this.frozen) {
     return null;
   }
 
-  if(!this.container.isValidIndex(index)) {
+  if (!this.container.isValidIndex(index)) {
     return null;
   }
 
@@ -145,7 +145,7 @@ Container.prototype.removeIndex = function(index, amount) {
 
 }
 
-Container.prototype.deleteThing = function(thing) {
+Container.prototype.deleteThing = function (thing) {
 
   /*
    * Function Container.deleteThing
@@ -153,13 +153,13 @@ Container.prototype.deleteThing = function(thing) {
    */
 
   // The container is frozen and cannot be interacted with
-  if(this.frozen) {
+  if (this.frozen) {
     return -1;
   }
 
   let index = this.container.deleteThing(thing);
 
-  if(index === -1) {
+  if (index === -1) {
     return -1;
   }
 
@@ -170,7 +170,7 @@ Container.prototype.deleteThing = function(thing) {
 
 }
 
-Container.prototype.addThing = function(thing, index) {
+Container.prototype.addThing = function (thing, index) {
 
   /*
    * Function Container.addThing
@@ -178,24 +178,24 @@ Container.prototype.addThing = function(thing, index) {
    */
 
   // The container is frozen and cannot be interacted with
-  if(this.frozen) {
+  if (this.frozen) {
     return false;
   }
 
   // Guard
-  if(!thing.isPickupable()) {
+  if (!thing.isPickupable()) {
     return false;
   }
 
   // Guard against invalid indices
-  if(!this.container.isValidIndex(index)) {
+  if (!this.container.isValidIndex(index)) {
     return false;
   }
 
   // Guard against too many (this should be checked in advance too)
   let maximum = this.getMaximumAddCount(null, thing, index);
 
-  if(maximum === 0 || maximum < thing.count) {
+  if (maximum === 0 || maximum < thing.count) {
     return false;
   }
 
@@ -210,7 +210,7 @@ Container.prototype.addThing = function(thing, index) {
 
 }
 
-Container.prototype.openBy = function(player) {
+Container.prototype.openBy = function (player) {
 
   /*
    * Function Container.openBy
@@ -224,7 +224,7 @@ Container.prototype.openBy = function(player) {
 
 }
 
-Container.prototype.closeBy = function(player) {
+Container.prototype.closeBy = function (player) {
 
   /*
    * Function Container.closeBy
@@ -238,7 +238,7 @@ Container.prototype.closeBy = function(player) {
 
 }
 
-Container.prototype.getSlots = function() {
+Container.prototype.getSlots = function () {
 
   /*
    * Function Container.getSlots
@@ -249,7 +249,7 @@ Container.prototype.getSlots = function() {
 
 }
 
-Container.prototype.getSize = function() {
+Container.prototype.getSize = function () {
 
   /*
    * Function Container.getSize
@@ -260,7 +260,7 @@ Container.prototype.getSize = function() {
 
 }
 
-Container.prototype.getWeight = function() {
+Container.prototype.getWeight = function () {
 
   /*
    * Function Container.getWeight
@@ -272,7 +272,7 @@ Container.prototype.getWeight = function() {
 
 }
 
-Container.prototype.getPosition = function() {
+Container.prototype.getPosition = function () {
 
   /*
    * Function Container.getPosition
@@ -283,13 +283,13 @@ Container.prototype.getPosition = function() {
 
 }
 
-Container.prototype.exceedsMaximumChildCount = function() {
+Container.prototype.exceedsMaximumChildCount = function () {
 
   return this.__getChildCount() > this.MAXIMUM_DEPTH;
 
 }
 
-Container.prototype.getMaximumAddCount = function(player, thing, index) {
+Container.prototype.getMaximumAddCount = function (player, thing, index) {
 
   /*
    * Function Container.getMaximumAddCount
@@ -297,20 +297,20 @@ Container.prototype.getMaximumAddCount = function(player, thing, index) {
    */
 
   // This is not a valid index
-  if(!this.container.isValidIndex(index)) {
+  if (!this.container.isValidIndex(index)) {
     return 0;
   }
 
   // Some extra rules if the item being added is a container
-  if(thing.isContainer()) {
+  if (thing.isContainer()) {
 
     // The item cannot be put inside itself
-    if(this.__includesSelf(thing)) {
+    if (this.__includesSelf(thing)) {
       return 0;
     }
 
     // Exceeds the maximum recursive depth of containers
-    if(this.__getParentCount() > this.MAXIMUM_DEPTH || thing.exceedsMaximumChildCount()) {
+    if (this.__getParentCount() > this.MAXIMUM_DEPTH || thing.exceedsMaximumChildCount()) {
       return 0;
     }
 
@@ -320,18 +320,18 @@ Container.prototype.getMaximumAddCount = function(player, thing, index) {
   let currentThing = this.container.peekIndex(index);
 
   // If the slot is empty we can add the maximum stack count
-  if(currentThing === null) {
+  if (currentThing === null) {
     return Item.prototype.MAXIMUM_STACK_COUNT;
   }
 
   // Not empty but the identifiers match and the item is stackable
-  if(thing.id === currentThing.id && thing.isStackable()) {
+  if (thing.id === currentThing.id && thing.isStackable()) {
 
     // If all slots in the container are filled only allow up to the maximum determined by what is already there
-    if(this.container.isFull()) {
+    if (this.container.isFull()) {
       return Item.prototype.MAXIMUM_STACK_COUNT - currentThing.count;
     }
-    
+
     // Otherwise overflow: add to an open slot in the container
     return Item.prototype.MAXIMUM_STACK_COUNT;
 
@@ -342,7 +342,7 @@ Container.prototype.getMaximumAddCount = function(player, thing, index) {
 
 }
 
-Container.prototype.__getChildCount = function() {
+Container.prototype.__getChildCount = function () {
 
   /*
    * Function Container.__getChildCount
@@ -352,21 +352,21 @@ Container.prototype.__getChildCount = function() {
   let counts = new Array();
 
   // Recursion over all containers within the container: those would need to be closed as well
-  this.container.__slots.forEach(function(item) {
+  this.container.__slots.forEach(function (item) {
 
     // Do not need to check these items
-    if(item === null) {
+    if (item === null) {
       return;
     }
 
     // Found another container: recursive handling
-    if(item.constructor === Container) {
+    if (item.constructor === Container) {
       counts.push(1 + item.__getChildCount());
     }
 
   });
 
-  if(counts.length === 0) {
+  if (counts.length === 0) {
     return 1;
   }
 
@@ -374,7 +374,7 @@ Container.prototype.__getChildCount = function() {
 
 }
 
-Container.prototype.closeAllSpectators = function() {
+Container.prototype.closeAllSpectators = function () {
 
   /*
    * Function Container.closeAllSpectators
@@ -385,14 +385,14 @@ Container.prototype.closeAllSpectators = function() {
   this.container.spectators.forEach(player => player.containerManager.toggleContainer(this));
 
   // Recursion over all containers within the container: those would need to be closed as well
-  this.container.__slots.forEach(function(item) {
+  this.container.__slots.forEach(function (item) {
 
-    if(item === null) {
+    if (item === null) {
       return;
     }
 
     // Recursion for subcontainers
-    if(item instanceof Container) {
+    if (item instanceof Container) {
       item.closeAllSpectators();
     }
 
@@ -402,7 +402,7 @@ Container.prototype.closeAllSpectators = function() {
 
 }
 
-Container.prototype.cleanup = function() {
+Container.prototype.cleanup = function () {
 
   /*
    * Function Container.delete
@@ -413,13 +413,13 @@ Container.prototype.cleanup = function() {
   this.closeAllSpectators();
 
   // Delegate to the internal handler for extra cleanups
-  if(this.__scheduledDecayEvent) {
+  if (this.__scheduledDecayEvent) {
     this.__scheduledDecayEvent.cancel();
   }
 
 }
 
-Container.prototype.__updateWeight = function(weight) {
+Container.prototype.__updateWeight = function (weight) {
 
   /*
    * Function Container.__updateWeight
@@ -430,7 +430,7 @@ Container.prototype.__updateWeight = function(weight) {
 
 }
 
-Container.prototype.__updateParentWeightRecursion = function(weight) {
+Container.prototype.__updateParentWeightRecursion = function (weight) {
 
   /*
    * Function Container.__updateParentWeightRecursion
@@ -440,10 +440,10 @@ Container.prototype.__updateParentWeightRecursion = function(weight) {
   let current = this;
 
   // Confirm we are not placing a container in to itself
-  while(true) {
+  while (true) {
 
     // If the container has no parent yet we can stop (e.g., happens when it is newly created)
-    if(this.__isTopParent(current)) {
+    if (this.__isTopParent(current)) {
       return;
     }
 
@@ -457,7 +457,7 @@ Container.prototype.__updateParentWeightRecursion = function(weight) {
 
 }
 
-Container.prototype.__includesSelf = function(container) {
+Container.prototype.__includesSelf = function (container) {
 
   /*
    * Function Container.__includesSelf
@@ -467,14 +467,14 @@ Container.prototype.__includesSelf = function(container) {
   let current = this;
 
   // Confirm we are not placing a container in to itself
-  while(true) {
+  while (true) {
 
-    if(this.__isTopParent(current)) {
+    if (this.__isTopParent(current)) {
       return false;
     }
 
     // We found a parent being itself
-    if(current === container) {
+    if (current === container) {
       return true;
     }
 
@@ -487,7 +487,7 @@ Container.prototype.__includesSelf = function(container) {
 
 }
 
-Container.prototype.__getParentCount = function() {
+Container.prototype.__getParentCount = function () {
 
   /*
    * Function Container.prototype.__getParentCount
@@ -498,10 +498,10 @@ Container.prototype.__getParentCount = function() {
   let current = this.getParent();
 
   // Recursivey walk up the parent chain
-  while(true) {
+  while (true) {
 
     // Found!
-    if(this.__isTopParent(current)) {
+    if (this.__isTopParent(current)) {
       return count;
     }
 
@@ -513,7 +513,7 @@ Container.prototype.__getParentCount = function() {
 
 }
 
-Container.prototype.toJSON = function() {
+Container.prototype.toJSON = function () {
 
   /*
    * Function Container.toJSON

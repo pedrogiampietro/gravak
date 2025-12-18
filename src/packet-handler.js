@@ -6,7 +6,7 @@ const Monster = requireModule("monster");
 
 const { ItemInformationPacket, CreatureInformationPacket } = requireModule("protocol");
 
-const PacketHandler = function() {
+const PacketHandler = function () {
 
   /*
    * Class PacketHandler
@@ -17,23 +17,23 @@ const PacketHandler = function() {
 
 }
 
-PacketHandler.prototype.handleTileUse = function(player, tile) {
+PacketHandler.prototype.handleTileUse = function (player, tile) {
 
   /*
    * Function PacketHandler.handleTileUse
    * Handles the tile use event
    */
-  
+
   // For the rest of the actions the player must be besides the tile
-  if(!player.position.besides(tile.position)) {
+  if (!player.position.besides(tile.position)) {
     return null;
   }
-  
+
   return tile.getTopItem();
 
 }
 
-PacketHandler.prototype.handleLogout = function(gameSocket) {
+PacketHandler.prototype.handleLogout = function (gameSocket) {
 
   /*
    * Function PacketHandler.handleLogout
@@ -41,11 +41,11 @@ PacketHandler.prototype.handleLogout = function(gameSocket) {
    */
 
   // Block request because the player is still in combat
-  if(gameSocket.player.isInCombat()) {
+  if (gameSocket.player.isInCombat()) {
     return gameSocket.player.sendCancelMessage("You cannot logout while in combat.");
   }
 
-  if(gameSocket.player.isInNoLogoutZone()) {
+  if (gameSocket.player.isInNoLogoutZone()) {
     return gameSocket.player.sendCancelMessage("You may not logout here.");
   }
 
@@ -54,7 +54,7 @@ PacketHandler.prototype.handleLogout = function(gameSocket) {
 
 }
 
-PacketHandler.prototype.__handlePushCreature = function(creature, position) {
+PacketHandler.prototype.__handlePushCreature = function (creature, position) {
 
   /*
    * Function PacketHandler.__handlePushCreature
@@ -62,12 +62,12 @@ PacketHandler.prototype.__handlePushCreature = function(creature, position) {
    */
 
   // If the creature is moving do nothing
-  if(creature.isMoving()) {
+  if (creature.isMoving()) {
     return;
   }
 
   // Must be adjacent
-  if(!position.besides(creature.position)) {
+  if (!position.besides(creature.position)) {
     return;
   }
 
@@ -76,7 +76,7 @@ PacketHandler.prototype.__handlePushCreature = function(creature, position) {
 
 }
 
-PacketHandler.prototype.moveItem = function(player, packet) {
+PacketHandler.prototype.moveItem = function (player, packet) {
 
   /*
    * Function PacketHandler.moveItem
@@ -85,25 +85,33 @@ PacketHandler.prototype.moveItem = function(player, packet) {
 
   let { fromWhere, fromIndex, toWhere, toIndex, count } = packet;
 
+  console.log("=== DEBUG MOVE ITEM ===");
+  console.log("fromWhere:", fromWhere ? fromWhere.constructor.name : null);
+  console.log("fromIndex:", fromIndex);
+  console.log("toWhere:", toWhere ? toWhere.constructor.name : null);
+  console.log("toIndex:", toIndex);
+  console.log("count:", count);
+
   // Invalid source or target location
-  if(fromWhere === null || toWhere === null) {
+  if (fromWhere === null || toWhere === null) {
+    console.log("MOVEMENT REJECTED: fromWhere or toWhere is null");
     return;
   }
 
   // If moving from a tile the player must be adjacent to that particular tile!
-  if(fromWhere.constructor.name === "Tile") {
+  if (fromWhere.constructor.name === "Tile") {
 
     // Server check: is the player besides the tile?
-    if(!player.position.besides(fromWhere.position)) {
+    if (!player.position.besides(fromWhere.position)) {
       return player.sendCancelMessage("You are not close enough.");
     }
 
   }
 
   // If throwing to a tile check if the player can reach it
-  if(toWhere.constructor.name === "Tile") {
+  if (toWhere.constructor.name === "Tile") {
 
-    if(!player.position.inLineOfSight(toWhere.position)) {
+    if (!player.position.inLineOfSight(toWhere.position)) {
       return player.sendCancelMessage("You cannot throw this item here.");
     }
 
@@ -113,19 +121,19 @@ PacketHandler.prototype.moveItem = function(player, packet) {
   let fromItem = fromWhere.peekIndex(fromIndex);
 
   // Guard against no item being moved
-  if(fromItem === null) {
+  if (fromItem === null) {
     return;
   }
 
   // Can the item be moved at all?
-  if(!fromItem.isMoveable() || fromItem.hasUniqueId()) {
+  if (!fromItem.isMoveable() || fromItem.hasUniqueId()) {
     return player.sendCancelMessage("You cannot move this item.");
   }
 
   // Moving to a place where there is a floor change (or teleporter)
-  if(toWhere.constructor.name === "Tile") {
+  if (toWhere.constructor.name === "Tile") {
 
-    if(toWhere.hasItems() && toWhere.itemStack.isMailbox() && this.mailboxHandler.canMailItem(fromItem)) {
+    if (toWhere.hasItems() && toWhere.itemStack.isMailbox() && this.mailboxHandler.canMailItem(fromItem)) {
       return this.mailboxHandler.sendThing(fromWhere, toWhere, player, fromItem);
     }
 
@@ -133,30 +141,30 @@ PacketHandler.prototype.moveItem = function(player, packet) {
     toWhere = gameServer.world.lattice.findDestination(player, toWhere);
 
     // No valid destination
-    if(toWhere === null) {
+    if (toWhere === null) {
       return player.sendCancelMessage("You cannot add this item here.");
     }
 
     // Trashholders have special handling
-    if(toWhere.isTrashholder()) {
+    if (toWhere.isTrashholder()) {
       return this.__addThingToTrashholder(fromItem, fromWhere, fromIndex, toWhere, count);
     }
 
     // Solid for items
-    if(toWhere.hasItems() && toWhere.itemStack.isItemSolid()) {
+    if (toWhere.hasItems() && toWhere.itemStack.isItemSolid()) {
       return player.sendCancelMessage("You cannot add this item here.");
     }
 
-    if(fromItem.isBlockSolid() && toWhere.isOccupiedAny()) {
+    if (fromItem.isBlockSolid() && toWhere.isOccupiedAny()) {
       return player.sendCancelMessage("You cannot add this item here.");
     }
 
   }
 
   // Check for containers and capacity
-  if(toWhere.getTopParent() === player) {
-    if(!player.hasSufficientCapacity(fromItem)) {
-      if(fromWhere.constructor.name === "DepotContainer" || toWhere.getTopParent() !== fromWhere.getTopParent()) {
+  if (toWhere.getTopParent() === player) {
+    if (!player.hasSufficientCapacity(fromItem)) {
+      if (fromWhere.constructor.name === "DepotContainer" || toWhere.getTopParent() !== fromWhere.getTopParent()) {
         return player.sendCancelMessage("Your capacity is insufficient to carry this item.");
       }
     }
@@ -166,7 +174,7 @@ PacketHandler.prototype.moveItem = function(player, packet) {
   let maxCount = toWhere.getMaximumAddCount(player, fromItem, toIndex);
 
   // No items can be added there.
-  if(maxCount === 0) {
+  if (maxCount === 0) {
     return player.sendCancelMessage("You cannot add this item here.");
   }
 
@@ -177,11 +185,11 @@ PacketHandler.prototype.moveItem = function(player, packet) {
 
 }
 
-PacketHandler.prototype.__addItemToMailbox = function(player, direction) {
+PacketHandler.prototype.__addItemToMailbox = function (player, direction) {
 
 }
 
-PacketHandler.prototype.handleItemLook = function(player, packet) {
+PacketHandler.prototype.handleItemLook = function (player, packet) {
 
   /*
    * Function PacketHandler.handleItemLook
@@ -189,12 +197,12 @@ PacketHandler.prototype.handleItemLook = function(player, packet) {
    */
 
   // Invalid thing supplied
-  if(packet.which === null) {
+  if (packet.which === null) {
     return;
   }
 
   // Looking at a creature on the tile
-  if(packet.which.constructor.name === "Tile" && packet.which.getCreature()) {
+  if (packet.which.constructor.name === "Tile" && packet.which.getCreature()) {
     return player.write(new CreatureInformationPacket(packet.which.getCreature()));
   }
 
@@ -202,7 +210,7 @@ PacketHandler.prototype.handleItemLook = function(player, packet) {
   let thing = packet.which.peekIndex(packet.index);
 
   // Overwrite with the thing itself
-  if(thing === null) {
+  if (thing === null) {
     thing = packet.which;
   }
 
@@ -212,7 +220,7 @@ PacketHandler.prototype.handleItemLook = function(player, packet) {
 
 }
 
-PacketHandler.prototype.handleContainerClose = function(player, containerId) {
+PacketHandler.prototype.handleContainerClose = function (player, containerId) {
 
   /*
    * Function PacketHandler.handleContainerClose
@@ -221,13 +229,13 @@ PacketHandler.prototype.handleContainerClose = function(player, containerId) {
 
   let container = player.containerManager.getContainerFromId(containerId);
 
-  if(container !== null) {
+  if (container !== null) {
     return player.containerManager.closeContainer(container);
   }
 
 }
 
-PacketHandler.prototype.handleTargetCreature = function(player, id) {
+PacketHandler.prototype.handleTargetCreature = function (player, id) {
 
   /*
    * Function PacketHandler.handleTargetCreature
@@ -235,30 +243,30 @@ PacketHandler.prototype.handleTargetCreature = function(player, id) {
    */
 
   // Cancel target
-  if(id === 0) {
+  if (id === 0) {
     return player.actionHandler.targetHandler.setTarget(null);
   }
 
   let creature = gameServer.world.creatureHandler.getCreatureFromId(id);
 
   // No creature found
-  if(creature === null) {
+  if (creature === null) {
     return;
   }
 
   // Must be of type monster
-  if(!(creature instanceof Monster)) {
+  if (!(creature instanceof Monster)) {
     return player.sendCancelMessage("You may not attack this creature.");
   }
 
   // Can see the target
-  if(player.canSee(creature.position)) {
+  if (player.canSee(creature.position)) {
     return player.actionHandler.targetHandler.setTarget(creature);
   }
 
 }
 
-PacketHandler.prototype.handlePlayerSay = function(player, packet) {
+PacketHandler.prototype.handlePlayerSay = function (player, packet) {
 
   /*
    * Function PacketHandler.handlePlayerSay
@@ -269,13 +277,13 @@ PacketHandler.prototype.handlePlayerSay = function(player, packet) {
   let channel = gameServer.world.channelManager.getChannel(packet.id);
 
   // The channel must exist
-  if(channel !== null) {
+  if (channel !== null) {
     return channel.send(player, packet);
   }
 
 }
 
-PacketHandler.prototype.__moveItem = function(player, fromWhere, fromIndex, toWhere, toIndex, count) {
+PacketHandler.prototype.__moveItem = function (player, fromWhere, fromIndex, toWhere, toIndex, count) {
 
   /*
    * Function PacketHandler.__moveItem
@@ -286,20 +294,20 @@ PacketHandler.prototype.__moveItem = function(player, fromWhere, fromIndex, toWh
   let movedItem = fromWhere.removeIndex(fromIndex, count);
 
   // Cannot take the requested item and count
-  if(movedItem === null) {
+  if (movedItem === null) {
     return;
   }
 
   let existthing = null
-  if(toWhere.constructor.name === "Tile") {
+  if (toWhere.constructor.name === "Tile") {
     existthing = toWhere.getTopItem();
   }
 
   // Add the taken item to the new target location
   toWhere.addThing(movedItem, toIndex);
 
-  if(toWhere.constructor.name === "Tile") {
-    if(existthing === null) {
+  if (toWhere.constructor.name === "Tile") {
+    if (existthing === null) {
       toWhere.emit("add", player, movedItem);
     } else {
       existthing.emit("add", player, movedItem);
@@ -307,8 +315,8 @@ PacketHandler.prototype.__moveItem = function(player, fromWhere, fromIndex, toWh
   }
 
   // We have to check each players' adjacency after the container has been moved
-  if(movedItem.constructor.name === "Container") {
-    if(fromWhere.getTopParent() !== toWhere.getTopParent()) {
+  if (movedItem.constructor.name === "Container") {
+    if (fromWhere.getTopParent() !== toWhere.getTopParent()) {
       movedItem.checkPlayersAdjacency();
     }
   }
@@ -318,7 +326,7 @@ PacketHandler.prototype.__moveItem = function(player, fromWhere, fromIndex, toWh
 
 }
 
-PacketHandler.prototype.__addThingToTrashholder = function(fromItem, fromWhere, fromIndex, toWhere, count) {
+PacketHandler.prototype.__addThingToTrashholder = function (fromItem, fromWhere, fromIndex, toWhere, count) {
 
   /*
    * Function PacketHandler.addThingToTrashholder

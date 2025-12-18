@@ -94,6 +94,14 @@ CreatureProperties.prototype.setProperty = function (type, value) {
     console.log(`New value: ${value}`);
   }
 
+  // Add debug for CAPACITY
+  if (type === CONST.PROPERTIES.CAPACITY) {
+    console.log("=== DEBUG CAPACITY PROPERTY SET ===");
+    console.log(`Setting property type: ${type} (CAPACITY)`);
+    console.log(`Current value: ${this.getProperty(type)}`);
+    console.log(`New value: ${value}`);
+  }
+
   let property = this.getProperty(type);
 
   if (property === null) {
@@ -104,6 +112,9 @@ CreatureProperties.prototype.setProperty = function (type, value) {
 
   // Unchanged: do nothing
   if (property === value) {
+    if (type === CONST.PROPERTIES.CAPACITY) {
+      console.log("CAPACITY unchanged, skipping packet send");
+    }
     return;
   }
 
@@ -142,12 +153,23 @@ CreatureProperties.prototype.setProperty = function (type, value) {
   // Get the packet to send
   let packet = this.__getCreaturePropertyPacket(type, value);
 
+  if (type === CONST.PROPERTIES.CAPACITY) {
+    console.log("CAPACITY packet created:", packet ? "yes" : "null");
+    console.log("Type > 12?", type > 12);
+  }
+
   // All property types above 12 are private to the player
   if (type > 12) {
+    if (type === CONST.PROPERTIES.CAPACITY) {
+      console.log("Sending CAPACITY via write() to player");
+    }
     return this.__creature.write(packet);
   }
 
   // Inform the spectators or the player of the property change
+  if (type === CONST.PROPERTIES.CAPACITY) {
+    console.log("Sending CAPACITY via broadcast()");
+  }
   return this.__creature.broadcast(packet);
 };
 
@@ -278,7 +300,7 @@ CreatureProperties.prototype.getStepDuration = function (friction) {
 
   return Math.ceil(
     Math.floor((1e3 * friction) / calculatedStepSpeed) /
-      CONFIG.SERVER.MS_TICK_INTERVAL
+    CONFIG.SERVER.MS_TICK_INTERVAL
   );
 };
 
