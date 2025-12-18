@@ -21,5 +21,6 @@
     "fleeHealth": 10,
     "openDoors": false,
     "senseInvisible": false
-  }
+  },
+  "loot": []
 }

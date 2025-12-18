@@ -27,7 +27,7 @@ function NetworkManager() {
 
 }
 
-NetworkManager.prototype.writeOutgoingBuffer = function(gameSocket) {
+NetworkManager.prototype.writeOutgoingBuffer = function (gameSocket) {
 
   /*
    * Function WebsocketServer.writeOutgoingBuffer
@@ -35,12 +35,12 @@ NetworkManager.prototype.writeOutgoingBuffer = function(gameSocket) {
    */
 
   // Ignore if the socket was already destroyed
-  if(gameSocket.socket.destroyed) {
+  if (gameSocket.socket.destroyed) {
     return;
   }
 
   // No messages
-  if(gameSocket.outgoingBuffer.isEmpty()) {
+  if (gameSocket.outgoingBuffer.isEmpty()) {
     return;
   }
 
@@ -50,7 +50,7 @@ NetworkManager.prototype.writeOutgoingBuffer = function(gameSocket) {
 
 }
 
-NetworkManager.prototype.handleIO = function(gameSocket) {
+NetworkManager.prototype.handleIO = function (gameSocket) {
 
   /*
    * Function NetworkManager.handleIO
@@ -62,7 +62,7 @@ NetworkManager.prototype.handleIO = function(gameSocket) {
 
 }
 
-NetworkManager.prototype.readIncomingBuffer = function(gameSocket) {
+NetworkManager.prototype.readIncomingBuffer = function (gameSocket) {
 
   /*
    * Function GameServer.readIncomingBuffer
@@ -76,7 +76,7 @@ NetworkManager.prototype.readIncomingBuffer = function(gameSocket) {
   this.packetStream.write(buffer);
 
   // Block excessively large inputs by the users
-  if(buffer.length > CONFIG.SERVER.MAX_PACKET_SIZE) {
+  if (buffer.length > CONFIG.SERVER.MAX_PACKET_SIZE) {
     return gameSocket.close();
   }
 
@@ -84,22 +84,22 @@ NetworkManager.prototype.readIncomingBuffer = function(gameSocket) {
   let packet = new PacketReader(buffer);
 
   // Extend the idle lock if a packet is received
-  if(packet.isReadable()) {
+  if (packet.isReadable()) {
     gameSocket.player.idleHandler.extend();
   }
 
   // Keep parsing the incoming buffer
-  while(packet.isReadable()) {
+  while (packet.isReadable()) {
 
     // Prevent reading the incoming buffer if the socket was destroyed
-    if(gameSocket.socket.destroyed) {
+    if (gameSocket.socket.destroyed) {
       return;
     }
 
     // Parsing client packets is very dangerous so wrap in a try/catch. Should probably verify length of packets!
     try {
       this.__readPacket(gameSocket, packet);
-    } catch(exception) {
+    } catch (exception) {
       console.trace(exception);
       return gameSocket.close();
     }
@@ -109,7 +109,7 @@ NetworkManager.prototype.readIncomingBuffer = function(gameSocket) {
 }
 
 
-NetworkManager.prototype.__readPacket = function(gameSocket, packet) {
+NetworkManager.prototype.__readPacket = function (gameSocket, packet) {
 
   /*
    * Function NetworkManager.__readPacket
@@ -118,18 +118,19 @@ NetworkManager.prototype.__readPacket = function(gameSocket, packet) {
 
   // Read the opcode of the packet
   let opcode = packet.readUInt8();
+  console.log("=== DEBUG PACKET OPCODE:", opcode);
 
   // The packet operational code
-  switch(opcode) {
+  switch (opcode) {
 
     // Cancel target packet is requested (esc key)
     case CONST.PROTOCOL.CLIENT.BUY_OFFER: {
-       return gameSocket.player.handleBuyOffer(packet.readBuyOffer());
+      return gameSocket.player.handleBuyOffer(packet.readBuyOffer());
     }
 
     // Cancel target packet is requested (esc key)
     case CONST.PROTOCOL.CLIENT.TARGET_CANCEL: {
-       return gameSocket.player.setTarget(null);
+      return gameSocket.player.setTarget(null);
     }
 
     // Adding friend packet is received

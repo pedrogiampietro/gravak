@@ -2,7 +2,7 @@
 
 const EventEmitter = require("./eventemitter");
 
-const ThingEmitter = function() {
+const ThingEmitter = function () {
 
   /*
    * Class ThingEmitter
@@ -17,7 +17,7 @@ const ThingEmitter = function() {
 ThingEmitter.prototype = Object.create(EventEmitter.prototype);
 ThingEmitter.prototype.constructor = ThingEmitter;
 
-ThingEmitter.prototype.emit = function(which, ...args) {
+ThingEmitter.prototype.emit = function (which, ...args) {
 
   /*
    * Function ThingEmitter.emit
@@ -30,17 +30,20 @@ ThingEmitter.prototype.emit = function(which, ...args) {
   // of a special fishing rod, we can attach an event handler to only that fishing rod and return false in its callback. This way
   // it will not execute the prototype.
   try {
-    if(!this.__emit(which, ...args)) {
+    if (!this.__emit(which, ...args)) {
       return;
     }
-   } catch(error) {
-     console.debug(error);
-   }
+  } catch (error) {
+    console.debug(error);
+  }
 
   // Wrap used defined scripts for safety and delegate to the prototype event listener too
   try {
-    this.getPrototype().emit(which, ...args);
-  } catch(error) {
+    let prototype = this.getPrototype();
+    if (prototype) {
+      prototype.emit(which, ...args);
+    }
+  } catch (error) {
     console.debug(error);
   }
 

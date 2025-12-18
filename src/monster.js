@@ -8,7 +8,7 @@ const MonsterBehaviour = requireModule("monster-behaviour");
 
 const { EmotePacket } = requireModule("protocol");
 
-const Monster = function(cid, data) {
+const Monster = function (cid, data) {
 
   /*
    * Class Monster
@@ -28,7 +28,7 @@ const Monster = function(cid, data) {
   this.damageMap = new DamageMap(this);
 
   // Handler for loot
-  this.lootHandler = new LootHandler(data.loot);
+  this.lootHandler = new LootHandler(data.loot || []);
 
   // Container for the behaviour
   this.behaviourHandler = new MonsterBehaviour(this, data.behaviour);
@@ -38,7 +38,7 @@ const Monster = function(cid, data) {
 Monster.prototype = Object.create(Creature.prototype);
 Monster.prototype.constructor = Monster;
 
-Monster.prototype.setTarget = function(target) {
+Monster.prototype.setTarget = function (target) {
 
   /*
    * Function Monster.setTarget
@@ -50,7 +50,7 @@ Monster.prototype.setTarget = function(target) {
 
 }
 
-Monster.prototype.cleanup = function() {
+Monster.prototype.cleanup = function () {
 
   /*
    * Function Monster.cleanup
@@ -61,33 +61,33 @@ Monster.prototype.cleanup = function() {
 
 }
 
-Monster.prototype.isTileOccupied = function(tile) {
+Monster.prototype.isTileOccupied = function (tile) {
 
   /*
    * Function Monster.isTileOccupied
    * Function evaluated for a tile whether it is occupied for the monster or not
    */
 
-  if(tile === null) {
+  if (tile === null) {
     return true;
   }
 
   // Tiles that block solid can never be walked on
-  if(tile.isBlockSolid()) {
+  if (tile.isBlockSolid()) {
     return true;
   }
 
-  if(tile.isProtectionZone()) {
+  if (tile.isProtectionZone()) {
     return true;
   }
 
   // The tile items contain a block solid (e.g., a wall)
-  if(tile.itemStack && tile.itemStack.isBlockSolid(this.behaviourHandler.openDoors)) {
+  if (tile.itemStack && tile.itemStack.isBlockSolid(this.behaviourHandler.openDoors)) {
     return true;
   }
 
   // Cannot pass through characters
-  if(tile.isOccupiedCharacters()) {
+  if (tile.isOccupiedCharacters()) {
     return true;
   }
 
@@ -95,7 +95,7 @@ Monster.prototype.isTileOccupied = function(tile) {
 
 }
 
-Monster.prototype.createCorpse = function() {
+Monster.prototype.createCorpse = function () {
 
   /*
    * Function Monster.createCorpse
@@ -109,7 +109,7 @@ Monster.prototype.createCorpse = function() {
   this.damageMap.distributeExperience();
 
   // Add loot to the corpse and schedule a decay event
-  if(thing instanceof Corpse) {
+  if (thing instanceof Corpse) {
     this.lootHandler.addLoot(thing);
   }
 
@@ -118,7 +118,7 @@ Monster.prototype.createCorpse = function() {
 
 }
 
-Monster.prototype.getPrototype = function() {
+Monster.prototype.getPrototype = function () {
 
   /*
    * Function Monster.getPrototype
@@ -129,7 +129,7 @@ Monster.prototype.getPrototype = function() {
 
 }
 
-Monster.prototype.getTarget = function() {
+Monster.prototype.getTarget = function () {
 
   /*
    * Function Creature.getTarget
@@ -140,7 +140,7 @@ Monster.prototype.getTarget = function() {
 
 }
 
-Monster.prototype.push = function(position) {
+Monster.prototype.push = function (position) {
 
   /*
    * Function Monster.push
@@ -148,17 +148,17 @@ Monster.prototype.push = function(position) {
    */
 
   // Cannot push when the creature is moving
-  if(this.isMoving()) {
+  if (this.isMoving()) {
     return;
   }
 
-  if(!position.besides(this.position)) {
+  if (!position.besides(this.position)) {
     return;
   }
 
   let tile = process.gameServer.world.getTileFromWorldPosition(position);
 
-  if(tile === null || tile.id === 0) {
+  if (tile === null || tile.id === 0) {
     return;
   }
 
@@ -175,7 +175,7 @@ Monster.prototype.push = function(position) {
 
 }
 
-Monster.prototype.hasTarget = function() {
+Monster.prototype.hasTarget = function () {
 
   /*
    * Function Monster.hasTarget
@@ -186,7 +186,7 @@ Monster.prototype.hasTarget = function() {
 
 }
 
-Monster.prototype.think = function() {
+Monster.prototype.think = function () {
 
   /*
    * Function Monster.think
@@ -196,9 +196,9 @@ Monster.prototype.think = function() {
   // Delegates to handling all the available actions
   this.behaviourHandler.actions.handleActions(this.behaviourHandler);
 
-} 
+}
 
-Monster.prototype.handleSpellAction = function() {
+Monster.prototype.handleSpellAction = function () {
 
   /*
    * Function Monster.handleSpellAction
@@ -206,7 +206,7 @@ Monster.prototype.handleSpellAction = function() {
    */
 
   // Must have a target before casting any spells
-  if(!this.behaviourHandler.hasTarget()) {
+  if (!this.behaviourHandler.hasTarget()) {
     return;
   }
 
@@ -214,15 +214,15 @@ Monster.prototype.handleSpellAction = function() {
   this.lockAction(this.handleSpellAction, 1000);
 
   // Can not shoot at the target (line of sight blocked)
-  if(!this.isInLineOfSight(this.behaviourHandler.target)) {
+  if (!this.isInLineOfSight(this.behaviourHandler.target)) {
     return;
   }
 
   // Go over all the available spells in the spellbook
-  this.spellActions.forEach(function(spell) {
+  this.spellActions.forEach(function (spell) {
 
     // This means there is a failure to cast the spell
-    if(Math.random() > spell.chance) {
+    if (Math.random() > spell.chance) {
       return;
     }
 
@@ -230,15 +230,15 @@ Monster.prototype.handleSpellAction = function() {
     let cast = gameServer.database.getSpell(spell.id);
 
     // If casting was succesful lock it with the specified cooldown
-    if(cast.call(this, spell)) {
+    if (cast.call(this, spell)) {
       this.spellActions.lock(spell, spell.cooldown);
     }
 
   }, this);
-  
+
 }
 
-Monster.prototype.isDistanceWeaponEquipped = function() {
+Monster.prototype.isDistanceWeaponEquipped = function () {
 
   /*
    * Function Monster.isDistanceWeaponEquipped
@@ -249,7 +249,7 @@ Monster.prototype.isDistanceWeaponEquipped = function() {
 
 }
 
-Monster.prototype.decreaseHealth = function(source, amount) {
+Monster.prototype.decreaseHealth = function (source, amount) {
 
   /*
    * Function Monster.decreaseHealth
@@ -270,13 +270,13 @@ Monster.prototype.decreaseHealth = function(source, amount) {
   this.broadcast(new EmotePacket(this, String(amount), this.fluidType));
 
   // When zero health is reached the creature is dead
-  if(this.isZeroHealth()) {
+  if (this.isZeroHealth()) {
     return gameServer.world.creatureHandler.dieCreature(this);
   }
 
 }
 
-Monster.prototype.__addSpells = function(spells) {
+Monster.prototype.__addSpells = function (spells) {
 
   /*
    * Function Monster.__addSpells

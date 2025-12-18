@@ -550,6 +550,11 @@ CreatureHandler.prototype.teleportCreature = function (creature, position) {
 
   destination.broadcast(new CreatureTeleportPacket(creature.getId(), destination.getPosition()));
 
+  // Clear movement buffer for players after teleport to prevent auto-walk
+  if (creature.isPlayer() && creature.movementHandler) {
+    creature.movementHandler.__setMoveBuffer(null);
+  }
+
   creature.emit("move", tile);
   oldTile.emit("exit", oldTile, creature);
   tile.emit("enter", tile, creature);

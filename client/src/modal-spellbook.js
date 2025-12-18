@@ -1,4 +1,4 @@
-const SpellbookModal = function(element) {
+const SpellbookModal = function (element) {
 
   /*
    * Class SpellbookModal
@@ -16,7 +16,7 @@ const SpellbookModal = function(element) {
 SpellbookModal.prototype = Object.create(Modal.prototype);
 SpellbookModal.constructor = SpellbookModal;
 
-SpellbookModal.prototype.__handleClick = function(sid) {
+SpellbookModal.prototype.__handleClick = function (sid) {
 
   /*
    * Class SpellbookModal
@@ -30,7 +30,7 @@ SpellbookModal.prototype.__handleClick = function(sid) {
 
 }
 
-SpellbookModal.prototype.createSpellList = function(spells) {
+SpellbookModal.prototype.createSpellList = function (spells) {
 
   /*
    * Function SpellbookModal.createSpellList
@@ -45,7 +45,7 @@ SpellbookModal.prototype.createSpellList = function(spells) {
 }
 
 
-SpellbookModal.prototype.__createSpellNode = function(id) {
+SpellbookModal.prototype.__createSpellNode = function (id) {
 
   /*
    * Function SpellbookModal.__createSpellNode
@@ -79,7 +79,7 @@ SpellbookModal.prototype.__createSpellNode = function(id) {
 
 }
 
-SpellbookModal.prototype.handleOpen = function(index) {
+SpellbookModal.prototype.handleOpen = function (index) {
 
   /*
    * Function SpellbookModal.handleOpen

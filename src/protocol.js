@@ -427,8 +427,8 @@ const ToggleConditionPacket = function (toggle, cid, id) {
   this.writeUInt16(id);
 };
 
-CancelMessagePacket.prototype = Object.create(PacketWriter.prototype);
-CancelMessagePacket.prototype.constructor = CancelMessagePacket;
+ToggleConditionPacket.prototype = Object.create(PacketWriter.prototype);
+ToggleConditionPacket.prototype.constructor = ToggleConditionPacket;
 
 const ServerStatePacket = function (message) {
   /*
@@ -645,7 +645,7 @@ SpellAddPacket.prototype = Object.create(PacketWriter.prototype);
 SpellAddPacket.prototype.constructor = SpellAddPacket;
 
 const SpellCastPacket = function (sid, duration) {
-  PacketWriter.call(this, CONST.PROTOCOL.SERVER.SPELL_CAST, 5);
+  PacketWriter.call(this, CONST.PROTOCOL.SERVER.SPELL_CAST, 6);
 
   this.writeUInt16(sid);
   this.writeUInt32(duration);

@@ -2,7 +2,7 @@
 
 const { SpellAddPacket, SpellCastPacket } = requireModule("protocol");
 
-const Spellbook = function(player, data) {
+const Spellbook = function (player, data) {
 
   /*
    * Class Spellbook
@@ -25,7 +25,7 @@ const Spellbook = function(player, data) {
 Spellbook.prototype.GLOBAL_COOLDOWN = 0xFFFF;
 Spellbook.prototype.GLOBAL_COOLDOWN_DURATION = 20;
 
-Spellbook.prototype.getAvailableSpells = function() {
+Spellbook.prototype.getAvailableSpells = function () {
 
   /*
    * Function Spellbook.getAvailableSpells
@@ -36,7 +36,7 @@ Spellbook.prototype.getAvailableSpells = function() {
 
 }
 
-Spellbook.prototype.toJSON = function() {
+Spellbook.prototype.toJSON = function () {
 
   /*
    * Function Spellbook.toJSON
@@ -51,7 +51,7 @@ Spellbook.prototype.toJSON = function() {
 
 }
 
-Spellbook.prototype.__serializeCooldown = function([ key, value ]) {
+Spellbook.prototype.__serializeCooldown = function ([key, value]) {
 
   /*
    * Function Spellbook.__serializeCooldown
@@ -65,7 +65,7 @@ Spellbook.prototype.__serializeCooldown = function([ key, value ]) {
 
 }
 
-Spellbook.prototype.addAvailableSpell = function(sid) {
+Spellbook.prototype.addAvailableSpell = function (sid) {
 
   /*
    * Function Spellbook.addAvailableSpell
@@ -82,48 +82,61 @@ Spellbook.prototype.addAvailableSpell = function(sid) {
 
 }
 
-Spellbook.prototype.handleSpell = function(sid) {
+Spellbook.prototype.handleSpell = function (sid) {
 
   /*
    * Function Spellbook.handleSpell
    * Handles casting of a spell by an entity
    */
 
+  console.log("=== DEBUG SPELLBOOK.HANDLESPELL ===");
+  console.log("SID:", sid);
+
   // Ignore cast requests that are already on cooldown
-  if(this.__spellCooldowns.has(this.GLOBAL_COOLDOWN) || this.__spellCooldowns.has(sid)) {
+  if (this.__spellCooldowns.has(this.GLOBAL_COOLDOWN) || this.__spellCooldowns.has(sid)) {
+    console.log("Spell on cooldown, skipping");
     return;
   }
 
   // Try to get the spell
   let spell = gameServer.database.getSpell(sid);
+  console.log("Spell from database:", spell ? "found" : "null");
 
   // Does not exist
-  if(spell === null) {
+  if (spell === null) {
+    console.log("Spell not found in database");
     return;
   }
 
   // The player does not own this spell
-  if(!this.__availableSpells.has(sid)) {
+  if (!this.__availableSpells.has(sid)) {
+    console.log("Player does not have this spell");
     return;
   }
 
   // Call with reference to player
+  console.log("Calling spell function...");
   let cooldown = spell.call(this.player);
+  console.log("Spell returned cooldown:", cooldown);
 
   // Zero cooldown means that the cast was unsuccesful
-  if(cooldown === 0) {
+  if (cooldown === 0) {
+    console.log("Cooldown is 0, cast failed");
     return;
   }
 
   // Write a packet to the player that the spell needs to be put on cooldown by a number of frames
+  console.log("Sending SpellCastPacket...");
   this.player.write(new SpellCastPacket(sid, cooldown));
+  console.log("SpellCastPacket sent");
 
   // Lock it
   this.__lockSpell(sid, cooldown);
+  console.log("Spell locked, handleSpell complete");
 
 }
 
-Spellbook.prototype.__lockSpell = function(sid, duration) {
+Spellbook.prototype.__lockSpell = function (sid, duration) {
 
   /*
    * Function Spellbook.__lockSpell
@@ -136,7 +149,7 @@ Spellbook.prototype.__lockSpell = function(sid, duration) {
 
 }
 
-Spellbook.prototype.applyCooldowns = function() {
+Spellbook.prototype.applyCooldowns = function () {
 
   /*
    * Function Spellbook.applyCooldowns
@@ -146,12 +159,12 @@ Spellbook.prototype.applyCooldowns = function() {
   // Apply a correction for the duration the player has been offline
   let correction = (Date.now() - this.player.lastVisit);
 
-  this.__cooldowns.forEach(function({ sid, cooldown }) {
+  this.__cooldowns.forEach(function ({ sid, cooldown }) {
 
     cooldown = Math.max(0, cooldown - (correction / CONFIG.SERVER.MS_TICK_INTERVAL));
 
     // Cooldown of zero: not needed
-    if(cooldown === 0) {
+    if (cooldown === 0) {
       return;
     }
 
@@ -163,7 +176,7 @@ Spellbook.prototype.applyCooldowns = function() {
 
 }
 
-Spellbook.prototype.writeSpells = function(gameSocket) {
+Spellbook.prototype.writeSpells = function (gameSocket) {
 
   /*
    * Function Spellbook.writeSpells
@@ -174,7 +187,7 @@ Spellbook.prototype.writeSpells = function(gameSocket) {
 
 }
 
-Spellbook.prototype.__internalLockSpell = function(sid, duration) {
+Spellbook.prototype.__internalLockSpell = function (sid, duration) {
 
   /*
    * Function Spellbook.__internalLockSpell
@@ -185,7 +198,7 @@ Spellbook.prototype.__internalLockSpell = function(sid, duration) {
 
 }
 
-Spellbook.prototype.__unlockSpell = function(sid) {
+Spellbook.prototype.__unlockSpell = function (sid) {
 
   /*
    * Function Spellbook.__unlockSpell

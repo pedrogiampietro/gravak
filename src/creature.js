@@ -161,6 +161,15 @@ Creature.prototype.hasCondition = function (id) {
   return this.conditions.has(id);
 };
 
+Creature.prototype.addCondition = function (id, ticks, value) {
+  /*
+   * Function Creature.addCondition
+   * Adds a condition to the creature
+   */
+
+  return this.conditions.addCondition(id, ticks, value);
+};
+
 Creature.prototype.removeCondition = function (id) {
   /*
    * Function Creature.addCondition
@@ -394,6 +403,15 @@ Creature.prototype.isZeroHealth = function () {
    */
 
   return this.getProperty(CONST.PROPERTIES.HEALTH) === 0;
+};
+
+Creature.prototype.isFullHealth = function () {
+  /*
+   * Function Creature.isFullHealth
+   * Returns true if the creature has full health
+   */
+
+  return this.isFull(CONST.PROPERTIES.HEALTH);
 };
 
 Creature.prototype.isPlayer = function () {

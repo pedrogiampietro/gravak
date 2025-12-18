@@ -1,6 +1,6 @@
 "use strict";
 
-const Spellbook = function(spells) {
+const Spellbook = function (spells) {
 
   /*
    * Class Spellbook
@@ -8,7 +8,17 @@ const Spellbook = function(spells) {
    */
 
   // The list of spell identifiers (sid) that are available
-  this.spells = new Set(spells);
+  // The list of spell identifiers (sid) that are available
+  console.log("DEBUG: Spellbook constructor received:", spells);
+
+  if (spells && Array.isArray(spells.availableSpells)) {
+    this.spells = new Set(spells.availableSpells);
+  } else if (Array.isArray(spells)) {
+    this.spells = new Set(spells);
+  } else {
+    console.warn("DEBUG: Invalid spellbook data received", spells);
+    this.spells = new Set();
+  }
 
   // List of all abilities on cooldown
   this.cooldowns = new Map();
@@ -23,7 +33,7 @@ const Spellbook = function(spells) {
 Spellbook.prototype.GLOBAL_COOLDOWN = 0xFFFF;
 Spellbook.prototype.GLOBAL_COOLDOWN_DURATION = 20;
 
-Spellbook.prototype.addSpell = function(sid) {
+Spellbook.prototype.addSpell = function (sid) {
 
   /*
    * Function Spellbook.addSpell
@@ -35,7 +45,7 @@ Spellbook.prototype.addSpell = function(sid) {
 
 }
 
-Spellbook.prototype.removeSpell = function(sid) {
+Spellbook.prototype.removeSpell = function (sid) {
 
   /*
    * Function Spellbook.addSpell
@@ -48,7 +58,7 @@ Spellbook.prototype.removeSpell = function(sid) {
 
 }
 
-Spellbook.prototype.castSpell = function(sid) {
+Spellbook.prototype.castSpell = function (sid) {
 
   /*
    * Function Spellbook.castSpell
@@ -56,7 +66,7 @@ Spellbook.prototype.castSpell = function(sid) {
    */
 
   // The spell is still on cooldown
-  if(this.cooldowns.has(this.GLOBAL_COOLDOWN) || this.cooldowns.has(sid)) {
+  if (this.cooldowns.has(this.GLOBAL_COOLDOWN) || this.cooldowns.has(sid)) {
     return this.__cooldownCallback();
   }
 
@@ -64,7 +74,7 @@ Spellbook.prototype.castSpell = function(sid) {
 
 }
 
-Spellbook.prototype.serverCastSpell = function(packet) {
+Spellbook.prototype.serverCastSpell = function (packet) {
 
   /*
    * Function Spellbook.serverCastSpell
@@ -75,11 +85,11 @@ Spellbook.prototype.serverCastSpell = function(packet) {
 
 }
 
-Spellbook.prototype.getCooldownSeconds = function(sid) {
+Spellbook.prototype.getCooldownSeconds = function (sid) {
 
   let gcdf = this.cooldowns.has(this.GLOBAL_COOLDOWN) ? this.cooldowns.get(this.GLOBAL_COOLDOWN).remainingSeconds() : 0;
 
-  if(!this.cooldowns.has(sid)) {
+  if (!this.cooldowns.has(sid)) {
     return gcdf;
   }
 
@@ -87,7 +97,7 @@ Spellbook.prototype.getCooldownSeconds = function(sid) {
 
 }
 
-Spellbook.prototype.getCooldownFraction = function(sid) {
+Spellbook.prototype.getCooldownFraction = function (sid) {
 
   /*
    * Function Spellbook.getCooldownFraction
@@ -98,7 +108,7 @@ Spellbook.prototype.getCooldownFraction = function(sid) {
   let gcdf = this.cooldowns.has(this.GLOBAL_COOLDOWN) ? (1 - this.cooldowns.get(this.GLOBAL_COOLDOWN).remainingFraction()) : 1;
 
   // Spell is not on cooldown: show the global cooldown time
-  if(!this.cooldowns.has(sid)) {
+  if (!this.cooldowns.has(sid)) {
     return gcdf;
   }
 
@@ -107,7 +117,7 @@ Spellbook.prototype.getCooldownFraction = function(sid) {
 
 }
 
-Spellbook.prototype.__cooldownCallback = function() {
+Spellbook.prototype.__cooldownCallback = function () {
 
   /*
    * Function Spellbook.__cooldownCallback
@@ -119,7 +129,7 @@ Spellbook.prototype.__cooldownCallback = function() {
 
 }
 
-Spellbook.prototype.__lockSpell = function(id, time) {
+Spellbook.prototype.__lockSpell = function (id, time) {
 
   /*
    * Function Spellbook.__lockSpell
@@ -134,7 +144,7 @@ Spellbook.prototype.__lockSpell = function(id, time) {
 
 }
 
-Spellbook.prototype.__unlockSpell = function(id) {
+Spellbook.prototype.__unlockSpell = function (id) {
 
   /*
    * Function Spellbook.__unlockSpell

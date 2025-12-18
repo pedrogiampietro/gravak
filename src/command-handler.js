@@ -267,6 +267,30 @@ CommandHandler.prototype.handle = function (player, message) {
     // Send success message
     return player.sendCancelMessage("Created item " + itemId + (count > 1 ? " x" + count : ""));
   }
+
+  if (message[0] === "/goto") {
+    let name = message.slice(1).join(" ").toLowerCase();
+
+    // Find the creature
+    let target = null;
+    let found = false;
+
+    gameServer.world.creatureHandler.__creatureMap.forEach(function (creature) {
+      if (found) return;
+
+      if (creature.name && creature.name.toLowerCase() === name) {
+        target = creature;
+        found = true;
+      }
+    });
+
+    if (target) {
+      gameServer.world.creatureHandler.teleportCreature(player, target.getPosition());
+      return player.sendCancelMessage("Teleported to " + target.name + ".");
+    } else {
+      return player.sendCancelMessage("Creature not found: " + name);
+    }
+  }
 };
 
 module.exports = CommandHandler;

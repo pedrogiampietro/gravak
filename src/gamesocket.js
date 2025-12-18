@@ -3,7 +3,7 @@
 const PacketBuffer = requireModule("packet-buffer");
 const PacketReader = requireModule("packet-reader");
 
-const { 
+const {
   LatencyPacket,
   ServerErrorPacket,
   PlayerLoginPacket,
@@ -14,7 +14,7 @@ const {
   ContainerAddPacket
 } = requireModule("protocol");
 
-const GameSocket = function(socket, account) {
+const GameSocket = function (socket, account) {
 
   /*
    * Class GameSocket
@@ -49,29 +49,29 @@ const GameSocket = function(socket, account) {
 
 }
 
-GameSocket.prototype.getBytesWritten = function() {
+GameSocket.prototype.getBytesWritten = function () {
 
   /*
    * Function WebsocketServer.getSocketDetails
    * Returns sent and received bytes for a socket
    */
 
-   return this.socket._socket.bytesWritten;
+  return this.socket._socket.bytesWritten;
 
 }
 
-GameSocket.prototype.getBytesRead = function() {
-  
+GameSocket.prototype.getBytesRead = function () {
+
   /*
    * Function WebsocketServer.getSocketDetails
    * Returns sent and received bytes for a socket
    */
-   
-   return this.socket._socket.bytesRead;
+
+  return this.socket._socket.bytesRead;
 
 }
 
-GameSocket.prototype.__handleSocketError = function(gameSocket) {
+GameSocket.prototype.__handleSocketError = function (gameSocket) {
 
   /*
    * Function WebsocketServer.__handleSocketError
@@ -82,7 +82,7 @@ GameSocket.prototype.__handleSocketError = function(gameSocket) {
 
 }
 
-GameSocket.prototype.__handlePong = function(gameSocket) {
+GameSocket.prototype.__handlePong = function (gameSocket) {
 
   /*
    * Function GameSocket.__handlePong
@@ -93,7 +93,7 @@ GameSocket.prototype.__handlePong = function(gameSocket) {
 
 }
 
-GameSocket.prototype.isController = function() {
+GameSocket.prototype.isController = function () {
 
   /*
    * Function GameSocket.isController
@@ -101,7 +101,7 @@ GameSocket.prototype.isController = function() {
    */
 
   // This is possible
-  if(this.player === null) {
+  if (this.player === null) {
     return false;
   }
 
@@ -109,7 +109,7 @@ GameSocket.prototype.isController = function() {
 
 }
 
-GameSocket.prototype.getLastPacketReceived = function() {
+GameSocket.prototype.getLastPacketReceived = function () {
 
   /*
    * Function GameSocket.getLastPacketReceived
@@ -120,7 +120,7 @@ GameSocket.prototype.getLastPacketReceived = function() {
 
 }
 
-GameSocket.prototype.writeLatencyPacket = function() {
+GameSocket.prototype.writeLatencyPacket = function () {
 
   /*
    * Function GameSocket.writeLatencyPacket
@@ -131,7 +131,7 @@ GameSocket.prototype.writeLatencyPacket = function() {
 
 }
 
-GameSocket.prototype.isAlive = function() {
+GameSocket.prototype.isAlive = function () {
 
   /*
    * Function GameSocket.isAlive
@@ -142,7 +142,7 @@ GameSocket.prototype.isAlive = function() {
 
 }
 
-GameSocket.prototype.ping = function() {
+GameSocket.prototype.ping = function () {
 
   /*
    * Function GameSocket.ping
@@ -150,7 +150,7 @@ GameSocket.prototype.ping = function() {
    */
 
   // Not alive from previous ping: bye bye
-  if(!this.isAlive()) {
+  if (!this.isAlive()) {
     return this.terminate();
   }
 
@@ -162,13 +162,13 @@ GameSocket.prototype.ping = function() {
 
 }
 
-GameSocket.prototype.id = function() {
+GameSocket.prototype.id = function () {
 
   return this.socket._socket.id;
 
 }
 
-GameSocket.prototype.getAddress = function() {
+GameSocket.prototype.getAddress = function () {
 
   /*
    * Function GameSocket.getAddress
@@ -180,7 +180,7 @@ GameSocket.prototype.getAddress = function() {
 }
 
 
-GameSocket.prototype.serializeWorld = function(chunk) {
+GameSocket.prototype.serializeWorld = function (chunk) {
 
   /*
    * Function GameSocket.serializeWorld
@@ -192,7 +192,7 @@ GameSocket.prototype.serializeWorld = function(chunk) {
 
 }
 
-GameSocket.prototype.writeWorldState = function(player) {
+GameSocket.prototype.writeWorldState = function (player) {
 
   /*
    * Function GameSocket.writeWorldState
@@ -215,9 +215,12 @@ GameSocket.prototype.writeWorldState = function(player) {
   // Inform everyone of the new player
   gameServer.world.broadcastPacket(new PlayerLoginPacket(player.getProperty(CONST.PROPERTIES.NAME)));
 
+  // Write the player spells
+  player.spellbook.writeSpells(this);
+
 }
 
-GameSocket.prototype.attachPlayerController = function(player) {
+GameSocket.prototype.attachPlayerController = function (player) {
 
   /*
    * Function Player.attachPlayerController
@@ -229,10 +232,10 @@ GameSocket.prototype.attachPlayerController = function(player) {
 
   // Attach a controller
   player.attachController(this);
-  
+
 }
 
-GameSocket.prototype.__isLatencyRequest = function(buffer) {
+GameSocket.prototype.__isLatencyRequest = function (buffer) {
 
   /*
    * Function WebsocketServer.__isLatencyRequest
@@ -243,7 +246,7 @@ GameSocket.prototype.__isLatencyRequest = function(buffer) {
 
 }
 
-GameSocket.prototype.__handleSocketData = function(buffer) {
+GameSocket.prototype.__handleSocketData = function (buffer) {
 
   /*
    * Function GameSocket.__handleSocketData
@@ -251,17 +254,17 @@ GameSocket.prototype.__handleSocketData = function(buffer) {
    */
 
   // Array buffer was not received
-  if(!Buffer.isBuffer(buffer)) {
+  if (!Buffer.isBuffer(buffer)) {
     return this.close();
   }
 
   // If latency request do not buffer: immediately write the response
-  if(this.__isLatencyRequest(buffer)) {
+  if (this.__isLatencyRequest(buffer)) {
     return this.writeLatencyPacket();
   }
 
   // Only player controllers may interact with the server
-  if(!this.isController()) {
+  if (!this.isController()) {
     return;
   }
 
@@ -270,7 +273,7 @@ GameSocket.prototype.__handleSocketData = function(buffer) {
 
 }
 
-GameSocket.prototype.closeError = function(message) {
+GameSocket.prototype.closeError = function (message) {
 
   /*
    * Function GameSocket.closeError
@@ -284,7 +287,7 @@ GameSocket.prototype.closeError = function(message) {
 
 }
 
-GameSocket.prototype.write = function(packet) {
+GameSocket.prototype.write = function (packet) {
 
   /*
    * Function GameSocket.write
@@ -292,7 +295,7 @@ GameSocket.prototype.write = function(packet) {
    */
 
   // Exceeds the maximum size: disconnect the game socket for safety
-  if(packet.overflow()) {
+  if (packet.overflow()) {
     return this.closeError("Internal server error: game packet overflow.");
   }
 
@@ -301,7 +304,7 @@ GameSocket.prototype.write = function(packet) {
 
 }
 
-GameSocket.prototype.terminate = function() {
+GameSocket.prototype.terminate = function () {
 
   /*
    * Function GameSocket.terminate
@@ -312,7 +315,7 @@ GameSocket.prototype.terminate = function() {
 
 }
 
-GameSocket.prototype.close = function() {
+GameSocket.prototype.close = function () {
 
   /*
    * Function GameSocket.close

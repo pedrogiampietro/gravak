@@ -5,9 +5,9 @@ module.exports = function expertiseDoor(player, tile, index, item) {
    * Picks blueberries from a blueberry bush
    */
 
-  process.gameServer.world.teleportCreature(player, tile.position);
+  process.gameServer.world.creatureHandler.teleportCreature(player, tile.position);
 
-  player.on("move", function() {
+  player.on("move", function () {
     item.toggle(player);
   });
 

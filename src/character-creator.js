@@ -3,7 +3,7 @@
 const Position = requireModule("position");
 const Outfit = requireModule("outfit");
 
-const CharacterCreator = function() {
+const CharacterCreator = function () {
 
   /*
    * Class CharacterCreator
@@ -54,21 +54,21 @@ const CharacterCreator = function() {
       "fishing": 10
     },
     "spellbook": {
-      "availableSpells": [],
+      "availableSpells": [1, 2, 3, 5, 8],
       "cooldowns": []
     },
     "containers": {
       "keyring": [],
       "depot": [],
       "inbox": [],
-      "equipment": [{"slot": 6, "item": {"id": 1988}}],
+      "equipment": [{ "slot": 6, "item": { "id": 1988 } }],
     },
     "friends": []
   });
 
 }
 
-CharacterCreator.prototype.create = function(name, sex) {
+CharacterCreator.prototype.create = function (name, sex) {
 
   /*
    * CharacterCreator.create
@@ -82,7 +82,7 @@ CharacterCreator.prototype.create = function(name, sex) {
   copiedTemplate.properties.name = name;
 
   // And sex specific attributes
-  if(sex === "male") {
+  if (sex === "male") {
     copiedTemplate.properties.sex = CONST.SEX.MALE;
     copiedTemplate.properties.outfit.id = CONST.LOOKTYPES.MALE.CITIZEN;
     copiedTemplate.properties.availableOutfits = new Array(
@@ -91,7 +91,7 @@ CharacterCreator.prototype.create = function(name, sex) {
       CONST.LOOKTYPES.MALE.MAGE,
       CONST.LOOKTYPES.MALE.KNIGHT
     );
-  } else if(sex === "female") {
+  } else if (sex === "female") {
     copiedTemplate.properties.sex = CONST.SEX.FEMALE;
     copiedTemplate.properties.outfit.id = CONST.LOOKTYPES.FEMALE.CITIZEN;
     copiedTemplate.properties.availableOutfits = new Array(

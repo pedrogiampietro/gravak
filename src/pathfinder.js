@@ -2,7 +2,7 @@
 
 const BinaryHeap = requireModule("binary-heap");
 
-const Pathfinder = function(lattice) {
+const Pathfinder = function (lattice) {
 
   /*
    * Class Pathfinder
@@ -20,7 +20,7 @@ const Pathfinder = function(lattice) {
 Pathfinder.prototype.ADJACENT = 0x00;
 Pathfinder.prototype.EXACT = 0x01;
 
-Pathfinder.prototype.enableTile = function(tile, to) {
+Pathfinder.prototype.enableTile = function (tile, to) {
 
   /*
    * Function Pathfinder.enableTile
@@ -41,7 +41,7 @@ Pathfinder.prototype.enableTile = function(tile, to) {
 
 }
 
-Pathfinder.prototype.search = function(creature, from, to, mode) {
+Pathfinder.prototype.search = function (creature, from, to, mode) {
 
   /*
    * Function Pathfinder.search
@@ -60,7 +60,7 @@ Pathfinder.prototype.search = function(creature, from, to, mode) {
   openHeap.push(from);
 
   // Find path in the open heap
-  while(!openHeap.isEmpty()) {
+  while (!openHeap.isEmpty()) {
 
     this.__iterations++;
 
@@ -69,12 +69,12 @@ Pathfinder.prototype.search = function(creature, from, to, mode) {
     let currentNode = currentTile.pathfinderNode;
 
     // Found the end of the traversal: must be adjacent to end
-    if(mode === this.ADJACENT) {
-      if(to.neighbours.includes(currentTile)) {
+    if (mode === this.ADJACENT) {
+      if (to.neighbours.includes(currentTile)) {
         return this.pathTo(currentTile);
       }
-    } else if(mode === this.EXACT) {
-      if(currentTile === to) {
+    } else if (mode === this.EXACT) {
+      if (currentTile === to) {
         return this.pathTo(currentTile);
       }
     }
@@ -83,70 +83,73 @@ Pathfinder.prototype.search = function(creature, from, to, mode) {
     currentNode.setClosed();
 
     // Go over all of its neighbours
-    currentTile.neighbours.forEach(function(neighbourTile) {
+    if (currentTile.neighbours) {
+      currentTile.neighbours.forEach(function (neighbourTile) {
 
-      // Not needed
-      if(neighbourTile === currentTile) {
-        return;
-      }
+        // Not needed
+        if (neighbourTile === currentTile) {
+          return;
+        }
 
-      // This tile has not been opened for pathfinding yet
-      if(!neighbourTile.pathfinderNode) {
-        this.enableTile(neighbourTile, to);
-      }
+        // This tile has not been opened for pathfinding yet
+        if (!neighbourTile.pathfinderNode) {
+          this.enableTile(neighbourTile, to);
+        }
 
-      let neighbourNode = neighbourTile.pathfinderNode;
+        let neighbourNode = neighbourTile.pathfinderNode;
 
-      // Already closed for searching
-      if(neighbourNode.isClosed()) {
-        return;
-      }
+        // Already closed for searching
+        if (neighbourNode.isClosed()) {
+          return;
+        }
 
-      // Only search in the visible space 
-      if(!neighbourTile.getPosition().isVisible(from.getPosition(), 11, 8)) {
-        return neighbourNode.setClosed();
-      }
+        // Only search in the visible space 
+        if (!neighbourTile.getPosition().isVisible(from.getPosition(), 11, 8)) {
+          return neighbourNode.setClosed();
+        }
 
-      if(!neighbourTile.getPosition().isVisible(to.getPosition(), 11, 8)) {
-        return neighbourNode.setClosed();
-      }
+        if (!neighbourTile.getPosition().isVisible(to.getPosition(), 11, 8)) {
+          return neighbourNode.setClosed();
+        }
 
-      // Occupied so close it for searching
-      if(creature.isTileOccupied(neighbourTile)) {
-        return neighbourNode.setClosed();
-      }
+        // Occupied so close it for searching
+        if (creature.isTileOccupied(neighbourTile)) {
+          return neighbourNode.setClosed();
+        }
 
-      // Debugging
-      gameServer.world.sendMagicEffect(neighbourTile.getPosition(), CONST.EFFECT.MAGIC.SOUND_WHITE);
+        // Debugging
+        gameServer.world.sendMagicEffect(neighbourTile.getPosition(), CONST.EFFECT.MAGIC.SOUND_WHITE);
 
-      // Add the cost of the current node
-      let gScore = currentNode.getCost() + neighbourTile.getWeight(currentTile);
+        // Add the cost of the current node
+        let gScore = currentNode.getCost() + neighbourTile.getWeight(currentTile);
 
-      // Whether this node was already visited before
-      let isVisited = neighbourNode.isVisited();
+        // Whether this node was already visited before
+        let isVisited = neighbourNode.isVisited();
 
-      // Visited and score not high enough: continue
-      if(isVisited && gScore >= neighbourNode.getCost()) {
-        return;
-      }
+        // Visited and score not high enough: continue
+        if (isVisited && gScore >= neighbourNode.getCost()) {
+          return;
+        }
 
-      // Update the node information
-      neighbourNode.setVisited();
-      neighbourNode.setParent(currentTile);
-      neighbourNode.setCost(gScore);
+        // Update the node information
+        neighbourNode.setVisited();
+        neighbourNode.setParent(currentTile);
+        neighbourNode.setCost(gScore);
 
-      // This is the priority value in the binary heap
-      neighbourNode.setScore(gScore + neighbourNode.getHeuristic());
+        // This is the priority value in the binary heap
+        neighbourNode.setScore(gScore + neighbourNode.getHeuristic());
 
-      // If it does not exist in the heap
-      if(!isVisited) {
-        return openHeap.push(neighbourTile);
-      }
+        // If it does not exist in the heap
+        if (!isVisited) {
+          return openHeap.push(neighbourTile);
+        }
 
-      // Rescore the element
-      openHeap.rescoreElement(neighbourTile);
+        // Rescore the element
+        openHeap.rescoreElement(neighbourTile);
 
-    }, this);
+      }, this);
+
+    }
 
   }
 
@@ -158,7 +161,7 @@ Pathfinder.prototype.search = function(creature, from, to, mode) {
 
 }
 
-Pathfinder.prototype.__cleanup = function() {
+Pathfinder.prototype.__cleanup = function () {
 
   /*
    * Pathfinder.__cleanup
@@ -171,7 +174,7 @@ Pathfinder.prototype.__cleanup = function() {
 
 }
 
-Pathfinder.prototype.getDataDetails = function() {
+Pathfinder.prototype.getDataDetails = function () {
 
   /*
    * Pathfinder.getDataDetails
@@ -190,7 +193,7 @@ Pathfinder.prototype.getDataDetails = function() {
 
 }
 
-Pathfinder.prototype.pathTo = function(tile) {
+Pathfinder.prototype.pathTo = function (tile) {
 
   /*
    * Function pathTo
@@ -200,7 +203,7 @@ Pathfinder.prototype.pathTo = function(tile) {
   let resolvedPath = new Array();
 
   // Go over the chain to reconstruct the path
-  while(tile.pathfinderNode.getParent() !== null) {
+  while (tile.pathfinderNode.getParent() !== null) {
     resolvedPath.push(tile);
     gameServer.world.sendMagicEffect(tile.getPosition(), CONST.EFFECT.MAGIC.SOUND_BLUE);
     tile = tile.pathfinderNode.getParent();

@@ -1,6 +1,6 @@
 "use strict";
 
-const Condition = function(id, ticks, duration) {
+const Condition = function (id, ticks, duration) {
 
   /*
    * Class Condition
@@ -18,7 +18,7 @@ const Condition = function(id, ticks, duration) {
 
 }
 
-Condition.prototype.isPermanent = function() {
+Condition.prototype.isPermanent = function () {
 
   /*
    * Function Condition.isPermanent
@@ -29,7 +29,7 @@ Condition.prototype.isPermanent = function() {
 
 }
 
-Condition.prototype.isLastTick = function() {
+Condition.prototype.isLastTick = function () {
 
   /*
    * Function Condition.isLastTick
@@ -40,7 +40,7 @@ Condition.prototype.isLastTick = function() {
 
 }
 
-Condition.prototype.getTotalDuration = function() {
+Condition.prototype.getTotalDuration = function () {
 
   /*
    * Function Condition.getTotalDuration
@@ -51,7 +51,7 @@ Condition.prototype.getTotalDuration = function() {
 
 }
 
-Condition.prototype.getRemainigDuration = function() {
+Condition.prototype.getRemainigDuration = function () {
 
   /*
    * Function Condition.getRemainigDuration
@@ -62,7 +62,7 @@ Condition.prototype.getRemainigDuration = function() {
 
 }
 
-Condition.prototype.isFirstTick = function() {
+Condition.prototype.isFirstTick = function () {
 
   /*
    * Function Condition.isFirstTick
@@ -73,7 +73,7 @@ Condition.prototype.isFirstTick = function() {
 
 }
 
-Condition.prototype.getFraction = function() {
+Condition.prototype.getFraction = function () {
 
   /*
    * Function Condition.getFraction
@@ -84,19 +84,35 @@ Condition.prototype.getFraction = function() {
 
 }
 
-Condition.prototype.cancel = function() {
+Condition.prototype.cancel = function () {
 
   /*
    * Function Condition.cancel
    * Cancels the condition by cancelling the scheduled tick event
    */
 
-  if(this.__applyEvent === null) {
+  if (this.__applyEvent === null) {
     return;
   }
 
   this.__applyEvent.cancel();
 
 }
+
+Condition.prototype.DRUNK = 0;
+Condition.prototype.POISONED = 1;
+Condition.prototype.BURNING = 2;
+Condition.prototype.ELECTRIFIED = 3;
+Condition.prototype.INVISIBLE = 4;
+Condition.prototype.SUPPRESS_DRUNK = 7;
+Condition.prototype.LIGHT = 8;
+Condition.prototype.HEALING = 9;
+Condition.prototype.REGENERATION = 10;
+Condition.prototype.MORPH = 11;
+Condition.prototype.MAGIC_SHIELD = 12;
+Condition.prototype.MAGIC_FLAME = 13;
+Condition.prototype.SATED = 14;
+Condition.prototype.HASTE = 15;
+Condition.prototype.ARENA = 17;
 
 module.exports = Condition;

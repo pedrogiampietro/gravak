@@ -1,4 +1,4 @@
-const FrameGroup = function() {
+const FrameGroup = function () {
 
   /*
    * Class FrameGroup
@@ -26,7 +26,7 @@ FrameGroup.prototype.NONE = 0;
 FrameGroup.prototype.GROUP_IDLE = 0;
 FrameGroup.prototype.GROUP_MOVING = 1;
 
-FrameGroup.prototype.getAlwaysAnimatedFrame = function() {
+FrameGroup.prototype.getAlwaysAnimatedFrame = function () {
 
   /*
    * Function DataObject.getAlwaysAnimatedFrame
@@ -34,7 +34,7 @@ FrameGroup.prototype.getAlwaysAnimatedFrame = function() {
    */
 
   // Is not animated
-  if(!this.isAnimated()) {
+  if (!this.isAnimated()) {
     return 0;
   }
 
@@ -43,20 +43,25 @@ FrameGroup.prototype.getAlwaysAnimatedFrame = function() {
   let sum = 0;
 
   // For old versions
-  if(gameClient.clientVersion === 760) {
+  if (gameClient.clientVersion === 760) {
     return Math.floor((gameClient.renderer.__nMiliseconds % (BoxAnimation.prototype.DEFAULT_BLINK_LENGTH_MS * this.animationLength)) / BoxAnimation.prototype.DEFAULT_BLINK_LENGTH_MS);
   }
 
   // Go over all lenghts
-  for(let i = 0; i < this.animationLengths.length; i++) {
+  if (this.animationLengths) {
+    for (let i = 0; i < this.animationLengths.length; i++) {
 
-    // Add the current minimum length
-    sum += this.animationLengths[i].min;
- 
-    // Need this frame
-    if(sum >= current) {
-      return i;
+      // Add the current minimum length
+      sum += this.animationLengths[i].min;
+
+      // Need this frame
+      if (sum >= current) {
+        return i;
+      }
+
     }
+
+    return 0;
 
   }
 
@@ -64,7 +69,7 @@ FrameGroup.prototype.getAlwaysAnimatedFrame = function() {
 
 }
 
-FrameGroup.prototype.isValidIndex = function(index) {
+FrameGroup.prototype.isValidIndex = function (index) {
 
   /*
    * Function FrameGroup.isValidIndex
@@ -75,7 +80,7 @@ FrameGroup.prototype.isValidIndex = function(index) {
 
 }
 
-FrameGroup.prototype.getSprite = function(index) {
+FrameGroup.prototype.getSprite = function (index) {
 
   /*
    * Function FrameGroup.getSprite
@@ -83,7 +88,7 @@ FrameGroup.prototype.getSprite = function(index) {
    */
 
   // Must be a valid index
-  if(!this.isValidIndex(index)) {
+  if (!this.isValidIndex(index)) {
     return null;
   }
 
@@ -91,7 +96,7 @@ FrameGroup.prototype.getSprite = function(index) {
 
 }
 
-FrameGroup.prototype.isAnimated = function() {
+FrameGroup.prototype.isAnimated = function () {
 
   /*
    * Function DataObject.isAnimated
@@ -102,7 +107,7 @@ FrameGroup.prototype.isAnimated = function() {
 
 }
 
-FrameGroup.prototype.setAnimation = function(animations) {
+FrameGroup.prototype.setAnimation = function (animations) {
 
   /*
    * Function DataObject.setAnimation
@@ -116,7 +121,7 @@ FrameGroup.prototype.setAnimation = function(animations) {
 
 }
 
-FrameGroup.prototype.setAnimationLength = function(length) {
+FrameGroup.prototype.setAnimationLength = function (length) {
 
   /*
    * Function DataObject.setAnimationLength
@@ -127,7 +132,7 @@ FrameGroup.prototype.setAnimationLength = function(length) {
 
 }
 
-FrameGroup.prototype.getSpriteId = function(frame, xPattern, yPattern, zPattern, layer, x, y) {
+FrameGroup.prototype.getSpriteId = function (frame, xPattern, yPattern, zPattern, layer, x, y) {
 
   /*
    * Function DataObject.getSpriteIndex
@@ -136,15 +141,15 @@ FrameGroup.prototype.getSpriteId = function(frame, xPattern, yPattern, zPattern,
 
   let index = this.getSpriteIndex(frame, xPattern, yPattern, zPattern, layer, x, y);
 
-  if(!this.isValidIndex(index)) {
+  if (!this.isValidIndex(index)) {
     return 0;
   }
 
   return this.sprites[index];
-	
+
 }
 
-FrameGroup.prototype.getSpriteIndex = function(frame, xPattern, yPattern, zPattern, layer, x, y) {
+FrameGroup.prototype.getSpriteIndex = function (frame, xPattern, yPattern, zPattern, layer, x, y) {
 
   /*
    * Function DataObject.getSpriteIndex
@@ -152,16 +157,16 @@ FrameGroup.prototype.getSpriteIndex = function(frame, xPattern, yPattern, zPatte
    */
 
   return ((((((frame *
-         this.pattern.z + zPattern) *
-         this.pattern.y + yPattern) *
-         this.pattern.x + xPattern) *
-         this.layers + layer) *
-         this.height + y) *
-         this.width + x);
+    this.pattern.z + zPattern) *
+    this.pattern.y + yPattern) *
+    this.pattern.x + xPattern) *
+    this.layers + layer) *
+    this.height + y) *
+    this.width + x);
 
 }
 
-FrameGroup.prototype.setLayers = function(layers) {
+FrameGroup.prototype.setLayers = function (layers) {
 
   /*
    * Function DataObject.setLayers
@@ -172,7 +177,7 @@ FrameGroup.prototype.setLayers = function(layers) {
 
 }
 
-FrameGroup.prototype.setPattern = function(x, y, z) {
+FrameGroup.prototype.setPattern = function (x, y, z) {
 
   /*
    * Function DataObject.setPattern
@@ -183,7 +188,7 @@ FrameGroup.prototype.setPattern = function(x, y, z) {
 
 }
 
-FrameGroup.prototype.setSize = function(width, height) {
+FrameGroup.prototype.setSize = function (width, height) {
 
   /*
    * Function DataObject.setSize
@@ -195,7 +200,7 @@ FrameGroup.prototype.setSize = function(width, height) {
 
 }
 
-FrameGroup.prototype.getNumberSprites = function() {
+FrameGroup.prototype.getNumberSprites = function () {
 
   /*
    * Function DataObject.getNumberSprites

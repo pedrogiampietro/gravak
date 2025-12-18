@@ -5,7 +5,7 @@ const Enum = requireModule("enum");
 const Pathfinder = requireModule("pathfinder");
 const Position = requireModule("position");
 
-const MonsterBehaviour = function(monster, behaviour) {
+const MonsterBehaviour = function (monster, behaviour) {
 
   /*
    * Class MonsterBehaviour
@@ -41,7 +41,7 @@ const MonsterBehaviour = function(monster, behaviour) {
   this.setBehaviour(behaviour.type);
 
   // Sayings were configured
-  if(behaviour.sayings) {
+  if (behaviour.sayings) {
     this.sayings = behaviour.sayings;
     this.actions.add(this.handleActionSpeak);
   }
@@ -56,7 +56,7 @@ MonsterBehaviour.prototype.HOSTILE_ON_ATTACK = 3;
 MonsterBehaviour.prototype.RANGED = 4;
 MonsterBehaviour.prototype.FLEEING = 5;
 
-MonsterBehaviour.prototype.handleActionTarget = function() {
+MonsterBehaviour.prototype.handleActionTarget = function () {
 
   /*
    * Function Monster.handleActionTarget
@@ -66,39 +66,39 @@ MonsterBehaviour.prototype.handleActionTarget = function() {
   // Always lock
   this.actions.lock(this.handleActionTarget, Actions.prototype.GLOBAL_COOLDOWN);
 
-  if(!this.requiresTarget()) {
+  if (!this.requiresTarget()) {
     return;
   }
 
   // Delegate to find or drop a target
   // If the creature does not have a target yet try to find one
-  if(!this.hasTarget()) {
+  if (!this.hasTarget()) {
     return this.__findTarget();
   }
 
   // No longer online
-  if(!gameServer.world.creatureHandler.isCreatureActive(this.getTarget())) {
+  if (!gameServer.world.creatureHandler.isCreatureActive(this.getTarget())) {
     return this.setTarget(null);
   }
 
   // Cannot be seen?
-  if(!this.canSeeTarget()) {
+  if (!this.canSeeTarget()) {
     return this.setTarget(null);
   }
 
   // The target is invisible
-  if(this.getTarget().isInvisible()) {
+  if (this.getTarget().isInvisible()) {
     return this.setTarget(null);
   }
 
   // Target has gone into a protection zone
-  if(this.getTarget().isInProtectionZone()) {
+  if (this.getTarget().isInProtectionZone()) {
     return this.setTarget(null);
   }
 
 }
 
-MonsterBehaviour.prototype.handleActionSpeak = function() {
+MonsterBehaviour.prototype.handleActionSpeak = function () {
 
   /*
    * Function MonsterBehaviour.handleActionSpeak
@@ -106,16 +106,17 @@ MonsterBehaviour.prototype.handleActionSpeak = function() {
    */
 
   // Say a random thing
-  if(Math.random() > 0.15) {
+  if (this.sayings && Math.random() > 0.15) {
     this.monster.speechHandler.internalCreatureSay(this.sayings.texts.random(), CONST.COLOR.ORANGE);
   }
 
   // Lock the action for a random duration
-  this.actions.lock(this.handleActionSpeak, 0.1 * Number.prototype.random(1, 5) * this.sayings.slowness);
+  let slowness = this.sayings ? this.sayings.slowness : 2000;
+  this.actions.lock(this.handleActionSpeak, 0.1 * Number.prototype.random(1, 5) * slowness);
 
 }
 
-MonsterBehaviour.prototype.handleActionAttack = function() {
+MonsterBehaviour.prototype.handleActionAttack = function () {
 
   /*
    * Function MonsterBehaviour.handleActionAttack
@@ -123,17 +124,17 @@ MonsterBehaviour.prototype.handleActionAttack = function() {
    */
 
   // We do not have a target
-  if(!this.hasTarget()) {
+  if (!this.hasTarget()) {
     return this.actions.lock(this.handleActionAttack, Actions.prototype.GLOBAL_COOLDOWN);
   }
 
   // Target is offline or missing
-  if(!this.canSeeTarget()) {
+  if (!this.canSeeTarget()) {
     return this.actions.lock(this.handleActionAttack, Actions.prototype.GLOBAL_COOLDOWN);
   }
 
   // Not yet besides the target
-  if(!this.isBesidesTarget()) {
+  if (!this.isBesidesTarget()) {
     return this.actions.lock(this.handleActionAttack, Actions.prototype.GLOBAL_COOLDOWN);
   }
 
@@ -148,20 +149,20 @@ MonsterBehaviour.prototype.handleActionAttack = function() {
 
 }
 
-MonsterBehaviour.prototype.handleActionMove = function() {
-  
+MonsterBehaviour.prototype.handleActionMove = function () {
+
   /*
    * Function MonsterBehaviour.handleActionMove
    * Cooldown function that handles the creature movement
    */
-  
+
   // Let the monster decide its next strategic move
   let tile = this.getNextMoveTile();
-  
+
   // Invalid tile was returned: do nothing
-  if(tile === null || tile.id === 0) {
+  if (tile === null || tile.id === 0) {
     return this.actions.lock(this.handleActionMove, Actions.prototype.GLOBAL_COOLDOWN);
-  } 
+  }
 
   let lockDuration = this.monster.getStepDuration(tile.getFriction());
 
@@ -176,14 +177,14 @@ MonsterBehaviour.prototype.handleActionMove = function() {
 
 }
 
-MonsterBehaviour.prototype.getPathToTarget = function() {
+MonsterBehaviour.prototype.getPathToTarget = function () {
 
   /*
    * Function MonsterBehaviour.getPathToTarget
    * Call to the pathfinder to recover the next step to be set by the creature
    */
 
-  if(!this.hasTarget()) {
+  if (!this.hasTarget()) {
     return null;
   }
 
@@ -196,7 +197,7 @@ MonsterBehaviour.prototype.getPathToTarget = function() {
   );
 
   // If no path is found the creature should instead wander randomly
-  if(path.length === 0) {
+  if (path.length === 0) {
     return null;
   }
 
@@ -205,7 +206,7 @@ MonsterBehaviour.prototype.getPathToTarget = function() {
 
 }
 
-MonsterBehaviour.prototype.getTarget = function() {
+MonsterBehaviour.prototype.getTarget = function () {
 
   /*
    * Function MonsterBehaviour.getTarget
@@ -216,7 +217,7 @@ MonsterBehaviour.prototype.getTarget = function() {
 
 }
 
-MonsterBehaviour.prototype.hasTarget = function() {
+MonsterBehaviour.prototype.hasTarget = function () {
 
   /*
    * Function MonsterBehaviour.hasTarget
@@ -227,7 +228,7 @@ MonsterBehaviour.prototype.hasTarget = function() {
 
 }
 
-MonsterBehaviour.prototype.canSeeTarget = function() {
+MonsterBehaviour.prototype.canSeeTarget = function () {
 
   /*
    * Function MonsterBehaviour.hasTarget
@@ -239,7 +240,7 @@ MonsterBehaviour.prototype.canSeeTarget = function() {
 
 }
 
-MonsterBehaviour.prototype.setTarget = function(target) {
+MonsterBehaviour.prototype.setTarget = function (target) {
 
   /*
    * Function MonsterBehaviour.setTarget
@@ -251,7 +252,7 @@ MonsterBehaviour.prototype.setTarget = function(target) {
 
 }
 
-MonsterBehaviour.prototype.handleDamage = function(attacker) {
+MonsterBehaviour.prototype.handleDamage = function (attacker) {
 
   /*
    * Function MonsterBehaviour.handleDamage
@@ -259,20 +260,20 @@ MonsterBehaviour.prototype.handleDamage = function(attacker) {
    */
 
   // If hostile on attack change to being hostile and set the target to the attacker
-  if(this.is(this.HOSTILE_ON_ATTACK)) {
+  if (this.is(this.HOSTILE_ON_ATTACK)) {
     this.setState(this.HOSTILE);
     this.setTarget(attacker);
   }
 
   // Fleeing
-  if(this.monster.health <= this.fleeHealth) {
+  if (this.monster.health <= this.fleeHealth) {
     this.setState(this.FLEEING);
     this.setTarget(attacker);
   }
 
 }
 
-MonsterBehaviour.prototype.is = function(behaviour) {
+MonsterBehaviour.prototype.is = function (behaviour) {
 
   /*
    * Function MonsterBehaviour.is
@@ -283,7 +284,7 @@ MonsterBehaviour.prototype.is = function(behaviour) {
 
 }
 
-MonsterBehaviour.prototype.isBesidesTarget = function() {
+MonsterBehaviour.prototype.isBesidesTarget = function () {
 
   /*
    * Function Monster.isBesidesTarget
@@ -294,7 +295,7 @@ MonsterBehaviour.prototype.isBesidesTarget = function() {
 
 }
 
-MonsterBehaviour.prototype.requiresTarget = function() {
+MonsterBehaviour.prototype.requiresTarget = function () {
 
   /*
    * Function MonsterBehaviour.requiresTarget
@@ -305,7 +306,7 @@ MonsterBehaviour.prototype.requiresTarget = function() {
 
 }
 
-MonsterBehaviour.prototype.wander = function() {
+MonsterBehaviour.prototype.wander = function () {
 
   /*
    * Function MonsterBehaviour.wander
@@ -315,18 +316,18 @@ MonsterBehaviour.prototype.wander = function() {
   // We have these options: explore them in a random order
   let position = this.monster.getPosition();
 
-  if(position === null) {
+  if (position === null) {
     return null;
   }
 
   let options = position.getNESW();
 
   // Try them all
-  while(options.length > 0) {
+  while (options.length > 0) {
 
     let tile = gameServer.world.getTileFromWorldPosition(options.popRandom());
 
-    if(tile === null || tile.id === 0 || this.monster.isTileOccupied(tile)) {
+    if (tile === null || tile.id === 0 || this.monster.isTileOccupied(tile)) {
       continue;
     }
 
@@ -338,7 +339,7 @@ MonsterBehaviour.prototype.wander = function() {
 
 }
 
-MonsterBehaviour.prototype.getNextMoveTile = function() {
+MonsterBehaviour.prototype.getNextMoveTile = function () {
 
   /*
    * Function MonsterBehaviour.getNextMoveTile
@@ -346,7 +347,7 @@ MonsterBehaviour.prototype.getNextMoveTile = function() {
    */
 
   // If the monster does not have a target always aimlessly wander around
-  if(!this.hasTarget()) {
+  if (!this.hasTarget()) {
     return this.wander();
   }
 
@@ -354,7 +355,7 @@ MonsterBehaviour.prototype.getNextMoveTile = function() {
 
 }
 
-MonsterBehaviour.prototype.setBehaviour = function(state) {
+MonsterBehaviour.prototype.setBehaviour = function (state) {
 
   // Set the state
   this.state = state;
@@ -362,8 +363,8 @@ MonsterBehaviour.prototype.setBehaviour = function(state) {
   // Monsters have these actions
   this.actions.add(this.handleActionMove);
   this.actions.add(this.handleActionSpeak);
-  
-  if(this.is(this.HOSTILE)) {
+
+  if (this.is(this.HOSTILE)) {
     this.actions.add(this.handleActionAttack);
     this.actions.add(this.handleActionTarget);
   } else {
@@ -374,7 +375,7 @@ MonsterBehaviour.prototype.setBehaviour = function(state) {
 
 }
 
-MonsterBehaviour.prototype.__findTarget = function() {
+MonsterBehaviour.prototype.__findTarget = function () {
 
   /*
    * Function MonsterBehaviour.__findTarget
@@ -385,23 +386,23 @@ MonsterBehaviour.prototype.__findTarget = function() {
   let chunks = gameServer.world.getSpectatingChunks(this.monster.getPosition());
 
   // Go over all potential chunks
-  for(let chunk of chunks) {
+  for (let chunk of chunks) {
 
     // Go over all players in the chunks
-    for(let player of chunk.players) {
+    for (let player of chunk.players) {
 
       // Cannot target players in protection zones
-      if(player.isInProtectionZone()) {
+      if (player.isInProtectionZone()) {
         continue;
       }
 
       // Cannot target invisible players
-      if(player.isInvisible()) {
+      if (player.isInvisible()) {
         continue;
       }
 
       // Cannot reach a player through pathfinding
-      if(!this.__canReach(player.position)) {
+      if (!this.__canReach(player.position)) {
         continue;
       }
 
@@ -415,7 +416,7 @@ MonsterBehaviour.prototype.__findTarget = function() {
 
 }
 
-MonsterBehaviour.prototype.__canReach = function(targetPosition) {
+MonsterBehaviour.prototype.__canReach = function (targetPosition) {
 
   /*
    * Function MonsterBehaviour.__canReach
@@ -423,12 +424,12 @@ MonsterBehaviour.prototype.__canReach = function(targetPosition) {
    */
 
   // Not visible so no
-  if(!this.monster.canSee(targetPosition)) {
+  if (!this.monster.canSee(targetPosition)) {
     return false;
   }
 
   // Already besides the target
-  if(targetPosition.besides(this.monster.getPosition())) {
+  if (targetPosition.besides(this.monster.getPosition())) {
     return true;
   }
 
@@ -445,7 +446,7 @@ MonsterBehaviour.prototype.__canReach = function(targetPosition) {
 
 }
 
-MonsterBehaviour.prototype.__handleRangedMoveMonsterBehaviour = function() {
+MonsterBehaviour.prototype.__handleRangedMoveMonsterBehaviour = function () {
 
   /*
    * Function MonsterBehaviour.__handleRangedMoveMonsterBehaviour
@@ -457,15 +458,15 @@ MonsterBehaviour.prototype.__handleRangedMoveMonsterBehaviour = function() {
 
   // Calculate distance
   let distance = this.monster.position.pythagoreanDistance(this.getTarget().getPosition());
-  
+
   // Either move inward or outward
-  if(distance < KEEP_DISTANCE) {
+  if (distance < KEEP_DISTANCE) {
     return this.__handleFleeMoveMonsterBehaviour();
-  } else if(distance > KEEP_DISTANCE) {
+  } else if (distance > KEEP_DISTANCE) {
     return this.__handlePathToTarget();
   }
 
-  if(this.__canReach(this.getTarget().getPosition())) {
+  if (this.__canReach(this.getTarget().getPosition())) {
     return null;
   }
 
@@ -475,13 +476,13 @@ MonsterBehaviour.prototype.__handleRangedMoveMonsterBehaviour = function() {
 
 }
 
-MonsterBehaviour.prototype.__handlePathToTarget = function() {
+MonsterBehaviour.prototype.__handlePathToTarget = function () {
 
   // Otherwise use A* to find path to get adjacent to the target
   let path = this.getPathToTarget();
 
   // The target can be reached
-  if(path !== null) {
+  if (path !== null) {
     return path;
   }
 
@@ -492,7 +493,7 @@ MonsterBehaviour.prototype.__handlePathToTarget = function() {
 
 }
 
-MonsterBehaviour.prototype.__handleTargetMoveMonsterBehaviour = function() {
+MonsterBehaviour.prototype.__handleTargetMoveMonsterBehaviour = function () {
 
   /*
    * Function Monster.__handleTargetMoveMonsterBehaviour
@@ -500,7 +501,7 @@ MonsterBehaviour.prototype.__handleTargetMoveMonsterBehaviour = function() {
    */
 
   // Always stop moving when already besides the target
-  if(this.isBesidesTarget()) {
+  if (this.isBesidesTarget()) {
     return null;
   }
 
@@ -508,7 +509,7 @@ MonsterBehaviour.prototype.__handleTargetMoveMonsterBehaviour = function() {
 
 }
 
-MonsterBehaviour.prototype.__handleFleeMoveMonsterBehaviour = function() {
+MonsterBehaviour.prototype.__handleFleeMoveMonsterBehaviour = function () {
 
   /*
    * Function Monster.__handleFleeMoveMonsterBehaviour
@@ -518,14 +519,14 @@ MonsterBehaviour.prototype.__handleFleeMoveMonsterBehaviour = function() {
   let heuristics = new Array();
   let tiles = new Array();
 
-  for(let x = -1; x <= 1; x++) {
-    for(let y = -1; y <= 1; y++) {
+  for (let x = -1; x <= 1; x++) {
+    for (let y = -1; y <= 1; y++) {
 
       let added = this.monster.position.add(new Position(x, y, 0));
       let tile = process.gameServer.world.getTileFromWorldPosition(added);
 
       // The tile cannot be used to walk on
-      if(this.monster.isTileOccupied(tile)) {
+      if (this.monster.isTileOccupied(tile)) {
         continue;
       }
 
@@ -533,7 +534,7 @@ MonsterBehaviour.prototype.__handleFleeMoveMonsterBehaviour = function() {
       let heuristic = this.getTarget().getPosition().manhattanDistance(added);
 
       // Impose a penalty for diagonal movement
-      if(this.monster.position.isDiagonal(added)) {
+      if (this.monster.position.isDiagonal(added)) {
         heuristic /= 3;
       }
 
@@ -545,7 +546,7 @@ MonsterBehaviour.prototype.__handleFleeMoveMonsterBehaviour = function() {
   }
 
   // This means no tiles were found
-  if(tiles.length === 0) {
+  if (tiles.length === 0) {
     return null;
   }
 
@@ -557,7 +558,7 @@ MonsterBehaviour.prototype.__handleFleeMoveMonsterBehaviour = function() {
 
 }
 
-MonsterBehaviour.prototype.handleOpenDoor = function(thing) {
+MonsterBehaviour.prototype.handleOpenDoor = function (thing) {
 
   /*
    * Function MonsterBehaviour.handleOpenDoor
@@ -565,12 +566,12 @@ MonsterBehaviour.prototype.handleOpenDoor = function(thing) {
    */
 
   // There is no thing or the thing is not a door
-  if(thing === null || !thing.isDoor()) {
+  if (thing === null || !thing.isDoor()) {
     return;
   }
 
   // If the door is closed then just open it
-  if(!thing.isOpened() && !thing.isLocked()) {
+  if (!thing.isOpened() && !thing.isLocked()) {
     return thing.open();
   }
 

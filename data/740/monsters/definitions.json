@@ -1,3 +1,13 @@
 {
-  "0": "rat.json"
+  "0": "rat.json",
+  "1": "bear.json",
+  "2": "black-sheep.json",
+  "3": "cave-rat.json",
+  "4": "rabbit.json",
+  "5": "rotworm.json",
+  "6": "sheep.json",
+  "7": "skeleton.json",
+  "8": "slime.json",
+  "9": "spider.json",
+  "10": "troll.json"
 }

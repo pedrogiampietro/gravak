@@ -1,13 +1,13 @@
 module.exports = function useSewerGrate(player, tile, index, item) {
 
   // Only allowed when not moving
-  if(player.isMoving()) {
+  if (player.isMoving()) {
     return true;
   }
 
   // Teleport the player and 
-  process.gameServer.world.teleportCreature(player, tile.position.down());
-  player.__moveLock.lock(10);
+  process.gameServer.world.creatureHandler.teleportCreature(player, tile.position.down());
+  player.movementHandler.__moveLock.lock(10);
 
   return true;
 
