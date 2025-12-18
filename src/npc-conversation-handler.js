@@ -4,7 +4,7 @@ const EventEmitter = requireModule("eventemitter");
 const FocusHandler = requireModule("npc-focus-handler");
 const TradingHandler = requireModule("npc-trade-handler");
 
-const ConversationHandler = function(npc, conversation) {
+const ConversationHandler = function (npc, conversation) {
 
   /*
    * Class ConversationHandler
@@ -73,7 +73,7 @@ const ConversationHandler = function(npc, conversation) {
 ConversationHandler.prototype = Object.create(EventEmitter.prototype);
 ConversationHandler.prototype.constructor = ConversationHandler;
 
-ConversationHandler.prototype.getHearingRange = function() {
+ConversationHandler.prototype.getHearingRange = function () {
 
   /*
    * Function ConversationHandler.getHearingRange
@@ -84,7 +84,7 @@ ConversationHandler.prototype.getHearingRange = function() {
 
 }
 
-ConversationHandler.prototype.__handleFocusMove = function() {
+ConversationHandler.prototype.__handleFocusMove = function () {
 
   /*
    * Function ConversationHandler.__handleFocusMove
@@ -97,13 +97,13 @@ ConversationHandler.prototype.__handleFocusMove = function() {
   this.npc.faceCreature(focus);
 
   // If the focus moves outside of range
-  if(!this.npc.isWithinHearingRange(focus)) {
+  if (!this.npc.isWithinHearingRange(focus)) {
     return this.__resetEmitter("exit");
   }
 
 }
 
-ConversationHandler.prototype.getFocus = function() {
+ConversationHandler.prototype.getFocus = function () {
 
   /*
    * Function FocusHandler.getFocus
@@ -114,7 +114,7 @@ ConversationHandler.prototype.getFocus = function() {
 
 }
 
-ConversationHandler.prototype.respond = function(message, color) {
+ConversationHandler.prototype.respond = function (message, color) {
 
   /*
    * Function ConversationHandler.respond
@@ -122,7 +122,7 @@ ConversationHandler.prototype.respond = function(message, color) {
    */
 
   // Extend the idle duration
-  if(this.isInConversation()) {
+  if (this.isInConversation()) {
     this.getFocusHandler().extendFocus(message.length * 4);
   }
 
@@ -130,7 +130,7 @@ ConversationHandler.prototype.respond = function(message, color) {
 
 }
 
-ConversationHandler.prototype.emote = function(message, color) {
+ConversationHandler.prototype.emote = function (message, color) {
 
   /*
    * Function ConversationHandler.emote
@@ -141,7 +141,7 @@ ConversationHandler.prototype.emote = function(message, color) {
 
 }
 
-ConversationHandler.prototype.privateSay = function(player, message, color) {
+ConversationHandler.prototype.privateSay = function (player, message, color) {
 
   /*
    * Function ConversationHandler.privateSay
@@ -152,19 +152,19 @@ ConversationHandler.prototype.privateSay = function(player, message, color) {
 
 }
 
-ConversationHandler.prototype.say = function(message, color) {
+ConversationHandler.prototype.say = function (message, color) {
 
   /*
    * Function ConversationHandler.say
    * Function to call to say something without extending the idle duration
    */
 
-  // Delegate to the parent NPC to say the text
-  this.npc.internalCreatureSay(message, color);
+  // Delegate to the parent NPC to say the text (default to LIGHTBLUE)
+  this.npc.internalCreatureSay(message, color || CONST.COLOR.LIGHTBLUE);
 
 }
 
-ConversationHandler.prototype.hasSayings = function() {
+ConversationHandler.prototype.hasSayings = function () {
 
   /*
    * Function ConversationHandler.hasSayings
@@ -175,7 +175,7 @@ ConversationHandler.prototype.hasSayings = function() {
 
 }
 
-ConversationHandler.prototype.getSayings = function() {
+ConversationHandler.prototype.getSayings = function () {
 
   /*
    * Function ConversationHandler.getSayings
@@ -186,7 +186,7 @@ ConversationHandler.prototype.getSayings = function() {
 
 }
 
-ConversationHandler.prototype.enterAlert = function(creature) {
+ConversationHandler.prototype.enterAlert = function (creature) {
 
   /*
    * Function ConversationHandler.enterAlert
@@ -199,7 +199,7 @@ ConversationHandler.prototype.enterAlert = function(creature) {
 
 }
 
-ConversationHandler.prototype.hasSeen = function(creature) {
+ConversationHandler.prototype.hasSeen = function (creature) {
 
   /*
    * Function ConversationHandler.hasSeen
@@ -210,7 +210,7 @@ ConversationHandler.prototype.hasSeen = function(creature) {
 
 }
 
-ConversationHandler.prototype.isInConversation = function(player) {
+ConversationHandler.prototype.isInConversation = function (player) {
 
   /*
    * Function ConversationHandler.isInConversation
@@ -221,7 +221,7 @@ ConversationHandler.prototype.isInConversation = function(player) {
 
 }
 
-ConversationHandler.prototype.handleResponse = function(player, keyword) {
+ConversationHandler.prototype.handleResponse = function (player, keyword) {
 
   /*
    * Function ConversationHandler.handleResponse
@@ -229,22 +229,22 @@ ConversationHandler.prototype.handleResponse = function(player, keyword) {
    */
 
   // Accept incoming greetins from anyone
-  if(this.__isGreeting(keyword)) {
+  if (this.__isGreeting(keyword)) {
     return this.__handleGreeting(player);
   }
 
   // The current player is not speaking 
-  if(!this.isInConversation(player)) {
+  if (!this.isInConversation(player)) {
     return;
   }
 
   // Confirm the message is a goodbye
-  if(this.__isGoodbye(keyword)) {
+  if (this.__isGoodbye(keyword)) {
     return this.__resetEmitter("defocus");
   }
 
   // Apply the default configured keywords
-  if(this.__isDefaultKeyword(keyword)) {
+  if (this.__isDefaultKeyword(keyword)) {
     return this.respond(this.conversation.keywords[keyword]);
   }
 
@@ -253,7 +253,7 @@ ConversationHandler.prototype.handleResponse = function(player, keyword) {
 
 }
 
-ConversationHandler.prototype.getTalkStateHandler = function() {
+ConversationHandler.prototype.getTalkStateHandler = function () {
 
   /*
    * Function ConversationHandler.getTalkStateHandler
@@ -264,7 +264,7 @@ ConversationHandler.prototype.getTalkStateHandler = function() {
 
 }
 
-ConversationHandler.prototype.getFocusHandler = function() {
+ConversationHandler.prototype.getFocusHandler = function () {
 
   /*
    * Function ConversationHandler.getFocusHandler
@@ -275,7 +275,7 @@ ConversationHandler.prototype.getFocusHandler = function() {
 
 }
 
-ConversationHandler.prototype.setBaseState = function(baseState) {
+ConversationHandler.prototype.setBaseState = function (baseState) {
 
   /*
    * Function ConversationHandler.setBaseState
@@ -286,7 +286,7 @@ ConversationHandler.prototype.setBaseState = function(baseState) {
 
 }
 
-ConversationHandler.prototype.setTalkState = function(talkState, propertyState) {
+ConversationHandler.prototype.setTalkState = function (talkState, propertyState) {
 
   /*
    * Function ConversationHandler.setTalkState
@@ -297,7 +297,7 @@ ConversationHandler.prototype.setTalkState = function(talkState, propertyState) 
 
 }
 
-ConversationHandler.prototype.__loadScript = function(script) {
+ConversationHandler.prototype.__loadScript = function (script) {
 
   /*
    * Function ConversationHandler.__loadScript
@@ -305,7 +305,7 @@ ConversationHandler.prototype.__loadScript = function(script) {
    */
 
   // Does not exist
-  if(script === null) {
+  if (script === null) {
     return;
   }
 
@@ -314,7 +314,7 @@ ConversationHandler.prototype.__loadScript = function(script) {
 
 }
 
-ConversationHandler.prototype.__handleGreeting = function(player) {
+ConversationHandler.prototype.__handleGreeting = function (player) {
 
   /*
    * Function ConversationHandler.__handleGreeting
@@ -322,12 +322,12 @@ ConversationHandler.prototype.__handleGreeting = function(player) {
    */
 
   // If the NPC is not already focused: obtain a new focus
-  if(!this.isInConversation()) {
+  if (!this.isInConversation()) {
     return this.__acceptConversation(player);
   }
 
   // Already speaking to the player
-  if(this.isInConversation(player)) {
+  if (this.isInConversation(player)) {
     return this.emit("regreet", this.getFocus());
   }
 
@@ -336,7 +336,7 @@ ConversationHandler.prototype.__handleGreeting = function(player) {
 
 }
 
-ConversationHandler.prototype.__acceptConversation = function(player) {
+ConversationHandler.prototype.__acceptConversation = function (player) {
 
   /*
    * Function ConversationHandler.__acceptConversation
@@ -354,7 +354,7 @@ ConversationHandler.prototype.__acceptConversation = function(player) {
 
 }
 
-ConversationHandler.prototype.abort = function() {
+ConversationHandler.prototype.abort = function () {
 
   /*
    * Function ConversationHandler.abort
@@ -365,7 +365,7 @@ ConversationHandler.prototype.abort = function() {
 
 }
 
-ConversationHandler.prototype.__resetEmitter = function(which) {
+ConversationHandler.prototype.__resetEmitter = function (which) {
 
   /*
    * Function ConversationHandler.__resetEmitter
@@ -383,7 +383,7 @@ ConversationHandler.prototype.__resetEmitter = function(which) {
 
 }
 
-ConversationHandler.prototype.__isGoodbye = function(string) {
+ConversationHandler.prototype.__isGoodbye = function (string) {
 
   /*
    * Function ConversationHandler.__isGoodbye
@@ -394,7 +394,7 @@ ConversationHandler.prototype.__isGoodbye = function(string) {
 
 }
 
-ConversationHandler.prototype.__isGreeting = function(string) {
+ConversationHandler.prototype.__isGreeting = function (string) {
 
   /*
    * Function ConversationHandler.__isGreeting
@@ -405,7 +405,7 @@ ConversationHandler.prototype.__isGreeting = function(string) {
 
 }
 
-ConversationHandler.prototype.__isDefaultKeyword = function(keyword) {
+ConversationHandler.prototype.__isDefaultKeyword = function (keyword) {
 
   /*
    * Function ConversationHandler.__isDefaultKeyword

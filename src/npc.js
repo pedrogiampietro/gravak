@@ -6,7 +6,7 @@ const Creature = requireModule("creature");
 const CutsceneHandler = requireModule("npc-scene-handler");
 const NPCBehaviour = requireModule("npc-behaviour-handler");
 
-const NPC = function(data) {
+const NPC = function (data) {
 
   /*
    * Function NPC
@@ -39,7 +39,7 @@ const NPC = function(data) {
 NPC.prototype = Object.create(Creature.prototype);
 NPC.prototype.constructor = NPC;
 
-NPC.prototype.__registerActions = function() {
+NPC.prototype.__registerActions = function () {
 
   /*
    * Function NPC.__registerActions
@@ -47,18 +47,18 @@ NPC.prototype.__registerActions = function() {
    */
 
   // If wandering: we must move
-  if(this.behaviourHandler.isWandering()) {
+  if (this.behaviourHandler.isWandering()) {
     this.actions.add(this.handleActionWander);
   }
 
   // If the NPC has sayings
-  if(this.conversationHandler.hasSayings()) {
+  if (this.conversationHandler.hasSayings()) {
     this.actions.add(this.handleActionSpeak);
   }
 
 }
 
-NPC.prototype.listen = function(player, message) {
+NPC.prototype.listen = function (player, message) {
 
   /*
    * Function NPC.listen
@@ -66,12 +66,12 @@ NPC.prototype.listen = function(player, message) {
    */
 
   // Do not accept anything when acting in a scene
-  if(this.cutsceneHandler.isInScene()) {
+  if (this.cutsceneHandler.isInScene()) {
     return;
   }
 
   // If in range of the player
-  if(!this.isWithinHearingRange(player)) {
+  if (!this.isWithinHearingRange(player)) {
     return;
   }
 
@@ -80,7 +80,7 @@ NPC.prototype.listen = function(player, message) {
 
 }
 
-NPC.prototype.isWithinHearingRange = function(creature) {
+NPC.prototype.isWithinHearingRange = function (creature) {
 
   /*
    * Function NPC.isWithinHearingRange
@@ -91,7 +91,7 @@ NPC.prototype.isWithinHearingRange = function(creature) {
 
 }
 
-NPC.prototype.isInConversation = function() {
+NPC.prototype.isInConversation = function () {
 
   /*
    * Function NPC.isInConversation
@@ -102,7 +102,7 @@ NPC.prototype.isInConversation = function() {
 
 }
 
-NPC.prototype.isTileOccupied = function(tile) {
+NPC.prototype.isTileOccupied = function (tile) {
 
   /*
    * Function NPC.isTileOccupied
@@ -113,7 +113,7 @@ NPC.prototype.isTileOccupied = function(tile) {
 
 }
 
-NPC.prototype.handleActionWander = function() {
+NPC.prototype.handleActionWander = function () {
 
   /*
    * Function NPC.handleActionWander
@@ -124,7 +124,7 @@ NPC.prototype.handleActionWander = function() {
   let tile = this.behaviourHandler.getWanderMove();
 
   // Invalid tile was returned: do nothing (but lock to prevent event spam)
-  if(tile === null) {
+  if (tile === null) {
     return this.actions.lock(this.handleActionWander, this.actions.GLOBAL_COOLDOWN);
   }
 
@@ -136,7 +136,7 @@ NPC.prototype.handleActionWander = function() {
 
 }
 
-NPC.prototype.pauseActions = function(duration) {
+NPC.prototype.pauseActions = function (duration) {
 
   /*
    * Function NPC.pauseActions
@@ -148,7 +148,7 @@ NPC.prototype.pauseActions = function(duration) {
 
 }
 
-NPC.prototype.think = function() {
+NPC.prototype.think = function () {
 
   /*
    * Function NPC.think
@@ -156,12 +156,12 @@ NPC.prototype.think = function() {
    */
 
   // Paused because already speaking with a player
-  if(this.isInConversation()) {
+  if (this.isInConversation()) {
     return;
   }
 
   // In a scene
-  if(this.cutsceneHandler.isInScene()) {
+  if (this.cutsceneHandler.isInScene()) {
     return;
   }
 
@@ -169,7 +169,7 @@ NPC.prototype.think = function() {
 
 }
 
-NPC.prototype.handleActionSpeak = function() {
+NPC.prototype.handleActionSpeak = function () {
 
   /*
    * Function NPC.handleActionSpeak
@@ -179,8 +179,8 @@ NPC.prototype.handleActionSpeak = function() {
   let sayings = this.conversationHandler.getSayings();
 
   // Is determined by chance
-  if(Math.random() > (1.0 - sayings.chance)) {
-    this.speechHandler.internalCreatureSay(sayings.texts.random());
+  if (Math.random() > (1.0 - sayings.chance)) {
+    this.speechHandler.internalCreatureSay(sayings.texts.random(), CONST.COLOR.LIGHTBLUE);
   }
 
   // Always lock the action
@@ -188,7 +188,7 @@ NPC.prototype.handleActionSpeak = function() {
 
 }
 
-NPC.prototype.setScene = function(scene) {
+NPC.prototype.setScene = function (scene) {
 
   /*
    * Function NPC.setScene
@@ -196,12 +196,12 @@ NPC.prototype.setScene = function(scene) {
    */
 
   // Block is already in a scene
-  if(this.cutsceneHandler.isInScene()) {
+  if (this.cutsceneHandler.isInScene()) {
     this.cutsceneHandler.abort();
   }
 
   // Scenes makes the NPC drop everything and play the cutscene
-  if(this.isInConversation()) {
+  if (this.isInConversation()) {
     this.conversationHandler.abort();
   }
 
