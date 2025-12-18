@@ -2,8 +2,9 @@
 
 const Actions = requireModule("actions");
 const TargetHandler = requireModule("target-handler");
+const Condition = requireModule("condition");
 
-const ActionHandler = function(player) {
+const ActionHandler = function (player) {
 
   /*
    * Class ActionHandler
@@ -23,7 +24,7 @@ const ActionHandler = function(player) {
 
 ActionHandler.prototype.REGENERATION_DURATION = 100;
 
-ActionHandler.prototype.cleanup = function() {
+ActionHandler.prototype.cleanup = function () {
 
   /*
    * Function ActionHandler.prototype.cleanup
@@ -34,30 +35,30 @@ ActionHandler.prototype.cleanup = function() {
 
 }
 
-ActionHandler.prototype.handleActionAttack = function() {
-  
+ActionHandler.prototype.handleActionAttack = function () {
+
   /*
    * Function Player.handleActionAttack
    * Handles attack action 
    */
-  
+
   // No target
-  if(!this.targetHandler.hasTarget()) {
+  if (!this.targetHandler.hasTarget()) {
     return;
   }
 
   // Drop the target if it is dead
-  if(!gameServer.world.creatureHandler.isCreatureActive(this.targetHandler.getTarget())) {
+  if (!gameServer.world.creatureHandler.isCreatureActive(this.targetHandler.getTarget())) {
     return this.targetHandler.setTarget(null);
   }
 
   // Not besides target and not distance fighting
-  if(!this.targetHandler.isBesidesTarget() && !this.__player.isDistanceWeaponEquipped()) {
+  if (!this.targetHandler.isBesidesTarget() && !this.__player.isDistanceWeaponEquipped()) {
     return;
   }
 
   // Confirm player can see the creature for distance (or normal) fighting
-  if(!this.__player.isInLineOfSight(this.targetHandler.getTarget())) {
+  if (!this.__player.isInLineOfSight(this.targetHandler.getTarget())) {
     return;
   }
 
@@ -71,28 +72,47 @@ ActionHandler.prototype.handleActionAttack = function() {
 
 }
 
-ActionHandler.prototype.handleActionRegeneration = function() {
+ActionHandler.prototype.handleActionRegeneration = function () {
 
   /*
    * Function Player.handleActionRegeneration
-   * Handles default health generation of players
+   * Handles default health and mana generation of players
    */
 
-  if(!this.__player.isFull(CONST.PROPERTIES.HEALTH)) {
+  // Check if player is sated and not in combat for bonus regeneration
+  let hasSatedCondition = this.__player.hasCondition(Condition.prototype.SATED);
+  let isSated = !this.__player.isInCombat() && hasSatedCondition;
 
-    let regeneration = this.__player.getEquipmentAttribute("healthGain");
-    
-    // If not full health
-    if(!this.__player.isInCombat() && this.__player.hasCondition(CONST.CONDITION.SATED)) {
-      regeneration += 5;
+  // Health regeneration
+  if (!this.__player.isFull(CONST.PROPERTIES.HEALTH)) {
+    let healthRegen = this.__player.getEquipmentAttribute("healthGain") || 0;
+
+    if (isSated) {
+      healthRegen += 5;
     }
-  
-    //this.__player.increaseHealth(regeneration); 
-  
+
+    if (healthRegen > 0) {
+      this.__player.increaseHealth(healthRegen);
+    }
   }
-  
+
+  // Mana regeneration (only when sated)
+  if (!this.__player.isFull(CONST.PROPERTIES.MANA)) {
+    let manaRegen = this.__player.getEquipmentAttribute("manaGain") || 0;
+
+    if (isSated) {
+      manaRegen += 5;
+      console.log("=== MANA REGEN ===");
+      console.log("Mana before:", this.__player.getProperty(CONST.PROPERTIES.MANA));
+      this.__player.increaseMana(manaRegen);
+      console.log("Mana after:", this.__player.getProperty(CONST.PROPERTIES.MANA));
+    } else if (manaRegen > 0) {
+      this.__player.increaseMana(manaRegen);
+    }
+  }
+
   this.actions.lock(this.handleActionRegeneration, this.REGENERATION_DURATION);
-  
-} 
+
+}
 
 module.exports = ActionHandler;

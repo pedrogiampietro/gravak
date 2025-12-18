@@ -504,4 +504,19 @@ Creature.prototype.increaseHealth = function (amount) {
   );
 };
 
+Creature.prototype.increaseMana = function (amount) {
+  /*
+   * Function Creature.increaseMana
+   * Increases the mana of the creature until a maximum
+   */
+
+  this.setProperty(
+    CONST.PROPERTIES.MANA,
+    (this.getProperty(CONST.PROPERTIES.MANA) + amount).clamp(
+      0,
+      this.getProperty(CONST.PROPERTIES.MANA_MAX)
+    )
+  );
+};
+
 module.exports = Creature;
