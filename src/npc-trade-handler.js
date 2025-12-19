@@ -2,7 +2,7 @@
 
 const { NPCTradePacket } = requireModule("protocol");
 
-const TradeHandler = function(npc, trade) {
+const TradeHandler = function (npc, trade) {
 
   /*
    * Class TradeHandler
@@ -14,7 +14,7 @@ const TradeHandler = function(npc, trade) {
 
 }
 
-TradeHandler.prototype.hasTrades = function() {
+TradeHandler.prototype.hasTrades = function () {
 
   /*
    * Function TradeHandler.hasTrades
@@ -25,21 +25,21 @@ TradeHandler.prototype.hasTrades = function() {
 
 }
 
-TradeHandler.prototype.openTradeWindow = function(player) {
+TradeHandler.prototype.openTradeWindow = function (player) {
 
   /*
    * Function TradeHandler.openTradeWindow
    * Opens trade window with a friendly NPC
    */
 
-  player.write(new NPCTradePacket(this.npc.guid, this.trade.items));
+  player.write(new NPCTradePacket(this.npc.getId(), this.trade.items));
 
   // Reset the NPC state
   this.npc.conversationHandler.getFocusHandler().reset();
 
 }
 
-TradeHandler.prototype.getTradeItem = function(index) {
+TradeHandler.prototype.getTradeItem = function (index) {
 
   /*
    * Function TradeHandler.getTradeItem
@@ -47,11 +47,11 @@ TradeHandler.prototype.getTradeItem = function(index) {
    */
 
   // The request trade index is invalid
-  if(index < 0 || index >= this.trade.items.length) {
+  if (index < 0 || index >= this.trade.items.length) {
     return null;
   }
 
-  return this.trade[index];
+  return this.trade.items[index];
 
 }
 

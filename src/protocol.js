@@ -797,10 +797,10 @@ ChannelPrivatePacket.prototype.constructor = ChannelPrivatePacket;
 const NPCTradePacket = function (cid, offers) {
   /*
    * Class NPCTradePacket
-   * Wrapper for a private message to another player
+   * Wrapper for NPC trade offers
    */
 
-  PacketWriter.call(this, CONST.PROTOCOL.TRADE_OFFER, this.MAX_PACKET_SIZE);
+  PacketWriter.call(this, CONST.PROTOCOL.SERVER.TRADE_OFFER, this.MAX_PACKET_SIZE);
 
   this.writeUInt32(cid);
   this.writeUInt8(offers.length);
@@ -813,7 +813,8 @@ const NPCTradePacket = function (cid, offers) {
     this.writeClientId(offer.id);
     this.writeBuffer(stringEncoded);
     this.writeUInt32(offer.price);
-    this.writeBoolean(offer.sell);
+    // Convert type string to boolean: "sell" = true, "buy" = false
+    this.writeBoolean(offer.type === "sell");
   }, this);
 };
 

@@ -1,6 +1,8 @@
 "use strict";
 
+const path = require("path");
 const Position = requireModule("position");
+const NPC = requireModule("npc");
 const { ServerMessagePacket } = requireModule("protocol");
 
 const CommandHandler = function () { };
@@ -289,6 +291,39 @@ CommandHandler.prototype.handle = function (player, message) {
       return player.sendCancelMessage("Teleported to " + target.name + ".");
     } else {
       return player.sendCancelMessage("Creature not found: " + name);
+    }
+  }
+
+  // Spawn NPC command: /npc [npc_name]
+  if (message[0] === "/npc") {
+    let npcName = message.slice(1).join(" ").toLowerCase();
+
+    if (!npcName) {
+      return player.sendCancelMessage("Usage: /npc [npc_name]. Available: cipfried, aldee");
+    }
+
+    try {
+      // Build path to NPC definition file using process.cwd()
+      let npcFile = npcName + ".json";
+      let npcPath = path.join(process.cwd(), "data", "740", "npcs", "definitions", npcFile);
+
+      console.log("Trying to load NPC from:", npcPath);
+
+      // Clear cache to allow reloading
+      if (require.cache[npcPath]) {
+        delete require.cache[npcPath];
+      }
+
+      let data = require(npcPath);
+
+      // Create and spawn NPC at player position
+      let npc = new NPC(data);
+      gameServer.world.creatureHandler.addCreatureSpawn(npc, player.getPosition());
+
+      return player.sendCancelMessage("Spawned NPC: " + data.creatureStatistics.name);
+    } catch (error) {
+      console.log("NPC spawn error:", error);
+      return player.sendCancelMessage("NPC error: " + error.message);
     }
   }
 };

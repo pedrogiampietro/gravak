@@ -3,7 +3,7 @@
 const Channel = requireModule("channel");
 const CommandHandler = requireModule("command-handler");
 
-const DefaultChannel = function(id, name) {
+const DefaultChannel = function (id, name) {
 
   /*
    * Class DefaultChannel
@@ -21,7 +21,7 @@ const DefaultChannel = function(id, name) {
 DefaultChannel.prototype = Object.create(Channel.prototype);
 DefaultChannel.prototype.constructor = DefaultChannel;
 
-DefaultChannel.prototype.send = function(player, packet) {
+DefaultChannel.prototype.send = function (player, packet) {
 
   /*
    * Function DefaultChannel.send
@@ -36,16 +36,16 @@ DefaultChannel.prototype.send = function(player, packet) {
   let color = player.getProperty(CONST.PROPERTIES.ROLE) === CONST.ROLES.ADMIN ? CONST.COLOR.RED : CONST.COLOR.YELLOW;
 
   // Forward to the command handler
-  if(message.startsWith("/")) {
+  if (message.startsWith("/")) {
     return this.commandHandler.handle(player, message);
   }
 
   // Whispers
-  if(packet.loudness === 0) {
+  if (packet.loudness === 0) {
     return player.internalCreatureWhisper(message, color);
   }
 
-  if(packet.loudness === 2) {
+  if (packet.loudness === 2) {
     return player.internalCreatureYell(message, color);
   }
 
@@ -57,18 +57,29 @@ DefaultChannel.prototype.send = function(player, packet) {
 
 }
 
-DefaultChannel.prototype.__NPCListen = function(player, message) {
+DefaultChannel.prototype.__NPCListen = function (player, message) {
 
   /*
    * Function DefaultChannel.__NPCListen
    * Handler called when a player says a message and NPCs are nearby
    */
- 
+
   // Get the npcs spectating the chunk
-  let chunks = gameServer.world.getSpectatingChunks(player);
+  let chunks = gameServer.world.getSpectatingChunks(player.position);
+
+  console.log("=== __NPCListen ===");
+  console.log("Message:", message);
+  console.log("Player position:", player.position);
+  console.log("Chunks count:", chunks.length);
+
+  let totalNpcs = 0;
+  chunks.forEach(function (chunk) {
+    totalNpcs += chunk.npcs.size;
+  });
+  console.log("Total NPCs in chunks:", totalNpcs);
 
   // Go over all the NPCs that are nearby in the game world
-  chunks.forEach(function(chunk) {
+  chunks.forEach(function (chunk) {
     chunk.npcs.forEach(npc => npc.listen(player, message));
   });
 

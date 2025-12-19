@@ -1,4 +1,4 @@
-const NetworkManager = function() {
+const NetworkManager = function () {
 
   /*
    * Class NetworkManager
@@ -20,7 +20,7 @@ const NetworkManager = function() {
 
 }
 
-NetworkManager.prototype.close = function() {
+NetworkManager.prototype.close = function () {
 
   /*
    * Class NetworkManager.close
@@ -31,7 +31,7 @@ NetworkManager.prototype.close = function() {
 
 }
 
-NetworkManager.prototype.isConnected = function() {
+NetworkManager.prototype.isConnected = function () {
 
   /*
    * Class NetworkManager.isConnected
@@ -42,7 +42,7 @@ NetworkManager.prototype.isConnected = function() {
 
 }
 
-NetworkManager.prototype.readPacket = function(packet) {
+NetworkManager.prototype.readPacket = function (packet) {
 
   /*
    * Class NetworkManager.readPacket
@@ -52,8 +52,8 @@ NetworkManager.prototype.readPacket = function(packet) {
   this.state.nPackets++;
 
   // What operation the server sends is the first byte
-  switch(packet.readUInt8()) {
-  
+  switch (packet.readUInt8()) {
+
     case CONST.PROTOCOL.SERVER.SPELL_ADD: {
       return gameClient.interface.updateSpells(packet.readUInt16());
     }
@@ -71,19 +71,19 @@ NetworkManager.prototype.readPacket = function(packet) {
     case CONST.PROTOCOL.SERVER.REMOVE_FRIEND: {
       return this.packetHandler.handleRemoveFriend(packet.readString());
     }
-  
+
     case CONST.PROTOCOL.SERVER.ITEM_TRANSFORM: {
       return this.packetHandler.handleTransformTile(packet.readTransformTile());
     }
-  
+
     case CONST.PROTOCOL.SERVER.MESSAGE_CANCEL: {
       return this.packetHandler.handleCancelMessage(packet.readString());
     }
-  
+
     case CONST.PROTOCOL.SERVER.ITEM_INFORMATION: {
       return this.packetHandler.handleItemInformation(packet.readItemInformation());
     }
-  
+
     case CONST.PROTOCOL.SERVER.TARGET: {
       return this.packetHandler.handleSetTarget(packet.readUInt32());
     }
@@ -91,19 +91,19 @@ NetworkManager.prototype.readPacket = function(packet) {
     case CONST.PROTOCOL.SERVER.OUTFIT: {
       return this.packetHandler.handleChangeOutfit(packet.readChangeOutfit());
     }
-  
+
     case CONST.PROTOCOL.SERVER.ITEM_TEXT: {
       return this.packetHandler.handleReadText(packet.readReadable());
     }
-  
+
     case CONST.PROTOCOL.SERVER.STATE_SERVER: {
       return this.packetHandler.handleServerData(packet);
     }
-  
+
     case CONST.PROTOCOL.SERVER.CHANNEL_JOIN: {
       return this.packetHandler.handleOpenChannel(packet.readOpenChannel());
     }
-  
+
     case CONST.PROTOCOL.SERVER.COMBAT_LOCK: {
       return this.packetHandler.handleCombatLock(packet.readBoolean());
     }
@@ -111,55 +111,55 @@ NetworkManager.prototype.readPacket = function(packet) {
     case CONST.PROTOCOL.SERVER.MAGIC_EFFECT: {
       return this.packetHandler.handleSendMagicEffect(packet.readMagicEffect());
     }
-  
+
     case CONST.PROTOCOL.SERVER.DISTANCE_EFFECT: {
       return this.packetHandler.handleSendDistanceEffect(packet.readDistanceEffect());
     }
-  
+
     case CONST.PROTOCOL.SERVER.CONTAINER_REMOVE: {
       return this.packetHandler.handleContainerItemRemove(packet.readContainerItemRemove());
     }
-  
+
     case CONST.PROTOCOL.SERVER.CREATURE_STATE: {
       return this.packetHandler.handleEntityReference(packet.readCreatureInfo());
     }
-  
+
     case CONST.PROTOCOL.SERVER.CREATURE_INFORMATION: {
       return this.packetHandler.handleCharacterInformation(packet.readCharacterInformation());
     }
-  
+
     case CONST.PROTOCOL.SERVER.CONTAINER_CLOSE: {
       return this.packetHandler.handleContainerClose(packet.readUInt32());
     }
-  
+
     case CONST.PROTOCOL.SERVER.LATENCY: {
-     return this.packetHandler.handleLatency();
+      return this.packetHandler.handleLatency();
     }
-  
+
     case CONST.PROTOCOL.SERVER.CREATURE_MOVE: {
       return this.packetHandler.handleCreatureServerMove(packet.readEntityMove());
     }
-  
+
     case CONST.PROTOCOL.SERVER.ITEM_ADD: {
       return this.packetHandler.handleItemAdd(packet.readTileItemAdd());
     }
-  
+
     case CONST.PROTOCOL.SERVER.CONTAINER_OPEN: {
       return this.packetHandler.handleContainerOpen(packet.readOpenContainer());
     }
-  
+
     case CONST.PROTOCOL.SERVER.CONTAINER_ADD: {
       return this.packetHandler.handleContainerAddItem(packet.readContainerItemAdd());
     }
-  
+
     case CONST.PROTOCOL.SERVER.STATE_PLAYER: {
       return this.packetHandler.handleAcceptLogin(packet.readPlayerInfo());
     }
-  
+
     case CONST.PROTOCOL.SERVER.ITEM_REMOVE: {
       return this.packetHandler.handleRemoveItem(packet.readRemoveItem());
     }
-  
+
     case CONST.PROTOCOL.SERVER.SPELL_CAST: {
       return gameClient.player.spellbook.serverCastSpell(packet.readCastSpell());
     }
@@ -167,7 +167,7 @@ NetworkManager.prototype.readPacket = function(packet) {
     case CONST.PROTOCOL.SERVER.CHUNK: {
       return this.packetHandler.handleChunk(packet.readChunkData());
     }
-  
+
     case CONST.PROTOCOL.SERVER.SERVER_ERROR: {
       return this.packetHandler.handleServerError(packet.readString());
     }
@@ -175,27 +175,27 @@ NetworkManager.prototype.readPacket = function(packet) {
     case CONST.PROTOCOL.SERVER.MESSAGE_SERVER: {
       return this.packetHandler.handleServerMessage(packet.readString());
     }
-  
+
     case CONST.PROTOCOL.SERVER.CREATURE_REMOVE: {
       return this.packetHandler.handleEntityRemove(packet.readUInt32());
     }
-  
+
     case CONST.PROTOCOL.SERVER.CREATURE_TELEPORT: {
       return this.packetHandler.handleEntityTeleport(packet.readCreatureTeleport());
     }
-  
+
     case CONST.PROTOCOL.SERVER.MESSAGE_PRIVATE: {
       return this.packetHandler.handleReceivePrivateMessage(packet.readPrivateMessage());
     }
-  
+
     case CONST.PROTOCOL.SERVER.PLAYER_LOGIN: {
       return this.packetHandler.handlePlayerConnect(packet.readString());
     }
-  
+
     case CONST.PROTOCOL.SERVER.PLAYER_LOGOUT: {
       return this.packetHandler.handlePlayerDisconnect(packet.readString());
     }
-  
+
     case CONST.PROTOCOL.SERVER.WORLD_TIME: {
       return this.packetHandler.handleWorldTime(packet.readUInt32());
     }
@@ -203,7 +203,7 @@ NetworkManager.prototype.readPacket = function(packet) {
     case CONST.PROTOCOL.SERVER.CREATURE_MESSAGE: {
       return this.packetHandler.handleChannelMessage(packet.readChannelMessage());
     }
-  
+
     case CONST.PROTOCOL.SERVER.TOGGLE_CONDITION: {
       return this.packetHandler.handleCondition(packet.readToggleCondition());
     }
@@ -219,15 +219,19 @@ NetworkManager.prototype.readPacket = function(packet) {
     case CONST.PROTOCOL.SERVER.CREATURE_PROPERTY: {
       return this.packetHandler.handlePropertyChange(packet.readProperty());
     }
-  
+
+    case CONST.PROTOCOL.SERVER.TRADE_OFFER: {
+      return this.packetHandler.handleTradeOffer(packet.readTradeOffer());
+    }
+
     default:
-      throw("An unknown packet was received from the server.");
-  
+      throw ("An unknown packet was received from the server.");
+
   }
 
 }
 
-NetworkManager.prototype.send = function(packet) {
+NetworkManager.prototype.send = function (packet) {
 
   /*
    * Function NetworkManager.send
@@ -235,7 +239,7 @@ NetworkManager.prototype.send = function(packet) {
    */
 
   // Not connected to the gameserver
-  if(!this.isConnected()) {
+  if (!this.isConnected()) {
     return;
   }
 
@@ -250,7 +254,7 @@ NetworkManager.prototype.send = function(packet) {
 
 }
 
-NetworkManager.prototype.getLatency = function() {
+NetworkManager.prototype.getLatency = function () {
 
   /*
    * Function NetworkManager.pingServer
@@ -264,7 +268,7 @@ NetworkManager.prototype.getLatency = function() {
 
 }
 
-NetworkManager.prototype.getConnectionString = function(response) {
+NetworkManager.prototype.getConnectionString = function (response) {
 
   /*
    * Function NetworkManager.getConnectionString
@@ -275,7 +279,7 @@ NetworkManager.prototype.getConnectionString = function(response) {
 
 }
 
-NetworkManager.prototype.getConnectionSettings = function() {
+NetworkManager.prototype.getConnectionSettings = function () {
 
   /*
    * Function NetworkManager.getConnectionSettings
@@ -286,7 +290,7 @@ NetworkManager.prototype.getConnectionSettings = function() {
 
 }
 
-NetworkManager.prototype.createAccount = function(options) {
+NetworkManager.prototype.createAccount = function (options) {
 
   /*
    * Function NetworkManager.connect
@@ -298,13 +302,13 @@ NetworkManager.prototype.createAccount = function(options) {
   let url = "%s//%s/?account=%s&password=%s&name=%s&sex=%s".format(location.protocol, host, options.account, options.password, options.name, options.sex);
 
   // Make a post request
-  fetch(url, {"method": "POST"}).then(function(response) {
+  fetch(url, { "method": "POST" }).then(function (response) {
 
-    switch(response.status) {
+    switch (response.status) {
       case 201: break;
-      case 400: throw("Malformed account creation request.");
-      case 409: throw("An account or character with this name already exists.");
-      case 500: throw("The server experienced an internal error.");
+      case 400: throw ("Malformed account creation request.");
+      case 409: throw ("An account or character with this name already exists.");
+      case 500: throw ("The server experienced an internal error.");
     }
 
     // Update the DOM with the newly created accounted
@@ -317,14 +321,14 @@ NetworkManager.prototype.createAccount = function(options) {
 
 }
 
-NetworkManager.prototype.fetchCallback = function(response) {
+NetworkManager.prototype.fetchCallback = function (response) {
 
   /*
    * Function NetworkManager.fetchCallback
    * Callback to fire for fetch requests: check HTTP Status Code
    */
 
-  if(response.status !== 200) {
+  if (response.status !== 200) {
     return Promise.reject(response);
   }
 
@@ -332,7 +336,7 @@ NetworkManager.prototype.fetchCallback = function(response) {
 
 }
 
-NetworkManager.prototype.loadGameFilesServer = function() {
+NetworkManager.prototype.loadGameFilesServer = function () {
 
   /*
    * Function NetworkManager.loadGameFilesServer
@@ -342,24 +346,24 @@ NetworkManager.prototype.loadGameFilesServer = function() {
   // The resource to load from the server
   let resources = new Array("Tibia.spr", "Tibia.dat");
 
-  let promises = resources.map(function(url) {
+  let promises = resources.map(function (url) {
     return fetch("/data/%s/%s".format(gameClient.SERVER_VERSION, url)).then(this.fetchCallback);
   }, this);
 
   // Wait for completing of resources
-  Promise.all(promises).then(function([ dataSprites, dataObjects ]) {
+  Promise.all(promises).then(function ([dataSprites, dataObjects]) {
 
     // Load the sprites and data objects
-    gameClient.spriteBuffer.load("Tibia.spr", {"target": {"result": dataSprites}});
-    gameClient.dataObjects.load("Tibia.dat", {"target": {"result": dataObjects}});
+    gameClient.spriteBuffer.load("Tibia.spr", { "target": { "result": dataSprites } });
+    gameClient.dataObjects.load("Tibia.dat", { "target": { "result": dataObjects } });
 
-  }).catch(function(error) {
+  }).catch(function (error) {
     return gameClient.interface.modalManager.open("floater-connecting", "Failed loading client data from server. Please select them manually using the Load Assets button.");
   });
 
 }
 
-NetworkManager.prototype.connect = function() {
+NetworkManager.prototype.connect = function () {
 
   /*
    * Function NetworkManager.connect
@@ -370,9 +374,9 @@ NetworkManager.prototype.connect = function() {
   let { account, password } = gameClient.interface.getAccountDetails();
 
   // Contact the login server
-  fetch("%s//%s/?account=%s&password=%s".format(location.protocol, host, account, password)).then(function(response) {
+  fetch("%s//%s/?account=%s&password=%s".format(location.protocol, host, account, password)).then(function (response) {
 
-    switch(response.status) {
+    switch (response.status) {
       case 200: break;
       case 401: throw new AuthenticationError("The account number or password is incorrect.");
       case 500: throw new ServerError("The server experienced an internal error.");
@@ -381,12 +385,12 @@ NetworkManager.prototype.connect = function() {
     // Proceed
     return response.json();
 
-  }).then(function(response) {
+  }).then(function (response) {
 
     // Open the websocket connection: binary transfer of data
     this.socket = new WebSocket(this.getConnectionString(response));
     this.socket.binaryType = "arraybuffer";
-    
+
     // Attach callbacks
     this.socket.onopen = this.__handleConnection.bind(this);
     this.socket.onmessage = this.__handlePacket.bind(this);
@@ -397,7 +401,7 @@ NetworkManager.prototype.connect = function() {
 
 }
 
-NetworkManager.prototype.__handlePacket = function(event) {
+NetworkManager.prototype.__handlePacket = function (event) {
 
   /*
    * Function NetworkManager.__handlePacket
@@ -411,13 +415,13 @@ NetworkManager.prototype.__handlePacket = function(event) {
   this.state.bytesRecv += packet.buffer.length;
 
   // Can still read the packet
-  while(packet.readable()) {
+  while (packet.readable()) {
     this.readPacket(packet);
   }
 
 }
 
-NetworkManager.prototype.__handleError = function(event) {
+NetworkManager.prototype.__handleError = function (event) {
 
   /*
    * Function GameClient.__handleError
@@ -428,7 +432,7 @@ NetworkManager.prototype.__handleError = function(event) {
 
 }
 
-NetworkManager.prototype.__handleClose = function(event) {
+NetworkManager.prototype.__handleClose = function (event) {
 
   /*
    * Function NetworkManager.__handleClose
@@ -438,7 +442,7 @@ NetworkManager.prototype.__handleClose = function(event) {
   console.log("Disconnected");
 
   // If we are connected to the game world: handle a reset
-  if(this.state.connected && gameClient.renderer) {
+  if (this.state.connected && gameClient.renderer) {
     gameClient.reset();
   }
 
@@ -447,7 +451,7 @@ NetworkManager.prototype.__handleClose = function(event) {
 
 }
 
-NetworkManager.prototype.__handleConnection = function(event) {
+NetworkManager.prototype.__handleConnection = function (event) {
 
   /*
    * Function NetworkManager.__handleConnection

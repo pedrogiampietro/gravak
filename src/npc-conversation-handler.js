@@ -159,8 +159,8 @@ ConversationHandler.prototype.say = function (message, color) {
    * Function to call to say something without extending the idle duration
    */
 
-  // Delegate to the parent NPC to say the text (default to LIGHTBLUE)
-  this.npc.internalCreatureSay(message, color || CONST.COLOR.LIGHTBLUE);
+  // Delegate to the parent NPC's speech handler to say the text (default to LIGHTBLUE)
+  this.npc.speechHandler.internalCreatureSay(message, color || CONST.COLOR.LIGHTBLUE);
 
 }
 
@@ -227,6 +227,13 @@ ConversationHandler.prototype.handleResponse = function (player, keyword) {
    * Function ConversationHandler.handleResponse
    * Handles an incoming keyword from a particular player
    */
+
+  console.log("=== NPC handleResponse ===");
+  console.log("NPC:", this.npc.name);
+  console.log("Player:", player.name);
+  console.log("Keyword:", keyword);
+  console.log("Is greeting?:", this.__isGreeting(keyword));
+  console.log("Greetings array:", this.conversation.greetings);
 
   // Accept incoming greetins from anyone
   if (this.__isGreeting(keyword)) {
@@ -304,8 +311,8 @@ ConversationHandler.prototype.__loadScript = function (script) {
    * Loads the NPC script definitions from disk
    */
 
-  // Does not exist
-  if (script === null) {
+  // Does not exist (null or undefined)
+  if (!script) {
     return;
   }
 

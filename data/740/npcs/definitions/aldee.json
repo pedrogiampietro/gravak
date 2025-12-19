@@ -1,0 +1,118 @@
+{
+    "creatureStatistics": {
+        "name": "Al Dee",
+        "health": 100,
+        "maxHealth": 100,
+        "mana": 0,
+        "maxMana": 0,
+        "attack": 1,
+        "attackSlowness": 40,
+        "defense": 5,
+        "speed": 30,
+        "outfit": {
+            "id": 131,
+            "details": {
+                "head": 95,
+                "body": 86,
+                "legs": 121,
+                "feet": 115
+            }
+        }
+    },
+    "behaviour": {
+        "wanderRange": 2,
+        "openDoors": true,
+        "ignoreCharacters": true
+    },
+    "conversation": {
+        "hearingRange": 5,
+        "keywords": {
+            "tools": "I sell {backpack}s, {bag}s, {fishing rod}s, {rope}s, {scroll}s, {scythe}s, {shovel}s and {torch}es.",
+            "equipment": "I sell basic adventurer's equipment. Ask me about my {trade} if you want to see what I have."
+        },
+        "trade": {
+            "items": [
+                {
+                    "name": "Backpack",
+                    "price": 10,
+                    "id": 1988,
+                    "type": "sell"
+                },
+                {
+                    "name": "Bag",
+                    "price": 4,
+                    "id": 1987,
+                    "type": "sell"
+                },
+                {
+                    "name": "Fishing Rod",
+                    "price": 150,
+                    "id": 2580,
+                    "type": "sell"
+                },
+                {
+                    "name": "Rope",
+                    "price": 50,
+                    "id": 2120,
+                    "type": "sell"
+                },
+                {
+                    "name": "Scroll",
+                    "price": 5,
+                    "id": 1949,
+                    "type": "sell"
+                },
+                {
+                    "name": "Scythe",
+                    "price": 12,
+                    "id": 2550,
+                    "type": "sell"
+                },
+                {
+                    "name": "Shovel",
+                    "price": 10,
+                    "id": 2554,
+                    "type": "sell"
+                },
+                {
+                    "name": "Torch",
+                    "price": 2,
+                    "id": 2050,
+                    "type": "sell"
+                },
+                {
+                    "name": "Rope",
+                    "price": 8,
+                    "id": 2120,
+                    "type": "buy"
+                },
+                {
+                    "name": "Shovel",
+                    "price": 8,
+                    "id": 2554,
+                    "type": "buy"
+                }
+            ]
+        },
+        "farewells": [
+            "bye",
+            "goodbye",
+            "farewell"
+        ],
+        "greetings": [
+            "hello",
+            "hi",
+            "greetings"
+        ],
+        "sayings": {
+            "texts": [
+                "Come and browse my wares! I have everything an adventurer needs!",
+                "Need supplies? I've got backpacks, ropes, and more!",
+                "Best prices in town for adventuring gear!"
+            ],
+            "rate": 250,
+            "chance": 0.6
+        },
+        "script": "aldee.js"
+    }
+}

@@ -38,6 +38,13 @@ const Creature = function (properties) {
 Creature.prototype = Object.create(EventEmitter.prototype);
 Creature.prototype.constructor = Creature;
 
+// Define name property getter
+Object.defineProperty(Creature.prototype, 'name', {
+  get: function () {
+    return this.getProperty(CONST.PROPERTIES.NAME);
+  }
+});
+
 Creature.prototype.setProperty = function (type, value) {
   /*
    * Function Creature.prototype.setProperty
@@ -212,9 +219,9 @@ Creature.prototype.getChunk = function () {
 
   let chunk = gameServer.world.getChunkFromWorldPosition(this.getPosition());
   if (chunk === null) {
-    console.warn(`No chunk found for position: ${this.getPosition()}`);
+    // console.warn(`No chunk found for position: ${this.getPosition()}`);
   } else {
-    console.log(`Chunk found for position: ${this.getPosition()}`);
+    // console.log(`Chunk found for position: ${this.getPosition()}`);
   }
   return chunk;
 };

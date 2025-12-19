@@ -1051,3 +1051,35 @@ PacketReader.prototype.__readSingleOutfit = function () {
   });
 
 }
+
+PacketReader.prototype.readTradeOffer = function () {
+
+  /*
+   * Function PacketReader.readTradeOffer
+   * Reads a trade offer packet from an NPC
+   */
+
+  let npcId = this.readUInt32();
+  let count = this.readUInt8();
+  let offers = new Array();
+
+  for (let i = 0; i < count; i++) {
+    let id = this.readUInt16();
+    let name = this.readString();
+    let price = this.readUInt32();
+    let isSell = this.readBoolean();
+
+    offers.push({
+      "id": id,
+      "name": name,
+      "price": price,
+      "type": isSell ? "sell" : "buy"
+    });
+  }
+
+  return new Object({
+    "id": npcId,
+    "offers": offers
+  });
+
+}
