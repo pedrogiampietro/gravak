@@ -1,4 +1,4 @@
-const Creature = function(data) {
+const Creature = function (data) {
 
   /*
    * Class Creature
@@ -36,7 +36,7 @@ const Creature = function(data) {
   this.spriteBuffer = new SpriteBuffer(this.outfit.getSpriteBufferSize(this.outfit.getDataObject()));
 
   // If the creature has mount create a sprite buffer for its outfit
-  if(this.outfit.getDataObjectMount()) {
+  if (this.outfit.getDataObjectMount()) {
     this.spriteBufferMount = new SpriteBuffer(this.outfit.getSpriteBufferSize(this.outfit.getDataObjectMount()));
   }
 
@@ -62,7 +62,7 @@ const Creature = function(data) {
 
 }
 
-Creature.prototype.removeCondition = function(cid) {
+Creature.prototype.removeCondition = function (cid) {
 
   /*
    * Function Player.removeCondition
@@ -73,7 +73,7 @@ Creature.prototype.removeCondition = function(cid) {
 
 }
 
-Creature.prototype.addCondition = function(cid) {
+Creature.prototype.addCondition = function (cid) {
 
   /*
    * Function Player.addCondition
@@ -85,7 +85,7 @@ Creature.prototype.addCondition = function(cid) {
 
 }
 
-Creature.prototype.hasCondition = function(cid) {
+Creature.prototype.hasCondition = function (cid) {
 
   /*
    * Function Player.hasCondition
@@ -96,7 +96,7 @@ Creature.prototype.hasCondition = function(cid) {
 
 }
 
-Creature.prototype.blockHit = function() {
+Creature.prototype.blockHit = function () {
 
   /*
    * Function Creature.blockHit
@@ -110,13 +110,13 @@ Creature.prototype.blockHit = function() {
 
 }
 
-Creature.prototype.setHealthStatus = function() {
+Creature.prototype.setHealthStatus = function () {
 
   this.characterElement.setDefault();
 
 }
 
-Creature.prototype.getMaxFloor = function() {
+Creature.prototype.getMaxFloor = function () {
 
   /*
    * Function Creature.getMaxFloor
@@ -127,7 +127,7 @@ Creature.prototype.getMaxFloor = function() {
 
 }
 
-Creature.prototype.getCharacterFrames = function() {
+Creature.prototype.getCharacterFrames = function () {
 
   /*
    * Function Creature.getCharacterFrames
@@ -138,7 +138,7 @@ Creature.prototype.getCharacterFrames = function() {
   let characterObject = this.outfit.getDataObject();
   let mountObject = this.outfit.getDataObjectMount();
 
-  if(characterObject === null) {
+  if (characterObject === null) {
     return null;
   }
 
@@ -146,18 +146,18 @@ Creature.prototype.getCharacterFrames = function() {
   let characterGroup, mountGroup, characterFrame, mountFrame;
 
   // The character is not moving: get the idle group
-  if(!this.isMoving()) {
+  if (!this.isMoving()) {
 
     characterGroup = characterObject.getFrameGroup(FrameGroup.prototype.GROUP_IDLE);
 
-    if(characterObject.frameGroups.length === 1 && !characterObject.isAlwaysAnimated()) {
+    if (characterObject.frameGroups.length === 1 && !characterObject.isAlwaysAnimated()) {
       characterFrame = 0;
     } else {
       characterFrame = characterGroup.getAlwaysAnimatedFrame();
     }
 
     // Mounts
-    if(gameClient.clientVersion === 1098) {
+    if (gameClient.clientVersion === 1098) {
       mountGroup = mountObject.getFrameGroup(FrameGroup.prototype.GROUP_IDLE);
       mountFrame = mountGroup.getAlwaysAnimatedFrame();
     } else {
@@ -171,7 +171,7 @@ Creature.prototype.getCharacterFrames = function() {
     characterFrame = this.__getWalkingFrame(characterGroup);
 
     // Mounts
-    if(gameClient.clientVersion === 1098) {
+    if (gameClient.clientVersion === 1098) {
       mountGroup = mountObject.getFrameGroup(FrameGroup.prototype.GROUP_MOVING);
       mountFrame = this.__getWalkingFrame(characterGroup);
     } else {
@@ -191,7 +191,7 @@ Creature.prototype.getCharacterFrames = function() {
 
 }
 
-Creature.prototype.getPosition = function() {
+Creature.prototype.getPosition = function () {
 
   /*
    * Function Creature.getPosition
@@ -202,7 +202,7 @@ Creature.prototype.getPosition = function() {
 
 }
 
-Creature.prototype.hasTarget = function() {
+Creature.prototype.hasTarget = function () {
 
   /*
    * Function Creature.hasTarget
@@ -213,7 +213,7 @@ Creature.prototype.hasTarget = function() {
 
 }
 
-Creature.prototype.isMounted = function() {
+Creature.prototype.isMounted = function () {
 
   /*
    * Function Creature.isMounted
@@ -224,7 +224,7 @@ Creature.prototype.isMounted = function() {
 
 }
 
-Creature.prototype.serverSetOutfit = function(outfit) {
+Creature.prototype.serverSetOutfit = function (outfit) {
 
   /*
    * Function Creature.serverSetOutfit
@@ -237,13 +237,13 @@ Creature.prototype.serverSetOutfit = function(outfit) {
   this.spriteBuffer = new SpriteBuffer(this.outfit.getSpriteBufferSize(this.outfit.getDataObject()));
 
   // If there is a mount: add a sprite buffer for the mounts as well
-  if(this.outfit.getDataObjectMount()) {
+  if (this.outfit.getDataObjectMount()) {
     this.spriteBufferMount = new SpriteBuffer(this.outfit.getSpriteBufferSize(this.outfit.getDataObjectMount()));
   }
- 
+
 }
 
-Creature.prototype.setPosition = function(position) {
+Creature.prototype.setPosition = function (position) {
 
   /*
    * Function Creature.setPosition
@@ -254,7 +254,7 @@ Creature.prototype.setPosition = function(position) {
   let fromTile = gameClient.world.getTileFromWorldPosition(this.getPosition());
 
   // Delete it from the local client tile
-  if(fromTile !== null) {
+  if (fromTile !== null) {
     fromTile.removeCreature(this);
   }
 
@@ -265,7 +265,7 @@ Creature.prototype.setPosition = function(position) {
 
 }
 
-Creature.prototype.getHealthPercentage = function() {
+Creature.prototype.getHealthPercentage = function () {
 
   /*
    * Function Creature.getHealthPercentage
@@ -276,7 +276,7 @@ Creature.prototype.getHealthPercentage = function() {
 
 }
 
-Creature.prototype.getHealthFraction = function() {
+Creature.prototype.getHealthFraction = function () {
 
   /*
    * Function Creature.getHealthFraction
@@ -288,7 +288,7 @@ Creature.prototype.getHealthFraction = function() {
 
 }
 
-Creature.prototype.say = function(packet) {
+Creature.prototype.say = function (packet) {
 
   /*
    * Function Creature.say
@@ -299,7 +299,7 @@ Creature.prototype.say = function(packet) {
   this.textBuffer = new Array();
 
   // Overwrite the currently active DOM element if it exists
-  if(this.__activeTextElement !== null) {
+  if (this.__activeTextElement !== null) {
     this.__activeTextElement.complete();
   }
 
@@ -311,7 +311,7 @@ Creature.prototype.say = function(packet) {
 
 }
 
-Creature.prototype.addBoxAnimation = function(color) {
+Creature.prototype.addBoxAnimation = function (color) {
 
   /*
    * Function Renderer.addBoxAnimation
@@ -322,7 +322,7 @@ Creature.prototype.addBoxAnimation = function(color) {
 
 }
 
-Creature.prototype.deleteAnimation = function(animation) {
+Creature.prototype.deleteAnimation = function (animation) {
 
   /*
    * Function Creature.deleteAnimation
@@ -333,17 +333,17 @@ Creature.prototype.deleteAnimation = function(animation) {
 
 }
 
-Creature.prototype.addAnimation = function(id) {
+Creature.prototype.addAnimation = function (id) {
 
   /*
    * Function Renderer.addCreatureAnimation
    * Adds an animation that sticks to the passed creature identifier
    */
-  
+
   // Get the animation identifier
   let aid = gameClient.dataObjects.getAnimationId(id);
 
-  if(aid === null) {
+  if (aid === null) {
     return;
   }
 
@@ -351,7 +351,7 @@ Creature.prototype.addAnimation = function(id) {
 
 }
 
-Creature.prototype.increaseHealth = function(amount) {
+Creature.prototype.increaseHealth = function (amount) {
 
   /*
    * Function Creature.increaseHealth
@@ -362,7 +362,7 @@ Creature.prototype.increaseHealth = function(amount) {
 
 }
 
-Creature.prototype.getTarget = function() {
+Creature.prototype.getTarget = function () {
 
   /*
    * Function Creature.getTarget
@@ -373,7 +373,7 @@ Creature.prototype.getTarget = function() {
 
 }
 
-Creature.prototype.remove = function() {
+Creature.prototype.remove = function () {
 
   /*
    * Function Creature.remove
@@ -385,7 +385,7 @@ Creature.prototype.remove = function() {
 
 }
 
-Creature.prototype.getMoveOffset = function() {
+Creature.prototype.getMoveOffset = function () {
 
   /*
    * Function GameClient.getMoveOffset
@@ -393,7 +393,7 @@ Creature.prototype.getMoveOffset = function() {
    */
 
   // The creature is moving, there is no offset
-  if(!this.isMoving() || this.__teleported) {
+  if (!this.isMoving() || this.__teleported) {
     return Position.prototype.NULL;
   }
 
@@ -401,7 +401,7 @@ Creature.prototype.getMoveOffset = function() {
   let fraction = this.getMovingFraction();
 
   // The face direction is important here
-  switch(this.getLookDirection()) {
+  switch (this.getLookDirection()) {
     case CONST.DIRECTION.WEST:
       return new Position(-fraction, 0, 0);
     case CONST.DIRECTION.NORTH:
@@ -423,7 +423,7 @@ Creature.prototype.getMoveOffset = function() {
 }
 
 
-Creature.prototype.moveTo = function(position, speed) {
+Creature.prototype.moveTo = function (position, speed) {
 
   /*
    * Function Creature.moveTo
@@ -431,7 +431,7 @@ Creature.prototype.moveTo = function(position, speed) {
    */
 
   // Cancel event if we are not within the world bounds
-  if(!gameClient.world.isValidWorldPosition(position)) {
+  if (!gameClient.world.isValidWorldPosition(position)) {
     return false;
   }
 
@@ -439,7 +439,7 @@ Creature.prototype.moveTo = function(position, speed) {
   this.__chunk = gameClient.world.getChunkFromWorldPosition(position);
 
   // Cancel any previous events
-  if(this.__movementEvent) {
+  if (this.__movementEvent) {
     this.__movementEvent.cancel();
   }
 
@@ -452,7 +452,7 @@ Creature.prototype.moveTo = function(position, speed) {
   // Get the movement direction
   let angle = this.getPosition().getLookDirection(position);
 
-  if(angle !== null) {
+  if (angle !== null) {
     this.__lookDirection = angle;
   }
 
@@ -462,18 +462,18 @@ Creature.prototype.moveTo = function(position, speed) {
   this.__position = position;
 
   // Play walking sound
-  if(gameClient.player.canSeeSmall(this) && position.z === gameClient.player.__position.z) {
+  if (gameClient.player.canSeeSmall(this) && position.z === gameClient.player.__position.z) {
     gameClient.interface.soundManager.playWalkBit(position);
   }
 
   // If the player is moving let us update the minimap
-  if(this === gameClient.player) {
+  if (this === gameClient.player) {
     return gameClient.renderer.minimap.cache();
   }
 
 }
 
-Creature.prototype.getLookDirection = function() {
+Creature.prototype.getLookDirection = function () {
 
   /*
    * Function Creature.getLookDirection
@@ -484,7 +484,7 @@ Creature.prototype.getLookDirection = function() {
 
 }
 
-Creature.prototype.setTurnBuffer = function(direction) {
+Creature.prototype.setTurnBuffer = function (direction) {
 
   /*
    * Function Creature.setTurnBuffer
@@ -492,7 +492,7 @@ Creature.prototype.setTurnBuffer = function(direction) {
    */
 
   // If moving update the buffer to be updated when creature stops moving
-  if(this.isMoving()) {
+  if (this.isMoving()) {
     return this.__lookDirectionBuffer = direction;
   }
 
@@ -501,7 +501,7 @@ Creature.prototype.setTurnBuffer = function(direction) {
 
 }
 
-Creature.prototype.unlockMovement = function() {
+Creature.prototype.unlockMovement = function () {
 
   /*
    * Function Creature.unlockMovement
@@ -509,7 +509,7 @@ Creature.prototype.unlockMovement = function() {
    */
 
   // A turn event is buffered: honor when movement is stopped
-  if(this.__lookDirectionBuffer !== null) {
+  if (this.__lookDirectionBuffer !== null) {
     this.__lookDirection = this.__lookDirectionBuffer;
     this.__lookDirectionBuffer = null;
   }
@@ -518,20 +518,20 @@ Creature.prototype.unlockMovement = function() {
   this.__movementEvent = null;
   this.__teleported = false;
 
-  if(gameClient.player === this && gameClient.world.pathfinder.__pathfindCache.length > 0) {
+  if (gameClient.player === this && (gameClient.world.pathfinder.__pathfindCache.length > 0 || gameClient.world.pathfinder.__finalDestination !== null)) {
     return gameClient.world.pathfinder.handlePathfind();
   }
 
   // If the player has a movement buffered: enact and reset the buffer
   // This facilitates smooth walking
-  if(gameClient.player === this && this.__movementBuffer !== null) {
+  if (gameClient.player === this && this.__movementBuffer !== null) {
     gameClient.keyboard.handleCharacterMovement(this.__movementBuffer);
     this.__movementBuffer = null;
   }
 
 }
 
-Creature.prototype.getChunk = function() {
+Creature.prototype.getChunk = function () {
 
   /*
    * Function Creature.getChunk
@@ -542,7 +542,7 @@ Creature.prototype.getChunk = function() {
 
 }
 
-Creature.prototype.isMoving = function() {
+Creature.prototype.isMoving = function () {
 
   /*
    * Function Creature.isMoving
@@ -553,7 +553,7 @@ Creature.prototype.isMoving = function() {
 
 }
 
-Creature.prototype.getMovingFraction = function() {
+Creature.prototype.getMovingFraction = function () {
 
   /*
    * Function Creature.getMovingFraction
@@ -561,12 +561,12 @@ Creature.prototype.getMovingFraction = function() {
    */
 
   // If not moving: the fraction is most definitely 0
-  if(!this.isMoving()) {
+  if (!this.isMoving()) {
     return 0;
   }
 
   // Was teleported and does not have a moving fraction
-  if(this.__teleported) {
+  if (this.__teleported) {
     return 0;
   }
 
@@ -575,7 +575,7 @@ Creature.prototype.getMovingFraction = function() {
 
 }
 
-Creature.prototype.canSee = function(thing) {
+Creature.prototype.canSee = function (thing) {
 
   /*
    * Function Creature.canSee
@@ -594,7 +594,7 @@ Creature.prototype.canSee = function(thing) {
 
 }
 
-Creature.prototype.canSeeSmall = function(thing) {
+Creature.prototype.canSeeSmall = function (thing) {
 
   /*
    * Function Creature.canSeeSmall
@@ -613,7 +613,7 @@ Creature.prototype.canSeeSmall = function(thing) {
 
 }
 
-Creature.prototype.__setLookDirection = function(direction) {
+Creature.prototype.__setLookDirection = function (direction) {
 
   /*
    * Function Creature.__setLookDirection
@@ -624,7 +624,7 @@ Creature.prototype.__setLookDirection = function(direction) {
 
 }
 
-Creature.prototype.__setActiveTextElement = function(message, color) {
+Creature.prototype.__setActiveTextElement = function (message, color) {
 
   /*
    * Function Creature.__setActiveTextElement
@@ -640,7 +640,7 @@ Creature.prototype.__setActiveTextElement = function(message, color) {
 
 }
 
-Creature.prototype.__getWalkingFrame = function(frameGroup) {
+Creature.prototype.__getWalkingFrame = function (frameGroup) {
 
   /*
    * Function Creature.__getWalkingFrame
@@ -652,7 +652,7 @@ Creature.prototype.__getWalkingFrame = function(frameGroup) {
 
 }
 
-Creature.prototype.__createCharacterElement = function() {
+Creature.prototype.__createCharacterElement = function () {
 
   /*
    * Function Creature.__createCharacterElement

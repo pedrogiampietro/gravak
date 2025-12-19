@@ -89,9 +89,6 @@ Player.prototype.constructor = Player;
 Player.prototype.getSpeed = function () {
   // Ensure we have a valid base speed
   let base = this.state.speed || 1000;
-  console.log("=== DEBUG GET SPEED ===");
-  console.log("Raw speed from state:", this.state.speed);
-  console.log("Base speed used:", base);
 
   if (this.hasCondition(ConditionManager.prototype.HASTE)) {
     base *= 1.3;
@@ -109,8 +106,6 @@ Player.prototype.getStepDuration = function (tile) {
 
   // Get base speed and ensure it's a valid number
   const speed = this.getSpeed();
-  console.log("=== DEBUG MOVEMENT SPEED ===");
-  console.log("Base speed:", speed);
 
   // Tibia-like speed calculation
   const calculatedStepSpeed = Math.max(
@@ -132,9 +127,6 @@ Player.prototype.getStepDuration = function (tile) {
     )
   );
 
-  console.log("Step speed:", calculatedStepSpeed);
-  console.log("Ground speed:", groundSpeed);
-  console.log("Final step duration:", stepDuration);
   return stepDuration;
 };
 
@@ -173,10 +165,6 @@ Player.prototype.setCapacity = function (value) {
     "player-capacity"
   ).innerHTML = `Cap: <br>${currentCapacity}`;
 
-  // Log the capacity value for debugging
-  console.log("=== DEBUG CAPACITY UPDATE ===");
-  console.log(`Passed value: ${value}, typeof: ${typeof value}, state.capacity: ${this.state.capacity}`);
-  console.log(`Current Capacity: ${currentCapacity}/${maxCapacity}`);
 };
 
 Player.prototype.setState = function (data) {
