@@ -67,16 +67,11 @@ DefaultChannel.prototype.__NPCListen = function (player, message) {
   // Get the npcs spectating the chunk
   let chunks = gameServer.world.getSpectatingChunks(player.position);
 
-  console.log("=== __NPCListen ===");
-  console.log("Message:", message);
-  console.log("Player position:", player.position);
-  console.log("Chunks count:", chunks.length);
 
   let totalNpcs = 0;
   chunks.forEach(function (chunk) {
     totalNpcs += chunk.npcs.size;
   });
-  console.log("Total NPCs in chunks:", totalNpcs);
 
   // Go over all the NPCs that are nearby in the game world
   chunks.forEach(function (chunk) {

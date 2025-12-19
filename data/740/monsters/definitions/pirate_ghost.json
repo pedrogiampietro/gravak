@@ -1,0 +1,120 @@
+{
+  "creatureStatistics": {
+    "name": "Pirate Ghost",
+    "health": 275,
+    "maxHealth": 275,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 170,
+    "attack": 100,
+    "attackSpeed": 2000,
+    "defense": 0,
+    "outfit": {
+      "id": 196
+    },
+    "armor": 0
+  },
+  "experience": 250,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 40,
+      "max": 70,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 40,
+      "max": 80,
+      "radius": 1,
+      "target": false,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 50,
+      "max": 65,
+      "range": 7,
+      "radius": 3,
+      "target": true,
+      "areaEffect": "rednote"
+    }
+  ],
+  "elements": {
+    "holy": -25
+  },
+  "immunities": {
+    "paralyze": true,
+    "lifedrain": true,
+    "physical": true,
+    "death": true,
+    "earth": true
+  },
+  "sayings": {
+    "texts": [
+      "Yooh Ho Hooh Ho!",
+      "Hell is waiting for You!",
+      "It's alive!",
+      "The curse! Aww the curse!",
+      "You will not get my treasure!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 1951,
+      "probability": 0.0091
+    },
+    {
+      "id": 2148,
+      "probability": 0.48,
+      "name": "gold coin",
+      "min": 1,
+      "max": 67
+    },
+    {
+      "id": 2165,
+      "probability": 0.0065,
+      "name": "stealth ring"
+    },
+    {
+      "id": 2383,
+      "probability": 0.0013,
+      "name": "spike sword"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "creatureStatistics": {
+    "name": "Channeling Earl Osam",
+    "health": 1000,
+    "maxHealth": 1000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 78,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 1223
+    },
+    "armor": 10
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "elements": {
+    "energy": -5,
+    "fire": -10
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true,
+    "earth": true
+  },
+  "sayings": {
+    "texts": [
+      "NEW POWER SHALL BE MINE!"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

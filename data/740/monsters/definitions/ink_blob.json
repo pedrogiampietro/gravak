@@ -1,0 +1,200 @@
+{
+  "creatureStatistics": {
+    "name": "Ink Blob",
+    "health": 9500,
+    "maxHealth": 9500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 380,
+    "attack": 550,
+    "attackSpeed": 2000,
+    "defense": 70,
+    "outfit": {
+      "id": 1064
+    },
+    "armor": 70
+  },
+  "experience": 14450,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 550
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 600,
+      "max": 900,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "poisonarrow",
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 600,
+      "max": 850,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 700,
+      "max": 950,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 1200,
+      "max": 1650,
+      "length": 3,
+      "spread": 2,
+      "areaEffect": "bluebubble"
+    }
+  ],
+  "elements": {
+    "energy": -8,
+    "earth": 100
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 0.74759,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 25
+    },
+    {
+      "id": 18437,
+      "probability": 0.6972,
+      "name": "envenomed arrow",
+      "min": 1,
+      "max": 50
+    },
+    {
+      "id": 2145,
+      "probability": 0.66433,
+      "name": "small diamond",
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 9970,
+      "probability": 0.4943,
+      "name": "small topaz",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 31224,
+      "probability": 0.43865,
+      "name": "inkwell (black)",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 10557,
+      "probability": 0.3475,
+      "name": "poisonous slime"
+    },
+    {
+      "id": 7633,
+      "probability": 0.15425,
+      "name": "giant shimmering pearl (brown)"
+    },
+    {
+      "id": 7903,
+      "probability": 0.05741,
+      "name": "terra hood"
+    },
+    {
+      "id": 7886,
+      "probability": 0.05127,
+      "name": "terra boots"
+    },
+    {
+      "id": 2158,
+      "probability": 0.04952,
+      "name": "blue gem"
+    },
+    {
+      "id": 7885,
+      "probability": 0.02936,
+      "name": "terra legs"
+    },
+    {
+      "id": 2197,
+      "probability": 0.0184,
+      "name": "stone skin amulet"
+    },
+    {
+      "id": 10219,
+      "probability": 0.01753,
+      "name": "sacred tree amulet"
+    },
+    {
+      "id": 2200,
+      "probability": 0.01227,
+      "name": "protection amulet"
+    },
+    {
+      "id": 7884,
+      "probability": 0.01052,
+      "name": "terra mantle"
+    },
+    {
+      "id": 8912,
+      "probability": 0.00657,
+      "name": "springsprout rod"
+    },
+    {
+      "id": 11339,
+      "probability": 0.00613,
+      "name": "clay lump"
+    },
+    {
+      "id": 7887,
+      "probability": 0.00482,
+      "name": "terra amulet"
+    },
+    {
+      "id": 8880,
+      "probability": 0.00044,
+      "name": "swamplair armor"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

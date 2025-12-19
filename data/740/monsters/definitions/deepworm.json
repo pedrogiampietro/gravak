@@ -1,0 +1,158 @@
+{
+  "creatureStatistics": {
+    "name": "Deepworm",
+    "health": 3500,
+    "maxHealth": 3500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 204,
+    "attack": 300,
+    "attackSpeed": 2000,
+    "defense": 73,
+    "outfit": {
+      "id": 1033
+    },
+    "armor": 73
+  },
+  "experience": 2300,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 300
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 190,
+      "max": 300,
+      "range": 7,
+      "length": 6,
+      "spread": 2,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 200,
+      "max": 400,
+      "length": 3,
+      "spread": 3,
+      "areaEffect": "poison"
+    }
+  ],
+  "elements": {
+    "earth": 20,
+    "fire": -20
+  },
+  "immunities": {
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 30250,
+      "probability": 0.23354,
+      "name": "deepworm jaws"
+    },
+    {
+      "id": 2791,
+      "probability": 0.22414,
+      "name": "wood mushroom"
+    },
+    {
+      "id": 2666,
+      "probability": 0.19418,
+      "name": "meat"
+    },
+    {
+      "id": 2671,
+      "probability": 0.1909,
+      "name": "ham"
+    },
+    {
+      "id": 2796,
+      "probability": 0.18522,
+      "name": "green mushroom"
+    },
+    {
+      "id": 2792,
+      "probability": 0.14476,
+      "name": "dark mushroom"
+    },
+    {
+      "id": 30249,
+      "probability": 0.13186,
+      "name": "deepworm spike roots"
+    },
+    {
+      "id": 30248,
+      "probability": 0.10125,
+      "name": "deepworm spikes"
+    },
+    {
+      "id": 2168,
+      "probability": 0.08353,
+      "name": "life ring"
+    },
+    {
+      "id": 18415,
+      "probability": 0.05904,
+      "name": "green crystal shard"
+    },
+    {
+      "id": 7887,
+      "probability": 0.04942,
+      "name": "terra amulet"
+    },
+    {
+      "id": 7762,
+      "probability": 0.03477,
+      "name": "small enchanted amethyst",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 10219,
+      "probability": 0.02187,
+      "name": "sacred tree amulet"
+    },
+    {
+      "id": 30309,
+      "probability": 0.01728,
+      "name": "suspicious device"
+    },
+    {
+      "id": 8912,
+      "probability": 0.01268,
+      "name": "springsprout rod"
+    },
+    {
+      "id": 7633,
+      "probability": 0.00722,
+      "name": "giant shimmering pearl (brown)"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

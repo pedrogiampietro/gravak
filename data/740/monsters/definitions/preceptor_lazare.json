@@ -1,0 +1,136 @@
+{
+  "creatureStatistics": {
+    "name": "Preceptor Lazare",
+    "health": 15000,
+    "maxHealth": 15000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 500,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 1078
+    },
+    "armor": 10
+  },
+  "experience": 9200,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 300,
+      "duration": 7000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 500,
+      "max": 800
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 500
+    },
+    {
+      "name": "physical",
+      "interval": 1400,
+      "chance": 0.2,
+      "min": 200,
+      "max": 800,
+      "range": 7,
+      "shootEffect": "infernalbolt"
+    },
+    {
+      "name": "physical",
+      "interval": 1500,
+      "chance": 0.2,
+      "min": 300,
+      "max": 1100,
+      "range": 7,
+      "shootEffect": "powerbolt"
+    },
+    {
+      "name": "energy",
+      "interval": 1600,
+      "chance": 0.2,
+      "min": 100,
+      "max": 720,
+      "range": 7,
+      "shootEffect": "energyball"
+    },
+    {
+      "name": "holy",
+      "interval": 1500,
+      "chance": 0.14,
+      "min": 300,
+      "max": 1000,
+      "range": 7,
+      "radius": 4,
+      "areaEffect": "holydamage"
+    }
+  ],
+  "elements": {
+    "physical": 20,
+    "energy": 50,
+    "earth": 50,
+    "fire": 50,
+    "ice": 50,
+    "death": 50
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "There is nothing here for you and you will die alone."
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 7762,
+      "probability": 1,
+      "name": "small enchanted amethyst"
+    },
+    {
+      "id": 31477,
+      "probability": 0.00874,
+      "name": "patch of fine cloth"
+    },
+    {
+      "id": 31376,
+      "probability": 0.00175,
+      "name": "falcon greaves"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

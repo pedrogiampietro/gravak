@@ -1,0 +1,226 @@
+{
+  "creatureStatistics": {
+    "name": "Knowledge Elemental",
+    "health": 10500,
+    "maxHealth": 10500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 460,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 76,
+    "outfit": {
+      "id": 1065
+    },
+    "armor": 76
+  },
+  "experience": 10603,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 600,
+      "max": 900,
+      "range": 3,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "energyball"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 600,
+      "max": 900,
+      "radius": 2,
+      "target": false,
+      "areaEffect": "purpleenergy"
+    },
+    {
+      "name": "holy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 600,
+      "max": 800,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "holy",
+      "areaEffect": "holydamage"
+    },
+    {
+      "name": "holy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 500,
+      "max": 700,
+      "length": 5,
+      "spread": 0,
+      "areaEffect": "yellowenergy"
+    },
+    {
+      "name": "holy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 700,
+      "max": 750,
+      "radius": 2,
+      "target": false,
+      "areaEffect": "yellowenergy"
+    }
+  ],
+  "elements": {
+    "energy": 100,
+    "holy": 50,
+    "death": -20
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2150,
+      "probability": 0.75087,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 2152,
+      "probability": 0.67971,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 15
+    },
+    {
+      "id": 31225,
+      "probability": 0.37898,
+      "name": "book page",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 31226,
+      "probability": 0.33276,
+      "name": "glowing rune",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 31222,
+      "probability": 0.26506,
+      "name": "silken bookmark"
+    },
+    {
+      "id": 31223,
+      "probability": 0.22542,
+      "name": "quill"
+    },
+    {
+      "id": 26029,
+      "probability": 0.15322,
+      "name": "ultimate mana potion"
+    },
+    {
+      "id": 7838,
+      "probability": 0.15062,
+      "name": "flash arrow",
+      "min": 1,
+      "max": 15
+    },
+    {
+      "id": 8473,
+      "probability": 0.11323,
+      "name": "ultimate health potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2515,
+      "probability": 0.09539,
+      "name": "guardian shield"
+    },
+    {
+      "id": 7620,
+      "probability": 0.08864,
+      "name": "mana potion"
+    },
+    {
+      "id": 2167,
+      "probability": 0.07116,
+      "name": "energy ring"
+    },
+    {
+      "id": 2399,
+      "probability": 0.06891,
+      "name": "throwing star",
+      "min": 1,
+      "max": 15
+    },
+    {
+      "id": 2189,
+      "probability": 0.0464,
+      "name": "wand of cosmic energy"
+    },
+    {
+      "id": 7449,
+      "probability": 0.04553,
+      "name": "crystal sword"
+    },
+    {
+      "id": 2425,
+      "probability": 0.02805,
+      "name": "obsidian lance"
+    },
+    {
+      "id": 2170,
+      "probability": 0.02337,
+      "name": "silver amulet"
+    },
+    {
+      "id": 2164,
+      "probability": 0.01887,
+      "name": "might ring"
+    },
+    {
+      "id": 7889,
+      "probability": 0.01801,
+      "name": "lightning pendant"
+    },
+    {
+      "id": 2124,
+      "probability": 0.01229,
+      "name": "crystal ring"
+    },
+    {
+      "id": 18390,
+      "probability": 0.01229,
+      "name": "wand of defiance"
+    },
+    {
+      "id": 11355,
+      "probability": 0.00364,
+      "name": "spellweaver's robe"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

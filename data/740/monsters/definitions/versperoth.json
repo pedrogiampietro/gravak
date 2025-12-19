@@ -1,0 +1,102 @@
+{
+  "creatureStatistics": {
+    "name": "Versperoth",
+    "health": 100000,
+    "maxHealth": 100000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 100,
+    "attack": 650,
+    "attackSpeed": 1200,
+    "defense": 55,
+    "outfit": {
+      "id": 295
+    },
+    "armor": 55
+  },
+  "experience": 20000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 1200,
+      "chance": 1,
+      "min": 0,
+      "max": 650
+    },
+    {
+      "name": "firefield",
+      "interval": 1200,
+      "chance": 0.3,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 4,
+      "target": false,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "fire",
+      "interval": 1000,
+      "chance": 0.4,
+      "min": 700,
+      "max": 1615,
+      "range": 5,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "melee",
+      "interval": 1000,
+      "chance": 0.25,
+      "min": 750,
+      "max": 950,
+      "range": 7,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "explosionarea"
+    }
+  ],
+  "elements": {
+    "fire": 90
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Minion of Vesperoth",
+      "interval": 2000,
+      "chance": 0.16,
+      "maxSummons": 7
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "GrrroaR!",
+      "GROWL!",
+      "Waaaah!"
+    ],
+    "slowness": 2.5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

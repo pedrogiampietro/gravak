@@ -1,0 +1,172 @@
+{
+  "creatureStatistics": {
+    "name": "Professor Maxxen",
+    "health": 90000,
+    "maxHealth": 90000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 340,
+    "attack": 1000,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 679
+    },
+    "armor": 30
+  },
+  "experience": 15500,
+  "corpse": 2813,
+  "fluidType": 4,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.13,
+      "speedChange": 460,
+      "duration": 4000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 200,
+      "max": 250,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1000
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.11,
+      "min": 250,
+      "max": 500,
+      "radius": 8,
+      "areaEffect": "energy"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 450,
+      "max": 1500,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "teleport"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 450,
+      "max": 500,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "fireattack"
+    },
+    {
+      "name": "war golem skill reducer",
+      "interval": 2000,
+      "chance": 0.22,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "war golem electrify",
+      "interval": 2000,
+      "chance": 0.16,
+      "min": 0,
+      "max": 0,
+      "range": 2
+    },
+    {
+      "name": "glooth fairy skill reducer",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "duration": 20000,
+      "shootEffect": "poison",
+      "areaEffect": "greenbubble"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5513,
+      "name": "gold coin",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2152,
+      "probability": 0.71279,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 23574,
+      "probability": 1,
+      "name": "glooth bag",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 24270,
+      "probability": 0.5513,
+      "name": "glooth glider casing",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 9809,
+      "probability": 0.125,
+      "name": "rusted armor"
+    },
+    {
+      "id": 9971,
+      "probability": 0.01914,
+      "name": "gold ingot"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

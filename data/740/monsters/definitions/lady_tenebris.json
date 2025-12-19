@@ -1,0 +1,323 @@
+{
+  "creatureStatistics": {
+    "name": "Lady Tenebris",
+    "health": 150000,
+    "maxHealth": 150000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 370,
+    "attack": 1800,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 433
+    },
+    "armor": 10
+  },
+  "experience": 50000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 3000,
+      "chance": 0.25,
+      "min": 600,
+      "max": 2700,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 320,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1800
+    },
+    {
+      "name": "death",
+      "interval": 6000,
+      "chance": 0.13,
+      "min": 1200,
+      "max": 1500,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.13,
+      "min": 400,
+      "max": 600,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "death",
+      "areaEffect": "smallclouds"
+    }
+  ],
+  "elements": {
+    "fire": 5,
+    "earth": -30,
+    "death": 5,
+    "physical": 20,
+    "holy": 35
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "May the embrace of darkness kill you!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 200
+    },
+    {
+      "id": 7440,
+      "probability": 1,
+      "name": "mastermind potion"
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 35
+    },
+    {
+      "id": 2214,
+      "probability": 1,
+      "name": "ring of healing"
+    },
+    {
+      "id": 2436,
+      "probability": 0.98837,
+      "name": "skull staff"
+    },
+    {
+      "id": 18415,
+      "probability": 0.67442,
+      "name": "green crystal shard",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 18414,
+      "probability": 0.67442,
+      "name": "violet crystal shard",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 18413,
+      "probability": 0.65116,
+      "name": "blue crystal shard",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7590,
+      "probability": 0.53488,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 8472,
+      "probability": 0.51163,
+      "name": "great spirit potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 8473,
+      "probability": 0.47674,
+      "name": "ultimate health potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 24851,
+      "probability": 0.37209,
+      "name": "onyx pendant"
+    },
+    {
+      "id": 25172,
+      "probability": 0.2907,
+      "name": "silver token"
+    },
+    {
+      "id": 2158,
+      "probability": 0.26744,
+      "name": "blue gem"
+    },
+    {
+      "id": 9970,
+      "probability": 0.23256,
+      "name": "small topaz",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 25377,
+      "probability": 0.22093,
+      "name": "gold token"
+    },
+    {
+      "id": 2147,
+      "probability": 0.2093,
+      "name": "small ruby",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2156,
+      "probability": 0.19767,
+      "name": "red gem"
+    },
+    {
+      "id": 2150,
+      "probability": 0.19767,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2145,
+      "probability": 0.19767,
+      "name": "small diamond",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 7632,
+      "probability": 0.09302,
+      "name": "giant shimmering pearl"
+    },
+    {
+      "id": 7633,
+      "probability": 0.09302,
+      "name": "giant shimmering pearl"
+    },
+    {
+      "id": 2123,
+      "probability": 0.17442,
+      "name": "ring of the sky"
+    },
+    {
+      "id": 18390,
+      "probability": 0.16279,
+      "name": "wand of defiance"
+    },
+    {
+      "id": 2155,
+      "probability": 0.13953,
+      "name": "green gem"
+    },
+    {
+      "id": 2149,
+      "probability": 0.12791,
+      "name": "small emerald",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2154,
+      "probability": 0.11628,
+      "name": "yellow gem"
+    },
+    {
+      "id": 11355,
+      "probability": 0.0814,
+      "name": "spellweaver's robe"
+    },
+    {
+      "id": 27613,
+      "probability": 0.06977,
+      "name": "part of a rune (four)"
+    },
+    {
+      "id": 2153,
+      "probability": 0.06977,
+      "name": "violet gem"
+    },
+    {
+      "id": 7414,
+      "probability": 0.04651,
+      "name": "abyss hammer"
+    },
+    {
+      "id": 8901,
+      "probability": 0.04651,
+      "name": "spellbook of warding"
+    },
+    {
+      "id": 2453,
+      "probability": 0.03488,
+      "name": "arcane staff"
+    },
+    {
+      "id": 22396,
+      "probability": 0.03488,
+      "name": "cluster of solace",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2138,
+      "probability": 0.03488,
+      "name": "sapphire amulet"
+    },
+    {
+      "id": 8903,
+      "probability": 0.02326,
+      "name": "spellbook of lost souls"
+    },
+    {
+      "id": 27629,
+      "probability": 0.01163,
+      "name": "shadow mask"
+    },
+    {
+      "id": 27630,
+      "probability": 0.01163,
+      "name": "shadow paint"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

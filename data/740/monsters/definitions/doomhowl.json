@@ -1,0 +1,81 @@
+{
+  "creatureStatistics": {
+    "name": "Doomhowl",
+    "health": 8500,
+    "maxHealth": 8500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 320,
+    "attack": 400,
+    "attackSpeed": 2000,
+    "defense": 55,
+    "outfit": {
+      "id": 308
+    },
+    "armor": 50
+  },
+  "experience": 3750,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 100,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.1,
+      "speedChange": 390,
+      "duration": 6000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 400
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.5,
+      "min": 0,
+      "max": 645,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "redspark"
+    },
+    {
+      "name": "physical",
+      "interval": 4000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "radius": 0,
+      "areaEffect": "rednote"
+    }
+  ],
+  "elements": {
+    "physical": 15
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

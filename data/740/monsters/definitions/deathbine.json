@@ -1,0 +1,102 @@
+{
+  "creatureStatistics": {
+    "name": "Deathbine",
+    "health": 525,
+    "maxHealth": 525,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 240,
+    "attack": 200,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 120
+    },
+    "armor": 26
+  },
+  "experience": 340,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 200
+    },
+    {
+      "name": "earth",
+      "interval": 1000,
+      "chance": 0.25,
+      "min": 60,
+      "max": 90,
+      "range": 7,
+      "shootEffect": "poison",
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.34,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -850,
+      "duration": 30000,
+      "shootEffect": "poison",
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "earth",
+      "interval": 1000,
+      "chance": 0.12,
+      "min": 40,
+      "max": 130,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "poison"
+    }
+  ],
+  "elements": {
+    "ice": 35,
+    "energy": 10,
+    "fire": -20
+  },
+  "immunities": {
+    "earth": true,
+    "invisible": true
+  },
+  "loot": [
+    {
+      "id": 2149,
+      "probability": 1,
+      "name": "small emerald",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 5
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

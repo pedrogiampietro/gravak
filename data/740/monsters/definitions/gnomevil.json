@@ -1,0 +1,118 @@
+{
+  "creatureStatistics": {
+    "name": "Gnomevil",
+    "health": 250000,
+    "maxHealth": 250000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 470,
+    "attack": 630,
+    "attackSpeed": 1300,
+    "defense": 35,
+    "outfit": {
+      "id": 504
+    },
+    "armor": 25
+  },
+  "experience": 45000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 10000,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.25,
+      "min": 1000,
+      "max": 4000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 1300,
+      "chance": 1,
+      "min": 0,
+      "max": 630
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -400,
+      "duration": 2500,
+      "shootEffect": "whirlwindaxe"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 1,
+      "min": 820,
+      "max": 950,
+      "range": 7,
+      "areaEffect": "energyarea"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 230,
+      "max": 500,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "energy",
+      "interval": 1000,
+      "chance": 0.12,
+      "min": 350,
+      "max": 800,
+      "range": 3,
+      "target": true,
+      "areaEffect": "purpleenergy"
+    }
+  ],
+  "elements": {
+    "fire": 10,
+    "death": -20
+  },
+  "immunities": {
+    "outfit": true,
+    "drown": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "No more Mr. Nicegnome!",
+      "Taste the power of the dark side!",
+      "I've seen the light! And it was all engulfing fire!",
+      "Tatatata!!!",
+      "Muhahaha!",
+      "I'm feeling grrrreat!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

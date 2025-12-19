@@ -1,0 +1,133 @@
+{
+  "creatureStatistics": {
+    "name": "Diblis The Fair",
+    "health": 1500,
+    "maxHealth": 1500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 280,
+    "attack": 380,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 287
+    },
+    "armor": 30
+  },
+  "experience": 1800,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.12,
+      "min": 100,
+      "max": 235,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 3000,
+      "chance": 0.25,
+      "duration": 6000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 380
+    },
+    {
+      "name": "death",
+      "interval": 1000,
+      "chance": 0.12,
+      "min": 0,
+      "max": 155,
+      "target": true,
+      "areaEffect": "mortarea",
+      "shootEffect": "suddendeath"
+    }
+  ],
+  "elements": {
+    "energy": -10,
+    "holy": -15,
+    "fire": -10
+  },
+  "immunities": {
+    "lifedrain": true,
+    "death": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Banshee",
+      "interval": 4500,
+      "chance": 0.5,
+      "maxSummons": 4
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "I envy you to be slain by someone as beautiful as me.",
+      "I will drain your ugly corpses of the last drop of blood."
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 99
+    },
+    {
+      "id": 2152,
+      "probability": 0.5,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2214,
+      "probability": 0.14111,
+      "name": "ring of healing"
+    },
+    {
+      "id": 2229,
+      "probability": 0.15
+    },
+    {
+      "id": 2534,
+      "probability": 0.021,
+      "name": "vampire shield"
+    },
+    {
+      "id": 2271,
+      "probability": 0.015,
+      "name": "strong health potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

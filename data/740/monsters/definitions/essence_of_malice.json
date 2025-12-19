@@ -1,0 +1,118 @@
+{
+  "creatureStatistics": {
+    "name": "Essence Of Malice",
+    "health": 250000,
+    "maxHealth": 250000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 320,
+    "attack": 603,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 351
+    },
+    "armor": 30
+  },
+  "experience": 150000,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 603
+    },
+    {
+      "name": "ghastly dragon curse",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 0,
+      "max": 0,
+      "range": 5
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 520,
+      "max": 780,
+      "range": 5,
+      "target": true,
+      "areaEffect": "smallclouds"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 80,
+      "max": 230,
+      "range": 7,
+      "target": true,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 120,
+      "max": 250,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "bluebubble"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 110,
+      "max": 180,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "target": true,
+      "speedChange": -800,
+      "duration": 30000,
+      "areaEffect": "smallclouds"
+    }
+  ],
+  "elements": {
+    "energy": -50,
+    "earth": -50,
+    "fire": -50,
+    "ice": 50,
+    "holy": -50,
+    "death": 100
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

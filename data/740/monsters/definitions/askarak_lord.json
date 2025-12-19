@@ -1,0 +1,171 @@
+{
+  "creatureStatistics": {
+    "name": "Askarak Lord",
+    "health": 2100,
+    "maxHealth": 2100,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 186,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 410
+    },
+    "armor": 20
+  },
+  "experience": 1200,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 120,
+      "max": 160,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 186
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 40,
+      "max": 80,
+      "range": 7,
+      "radius": 6,
+      "target": false,
+      "shootEffect": "poison",
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 95,
+      "max": 180,
+      "length": 4,
+      "spread": 3,
+      "target": false,
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 130,
+      "max": 180,
+      "length": 4,
+      "spread": 0,
+      "target": false,
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "radius": 1,
+      "target": true,
+      "speedChange": -650,
+      "duration": 15000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "energy": 50,
+    "ice": 50,
+    "fire": -10
+  },
+  "immunities": {
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "WE RULE!",
+      "RED IS MAD"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 90
+    },
+    {
+      "id": 2149,
+      "probability": 0.05882,
+      "name": "small emerald",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2152,
+      "probability": 0.35333,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2167,
+      "probability": 0.00606,
+      "name": "energy ring"
+    },
+    {
+      "id": 2789,
+      "probability": 0.05263,
+      "name": "brown mushroom",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2271,
+      "probability": 0.0625,
+      "name": "strong health potion"
+    },
+    {
+      "id": 2270,
+      "probability": 0.07692,
+      "name": "strong mana potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

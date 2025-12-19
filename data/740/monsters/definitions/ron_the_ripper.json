@@ -1,0 +1,69 @@
+{
+  "creatureStatistics": {
+    "name": "Ron the Ripper",
+    "health": 1500,
+    "maxHealth": 1500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 240,
+    "attack": 250,
+    "attackSpeed": 2000,
+    "defense": 50,
+    "outfit": {
+      "id": 151
+    },
+    "armor": 35
+  },
+  "experience": 500,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 250,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 250
+    }
+  ],
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 50
+    },
+    {
+      "id": 2387,
+      "probability": 0.015,
+      "name": "double axe"
+    },
+    {
+      "id": 2463,
+      "probability": 0.04,
+      "name": "plate armor"
+    },
+    {
+      "id": 2476,
+      "probability": 0.012,
+      "name": "knight armor"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

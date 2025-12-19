@@ -1,0 +1,61 @@
+{
+  "creatureStatistics": {
+    "name": "Achad",
+    "health": 185,
+    "maxHealth": 185,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 185,
+    "attack": 80,
+    "attackSpeed": 2000,
+    "defense": 19,
+    "outfit": {
+      "id": 146
+    },
+    "armor": 20
+  },
+  "experience": 70,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 55,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 80
+    }
+  ],
+  "elements": {
+    "fire": 10
+  },
+  "immunities": {
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "You won't pass me.",
+      "I have travelled far to fight here."
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

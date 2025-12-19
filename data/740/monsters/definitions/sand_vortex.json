@@ -1,0 +1,80 @@
+{
+  "creatureStatistics": {
+    "name": "Sand Vortex",
+    "health": 20000,
+    "maxHealth": 20000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 140,
+    "attack": 200,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 0
+    },
+    "armor": 30
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 200
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 1,
+      "target": true,
+      "duration": 5000
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 200,
+      "radius": 4,
+      "areaEffect": "poff"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "radius": 4,
+      "speedChange": -650,
+      "duration": 5000,
+      "areaEffect": "poff"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

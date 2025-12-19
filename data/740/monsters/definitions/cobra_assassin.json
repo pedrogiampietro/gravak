@@ -1,0 +1,176 @@
+{
+  "creatureStatistics": {
+    "name": "Cobra Assassin",
+    "health": 8200,
+    "maxHealth": 8200,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 280,
+    "attack": 450,
+    "attackSpeed": 2000,
+    "defense": 81,
+    "outfit": {
+      "id": 1217
+    },
+    "armor": 81
+  },
+  "experience": 6980,
+  "corpse": 2817,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 450
+    },
+    {
+      "name": "wave t",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 300,
+      "max": 380
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 280,
+      "max": 400,
+      "radius": 4,
+      "areaEffect": "explosion"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 250,
+      "max": 400,
+      "length": 5,
+      "spread": 0,
+      "areaEffect": "yellowspark"
+    }
+  ],
+  "elements": {
+    "physical": 20
+  },
+  "immunities": {
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Hey, maybe you want to strike a deal... no?",
+      "Stand and deliver! Your money... AND your life actually!",
+      "You will not leave this place breathing!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 0.71666,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 9
+    },
+    {
+      "id": 24850,
+      "probability": 0.31115,
+      "name": "opal",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2149,
+      "probability": 0.27969,
+      "name": "small emerald",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2403,
+      "probability": 0.23456,
+      "name": "knife"
+    },
+    {
+      "id": 2419,
+      "probability": 0.17438,
+      "name": "scimitar"
+    },
+    {
+      "id": 34334,
+      "probability": 0.16093,
+      "name": "cobra crest"
+    },
+    {
+      "id": 2200,
+      "probability": 0.14247,
+      "name": "protection amulet"
+    },
+    {
+      "id": 2450,
+      "probability": 0.08913,
+      "name": "bone sword"
+    },
+    {
+      "id": 2442,
+      "probability": 0.07955,
+      "name": "heavy machete"
+    },
+    {
+      "id": 18415,
+      "probability": 0.07112,
+      "name": "green crystal shard"
+    },
+    {
+      "id": 2395,
+      "probability": 0.04946,
+      "name": "carlin sword"
+    },
+    {
+      "id": 2420,
+      "probability": 0.04924,
+      "name": "machete"
+    },
+    {
+      "id": 9971,
+      "probability": 0.04673,
+      "name": "gold ingot"
+    },
+    {
+      "id": 18421,
+      "probability": 0.03032,
+      "name": "green crystal fragment"
+    },
+    {
+      "id": 5944,
+      "probability": 0.02279,
+      "name": "soul orb"
+    },
+    {
+      "id": 18420,
+      "probability": 0.00957,
+      "name": "red crystal fragment"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

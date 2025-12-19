@@ -1,0 +1,98 @@
+{
+  "creatureStatistics": {
+    "name": "Muddy Earth Elemental",
+    "health": 650,
+    "maxHealth": 650,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 260,
+    "attack": 160,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 301
+    },
+    "armor": 30
+  },
+  "experience": 450,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 160
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 25,
+      "max": 155,
+      "range": 7,
+      "radius": 2,
+      "target": true,
+      "areaEffect": "stones"
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 1000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 26,
+      "length": 6,
+      "spread": 0,
+      "areaEffect": "groundshaker"
+    }
+  ],
+  "elements": {
+    "death": 20,
+    "ice": 20,
+    "physical": 20,
+    "energy": 20,
+    "fire": -25
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "earth": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.245,
+      "name": "gold coin",
+      "min": 1,
+      "max": 80
+    },
+    {
+      "id": 2148,
+      "probability": 0.245,
+      "name": "gold coin",
+      "min": 1,
+      "max": 47
+    },
+    {
+      "id": 2244,
+      "probability": 0.22
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

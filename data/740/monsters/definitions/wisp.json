@@ -1,0 +1,98 @@
+{
+  "creatureStatistics": {
+    "name": "Wisp",
+    "health": 115,
+    "maxHealth": 115,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 162,
+    "attack": 1,
+    "attackSpeed": 2000,
+    "defense": 7,
+    "outfit": {
+      "id": 294
+    },
+    "armor": 7
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 115,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 200,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 15,
+      "max": 25,
+      "areaEffect": "greenshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.1,
+      "duration": 2000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 3,
+      "max": 7,
+      "range": 1,
+      "target": true,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "energy": 40,
+    "earth": 90,
+    "physical": 60
+  },
+  "immunities": {
+    "death": true,
+    "paralyze": true
+  },
+  "sayings": {
+    "texts": [
+      "Crackle!",
+      "Tsshh"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

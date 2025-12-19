@@ -1,0 +1,207 @@
+{
+  "creatureStatistics": {
+    "name": "Werefox",
+    "health": 1500,
+    "maxHealth": 1500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 280,
+    "attack": 290,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 1030
+    },
+    "armor": 35
+  },
+  "experience": 1600,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 4000,
+      "chance": 0.15,
+      "min": 50,
+      "max": 145,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.2,
+      "duration": 10000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 290
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 100,
+      "max": 200,
+      "shootEffect": "greenstar"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 100,
+      "max": 225,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.14,
+      "min": 100,
+      "max": 700,
+      "length": 5,
+      "spread": 0,
+      "areaEffect": "mortarea"
+    }
+  ],
+  "elements": {
+    "physical": 5,
+    "energy": 10,
+    "earth": 40,
+    "fire": -10,
+    "holy": -10,
+    "death": 40
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "Grrrrrr",
+      "Yelp!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 0.8986,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2148,
+      "probability": 0.84024,
+      "name": "gold coin",
+      "min": 1,
+      "max": 85
+    },
+    {
+      "id": 30118,
+      "probability": 0.1517,
+      "name": "fox paw"
+    },
+    {
+      "id": 30119,
+      "probability": 0.13284,
+      "name": "werefox tail"
+    },
+    {
+      "id": 2805,
+      "probability": 0.05127,
+      "name": "troll green"
+    },
+    {
+      "id": 7620,
+      "probability": 0.0503,
+      "name": "mana potion"
+    },
+    {
+      "id": 7589,
+      "probability": 0.04353,
+      "name": "strong mana potion"
+    },
+    {
+      "id": 7368,
+      "probability": 0.03192,
+      "name": "assassin star",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2127,
+      "probability": 0.0295,
+      "name": "emerald bangle"
+    },
+    {
+      "id": 2186,
+      "probability": 0.02015,
+      "name": "moonlight rod"
+    },
+    {
+      "id": 7590,
+      "probability": 0.01902,
+      "name": "great mana potion"
+    },
+    {
+      "id": 7761,
+      "probability": 0.01435,
+      "name": "small enchanted emerald",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2214,
+      "probability": 0.0108,
+      "name": "ring of healing"
+    },
+    {
+      "id": 24739,
+      "probability": 0.00887,
+      "name": "moonlight crystals"
+    },
+    {
+      "id": 24716,
+      "probability": 0.00871,
+      "name": "werewolf amulet"
+    },
+    {
+      "id": 2171,
+      "probability": 0.00468,
+      "name": "platinum amulet"
+    },
+    {
+      "id": 30362,
+      "probability": 0.00129,
+      "name": "werefox trophy"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

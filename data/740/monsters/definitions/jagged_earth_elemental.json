@@ -1,0 +1,143 @@
+{
+  "creatureStatistics": {
+    "name": "Jagged Earth Elemental",
+    "health": 1500,
+    "maxHealth": 1500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 280,
+    "attack": 300,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 285
+    },
+    "armor": 25
+  },
+  "experience": 1300,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 300
+    },
+    {
+      "name": "earth",
+      "interval": 1000,
+      "chance": 0.1,
+      "min": 100,
+      "max": 250,
+      "length": 6,
+      "spread": 0,
+      "areaEffect": "stones"
+    },
+    {
+      "name": "earth",
+      "interval": 1000,
+      "chance": 0.11,
+      "min": 0,
+      "max": 200,
+      "range": 7,
+      "radius": 6,
+      "target": true,
+      "shootEffect": "smallearth",
+      "areaEffect": "poison"
+    }
+  ],
+  "elements": {
+    "death": 20,
+    "ice": 20,
+    "energy": 20,
+    "fire": -25
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "earth": true
+  },
+  "sayings": {
+    "texts": [
+      "*STOMP STOMP*"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.87298,
+      "name": "gold coin",
+      "min": 1,
+      "max": 175
+    },
+    {
+      "id": 11222,
+      "probability": 0.48625,
+      "name": "lump of earth"
+    },
+    {
+      "id": 1294,
+      "probability": 0.24919,
+      "name": "small stone",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2245,
+      "probability": 0.20874,
+      "name": "twigs"
+    },
+    {
+      "id": 8298,
+      "probability": 0.07686,
+      "name": "natural soil"
+    },
+    {
+      "id": 2149,
+      "probability": 0.05502,
+      "name": "small emerald",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7732,
+      "probability": 0.02184,
+      "name": "seeds"
+    },
+    {
+      "id": 11339,
+      "probability": 0.01133,
+      "name": "clay lump"
+    },
+    {
+      "id": 13757,
+      "probability": 0.00485,
+      "name": "coal"
+    },
+    {
+      "id": 5880,
+      "probability": 0.00324,
+      "name": "iron ore"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

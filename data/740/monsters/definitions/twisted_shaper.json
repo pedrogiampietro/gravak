@@ -1,0 +1,227 @@
+{
+  "creatureStatistics": {
+    "name": "Twisted Shaper",
+    "health": 2500,
+    "maxHealth": 2500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 280,
+    "attack": 100,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 932
+    },
+    "armor": 35
+  },
+  "experience": 1750,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 300,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 50,
+      "max": 100,
+      "range": 7,
+      "target": true,
+      "shootEffect": "energy",
+      "areaEffect": "energy"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.35,
+      "min": 0,
+      "max": 100,
+      "length": 5,
+      "spread": 0,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 50,
+      "max": 100,
+      "radius": 7,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 0,
+      "max": 0,
+      "target": true,
+      "speedChange": -440,
+      "duration": 7000,
+      "areaEffect": "giantice"
+    }
+  ],
+  "elements": {
+    "energy": -25,
+    "earth": 20,
+    "fire": -20
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "Ti Jezz Kur Tar!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 175
+    },
+    {
+      "id": 2152,
+      "probability": 0.7501,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 27039,
+      "probability": 0.20014,
+      "name": "cave turnip",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 27040,
+      "probability": 0.18933,
+      "name": "ancient belt buckle"
+    },
+    {
+      "id": 27041,
+      "probability": 0.17574,
+      "name": "cracked alabaster vase"
+    },
+    {
+      "id": 27043,
+      "probability": 0.14608,
+      "name": "tarnished rhino figurine"
+    },
+    {
+      "id": 2666,
+      "probability": 0.10256,
+      "name": "meat"
+    },
+    {
+      "id": 2167,
+      "probability": 0.07651,
+      "name": "energy ring"
+    },
+    {
+      "id": 7591,
+      "probability": 0.07124,
+      "name": "great health potion"
+    },
+    {
+      "id": 27046,
+      "probability": 0.05502,
+      "name": "ancient coin"
+    },
+    {
+      "id": 2147,
+      "probability": 0.05461,
+      "name": "small ruby"
+    },
+    {
+      "id": 2789,
+      "probability": 0.05184,
+      "name": "brown mushroom",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 5022,
+      "probability": 0.05128,
+      "name": "orichalcum pearl",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 15649,
+      "probability": 0.05031,
+      "name": "vortex bolt",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 24849,
+      "probability": 0.0499,
+      "name": "onyx chip"
+    },
+    {
+      "id": 2189,
+      "probability": 0.03617,
+      "name": "wand of cosmic energy"
+    },
+    {
+      "id": 27048,
+      "probability": 0.0097,
+      "name": "gemmed figurine"
+    },
+    {
+      "id": 2171,
+      "probability": 0.00402,
+      "name": "platinum amulet"
+    },
+    {
+      "id": 2114,
+      "probability": 0.0018,
+      "name": "piggy bank"
+    },
+    {
+      "id": 11343,
+      "probability": 0.00055,
+      "name": "piece of marble rock"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

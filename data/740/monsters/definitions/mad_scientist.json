@@ -1,0 +1,159 @@
+{
+  "creatureStatistics": {
+    "name": "Mad Scientist",
+    "health": 325,
+    "maxHealth": 325,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 35,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 133
+    },
+    "armor": 15
+  },
+  "experience": 205,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 10,
+      "max": 30,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 35
+    },
+    {
+      "name": "drown",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 20,
+      "max": 56,
+      "range": 7,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "smallearth",
+      "areaEffect": "poff"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 20,
+      "max": 36,
+      "shootEffect": "poison",
+      "areaEffect": "energy"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "target": true,
+      "speedChange": -300,
+      "duration": 2000,
+      "shootEffect": "poison",
+      "areaEffect": "smallplants"
+    }
+  ],
+  "elements": {
+    "fire": 10,
+    "earth": 20,
+    "energy": 20,
+    "ice": 10,
+    "holy": 20,
+    "death": -5
+  },
+  "immunities": {
+    "invisible": true,
+    "drown": true
+  },
+  "sayings": {
+    "texts": [
+      "Die in the name of Science!",
+      "You will regret interrupting my studies!",
+      "Let me test this!",
+      "I will study your corpse!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.3,
+      "name": "gold coin",
+      "min": 1,
+      "max": 65
+    },
+    {
+      "id": 2148,
+      "probability": 0.3,
+      "name": "gold coin",
+      "min": 1,
+      "max": 50
+    },
+    {
+      "id": 2162,
+      "probability": 0.02
+    },
+    {
+      "id": 2687,
+      "probability": 0.012,
+      "name": "cookie",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2787,
+      "probability": 0.08,
+      "name": "white mushroom",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 6324,
+      "probability": 0.0082
+    },
+    {
+      "id": 2269,
+      "probability": 0.19,
+      "name": "health potion"
+    },
+    {
+      "id": 2268,
+      "probability": 0.19,
+      "name": "mana potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

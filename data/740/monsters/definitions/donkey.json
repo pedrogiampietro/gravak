@@ -1,0 +1,61 @@
+{
+  "creatureStatistics": {
+    "name": "Donkey",
+    "health": 45,
+    "maxHealth": 45,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 150,
+    "attack": 5,
+    "attackSpeed": 2000,
+    "defense": 2,
+    "outfit": {
+      "id": 399
+    },
+    "armor": 2
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 25,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 5
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Grunt!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2666,
+      "probability": 0.2,
+      "name": "meat",
+      "min": 1,
+      "max": 2
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "creatureStatistics": {
+    "name": "Animated Guzzlemaw",
+    "health": 6400,
+    "maxHealth": 6400,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 270,
+    "attack": 499,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 584
+    },
+    "armor": 30
+  },
+  "experience": 5500,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 250,
+      "max": 425,
+      "areaEffect": "greenspark"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 499
+    },
+    {
+      "name": "bleedcondition",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 500,
+      "max": 1000,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "redspark"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 900,
+      "length": 8,
+      "spread": 3,
+      "target": true,
+      "areaEffect": "explosionarea"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 500,
+      "radius": 2,
+      "target": true,
+      "shootEffect": "largerock",
+      "areaEffect": "stones"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "radius": 6,
+      "target": false,
+      "speedChange": -800,
+      "duration": 15000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 800,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 99
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 22532,
+      "probability": 0.2,
+      "name": "frazzle tongue"
+    },
+    {
+      "id": 7590,
+      "probability": 0.2,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 5925,
+      "probability": 0.2,
+      "name": "hardened bone"
+    },
+    {
+      "id": 18554,
+      "probability": 0.16,
+      "name": "crystal rubbish"
+    },
+    {
+      "id": 22533,
+      "probability": 0.16,
+      "name": "frazzle skin"
+    },
+    {
+      "id": 2671,
+      "probability": 0.16,
+      "name": "ham"
+    },
+    {
+      "id": 18417,
+      "probability": 0.12,
+      "name": "brown crystal splinter",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2667,
+      "probability": 0.12,
+      "name": "fish",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2240,
+      "probability": 0.12,
+      "name": "remains of a fish"
+    },
+    {
+      "id": 5951,
+      "probability": 0.08,
+      "name": "fish tail"
+    },
+    {
+      "id": 7591,
+      "probability": 0.08,
+      "name": "great health potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7407,
+      "probability": 0.08,
+      "name": "haunted blade"
+    },
+    {
+      "id": 5880,
+      "probability": 0.08,
+      "name": "iron ore"
+    },
+    {
+      "id": 2225,
+      "probability": 0.08,
+      "name": "piece of iron"
+    },
+    {
+      "id": 18420,
+      "probability": 0.08,
+      "name": "red crystal fragment"
+    },
+    {
+      "id": 2229,
+      "probability": 0.08,
+      "name": "skull (item)"
+    },
+    {
+      "id": 18414,
+      "probability": 0.08,
+      "name": "violet crystal shard"
+    },
+    {
+      "id": 2219,
+      "probability": 0.04,
+      "name": "banana skin"
+    },
+    {
+      "id": 2231,
+      "probability": 0.04,
+      "name": "big bone"
+    },
+    {
+      "id": 2230,
+      "probability": 0.04,
+      "name": "bone"
+    },
+    {
+      "id": 5895,
+      "probability": 0.04,
+      "name": "fish fin"
+    },
+    {
+      "id": 2226,
+      "probability": 0.04,
+      "name": "fishbone"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

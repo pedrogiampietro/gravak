@@ -1,0 +1,83 @@
+{
+  "creatureStatistics": {
+    "name": "Snake God Essence",
+    "health": 20000,
+    "maxHealth": 20000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 300,
+    "attack": 800,
+    "attackSpeed": 2000,
+    "defense": 65,
+    "outfit": {
+      "id": 356
+    },
+    "armor": 70
+  },
+  "experience": 1350,
+  "corpse": 2817,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 800
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.4,
+      "min": 0,
+      "max": 300,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.5,
+      "min": 150,
+      "max": 270,
+      "radius": 6,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "elements": {
+    "fire": -10,
+    "energy": -10,
+    "physical": 10,
+    "ice": 20
+  },
+  "immunities": {
+    "earth": true,
+    "invisible": true,
+    "paralyze": true
+  },
+  "sayings": {
+    "texts": [
+      "AHHH ZHE POWER...",
+      "ZHE TIME OF ZHE SNAKE HAZ COME!"
+    ],
+    "slowness": 2,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

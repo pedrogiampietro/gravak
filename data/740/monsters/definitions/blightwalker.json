@@ -1,0 +1,177 @@
+{
+  "creatureStatistics": {
+    "name": "Blightwalker",
+    "health": 8900,
+    "maxHealth": 8900,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 490,
+    "attackSpeed": 2000,
+    "defense": 50,
+    "outfit": {
+      "id": 246
+    },
+    "armor": 50
+  },
+  "experience": 5850,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 800,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 490
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 220,
+      "max": 405,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "poison"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 65,
+      "max": 135,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "greenshimmer"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "radius": 3,
+      "target": false,
+      "duration": 5000,
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "blightwalker curse",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "target": true,
+      "speedChange": -300,
+      "duration": 30000,
+      "shootEffect": "poison"
+    }
+  ],
+  "elements": {
+    "fire": 50,
+    "energy": 20,
+    "ice": 50,
+    "physical": -10,
+    "holy": -30
+  },
+  "immunities": {
+    "paralyze": true,
+    "death": true,
+    "earth": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "I can see you decaying!",
+      "Let me taste your mortality!",
+      "Your lifeforce is waning!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 97
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2179,
+      "probability": 0.0187,
+      "name": "gold ring"
+    },
+    {
+      "id": 2260,
+      "probability": 0.2625,
+      "name": "blank rune",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2436,
+      "probability": 0.0152,
+      "name": "skull staff"
+    },
+    {
+      "id": 6300,
+      "probability": 0.0141
+    },
+    {
+      "id": 2273,
+      "probability": 0.3136,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7632,
+      "probability": 0.0445
+    },
+    {
+      "id": 7633,
+      "probability": 0.0445
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

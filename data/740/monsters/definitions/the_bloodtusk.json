@@ -1,0 +1,71 @@
+{
+  "creatureStatistics": {
+    "name": "The Bloodtusk",
+    "health": 600,
+    "maxHealth": 600,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 120,
+    "attackSpeed": 2000,
+    "defense": 57,
+    "outfit": {
+      "id": 199
+    },
+    "armor": 40
+  },
+  "experience": 300,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 120
+    }
+  ],
+  "elements": {
+    "earth": 20,
+    "ice": 20,
+    "physical": 15,
+    "fire": -10
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.669,
+      "name": "gold coin",
+      "min": 1,
+      "max": 65
+    },
+    {
+      "id": 2152,
+      "probability": 0.83825,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 3
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

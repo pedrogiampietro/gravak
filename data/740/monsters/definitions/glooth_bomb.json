@@ -1,0 +1,150 @@
+{
+  "creatureStatistics": {
+    "name": "Glooth Bomb",
+    "health": 250000,
+    "maxHealth": 250000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 80,
+    "attack": 328,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 680
+    },
+    "armor": 30
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 50,
+      "max": 150,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 328
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.13,
+      "min": 100,
+      "max": 230,
+      "length": 3,
+      "spread": 0,
+      "areaEffect": "groundshaker"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 100,
+      "max": 200,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "groundshaker"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.19,
+      "min": 50,
+      "max": 225,
+      "radius": 5,
+      "target": false,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 150,
+      "max": 235,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "largerock",
+      "areaEffect": "explosionarea"
+    }
+  ],
+  "elements": {
+    "physical": 85,
+    "energy": 85,
+    "earth": 85,
+    "fire": 85,
+    "lifedrain": 85,
+    "drown": 85,
+    "ice": 85,
+    "holy": 85,
+    "death": 85
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 7591,
+      "probability": 1,
+      "name": "great health potion",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 7590,
+      "probability": 1,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 13
+    },
+    {
+      "id": 8472,
+      "probability": 1,
+      "name": "great spirit potion",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 23571,
+      "probability": 1,
+      "name": "moohtant horn",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 24
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

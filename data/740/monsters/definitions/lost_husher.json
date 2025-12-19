@@ -1,0 +1,276 @@
+{
+  "creatureStatistics": {
+    "name": "Lost Husher",
+    "health": 1600,
+    "maxHealth": 1600,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 55,
+    "outfit": {
+      "id": 537
+    },
+    "armor": 55
+  },
+  "experience": 1800,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 75,
+      "max": 92,
+      "areaEffect": "yellowenergy"
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.15,
+      "duration": 5000,
+      "areaEffect": "teleport"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 150,
+      "max": 300,
+      "length": 6,
+      "spread": 0,
+      "areaEffect": "blacksmoke"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 150,
+      "max": 250,
+      "radius": 5,
+      "spread": 0,
+      "target": false,
+      "areaEffect": "blacksmoke"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 150,
+      "max": 200,
+      "range": 7,
+      "shootEffect": "suddendeath",
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 150,
+      "max": 250,
+      "range": 7,
+      "radius": 2,
+      "target": true,
+      "shootEffect": "smallearth",
+      "areaEffect": "greenshimmer"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "radius": 4,
+      "target": false,
+      "duration": 6000,
+      "areaEffect": "rednote"
+    }
+  ],
+  "elements": {
+    "physical": 5,
+    "energy": 10,
+    "fire": 25,
+    "ice": 15,
+    "holy": -10,
+    "death": 20
+  },
+  "immunities": {
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Arr far zwar!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2152,
+      "probability": 0.59669,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 20135,
+      "probability": 0.15336,
+      "name": "red hair dye"
+    },
+    {
+      "id": 2789,
+      "probability": 0.15105,
+      "name": "brown mushroom",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 20127,
+      "probability": 0.12042,
+      "name": "wimp tooth chain"
+    },
+    {
+      "id": 13757,
+      "probability": 0.11812,
+      "name": "coal"
+    },
+    {
+      "id": 20130,
+      "probability": 0.11608,
+      "name": "holy ash"
+    },
+    {
+      "id": 7588,
+      "probability": 0.10466,
+      "name": "strong health potion",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7590,
+      "probability": 0.10377,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 9970,
+      "probability": 0.09695,
+      "name": "small topaz"
+    },
+    {
+      "id": 20128,
+      "probability": 0.09217,
+      "name": "lost husher's staff"
+    },
+    {
+      "id": 20129,
+      "probability": 0.08996,
+      "name": "skull shatterer"
+    },
+    {
+      "id": 20110,
+      "probability": 0.08465,
+      "name": "bonecarving knife"
+    },
+    {
+      "id": 20137,
+      "probability": 0.07739,
+      "name": "basalt figurine"
+    },
+    {
+      "id": 20111,
+      "probability": 0.07677,
+      "name": "bone fetish"
+    },
+    {
+      "id": 20136,
+      "probability": 0.05932,
+      "name": "basalt fetish"
+    },
+    {
+      "id": 2213,
+      "probability": 0.02656,
+      "name": "dwarven ring"
+    },
+    {
+      "id": 2515,
+      "probability": 0.00965,
+      "name": "guardian shield"
+    },
+    {
+      "id": 11339,
+      "probability": 0.00885,
+      "name": "clay lump"
+    },
+    {
+      "id": 2430,
+      "probability": 0.00744,
+      "name": "knight axe"
+    },
+    {
+      "id": 20109,
+      "probability": 0.00726,
+      "name": "buckle"
+    },
+    {
+      "id": 7886,
+      "probability": 0.0062,
+      "name": "terra boots"
+    },
+    {
+      "id": 2436,
+      "probability": 0.00469,
+      "name": "skull staff"
+    },
+    {
+      "id": 7452,
+      "probability": 0.00283,
+      "name": "spiked squelcher"
+    },
+    {
+      "id": 2432,
+      "probability": 0.00266,
+      "name": "fire axe"
+    },
+    {
+      "id": 7885,
+      "probability": 0.00221,
+      "name": "terra legs"
+    },
+    {
+      "id": 2528,
+      "probability": 0.00195,
+      "name": "tower shield"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": 4
+  }
+}

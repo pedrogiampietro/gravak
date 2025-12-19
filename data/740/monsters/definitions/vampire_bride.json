@@ -1,0 +1,176 @@
+{
+  "creatureStatistics": {
+    "name": "Vampire Bride",
+    "health": 1200,
+    "maxHealth": 1200,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 190,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 312
+    },
+    "armor": 20
+  },
+  "experience": 1050,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 40,
+      "max": 80,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 190
+    },
+    {
+      "name": "lifedrain",
+      "interval": 3000,
+      "chance": 0.15,
+      "min": 60,
+      "max": 130,
+      "range": 1,
+      "target": true,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 60,
+      "max": 150,
+      "range": 7,
+      "target": true,
+      "shootEffect": "suddendeath",
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "death",
+      "interval": 4000,
+      "chance": 0.05,
+      "min": 60,
+      "max": 150,
+      "range": 7,
+      "target": true,
+      "shootEffect": "suddendeath",
+      "areaEffect": "hearts"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 60,
+      "max": 150,
+      "range": 7,
+      "target": true,
+      "shootEffect": "energy"
+    }
+  ],
+  "elements": {
+    "energy": 10,
+    "earth": 20,
+    "drown": 10,
+    "ice": 20,
+    "fire": -10,
+    "holy": -10
+  },
+  "immunities": {
+    "death": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Kneel before your Mistress!",
+      "Dead is the new alive.",
+      "Come, let me kiss you, darling. Oh wait, I meant kill.",
+      "Enjoy the pain - I know you love it.",
+      "Are you suffering nicely enough?",
+      "You won't regret you came to me, sweetheart."
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2145,
+      "probability": 0.0102,
+      "name": "small diamond",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2148,
+      "probability": 0.45,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.45,
+      "name": "gold coin",
+      "min": 1,
+      "max": 49
+    },
+    {
+      "id": 2152,
+      "probability": 0.0991,
+      "name": "platinum coin"
+    },
+    {
+      "id": 2195,
+      "probability": 0.0022,
+      "name": "boots of haste"
+    },
+    {
+      "id": 2271,
+      "probability": 0.05,
+      "name": "strong health potion"
+    },
+    {
+      "id": 2270,
+      "probability": 0.1021,
+      "name": "strong mana potion"
+    },
+    {
+      "id": 7733,
+      "probability": 0.002
+    },
+    {
+      "id": 9809,
+      "probability": 0.0101
+    },
+    {
+      "id": 9837,
+      "probability": 0.0097
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

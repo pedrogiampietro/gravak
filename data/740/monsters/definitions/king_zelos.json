@@ -1,0 +1,328 @@
+{
+  "creatureStatistics": {
+    "name": "King Zelos",
+    "health": 480000,
+    "maxHealth": 480000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 1224
+    },
+    "armor": 10
+  },
+  "experience": 75000,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "elements": {
+    "physical": 10,
+    "energy": 3,
+    "fire": 5
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "Mine is the power of death! You can't defeat me!",
+      "I will rule again and my realm of death will span the world!",
+      "My lich-knights will conquer this world for me!"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2160,
+      "probability": 1,
+      "name": "crystal coin",
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 25172,
+      "probability": 0.99725,
+      "name": "silver token",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 25377,
+      "probability": 0.73352,
+      "name": "gold token",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 26031,
+      "probability": 0.57967,
+      "name": "supreme health potion",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 26030,
+      "probability": 0.56044,
+      "name": "ultimate spirit potion",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 26029,
+      "probability": 0.5467,
+      "name": "ultimate mana potion",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 2154,
+      "probability": 0.27473,
+      "name": "yellow gem",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2156,
+      "probability": 0.26374,
+      "name": "red gem",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2487,
+      "probability": 0.17582,
+      "name": "crown armor"
+    },
+    {
+      "id": 7443,
+      "probability": 0.15934,
+      "name": "bullseye potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 7440,
+      "probability": 0.15934,
+      "name": "mastermind potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 7439,
+      "probability": 0.14286,
+      "name": "berserk potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2155,
+      "probability": 0.12912,
+      "name": "green gem"
+    },
+    {
+      "id": 9971,
+      "probability": 0.12363,
+      "name": "gold ingot"
+    },
+    {
+      "id": 26199,
+      "probability": 0.11538,
+      "name": "collar of green plasma"
+    },
+    {
+      "id": 2158,
+      "probability": 0.11264,
+      "name": "blue gem"
+    },
+    {
+      "id": 7884,
+      "probability": 0.10714,
+      "name": "terra mantle"
+    },
+    {
+      "id": 26187,
+      "probability": 0.1044,
+      "name": "ring of green plasma"
+    },
+    {
+      "id": 26198,
+      "probability": 0.10165,
+      "name": "collar of blue plasma"
+    },
+    {
+      "id": 26200,
+      "probability": 0.09341,
+      "name": "collar of red plasma"
+    },
+    {
+      "id": 7899,
+      "probability": 0.09341,
+      "name": "magma coat"
+    },
+    {
+      "id": 7898,
+      "probability": 0.07967,
+      "name": "lightning robe"
+    },
+    {
+      "id": 1986,
+      "probability": 0.07692,
+      "name": "red tome"
+    },
+    {
+      "id": 26185,
+      "probability": 0.07143,
+      "name": "ring of blue plasma"
+    },
+    {
+      "id": 34246,
+      "probability": 0.07143,
+      "name": "young lich worm"
+    },
+    {
+      "id": 26189,
+      "probability": 0.06868,
+      "name": "ring of red plasma"
+    },
+    {
+      "id": 7897,
+      "probability": 0.06593,
+      "name": "glacier robe"
+    },
+    {
+      "id": 2153,
+      "probability": 0.06044,
+      "name": "violet gem",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 34244,
+      "probability": 0.05495,
+      "name": "ancient liche bone"
+    },
+    {
+      "id": 34245,
+      "probability": 0.04396,
+      "name": "rotten heart"
+    },
+    {
+      "id": 32717,
+      "probability": 0.04121,
+      "name": "giant sapphire"
+    },
+    {
+      "id": 5885,
+      "probability": 0.03022,
+      "name": "flask of warrior's sweat"
+    },
+    {
+      "id": 32716,
+      "probability": 0.03022,
+      "name": "giant emerald"
+    },
+    {
+      "id": 5904,
+      "probability": 0.03022,
+      "name": "magic sulphur"
+    },
+    {
+      "id": 5909,
+      "probability": 0.02198,
+      "name": "white piece of cloth",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 5892,
+      "probability": 0.01923,
+      "name": "huge chunk of crude iron"
+    },
+    {
+      "id": 7414,
+      "probability": 0.01374,
+      "name": "abyss hammer"
+    },
+    {
+      "id": 2195,
+      "probability": 0.01374,
+      "name": "boots of haste"
+    },
+    {
+      "id": 34393,
+      "probability": 0.01374,
+      "name": "shadow cowl"
+    },
+    {
+      "id": 34237,
+      "probability": 0.01099,
+      "name": "bow of cataclysm"
+    },
+    {
+      "id": 34238,
+      "probability": 0.01099,
+      "name": "galea mortis"
+    },
+    {
+      "id": 32715,
+      "probability": 0.01099,
+      "name": "giant ruby"
+    },
+    {
+      "id": 34236,
+      "probability": 0.01099,
+      "name": "mortal mace"
+    },
+    {
+      "id": 34239,
+      "probability": 0.01099,
+      "name": "toga mortis"
+    },
+    {
+      "id": 13532,
+      "probability": 0.00824,
+      "name": "golden hyaena pendant"
+    },
+    {
+      "id": 32712,
+      "probability": 0.00824,
+      "name": "ornate locket"
+    },
+    {
+      "id": 15515,
+      "probability": 0.00549,
+      "name": "bar of gold"
+    },
+    {
+      "id": 5884,
+      "probability": 0.00549,
+      "name": "spirit container"
+    },
+    {
+      "id": 27048,
+      "probability": 0.00275,
+      "name": "gemmed figurine"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

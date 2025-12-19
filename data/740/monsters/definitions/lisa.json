@@ -1,0 +1,233 @@
+{
+  "creatureStatistics": {
+    "name": "Lisa",
+    "health": 55000,
+    "maxHealth": 55000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 1200,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 604
+    },
+    "armor": 15
+  },
+  "experience": 18000,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1200
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 200,
+      "max": 400,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "greenstar",
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "effect",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 6,
+      "target": true,
+      "shootEffect": "smallearth",
+      "areaEffect": "bigplants"
+    },
+    {
+      "name": "effect",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 6,
+      "target": true,
+      "shootEffect": "smallearth",
+      "areaEffect": "plantattack"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.13,
+      "min": 100,
+      "max": 200,
+      "radius": 8,
+      "target": false,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "duration": 15000,
+      "areaEffect": "blackspark"
+    }
+  ],
+  "elements": {
+    "fire": -5,
+    "death": 35,
+    "energy": 10
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true,
+    "earth": true
+  },
+  "summons": [
+    {
+      "name": "Glooth Anemone",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 4
+    }
+  ],
+  "loot": [
+    {
+      "id": 23568,
+      "probability": 1,
+      "name": "slimy leaf tentacle",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 23549,
+      "probability": 0.44444,
+      "name": "glooth club"
+    },
+    {
+      "id": 2149,
+      "probability": 0.44444,
+      "name": "small emerald",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 23514,
+      "probability": 0.33333,
+      "name": "glooth sandwich",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 7591,
+      "probability": 0.33333,
+      "name": "great health potion",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 7590,
+      "probability": 0.33333,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 8472,
+      "probability": 0.33333,
+      "name": "great spirit potion",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 23515,
+      "probability": 0.22222,
+      "name": "bowl of glooth soup",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 23517,
+      "probability": 0.22222,
+      "name": "glooth steak",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 23550,
+      "probability": 0.11111,
+      "name": "glooth blade"
+    },
+    {
+      "id": 23535,
+      "probability": 0.11111,
+      "name": "glooth cape"
+    },
+    {
+      "id": 23543,
+      "probability": 0.11111,
+      "name": "glooth whip"
+    },
+    {
+      "id": 2156,
+      "probability": 0.11111,
+      "name": "red gem"
+    },
+    {
+      "id": 2145,
+      "probability": 0.11111,
+      "name": "small diamond",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2147,
+      "probability": 0.11111,
+      "name": "small ruby",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2146,
+      "probability": 0.11111,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 9970,
+      "probability": 0.11111,
+      "name": "small topaz",
+      "min": 1,
+      "max": 5
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

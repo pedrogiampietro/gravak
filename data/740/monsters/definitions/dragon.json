@@ -1,0 +1,206 @@
+{
+  "creatureStatistics": {
+    "name": "Dragon",
+    "health": 1000,
+    "maxHealth": 1000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 172,
+    "attack": 120,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 34
+    },
+    "armor": 25
+  },
+  "experience": 700,
+  "corpse": 2844,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 300,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 40,
+      "max": 70,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 120
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 60,
+      "max": 140,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 100,
+      "max": 170,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "firearea"
+    }
+  ],
+  "elements": {
+    "earth": 80,
+    "energy": 20,
+    "ice": -10
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "fire": true
+  },
+  "sayings": {
+    "texts": [
+      "GROOAAARRR",
+      "FCHHHHH"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.90082,
+      "name": "gold coin",
+      "min": 1,
+      "max": 105
+    },
+    {
+      "id": 2672,
+      "probability": 0.65143,
+      "name": "dragon ham"
+    },
+    {
+      "id": 2509,
+      "probability": 0.14893,
+      "name": "steel shield"
+    },
+    {
+      "id": 2455,
+      "probability": 0.10085,
+      "name": "crossbow"
+    },
+    {
+      "id": 12413,
+      "probability": 0.09883,
+      "name": "dragon's tail"
+    },
+    {
+      "id": 2546,
+      "probability": 0.07976,
+      "name": "burst arrow",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2397,
+      "probability": 0.04027,
+      "name": "longsword"
+    },
+    {
+      "id": 3351,
+      "probability": 0.03005,
+      "name": "steel helmet"
+    },
+    {
+      "id": 2413,
+      "probability": 0.01995,
+      "name": "broadsword"
+    },
+    {
+      "id": 2647,
+      "probability": 0.01909,
+      "name": "plate legs"
+    },
+    {
+      "id": 7588,
+      "probability": 0.01055,
+      "name": "strong health potion"
+    },
+    {
+      "id": 2187,
+      "probability": 0.01053,
+      "name": "wand of inferno"
+    },
+    {
+      "id": 5920,
+      "probability": 0.01038,
+      "name": "green dragon scale"
+    },
+    {
+      "id": 5877,
+      "probability": 0.01018,
+      "name": "green dragon leather"
+    },
+    {
+      "id": 2387,
+      "probability": 0.01008,
+      "name": "double axe"
+    },
+    {
+      "id": 2434,
+      "probability": 0.00517,
+      "name": "dragon hammer"
+    },
+    {
+      "id": 2409,
+      "probability": 0.00504,
+      "name": "serpent sword"
+    },
+    {
+      "id": 2145,
+      "probability": 0.00384,
+      "name": "small diamond"
+    },
+    {
+      "id": 2516,
+      "probability": 0.00301,
+      "name": "dragon shield"
+    },
+    {
+      "id": 2177,
+      "probability": 0.00113,
+      "name": "life crystal"
+    },
+    {
+      "id": 7430,
+      "probability": 0.00102,
+      "name": "dragonbone staff"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "creatureStatistics": {
+    "name": "Elder Bonelord",
+    "health": 500,
+    "maxHealth": 500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 170,
+    "attack": 55,
+    "attackSpeed": 2000,
+    "defense": 13,
+    "outfit": {
+      "id": 108
+    },
+    "armor": 13
+  },
+  "experience": 280,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 55
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 45,
+      "max": 60,
+      "range": 7,
+      "shootEffect": "energy"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 40,
+      "max": 80,
+      "range": 7,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 45,
+      "max": 90,
+      "range": 7,
+      "shootEffect": "suddendeath",
+      "areaEffect": "smallclouds"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 20,
+      "max": 40,
+      "range": 7,
+      "shootEffect": "poison"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 45,
+      "max": 85,
+      "range": 7,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 0,
+      "max": 40,
+      "range": 7
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -600,
+      "duration": 20000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "energy": 20,
+    "ice": 30,
+    "death": 30,
+    "fire": -10
+  },
+  "immunities": {
+    "earth": true,
+    "lifedrain": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Gazer",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 6
+    },
+    {
+      "name": "Crypt Shambler",
+      "interval": 2000,
+      "chance": 0.15,
+      "maxSummons": 6
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Let me take a look at you!",
+      "Inferior creatures, bow before my power!",
+      "659978 54764!",
+      "653768764!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.99298,
+      "name": "gold coin",
+      "min": 1,
+      "max": 90
+    },
+    {
+      "id": 11193,
+      "probability": 0.2003,
+      "name": "elder bonelord tentacle"
+    },
+    {
+      "id": 12468,
+      "probability": 0.09698,
+      "name": "small flask of eyedrops"
+    },
+    {
+      "id": 7364,
+      "probability": 0.08785,
+      "name": "sniper arrow",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2377,
+      "probability": 0.02968,
+      "name": "two handed sword"
+    },
+    {
+      "id": 2509,
+      "probability": 0.02033,
+      "name": "steel shield"
+    },
+    {
+      "id": 5898,
+      "probability": 0.01927,
+      "name": "bonelord eye"
+    },
+    {
+      "id": 2175,
+      "probability": 0.01016,
+      "name": "spellbook"
+    },
+    {
+      "id": 7589,
+      "probability": 0.00836,
+      "name": "strong mana potion"
+    },
+    {
+      "id": 11197,
+      "probability": 0.00458,
+      "name": "giant eye"
+    },
+    {
+      "id": 2518,
+      "probability": 0.00086,
+      "name": "bonelord shield"
+    },
+    {
+      "id": 3972,
+      "probability": 0.00084,
+      "name": "bonelord helmet"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": 4
+  }
+}

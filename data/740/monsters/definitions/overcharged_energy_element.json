@@ -1,0 +1,129 @@
+{
+  "creatureStatistics": {
+    "name": "Overcharged Energy Element",
+    "health": 1700,
+    "maxHealth": 1700,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 300,
+    "attack": 200,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 290
+    },
+    "armor": 35
+  },
+  "experience": 1300,
+  "corpse": 2813,
+  "fluidType": 4,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 90,
+      "max": 150,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 200
+    },
+    {
+      "name": "energy",
+      "interval": 1000,
+      "chance": 0.11,
+      "min": 0,
+      "max": 250,
+      "radius": 4,
+      "target": false,
+      "shootEffect": "energy",
+      "areaEffect": "purpleenergy"
+    },
+    {
+      "name": "energy",
+      "interval": 1000,
+      "chance": 0.12,
+      "min": 0,
+      "max": 300,
+      "range": 3,
+      "target": true,
+      "areaEffect": "purpleenergy"
+    },
+    {
+      "name": "physical",
+      "interval": 1000,
+      "chance": 0.12,
+      "min": 0,
+      "max": 200,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "poff"
+    }
+  ],
+  "elements": {
+    "earth": -20
+  },
+  "immunities": {
+    "ice": true,
+    "energy": true,
+    "fire": true
+  },
+  "sayings": {
+    "texts": [
+      "BZZZZZZZZZZ"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 56
+    },
+    {
+      "id": 2150,
+      "probability": 0.1,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2274,
+      "probability": 0.1,
+      "name": "great health potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

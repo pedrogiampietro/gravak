@@ -1,0 +1,120 @@
+{
+  "creatureStatistics": {
+    "name": "Boogey",
+    "health": 930,
+    "maxHealth": 930,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 400,
+    "attack": 120,
+    "attackSpeed": 1200,
+    "defense": 50,
+    "outfit": {
+      "id": 300
+    },
+    "armor": 50
+  },
+  "experience": 475,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.25,
+      "min": 80,
+      "max": 120,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 1200,
+      "chance": 1,
+      "min": 0,
+      "max": 120
+    },
+    {
+      "name": "physical",
+      "interval": 1500,
+      "chance": 0.3,
+      "min": 0,
+      "max": 30,
+      "range": 7,
+      "shootEffect": "suddendeath",
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "death",
+      "interval": 1500,
+      "chance": 0.3,
+      "min": 12,
+      "max": 20,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "redspark"
+    },
+    {
+      "name": "physical",
+      "interval": 1500,
+      "chance": 0.4,
+      "min": 20,
+      "max": 30,
+      "length": 8,
+      "spread": 3,
+      "shootEffect": "suddendeath",
+      "areaEffect": "mortarea"
+    }
+  ],
+  "elements": {
+    "earth": 40,
+    "ice": 25,
+    "energy": -10,
+    "holy": -10,
+    "fire": -10
+  },
+  "immunities": {
+    "death": true,
+    "drown": true,
+    "lifedrain": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "demon skeleton",
+      "interval": 4000,
+      "chance": 0.4,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Since you didn't eat your spinach Bogey comes to get you!",
+      "Too bad you did not eat your lunch, now I have to punish you!",
+      "Even if you beat me, I'll hide in your closet until you one day drop your guard!",
+      "You better had believe in me!",
+      "I'll take you into the darkness ... forever!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

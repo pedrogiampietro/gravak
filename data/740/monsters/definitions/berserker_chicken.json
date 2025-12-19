@@ -1,0 +1,103 @@
+{
+  "creatureStatistics": {
+    "name": "Berserker Chicken",
+    "health": 465,
+    "maxHealth": 465,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 300,
+    "attack": 200,
+    "attackSpeed": 1200,
+    "defense": 35,
+    "outfit": {
+      "id": 111
+    },
+    "armor": 30
+  },
+  "experience": 220,
+  "corpse": 2909,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.4,
+      "speedChange": 400,
+      "duration": 8000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 1200,
+      "chance": 1,
+      "min": 0,
+      "max": 200
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 0,
+      "max": 100,
+      "range": 1
+    },
+    {
+      "name": "drown",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 41,
+      "max": 70,
+      "target": false,
+      "areaEffect": "explosionarea"
+    }
+  ],
+  "elements": {
+    "holy": 10,
+    "death": 10,
+    "fire": 10,
+    "energy": 10,
+    "ice": 10,
+    "earth": 10,
+    "physical": -20
+  },
+  "immunities": {
+    "lifedrain": true,
+    "drown": true
+  },
+  "sayings": {
+    "texts": [
+      "Gokgoooook",
+      "Cluck Cluck",
+      "I will fill MY cushion with YOUR hair! CLUCK!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

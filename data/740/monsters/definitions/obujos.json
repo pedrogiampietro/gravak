@@ -1,0 +1,133 @@
+{
+  "creatureStatistics": {
+    "name": "Obujos",
+    "health": 35000,
+    "maxHealth": 35000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 560,
+    "attack": 1200,
+    "attackSpeed": 2000,
+    "defense": 40,
+    "outfit": {
+      "id": 445
+    },
+    "armor": 40
+  },
+  "experience": 20000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 60,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 1000,
+      "max": 2100,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1200
+    },
+    {
+      "name": "death",
+      "interval": 3000,
+      "chance": 0.23,
+      "min": 200,
+      "max": 800,
+      "range": 7,
+      "radius": 7,
+      "target": true,
+      "shootEffect": "suddendeath",
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "manadrain",
+      "interval": 3500,
+      "chance": 0.2,
+      "min": 200,
+      "max": 600,
+      "range": 7,
+      "radius": 6,
+      "target": true,
+      "shootEffect": "suddendeath",
+      "areaEffect": "bigclouds"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 200,
+      "max": 800,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "poisonarrow",
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "ice",
+      "interval": 1200,
+      "chance": 0.07,
+      "min": 600,
+      "max": 1300,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "giantice"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.14,
+      "min": 600,
+      "max": 1600,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "icetornado"
+    }
+  ],
+  "elements": {
+    "earth": -20,
+    "energy": -20,
+    "physical": -20,
+    "death": -20
+  },
+  "immunities": {
+    "ice": true,
+    "paralyze": true,
+    "drown": true,
+    "fire": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "JN OBU!!",
+      "QJELL KEJH!!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

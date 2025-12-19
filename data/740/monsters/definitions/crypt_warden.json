@@ -1,0 +1,140 @@
+{
+  "creatureStatistics": {
+    "name": "Crypt Warden",
+    "health": 8300,
+    "maxHealth": 8300,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 290,
+    "attack": 500,
+    "attackSpeed": 2000,
+    "defense": 84,
+    "outfit": {
+      "id": 1190
+    },
+    "armor": 84
+  },
+  "experience": 8400,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 500
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.08,
+      "min": 250,
+      "max": 380,
+      "target": false,
+      "areaEffect": "groundshaker"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 250,
+      "max": 430,
+      "target": false,
+      "areaEffect": "groundshaker"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 200,
+      "max": 480,
+      "radius": 2,
+      "areaEffect": "groundshaker"
+    },
+    {
+      "name": "holy",
+      "interval": 2000,
+      "chance": 0.13,
+      "min": 300,
+      "max": 450,
+      "length": 5,
+      "spread": 0,
+      "areaEffect": "holyarea"
+    }
+  ],
+  "elements": {
+    "earth": 80,
+    "death": -35,
+    "holy": 75
+  },
+  "immunities": {
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 0.90096,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 18419,
+      "probability": 0.20702,
+      "name": "cyan crystal fragment"
+    },
+    {
+      "id": 34098,
+      "probability": 0.17555,
+      "name": "lamassu horn"
+    },
+    {
+      "id": 34097,
+      "probability": 0.10798,
+      "name": "lamassu hoof"
+    },
+    {
+      "id": 2150,
+      "probability": 0.09388,
+      "name": "small amethyst"
+    },
+    {
+      "id": 9971,
+      "probability": 0.05949,
+      "name": "gold ingot"
+    },
+    {
+      "id": 18421,
+      "probability": 0.03903,
+      "name": "green crystal fragment"
+    },
+    {
+      "id": 2155,
+      "probability": 0.03542,
+      "name": "green gem"
+    },
+    {
+      "id": 2198,
+      "probability": 0.00843,
+      "name": "elven amulet"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

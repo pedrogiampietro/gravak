@@ -1,0 +1,189 @@
+{
+  "creatureStatistics": {
+    "name": "Rot Elemental",
+    "health": 850,
+    "maxHealth": 850,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 615
+    },
+    "armor": 10
+  },
+  "experience": 750,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.07,
+      "min": 40,
+      "max": 60,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.09,
+      "speedChange": 470,
+      "duration": 7000,
+      "areaEffect": "smoke"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.13,
+      "min": 150,
+      "max": 250,
+      "range": 7,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "gloothspear",
+      "areaEffect": "poison"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 150,
+      "max": 230,
+      "length": 6,
+      "spread": 0,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 200,
+      "max": 300,
+      "range": 7,
+      "target": true,
+      "shootEffect": "poison",
+      "areaEffect": "poison"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 0,
+      "max": 0,
+      "radius": 1,
+      "target": true,
+      "speedChange": -900,
+      "areaEffect": "carniphila"
+    }
+  ],
+  "elements": {
+    "physical": 10,
+    "energy": -5,
+    "ice": 30,
+    "holy": 20,
+    "death": 20,
+    "fire": -5
+  },
+  "immunities": {
+    "paralyze": true,
+    "earth": true,
+    "lifedrain": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "*glibb*",
+      "*splib*"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "min": 1,
+      "max": 80
+    },
+    {
+      "id": 2152,
+      "probability": 0.1039
+    },
+    {
+      "id": 7588,
+      "probability": 0.1031
+    },
+    {
+      "id": 7589,
+      "probability": 0.0999
+    },
+    {
+      "id": 23553,
+      "probability": 0.1432
+    },
+    {
+      "id": 2168,
+      "probability": 0.0163
+    },
+    {
+      "id": 2146,
+      "probability": 0.0511
+    },
+    {
+      "id": 9970,
+      "probability": 0.0414,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2149,
+      "probability": 0.0534,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2155,
+      "probability": 0.0008
+    },
+    {
+      "id": 23554,
+      "probability": 0.0013
+    },
+    {
+      "id": 23551,
+      "probability": 0.0006
+    },
+    {
+      "id": 23529,
+      "probability": 0.0566
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

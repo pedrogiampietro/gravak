@@ -1,0 +1,180 @@
+{
+  "creatureStatistics": {
+    "name": "Cursed Book",
+    "health": 20000,
+    "maxHealth": 20000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 440,
+    "attack": 200,
+    "attackSpeed": 2000,
+    "defense": 82,
+    "outfit": {
+      "id": 1061
+    },
+    "armor": 82
+  },
+  "experience": 13345,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 200
+    },
+    {
+      "name": "physical",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 400,
+      "max": 680,
+      "range": 7,
+      "shootEffect": "eartharrow"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 1000,
+      "chance": 0.1,
+      "min": 400,
+      "max": 575,
+      "length": 5,
+      "spread": 0,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "physical",
+      "interval": 1000,
+      "chance": 0.12,
+      "min": 230,
+      "max": 880,
+      "range": 7,
+      "radius": 3,
+      "areaEffect": "groundshaker"
+    }
+  ],
+  "elements": {
+    "energy": -10,
+    "earth": 100
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 0.75498,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 15
+    },
+    {
+      "id": 31225,
+      "probability": 0.6475,
+      "name": "book page",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2145,
+      "probability": 0.48563,
+      "name": "small diamond",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 31222,
+      "probability": 0.37373,
+      "name": "silken bookmark"
+    },
+    {
+      "id": 9970,
+      "probability": 0.26891,
+      "name": "small topaz",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 1294,
+      "probability": 0.19107,
+      "name": "small stone",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2200,
+      "probability": 0.09288,
+      "name": "protection amulet"
+    },
+    {
+      "id": 7387,
+      "probability": 0.06059,
+      "name": "diamond sceptre"
+    },
+    {
+      "id": 7886,
+      "probability": 0.0544,
+      "name": "terra boots"
+    },
+    {
+      "id": 7903,
+      "probability": 0.04202,
+      "name": "terra hood"
+    },
+    {
+      "id": 7887,
+      "probability": 0.03981,
+      "name": "terra amulet"
+    },
+    {
+      "id": 2197,
+      "probability": 0.01813,
+      "name": "stone skin amulet"
+    },
+    {
+      "id": 10219,
+      "probability": 0.01769,
+      "name": "sacred tree amulet"
+    },
+    {
+      "id": 7885,
+      "probability": 0.01194,
+      "name": "terra legs"
+    },
+    {
+      "id": 8912,
+      "probability": 0.00663,
+      "name": "springsprout rod"
+    },
+    {
+      "id": 7884,
+      "probability": 0.00663,
+      "name": "terra mantle"
+    },
+    {
+      "id": 8880,
+      "probability": 0.00221,
+      "name": "swamplair armor"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

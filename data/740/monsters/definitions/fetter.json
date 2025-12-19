@@ -1,0 +1,109 @@
+{
+  "creatureStatistics": {
+    "name": "Fetter",
+    "health": 5500,
+    "maxHealth": 5500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 280,
+    "attack": 308,
+    "attackSpeed": 2000,
+    "defense": 40,
+    "outfit": {
+      "id": 235
+    },
+    "armor": 40
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 219,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 100,
+      "max": 700,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 290,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 308
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "radius": 4,
+      "target": false,
+      "duration": 6000,
+      "areaEffect": "purplenote"
+    },
+    {
+      "name": "spectre drown",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 100,
+      "max": 600,
+      "range": 7
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 300,
+      "max": 850,
+      "range": 7,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "physical": 90,
+    "ice": 1,
+    "fire": -8,
+    "energy": -8
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

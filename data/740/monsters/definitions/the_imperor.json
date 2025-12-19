@@ -1,0 +1,182 @@
+{
+  "creatureStatistics": {
+    "name": "The Imperor",
+    "health": 15000,
+    "maxHealth": 15000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 330,
+    "attack": 660,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 237
+    },
+    "armor": 15
+  },
+  "experience": 8000,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.5,
+      "min": 175,
+      "max": 505,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.12,
+      "speedChange": 380,
+      "duration": 4000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 3000,
+      "chance": 0.2,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 660
+    },
+    {
+      "name": "fire",
+      "interval": 1000,
+      "chance": 0.13,
+      "min": 50,
+      "max": 800,
+      "range": 1,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "fireattack"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 50,
+      "max": 800,
+      "range": 7,
+      "radius": 6,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 90,
+      "max": 350,
+      "length": 4,
+      "spread": 2,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    }
+  ],
+  "elements": {
+    "ice": -20,
+    "holy": -20,
+    "death": 20
+  },
+  "immunities": {
+    "fire": true,
+    "earth": true,
+    "lifedrain": true,
+    "paralyze": true,
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "diabolic imp",
+      "interval": 5500,
+      "chance": 0.3,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Muahaha!",
+      "He he he!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2050,
+      "probability": 0.15
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 79
+    },
+    {
+      "id": 2150,
+      "probability": 0.08888,
+      "name": "small amethyst"
+    },
+    {
+      "id": 2165,
+      "probability": 0.04555,
+      "name": "stealth ring"
+    },
+    {
+      "id": 2260,
+      "probability": 0.18,
+      "name": "blank rune"
+    },
+    {
+      "id": 2464,
+      "probability": 0.07887,
+      "name": "chain armor"
+    },
+    {
+      "id": 2465,
+      "probability": 0.06577,
+      "name": "brass armor"
+    },
+    {
+      "id": 2465,
+      "probability": 0.06577,
+      "name": "brass armor"
+    },
+    {
+      "id": 6300,
+      "probability": 0.00999
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": 4
+  }
+}

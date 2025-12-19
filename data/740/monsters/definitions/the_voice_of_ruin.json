@@ -1,0 +1,111 @@
+{
+  "creatureStatistics": {
+    "name": "The Voice Of Ruin",
+    "health": 5500,
+    "maxHealth": 5500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 460,
+    "attack": 400,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 344
+    },
+    "armor": 30
+  },
+  "experience": 3500,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 475,
+      "max": 625,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 400
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 440,
+      "max": 820,
+      "length": 3,
+      "spread": 2,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 290,
+      "max": 540,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 190,
+      "max": 480,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "greenbubble"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 43
+    },
+    {
+      "id": 11326,
+      "probability": 0.5,
+      "name": "corrupted flag"
+    },
+    {
+      "id": 2152,
+      "probability": 0.5,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 2
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

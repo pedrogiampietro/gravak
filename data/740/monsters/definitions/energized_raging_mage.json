@@ -1,0 +1,125 @@
+{
+  "creatureStatistics": {
+    "name": "Energized Raging Mage",
+    "health": 3500,
+    "maxHealth": 3500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 78,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 423
+    },
+    "armor": 35
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 300,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 155,
+      "max": 200,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 78
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.4,
+      "min": 150,
+      "max": 230,
+      "range": 7,
+      "radius": 5,
+      "target": true,
+      "shootEffect": "energyball",
+      "areaEffect": "energy"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 100,
+      "max": 200,
+      "range": 7
+    },
+    {
+      "name": "energyfield",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 2,
+      "target": true,
+      "shootEffect": "energy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 200,
+      "max": 300,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "bigclouds"
+    }
+  ],
+  "elements": {
+    "physical": -50,
+    "holy": 10
+  },
+  "immunities": {
+    "energy": true,
+    "outfit": true,
+    "fire": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "golden servant",
+      "interval": 2000,
+      "chance": 0.5,
+      "maxSummons": 1
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Behold the all permeating powers I draw from this gate!!",
+      "ENERGY!!",
+      "I FEEL, I FEEEEL... OMNIPOTENCE!!",
+      "MWAAAHAHAAA!! NO ONE!! NO ONE CAN DEFEAT MEEE!!!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

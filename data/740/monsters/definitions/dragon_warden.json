@@ -1,0 +1,70 @@
+{
+  "creatureStatistics": {
+    "name": "Dragon Warden",
+    "health": 2800,
+    "maxHealth": 2800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 320,
+    "attack": 500,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 947
+    },
+    "armor": 45
+  },
+  "experience": 4600,
+  "corpse": 2844,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 70,
+      "max": 300,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 500
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.17,
+      "min": 150,
+      "max": 230,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "firearea"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "creatureStatistics": {
+    "name": "Lizard Abomination",
+    "health": 20000,
+    "maxHealth": 20000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 550,
+    "attackSpeed": 2000,
+    "defense": 60,
+    "outfit": {
+      "id": 364
+    },
+    "armor": 55
+  },
+  "experience": 1350,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 550
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.4,
+      "min": 0,
+      "max": 980,
+      "radius": 3,
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.5,
+      "min": 200,
+      "max": 300,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "radius": 3,
+      "speedChange": -800,
+      "areaEffect": "poison"
+    }
+  ],
+  "elements": {
+    "physical": 15,
+    "fire": -10,
+    "energy": -10,
+    "ice": 20
+  },
+  "immunities": {
+    "earth": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "NOOOO! NOW YOU HERETICS WILL FACE MY GODLY WRATH!",
+      "RAAARRRR! I WILL DEVOL YOU!",
+      "I WILL MAKE YOU ZHEE!"
+    ],
+    "slowness": 2,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

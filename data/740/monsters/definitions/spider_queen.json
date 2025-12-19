@@ -1,0 +1,66 @@
+{
+  "creatureStatistics": {
+    "name": "Spider Queen",
+    "health": 10000,
+    "maxHealth": 10000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 280,
+    "attack": 1,
+    "attackSpeed": 2000,
+    "defense": 0,
+    "outfit": {
+      "id": 219
+    }
+  },
+  "experience": 120,
+  "corpse": 2807,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0,
+      "range": 1,
+      "duration": 5000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "elements": {
+    "energy": 10,
+    "ice": -10,
+    "fire": -15
+  },
+  "immunities": {
+    "physical": true,
+    "outfit": true,
+    "drunk": true,
+    "invisible": true,
+    "earth": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

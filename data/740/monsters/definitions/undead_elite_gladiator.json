@@ -1,0 +1,180 @@
+{
+  "creatureStatistics": {
+    "name": "Undead Elite Gladiator",
+    "health": 8000,
+    "maxHealth": 8000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 300,
+    "attack": 550,
+    "attackSpeed": 2000,
+    "defense": 85,
+    "outfit": {
+      "id": 306
+    },
+    "armor": 85
+  },
+  "experience": 4740,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.15,
+      "duration": 3000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 550
+    },
+    {
+      "name": "physical",
+      "interval": 1500,
+      "chance": 0.2,
+      "min": 300,
+      "max": 550,
+      "range": 7,
+      "shootEffect": "whirlwindsword"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 300,
+      "max": 500,
+      "range": 5,
+      "radius": 3,
+      "areaEffect": "blackspark"
+    }
+  ],
+  "elements": {
+    "energy": 20,
+    "earth": -10,
+    "fire": 80,
+    "holy": 10,
+    "death": -5
+  },
+  "immunities": {
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 40
+    },
+    {
+      "id": 8872,
+      "probability": 0.24463,
+      "name": "belted cape"
+    },
+    {
+      "id": 2399,
+      "probability": 0.15123,
+      "name": "throwing star",
+      "min": 1,
+      "max": 18
+    },
+    {
+      "id": 2419,
+      "probability": 0.11349,
+      "name": "scimitar"
+    },
+    {
+      "id": 2430,
+      "probability": 0.08802,
+      "name": "knight axe"
+    },
+    {
+      "id": 8473,
+      "probability": 0.087,
+      "name": "ultimate health potion"
+    },
+    {
+      "id": 2647,
+      "probability": 0.05297,
+      "name": "plate legs"
+    },
+    {
+      "id": 7591,
+      "probability": 0.0522,
+      "name": "great health potion"
+    },
+    {
+      "id": 5885,
+      "probability": 0.05207,
+      "name": "flask of warrior's sweat"
+    },
+    {
+      "id": 10573,
+      "probability": 0.05054,
+      "name": "broken gladiator shield"
+    },
+    {
+      "id": 3965,
+      "probability": 0.05015,
+      "name": "hunting spear"
+    },
+    {
+      "id": 2200,
+      "probability": 0.0229,
+      "name": "protection amulet"
+    },
+    {
+      "id": 2463,
+      "probability": 0.0206,
+      "name": "plate armor"
+    },
+    {
+      "id": 2377,
+      "probability": 0.01919,
+      "name": "two handed sword"
+    },
+    {
+      "id": 2490,
+      "probability": 0.01535,
+      "name": "dark helmet"
+    },
+    {
+      "id": 2165,
+      "probability": 0.0096,
+      "name": "stealth ring"
+    },
+    {
+      "id": 7383,
+      "probability": 0.00192,
+      "name": "relic sword"
+    },
+    {
+      "id": 2497,
+      "probability": 0.00115,
+      "name": "crusader helmet"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

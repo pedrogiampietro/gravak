@@ -1,0 +1,142 @@
+{
+  "creatureStatistics": {
+    "name": "Primitive",
+    "health": 200,
+    "maxHealth": 200,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 300,
+    "attack": 32,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 143
+    },
+    "armor": 20
+  },
+  "experience": 45,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 5,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 32
+    },
+    {
+      "name": "drunk",
+      "interval": 1000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "shootEffect": "energy"
+    },
+    {
+      "name": "fire",
+      "interval": 1000,
+      "chance": 0.34,
+      "min": 20,
+      "max": 20,
+      "range": 7,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "outfit",
+      "interval": 1000,
+      "chance": 0.02,
+      "min": 0,
+      "max": 0,
+      "radius": 4,
+      "target": false,
+      "duration": 10000,
+      "areaEffect": "bluebubble"
+    }
+  ],
+  "immunities": {
+    "energy": true,
+    "fire": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "We don't need a future!",
+      "I'll rook you all!",
+      "They thought they'd beaten us!",
+      "You are history!",
+      "There can only be one world!",
+      "Valor who?",
+      "Die noob!",
+      "There are no dragons!",
+      "I'll quit forever! Again...",
+      "You all are noobs!",
+      "Beware of the cyclops!",
+      "Just had a disconnect.",
+      "Magic is only good for girls!",
+      "We'll be back!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.125,
+      "name": "gold coin",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2385,
+      "probability": 0.1025,
+      "name": "sabre"
+    },
+    {
+      "id": 2386,
+      "probability": 0.1225,
+      "name": "axe"
+    },
+    {
+      "id": 2484,
+      "probability": 0.07,
+      "name": "studded armor"
+    },
+    {
+      "id": 2526,
+      "probability": 0.012,
+      "name": "studded shield"
+    },
+    {
+      "id": 6570,
+      "probability": 0.005,
+      "name": "blue surprise bag"
+    },
+    {
+      "id": 6571,
+      "probability": 0.005,
+      "name": "red surprise bag"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

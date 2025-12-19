@@ -41,22 +41,25 @@ const Player = function (data) {
   // Inherit from Creature class
   Creature.call(this, data.properties);
 
-  console.log("=== DEBUG PLAYER CONSTRUCTOR ===");
-  console.log("Initial data properties:", data.properties);
 
   this.templePosition = Position.prototype.fromLiteral(data.templePosition);
 
-  // Add the player properties
+  // Add the player properties (sex, role, vocation, etc.)
   this.addPlayerProperties(data.properties);
 
-  console.log("=== AFTER PLAYER CONSTRUCTION ===");
-  console.log(`Initial Health: ${this.getProperty(CONST.PROPERTIES.HEALTH)}`);
-  console.log(
-    `Initial Health Max: ${this.getProperty(CONST.PROPERTIES.HEALTH_MAX)}`
-  );
-
   // The player skills and experience
+  // IMPORTANT: Skills constructor calls setMaximumProperties() which sets HEALTH_MAX, MANA_MAX, CAPACITY_MAX
   this.skills = new Skills(this, data.skills);
+
+  // If player logged in with zero health (died previously), restore them
+  // This MUST be after Skills init so HEALTH_MAX is properly calculated from level/vocation
+  if (this.getProperty(CONST.PROPERTIES.HEALTH) <= 0) {
+    let healthMax = this.getProperty(CONST.PROPERTIES.HEALTH_MAX);
+    let manaMax = this.getProperty(CONST.PROPERTIES.MANA_MAX);
+    console.log("Respawning player with Health:", healthMax, "Mana:", manaMax);
+    this.setProperty(CONST.PROPERTIES.HEALTH, healthMax);
+    this.setProperty(CONST.PROPERTIES.MANA, manaMax);
+  }
 
   // Child classes with data for player handlers
   this.socketHandler = new SocketHandler(this);
@@ -88,8 +91,6 @@ Player.prototype.addPlayerProperties = function (properties) {
    * Adds the properties of the player to the available properties
    */
 
-  console.log("=== DEBUG ADDING PLAYER PROPERTIES ===");
-  console.log("Initial properties:", properties);
 
   // Add these properties
   this.properties.add(CONST.PROPERTIES.MOUNTS, properties.availableMounts);
@@ -98,9 +99,6 @@ Player.prototype.addPlayerProperties = function (properties) {
   this.properties.add(CONST.PROPERTIES.ROLE, properties.role);
   this.properties.add(CONST.PROPERTIES.VOCATION, properties.vocation);
 
-  console.log("=== AFTER ADDING PROPERTIES ===");
-  console.log(`Health: ${this.getProperty(CONST.PROPERTIES.HEALTH)}`);
-  console.log(`Health Max: ${this.getProperty(CONST.PROPERTIES.HEALTH_MAX)}`);
 };
 
 Player.prototype.getTarget = function () {
@@ -326,15 +324,10 @@ Player.prototype.decreaseHealth = function (source, amount) {
    * Decreases the health of the player
    */
 
-  // Add debug logs
-  console.log("=== DEBUG HEALTH DECREASE ===");
-  console.log(
-    `Current Health before decrease: ${this.getProperty(
-      CONST.PROPERTIES.HEALTH
-    )}`
-  );
-  console.log(`Max Health: ${this.getProperty(CONST.PROPERTIES.HEALTH_MAX)}`);
-  console.log(`Amount to decrease: ${amount}`);
+  // Prevent damage if dead
+  if (this.isDead) {
+    return;
+  }
 
   // Put the target player in combat
   this.combatLock.activate();
@@ -342,16 +335,14 @@ Player.prototype.decreaseHealth = function (source, amount) {
   // Change the property
   this.incrementProperty(CONST.PROPERTIES.HEALTH, -amount);
 
-  // Log after decrease
-  console.log(
-    `Health after decrease: ${this.getProperty(CONST.PROPERTIES.HEALTH)}`
-  );
-
   // Send damage color to the player
   this.broadcast(new EmotePacket(this, String(amount), CONST.COLOR.RED));
 
-  // Zero health means disconnect the player
+  // Zero health means death
   if (this.isZeroHealth()) {
+    if (this.isDead) {
+      return;
+    }
     return this.handleDeath();
   }
 };
@@ -374,41 +365,51 @@ Player.prototype.handleDeath = function () {
   /*
    * Function Player.handleDeath
    * Called when the player dies because of zero health
+   * Shows a death message and disconnects - player respawns at temple on reconnect
    */
 
-  console.log("=== DEBUG PLAYER DEATH ===");
-  console.log(
-    `Health before death: ${this.getProperty(CONST.PROPERTIES.HEALTH)}`
-  );
-  console.log(
-    `Health Max before death: ${this.getProperty(CONST.PROPERTIES.HEALTH_MAX)}`
-  );
+  // Prevent multiple calls
+  if (this.isDead) {
+    return;
+  }
 
-  // Restore the player to full health and mana
-  this.setFull(CONST.PROPERTIES.HEALTH);
-  this.setFull(CONST.PROPERTIES.MANA);
+  this.isDead = true;
 
-  console.log("=== AFTER DEATH RESTORATION ===");
-  console.log(
-    `Health after restoration: ${this.getProperty(CONST.PROPERTIES.HEALTH)}`
-  );
-  console.log(
-    `Health Max after restoration: ${this.getProperty(
-      CONST.PROPERTIES.HEALTH_MAX
-    )}`
-  );
+  // Send death message screen to client (like Tibia's "You are dead" modal)
+  // 0x28 (Death Window) should trigger the modal natively without disconnect
+  const { DeathPacket, CancelMessagePacket, CreatureForgetPacket } = requireModule("protocol");
+  this.write(new DeathPacket());
+  this.write(new CancelMessagePacket("You are dead."));
 
-  // Human corpse
+  // Broadcast CreatureForgetPacket to all spectators to make the player "disappear"
+  // This removes the player sprite from the screen without changing outfit
+  // We also write directly to the player since broadcast may not include self
+  let forgetPacket = new CreatureForgetPacket(this.getId());
+  this.write(forgetPacket);
+  this.broadcast(forgetPacket);
+
+  // Explicitly force nearby monsters to drop target immediately to prevent lingering attacks
+  let chunk = gameServer.world.getChunkFromWorldPosition(this.getPosition());
+  if (chunk) {
+    let dropTarget = (monster) => {
+      if (monster.hasTarget() && monster.getTarget() === this) {
+        monster.setTarget(null);
+      }
+    };
+    chunk.monsters.forEach(dropTarget);
+    chunk.neighbours.forEach(neighbour => neighbour.monsters.forEach(dropTarget));
+  }
+
+  // Create the player corpse at the death location
   let corpse = gameServer.database.createThing(this.getCorpse());
 
-  gameServer.world.addTopThing(this.getPosition(), corpse);
-  gameServer.world.addSplash(2016, this.getPosition(), corpse.getFluidType());
+  if (corpse !== null) {
+    gameServer.world.addTopThing(this.getPosition(), corpse);
+    gameServer.world.addSplash(2016, this.getPosition(), corpse.getFluidType());
+  }
 
-  // Set the position
-  gameServer.world.creatureHandler.teleportCreature(this, this.templePosition);
-
-  // Disconnect the socket
-  this.socketHandler.disconnect();
+  // Mark that player should respawn at temple on next login
+  this.__spawnAtTemple = true;
 };
 
 Player.prototype.consumeAmmunition = function () {
@@ -453,13 +454,11 @@ Player.prototype.syncProperties = function () {
    * Synchronizes all player properties before saving
    */
 
-  console.log("=== DEBUG SYNC PROPERTIES ===");
 
   // Update maximum properties based on level first
   this.skills.setMaximumProperties();
 
   // Log current values before sync
-  console.log("Before sync:");
   console.log(
     `Health: ${this.getProperty(CONST.PROPERTIES.HEALTH)}/${this.getProperty(
       CONST.PROPERTIES.HEALTH_MAX
@@ -500,7 +499,6 @@ Player.prototype.syncProperties = function () {
   }
 
   // Log final values after sync
-  console.log("After sync:");
   console.log(
     `Health: ${this.getProperty(CONST.PROPERTIES.HEALTH)}/${this.getProperty(
       CONST.PROPERTIES.HEALTH_MAX
@@ -583,11 +581,9 @@ Player.prototype.toJSON = function () {
     availableOutfits: this.getProperty(CONST.PROPERTIES.OUTFITS),
   };
 
-  console.log("=== DEBUG PLAYER TOJSON ===");
-  console.log("Current properties:", currentProperties);
 
   return new Object({
-    position: this.position,
+    position: this.__spawnAtTemple ? this.templePosition : this.position,
     templePosition: this.templePosition,
     properties: currentProperties,
     skills: this.skills.toJSON(),
@@ -743,11 +739,6 @@ Player.prototype.hasSufficientCapacity = function (thing) {
   let weightInUnits = thing.getWeight();
   let weightInOz = weightInUnits / 100;
 
-  console.log("=== DEBUG CAPACITY CHECK ===");
-  console.log("Player capacity (oz):", capacity);
-  console.log("Item weight (units):", weightInUnits);
-  console.log("Item weight (oz):", weightInOz);
-  console.log("Has sufficient:", capacity >= weightInOz);
 
   return capacity >= weightInOz;
 };
@@ -821,33 +812,25 @@ Player.prototype.changeCapacity = function (value) {
    * Note: value is in 1/100 oz units (from item weights)
    */
 
-  console.log("=== DEBUG CHANGE CAPACITY ===");
-  console.log("Value received (units):", value);
 
   // Guard: check if CAPACITY property exists
   let currentCapacity = this.getProperty(CONST.PROPERTIES.CAPACITY);
   if (currentCapacity === null) {
-    console.log("CAPACITY property doesn't exist, skipping");
     // Property doesn't exist yet, skip during initialization
     return;
   }
 
-  console.log("Current capacity (oz):", currentCapacity);
 
   // Convert value from 1/100 oz to oz for capacity change
   // Use Math.trunc() instead of Math.floor() for symmetric truncation
   // Math.floor(-7.5) = -8, Math.floor(7.5) = 7 (asymmetric!)
   // Math.trunc(-7.5) = -7, Math.trunc(7.5) = 7 (symmetric!)
   let valueInOz = Math.trunc(value / 100);
-  console.log("Value to change (oz):", valueInOz);
 
   // Calculate new capacity, ensuring it doesn't go below 0
   let newCapacity = Math.max(0, currentCapacity + valueInOz);
-  console.log("New capacity (oz):", newCapacity);
-  console.log("CONST.PROPERTIES.CAPACITY:", CONST.PROPERTIES.CAPACITY);
 
   this.setProperty(CONST.PROPERTIES.CAPACITY, newCapacity);
-  console.log("setProperty called for CAPACITY");
 };
 
 Player.prototype.__updateCurrentCapacity = function () {
@@ -872,12 +855,6 @@ Player.prototype.__updateCurrentCapacity = function () {
   // Convert back to oz for display
   let currentCapacityOz = Math.floor(currentCapacity / 100);
 
-  console.log("=== DEBUG CAPACITY CALCULATION ===");
-  console.log(`Total Weight (units): ${totalWeight}`);
-  console.log(`Max Capacity (oz): ${maxCapacity}`);
-  console.log(`Max Capacity (units): ${maxCapacityUnits}`);
-  console.log(`Current Capacity (units): ${currentCapacity}`);
-  console.log(`Current Capacity (oz): ${currentCapacityOz}`);
 
   this.setProperty(CONST.PROPERTIES.CAPACITY, currentCapacityOz);
 };
@@ -899,9 +876,6 @@ Skills.prototype.setMaximumProperties = function () {
     level
   );
 
-  console.log(`Health: ${health}`);
-  console.log(`Mana: ${mana}`);
-  console.log(`Capacity: ${capacity}`);
 
   // Add these parameters too
   this.__player.properties.add(CONST.PROPERTIES.HEALTH_MAX, health);
@@ -919,7 +893,6 @@ Player.prototype.setFull = function (type) {
 
   // Add debug logs for health
   if (type === CONST.PROPERTIES.HEALTH) {
-    console.log("=== DEBUG SET FULL HEALTH ===");
     console.log(
       `Current Health before set full: ${this.getProperty(
         CONST.PROPERTIES.HEALTH
@@ -964,13 +937,9 @@ Player.prototype.incrementProperty = function (type, amount) {
     type === CONST.PROPERTIES.HEALTH ||
     type === CONST.PROPERTIES.HEALTH_MAX
   ) {
-    console.log("=== DEBUG INCREMENT PROPERTY ===");
-    console.log(`Property Type: ${type}`);
-    console.log(`Current Health: ${this.getProperty(CONST.PROPERTIES.HEALTH)}`);
     console.log(
       `Current Health Max: ${this.getProperty(CONST.PROPERTIES.HEALTH_MAX)}`
     );
-    console.log(`Amount to increment: ${amount}`);
   }
 
   // Set the health of the creature
@@ -1003,11 +972,6 @@ Player.prototype.setProperty = function (type, value) {
     type === CONST.PROPERTIES.HEALTH ||
     type === CONST.PROPERTIES.HEALTH_MAX
   ) {
-    console.log("=== DEBUG SET PROPERTY ===");
-    console.log(`Property Type: ${type}`);
-    console.log(`Current Value: ${this.getProperty(type)}`);
-    console.log(`New Value: ${value}`);
-    console.log(`Current Health: ${this.getProperty(CONST.PROPERTIES.HEALTH)}`);
     console.log(
       `Current Health Max: ${this.getProperty(CONST.PROPERTIES.HEALTH_MAX)}`
     );

@@ -1,0 +1,111 @@
+{
+  "creatureStatistics": {
+    "name": "Elder Mummy",
+    "health": 850,
+    "maxHealth": 850,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 180,
+    "attack": 120,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 65
+    },
+    "armor": 30
+  },
+  "experience": 560,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 120
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 130,
+      "range": 1,
+      "target": true,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -300,
+      "duration": 15000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "ice": 20
+  },
+  "immunities": {
+    "earth": true,
+    "death": true,
+    "lifedrain": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "loot": [
+    {
+      "id": 2124,
+      "probability": 0.0165
+    },
+    {
+      "id": 2148,
+      "probability": 0.43,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.43,
+      "name": "gold coin",
+      "min": 1,
+      "max": 60
+    },
+    {
+      "id": 2162,
+      "probability": 0.06
+    },
+    {
+      "id": 2575,
+      "probability": 0.2,
+      "name": "worm",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 13472,
+      "probability": 0.024
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

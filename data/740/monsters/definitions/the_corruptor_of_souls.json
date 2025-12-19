@@ -1,0 +1,105 @@
+{
+  "creatureStatistics": {
+    "name": "The Corruptor Of Souls",
+    "health": 290000,
+    "maxHealth": 290000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 450,
+    "attack": 500,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 875
+    },
+    "armor": 30
+  },
+  "experience": 112000,
+  "corpse": 2813,
+  "fluidType": 4,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 500
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 0,
+      "max": 500,
+      "length": 9,
+      "spread": 7,
+      "areaEffect": "smallclouds"
+    },
+    {
+      "name": "remorseless wave",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 0,
+      "max": 500,
+      "radius": 7,
+      "areaEffect": "blackspark"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 0,
+      "max": 500,
+      "length": 9,
+      "spread": 0,
+      "areaEffect": "stun"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 0,
+      "max": 500,
+      "length": 9,
+      "spread": 0,
+      "areaEffect": "mortarea"
+    }
+  ],
+  "elements": {
+    "physical": 100,
+    "energy": 100,
+    "earth": 100,
+    "fire": 100,
+    "ice": 100,
+    "holy": 100,
+    "death": 100
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

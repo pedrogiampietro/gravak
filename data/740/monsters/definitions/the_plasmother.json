@@ -1,0 +1,142 @@
+{
+  "creatureStatistics": {
+    "name": "The Plasmother",
+    "health": 7500,
+    "maxHealth": 7500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 310,
+    "attack": 100,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 238
+    },
+    "armor": 30
+  },
+  "experience": 12000,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.75,
+      "min": 505,
+      "max": 605,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.08,
+      "min": 0,
+      "max": 0,
+      "radius": 6,
+      "target": false,
+      "speedChange": -800,
+      "duration": 10000,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 200,
+      "max": 350,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "earth",
+      "interval": 3000,
+      "chance": 0.15,
+      "min": 200,
+      "max": 530,
+      "radius": 4,
+      "target": true,
+      "areaEffect": "greenspark",
+      "shootEffect": "poison"
+    }
+  ],
+  "elements": {
+    "fire": -20,
+    "energy": 15
+  },
+  "immunities": {
+    "earth": true,
+    "lifedrain": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Blubb"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2146,
+      "probability": 0.05,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2148,
+      "probability": 0.2,
+      "name": "gold coin",
+      "min": 1,
+      "max": 70
+    },
+    {
+      "id": 2148,
+      "probability": 0.2,
+      "name": "gold coin",
+      "min": 1,
+      "max": 60
+    },
+    {
+      "id": 2148,
+      "probability": 0.2,
+      "name": "gold coin",
+      "min": 1,
+      "max": 45
+    },
+    {
+      "id": 2152,
+      "probability": 0.25,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 13
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

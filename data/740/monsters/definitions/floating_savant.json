@@ -1,0 +1,168 @@
+{
+  "creatureStatistics": {
+    "name": "Floating Savant",
+    "health": 8000,
+    "maxHealth": 8000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 330,
+    "attack": 300,
+    "attackSpeed": 2000,
+    "defense": 74,
+    "outfit": {
+      "id": 1063
+    },
+    "armor": 74
+  },
+  "experience": 8000,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 300
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 390,
+      "max": 480,
+      "range": 7,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.14,
+      "min": 390,
+      "max": 480,
+      "range": 7,
+      "shootEffect": "energy"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 300,
+      "max": 400,
+      "radius": 3,
+      "areaEffect": "explosionarea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 490,
+      "max": 630,
+      "length": 4,
+      "spread": 3,
+      "areaEffect": "fire"
+    }
+  ],
+  "elements": {
+    "fire": 100,
+    "ice": -10,
+    "death": 50
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "summons": [
+    {
+      "name": "Lava Lurker Attendant",
+      "interval": 2000,
+      "chance": 0.15,
+      "maxSummons": 1
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "tssooosh tsoooosh tssoooosh!",
+      "We didn't stop the fire!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2156,
+      "probability": 0.71588,
+      "name": "red gem",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 5911,
+      "probability": 0.30501,
+      "name": "red piece of cloth",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 6500,
+      "probability": 0.23692,
+      "name": "demonic essence"
+    },
+    {
+      "id": 7760,
+      "probability": 0.20613,
+      "name": "small enchanted ruby",
+      "min": 1,
+      "max": 14
+    },
+    {
+      "id": 11237,
+      "probability": 0.20009,
+      "name": "book of necromantic rituals"
+    },
+    {
+      "id": 18420,
+      "probability": 0.19344,
+      "name": "red crystal fragment",
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 6558,
+      "probability": 0.1546,
+      "name": "flask of demonic blood"
+    },
+    {
+      "id": 3456,
+      "probability": 0.05091,
+      "name": "pick"
+    },
+    {
+      "id": 9969,
+      "probability": 0.00263,
+      "name": "black skull (item)"
+    },
+    {
+      "id": 30530,
+      "probability": 0.00108,
+      "name": "sample of monster blood"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "creatureStatistics": {
+    "name": "Azerus",
+    "health": 26000,
+    "maxHealth": 26000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 320,
+    "attack": 900,
+    "attackSpeed": 2000,
+    "defense": 65,
+    "outfit": {
+      "id": 309
+    },
+    "armor": 40
+  },
+  "experience": 6000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.11,
+      "min": 400,
+      "max": 900,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 900
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 2000,
+      "range": 7,
+      "shootEffect": "energy",
+      "areaEffect": "poff"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 800,
+      "range": 7,
+      "radius": 7,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "bigclouds"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 524,
+      "range": 7,
+      "shootEffect": "suddendeath",
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 1000,
+      "chance": 0.1,
+      "min": 100,
+      "max": 500,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "sleep"
+    }
+  ],
+  "summons": [
+    {
+      "name": "Rift Worm",
+      "interval": 2000,
+      "chance": 0.3,
+      "maxSummons": 10
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "The ultimate will finally consume this unworthy existence!",
+      "My masters and I will tear down barriers and join the ultimate in its realm!",
+      "The power of the Yalahari will all be mine!",
+      "He who has returned from beyond has taught me secrets you can't even grasp!",
+      "You can't hope to penetrate my shields!",
+      "Do you really think you could beat me?"
+    ],
+    "slowness": 5,
+    "chance": 0.12
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

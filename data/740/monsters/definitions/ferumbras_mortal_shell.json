@@ -1,0 +1,420 @@
+{
+  "creatureStatistics": {
+    "name": "Ferumbras Mortal Shell",
+    "health": 300000,
+    "maxHealth": 300000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 390,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 120,
+    "outfit": {
+      "id": 229
+    },
+    "armor": 100
+  },
+  "experience": 100000,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 2500,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.23,
+      "min": 600,
+      "max": 2490,
+      "areaEffect": "greenshimmer"
+    },
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.03,
+      "min": 20000,
+      "max": 35000,
+      "areaEffect": "greenshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.14,
+      "speedChange": 700,
+      "duration": 7000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.1,
+      "duration": 9000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 250,
+      "max": 520,
+      "radius": 6,
+      "target": false,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.16,
+      "min": 225,
+      "max": 410,
+      "radius": 6,
+      "target": false,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 425,
+      "max": 810,
+      "radius": 9,
+      "target": false,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.21,
+      "min": 400,
+      "max": 650,
+      "radius": 9,
+      "target": false,
+      "areaEffect": "energy"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.21,
+      "min": 200,
+      "max": 450,
+      "radius": 6,
+      "target": false,
+      "areaEffect": "poff"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.17,
+      "min": 590,
+      "max": 1050,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "greenspark"
+    }
+  ],
+  "elements": {
+    "holy": 65,
+    "death": 65,
+    "ice": 65,
+    "earth": 65
+  },
+  "immunities": {
+    "lifedrain": true,
+    "paralyze": true,
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Demon",
+      "interval": 2000,
+      "chance": 0.11,
+      "maxSummons": 3
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "INSECTS!",
+      "I' STILL POWERFUL ENOUGH TO CRUSH YOU!",
+      "If you strike me down, I shall become more powerful than you could possibly imagine!"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 7895,
+      "probability": 0.008
+    },
+    {
+      "id": 8869,
+      "probability": 0.004
+    },
+    {
+      "id": 2146,
+      "probability": 0.1,
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 7416,
+      "probability": 0.008
+    },
+    {
+      "id": 7427,
+      "probability": 0.008
+    },
+    {
+      "id": 2466,
+      "probability": 0.008
+    },
+    {
+      "id": 8930,
+      "probability": 0.004
+    },
+    {
+      "id": 25429,
+      "probability": 0.008
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2149,
+      "probability": 0.1,
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 7632,
+      "probability": 0.01
+    },
+    {
+      "id": 2156,
+      "probability": 0.01
+    },
+    {
+      "id": 8868,
+      "probability": 0.003
+    },
+    {
+      "id": 2127,
+      "probability": 0.01
+    },
+    {
+      "id": 7423,
+      "probability": 0.003
+    },
+    {
+      "id": 2150,
+      "probability": 0.1,
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 25420,
+      "probability": 0.008
+    },
+    {
+      "id": 7422,
+      "probability": 0.008
+    },
+    {
+      "id": 2143,
+      "probability": 0.1,
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 7418,
+      "probability": 0.006
+    },
+    {
+      "id": 2539,
+      "probability": 0.008
+    },
+    {
+      "id": 2520,
+      "probability": 0.008
+    },
+    {
+      "id": 25521,
+      "probability": 0.0015
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 7896,
+      "probability": 0.008
+    },
+    {
+      "id": 2472,
+      "probability": 0.004
+    },
+    {
+      "id": 25414,
+      "probability": 0.001
+    },
+    {
+      "id": 7403,
+      "probability": 0.008
+    },
+    {
+      "id": 25522,
+      "probability": 0.005
+    },
+    {
+      "id": 8926,
+      "probability": 0.003
+    },
+    {
+      "id": 25387,
+      "probability": 0.03
+    },
+    {
+      "id": 7410,
+      "probability": 0.008
+    },
+    {
+      "id": 2158,
+      "probability": 0.008
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "min": 1,
+      "max": 25
+    },
+    {
+      "id": 8928,
+      "probability": 0.004
+    },
+    {
+      "id": 7414,
+      "probability": 0.008
+    },
+    {
+      "id": 5903,
+      "probability": 0.001
+    },
+    {
+      "id": 25425,
+      "probability": 0.008
+    },
+    {
+      "id": 7382,
+      "probability": 0.008
+    },
+    {
+      "id": 2155,
+      "probability": 0.04
+    },
+    {
+      "id": 2514,
+      "probability": 0.006
+    },
+    {
+      "id": 7435,
+      "probability": 0.008
+    },
+    {
+      "id": 25172,
+      "probability": 1,
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2144,
+      "probability": 0.1,
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2145,
+      "probability": 0.1,
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 25427,
+      "probability": 0.008
+    },
+    {
+      "id": 9970,
+      "probability": 0.1,
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 25423,
+      "probability": 0.008
+    },
+    {
+      "id": 25523,
+      "probability": 0.005
+    },
+    {
+      "id": 8885,
+      "probability": 0.008
+    },
+    {
+      "id": 2415,
+      "probability": 0.007
+    },
+    {
+      "id": 2522,
+      "probability": 0.001
+    },
+    {
+      "id": 7894,
+      "probability": 0.008
+    },
+    {
+      "id": 9971,
+      "probability": 0.008
+    },
+    {
+      "id": 7405,
+      "probability": 0.008
+    },
+    {
+      "id": 7411,
+      "probability": 0.004
+    },
+    {
+      "id": 25393,
+      "probability": 0.035
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

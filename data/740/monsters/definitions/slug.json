@@ -1,0 +1,75 @@
+{
+  "creatureStatistics": {
+    "name": "Slug",
+    "health": 255,
+    "maxHealth": 255,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 150,
+    "attack": 44,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 407
+    },
+    "armor": 15
+  },
+  "experience": 70,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 44
+    },
+    {
+      "name": "earth",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 5,
+      "max": 40,
+      "range": 7,
+      "target": true,
+      "shootEffect": "poison"
+    }
+  ],
+  "elements": {
+    "energy": 20,
+    "death": 7
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.62,
+      "name": "gold coin",
+      "min": 1,
+      "max": 40
+    },
+    {
+      "id": 2575,
+      "probability": 0.05,
+      "name": "worm",
+      "min": 1,
+      "max": 3
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

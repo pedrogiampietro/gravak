@@ -1,0 +1,274 @@
+{
+  "creatureStatistics": {
+    "name": "Lost Berserker",
+    "health": 5900,
+    "maxHealth": 5900,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 300,
+    "attack": 501,
+    "attackSpeed": 2000,
+    "defense": 80,
+    "outfit": {
+      "id": 496
+    },
+    "armor": 80
+  },
+  "experience": 4400,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.05,
+      "duration": 3000,
+      "areaEffect": "teleport"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 501
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 300,
+      "range": 7,
+      "shootEffect": "whirlwindaxe"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 250,
+      "range": 7,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "explosion",
+      "areaEffect": "explosionarea"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 150,
+      "max": 250,
+      "radius": 5,
+      "spread": 0,
+      "target": false,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "radius": 2,
+      "spread": 0,
+      "target": false,
+      "speedChange": -800,
+      "duration": 20000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "radius": 4,
+      "target": true,
+      "duration": 6000,
+      "areaEffect": "stun"
+    }
+  ],
+  "elements": {
+    "physical": 20,
+    "energy": 17,
+    "fire": 10,
+    "ice": 40,
+    "death": 15
+  },
+  "immunities": {
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Kill! Kill! Kill!",
+      "Death! Death! Death!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 200
+    },
+    {
+      "id": 2152,
+      "probability": 0.99965,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 9
+    },
+    {
+      "id": 2789,
+      "probability": 0.15482,
+      "name": "brown mushroom",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7590,
+      "probability": 0.14232,
+      "name": "great mana potion"
+    },
+    {
+      "id": 7591,
+      "probability": 0.13497,
+      "name": "great health potion"
+    },
+    {
+      "id": 5880,
+      "probability": 0.08663,
+      "name": "iron ore"
+    },
+    {
+      "id": 9970,
+      "probability": 0.08033,
+      "name": "small topaz",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 18436,
+      "probability": 0.07974,
+      "name": "drill bolt",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 18417,
+      "probability": 0.07542,
+      "name": "brown crystal splinter",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 18421,
+      "probability": 0.06667,
+      "name": "green crystal fragment"
+    },
+    {
+      "id": 18418,
+      "probability": 0.04752,
+      "name": "blue crystal splinter"
+    },
+    {
+      "id": 2114,
+      "probability": 0.03783,
+      "name": "piggy bank"
+    },
+    {
+      "id": 18414,
+      "probability": 0.03596,
+      "name": "violet crystal shard"
+    },
+    {
+      "id": 2213,
+      "probability": 0.02347,
+      "name": "dwarven ring"
+    },
+    {
+      "id": 2430,
+      "probability": 0.02113,
+      "name": "knight axe"
+    },
+    {
+      "id": 13757,
+      "probability": 0.0188,
+      "name": "coal"
+    },
+    {
+      "id": 2515,
+      "probability": 0.01296,
+      "name": "guardian shield"
+    },
+    {
+      "id": 11339,
+      "probability": 0.00992,
+      "name": "clay lump"
+    },
+    {
+      "id": 2528,
+      "probability": 0.00899,
+      "name": "tower shield"
+    },
+    {
+      "id": 7452,
+      "probability": 0.00794,
+      "name": "spiked squelcher"
+    },
+    {
+      "id": 5904,
+      "probability": 0.00724,
+      "name": "magic sulphur"
+    },
+    {
+      "id": 2529,
+      "probability": 0.0063,
+      "name": "black shield"
+    },
+    {
+      "id": 7886,
+      "probability": 0.00619,
+      "name": "terra boots"
+    },
+    {
+      "id": 7427,
+      "probability": 0.00479,
+      "name": "chaos mace"
+    },
+    {
+      "id": 2432,
+      "probability": 0.00409,
+      "name": "fire axe"
+    },
+    {
+      "id": 2498,
+      "probability": 0.00198,
+      "name": "royal helmet"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

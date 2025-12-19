@@ -1,0 +1,155 @@
+{
+  "creatureStatistics": {
+    "name": "Quara Predator",
+    "health": 2200,
+    "maxHealth": 2200,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 450,
+    "attack": 470,
+    "attackSpeed": 2000,
+    "defense": 40,
+    "outfit": {
+      "id": 20
+    },
+    "armor": 40
+  },
+  "experience": 1600,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 270,
+      "duration": 5000,
+      "areaEffect": "greenshimmer"
+    },
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 25,
+      "max": 75,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 470
+    }
+  ],
+  "elements": {
+    "earth": -10,
+    "energy": -25
+  },
+  "immunities": {
+    "lifedrain": true,
+    "invisible": true,
+    "drown": true,
+    "fire": true,
+    "ice": true
+  },
+  "sayings": {
+    "texts": [
+      "Rrrah!",
+      "Rraaar!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.78107,
+      "name": "gold coin",
+      "min": 1,
+      "max": 154
+    },
+    {
+      "id": 12447,
+      "probability": 0.09797,
+      "name": "quara bone"
+    },
+    {
+      "id": 7378,
+      "probability": 0.0926,
+      "name": "royal spear",
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 2145,
+      "probability": 0.05322,
+      "name": "small diamond",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2670,
+      "probability": 0.04985,
+      "name": "shrimp"
+    },
+    {
+      "id": 2387,
+      "probability": 0.03005,
+      "name": "double axe"
+    },
+    {
+      "id": 5895,
+      "probability": 0.01922,
+      "name": "fish fin"
+    },
+    {
+      "id": 7591,
+      "probability": 0.01034,
+      "name": "great health potion"
+    },
+    {
+      "id": 7383,
+      "probability": 0.00657,
+      "name": "relic sword"
+    },
+    {
+      "id": 7368,
+      "probability": 0.00528,
+      "name": "assassin star"
+    },
+    {
+      "id": 7897,
+      "probability": 0.00462,
+      "name": "glacier robe"
+    },
+    {
+      "id": 5741,
+      "probability": 0.00382,
+      "name": "skull helmet"
+    },
+    {
+      "id": 13305,
+      "probability": 0.00022,
+      "name": "giant shrimp"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

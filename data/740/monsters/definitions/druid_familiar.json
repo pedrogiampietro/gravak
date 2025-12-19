@@ -1,0 +1,87 @@
+{
+  "creatureStatistics": {
+    "name": "Druid Familiar",
+    "health": 20000,
+    "maxHealth": 20000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 309,
+    "attack": 300,
+    "attackSpeed": 2000,
+    "defense": 55,
+    "outfit": {
+      "id": 993
+    },
+    "armor": 55
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.75,
+      "min": 500,
+      "max": 600,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 300
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 230,
+      "max": 260,
+      "range": 5,
+      "target": true,
+      "shootEffect": "earth",
+      "areaEffect": "stones"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 90,
+      "max": 150,
+      "length": 2,
+      "spread": 0,
+      "areaEffect": "groundshaker"
+    },
+    {
+      "name": "summon challenge",
+      "interval": 2000,
+      "chance": 0.4,
+      "min": 0,
+      "max": 0
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

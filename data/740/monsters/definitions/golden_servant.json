@@ -1,0 +1,161 @@
+{
+  "creatureStatistics": {
+    "name": "Golden Servant",
+    "health": 550,
+    "maxHealth": 550,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 100,
+    "attackSpeed": 2000,
+    "defense": 29,
+    "outfit": {
+      "id": 396
+    },
+    "armor": 29
+  },
+  "experience": 450,
+  "corpse": 2813,
+  "fluidType": 4,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 50,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 60,
+      "max": 100,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "energy",
+      "areaEffect": "yellowenergy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 80,
+      "max": 110,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "energy",
+      "areaEffect": "energy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 90,
+      "max": 150,
+      "length": 5,
+      "spread": 2,
+      "target": false,
+      "areaEffect": "yellowenergy"
+    }
+  ],
+  "elements": {
+    "energy": 25,
+    "earth": 80,
+    "fire": 15,
+    "ice": -5
+  },
+  "immunities": {
+    "holy": true,
+    "invisible": true,
+    "paralyze": true
+  },
+  "sayings": {
+    "texts": [
+      "Error. LOAD 'PROGRAM',8,1",
+      "Remain. Obedient."
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.84992,
+      "name": "gold coin",
+      "min": 1,
+      "max": 140
+    },
+    {
+      "id": 7618,
+      "probability": 0.04962,
+      "name": "health potion"
+    },
+    {
+      "id": 7620,
+      "probability": 0.0496,
+      "name": "mana potion"
+    },
+    {
+      "id": 2381,
+      "probability": 0.0303,
+      "name": "halberd"
+    },
+    {
+      "id": 2796,
+      "probability": 0.0151,
+      "name": "green mushroom"
+    },
+    {
+      "id": 9690,
+      "probability": 0.00943,
+      "name": "gear wheel"
+    },
+    {
+      "id": 8900,
+      "probability": 0.00524,
+      "name": "spellbook of enlightenment"
+    },
+    {
+      "id": 2165,
+      "probability": 0.00478,
+      "name": "stealth ring"
+    },
+    {
+      "id": 13758,
+      "probability": 0.00356,
+      "name": "slime mould"
+    },
+    {
+      "id": 13938,
+      "probability": 0.00036,
+      "name": "golden can of oil"
+    },
+    {
+      "id": 2466,
+      "probability": 0.00022,
+      "name": "golden armor"
+    },
+    {
+      "id": 2179,
+      "probability": 0.00008,
+      "name": "gold ring"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "creatureStatistics": {
+    "name": "Sword Of Vengeance",
+    "health": 2000,
+    "maxHealth": 2000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 360,
+    "attack": 242,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 0
+    },
+    "armor": 10
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 242
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 40,
+      "max": 160,
+      "radius": 6,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "berserk",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 40,
+      "max": 160
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 40,
+      "max": 100,
+      "length": 4,
+      "spread": 0,
+      "areaEffect": "energy"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

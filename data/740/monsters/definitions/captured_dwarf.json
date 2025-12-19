@@ -1,0 +1,41 @@
+{
+  "creatureStatistics": {
+    "name": "Captured Dwarf",
+    "health": 100,
+    "maxHealth": 100,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 538
+    },
+    "armor": 30
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

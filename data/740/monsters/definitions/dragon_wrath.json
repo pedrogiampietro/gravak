@@ -1,0 +1,130 @@
+{
+  "creatureStatistics": {
+    "name": "Dragon Wrath",
+    "health": 7800,
+    "maxHealth": 7800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 320,
+    "attack": 500,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 351
+    },
+    "armor": 45
+  },
+  "experience": 4600,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 70,
+      "max": 300,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 500
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 50,
+      "max": 250,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "bluebubble"
+    },
+    {
+      "name": "ghastly dragon curse",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 920,
+      "max": 1260,
+      "range": 7,
+      "shootEffect": "death",
+      "areaEffect": "smallclouds"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "range": 9,
+      "target": true,
+      "speedChange": -800,
+      "duration": 20000,
+      "areaEffect": "smallclouds"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 90,
+      "max": 250,
+      "range": 7,
+      "target": true,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.13,
+      "min": 70,
+      "max": 180,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "mortarea"
+    }
+  ],
+  "elements": {
+    "fire": 10,
+    "ice": 50,
+    "physical": -10,
+    "holy": -15,
+    "energy": -10
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "death": true,
+    "lifedrain": true,
+    "earth": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

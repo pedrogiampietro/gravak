@@ -1,0 +1,50 @@
+{
+  "creatureStatistics": {
+    "name": "Lonely Rotworm",
+    "health": 65,
+    "maxHealth": 65,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 116,
+    "attack": 1,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 26
+    },
+    "armor": 30
+  },
+  "experience": 40,
+  "corpse": 2824,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

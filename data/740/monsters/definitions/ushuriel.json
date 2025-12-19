@@ -1,0 +1,335 @@
+{
+  "creatureStatistics": {
+    "name": "Ushuriel",
+    "health": 31500,
+    "maxHealth": 31500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 440,
+    "attack": 1088,
+    "attackSpeed": 2000,
+    "defense": 45,
+    "outfit": {
+      "id": 12
+    },
+    "armor": 50
+  },
+  "experience": 10000,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.12,
+      "min": 400,
+      "max": 600,
+      "areaEffect": "greenshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.04,
+      "speedChange": 400,
+      "duration": 7000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1088
+    },
+    {
+      "name": "physical",
+      "interval": 1000,
+      "chance": 0.1,
+      "min": 250,
+      "max": 500,
+      "length": 10,
+      "spread": 0,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "death",
+      "interval": 1000,
+      "chance": 0.08,
+      "min": 30,
+      "max": 760,
+      "radius": 5,
+      "target": false,
+      "areaEffect": "mortarea",
+      "shootEffect": "death"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 200,
+      "max": 585,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "smallplants"
+    },
+    {
+      "name": "ice",
+      "interval": 1000,
+      "chance": 0.08,
+      "min": 0,
+      "max": 430,
+      "radius": 6,
+      "target": false,
+      "areaEffect": "icetornado"
+    },
+    {
+      "name": "drunk",
+      "interval": 3000,
+      "chance": 0.11,
+      "min": 0,
+      "max": 0,
+      "radius": 6,
+      "target": false,
+      "areaEffect": "purplenote"
+    },
+    {
+      "name": "energycondition",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 250,
+      "max": 250,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "energy"
+    }
+  ],
+  "elements": {
+    "physical": 50,
+    "fire": 30,
+    "energy": 30,
+    "ice": 30,
+    "earth": 30,
+    "holy": 25
+  },
+  "immunities": {
+    "death": true,
+    "lifedrain": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "You can't run or hide forever!",
+      "I'm the executioner of the Seven!",
+      "The final punishment awaits you!",
+      "The judgement is guilty! The sentence is death!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 6500,
+      "probability": 1,
+      "name": "demonic essence"
+    },
+    {
+      "id": 2789,
+      "probability": 0.96863,
+      "name": "brown mushroom",
+      "min": 1,
+      "max": 30
+    },
+    {
+      "id": 2148,
+      "probability": 0.96863,
+      "name": "gold coin",
+      "min": 1,
+      "max": 190
+    },
+    {
+      "id": 5880,
+      "probability": 0.43922,
+      "name": "iron ore"
+    },
+    {
+      "id": 5925,
+      "probability": 0.28235,
+      "name": "hardened bone",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 8473,
+      "probability": 0.26667,
+      "name": "ultimate health potion"
+    },
+    {
+      "id": 7591,
+      "probability": 0.2549,
+      "name": "great health potion"
+    },
+    {
+      "id": 2498,
+      "probability": 0.25294,
+      "name": "royal helmet"
+    },
+    {
+      "id": 8472,
+      "probability": 0.23725,
+      "name": "great spirit potion"
+    },
+    {
+      "id": 2177,
+      "probability": 0.21176,
+      "name": "life crystal"
+    },
+    {
+      "id": 7590,
+      "probability": 0.2098,
+      "name": "great mana potion"
+    },
+    {
+      "id": 5741,
+      "probability": 0.2098,
+      "name": "skull helmet"
+    },
+    {
+      "id": 2152,
+      "probability": 0.20784,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 30
+    },
+    {
+      "id": 9971,
+      "probability": 0.20196,
+      "name": "gold ingot"
+    },
+    {
+      "id": 2178,
+      "probability": 0.20196,
+      "name": "mind stone"
+    },
+    {
+      "id": 5669,
+      "probability": 0.2,
+      "name": "mysterious voodoo skull"
+    },
+    {
+      "id": 2475,
+      "probability": 0.19412,
+      "name": "warrior helmet"
+    },
+    {
+      "id": 7391,
+      "probability": 0.19216,
+      "name": "thaian sword"
+    },
+    {
+      "id": 2392,
+      "probability": 0.18824,
+      "name": "fire sword"
+    },
+    {
+      "id": 2176,
+      "probability": 0.17647,
+      "name": "orb"
+    },
+    {
+      "id": 9810,
+      "probability": 0.16471,
+      "name": "slightly rusted armor"
+    },
+    {
+      "id": 5892,
+      "probability": 0.1451,
+      "name": "huge chunk of crude iron"
+    },
+    {
+      "id": 2393,
+      "probability": 0.11961,
+      "name": "giant sword"
+    },
+    {
+      "id": 2419,
+      "probability": 0.1098,
+      "name": "scimitar"
+    },
+    {
+      "id": 5954,
+      "probability": 0.10784,
+      "name": "demon horn",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2383,
+      "probability": 0.10196,
+      "name": "spike sword"
+    },
+    {
+      "id": 7402,
+      "probability": 0.1,
+      "name": "dragon slayer"
+    },
+    {
+      "id": 7385,
+      "probability": 0.09216,
+      "name": "crimson sword"
+    },
+    {
+      "id": 2491,
+      "probability": 0.0902,
+      "name": "crown helmet"
+    },
+    {
+      "id": 2479,
+      "probability": 0.0902,
+      "name": "strange helmet"
+    },
+    {
+      "id": 7417,
+      "probability": 0.08431,
+      "name": "runed sword"
+    },
+    {
+      "id": 5891,
+      "probability": 0.05686,
+      "name": "enchanted chicken wing"
+    },
+    {
+      "id": 5884,
+      "probability": 0.05098,
+      "name": "spirit container"
+    },
+    {
+      "id": 6103,
+      "probability": 0.04118,
+      "name": "unholy book"
+    },
+    {
+      "id": 5885,
+      "probability": 0.03725,
+      "name": "flask of warrior's sweat"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "creatureStatistics": {
+    "name": "Zarabustor",
+    "health": 5100,
+    "maxHealth": 5100,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 440,
+    "attack": 130,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 130
+    },
+    "armor": 20
+  },
+  "experience": 8000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 900,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 100,
+      "max": 225,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.2,
+      "duration": 10000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 130
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 250,
+      "range": 7,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "burstarrow",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "firefield",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 2,
+      "target": true,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 0,
+      "max": 250,
+      "range": 7,
+      "shootEffect": "energy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 130,
+      "max": 350,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "bigclouds"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 250,
+      "range": 7
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -330,
+      "duration": 20000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "warlock skill reducer",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 0,
+      "max": 0,
+      "range": 5
+    }
+  ],
+  "elements": {
+    "earth": 95,
+    "holy": -5,
+    "physical": -5
+  },
+  "immunities": {
+    "fire": true,
+    "energy": true,
+    "ice": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Warlock",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 3
+    },
+    {
+      "name": "Green Djinn",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 3
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Killing is such a splendid diversion from my studies.",
+      "Time to test my newest spells!"
+    ],
+    "slowness": 1,
+    "chance": 0.02
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.32,
+      "min": 1,
+      "max": 80
+    },
+    {
+      "id": 2679,
+      "probability": 0.21,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2689,
+      "probability": 0.11
+    },
+    {
+      "id": 2411,
+      "probability": 0.096
+    },
+    {
+      "id": 2436,
+      "probability": 0.0833
+    },
+    {
+      "id": 7591,
+      "probability": 0.0719
+    },
+    {
+      "id": 7590,
+      "probability": 0.0676
+    },
+    {
+      "id": 7368,
+      "probability": 0.055,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2792,
+      "probability": 0.05
+    },
+    {
+      "id": 2167,
+      "probability": 0.042
+    },
+    {
+      "id": 2178,
+      "probability": 0.04
+    },
+    {
+      "id": 2047,
+      "probability": 0.035
+    },
+    {
+      "id": 2656,
+      "probability": 0.0339
+    },
+    {
+      "id": 2146,
+      "probability": 0.0319
+    },
+    {
+      "id": 2151,
+      "probability": 0.0316
+    },
+    {
+      "id": 7898,
+      "probability": 0.0304
+    },
+    {
+      "id": 2600,
+      "probability": 0.03
+    },
+    {
+      "id": 2124,
+      "probability": 0.0267
+    },
+    {
+      "id": 12410,
+      "probability": 0.025
+    },
+    {
+      "id": 2123,
+      "probability": 0.0242
+    },
+    {
+      "id": 2197,
+      "probability": 0.0232
+    },
+    {
+      "id": 1986,
+      "probability": 0.0231
+    },
+    {
+      "id": 2466,
+      "probability": 0.0224
+    },
+    {
+      "id": 2114,
+      "probability": 0.0206
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

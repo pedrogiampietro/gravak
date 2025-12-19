@@ -1,0 +1,81 @@
+{
+  "creatureStatistics": {
+    "name": "Ghost Of A Planegazer",
+    "health": 1450,
+    "maxHealth": 1450,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 319
+    },
+    "armor": 30
+  },
+  "experience": 1100,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "elements": {
+    "physical": 100,
+    "energy": 100,
+    "earth": 100,
+    "fire": 90,
+    "ice": 100,
+    "holy": 100,
+    "death": 100
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 172
+    },
+    {
+      "id": 7589,
+      "probability": 0.29412,
+      "name": "strong mana potion"
+    },
+    {
+      "id": 7590,
+      "probability": 0.11765,
+      "name": "great mana potion"
+    },
+    {
+      "id": 2152,
+      "probability": 0.05882,
+      "name": "platinum coin"
+    },
+    {
+      "id": 2150,
+      "probability": 0.02941,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 2
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

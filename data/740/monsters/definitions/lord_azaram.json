@@ -1,0 +1,284 @@
+{
+  "creatureStatistics": {
+    "name": "Lord Azaram",
+    "health": 1000,
+    "maxHealth": 1000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 600,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 1223
+    },
+    "armor": 78
+  },
+  "experience": 55000,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.5,
+      "min": 150,
+      "max": 550,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 600
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 400,
+      "max": 1000,
+      "length": 7,
+      "spread": 0,
+      "areaEffect": "stones"
+    },
+    {
+      "name": "poison",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 400,
+      "max": 1000,
+      "length": 7,
+      "spread": 3,
+      "areaEffect": "poison"
+    }
+  ],
+  "elements": {
+    "fire": 20
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "summons": [
+    {
+      "name": "Condensed Sins",
+      "interval": 2000,
+      "chance": 0.5,
+      "maxSummons": 3
+    }
+  ],
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 25172,
+      "probability": 1,
+      "name": "silver token",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 26030,
+      "probability": 0.65455,
+      "name": "ultimate spirit potion",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 26029,
+      "probability": 0.58182,
+      "name": "ultimate mana potion",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 26031,
+      "probability": 0.45455,
+      "name": "supreme health potion",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 7443,
+      "probability": 0.34545,
+      "name": "bullseye potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2156,
+      "probability": 0.29091,
+      "name": "red gem"
+    },
+    {
+      "id": 2154,
+      "probability": 0.27273,
+      "name": "yellow gem",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2155,
+      "probability": 0.25455,
+      "name": "green gem",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 5888,
+      "probability": 0.25455,
+      "name": "piece of hell steel",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2158,
+      "probability": 0.23636,
+      "name": "blue gem"
+    },
+    {
+      "id": 2476,
+      "probability": 0.23636,
+      "name": "knight armor"
+    },
+    {
+      "id": 2160,
+      "probability": 0.2,
+      "name": "crystal coin",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7439,
+      "probability": 0.18182,
+      "name": "berserk potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 7901,
+      "probability": 0.18182,
+      "name": "lightning headband"
+    },
+    {
+      "id": 26200,
+      "probability": 0.14545,
+      "name": "collar of red plasma"
+    },
+    {
+      "id": 7440,
+      "probability": 0.14545,
+      "name": "mastermind potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 26199,
+      "probability": 0.12727,
+      "name": "collar of green plasma"
+    },
+    {
+      "id": 9971,
+      "probability": 0.12727,
+      "name": "gold ingot"
+    },
+    {
+      "id": 7407,
+      "probability": 0.12727,
+      "name": "haunted blade"
+    },
+    {
+      "id": 26189,
+      "probability": 0.12727,
+      "name": "ring of red plasma"
+    },
+    {
+      "id": 2153,
+      "probability": 0.10909,
+      "name": "violet gem",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 5892,
+      "probability": 0.07273,
+      "name": "huge chunk of crude iron"
+    },
+    {
+      "id": 34244,
+      "probability": 0.05455,
+      "name": "ancient liche bone"
+    },
+    {
+      "id": 26187,
+      "probability": 0.05455,
+      "name": "ring of green plasma"
+    },
+    {
+      "id": 26198,
+      "probability": 0.03636,
+      "name": "collar of blue plasma"
+    },
+    {
+      "id": 32717,
+      "probability": 0.03636,
+      "name": "giant sapphire"
+    },
+    {
+      "id": 26185,
+      "probability": 0.03636,
+      "name": "ring of blue plasma"
+    },
+    {
+      "id": 34246,
+      "probability": 0.03636,
+      "name": "young lich worm"
+    },
+    {
+      "id": 34234,
+      "probability": 0.01818,
+      "name": "bear skin"
+    },
+    {
+      "id": 32716,
+      "probability": 0.01818,
+      "name": "giant emerald"
+    },
+    {
+      "id": 32715,
+      "probability": 0.01818,
+      "name": "giant ruby"
+    },
+    {
+      "id": 34245,
+      "probability": 0.01818,
+      "name": "rotten heart"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

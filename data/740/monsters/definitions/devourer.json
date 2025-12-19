@@ -1,0 +1,248 @@
+{
+  "creatureStatistics": {
+    "name": "Devourer",
+    "health": 1900,
+    "maxHealth": 1900,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 260,
+    "attackSpeed": 2000,
+    "defense": 45,
+    "outfit": {
+      "id": 617
+    },
+    "armor": 45
+  },
+  "experience": 1755,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 136,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 260
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 40,
+      "max": 125,
+      "range": 7,
+      "target": true,
+      "shootEffect": "poison",
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.08,
+      "min": 50,
+      "max": 160,
+      "range": 7,
+      "target": true,
+      "shootEffect": "poison",
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "duration": 15000,
+      "shootEffect": "poison",
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.11,
+      "min": 50,
+      "max": 150,
+      "length": 1,
+      "spread": 0,
+      "areaEffect": "smoke"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.07,
+      "min": 120,
+      "max": 135,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "greenbubble"
+    }
+  ],
+  "elements": {
+    "energy": -5,
+    "ice": 15,
+    "death": 10
+  },
+  "immunities": {
+    "earth": true,
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "*gulp*",
+      "*Bruaarrr!*",
+      "*omnnommm nomm*"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.99437,
+      "name": "gold coin",
+      "min": 1,
+      "max": 165
+    },
+    {
+      "id": 2152,
+      "probability": 0.55673,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 23553,
+      "probability": 0.12882,
+      "name": "glob of glooth"
+    },
+    {
+      "id": 2147,
+      "probability": 0.05801,
+      "name": "small ruby",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2149,
+      "probability": 0.0575,
+      "name": "small emerald",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 9970,
+      "probability": 0.05511,
+      "name": "small topaz",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2150,
+      "probability": 0.05409,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2146,
+      "probability": 0.05255,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2145,
+      "probability": 0.05136,
+      "name": "small diamond",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 23551,
+      "probability": 0.02986,
+      "name": "glooth axe"
+    },
+    {
+      "id": 23549,
+      "probability": 0.02952,
+      "name": "glooth club"
+    },
+    {
+      "id": 23550,
+      "probability": 0.02696,
+      "name": "glooth blade"
+    },
+    {
+      "id": 2151,
+      "probability": 0.02491,
+      "name": "talon"
+    },
+    {
+      "id": 2154,
+      "probability": 0.0174,
+      "name": "yellow gem"
+    },
+    {
+      "id": 23529,
+      "probability": 0.01621,
+      "name": "glooth spear"
+    },
+    {
+      "id": 8912,
+      "probability": 0.01041,
+      "name": "springsprout rod"
+    },
+    {
+      "id": 23554,
+      "probability": 0.00682,
+      "name": "glooth amulet"
+    },
+    {
+      "id": 2181,
+      "probability": 0.00648,
+      "name": "terra rod"
+    },
+    {
+      "id": 23535,
+      "probability": 0.00188,
+      "name": "glooth cape"
+    },
+    {
+      "id": 2155,
+      "probability": 0.00051,
+      "name": "green gem"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

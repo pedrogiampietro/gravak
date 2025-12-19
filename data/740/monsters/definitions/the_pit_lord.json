@@ -1,0 +1,89 @@
+{
+  "creatureStatistics": {
+    "name": "The Pit Lord",
+    "health": 5270,
+    "maxHealth": 5270,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 270,
+    "attack": 380,
+    "attackSpeed": 2000,
+    "defense": 44,
+    "outfit": {
+      "id": 55
+    },
+    "armor": 46
+  },
+  "experience": 2500,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 5000,
+      "chance": 1,
+      "speedChange": 500,
+      "duration": 2500,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "healing",
+      "interval": 6000,
+      "chance": 0.65,
+      "min": 20,
+      "max": 50,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 380
+    },
+    {
+      "name": "physical",
+      "interval": 7500,
+      "chance": 1,
+      "min": 100,
+      "max": 250,
+      "shootEffect": "largerock"
+    }
+  ],
+  "elements": {
+    "earth": 35,
+    "ice": -20
+  },
+  "immunities": {
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "I'LL GET YOU ALL!",
+      "I won't let you escape!",
+      "I'll crush you beneath my feet!"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

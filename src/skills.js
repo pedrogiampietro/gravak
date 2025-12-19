@@ -86,8 +86,7 @@ Skills.prototype.setMaximumProperties = function () {
   let level = this.getSkillLevel(CONST.PROPERTIES.EXPERIENCE);
   let vocation = this.__player.getProperty(CONST.PROPERTIES.VOCATION);
 
-  console.log("=== DEBUG SET MAXIMUM PROPERTIES ===");
-  console.log(`Level: ${level}, Vocation: ${vocation}`);
+
 
   // Calculate maximum values based on vocation and level
   // https://tibia.fandom.com/wiki/Formulae#Hitpoints,_Mana_and_Capacity
@@ -125,10 +124,7 @@ Skills.prototype.setMaximumProperties = function () {
       capacity = 400;
   }
 
-  console.log("Calculated maximum values:");
-  console.log(`Health Max: ${health}`);
-  console.log(`Mana Max: ${mana}`);
-  console.log(`Capacity Max: ${capacity}`);
+
 
   // Set the maximum values
   this.__player.setProperty(CONST.PROPERTIES.HEALTH_MAX, health);
@@ -137,17 +133,15 @@ Skills.prototype.setMaximumProperties = function () {
 };
 
 Skills.prototype.calculateMaxCapacity = function (level, vocation) {
-  console.log(
-    `Iniciando cálculo de capacidade máxima para level ${level} e vocação ${vocation}`
-  );
+
 
   // Base capacity is 400
   let capacity = 400;
-  console.log(`Capacidade base: ${capacity}`);
+
 
   // Add capacity based on level
   let levelBonus = (level - 1) * 10;
-  console.log(`Bônus por level (${level - 1} * 10): ${levelBonus}`);
+
   capacity += levelBonus;
 
   // Add vocation bonus
@@ -164,7 +158,7 @@ Skills.prototype.calculateMaxCapacity = function (level, vocation) {
       vocationBonus = level * 10;
       break;
   }
-  console.log(`Bônus por vocação (${vocation}): ${vocationBonus}`);
+
   capacity += vocationBonus;
 
   return capacity; // Retornar o valor sem divisão
@@ -186,27 +180,15 @@ Skills.prototype.getSkillValue = function (type) {
 };
 
 Skills.prototype.getSkillLevel = function (type) {
-  console.log(`Tentando obter skill level para type: ${type}`);
 
   let skill = this.__getSkill(type);
 
   if (skill === null) {
-    console.log(`AVISO: Skill ${type} é null!`);
     return null;
   }
 
-  // Vamos adicionar mais logs para debug
-  console.log("Skill encontrada:", {
-    type: type,
-    value: skill.toJSON(),
-    rawSkill: skill,
-  });
-
   let vocation = this.__player.getVocation();
   let level = skill.getSkillLevel(vocation);
-  console.log(
-    `Skill ${type} level calculado: ${level} (vocation: ${vocation})`
-  );
 
   return level;
 };

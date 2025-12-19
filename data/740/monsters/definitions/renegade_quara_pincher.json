@@ -1,0 +1,177 @@
+{
+  "creatureStatistics": {
+    "name": "Renegade Quara Pincher",
+    "health": 2800,
+    "maxHealth": 2800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 396,
+    "attack": 340,
+    "attackSpeed": 2000,
+    "defense": 85,
+    "outfit": {
+      "id": 77
+    },
+    "armor": 85
+  },
+  "experience": 2200,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 340
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "range": 1,
+      "speedChange": -300,
+      "duration": 3000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "energy": -25,
+    "earth": -10
+  },
+  "immunities": {
+    "fire": true,
+    "drown": true,
+    "ice": true,
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 0.8048,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 12446,
+      "probability": 0.18549,
+      "name": "quara pincers"
+    },
+    {
+      "id": 7590,
+      "probability": 0.10169,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7591,
+      "probability": 0.09044,
+      "name": "great health potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2147,
+      "probability": 0.08482,
+      "name": "small ruby",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2145,
+      "probability": 0.07665,
+      "name": "small diamond",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2178,
+      "probability": 0.0603,
+      "name": "mind stone"
+    },
+    {
+      "id": 2156,
+      "probability": 0.05774,
+      "name": "red gem"
+    },
+    {
+      "id": 2670,
+      "probability": 0.0511,
+      "name": "shrimp"
+    },
+    {
+      "id": 15649,
+      "probability": 0.04037,
+      "name": "vortex bolt",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 7633,
+      "probability": 0.01584,
+      "name": "giant shimmering pearl (brown)"
+    },
+    {
+      "id": 5895,
+      "probability": 0.01533,
+      "name": "fish fin"
+    },
+    {
+      "id": 2475,
+      "probability": 0.01431,
+      "name": "warrior helmet"
+    },
+    {
+      "id": 2169,
+      "probability": 0.00511,
+      "name": "time ring"
+    },
+    {
+      "id": 2487,
+      "probability": 0.00358,
+      "name": "crown armor"
+    },
+    {
+      "id": 2151,
+      "probability": 0.00255,
+      "name": "talon"
+    },
+    {
+      "id": 7897,
+      "probability": 0.00204,
+      "name": "glacier robe"
+    },
+    {
+      "id": 13305,
+      "probability": 0.00102,
+      "name": "giant shrimp"
+    },
+    {
+      "id": 12613,
+      "probability": 0.00051,
+      "name": "twiceslicer"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

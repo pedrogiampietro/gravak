@@ -1,0 +1,140 @@
+{
+  "creatureStatistics": {
+    "name": "Infected Weeper",
+    "health": 6800,
+    "maxHealth": 6800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 280,
+    "attackSpeed": 2000,
+    "defense": 45,
+    "outfit": {
+      "id": 489
+    },
+    "armor": 45
+  },
+  "experience": 4800,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.1,
+      "duration": 4000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 280
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 250,
+      "max": 700,
+      "length": 5,
+      "spread": 3,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 80,
+      "max": 250,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "fire"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "length": 5,
+      "spread": 3,
+      "target": false,
+      "speedChange": -800,
+      "duration": 30000,
+      "areaEffect": "yellowspark"
+    }
+  ],
+  "elements": {
+    "physical": -5,
+    "death": 5,
+    "ice": -5
+  },
+  "immunities": {
+    "fire": true,
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Parasite",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 1
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Moooaaan!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 98
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 8748,
+      "probability": 0.0146
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

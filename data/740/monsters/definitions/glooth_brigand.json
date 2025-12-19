@@ -1,0 +1,192 @@
+{
+  "creatureStatistics": {
+    "name": "Glooth Brigand",
+    "health": 2400,
+    "maxHealth": 2400,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 280,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 31,
+    "outfit": {
+      "id": 137
+    },
+    "armor": 23
+  },
+  "experience": 1900,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 200,
+      "max": 250,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 200,
+      "range": 7,
+      "shootEffect": "arrow"
+    }
+  ],
+  "elements": {
+    "fire": -5,
+    "ice": 10,
+    "energy": 25,
+    "death": 20,
+    "physical": 10
+  },
+  "immunities": {
+    "poison": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "loot": [
+    {
+      "id": 7412,
+      "probability": 0.0005
+    },
+    {
+      "id": 7419,
+      "probability": 0.001
+    },
+    {
+      "id": 7632,
+      "probability": 0.015
+    },
+    {
+      "id": 23554,
+      "probability": 0.0096
+    },
+    {
+      "id": 23551,
+      "probability": 0.0098
+    },
+    {
+      "id": 23574,
+      "probability": 0.0983,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 23550,
+      "probability": 0.01
+    },
+    {
+      "id": 24183,
+      "probability": 0.031
+    },
+    {
+      "id": 23549,
+      "probability": 0.01
+    },
+    {
+      "id": 23514,
+      "probability": 0.0248
+    },
+    {
+      "id": 23529,
+      "probability": 0.01
+    },
+    {
+      "id": 23517,
+      "probability": 0.025
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 7590,
+      "probability": 0.0349
+    },
+    {
+      "id": 8472,
+      "probability": 0.0354
+    },
+    {
+      "id": 2155,
+      "probability": 0.002
+    },
+    {
+      "id": 23538,
+      "probability": 0.0016
+    },
+    {
+      "id": 7386,
+      "probability": 0.0015
+    },
+    {
+      "id": 2152,
+      "probability": 0.7992,
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 23536,
+      "probability": 0.0064
+    },
+    {
+      "id": 24185,
+      "probability": 0.0807
+    },
+    {
+      "id": 7887,
+      "probability": 0.004
+    },
+    {
+      "id": 7886,
+      "probability": 0.0049
+    },
+    {
+      "id": 7903,
+      "probability": 0.0071
+    },
+    {
+      "id": 7885,
+      "probability": 0.005
+    },
+    {
+      "id": 7884,
+      "probability": 0.006
+    },
+    {
+      "id": 8473,
+      "probability": 0.0345
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

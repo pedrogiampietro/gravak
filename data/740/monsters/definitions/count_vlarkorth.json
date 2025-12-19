@@ -1,0 +1,302 @@
+{
+  "creatureStatistics": {
+    "name": "Count Vlarkorth",
+    "health": 15000,
+    "maxHealth": 15000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 600,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 1221
+    },
+    "armor": 78
+  },
+  "experience": 6300,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.14,
+      "min": 150,
+      "max": 350,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 600
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.5,
+      "min": 400,
+      "max": 1000,
+      "length": 7,
+      "spread": 0,
+      "areaEffect": "smallclouds"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 400,
+      "max": 1000,
+      "length": 7,
+      "spread": 0,
+      "areaEffect": "yellowchain"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 300,
+      "max": 500,
+      "length": 7,
+      "spread": 0,
+      "areaEffect": "fire"
+    }
+  ],
+  "elements": {
+    "fire": 20
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "summons": [
+    {
+      "name": "Soulless Minion",
+      "interval": 1800,
+      "chance": 0.7,
+      "maxSummons": 6
+    }
+  ],
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 25172,
+      "probability": 1,
+      "name": "silver token",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 26031,
+      "probability": 0.58095,
+      "name": "supreme health potion",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 26030,
+      "probability": 0.5619,
+      "name": "ultimate spirit potion",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 26029,
+      "probability": 0.52381,
+      "name": "ultimate mana potion",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 2156,
+      "probability": 0.38095,
+      "name": "red gem",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2154,
+      "probability": 0.29524,
+      "name": "yellow gem",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2477,
+      "probability": 0.27619,
+      "name": "knight legs"
+    },
+    {
+      "id": 7439,
+      "probability": 0.24762,
+      "name": "berserk potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2160,
+      "probability": 0.20952,
+      "name": "crystal coin",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2158,
+      "probability": 0.2,
+      "name": "blue gem"
+    },
+    {
+      "id": 7443,
+      "probability": 0.17143,
+      "name": "bullseye potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 9971,
+      "probability": 0.15238,
+      "name": "gold ingot"
+    },
+    {
+      "id": 2155,
+      "probability": 0.14286,
+      "name": "green gem",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2436,
+      "probability": 0.14286,
+      "name": "skull staff"
+    },
+    {
+      "id": 7440,
+      "probability": 0.13333,
+      "name": "mastermind potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 26200,
+      "probability": 0.12381,
+      "name": "collar of red plasma"
+    },
+    {
+      "id": 5904,
+      "probability": 0.12381,
+      "name": "magic sulphur"
+    },
+    {
+      "id": 26199,
+      "probability": 0.11429,
+      "name": "collar of green plasma"
+    },
+    {
+      "id": 7891,
+      "probability": 0.10476,
+      "name": "magma boots"
+    },
+    {
+      "id": 26198,
+      "probability": 0.09524,
+      "name": "collar of blue plasma"
+    },
+    {
+      "id": 34246,
+      "probability": 0.09524,
+      "name": "young lich worm"
+    },
+    {
+      "id": 26185,
+      "probability": 0.08571,
+      "name": "ring of blue plasma"
+    },
+    {
+      "id": 26187,
+      "probability": 0.07619,
+      "name": "ring of green plasma"
+    },
+    {
+      "id": 2153,
+      "probability": 0.06667,
+      "name": "violet gem"
+    },
+    {
+      "id": 26189,
+      "probability": 0.05714,
+      "name": "ring of red plasma"
+    },
+    {
+      "id": 34244,
+      "probability": 0.04762,
+      "name": "ancient liche bone"
+    },
+    {
+      "id": 32716,
+      "probability": 0.04762,
+      "name": "giant emerald"
+    },
+    {
+      "id": 34245,
+      "probability": 0.04762,
+      "name": "rotten heart"
+    },
+    {
+      "id": 34234,
+      "probability": 0.01905,
+      "name": "bear skin"
+    },
+    {
+      "id": 34394,
+      "probability": 0.01905,
+      "name": "final judgement"
+    },
+    {
+      "id": 34247,
+      "probability": 0.01905,
+      "name": "medal of valiance"
+    },
+    {
+      "id": 34235,
+      "probability": 0.00952,
+      "name": "embrace of nature"
+    },
+    {
+      "id": 32717,
+      "probability": 0.00952,
+      "name": "giant sapphire"
+    },
+    {
+      "id": 34233,
+      "probability": 0.00952,
+      "name": "terra helmet"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

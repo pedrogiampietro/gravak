@@ -1,0 +1,101 @@
+{
+  "creatureStatistics": {
+    "name": "Grave Robber",
+    "health": 165,
+    "maxHealth": 165,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 205,
+    "attack": 90,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 146
+    },
+    "armor": 15
+  },
+  "experience": 65,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 15,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 90
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 100,
+      "max": 160,
+      "range": 7,
+      "radius": 1,
+      "target": true
+    }
+  ],
+  "elements": {
+    "energy": 20,
+    "fire": 20,
+    "ice": -10,
+    "death": -10,
+    "physical": -10
+  },
+  "sayings": {
+    "texts": [
+      "This crypt is taken!",
+      "Leave or you are hunted!",
+      "The treasure will be mine!",
+      "The X marks the spot!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5426,
+      "name": "gold coin",
+      "min": 1,
+      "max": 38
+    },
+    {
+      "id": 2386,
+      "probability": 0.025,
+      "name": "axe"
+    },
+    {
+      "id": 2398,
+      "probability": 0.017,
+      "name": "mace"
+    },
+    {
+      "id": 2459,
+      "probability": 0.005,
+      "name": "iron helmet"
+    },
+    {
+      "id": 2465,
+      "probability": 0.017,
+      "name": "brass armor"
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

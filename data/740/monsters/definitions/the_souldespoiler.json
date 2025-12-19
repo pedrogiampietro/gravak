@@ -1,0 +1,181 @@
+{
+  "creatureStatistics": {
+    "name": "The Souldespoiler",
+    "health": 290000,
+    "maxHealth": 290000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 783,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 875
+    },
+    "armor": 30
+  },
+  "experience": 50000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 1,
+      "min": 1000,
+      "max": 7000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 783
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.6,
+      "min": 30,
+      "max": 181,
+      "range": 7,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "suddendeath",
+      "areaEffect": "smallclouds"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.5,
+      "min": 210,
+      "max": 538,
+      "length": 7,
+      "spread": 2,
+      "areaEffect": "purpleenergy"
+    },
+    {
+      "name": "drown",
+      "interval": 3000,
+      "chance": 0.3,
+      "min": 125,
+      "max": 640,
+      "length": 9,
+      "spread": 0,
+      "areaEffect": "bluebubble"
+    }
+  ],
+  "elements": {
+    "energy": -8
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 26167,
+      "probability": 1,
+      "name": "curious matter"
+    },
+    {
+      "id": 7419,
+      "probability": 1,
+      "name": "dreaded cleaver"
+    },
+    {
+      "id": 26191,
+      "probability": 1,
+      "name": "energy bar",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 223
+    },
+    {
+      "id": 2155,
+      "probability": 1,
+      "name": "green gem"
+    },
+    {
+      "id": 26165,
+      "probability": 1,
+      "name": "mysterious remains"
+    },
+    {
+      "id": 26166,
+      "probability": 1,
+      "name": "odd organ"
+    },
+    {
+      "id": 26162,
+      "probability": 1,
+      "name": "plasma pearls"
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 37
+    },
+    {
+      "id": 27618,
+      "probability": 1,
+      "name": "prismatic quartz",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2150,
+      "probability": 1,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 26174,
+      "probability": 1,
+      "name": "spark sphere",
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 8473,
+      "probability": 1,
+      "name": "ultimate health potion",
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 8910,
+      "probability": 1,
+      "name": "underworld rod"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

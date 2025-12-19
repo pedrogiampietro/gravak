@@ -1,0 +1,78 @@
+{
+  "creatureStatistics": {
+    "name": "Svoren the Mad",
+    "health": 6310,
+    "maxHealth": 6310,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 180,
+    "attack": 525,
+    "attackSpeed": 2000,
+    "defense": 27,
+    "outfit": {
+      "id": 254
+    },
+    "armor": 25
+  },
+  "experience": 3000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 525
+    },
+    {
+      "name": "speed",
+      "interval": 3500,
+      "chance": 0.35,
+      "min": 0,
+      "max": 0,
+      "range": 1,
+      "radius": 1,
+      "target": true,
+      "speedChange": -250,
+      "duration": 40,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "immunities": {
+    "fire": true,
+    "ice": true,
+    "energy": true,
+    "earth": true,
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "NO mommy NO. Leave me alone!",
+      "Not that tower again!",
+      "The cat has grown some horns!!",
+      "What was I doing here again?",
+      "Are we there soon mommy?"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

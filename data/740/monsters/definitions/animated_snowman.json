@@ -1,0 +1,127 @@
+{
+  "creatureStatistics": {
+    "name": "Animated Snowman",
+    "health": 450,
+    "maxHealth": 450,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 1159
+    },
+    "armor": 25
+  },
+  "experience": 400,
+  "corpse": 2813,
+  "fluidType": 4,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 30,
+      "range": 3,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "snowball",
+      "areaEffect": "iceattack"
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 120,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "icetornado"
+    }
+  ],
+  "elements": {
+    "fire": -20,
+    "ice": 20
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 50
+    },
+    {
+      "id": 32993,
+      "probability": 0.89418,
+      "name": "twig arms"
+    },
+    {
+      "id": 7839,
+      "probability": 0.08289,
+      "name": "shiver arrow",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2396,
+      "probability": 0.05996,
+      "name": "ice rapier"
+    },
+    {
+      "id": 2111,
+      "probability": 0.04233,
+      "name": "snowball",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 7888,
+      "probability": 0.02822,
+      "name": "glacier amulet"
+    },
+    {
+      "id": 2183,
+      "probability": 0.02822,
+      "name": "hailstorm rod"
+    },
+    {
+      "id": 7902,
+      "probability": 0.02646,
+      "name": "glacier mask"
+    },
+    {
+      "id": 2186,
+      "probability": 0.0194,
+      "name": "moonlight rod"
+    },
+    {
+      "id": 7896,
+      "probability": 0.01235,
+      "name": "glacier kilt"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

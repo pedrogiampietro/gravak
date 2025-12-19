@@ -1,0 +1,285 @@
+{
+  "creatureStatistics": {
+    "name": "Midnight Asura",
+    "health": 3100,
+    "maxHealth": 3100,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 269,
+    "attackSpeed": 2000,
+    "defense": 55,
+    "outfit": {
+      "id": 150
+    },
+    "armor": 55
+  },
+  "experience": 4100,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 50,
+      "max": 100,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 320,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 269
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 70,
+      "range": 7
+    },
+    {
+      "name": "firefield",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 50,
+      "max": 200,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "purpleenergy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 10,
+      "max": 100,
+      "range": 1,
+      "shootEffect": "energy",
+      "areaEffect": "energy"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "radius": 1,
+      "target": true,
+      "speedChange": -100,
+      "duration": 30000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "ice": 20,
+    "fire": 20,
+    "energy": -10,
+    "earth": -15
+  },
+  "immunities": {
+    "death": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Ah, the sweet music of a beating heart!",
+      "Death and Darkness",
+      "Embrace the night!",
+      "May night fall upon you!"
+    ],
+    "slowness": 2,
+    "chance": 0.07
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.8,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.6,
+      "min": 1,
+      "max": 42
+    },
+    {
+      "id": 2152,
+      "probability": 0.182,
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 7368,
+      "probability": 0.02,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2144,
+      "probability": 0.02
+    },
+    {
+      "id": 6558,
+      "probability": 0.02
+    },
+    {
+      "id": 6500,
+      "probability": 0.0221
+    },
+    {
+      "id": 2145,
+      "probability": 0.008,
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2149,
+      "probability": 0.009,
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2147,
+      "probability": 0.0065,
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2146,
+      "probability": 0.0058,
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 9970,
+      "probability": 0.0058,
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7591,
+      "probability": 0.007
+    },
+    {
+      "id": 2143,
+      "probability": 0.0056
+    },
+    {
+      "id": 7404,
+      "probability": 0.0013
+    },
+    {
+      "id": 2158,
+      "probability": 0.0032
+    },
+    {
+      "id": 2656,
+      "probability": 0.003
+    },
+    {
+      "id": 9971,
+      "probability": 0.003
+    },
+    {
+      "id": 24630,
+      "probability": 0.003
+    },
+    {
+      "id": 2186,
+      "probability": 0.003
+    },
+    {
+      "id": 2185,
+      "probability": 0.0009
+    },
+    {
+      "id": 24637,
+      "probability": 0.0008
+    },
+    {
+      "id": 24631,
+      "probability": 0.002
+    },
+    {
+      "id": 8889,
+      "probability": 0.0009
+    },
+    {
+      "id": 2134,
+      "probability": 0.001
+    },
+    {
+      "id": 2170,
+      "probability": 0.001
+    },
+    {
+      "id": 5944,
+      "probability": 0.001
+    },
+    {
+      "id": 8902,
+      "probability": 0.001
+    },
+    {
+      "id": 3967,
+      "probability": 0.001
+    },
+    {
+      "id": 8910,
+      "probability": 0.0007
+    },
+    {
+      "id": 2154,
+      "probability": 0.001
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

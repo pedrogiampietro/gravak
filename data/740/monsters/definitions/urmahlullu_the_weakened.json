@@ -1,0 +1,192 @@
+{
+  "creatureStatistics": {
+    "name": "Urmahlullu The Weakened",
+    "health": 130000,
+    "maxHealth": 130000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 1100,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 1197
+    },
+    "armor": 10
+  },
+  "experience": 85000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1100
+    },
+    {
+      "name": "fire",
+      "interval": 3000,
+      "chance": 0.2,
+      "min": 500,
+      "max": 800,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 550,
+      "max": 800,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.18,
+      "min": 450,
+      "max": 600,
+      "target": false,
+      "areaEffect": "fireattack"
+    }
+  ],
+  "elements": {
+    "energy": 40,
+    "fire": 100
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "You will regret this!"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 26191,
+      "probability": 1,
+      "name": "energy bar"
+    },
+    {
+      "id": 2155,
+      "probability": 1,
+      "name": "green gem",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 26029,
+      "probability": 1,
+      "name": "ultimate mana potion",
+      "min": 1,
+      "max": 14
+    },
+    {
+      "id": 2160,
+      "probability": 0.5,
+      "name": "crystal coin",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 7895,
+      "probability": 0.5,
+      "name": "lightning legs"
+    },
+    {
+      "id": 26031,
+      "probability": 0.5,
+      "name": "supreme health potion",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2154,
+      "probability": 0.5,
+      "name": "yellow gem",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7439,
+      "probability": 0.25,
+      "name": "berserk potion",
+      "min": 1,
+      "max": 19
+    },
+    {
+      "id": 2158,
+      "probability": 0.25,
+      "name": "blue gem"
+    },
+    {
+      "id": 7838,
+      "probability": 0.25,
+      "name": "flash arrow",
+      "min": 1,
+      "max": 94
+    },
+    {
+      "id": 7889,
+      "probability": 0.25,
+      "name": "lightning pendant"
+    },
+    {
+      "id": 2156,
+      "probability": 0.25,
+      "name": "red gem"
+    },
+    {
+      "id": 28415,
+      "probability": 0.25,
+      "name": "royal star",
+      "min": 1,
+      "max": 48
+    },
+    {
+      "id": 26030,
+      "probability": 0.25,
+      "name": "ultimate spirit potion",
+      "min": 1,
+      "max": 9
+    },
+    {
+      "id": 34279,
+      "probability": 0.25,
+      "name": "urmahlullu's mane"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

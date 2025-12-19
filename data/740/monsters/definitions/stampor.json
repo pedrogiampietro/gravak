@@ -1,0 +1,161 @@
+{
+  "creatureStatistics": {
+    "name": "Stampor",
+    "health": 1200,
+    "maxHealth": 1200,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 240,
+    "attack": 130,
+    "attackSpeed": 2000,
+    "defense": 0,
+    "outfit": {
+      "id": 381
+    },
+    "armor": 0
+  },
+  "experience": 780,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 90,
+      "max": 120,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 130
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 150,
+      "max": 280,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "groundshaker"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 75,
+      "max": 100,
+      "target": true,
+      "shootEffect": "smallstone"
+    },
+    {
+      "name": "stampor skill reducer",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 5
+    }
+  ],
+  "elements": {
+    "holy": 50,
+    "death": 10,
+    "fire": 20,
+    "energy": 20,
+    "ice": 10
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "KRRRRRNG"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 42
+    },
+    {
+      "id": 2152,
+      "probability": 0.0992,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2391,
+      "probability": 0.0101,
+      "name": "war hammer"
+    },
+    {
+      "id": 2476,
+      "probability": 0.0087,
+      "name": "knight armor"
+    },
+    {
+      "id": 2271,
+      "probability": 0.05,
+      "name": "strong health potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2270,
+      "probability": 0.05,
+      "name": "strong mana potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2144,
+      "probability": 0.0794,
+      "name": "small topaz",
+      "min": 1,
+      "max": 2
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

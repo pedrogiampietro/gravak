@@ -1,0 +1,175 @@
+{
+  "creatureStatistics": {
+    "name": "Cobra Scout",
+    "health": 8500,
+    "maxHealth": 8500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 300,
+    "attack": 500,
+    "attackSpeed": 2000,
+    "defense": 81,
+    "outfit": {
+      "id": 1217
+    },
+    "armor": 81
+  },
+  "experience": 7310,
+  "corpse": 2817,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 500
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.22,
+      "min": 350,
+      "max": 450,
+      "range": 4,
+      "target": true,
+      "shootEffect": "sniperarrow"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.16,
+      "min": 300,
+      "max": 420,
+      "range": 4,
+      "radius": 4,
+      "target": true,
+      "areaEffect": "greenbubble",
+      "shootEffect": "poisonarrow"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 300,
+      "max": 380,
+      "radius": 3,
+      "areaEffect": "groundshaker"
+    }
+  ],
+  "immunities": {
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Think I can't see you? Think again...",
+      "You don't stand a chance!",
+      "What are you looking for?"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 0.73559,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 9
+    },
+    {
+      "id": 24850,
+      "probability": 0.22663,
+      "name": "opal",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 7850,
+      "probability": 0.20969,
+      "name": "earth arrow",
+      "min": 1,
+      "max": 28
+    },
+    {
+      "id": 34334,
+      "probability": 0.14334,
+      "name": "cobra crest"
+    },
+    {
+      "id": 20098,
+      "probability": 0.13753,
+      "name": "cheesy figurine"
+    },
+    {
+      "id": 9971,
+      "probability": 0.06489,
+      "name": "gold ingot"
+    },
+    {
+      "id": 2197,
+      "probability": 0.0586,
+      "name": "stone skin amulet"
+    },
+    {
+      "id": 10219,
+      "probability": 0.04794,
+      "name": "sacred tree amulet"
+    },
+    {
+      "id": 2156,
+      "probability": 0.03923,
+      "name": "red gem"
+    },
+    {
+      "id": 2149,
+      "probability": 0.03438,
+      "name": "small emerald",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2154,
+      "probability": 0.03196,
+      "name": "yellow gem"
+    },
+    {
+      "id": 18415,
+      "probability": 0.02179,
+      "name": "green crystal shard"
+    },
+    {
+      "id": 2155,
+      "probability": 0.02179,
+      "name": "green gem"
+    },
+    {
+      "id": 2153,
+      "probability": 0.01743,
+      "name": "violet gem"
+    },
+    {
+      "id": 26189,
+      "probability": 0.00581,
+      "name": "ring of red plasma"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

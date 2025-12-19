@@ -85,7 +85,6 @@ PacketHandler.prototype.moveItem = function (player, packet) {
 
   let { fromWhere, fromIndex, toWhere, toIndex, count } = packet;
 
-  console.log("=== DEBUG MOVE ITEM ===");
   console.log("fromWhere:", fromWhere ? fromWhere.constructor.name : null);
   console.log("fromIndex:", fromIndex);
   console.log("toWhere:", toWhere ? toWhere.constructor.name : null);

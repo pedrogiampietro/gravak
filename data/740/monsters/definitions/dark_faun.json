@@ -1,0 +1,217 @@
+{
+  "creatureStatistics": {
+    "name": "Dark Faun",
+    "health": 1100,
+    "maxHealth": 1100,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 216,
+    "attack": 515,
+    "attackSpeed": 2000,
+    "defense": 50,
+    "outfit": {
+      "id": 980
+    },
+    "armor": 50
+  },
+  "experience": 900,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 85,
+      "max": 105,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 515
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 60,
+      "max": 115,
+      "range": 7,
+      "target": true,
+      "shootEffect": "poison",
+      "areaEffect": "poison"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.11,
+      "min": 0,
+      "max": 0,
+      "length": 4,
+      "spread": 2,
+      "target": false,
+      "duration": 25000,
+      "areaEffect": "purplenote"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 0,
+      "max": 100,
+      "range": 7,
+      "shootEffect": "leafstar"
+    }
+  ],
+  "elements": {
+    "physical": 10,
+    "energy": -10,
+    "earth": 70,
+    "fire": -5,
+    "holy": -10,
+    "death": 40
+  },
+  "immunities": {
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "This will be your last dance!",
+      "This is a nightmare and you won't wake up!",
+      "Blood, fight and rage!",
+      "You're a threat to this realm! You have to die!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 160
+    },
+    {
+      "id": 28350,
+      "probability": 0.15714,
+      "name": "fairy wings"
+    },
+    {
+      "id": 7588,
+      "probability": 0.12094,
+      "name": "strong health potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 28349,
+      "probability": 0.09735,
+      "name": "shimmering beetles"
+    },
+    {
+      "id": 2760,
+      "probability": 0.07489,
+      "name": "goat grass"
+    },
+    {
+      "id": 28391,
+      "probability": 0.06727,
+      "name": "leaf star",
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 27039,
+      "probability": 0.05841,
+      "name": "cave turnip",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 1294,
+      "probability": 0.05117,
+      "name": "small stone",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 27618,
+      "probability": 0.05067,
+      "name": "prismatic quartz"
+    },
+    {
+      "id": 2792,
+      "probability": 0.05005,
+      "name": "dark mushroom",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7591,
+      "probability": 0.0352,
+      "name": "great health potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2074,
+      "probability": 0.03045,
+      "name": "panpipes"
+    },
+    {
+      "id": 7759,
+      "probability": 0.02783,
+      "name": "small enchanted sapphire",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2664,
+      "probability": 0.01697,
+      "name": "wood cape"
+    },
+    {
+      "id": 9928,
+      "probability": 0.00524,
+      "name": "leaf legs"
+    },
+    {
+      "id": 28355,
+      "probability": 0.00374,
+      "name": "wooden spellbook"
+    },
+    {
+      "id": 5792,
+      "probability": 0.00125,
+      "name": "die"
+    },
+    {
+      "id": 5015,
+      "probability": 0.00062,
+      "name": "mandrake"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

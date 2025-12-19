@@ -1,0 +1,94 @@
+{
+  "creatureStatistics": {
+    "name": "Swamp Troll",
+    "health": 55,
+    "maxHealth": 55,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 128,
+    "attack": 13,
+    "attackSpeed": 2000,
+    "defense": 6,
+    "outfit": {
+      "id": 76
+    },
+    "armor": 6
+  },
+  "experience": 25,
+  "corpse": 2806,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 15,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 13
+    }
+  ],
+  "elements": {
+    "earth": 15,
+    "fire": -5
+  },
+  "sayings": {
+    "texts": [
+      "Grrrr",
+      "Groar!",
+      "Me strong! Me ate spinach!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2667,
+      "probability": 0.6
+    },
+    {
+      "id": 2148,
+      "probability": 0.503,
+      "name": "gold coin",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2050,
+      "probability": 0.15
+    },
+    {
+      "id": 2389,
+      "probability": 0.13,
+      "name": "spear"
+    },
+    {
+      "id": 2643,
+      "probability": 0.1,
+      "name": "leather boots"
+    },
+    {
+      "id": 5901,
+      "probability": 0.02
+    },
+    {
+      "id": 2580,
+      "probability": 0.0008,
+      "name": "fishing rod"
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

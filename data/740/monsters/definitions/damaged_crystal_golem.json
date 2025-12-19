@@ -1,0 +1,35 @@
+{
+  "creatureStatistics": {
+    "name": "Damaged Crystal Golem",
+    "health": 500,
+    "maxHealth": 500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 180,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 0,
+    "outfit": {
+      "id": 508
+    }
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 4,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 500,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "creatureStatistics": {
+    "name": "Blistering Fire Elemental",
+    "health": 1500,
+    "maxHealth": 1500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 350,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 242
+    },
+    "armor": 20
+  },
+  "experience": 1300,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 350
+    },
+    {
+      "name": "fire",
+      "interval": 1000,
+      "chance": 0.11,
+      "min": 65,
+      "max": 510,
+      "length": 7,
+      "spread": 3
+    },
+    {
+      "name": "firecondition",
+      "interval": 1000,
+      "chance": 0.12,
+      "min": 50,
+      "max": 200,
+      "radius": 6,
+      "target": false,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "firefield",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "fire"
+    }
+  ],
+  "elements": {
+    "ice": -15,
+    "energy": 20,
+    "physical": 25,
+    "death": 40,
+    "earth": 50
+  },
+  "immunities": {
+    "holy": true,
+    "fire": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "FCHHHRRR"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.44,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.44,
+      "name": "gold coin",
+      "min": 1,
+      "max": 70
+    },
+    {
+      "id": 2147,
+      "probability": 0.05,
+      "name": "small ruby",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 13757,
+      "probability": 0.005
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

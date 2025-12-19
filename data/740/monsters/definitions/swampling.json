@@ -1,0 +1,98 @@
+{
+  "creatureStatistics": {
+    "name": "Swampling",
+    "health": 80,
+    "maxHealth": 80,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 80,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 535
+    },
+    "armor": 10
+  },
+  "experience": 45,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 80
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 2,
+      "max": 15,
+      "range": 7,
+      "shootEffect": "poison"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "length": 3,
+      "spread": 2,
+      "speedChange": -300,
+      "duration": 5000,
+      "areaEffect": "watersplash"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Gnark!",
+      "Crrrck!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2120,
+      "probability": 0.0454
+    },
+    {
+      "id": 2148,
+      "probability": 0.6,
+      "name": "gold coin",
+      "min": 1,
+      "max": 12
+    },
+    {
+      "id": 2787,
+      "probability": 0.0898,
+      "name": "white mushroom",
+      "min": 1,
+      "max": 5
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

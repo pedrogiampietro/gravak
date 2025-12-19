@@ -1,0 +1,204 @@
+{
+  "creatureStatistics": {
+    "name": "Hydra",
+    "health": 2350,
+    "maxHealth": 2350,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 206,
+    "attack": 270,
+    "attackSpeed": 2000,
+    "defense": 27,
+    "outfit": {
+      "id": 121
+    },
+    "armor": 27
+  },
+  "experience": 2100,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 300,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 260,
+      "max": 407,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 270
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "speedChange": -700,
+      "duration": 15000,
+      "shootEffect": "poison",
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 100,
+      "max": 250,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "bluebubble"
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 80,
+      "max": 155,
+      "target": true,
+      "shootEffect": "smallice"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 66,
+      "max": 320,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "carniphila"
+    }
+  ],
+  "elements": {
+    "ice": 50,
+    "holy": 30,
+    "physical": -5,
+    "energy": -10
+  },
+  "immunities": {
+    "earth": true,
+    "lifedrain": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "FCHHHHH",
+      "HISSSS"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.87759,
+      "name": "gold coin",
+      "min": 1,
+      "max": 246
+    },
+    {
+      "id": 2671,
+      "probability": 0.60233,
+      "name": "ham"
+    },
+    {
+      "id": 2152,
+      "probability": 0.49522,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 11199,
+      "probability": 0.10149,
+      "name": "hydra head"
+    },
+    {
+      "id": 2146,
+      "probability": 0.04949,
+      "name": "small sapphire"
+    },
+    {
+      "id": 8842,
+      "probability": 0.04941,
+      "name": "cucumber"
+    },
+    {
+      "id": 2214,
+      "probability": 0.01215,
+      "name": "ring of healing"
+    },
+    {
+      "id": 2476,
+      "probability": 0.01098,
+      "name": "knight armor"
+    },
+    {
+      "id": 4850,
+      "probability": 0.00942,
+      "name": "hydra egg"
+    },
+    {
+      "id": 2197,
+      "probability": 0.00902,
+      "name": "stone skin amulet"
+    },
+    {
+      "id": 2475,
+      "probability": 0.00823,
+      "name": "warrior helmet"
+    },
+    {
+      "id": 2177,
+      "probability": 0.00512,
+      "name": "life crystal"
+    },
+    {
+      "id": 7589,
+      "probability": 0.00465,
+      "name": "strong mana potion"
+    },
+    {
+      "id": 2536,
+      "probability": 0.00223,
+      "name": "medusa shield"
+    },
+    {
+      "id": 2498,
+      "probability": 0.00223,
+      "name": "royal helmet"
+    },
+    {
+      "id": 2195,
+      "probability": 0.00095,
+      "name": "boots of haste"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

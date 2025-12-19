@@ -1,0 +1,122 @@
+{
+  "creatureStatistics": {
+    "name": "Kongra",
+    "health": 340,
+    "maxHealth": 340,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 184,
+    "attack": 60,
+    "attackSpeed": 2000,
+    "defense": 18,
+    "outfit": {
+      "id": 116
+    },
+    "armor": 18
+  },
+  "experience": 115,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 10,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 260,
+      "duration": 3000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 60
+    }
+  ],
+  "elements": {
+    "energy": 5,
+    "earth": 10,
+    "fire": 20,
+    "ice": -15,
+    "death": -5
+  },
+  "sayings": {
+    "texts": [
+      "Hugah!",
+      "Ungh! Ungh!",
+      "Huaauaauaauaa!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.88003,
+      "name": "gold coin",
+      "min": 1,
+      "max": 40
+    },
+    {
+      "id": 2676,
+      "probability": 0.30813,
+      "name": "banana",
+      "min": 1,
+      "max": 12
+    },
+    {
+      "id": 12427,
+      "probability": 0.09356,
+      "name": "kongra's shoulderpad"
+    },
+    {
+      "id": 2200,
+      "probability": 0.01012,
+      "name": "protection amulet"
+    },
+    {
+      "id": 2463,
+      "probability": 0.01007,
+      "name": "plate armor"
+    },
+    {
+      "id": 5883,
+      "probability": 0.00968,
+      "name": "ape fur"
+    },
+    {
+      "id": 7618,
+      "probability": 0.00507,
+      "name": "health potion"
+    },
+    {
+      "id": 2166,
+      "probability": 0.0031,
+      "name": "power ring"
+    },
+    {
+      "id": 2209,
+      "probability": 0.00196,
+      "name": "club ring"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

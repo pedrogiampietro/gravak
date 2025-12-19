@@ -1,6 +1,6 @@
 "use strict";
 
-const Mouse = function() {
+const Mouse = function () {
 
   /*
    * Class Mouse
@@ -31,7 +31,7 @@ const Mouse = function() {
 
 }
 
-Mouse.prototype.getCurrentTileHover = function() {
+Mouse.prototype.getCurrentTileHover = function () {
 
   /*
    * Function Mouse.getCurrentTileHover
@@ -42,7 +42,7 @@ Mouse.prototype.getCurrentTileHover = function() {
 
 }
 
-Mouse.prototype.sendItemMove = function(fromObject, toObject, count) {
+Mouse.prototype.sendItemMove = function (fromObject, toObject, count) {
 
   /*
    * Function Mouse.sendItemMove
@@ -50,7 +50,7 @@ Mouse.prototype.sendItemMove = function(fromObject, toObject, count) {
    */
 
   // Stop if anything is missing
-  if(fromObject === null || fromObject.which === null || toObject === null || toObject.which === null) {
+  if (fromObject === null || fromObject.which === null || toObject === null || toObject.which === null) {
     return;
   }
 
@@ -58,7 +58,7 @@ Mouse.prototype.sendItemMove = function(fromObject, toObject, count) {
 
 }
 
-Mouse.prototype.setCursor = function(which) {
+Mouse.prototype.setCursor = function (which) {
 
   /*
    * Function Mouse.setCursor
@@ -69,7 +69,7 @@ Mouse.prototype.setCursor = function(which) {
 
 }
 
-Mouse.prototype.getWorldObject = function(event) {
+Mouse.prototype.getWorldObject = function (event) {
 
   /*
    * Function Mouse.getWorldObject
@@ -84,7 +84,7 @@ Mouse.prototype.getWorldObject = function(event) {
 
 }
 
-Mouse.prototype.look = function(object) {
+Mouse.prototype.look = function (object) {
 
   /*
    * Function Mouse.look
@@ -94,7 +94,7 @@ Mouse.prototype.look = function(object) {
   // Take a look at the item on the tile (or container)
   let item = object.which.peekItem(object.index);
 
-  if(object.which.constructor.name === "Container" && item === null) {
+  if (object.which.constructor.name === "Container" && item === null) {
     return;
   }
 
@@ -102,7 +102,7 @@ Mouse.prototype.look = function(object) {
 
 }
 
-Mouse.prototype.use = function(object) {
+Mouse.prototype.use = function (object) {
 
   /*
    * Function Mouse.use
@@ -112,12 +112,12 @@ Mouse.prototype.use = function(object) {
   // Fetch the item from the object
   let item = object.which.peekItem(object.index);
 
-  if(object.which instanceof Tile) {
+  if (object.which instanceof Tile) {
 
 
-    if(object.which.monsters.size !== 0) {
+    if (object.which.monsters.size !== 0) {
 
-      if(gameClient.player.isInProtectionZone()) {
+      if (gameClient.player.isInProtectionZone()) {
         return gameClient.interface.setCancelMessage("You may not attack from within protection zone.");
       }
 
@@ -126,17 +126,17 @@ Mouse.prototype.use = function(object) {
   }
 
   // No item is being used  
-  if(item !== null) {
-    if(item.isMultiUse()) {
+  if (item !== null) {
+    if (item.isMultiUse()) {
       return this.__setMultiUseItem(object);
     }
   }
-  
+
   gameClient.send(new ItemUsePacket(object));
 
 }
 
-Mouse.prototype.__getSlotObject = function(event) {
+Mouse.prototype.__getSlotObject = function (event) {
 
   /*
    * Function Mouse.__getSlotObject
@@ -146,7 +146,7 @@ Mouse.prototype.__getSlotObject = function(event) {
   let slotIndex, containerIndex;
 
   // Read the identifiers from the DOM
-  if(event.target.className === "body") {
+  if (event.target.className === "body") {
     slotIndex = 0;
     containerIndex = Number(event.target.parentElement.getAttribute("containerIndex"));
   } else {
@@ -165,7 +165,7 @@ Mouse.prototype.__getSlotObject = function(event) {
 
 }
 
-Mouse.prototype.__bindMoveCallback = function(fromObject, toObject) {
+Mouse.prototype.__bindMoveCallback = function (fromObject, toObject) {
 
   /*
    * Function Mouse.__bindMoveCallback
@@ -176,20 +176,20 @@ Mouse.prototype.__bindMoveCallback = function(fromObject, toObject) {
   let item = fromObject.which.peekItem(fromObject.index);
 
   // Still write item move maybe there is a creature
-  if(item === null) {
+  if (item === null) {
     return this.sendItemMove(fromObject, toObject, 1);
   }
 
   // The item cannot be moved
-  if(!item.isMoveable()) {
+  if (!item.isMoveable()) {
     return;
   }
 
-  if(item.isStackable() && gameClient.keyboard.isShiftDown()) {
+  if (item.isStackable() && gameClient.keyboard.isShiftDown()) {
     return this.sendItemMove(fromObject, toObject, 1);
   }
 
-  if(item.isStackable() && gameClient.keyboard.isControlDown() && item.count > 1) {
+  if (item.isStackable() && gameClient.keyboard.isControlDown() && item.count > 1) {
 
     // Open the move stackable item 
     let properties = new Object({
@@ -207,7 +207,7 @@ Mouse.prototype.__bindMoveCallback = function(fromObject, toObject) {
 
 }
 
-Mouse.prototype.__handleCanvasMouseUp = function(event) {
+Mouse.prototype.__handleCanvasMouseUp = function (event) {
 
   /*
    * Function Mouse.__handleCanvasMouseUp
@@ -215,12 +215,12 @@ Mouse.prototype.__handleCanvasMouseUp = function(event) {
    */
 
   // No active element
-  if(this.__mouseDownObject === null || this.__mouseDownObject.which === null) {
+  if (this.__mouseDownObject === null || this.__mouseDownObject.which === null) {
     return;
   }
 
   // If we are using an item already
-  if(this.__multiUseObject !== null) {
+  if (this.__multiUseObject !== null) {
     return this.__handleItemUseWith(this.__multiUseObject, this.__mouseDownObject);
   }
 
@@ -228,15 +228,15 @@ Mouse.prototype.__handleCanvasMouseUp = function(event) {
   let toObject = this.getWorldObject(event);
 
   // Started on game screen or canvas: we will do some client-side checks
-  if(this.__mouseDownObject.which.constructor.name === "Tile") {
+  if (this.__mouseDownObject.which.constructor.name === "Tile") {
 
     // The down & up are the same: this is a click.
-    if(this.__mouseDownObject.which === toObject.which) {
+    if (this.__mouseDownObject.which === toObject.which) {
       return this.__handleMouseClick();
     }
 
     // The position where the item is used must be besides the player
-    if(!this.__mouseDownObject.which.getPosition().besides(gameClient.player.getPosition())) {
+    if (!this.__mouseDownObject.which.getPosition().besides(gameClient.player.getPosition())) {
       return gameClient.interface.setCancelMessage("You have to move closer.");
     }
 
@@ -247,7 +247,7 @@ Mouse.prototype.__handleCanvasMouseUp = function(event) {
 
 }
 
-Mouse.prototype.__handleContextMenu = function(event) {
+Mouse.prototype.__handleContextMenu = function (event) {
 
   /*
    * Function Mouse.__handleContextMenu
@@ -262,15 +262,15 @@ Mouse.prototype.__handleContextMenu = function(event) {
   gameClient.interface.menuManager.close();
 
   // Delegate to the right handler
-  if(event.target.id === "screen") {
+  if (event.target.id === "screen") {
 
     let menu = gameClient.interface.menuManager.getMenu("screen-menu");
     let tile = this.getWorldObject(event);
     menu.element.querySelector("button[action=use]").innerHTML = "Use";
-    if(tile !== null && tile.which.items.length > 0) {
-      if(tile.which.peekItem(0xFF).isRotateable()) {
+    if (tile !== null && tile.which.items.length > 0) {
+      if (tile.which.peekItem(0xFF).isRotateable()) {
         menu.element.querySelector("button[action=use]").innerHTML = "Rotate";
-      } else if(tile.which.peekItem(0xFF).isMultiUse()) {
+      } else if (tile.which.peekItem(0xFF).isMultiUse()) {
         menu.element.querySelector("button[action=use]").innerHTML = "Use With";
       }
     }
@@ -279,37 +279,37 @@ Mouse.prototype.__handleContextMenu = function(event) {
 
   }
 
-  if(event.target.className === "hotbar-item") {
+  if (event.target.className === "hotbar-item") {
     return gameClient.interface.menuManager.open("hotbar-menu", event);
   }
 
-  if(event.target.id === "chat-text-area" || event.target.className === "channel-empty") {
-   return gameClient.interface.menuManager.open("chat-body-menu", event);
+  if (event.target.id === "chat-text-area" || event.target.className === "channel-empty") {
+    return gameClient.interface.menuManager.open("chat-body-menu", event);
   }
 
-  if(event.target.parentNode.id === "chat-text-area") {
-    if(event.target.getAttribute("name") !== null) {
+  if (event.target.parentNode.id === "chat-text-area") {
+    if (event.target.getAttribute("name") !== null) {
       return gameClient.interface.menuManager.open("chat-entry-menu", event);
     }
   }
 
-  if(event.target.parentNode.className === "window") {
-    if(event.target.parentNode.id === "friend-window") {
+  if (event.target.parentNode.className === "window") {
+    if (event.target.parentNode.id === "friend-window") {
       return gameClient.interface.menuManager.open("friend-window-menu", event);
     }
   }
 
-  if(event.target.className == "friend-entry") {
+  if (event.target.className == "friend-entry") {
     return gameClient.interface.menuManager.open("friend-list-menu", event);
   }
 
-  if(event.target.className.includes("chat-title")) {
+  if (event.target.className.includes("chat-title")) {
     return gameClient.interface.menuManager.open("chat-header-menu", event);
   }
 
 }
 
-Mouse.prototype.__handleItemUseWith = function(fromObject, toObject) {
+Mouse.prototype.__handleItemUseWith = function (fromObject, toObject) {
 
   /*
    * Function Mouse.__handleItemUseWith
@@ -324,7 +324,7 @@ Mouse.prototype.__handleItemUseWith = function(fromObject, toObject) {
 
 }
 
-Mouse.prototype.__handleMouseClick = function() {
+Mouse.prototype.__handleMouseClick = function () {
 
   /*
    * Function Mouse.__handleMouseClick
@@ -332,27 +332,27 @@ Mouse.prototype.__handleMouseClick = function() {
    */
 
   // Only send a click event when held down
-  if(gameClient.keyboard.isControlDown()) {
+  if (gameClient.keyboard.isControlDown()) {
     return this.use(this.__mouseDownObject);
   }
 
   // When shift is held
-  if(gameClient.keyboard.isShiftDown()) {
+  if (gameClient.keyboard.isShiftDown()) {
     return this.look(this.__mouseDownObject);
   }
 
-  if(this.__multiUseObject !== null) {
+  if (this.__multiUseObject !== null) {
     return;
   }
 
   // Player has autowalk requested
-  if(!gameClient.player.isMoving() && this.__mouseDownObject.which.constructor.name === "Tile") {
+  if (!gameClient.player.isMoving() && this.__mouseDownObject.which.constructor.name === "Tile") {
     return gameClient.world.pathfinder.findPath(gameClient.player.__position, gameClient.renderer.screen.getWorldCoordinates(event).__position);
   }
 
 }
 
-Mouse.prototype.__handleMouseDown = function(event) {
+Mouse.prototype.__handleMouseDown = function (event) {
 
   /*
    * Function Mouse.__handleMouseDown
@@ -360,35 +360,40 @@ Mouse.prototype.__handleMouseDown = function(event) {
    */
 
   // Block other mouse buttons except for left
-  if(event.buttons !== 1) {
+  if (event.buttons !== 1) {
     return;
   }
 
   // Must be connected to the gameserver
-  if(!gameClient.networkManager.isConnected()) {
+  if (!gameClient.networkManager.isConnected()) {
     return;
   }
 
-  if(gameClient.interface.menuManager.isOpened() && event.target.tagName !== "BUTTON") {
+  // Block input when player is dead
+  if (gameClient.player && gameClient.player.isDead) {
+    return;
+  }
+
+  if (gameClient.interface.menuManager.isOpened() && event.target.tagName !== "BUTTON") {
     gameClient.interface.menuManager.close();
   }
 
   // Set the selected event
   this.__setSelectedObject(event);
 
-  if(!gameClient.keyboard.isShiftDown() && !gameClient.keyboard.isControlDown()) {
+  if (!gameClient.keyboard.isShiftDown() && !gameClient.keyboard.isControlDown()) {
     this.setCursor("grabbing");
   }
 
 }
 
-Mouse.prototype.__handleMouseDoubleClick = function(event) {
+Mouse.prototype.__handleMouseDoubleClick = function (event) {
 
-  if(event.target.className === "chat-message") {
+  if (event.target.className === "chat-message") {
 
     let name = event.target.getAttribute("name");
 
-    if(name !== null) {
+    if (name !== null) {
       return gameClient.interface.channelManager.addPrivateChannel(name);
     }
 
@@ -396,7 +401,7 @@ Mouse.prototype.__handleMouseDoubleClick = function(event) {
 
 }
 
-Mouse.prototype.__handleMouseMove = function(event) {
+Mouse.prototype.__handleMouseMove = function (event) {
 
   /*
    * Function Mouse.__handleMouseMove
@@ -404,7 +409,7 @@ Mouse.prototype.__handleMouseMove = function(event) {
    */
 
   // Must be connected to the gameserver
-  if(!gameClient.isRunning()) {
+  if (!gameClient.isRunning()) {
     return;
   }
 
@@ -416,43 +421,43 @@ Mouse.prototype.__handleMouseMove = function(event) {
 
 }
 
-Mouse.prototype.__updateCursorMove = function(target) {
+Mouse.prototype.__updateCursorMove = function (target) {
 
   /*
    * Function Mouse.__updateCursorMove
    * Updates the cursor based on the currently passed target element
    */
 
-  if(gameClient.keyboard.isShiftDown() || gameClient.keyboard.isControlDown()) {
+  if (gameClient.keyboard.isShiftDown() || gameClient.keyboard.isControlDown()) {
     return window.getSelection().removeAllRanges();
   }
 
   // Block when using or dragging an item
-  if(this.__multiUseObject !== null || this.__mouseDownObject !== null) {
+  if (this.__multiUseObject !== null || this.__mouseDownObject !== null) {
     return window.getSelection().removeAllRanges();
   }
 
   // Hovering over a slot
-  if(target.className.includes("slot")) {
+  if (target.className.includes("slot")) {
     return this.setCursor("grab");
   }
 
   let tile = this.getCurrentTileHover();
 
   // In gameworld but nothing there
-  if(tile === null) {
+  if (tile === null) {
     return this.setCursor("auto");
   }
 
   // No items
-  if(tile.items.length === 0) {
+  if (tile.items.length === 0) {
     return this.setCursor("auto");
   }
 
   let item = tile.peekItem(0xFF);
- 
 
-  if(item.isPickupable() || item.isMoveable()) {
+
+  if (item.isPickupable() || item.isMoveable()) {
     return this.setCursor("grab");
   }
 
@@ -460,7 +465,7 @@ Mouse.prototype.__updateCursorMove = function(target) {
 
 }
 
-Mouse.prototype.__handleMouseUp = function(event) {
+Mouse.prototype.__handleMouseUp = function (event) {
 
   /*
    * Function Mouse.__handleMouseUp
@@ -468,14 +473,19 @@ Mouse.prototype.__handleMouseUp = function(event) {
    */
 
   // Must be connected to the gameserver
-  if(!gameClient.networkManager.isConnected()) {
+  if (!gameClient.networkManager.isConnected()) {
+    return;
+  }
+
+  // Block input when player is dead
+  if (gameClient.player && gameClient.player.isDead) {
     return;
   }
 
   // Game world window
-  if(event.target === gameClient.renderer.screen.canvas) {
+  if (event.target === gameClient.renderer.screen.canvas) {
     this.__handleCanvasMouseUp(event);
-  } else if(event.target.className.includes("slot") || event.target.className === "body") {
+  } else if (event.target.className.includes("slot") || event.target.className === "body") {
     this.__handleSlotMouseUp(event);
   }
 
@@ -483,40 +493,40 @@ Mouse.prototype.__handleMouseUp = function(event) {
   this.__mouseDownObject = null;
 
   // Reset the cursor
-  if(this.__multiUseObject === null) {
+  if (this.__multiUseObject === null) {
     this.setCursor("auto");
   }
 
 }
 
-Mouse.prototype.__handleSlotMouseUp = function(event) {
+Mouse.prototype.__handleSlotMouseUp = function (event) {
 
   /*
    * Function Mouse.__handleSlotMouseUp
    * Handles the mouse up event on a slot
    */
 
-  if(this.__mouseDownObject === null || this.__mouseDownObject.which === null) {
+  if (this.__mouseDownObject === null || this.__mouseDownObject.which === null) {
     return;
   }
 
   let toObject = this.__getSlotObject(event);
 
   // Moving from the world: check player adjacency
-  if(this.__mouseDownObject.which.constructor.name === "Tile") {
+  if (this.__mouseDownObject.which.constructor.name === "Tile") {
 
     // The position where the item is used must be besides the player
-    if(!this.__mouseDownObject.which.getPosition().besides(gameClient.player.getPosition())) {
+    if (!this.__mouseDownObject.which.getPosition().besides(gameClient.player.getPosition())) {
       return;
     }
 
   }
 
   // Move from container: check if it the same slot? Then it is a click not a move!
-  if(this.__mouseDownObject.which instanceof Container) {
+  if (this.__mouseDownObject.which instanceof Container) {
 
     // Source and destination are identical: do nothing
-    if(this.__mouseDownObject.which === toObject.which && this.__mouseDownObject.index === toObject.index) {
+    if (this.__mouseDownObject.which === toObject.which && this.__mouseDownObject.index === toObject.index) {
       return this.__handleMouseClick();
     }
 
@@ -526,7 +536,7 @@ Mouse.prototype.__handleSlotMouseUp = function(event) {
 
 }
 
-Mouse.prototype.__setMultiUseItem = function(object) {
+Mouse.prototype.__setMultiUseItem = function (object) {
 
   /*
    * Function Mouse.__setMultiUseItem
@@ -539,7 +549,7 @@ Mouse.prototype.__setMultiUseItem = function(object) {
 
 }
 
-Mouse.prototype.__setSelectedObject = function(event) {
+Mouse.prototype.__setSelectedObject = function (event) {
 
   /*
    * Function Mouse.__setSelectedObject
@@ -547,9 +557,9 @@ Mouse.prototype.__setSelectedObject = function(event) {
    */
 
   // The clicked element is the screen or a slot
-  if(event.target === gameClient.renderer.screen.canvas) {
+  if (event.target === gameClient.renderer.screen.canvas) {
     return this.__mouseDownObject = this.getWorldObject(event);
-  } else if(event.target.className.includes("slot")) {
+  } else if (event.target.className.includes("slot")) {
     return this.__mouseDownObject = this.__getSlotObject(event);
   }
 

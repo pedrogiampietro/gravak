@@ -1,0 +1,106 @@
+{
+  "creatureStatistics": {
+    "name": "Feverish Citizen",
+    "health": 125,
+    "maxHealth": 125,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 185,
+    "attack": 18,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 425
+    },
+    "armor": 15
+  },
+  "experience": 30,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.01,
+      "duration": 5000,
+      "areaEffect": "greenbubble"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 18
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "length": 3,
+      "spread": 2,
+      "target": false,
+      "duration": 3000,
+      "areaEffect": "poison"
+    }
+  ],
+  "elements": {
+    "holy": 80,
+    "fire": 20
+  },
+  "sayings": {
+    "texts": [
+      "Aaaaargh!",
+      "I am the king of the world!",
+      "Die Ferumbras!",
+      "Tigerblood is running through my veins!",
+      "You! It's you again!",
+      "Stand still you tasty morsel!",
+      "<giggle>",
+      "Burn heretic! Burn!",
+      "Harrr!",
+      "This is Venore!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.303,
+      "name": "gold coin",
+      "min": 1,
+      "max": 35
+    },
+    {
+      "id": 2230,
+      "probability": 0.0492
+    },
+    {
+      "id": 2575,
+      "probability": 0.2573,
+      "name": "worm",
+      "min": 1,
+      "max": 3
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

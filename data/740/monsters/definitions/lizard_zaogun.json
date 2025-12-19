@@ -1,0 +1,158 @@
+{
+  "creatureStatistics": {
+    "name": "Lizard Zaogun",
+    "health": 2955,
+    "maxHealth": 2955,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 276,
+    "attack": 349,
+    "attackSpeed": 2000,
+    "defense": 42,
+    "outfit": {
+      "id": 343
+    },
+    "armor": 42
+  },
+  "experience": 1700,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 175,
+      "max": 275,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 349
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 220,
+      "max": 375,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "poison",
+      "areaEffect": "poison"
+    }
+  ],
+  "elements": {
+    "physical": 5,
+    "energy": 20,
+    "fire": 45,
+    "ice": 15,
+    "death": 10
+  },
+  "immunities": {
+    "earth": true,
+    "invisible": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.94142,
+      "name": "gold coin",
+      "min": 1,
+      "max": 268
+    },
+    {
+      "id": 2152,
+      "probability": 0.49665,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 11331,
+      "probability": 0.14974,
+      "name": "zaogun shoulderplates"
+    },
+    {
+      "id": 5876,
+      "probability": 0.14674,
+      "name": "lizard leather"
+    },
+    {
+      "id": 5881,
+      "probability": 0.12054,
+      "name": "lizard scale"
+    },
+    {
+      "id": 11330,
+      "probability": 0.08381,
+      "name": "zaogun flag"
+    },
+    {
+      "id": 7591,
+      "probability": 0.07211,
+      "name": "great health potion",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2149,
+      "probability": 0.04993,
+      "name": "small emerald",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 11206,
+      "probability": 0.02087,
+      "name": "red lantern"
+    },
+    {
+      "id": 7588,
+      "probability": 0.01951,
+      "name": "strong health potion"
+    },
+    {
+      "id": 11303,
+      "probability": 0.01118,
+      "name": "zaoan shoes"
+    },
+    {
+      "id": 2528,
+      "probability": 0.0102,
+      "name": "tower shield"
+    },
+    {
+      "id": 11304,
+      "probability": 0.00912,
+      "name": "zaoan legs"
+    },
+    {
+      "id": 11301,
+      "probability": 0.00519,
+      "name": "zaoan armor"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

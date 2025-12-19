@@ -1,0 +1,140 @@
+{
+  "creatureStatistics": {
+    "name": "Acolyte of the Cult",
+    "health": 390,
+    "maxHealth": 390,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 100,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 194
+    },
+    "armor": 15
+  },
+  "experience": 300,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 40,
+      "max": 60,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 60,
+      "max": 120,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "poison",
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "duration": 3000,
+      "shootEffect": "holy",
+      "areaEffect": "holydamage"
+    }
+  ],
+  "elements": {
+    "holy": 20,
+    "earth": 20,
+    "ice": 20,
+    "physical": -10,
+    "energy": -10,
+    "death": -5
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Skeleton",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 1
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Praise the voodoo!",
+      "Power to the cult!",
+      "Feel the power of the cult!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 1962,
+      "probability": 0.0073
+    },
+    {
+      "id": 2148,
+      "probability": 0.6694,
+      "name": "gold coin",
+      "min": 1,
+      "max": 40
+    },
+    {
+      "id": 2149,
+      "probability": 0.0055,
+      "name": "small emerald"
+    },
+    {
+      "id": 2168,
+      "probability": 0.0056,
+      "name": "life ring"
+    },
+    {
+      "id": 2394,
+      "probability": 0.0499,
+      "name": "morning star"
+    },
+    {
+      "id": 6088,
+      "probability": 0.0048
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

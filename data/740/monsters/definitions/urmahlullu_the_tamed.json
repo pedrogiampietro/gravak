@@ -1,0 +1,93 @@
+{
+  "creatureStatistics": {
+    "name": "Urmahlullu The Tamed",
+    "health": 100000,
+    "maxHealth": 100000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 1300,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 1197
+    },
+    "armor": 10
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1300
+    },
+    {
+      "name": "fire",
+      "interval": 3000,
+      "chance": 0.2,
+      "min": 500,
+      "max": 800,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 550,
+      "max": 800,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 550,
+      "max": 800,
+      "radius": 3,
+      "target": false,
+      "shootEffect": "energyball",
+      "areaEffect": "energy"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.18,
+      "min": 450,
+      "max": 600,
+      "target": false,
+      "areaEffect": "fireattack"
+    }
+  ],
+  "elements": {
+    "energy": 40
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

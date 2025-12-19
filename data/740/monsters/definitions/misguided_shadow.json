@@ -1,0 +1,109 @@
+{
+  "creatureStatistics": {
+    "name": "Misguided Shadow",
+    "health": 3000,
+    "maxHealth": 3000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 240,
+    "attack": 350,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 985
+    },
+    "armor": 35
+  },
+  "experience": 1500,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 300,
+      "max": 750,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 350
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 200,
+      "max": 250,
+      "range": 7
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 180,
+      "max": 220,
+      "range": 6,
+      "length": 6,
+      "spread": 7,
+      "shootEffect": "energy",
+      "areaEffect": "energyarea"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "Yooooouuuuu..."
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 7589,
+      "probability": 0.06522,
+      "name": "strong mana potion"
+    },
+    {
+      "id": 24849,
+      "probability": 0.04348,
+      "name": "onyx chip"
+    },
+    {
+      "id": 2156,
+      "probability": 0.02174,
+      "name": "red gem"
+    },
+    {
+      "id": 7588,
+      "probability": 0.02174,
+      "name": "strong health potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

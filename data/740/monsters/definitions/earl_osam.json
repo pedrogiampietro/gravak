@@ -1,0 +1,303 @@
+{
+  "creatureStatistics": {
+    "name": "Earl Osam",
+    "health": 50000,
+    "maxHealth": 50000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 1000,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 1223
+    },
+    "armor": 78
+  },
+  "experience": 55000,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.35,
+      "min": 350,
+      "max": 550,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1000
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 400,
+      "max": 1000,
+      "length": 7,
+      "spread": 0,
+      "areaEffect": "iceattack"
+    },
+    {
+      "name": "poison",
+      "interval": 1800,
+      "chance": 0.25,
+      "min": 400,
+      "max": 1000,
+      "length": 7,
+      "spread": 2,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 260,
+      "max": 420,
+      "range": 3,
+      "target": true,
+      "areaEffect": "bluechain"
+    }
+  ],
+  "elements": {
+    "fire": 20
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "summons": [
+    {
+      "name": "Frozen Soul",
+      "interval": 2000,
+      "chance": 0.2,
+      "maxSummons": 5
+    }
+  ],
+  "loot": [
+    {
+      "id": 25172,
+      "probability": 1,
+      "name": "silver token",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2152,
+      "probability": 0.99468,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 26030,
+      "probability": 0.59574,
+      "name": "ultimate spirit potion",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 26029,
+      "probability": 0.56915,
+      "name": "ultimate mana potion",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 26031,
+      "probability": 0.51064,
+      "name": "supreme health potion",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 2156,
+      "probability": 0.39362,
+      "name": "red gem",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2154,
+      "probability": 0.37234,
+      "name": "yellow gem",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2158,
+      "probability": 0.23404,
+      "name": "blue gem",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 5889,
+      "probability": 0.22872,
+      "name": "piece of draconian steel",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7439,
+      "probability": 0.2234,
+      "name": "berserk potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2160,
+      "probability": 0.20745,
+      "name": "crystal coin",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 15454,
+      "probability": 0.20213,
+      "name": "guardian axe"
+    },
+    {
+      "id": 2155,
+      "probability": 0.18617,
+      "name": "green gem",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 5888,
+      "probability": 0.18617,
+      "name": "piece of hell steel",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 7443,
+      "probability": 0.18085,
+      "name": "bullseye potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 7440,
+      "probability": 0.18085,
+      "name": "mastermind potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2475,
+      "probability": 0.16489,
+      "name": "warrior helmet"
+    },
+    {
+      "id": 26199,
+      "probability": 0.14894,
+      "name": "collar of green plasma"
+    },
+    {
+      "id": 7902,
+      "probability": 0.14362,
+      "name": "glacier mask"
+    },
+    {
+      "id": 34246,
+      "probability": 0.10106,
+      "name": "young lich worm"
+    },
+    {
+      "id": 2153,
+      "probability": 0.08511,
+      "name": "violet gem"
+    },
+    {
+      "id": 26185,
+      "probability": 0.07979,
+      "name": "ring of blue plasma"
+    },
+    {
+      "id": 26189,
+      "probability": 0.07979,
+      "name": "ring of red plasma"
+    },
+    {
+      "id": 26198,
+      "probability": 0.07447,
+      "name": "collar of blue plasma"
+    },
+    {
+      "id": 9971,
+      "probability": 0.07447,
+      "name": "gold ingot"
+    },
+    {
+      "id": 26200,
+      "probability": 0.06915,
+      "name": "collar of red plasma"
+    },
+    {
+      "id": 26187,
+      "probability": 0.06383,
+      "name": "ring of green plasma"
+    },
+    {
+      "id": 34245,
+      "probability": 0.05319,
+      "name": "rotten heart"
+    },
+    {
+      "id": 34244,
+      "probability": 0.04255,
+      "name": "ancient liche bone"
+    },
+    {
+      "id": 32716,
+      "probability": 0.03191,
+      "name": "giant emerald"
+    },
+    {
+      "id": 32717,
+      "probability": 0.02128,
+      "name": "giant sapphire"
+    },
+    {
+      "id": 34235,
+      "probability": 0.01596,
+      "name": "embrace of nature"
+    },
+    {
+      "id": 34234,
+      "probability": 0.01064,
+      "name": "bear skin"
+    },
+    {
+      "id": 34250,
+      "probability": 0.01064,
+      "name": "token of love"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

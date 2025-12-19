@@ -1,0 +1,240 @@
+{
+  "creatureStatistics": {
+    "name": "The Pale Count",
+    "health": 50000,
+    "maxHealth": 50000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 300,
+    "attack": 540,
+    "attackSpeed": 2000,
+    "defense": 75,
+    "outfit": {
+      "id": 557
+    },
+    "armor": 75
+  },
+  "experience": 28000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 540
+    },
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.17,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "speedChange": -600,
+      "duration": 1500
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.21,
+      "min": 130,
+      "max": 350,
+      "range": 6,
+      "radius": 2,
+      "target": true,
+      "shootEffect": "smallice",
+      "areaEffect": "giantice"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 60,
+      "max": 120,
+      "range": 7,
+      "shootEffect": "earth",
+      "areaEffect": "carniphila"
+    }
+  ],
+  "elements": {
+    "holy": -10,
+    "fire": 15,
+    "energy": 30,
+    "ice": 30
+  },
+  "immunities": {
+    "death": true,
+    "lifedrain": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Nightfiend",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 4
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Feel the hungry kiss of death!",
+      "The monsters in the mirror will come eat your dreams.",
+      "Your pitiful life has come to an end!",
+      "I will squish you like a maggot and suck you dry!",
+      "Yield to the inevitable!",
+      "Some day I shall see my beautiful face in a mirror again."
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 9020,
+      "probability": 1
+    },
+    {
+      "id": 21244,
+      "probability": 1
+    },
+    {
+      "id": 21253,
+      "probability": 0.05
+    },
+    {
+      "id": 21252,
+      "probability": 0.05
+    },
+    {
+      "id": 12405,
+      "probability": 0.5
+    },
+    {
+      "id": 10602,
+      "probability": 0.5
+    },
+    {
+      "id": 21400,
+      "probability": 0.05
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 7589,
+      "probability": 0.5,
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7588,
+      "probability": 0.5,
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2165,
+      "probability": 0.1
+    },
+    {
+      "id": 2214,
+      "probability": 0.1
+    },
+    {
+      "id": 5909,
+      "probability": 0.1
+    },
+    {
+      "id": 5911,
+      "probability": 0.1
+    },
+    {
+      "id": 5912,
+      "probability": 0.1
+    },
+    {
+      "id": 7427,
+      "probability": 0.05
+    },
+    {
+      "id": 2438,
+      "probability": 0.1
+    },
+    {
+      "id": 7419,
+      "probability": 0.05
+    },
+    {
+      "id": 8903,
+      "probability": 0.05
+    },
+    {
+      "id": 21707,
+      "probability": 0.05
+    },
+    {
+      "id": 2534,
+      "probability": 0.05
+    },
+    {
+      "id": 21708,
+      "probability": 0.05
+    },
+    {
+      "id": 2145,
+      "probability": 0.5,
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2144,
+      "probability": 0.5,
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2146,
+      "probability": 0.5,
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2149,
+      "probability": 0.5,
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2153,
+      "probability": 0.1
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

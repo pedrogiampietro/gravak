@@ -1,0 +1,169 @@
+{
+  "creatureStatistics": {
+    "name": "Sparkion",
+    "health": 2700,
+    "maxHealth": 2700,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 302,
+    "attack": 300,
+    "attackSpeed": 2000,
+    "defense": 40,
+    "outfit": {
+      "id": 877
+    },
+    "armor": 40
+  },
+  "experience": 1520,
+  "corpse": 2813,
+  "fluidType": 4,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 300
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 350,
+      "max": 700,
+      "length": 6,
+      "spread": 0,
+      "areaEffect": "groundshaker"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 150,
+      "max": 250,
+      "range": 5,
+      "target": true,
+      "shootEffect": "energy",
+      "areaEffect": "energy"
+    },
+    {
+      "name": "energycondition",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 300,
+      "max": 600,
+      "range": 6,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "energy",
+      "areaEffect": "yellowspark"
+    }
+  ],
+  "elements": {
+    "earth": -15,
+    "physical": 5,
+    "holy": 5,
+    "death": 5,
+    "fire": 15,
+    "ice": 90
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Zzing!",
+      "Frizzle!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2152,
+      "probability": 0.9,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2273,
+      "probability": 0.095,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2274,
+      "probability": 0.095,
+      "name": "great health potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2146,
+      "probability": 0.044,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2158,
+      "probability": 0.009,
+      "name": "blue gem"
+    },
+    {
+      "id": 2189,
+      "probability": 0.009,
+      "name": "wand of cosmic energy"
+    },
+    {
+      "id": 26187,
+      "probability": 0.004
+    },
+    {
+      "id": 26189,
+      "probability": 0.004
+    },
+    {
+      "id": 26185,
+      "probability": 0.004
+    },
+    {
+      "id": 26199,
+      "probability": 0.0025
+    },
+    {
+      "id": 26198,
+      "probability": 0.0025
+    },
+    {
+      "id": 26200,
+      "probability": 0.0025
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

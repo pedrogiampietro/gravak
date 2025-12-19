@@ -1,0 +1,188 @@
+{
+  "creatureStatistics": {
+    "name": "Hideous Fungus",
+    "health": 4600,
+    "maxHealth": 4600,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 260,
+    "attack": 450,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 499
+    },
+    "armor": 35
+  },
+  "experience": 2900,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 275,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 275,
+      "max": 350,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.1,
+      "duration": 6000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 450
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 250,
+      "max": 430,
+      "range": 7,
+      "shootEffect": "smallearth",
+      "areaEffect": "smallplants"
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 250,
+      "max": 550,
+      "length": 8,
+      "spread": 3,
+      "shootEffect": "snowball"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "radius": 1,
+      "target": true,
+      "speedChange": -600,
+      "duration": 60000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 5,
+      "target": true,
+      "duration": 4000,
+      "shootEffect": "smallstone",
+      "areaEffect": "stun"
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 400,
+      "max": 640,
+      "range": 7,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "greenspark"
+    }
+  ],
+  "elements": {
+    "holy": 5,
+    "death": 1,
+    "fire": 5,
+    "energy": 15,
+    "ice": 15
+  },
+  "immunities": {
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "humorless fungus",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Munch munch munch!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.7,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.7,
+      "name": "gold coin",
+      "min": 1,
+      "max": 97
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 2391,
+      "probability": 0.0401,
+      "name": "war hammer"
+    },
+    {
+      "id": 2273,
+      "probability": 0.07692,
+      "name": "great mana potion"
+    },
+    {
+      "id": 2274,
+      "probability": 0.0722,
+      "name": "great health potion"
+    },
+    {
+      "id": 2268,
+      "probability": 0.0909,
+      "name": "mana potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

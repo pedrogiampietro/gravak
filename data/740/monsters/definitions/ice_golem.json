@@ -1,0 +1,136 @@
+{
+  "creatureStatistics": {
+    "name": "Ice Golem",
+    "health": 385,
+    "maxHealth": 385,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 195,
+    "attack": 220,
+    "attackSpeed": 2000,
+    "defense": 26,
+    "outfit": {
+      "id": 261
+    },
+    "armor": 25
+  },
+  "experience": 295,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 220
+    },
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.13,
+      "min": 0,
+      "max": 0,
+      "length": 8,
+      "spread": 0,
+      "speedChange": -800,
+      "duration": 20000,
+      "areaEffect": "energy"
+    },
+    {
+      "name": "ice",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 50,
+      "max": 85,
+      "range": 7,
+      "shootEffect": "smallice",
+      "areaEffect": "iceattack"
+    },
+    {
+      "name": "ice golem skill reducer",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0
+    }
+  ],
+  "elements": {
+    "physical": 25,
+    "energy": -20
+  },
+  "immunities": {
+    "holy": true,
+    "death": true,
+    "fire": true,
+    "ice": true,
+    "invisible": true,
+    "paralyze": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "Chrrr.",
+      "Crrrrk.",
+      "Gnarr."
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2145,
+      "probability": 0.00066,
+      "name": "small diamond"
+    },
+    {
+      "id": 2146,
+      "probability": 0.00578,
+      "name": "small sapphire"
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2396,
+      "probability": 0.004,
+      "name": "ice rapier"
+    },
+    {
+      "id": 7441,
+      "probability": 0.05
+    },
+    {
+      "id": 2271,
+      "probability": 0.00444,
+      "name": "strong health potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

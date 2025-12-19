@@ -1,0 +1,193 @@
+{
+  "creatureStatistics": {
+    "name": "Diamond Servant Replica",
+    "health": 2000,
+    "maxHealth": 2000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 172,
+    "attack": 100,
+    "attackSpeed": 2000,
+    "defense": 45,
+    "outfit": {
+      "id": 397
+    },
+    "armor": 40
+  },
+  "experience": 700,
+  "corpse": 2813,
+  "fluidType": 4,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.11,
+      "min": 50,
+      "max": 150,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "areaEffect": "yellowenergy"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.11,
+      "min": 100,
+      "max": 210,
+      "radius": 3,
+      "areaEffect": "yellowenergy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 75,
+      "max": 125,
+      "range": 7,
+      "target": true,
+      "shootEffect": "energy",
+      "areaEffect": "energy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 70,
+      "max": 120,
+      "length": 5,
+      "spread": 2,
+      "areaEffect": "purpleenergy"
+    }
+  ],
+  "elements": {
+    "earth": 75,
+    "fire": 10,
+    "holy": -15
+  },
+  "immunities": {
+    "energy": true,
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.93197,
+      "name": "gold coin",
+      "min": 1,
+      "max": 179
+    },
+    {
+      "id": 5944,
+      "probability": 0.45574,
+      "name": "soul orb"
+    },
+    {
+      "id": 2177,
+      "probability": 0.0959,
+      "name": "life crystal"
+    },
+    {
+      "id": 7589,
+      "probability": 0.0627,
+      "name": "strong mana potion"
+    },
+    {
+      "id": 7588,
+      "probability": 0.06066,
+      "name": "strong health potion"
+    },
+    {
+      "id": 9690,
+      "probability": 0.05697,
+      "name": "gear wheel"
+    },
+    {
+      "id": 10572,
+      "probability": 0.05205,
+      "name": "gear crystal"
+    },
+    {
+      "id": 9978,
+      "probability": 0.04303,
+      "name": "crystal pedestal"
+    },
+    {
+      "id": 2164,
+      "probability": 0.00984,
+      "name": "might ring"
+    },
+    {
+      "id": 7889,
+      "probability": 0.0082,
+      "name": "lightning pendant"
+    },
+    {
+      "id": 13758,
+      "probability": 0.00574,
+      "name": "slime mould"
+    },
+    {
+      "id": 2154,
+      "probability": 0.00574,
+      "name": "yellow gem"
+    },
+    {
+      "id": 7440,
+      "probability": 0.00451,
+      "name": "mastermind potion"
+    },
+    {
+      "id": 2189,
+      "probability": 0.00369,
+      "name": "wand of cosmic energy"
+    },
+    {
+      "id": 10221,
+      "probability": 0.00123,
+      "name": "shockwave amulet"
+    },
+    {
+      "id": 7428,
+      "probability": 0.00082,
+      "name": "bonebreaker"
+    },
+    {
+      "id": 8878,
+      "probability": 0.00041,
+      "name": "crystalline armor"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "creatureStatistics": {
+    "name": "Robby the Reckless",
+    "health": 155,
+    "maxHealth": 155,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 80,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 129
+    },
+    "armor": 25
+  },
+  "experience": 110,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 80
+    }
+  ],
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 93
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

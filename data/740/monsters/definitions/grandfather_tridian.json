@@ -1,0 +1,184 @@
+{
+  "creatureStatistics": {
+    "name": "Grandfather Tridian",
+    "health": 1800,
+    "maxHealth": 1800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 100,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 193
+    },
+    "armor": 25
+  },
+  "experience": 1400,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 60,
+      "max": 90,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.15,
+      "duration": 4000,
+      "areaEffect": "yellowbubble"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 138,
+      "max": 362,
+      "range": 1,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "holy",
+      "areaEffect": "holyarea"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 80,
+      "range": 1,
+      "radius": 1,
+      "target": true,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "holy": 20,
+    "ice": 5,
+    "physical": 35
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "crypt shambler",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 2
+    },
+    {
+      "name": "ghost",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "I will bring peace to your misguided soul!",
+      "Your intrusion can't be tolerated!"
+    ],
+    "slowness": 2,
+    "chance": 0.07
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 80
+    },
+    {
+      "id": 2270,
+      "probability": 0.05,
+      "name": "strong mana potion"
+    },
+    {
+      "id": 2789,
+      "probability": 0.05,
+      "name": "brown mushroom"
+    },
+    {
+      "id": 2187,
+      "probability": 0.05,
+      "name": "wand of inferno"
+    },
+    {
+      "id": 2436,
+      "probability": 0.05,
+      "name": "skull staff"
+    },
+    {
+      "id": 6087,
+      "probability": 0.03
+    },
+    {
+      "id": 6088,
+      "probability": 0.03
+    },
+    {
+      "id": 6089,
+      "probability": 0.03
+    },
+    {
+      "id": 6090,
+      "probability": 0.03
+    },
+    {
+      "id": 3955,
+      "probability": 0.01
+    },
+    {
+      "id": 1962,
+      "probability": 0.0091
+    },
+    {
+      "id": 2146,
+      "probability": 0.0055,
+      "name": "small sapphire"
+    },
+    {
+      "id": 2167,
+      "probability": 0.0045,
+      "name": "energy ring"
+    },
+    {
+      "id": 2171,
+      "probability": 0.002,
+      "name": "platinum amulet"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

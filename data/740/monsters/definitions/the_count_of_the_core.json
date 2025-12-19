@@ -1,0 +1,255 @@
+{
+  "creatureStatistics": {
+    "name": "The Count Of The Core",
+    "health": 50000,
+    "maxHealth": 50000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 270,
+    "attack": 1500,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 1046
+    },
+    "armor": 30
+  },
+  "experience": 40000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1500
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 1500,
+      "range": 3,
+      "length": 9,
+      "spread": 3,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 1500,
+      "range": 3,
+      "length": 9,
+      "spread": 4,
+      "areaEffect": "smallclouds"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 1500,
+      "radius": 8,
+      "areaEffect": "blackspark"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 1500,
+      "radius": 8,
+      "areaEffect": "blacksmoke"
+    }
+  ],
+  "elements": {
+    "fire": 25
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 30165,
+      "probability": 1,
+      "name": "heavy crystal fragment"
+    },
+    {
+      "id": 7440,
+      "probability": 1,
+      "name": "mastermind potion",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 78
+    },
+    {
+      "id": 2197,
+      "probability": 1,
+      "name": "stone skin amulet"
+    },
+    {
+      "id": 2392,
+      "probability": 0.83333,
+      "name": "fire sword"
+    },
+    {
+      "id": 8472,
+      "probability": 0.83333,
+      "name": "great spirit potion",
+      "min": 1,
+      "max": 21
+    },
+    {
+      "id": 7426,
+      "probability": 0.66667,
+      "name": "amber staff"
+    },
+    {
+      "id": 7590,
+      "probability": 0.66667,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 13
+    },
+    {
+      "id": 18415,
+      "probability": 0.66667,
+      "name": "green crystal shard",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2187,
+      "probability": 0.66667,
+      "name": "wand of inferno"
+    },
+    {
+      "id": 9822,
+      "probability": 0.5,
+      "name": "slightly rusted helmet"
+    },
+    {
+      "id": 2154,
+      "probability": 0.5,
+      "name": "yellow gem"
+    },
+    {
+      "id": 2158,
+      "probability": 0.33333,
+      "name": "blue gem"
+    },
+    {
+      "id": 30282,
+      "probability": 0.33333,
+      "name": "chitinous mouth (count of the core)"
+    },
+    {
+      "id": 25377,
+      "probability": 0.33333,
+      "name": "gold token"
+    },
+    {
+      "id": 5892,
+      "probability": 0.33333,
+      "name": "huge chunk of crude iron",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 5904,
+      "probability": 0.33333,
+      "name": "magic sulphur"
+    },
+    {
+      "id": 2150,
+      "probability": 0.33333,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 9970,
+      "probability": 0.33333,
+      "name": "small topaz",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 8878,
+      "probability": 0.16667,
+      "name": "crystalline armor"
+    },
+    {
+      "id": 30283,
+      "probability": 0.16667,
+      "name": "huge spiky snail shell"
+    },
+    {
+      "id": 12410,
+      "probability": 0.16667,
+      "name": "luminous orb"
+    },
+    {
+      "id": 2156,
+      "probability": 0.16667,
+      "name": "red gem"
+    },
+    {
+      "id": 25172,
+      "probability": 0.16667,
+      "name": "silver token"
+    },
+    {
+      "id": 9816,
+      "probability": 0.16667,
+      "name": "slightly rusted shield"
+    },
+    {
+      "id": 2145,
+      "probability": 0.16667,
+      "name": "small diamond",
+      "min": 1,
+      "max": 13
+    },
+    {
+      "id": 2147,
+      "probability": 0.16667,
+      "name": "small ruby"
+    },
+    {
+      "id": 8473,
+      "probability": 0.16667,
+      "name": "ultimate health potion",
+      "min": 1,
+      "max": 8
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

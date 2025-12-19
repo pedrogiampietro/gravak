@@ -1,0 +1,126 @@
+{
+  "creatureStatistics": {
+    "name": "Kollos",
+    "health": 3800,
+    "maxHealth": 3800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 315,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 458
+    },
+    "armor": 35
+  },
+  "experience": 2400,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 315
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 500,
+      "range": 7,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "explosion",
+      "areaEffect": "explosion"
+    }
+  ],
+  "elements": {
+    "fire": 30,
+    "energy": 5,
+    "death": -5,
+    "ice": -5
+  },
+  "immunities": {
+    "earth": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Zopp!",
+      "Flzlzlzlzlzlz!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2147,
+      "probability": 0.0818,
+      "name": "small ruby",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2148,
+      "probability": 0.49,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 97
+    },
+    {
+      "id": 2152,
+      "probability": 0.66,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2214,
+      "probability": 0.0327,
+      "name": "ring of healing"
+    },
+    {
+      "id": 2645,
+      "probability": 0.0013,
+      "name": "steel boots"
+    },
+    {
+      "id": 2273,
+      "probability": 0.0895,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 7632,
+      "probability": 0.026
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

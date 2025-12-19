@@ -1,0 +1,168 @@
+{
+  "creatureStatistics": {
+    "name": "Orc Cultist",
+    "health": 1350,
+    "maxHealth": 1350,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 200,
+    "attackSpeed": 2000,
+    "defense": 27,
+    "outfit": {
+      "id": 7
+    },
+    "armor": 27
+  },
+  "experience": 950,
+  "corpse": 2820,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "heal monster",
+      "interval": 2000,
+      "chance": 0.2,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 200
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 200,
+      "max": 310,
+      "range": 7,
+      "shootEffect": "energyball"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 200,
+      "max": 250,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "outfit",
+      "interval": 4000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "target": true,
+      "duration": 30000
+    },
+    {
+      "name": "outfit",
+      "interval": 4000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "target": true,
+      "duration": 30000
+    },
+    {
+      "name": "outfit",
+      "interval": 4000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "target": true,
+      "duration": 30000
+    }
+  ],
+  "elements": {
+    "energy": 30,
+    "earth": -10,
+    "holy": 10,
+    "death": -10
+  },
+  "immunities": {
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 217
+    },
+    {
+      "id": 7588,
+      "probability": 0.17346,
+      "name": "strong health potion"
+    },
+    {
+      "id": 2428,
+      "probability": 0.08473,
+      "name": "orcish axe"
+    },
+    {
+      "id": 2671,
+      "probability": 0.08233,
+      "name": "ham"
+    },
+    {
+      "id": 5910,
+      "probability": 0.05755,
+      "name": "green piece of cloth"
+    },
+    {
+      "id": 9970,
+      "probability": 0.04237,
+      "name": "small topaz",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 10556,
+      "probability": 0.03197,
+      "name": "cultish robe"
+    },
+    {
+      "id": 18417,
+      "probability": 0.02198,
+      "name": "brown crystal splinter",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 8614,
+      "probability": 0.00799,
+      "name": "orc tusk"
+    },
+    {
+      "id": 7439,
+      "probability": 0.00719,
+      "name": "berserk potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

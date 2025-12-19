@@ -1,0 +1,53 @@
+{
+  "creatureStatistics": {
+    "name": "Northern Pike",
+    "health": 95,
+    "maxHealth": 95,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 9,
+    "outfit": {
+      "id": 454
+    },
+    "armor": 9
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 95,
+    "openDoors": false,
+    "senseInvisible": true
+  },
+  "elements": {
+    "physical": -5,
+    "energy": -5
+  },
+  "immunities": {
+    "earth": true,
+    "fire": true,
+    "invisible": true,
+    "drown": true
+  },
+  "sayings": {
+    "texts": [
+      "Blub!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

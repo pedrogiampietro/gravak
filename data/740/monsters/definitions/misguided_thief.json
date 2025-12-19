@@ -1,0 +1,143 @@
+{
+  "creatureStatistics": {
+    "name": "Misguided Thief",
+    "health": 1800,
+    "maxHealth": 1800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 260,
+    "attack": 225,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 684
+    },
+    "armor": 25
+  },
+  "experience": 1200,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.2,
+      "min": 200,
+      "max": 450,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 225
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 30,
+      "max": 70,
+      "range": 7
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 100,
+      "max": 150,
+      "range": 7,
+      "target": true,
+      "shootEffect": "fire"
+    }
+  ],
+  "elements": {
+    "physical": 20,
+    "earth": 30,
+    "ice": 10,
+    "holy": -30
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.74932,
+      "name": "gold coin",
+      "min": 1,
+      "max": 80
+    },
+    {
+      "id": 2671,
+      "probability": 0.54923,
+      "name": "ham"
+    },
+    {
+      "id": 2666,
+      "probability": 0.44896,
+      "name": "meat"
+    },
+    {
+      "id": 27952,
+      "probability": 0.07588,
+      "name": "rubbish amulet"
+    },
+    {
+      "id": 7589,
+      "probability": 0.0664,
+      "name": "strong mana potion"
+    },
+    {
+      "id": 2156,
+      "probability": 0.06594,
+      "name": "red gem"
+    },
+    {
+      "id": 7588,
+      "probability": 0.05736,
+      "name": "strong health potion"
+    },
+    {
+      "id": 2154,
+      "probability": 0.05601,
+      "name": "yellow gem"
+    },
+    {
+      "id": 18418,
+      "probability": 0.00903,
+      "name": "blue crystal splinter"
+    },
+    {
+      "id": 2197,
+      "probability": 0.00903,
+      "name": "stone skin amulet"
+    },
+    {
+      "id": 2179,
+      "probability": 0.00316,
+      "name": "gold ring"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

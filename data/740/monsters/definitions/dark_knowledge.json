@@ -1,0 +1,50 @@
+{
+  "creatureStatistics": {
+    "name": "Dark Knowledge",
+    "health": 10000,
+    "maxHealth": 10000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 440,
+    "attack": 400,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 1061
+    },
+    "armor": 30
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 400
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

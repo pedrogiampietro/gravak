@@ -1,0 +1,126 @@
+{
+  "creatureStatistics": {
+    "name": "Roaring Lion",
+    "health": 1000,
+    "maxHealth": 1000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 130,
+    "attackSpeed": 2000,
+    "defense": 28,
+    "outfit": {
+      "id": 570
+    },
+    "armor": 28
+  },
+  "experience": 800,
+  "corpse": 2889,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 130
+    }
+  ],
+  "elements": {
+    "fire": 20,
+    "ice": -10,
+    "earth": 20,
+    "holy": 50
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Groarrrr! Rwarrrr!",
+      "Growl!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 115
+    },
+    {
+      "id": 2666,
+      "probability": 0.25326,
+      "name": "meat"
+    },
+    {
+      "id": 2671,
+      "probability": 0.24811,
+      "name": "ham"
+    },
+    {
+      "id": 10608,
+      "probability": 0.20073,
+      "name": "lion's mane"
+    },
+    {
+      "id": 2152,
+      "probability": 0.09973,
+      "name": "platinum coin"
+    },
+    {
+      "id": 2146,
+      "probability": 0.07149,
+      "name": "small sapphire"
+    },
+    {
+      "id": 9970,
+      "probability": 0.06926,
+      "name": "small topaz"
+    },
+    {
+      "id": 2147,
+      "probability": 0.06842,
+      "name": "small ruby"
+    },
+    {
+      "id": 2150,
+      "probability": 0.067,
+      "name": "small amethyst"
+    },
+    {
+      "id": 2193,
+      "probability": 0.02857,
+      "name": "ankh"
+    },
+    {
+      "id": 2164,
+      "probability": 0.00731,
+      "name": "might ring"
+    },
+    {
+      "id": 2491,
+      "probability": 0.00581,
+      "name": "crown helmet"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

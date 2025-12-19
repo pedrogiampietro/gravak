@@ -1,0 +1,88 @@
+{
+  "creatureStatistics": {
+    "name": "Starving Wolf",
+    "health": 85,
+    "maxHealth": 85,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 188,
+    "attack": 25,
+    "attackSpeed": 2000,
+    "defense": 2,
+    "outfit": {
+      "id": 27
+    },
+    "armor": 2
+  },
+  "experience": 65,
+  "corpse": 2826,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 8,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "effect",
+      "interval": 2000,
+      "chance": 0.1,
+      "areaEffect": "yellowbubble"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 25
+    }
+  ],
+  "elements": {
+    "ice": -10,
+    "death": -5,
+    "holy": 30
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Gaarrrrrr",
+      "Gnoorrr",
+      "Yoooohhuuuu!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2220,
+      "probability": 0.6473
+    },
+    {
+      "id": 2666,
+      "probability": 0.053,
+      "name": "meat",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2413,
+      "probability": 0.0143,
+      "name": "wolf paw"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

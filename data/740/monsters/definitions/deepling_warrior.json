@@ -1,0 +1,118 @@
+{
+  "creatureStatistics": {
+    "name": "Deepling Warrior",
+    "health": 1600,
+    "maxHealth": 1600,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 300,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 441
+    },
+    "armor": 25
+  },
+  "experience": 1500,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 30,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 50,
+      "max": 150,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 300
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 290,
+      "range": 7,
+      "target": true,
+      "shootEffect": "whirlwindaxe"
+    }
+  ],
+  "elements": {
+    "earth": -20,
+    "energy": -10
+  },
+  "immunities": {
+    "invisible": true,
+    "fire": true,
+    "ice": true,
+    "drown": true
+  },
+  "sayings": {
+    "texts": [
+      "Jou wjil all djie!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.6,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.6,
+      "name": "gold coin",
+      "min": 1,
+      "max": 80
+    },
+    {
+      "id": 2149,
+      "probability": 0.02854,
+      "name": "small emerald"
+    },
+    {
+      "id": 2168,
+      "probability": 0.02941,
+      "name": "life ring"
+    },
+    {
+      "id": 2273,
+      "probability": 0.0909,
+      "name": "great mana potion"
+    },
+    {
+      "id": 2274,
+      "probability": 0.11111,
+      "name": "great health potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

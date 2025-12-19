@@ -1,0 +1,249 @@
+{
+  "creatureStatistics": {
+    "name": "Werewolf",
+    "health": 1955,
+    "maxHealth": 1955,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 280,
+    "attack": 350,
+    "attackSpeed": 2000,
+    "defense": 36,
+    "outfit": {
+      "id": 308
+    },
+    "armor": 36
+  },
+  "experience": 1900,
+  "corpse": 2826,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 300,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 120,
+      "max": 225,
+      "areaEffect": "greenshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 400,
+      "duration": 5000,
+      "areaEffect": "purplenote"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 350
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.01,
+      "min": 0,
+      "max": 0,
+      "radius": 1,
+      "target": true,
+      "duration": 2000,
+      "areaEffect": "bluenote"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 80,
+      "max": 200,
+      "length": 4,
+      "spread": 2,
+      "target": false,
+      "areaEffect": "rednote"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.4,
+      "min": 0,
+      "max": 0,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "whitenote"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "radius": 1,
+      "target": false,
+      "areaEffect": "greennote"
+    },
+    {
+      "name": "werewolf skill reducer",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 1
+    }
+  ],
+  "elements": {
+    "energy": 15,
+    "earth": 75,
+    "fire": -5,
+    "ice": -5,
+    "holy": -5,
+    "death": 55
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "war wolf",
+      "interval": 2000,
+      "chance": 0.4,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "BLOOD!",
+      "HRAAAAAAAAAARRRRRR!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.9876,
+      "name": "gold coin",
+      "min": 1,
+      "max": 301
+    },
+    {
+      "id": 24708,
+      "probability": 0.14788,
+      "name": "werewolf fangs"
+    },
+    {
+      "id": 11234,
+      "probability": 0.09757,
+      "name": "werewolf fur"
+    },
+    {
+      "id": 2510,
+      "probability": 0.09645,
+      "name": "plate shield",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 9809,
+      "probability": 0.07958,
+      "name": "rusted armor"
+    },
+    {
+      "id": 2789,
+      "probability": 0.06903,
+      "name": "brown mushroom"
+    },
+    {
+      "id": 5897,
+      "probability": 0.05211,
+      "name": "wolf paw"
+    },
+    {
+      "id": 7588,
+      "probability": 0.05171,
+      "name": "strong health potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2805,
+      "probability": 0.04987,
+      "name": "troll green"
+    },
+    {
+      "id": 2381,
+      "probability": 0.03072,
+      "name": "halberd"
+    },
+    {
+      "id": 8473,
+      "probability": 0.02016,
+      "name": "ultimate health potion"
+    },
+    {
+      "id": 7439,
+      "probability": 0.00938,
+      "name": "berserk potion"
+    },
+    {
+      "id": 2197,
+      "probability": 0.00882,
+      "name": "stone skin amulet"
+    },
+    {
+      "id": 2171,
+      "probability": 0.00799,
+      "name": "platinum amulet"
+    },
+    {
+      "id": 24739,
+      "probability": 0.00726,
+      "name": "moonlight crystals"
+    },
+    {
+      "id": 2169,
+      "probability": 0.00581,
+      "name": "time ring"
+    },
+    {
+      "id": 2438,
+      "probability": 0.00475,
+      "name": "epee"
+    },
+    {
+      "id": 7383,
+      "probability": 0.00363,
+      "name": "relic sword"
+    },
+    {
+      "id": 7428,
+      "probability": 0.00268,
+      "name": "bonebreaker"
+    },
+    {
+      "id": 7419,
+      "probability": 0.00106,
+      "name": "dreaded cleaver"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

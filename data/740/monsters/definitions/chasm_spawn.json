@@ -1,0 +1,177 @@
+{
+  "creatureStatistics": {
+    "name": "Chasm Spawn",
+    "health": 4500,
+    "maxHealth": 4500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 250,
+    "attackSpeed": 2000,
+    "defense": 74,
+    "outfit": {
+      "id": 1037
+    },
+    "armor": 74
+  },
+  "experience": 2700,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 250
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 5,
+      "max": 16,
+      "range": 7,
+      "target": true,
+      "shootEffect": "poison"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 30,
+      "max": 60,
+      "range": 7,
+      "target": true,
+      "shootEffect": "death"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 70,
+      "max": 160,
+      "range": 3,
+      "length": 3,
+      "spread": 3,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 40,
+      "max": 60,
+      "range": 7
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 70,
+      "max": 140,
+      "length": 3,
+      "spread": 3,
+      "areaEffect": "plantattack"
+    }
+  ],
+  "elements": {
+    "fire": -30
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 30260,
+      "probability": 0.64519,
+      "name": "chasm spawn tail"
+    },
+    {
+      "id": 30258,
+      "probability": 0.33638,
+      "name": "chasm spawn head"
+    },
+    {
+      "id": 2791,
+      "probability": 0.28022,
+      "name": "wood mushroom",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 30259,
+      "probability": 0.26237,
+      "name": "chasm spawn abdomen"
+    },
+    {
+      "id": 2789,
+      "probability": 0.19242,
+      "name": "brown mushroom",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2790,
+      "probability": 0.15179,
+      "name": "orange mushroom",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7761,
+      "probability": 0.10898,
+      "name": "small enchanted emerald"
+    },
+    {
+      "id": 18413,
+      "probability": 0.08301,
+      "name": "blue crystal shard"
+    },
+    {
+      "id": 7762,
+      "probability": 0.07952,
+      "name": "small enchanted amethyst",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 18415,
+      "probability": 0.07256,
+      "name": "green crystal shard"
+    },
+    {
+      "id": 18414,
+      "probability": 0.0489,
+      "name": "violet crystal shard"
+    },
+    {
+      "id": 30309,
+      "probability": 0.01451,
+      "name": "suspicious device"
+    },
+    {
+      "id": 18393,
+      "probability": 0.00464,
+      "name": "mushroom backpack"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

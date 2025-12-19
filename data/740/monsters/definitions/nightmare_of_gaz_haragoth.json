@@ -1,0 +1,76 @@
+{
+  "creatureStatistics": {
+    "name": "Nightmare Of Gaz'haragoth",
+    "health": 5500,
+    "maxHealth": 5500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 360,
+    "attack": 300,
+    "attackSpeed": 2000,
+    "defense": 80,
+    "outfit": {
+      "id": 587
+    },
+    "armor": 80
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 300
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 500,
+      "max": 800,
+      "range": 7,
+      "target": true,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 3000,
+      "chance": 0.17,
+      "min": 500,
+      "max": 1000,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "yellowenergy"
+    }
+  ],
+  "elements": {
+    "ice": -10,
+    "fire": -10
+  },
+  "immunities": {
+    "earth": true,
+    "energy": true,
+    "lifedrain": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

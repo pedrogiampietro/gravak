@@ -1,0 +1,208 @@
+{
+  "creatureStatistics": {
+    "name": "Dworc Voodoomaster",
+    "health": 80,
+    "maxHealth": 80,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 150,
+    "attack": 20,
+    "attackSpeed": 2000,
+    "defense": 3,
+    "outfit": {
+      "id": 214
+    },
+    "armor": 3
+  },
+  "experience": 55,
+  "corpse": 2820,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 15,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 3,
+      "max": 9,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 200,
+      "duration": 4000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.15,
+      "duration": 7000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 20
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 40,
+      "range": 1,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -800,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "areaEffect": "teleport"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "duration": 5000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 6,
+      "max": 18,
+      "radius": 6,
+      "target": false,
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "poisonfield",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 1,
+      "target": true
+    }
+  ],
+  "elements": {
+    "holy": 35,
+    "fire": -15,
+    "death": -10,
+    "ice": -10
+  },
+  "immunities": {
+    "earth": true
+  },
+  "sayings": {
+    "texts": [
+      "Brak brrretz!",
+      "Grow truk grrrrr.",
+      "Prek tars, dekklep zurk."
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.74835,
+      "name": "gold coin",
+      "min": 1,
+      "max": 17
+    },
+    {
+      "id": 2467,
+      "probability": 0.10093,
+      "name": "leather armor"
+    },
+    {
+      "id": 2230,
+      "probability": 0.05812,
+      "name": "bone"
+    },
+    {
+      "id": 2050,
+      "probability": 0.05547,
+      "name": "torch"
+    },
+    {
+      "id": 2231,
+      "probability": 0.03066,
+      "name": "big bone"
+    },
+    {
+      "id": 2229,
+      "probability": 0.01973,
+      "name": "skull (item)",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2411,
+      "probability": 0.01009,
+      "name": "poison dagger"
+    },
+    {
+      "id": 7618,
+      "probability": 0.00586,
+      "name": "health potion"
+    },
+    {
+      "id": 2174,
+      "probability": 0.00503,
+      "name": "strange symbol"
+    },
+    {
+      "id": 3967,
+      "probability": 0.00486,
+      "name": "tribal mask"
+    },
+    {
+      "id": 3955,
+      "probability": 0.0012,
+      "name": "voodoo doll"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": 4
+  }
+}

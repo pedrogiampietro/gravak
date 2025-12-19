@@ -1,0 +1,166 @@
+{
+  "creatureStatistics": {
+    "name": "Renegade Quara Predator",
+    "health": 3250,
+    "maxHealth": 3250,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 450,
+    "attack": 470,
+    "attackSpeed": 2000,
+    "defense": 40,
+    "outfit": {
+      "id": 20
+    },
+    "armor": 40
+  },
+  "experience": 2700,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 300,
+      "duration": 7000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 50,
+      "max": 100
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 470
+    }
+  ],
+  "elements": {
+    "energy": -25,
+    "earth": -10
+  },
+  "immunities": {
+    "fire": true,
+    "drown": true,
+    "ice": true,
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 0.80027,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 12447,
+      "probability": 0.0992,
+      "name": "quara bone"
+    },
+    {
+      "id": 7378,
+      "probability": 0.08274,
+      "name": "royal spear",
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 2178,
+      "probability": 0.07117,
+      "name": "mind stone"
+    },
+    {
+      "id": 7591,
+      "probability": 0.06406,
+      "name": "great health potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7368,
+      "probability": 0.0516,
+      "name": "assassin star",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2670,
+      "probability": 0.04537,
+      "name": "shrimp"
+    },
+    {
+      "id": 2145,
+      "probability": 0.03915,
+      "name": "small diamond",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 5895,
+      "probability": 0.02046,
+      "name": "fish fin"
+    },
+    {
+      "id": 7383,
+      "probability": 0.01201,
+      "name": "relic sword"
+    },
+    {
+      "id": 18413,
+      "probability": 0.01023,
+      "name": "blue crystal shard"
+    },
+    {
+      "id": 7897,
+      "probability": 0.00534,
+      "name": "glacier robe"
+    },
+    {
+      "id": 5741,
+      "probability": 0.00489,
+      "name": "skull helmet"
+    },
+    {
+      "id": 7414,
+      "probability": 0.00445,
+      "name": "abyss hammer"
+    },
+    {
+      "id": 8887,
+      "probability": 0.00178,
+      "name": "frozen plate"
+    },
+    {
+      "id": 13305,
+      "probability": 0.00044,
+      "name": "giant shrimp"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

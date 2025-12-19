@@ -1,0 +1,166 @@
+{
+  "creatureStatistics": {
+    "name": "Elder Wyrm",
+    "health": 2700,
+    "maxHealth": 2700,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 280,
+    "attack": 350,
+    "attackSpeed": 2000,
+    "defense": 48,
+    "outfit": {
+      "id": 561
+    },
+    "armor": 48
+  },
+  "experience": 2500,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 250,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 100,
+      "max": 150,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 350
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 90,
+      "max": 150,
+      "radius": 4,
+      "target": true,
+      "areaEffect": "teleport"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 140,
+      "max": 250,
+      "radius": 5,
+      "target": false,
+      "areaEffect": "purpleenergy"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 180,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "yellowspark"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 200,
+      "max": 300,
+      "length": 5,
+      "spread": 2,
+      "target": true,
+      "areaEffect": "blacksmoke"
+    }
+  ],
+  "elements": {
+    "earth": 75,
+    "fire": 30
+  },
+  "immunities": {
+    "energy": true,
+    "paralyze": true,
+    "invisible": true,
+    "lifedrain": true
+  },
+  "sayings": {
+    "texts": [
+      "GRRR!",
+      "GRROARR"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2145,
+      "probability": 0.04,
+      "name": "small diamond",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 74
+    },
+    {
+      "id": 2152,
+      "probability": 0.2515,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2455,
+      "probability": 0.0969,
+      "name": "crossbow"
+    },
+    {
+      "id": 2672,
+      "probability": 0.3242,
+      "name": "dragon ham",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2271,
+      "probability": 0.1771,
+      "name": "strong health potion"
+    },
+    {
+      "id": 2270,
+      "probability": 0.2093,
+      "name": "strong mana potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

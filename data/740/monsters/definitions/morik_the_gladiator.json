@@ -1,0 +1,105 @@
+{
+  "creatureStatistics": {
+    "name": "Morik The Gladiator",
+    "health": 1235,
+    "maxHealth": 1235,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 200,
+    "attackSpeed": 2000,
+    "defense": 22,
+    "outfit": {
+      "id": 131
+    },
+    "armor": 20
+  },
+  "experience": 160,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 50,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.09,
+      "speedChange": 215,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 200
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 110,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "blackspark"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "duration": 4000,
+      "shootEffect": "whirlwindclub",
+      "areaEffect": "stun"
+    }
+  ],
+  "elements": {
+    "holy": 10,
+    "fire": 10,
+    "energy": 10,
+    "ice": 10,
+    "earth": 10,
+    "death": -10
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Gladiator",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "To be the one you'll have to beat the one!",
+      "Where did I put my ultimate health potion again?",
+      "I am the best!",
+      "I'll take your ears as a trophy!"
+    ],
+    "slowness": 1,
+    "chance": 0.02
+  },
+  "loot": [],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

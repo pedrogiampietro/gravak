@@ -1,0 +1,103 @@
+{
+  "creatureStatistics": {
+    "name": "The Count",
+    "health": 1250,
+    "maxHealth": 1250,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 370,
+    "attack": 945,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 287
+    },
+    "armor": 30
+  },
+  "experience": 450,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.25,
+      "min": 100,
+      "max": 195,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 3000,
+      "chance": 0.3,
+      "duration": 6000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 945
+    },
+    {
+      "name": "lifedrain",
+      "interval": 1000,
+      "chance": 0.09,
+      "min": 0,
+      "max": 300,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "smallclouds"
+    }
+  ],
+  "elements": {
+    "physical": 20,
+    "holy": -20
+  },
+  "immunities": {
+    "lifedrain": true,
+    "death": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Banshee",
+      "interval": 4000,
+      "chance": 0.5,
+      "maxSummons": 1
+    }
+  ],
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.4,
+      "name": "gold coin",
+      "min": 1,
+      "max": 98
+    },
+    {
+      "id": 2391,
+      "probability": 0.023,
+      "name": "war hammer"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "creatureStatistics": {
+    "name": "Renegade Orc",
+    "health": 450,
+    "maxHealth": 450,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 130,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 59
+    },
+    "armor": 25
+  },
+  "experience": 270,
+  "corpse": 2820,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 130
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 50,
+      "range": 7,
+      "shootEffect": "throwingstar"
+    }
+  ],
+  "elements": {
+    "energy": 20,
+    "holy": 20,
+    "earth": -10,
+    "death": -2
+  },
+  "immunities": {
+    "invisible": true,
+    "fire": true
+  },
+  "sayings": {
+    "texts": [
+      "Harga puchak muhmak!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2667,
+      "probability": 0.3
+    },
+    {
+      "id": 2148,
+      "probability": 0.28,
+      "min": 1,
+      "max": 35
+    },
+    {
+      "id": 12435,
+      "probability": 0.19
+    },
+    {
+      "id": 2510,
+      "probability": 0.1
+    },
+    {
+      "id": 2410,
+      "probability": 0.0985,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2789,
+      "probability": 0.0965
+    },
+    {
+      "id": 2207,
+      "probability": 0.0392
+    },
+    {
+      "id": 2397,
+      "probability": 0.028
+    },
+    {
+      "id": 7378,
+      "probability": 0.026
+    },
+    {
+      "id": 2419,
+      "probability": 0.021
+    },
+    {
+      "id": 11113,
+      "probability": 0.0089
+    },
+    {
+      "id": 2413,
+      "probability": 0.0083
+    },
+    {
+      "id": 7618,
+      "probability": 0.0055
+    },
+    {
+      "id": 2647,
+      "probability": 0.0042
+    },
+    {
+      "id": 2475,
+      "probability": 0.0016
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

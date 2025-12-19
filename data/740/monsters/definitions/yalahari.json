@@ -1,0 +1,54 @@
+{
+  "creatureStatistics": {
+    "name": "Yalahari",
+    "health": 150,
+    "maxHealth": 150,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 0,
+    "outfit": {
+      "id": 309
+    },
+    "armor": 0
+  },
+  "experience": 5,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "immunities": {
+    "earth": true,
+    "physical": true,
+    "death": true
+  },
+  "sayings": {
+    "texts": [
+      "Welcome to Yalahar, outsider.",
+      "Hail Yalahar.",
+      "You can learn a lot from us.",
+      "Our wisdom and knowledge are unequalled in this world.",
+      "That knowledge would overburden your fragile mind.",
+      "I wouldn't expect you to understand.",
+      "One day Yalahar will return to its former glory."
+    ],
+    "slowness": 5,
+    "chance": 0.11
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

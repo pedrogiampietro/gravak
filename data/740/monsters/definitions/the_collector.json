@@ -1,0 +1,87 @@
+{
+  "creatureStatistics": {
+    "name": "The Collector",
+    "health": 340,
+    "maxHealth": 340,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 195,
+    "attack": 220,
+    "attackSpeed": 2000,
+    "defense": 26,
+    "outfit": {
+      "id": 261
+    },
+    "armor": 25
+  },
+  "experience": 100,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 20,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 220
+    },
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.13,
+      "min": 0,
+      "max": 0,
+      "length": 8,
+      "spread": 0,
+      "speedChange": -800,
+      "duration": 20000,
+      "areaEffect": "energy"
+    },
+    {
+      "name": "physical",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 85,
+      "range": 7,
+      "shootEffect": "largerock"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 10,
+      "max": 80,
+      "range": 7,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "blackspark"
+    }
+  ],
+  "immunities": {
+    "ice": true
+  },
+  "sayings": {
+    "texts": [
+      "Leave as long as you can."
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

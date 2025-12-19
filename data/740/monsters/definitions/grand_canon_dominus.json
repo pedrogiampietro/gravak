@@ -1,0 +1,227 @@
+{
+  "creatureStatistics": {
+    "name": "Grand Canon Dominus",
+    "health": 15000,
+    "maxHealth": 15000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 700,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 1071
+    },
+    "armor": 30
+  },
+  "experience": 11000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 200,
+      "max": 550,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.1,
+      "speedChange": 220,
+      "duration": 5000,
+      "areaEffect": "poff"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 700
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 100,
+      "max": 720,
+      "range": 7,
+      "shootEffect": "etherealspear"
+    },
+    {
+      "name": "holy",
+      "interval": 2000,
+      "chance": 0.14,
+      "min": 100,
+      "max": 1000,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "energy"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 200,
+      "max": 700,
+      "range": 5,
+      "radius": 3,
+      "areaEffect": "holyarea"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 200,
+      "max": 700,
+      "range": 5,
+      "radius": 3,
+      "areaEffect": "smallclouds"
+    }
+  ],
+  "elements": {
+    "physical": 60,
+    "energy": 50,
+    "earth": 50,
+    "fire": 50,
+    "ice": 50,
+    "death": 50
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 0.87285,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 7590,
+      "probability": 0.31959,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7591,
+      "probability": 0.30241,
+      "name": "great health potion",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7368,
+      "probability": 0.2646,
+      "name": "assassin star",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2150,
+      "probability": 0.2268,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2145,
+      "probability": 0.21306,
+      "name": "small diamond",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2147,
+      "probability": 0.19931,
+      "name": "small ruby",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 9970,
+      "probability": 0.19931,
+      "name": "small topaz",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2149,
+      "probability": 0.16151,
+      "name": "small emerald",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7365,
+      "probability": 0.15808,
+      "name": "onyx arrow",
+      "min": 1,
+      "max": 15
+    },
+    {
+      "id": 2156,
+      "probability": 0.02405,
+      "name": "red gem"
+    },
+    {
+      "id": 31479,
+      "probability": 0.01718,
+      "name": "falcon crest"
+    },
+    {
+      "id": 7632,
+      "probability": 0.01718,
+      "name": "giant shimmering pearl"
+    },
+    {
+      "id": 2153,
+      "probability": 0.01375,
+      "name": "violet gem"
+    },
+    {
+      "id": 31478,
+      "probability": 0.00344,
+      "name": "damaged armor plates"
+    },
+    {
+      "id": 2466,
+      "probability": 0.00344,
+      "name": "golden armor"
+    },
+    {
+      "id": 2155,
+      "probability": 0.00344,
+      "name": "green gem"
+    },
+    {
+      "id": 2514,
+      "probability": 0.00344,
+      "name": "mastermind shield"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

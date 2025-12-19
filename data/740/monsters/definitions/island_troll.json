@@ -1,0 +1,120 @@
+{
+  "creatureStatistics": {
+    "name": "Island Troll",
+    "health": 50,
+    "maxHealth": 50,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 126,
+    "attack": 10,
+    "attackSpeed": 2000,
+    "defense": 6,
+    "outfit": {
+      "id": 282
+    },
+    "armor": 6
+  },
+  "experience": 20,
+  "corpse": 2806,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 15,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 10
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Hmmm, turtles",
+      "Hmmm, dogs",
+      "Hmmm, worms",
+      "Groar",
+      "Gruntz!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.59656,
+      "name": "gold coin",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 5901,
+      "probability": 0.30727,
+      "name": "wood"
+    },
+    {
+      "id": 2389,
+      "probability": 0.20007,
+      "name": "spear"
+    },
+    {
+      "id": 2380,
+      "probability": 0.17701,
+      "name": "hand axe"
+    },
+    {
+      "id": 2512,
+      "probability": 0.15244,
+      "name": "wooden shield"
+    },
+    {
+      "id": 2643,
+      "probability": 0.09794,
+      "name": "leather boots"
+    },
+    {
+      "id": 2461,
+      "probability": 0.0967,
+      "name": "leather helmet"
+    },
+    {
+      "id": 2120,
+      "probability": 0.07889,
+      "name": "rope"
+    },
+    {
+      "id": 2448,
+      "probability": 0.05182,
+      "name": "studded club"
+    },
+    {
+      "id": 5097,
+      "probability": 0.05102,
+      "name": "mango"
+    },
+    {
+      "id": 7963,
+      "probability": 0.00071,
+      "name": "marlin"
+    },
+    {
+      "id": 2170,
+      "probability": 0.00071,
+      "name": "silver amulet"
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

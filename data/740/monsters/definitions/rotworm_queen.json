@@ -1,0 +1,61 @@
+{
+  "creatureStatistics": {
+    "name": "Rotworm Queen",
+    "health": 105,
+    "maxHealth": 105,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 126,
+    "attack": 80,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 295
+    },
+    "armor": 10
+  },
+  "experience": 75,
+  "corpse": 2824,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 80
+    }
+  ],
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 47
+    },
+    {
+      "id": 2575,
+      "probability": 0.2,
+      "name": "worm",
+      "min": 1,
+      "max": 45
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

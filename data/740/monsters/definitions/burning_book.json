@@ -1,0 +1,169 @@
+{
+  "creatureStatistics": {
+    "name": "Burning Book",
+    "health": 18000,
+    "maxHealth": 18000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 440,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 82,
+    "outfit": {
+      "id": 1061
+    },
+    "armor": 82
+  },
+  "experience": 11934,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 700,
+      "max": 850,
+      "length": 5,
+      "spread": 0,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 650,
+      "max": 900,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "explosionarea"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 400,
+      "max": 850,
+      "length": 5,
+      "spread": 0,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "physical",
+      "interval": 1500,
+      "chance": 0.12,
+      "min": 500,
+      "max": 900,
+      "radius": 3,
+      "areaEffect": "explosionarea"
+    }
+  ],
+  "elements": {
+    "fire": 100,
+    "ice": -10
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 0.60807,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 35
+    },
+    {
+      "id": 31225,
+      "probability": 0.49228,
+      "name": "book page",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 6558,
+      "probability": 0.42667,
+      "name": "flask of demonic blood"
+    },
+    {
+      "id": 31222,
+      "probability": 0.1953,
+      "name": "silken bookmark"
+    },
+    {
+      "id": 6500,
+      "probability": 0.18858,
+      "name": "demonic essence"
+    },
+    {
+      "id": 7899,
+      "probability": 0.11811,
+      "name": "magma coat"
+    },
+    {
+      "id": 2515,
+      "probability": 0.08723,
+      "name": "guardian shield"
+    },
+    {
+      "id": 2150,
+      "probability": 0.05591,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 5944,
+      "probability": 0.05183,
+      "name": "soul orb"
+    },
+    {
+      "id": 2419,
+      "probability": 0.0461,
+      "name": "scimitar"
+    },
+    {
+      "id": 2185,
+      "probability": 0.0376,
+      "name": "necrotic rod"
+    },
+    {
+      "id": 6300,
+      "probability": 0.02415,
+      "name": "death ring"
+    },
+    {
+      "id": 7900,
+      "probability": 0.01489,
+      "name": "magma monocle"
+    },
+    {
+      "id": 2165,
+      "probability": 0.00728,
+      "name": "stealth ring"
+    },
+    {
+      "id": 7451,
+      "probability": 0.00353,
+      "name": "shadow sceptre"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

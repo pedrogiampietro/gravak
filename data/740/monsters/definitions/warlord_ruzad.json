@@ -1,0 +1,118 @@
+{
+  "creatureStatistics": {
+    "name": "Warlord Ruzad",
+    "health": 2500,
+    "maxHealth": 2500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 270,
+    "attack": 300,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 2
+    },
+    "armor": 32
+  },
+  "experience": 1700,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 300
+    }
+  ],
+  "elements": {
+    "fire": 80,
+    "energy": 30,
+    "holy": 10,
+    "earth": -10,
+    "death": -10
+  },
+  "immunities": {
+    "invisible": true,
+    "paralyze": true
+  },
+  "summons": [
+    {
+      "name": "Orc Berserker",
+      "interval": 2000,
+      "chance": 0.3,
+      "maxSummons": 3
+    }
+  ],
+  "loot": [
+    {
+      "id": 2478,
+      "probability": 0.5,
+      "name": "brass legs"
+    },
+    {
+      "id": 2148,
+      "probability": 0.25,
+      "name": "gold coin",
+      "min": 1,
+      "max": 54
+    },
+    {
+      "id": 2428,
+      "probability": 0.25,
+      "name": "orcish axe"
+    },
+    {
+      "id": 2463,
+      "probability": 0.25,
+      "name": "plate armor"
+    },
+    {
+      "id": 2377,
+      "probability": 0.25,
+      "name": "two handed sword"
+    },
+    {
+      "id": 2490,
+      "probability": 0.125,
+      "name": "dark helmet"
+    },
+    {
+      "id": 3965,
+      "probability": 0.125,
+      "name": "hunting spear"
+    },
+    {
+      "id": 2666,
+      "probability": 0.125,
+      "name": "meat"
+    },
+    {
+      "id": 2647,
+      "probability": 0.125,
+      "name": "plate legs"
+    },
+    {
+      "id": 2419,
+      "probability": 0.125,
+      "name": "scimitar"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

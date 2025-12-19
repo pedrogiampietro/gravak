@@ -1,0 +1,63 @@
+{
+  "creatureStatistics": {
+    "name": "Lonely Snake",
+    "health": 15,
+    "maxHealth": 15,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 120,
+    "attack": 8,
+    "attackSpeed": 2000,
+    "defense": 1,
+    "outfit": {
+      "id": 28
+    },
+    "armor": 0
+  },
+  "experience": 10,
+  "corpse": 2817,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 8
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "earth": true,
+    "lifedrain": true,
+    "invisible": true,
+    "fire": true,
+    "ice": true,
+    "physical": true,
+    "holy": true,
+    "energy": true
+  },
+  "sayings": {
+    "texts": [
+      "Zzzzzzt"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

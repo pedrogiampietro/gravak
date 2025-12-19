@@ -1,0 +1,59 @@
+{
+  "creatureStatistics": {
+    "name": "Corrupted Soul",
+    "health": 1100,
+    "maxHealth": 1100,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 200,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 355
+    },
+    "armor": 25
+  },
+  "experience": 1300,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 200
+    }
+  ],
+  "elements": {
+    "holy": -10,
+    "ice": 50,
+    "fire": -10,
+    "energy": -10,
+    "physical": 70
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "lifedrain": true,
+    "drown": true,
+    "death": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

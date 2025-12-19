@@ -1,0 +1,86 @@
+{
+  "creatureStatistics": {
+    "name": "Moohtant Wallbreaker",
+    "health": 250000,
+    "maxHealth": 250000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 80,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 607
+    },
+    "armor": 30
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "elements": {
+    "physical": 85,
+    "ice": 85,
+    "holy": 85
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 23570,
+      "probability": 1,
+      "name": "giant pacifier"
+    },
+    {
+      "id": 7591,
+      "probability": 1,
+      "name": "great health potion",
+      "min": 1,
+      "max": 13
+    },
+    {
+      "id": 7590,
+      "probability": 1,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 9
+    },
+    {
+      "id": 23571,
+      "probability": 1,
+      "name": "moohtant horn"
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 19
+    },
+    {
+      "id": 2145,
+      "probability": 1,
+      "name": "small diamond",
+      "min": 1,
+      "max": 2
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

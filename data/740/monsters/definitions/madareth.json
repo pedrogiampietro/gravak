@@ -1,0 +1,335 @@
+{
+  "creatureStatistics": {
+    "name": "Madareth",
+    "health": 75000,
+    "maxHealth": 75000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 330,
+    "attack": 2000,
+    "attackSpeed": 2000,
+    "defense": 65,
+    "outfit": {
+      "id": 12
+    },
+    "armor": 65
+  },
+  "experience": 10000,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 1000,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 3000,
+      "chance": 0.35,
+      "min": 300,
+      "max": 800,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 2000
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.4,
+      "min": 180,
+      "max": 660,
+      "range": 7,
+      "radius": 6,
+      "target": false,
+      "areaEffect": "energyarea"
+    },
+    {
+      "name": "death",
+      "interval": 4000,
+      "chance": 0.3,
+      "min": 600,
+      "max": 850,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 200,
+      "radius": 5,
+      "target": false,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 0,
+      "max": 250,
+      "radius": 7,
+      "target": false,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "energy": 95,
+    "fire": -5,
+    "ice": 5,
+    "death": 95
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "I am going to play with yourself!",
+      "Feel my wrath!",
+      "No one matches my battle prowess!",
+      "You will all die!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 9813,
+      "probability": 0.59259,
+      "name": "slightly rusted legs"
+    },
+    {
+      "id": 9810,
+      "probability": 0.40741,
+      "name": "slightly rusted armor"
+    },
+    {
+      "id": 7443,
+      "probability": 0.37037,
+      "name": "bullseye potion"
+    },
+    {
+      "id": 7591,
+      "probability": 0.2963,
+      "name": "great health potion"
+    },
+    {
+      "id": 8472,
+      "probability": 0.27778,
+      "name": "great spirit potion"
+    },
+    {
+      "id": 7439,
+      "probability": 0.25926,
+      "name": "berserk potion"
+    },
+    {
+      "id": 7440,
+      "probability": 0.25926,
+      "name": "mastermind potion"
+    },
+    {
+      "id": 7590,
+      "probability": 0.22222,
+      "name": "great mana potion"
+    },
+    {
+      "id": 6300,
+      "probability": 0.2037,
+      "name": "death ring"
+    },
+    {
+      "id": 2152,
+      "probability": 0.2037,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 26
+    },
+    {
+      "id": 8473,
+      "probability": 0.2037,
+      "name": "ultimate health potion"
+    },
+    {
+      "id": 8912,
+      "probability": 0.18519,
+      "name": "springsprout rod"
+    },
+    {
+      "id": 7404,
+      "probability": 0.16667,
+      "name": "assassin dagger"
+    },
+    {
+      "id": 2072,
+      "probability": 0.16667,
+      "name": "lute"
+    },
+    {
+      "id": 2377,
+      "probability": 0.16667,
+      "name": "two handed sword"
+    },
+    {
+      "id": 2208,
+      "probability": 0.14815,
+      "name": "axe ring"
+    },
+    {
+      "id": 2183,
+      "probability": 0.14815,
+      "name": "hailstorm rod"
+    },
+    {
+      "id": 7418,
+      "probability": 0.14815,
+      "name": "nightmare blade"
+    },
+    {
+      "id": 8910,
+      "probability": 0.14815,
+      "name": "underworld rod"
+    },
+    {
+      "id": 2187,
+      "probability": 0.14815,
+      "name": "wand of inferno"
+    },
+    {
+      "id": 7416,
+      "probability": 0.12963,
+      "name": "bloody edge"
+    },
+    {
+      "id": 2209,
+      "probability": 0.12963,
+      "name": "club ring"
+    },
+    {
+      "id": 7407,
+      "probability": 0.12963,
+      "name": "haunted blade"
+    },
+    {
+      "id": 2071,
+      "probability": 0.12963,
+      "name": "lyre"
+    },
+    {
+      "id": 2214,
+      "probability": 0.12963,
+      "name": "ring of healing"
+    },
+    {
+      "id": 8922,
+      "probability": 0.12963,
+      "name": "wand of voodoo"
+    },
+    {
+      "id": 6500,
+      "probability": 0.11111,
+      "name": "demonic essence"
+    },
+    {
+      "id": 3953,
+      "probability": 0.11111,
+      "name": "war drum"
+    },
+    {
+      "id": 2079,
+      "probability": 0.11111,
+      "name": "war horn"
+    },
+    {
+      "id": 7449,
+      "probability": 0.09259,
+      "name": "crystal sword"
+    },
+    {
+      "id": 2168,
+      "probability": 0.09259,
+      "name": "life ring"
+    },
+    {
+      "id": 2169,
+      "probability": 0.09259,
+      "name": "time ring"
+    },
+    {
+      "id": 5954,
+      "probability": 0.07407,
+      "name": "demon horn",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 3952,
+      "probability": 0.07407,
+      "name": "didgeridoo"
+    },
+    {
+      "id": 7383,
+      "probability": 0.07407,
+      "name": "relic sword"
+    },
+    {
+      "id": 8920,
+      "probability": 0.07407,
+      "name": "wand of starstorm"
+    },
+    {
+      "id": 7386,
+      "probability": 0.05556,
+      "name": "mercenary sword"
+    },
+    {
+      "id": 2070,
+      "probability": 0.05556,
+      "name": "wooden flute"
+    },
+    {
+      "id": 2213,
+      "probability": 0.03704,
+      "name": "dwarven ring"
+    },
+    {
+      "id": 2396,
+      "probability": 0.03704,
+      "name": "ice rapier"
+    },
+    {
+      "id": 2207,
+      "probability": 0.03704,
+      "name": "sword ring"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

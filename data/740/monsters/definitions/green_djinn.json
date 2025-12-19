@@ -1,0 +1,187 @@
+{
+  "creatureStatistics": {
+    "name": "Green Djinn",
+    "health": 330,
+    "maxHealth": 330,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 110,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 51
+    },
+    "armor": 20
+  },
+  "experience": 215,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 110
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 45,
+      "max": 80,
+      "range": 7,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 50,
+      "max": 105,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "suddendeath",
+      "areaEffect": "smallclouds"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "duration": 5000,
+      "shootEffect": "energy"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.01,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "duration": 4000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "djinn electrify",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 5
+    },
+    {
+      "name": "djinn cancel invisibility",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0
+    }
+  ],
+  "elements": {
+    "physical": 20,
+    "energy": 50,
+    "fire": 80,
+    "ice": -10,
+    "holy": -13,
+    "death": 20
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Good wishes are for fairytales",
+      "I wish you a merry trip to hell!",
+      "Muhahahaha!",
+      "I grant you a deathwish!",
+      "Tell me your last wish!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.88234,
+      "name": "gold coin",
+      "min": 1,
+      "max": 115
+    },
+    {
+      "id": 3607,
+      "probability": 0.24327,
+      "name": "cheese"
+    },
+    {
+      "id": 7378,
+      "probability": 0.05046,
+      "name": "royal spear",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2149,
+      "probability": 0.02933,
+      "name": "small emerald",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 1965,
+      "probability": 0.02295,
+      "name": "book (green)"
+    },
+    {
+      "id": 12412,
+      "probability": 0.02121,
+      "name": "dirty turban"
+    },
+    {
+      "id": 5910,
+      "probability": 0.02005,
+      "name": "green piece of cloth"
+    },
+    {
+      "id": 2747,
+      "probability": 0.00953,
+      "name": "grave flower"
+    },
+    {
+      "id": 2063,
+      "probability": 0.0087,
+      "name": "small oil lamp"
+    },
+    {
+      "id": 7620,
+      "probability": 0.00481,
+      "name": "mana potion"
+    },
+    {
+      "id": 2663,
+      "probability": 0.00116,
+      "name": "mystic turban"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

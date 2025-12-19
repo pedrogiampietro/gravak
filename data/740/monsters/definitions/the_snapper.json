@@ -1,0 +1,99 @@
+{
+  "creatureStatistics": {
+    "name": "The Snapper",
+    "health": 300,
+    "maxHealth": 300,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 240,
+    "attack": 60,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 119
+    },
+    "armor": 13
+  },
+  "experience": 150,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 30,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 60
+    }
+  ],
+  "elements": {
+    "earth": 15,
+    "ice": 10,
+    "energy": -5,
+    "fire": -10,
+    "physical": -5
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.50675,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.50675,
+      "name": "gold coin",
+      "min": 1,
+      "max": 94
+    },
+    {
+      "id": 2168,
+      "probability": 1,
+      "name": "life ring"
+    },
+    {
+      "id": 2463,
+      "probability": 0.358,
+      "name": "plate armor"
+    },
+    {
+      "id": 2476,
+      "probability": 0.04025,
+      "name": "knight armor"
+    },
+    {
+      "id": 2647,
+      "probability": 0.44025,
+      "name": "plate legs"
+    },
+    {
+      "id": 2269,
+      "probability": 0.511,
+      "name": "health potion",
+      "min": 1,
+      "max": 5
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

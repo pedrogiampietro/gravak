@@ -1,0 +1,43 @@
+{
+  "creatureStatistics": {
+    "name": "Poodle",
+    "health": 20,
+    "maxHealth": 20,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 2,
+    "outfit": {
+      "id": 473
+    },
+    "armor": 1
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 8,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "sayings": {
+    "texts": [
+      "Wuff wuff"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

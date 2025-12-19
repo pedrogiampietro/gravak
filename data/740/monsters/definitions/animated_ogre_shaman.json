@@ -1,0 +1,143 @@
+{
+  "creatureStatistics": {
+    "name": "Animated Ogre Shaman",
+    "health": 800,
+    "maxHealth": 800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 240,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 859
+    },
+    "armor": 30
+  },
+  "experience": 625,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 80,
+      "max": 95,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 70,
+      "max": 180,
+      "range": 7,
+      "shootEffect": "poison"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.08,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "duration": 4000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 15,
+      "max": 120,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "carniphila"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 90
+    },
+    {
+      "id": 24844,
+      "probability": 0.2,
+      "name": "ogre ear stud"
+    },
+    {
+      "id": 2229,
+      "probability": 0.2,
+      "name": "skull (item)"
+    },
+    {
+      "id": 24845,
+      "probability": 0.13333,
+      "name": "ogre nose ring"
+    },
+    {
+      "id": 20111,
+      "probability": 0.06667,
+      "name": "bone fetish"
+    },
+    {
+      "id": 12408,
+      "probability": 0.06667,
+      "name": "broken shamanic staff"
+    },
+    {
+      "id": 2185,
+      "probability": 0.06667,
+      "name": "necrotic rod"
+    },
+    {
+      "id": 24841,
+      "probability": 0.06667,
+      "name": "prickly pear",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 24840,
+      "probability": 0.06667,
+      "name": "shamanic talisman"
+    },
+    {
+      "id": 24847,
+      "probability": 0.06667,
+      "name": "skull fetish"
+    },
+    {
+      "id": 7589,
+      "probability": 0.06667,
+      "name": "strong mana potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

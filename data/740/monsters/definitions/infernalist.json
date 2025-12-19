@@ -1,0 +1,195 @@
+{
+  "creatureStatistics": {
+    "name": "Infernalist",
+    "health": 3650,
+    "maxHealth": 3650,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 100,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 130
+    },
+    "armor": 15
+  },
+  "experience": 4000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 900,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 60,
+      "max": 230,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.15,
+      "duration": 8000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.4,
+      "min": 65,
+      "max": 180,
+      "range": 7,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "fire"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 90,
+      "max": 180,
+      "range": 7,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 53,
+      "max": 120,
+      "range": 7,
+      "radius": 3,
+      "target": true,
+      "areaEffect": "teleport",
+      "shootEffect": "energyball"
+    },
+    {
+      "name": "firefield",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 150,
+      "max": 250,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "fireattack"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 100,
+      "max": 150,
+      "radius": 2,
+      "target": false,
+      "areaEffect": "explosionarea"
+    }
+  ],
+  "elements": {
+    "earth": 95,
+    "physical": -5,
+    "ice": -5,
+    "holy": 20,
+    "death": 5
+  },
+  "immunities": {
+    "energy": true,
+    "fire": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "fire elemental",
+      "interval": 2000,
+      "chance": 0.2,
+      "maxSummons": 1
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Nothing will remain but your scorched bones!",
+      "Some like it hot!",
+      "It's cooking time!",
+      "Feel the heat of battle!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.565,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.4,
+      "name": "gold coin",
+      "min": 1,
+      "max": 47
+    },
+    {
+      "id": 2167,
+      "probability": 0.018,
+      "name": "energy ring"
+    },
+    {
+      "id": 2436,
+      "probability": 0.065,
+      "name": "skull staff"
+    },
+    {
+      "id": 2273,
+      "probability": 0.197,
+      "name": "great mana potion"
+    },
+    {
+      "id": 2274,
+      "probability": 0.019,
+      "name": "great health potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

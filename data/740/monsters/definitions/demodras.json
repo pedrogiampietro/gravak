@@ -1,0 +1,200 @@
+{
+  "creatureStatistics": {
+    "name": "Demodras",
+    "health": 4500,
+    "maxHealth": 4500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 235,
+    "attackSpeed": 2000,
+    "defense": 45,
+    "outfit": {
+      "id": 204
+    },
+    "armor": 45
+  },
+  "experience": 6000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 300,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 400,
+      "max": 600,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 235
+    },
+    {
+      "name": "fire",
+      "interval": 3000,
+      "chance": 0.2,
+      "min": 350,
+      "max": 400,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "firefield",
+      "interval": 1000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 6,
+      "target": true,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "fire",
+      "interval": 4000,
+      "chance": 0.2,
+      "min": 300,
+      "max": 550,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "firearea"
+    }
+  ],
+  "immunities": {
+    "fire": true,
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Dragon",
+      "interval": 1000,
+      "chance": 0.17,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "I WILL SET THE WORLD ON FIRE!",
+      "I WILL PROTECT MY BROOD!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 5919,
+      "probability": 1,
+      "name": "dragon claw"
+    },
+    {
+      "id": 2152,
+      "probability": 0.99145,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2672,
+      "probability": 0.75214,
+      "name": "dragon ham"
+    },
+    {
+      "id": 2796,
+      "probability": 0.25641,
+      "name": "green mushroom",
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 2547,
+      "probability": 0.19658,
+      "name": "power bolt",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 5948,
+      "probability": 0.13675,
+      "name": "red dragon leather"
+    },
+    {
+      "id": 2146,
+      "probability": 0.11966,
+      "name": "small sapphire"
+    },
+    {
+      "id": 1976,
+      "probability": 0.10256,
+      "name": "book (gemmed)"
+    },
+    {
+      "id": 2167,
+      "probability": 0.10256,
+      "name": "energy ring"
+    },
+    {
+      "id": 7591,
+      "probability": 0.09402,
+      "name": "great health potion"
+    },
+    {
+      "id": 7590,
+      "probability": 0.09402,
+      "name": "great mana potion"
+    },
+    {
+      "id": 2033,
+      "probability": 0.05983,
+      "name": "golden mug"
+    },
+    {
+      "id": 7365,
+      "probability": 0.04274,
+      "name": "onyx arrow",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2492,
+      "probability": 0.01709,
+      "name": "dragon scale mail"
+    },
+    {
+      "id": 2392,
+      "probability": 0.01709,
+      "name": "fire sword"
+    },
+    {
+      "id": 2177,
+      "probability": 0.00855,
+      "name": "life crystal"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "creatureStatistics": {
+    "name": "Insectoid Scout",
+    "health": 230,
+    "maxHealth": 230,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 74,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 403
+    },
+    "armor": 15
+  },
+  "experience": 150,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 74
+    }
+  ],
+  "elements": {
+    "physical": 5,
+    "fire": -5,
+    "earth": 50,
+    "ice": -5,
+    "energy": -5
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Chrrr! Chrr!",
+      "Klk! Klk!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.8,
+      "name": "gold coin",
+      "min": 1,
+      "max": 80
+    },
+    {
+      "id": 2209,
+      "probability": 0.001,
+      "name": "club ring"
+    },
+    {
+      "id": 2269,
+      "probability": 0.0028,
+      "name": "health potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

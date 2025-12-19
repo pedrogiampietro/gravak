@@ -1,0 +1,130 @@
+{
+  "creatureStatistics": {
+    "name": "Cyclops Drone",
+    "health": 325,
+    "maxHealth": 325,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 198,
+    "attack": 105,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 280
+    },
+    "armor": 20
+  },
+  "experience": 200,
+  "corpse": 2808,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 105
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.35,
+      "min": 0,
+      "max": 80,
+      "range": 7,
+      "shootEffect": "largerock"
+    }
+  ],
+  "elements": {
+    "energy": 10,
+    "ice": 20,
+    "holy": 1,
+    "earth": -10,
+    "death": -5
+  },
+  "sayings": {
+    "texts": [
+      "Fee! Fie! Foe! Fum!",
+      "Luttl pest!",
+      "Me makking you pulp!",
+      "Humy tasy! Hum hum!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.8205,
+      "name": "gold coin",
+      "min": 1,
+      "max": 30
+    },
+    {
+      "id": 2666,
+      "probability": 0.50295,
+      "name": "meat"
+    },
+    {
+      "id": 2406,
+      "probability": 0.07867,
+      "name": "short sword"
+    },
+    {
+      "id": 10574,
+      "probability": 0.06895,
+      "name": "cyclops toe"
+    },
+    {
+      "id": 2510,
+      "probability": 0.02026,
+      "name": "plate shield"
+    },
+    {
+      "id": 2513,
+      "probability": 0.0158,
+      "name": "battle shield"
+    },
+    {
+      "id": 2381,
+      "probability": 0.00679,
+      "name": "halberd"
+    },
+    {
+      "id": 7588,
+      "probability": 0.00517,
+      "name": "strong health potion"
+    },
+    {
+      "id": 2490,
+      "probability": 0.00198,
+      "name": "dark helmet"
+    },
+    {
+      "id": 7398,
+      "probability": 0.00124,
+      "name": "cyclops trophy"
+    },
+    {
+      "id": 2209,
+      "probability": 0.00073,
+      "name": "club ring"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "creatureStatistics": {
+    "name": "Sphinx",
+    "health": 8500,
+    "maxHealth": 8500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 290,
+    "attack": 400,
+    "attackSpeed": 2000,
+    "defense": 82,
+    "outfit": {
+      "id": 1188
+    },
+    "armor": 82
+  },
+  "experience": 7500,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 400
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 200,
+      "max": 500,
+      "length": 6,
+      "spread": 0,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "holy",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 100,
+      "max": 350,
+      "range": 5,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "smallholy",
+      "areaEffect": "holyarea"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.18,
+      "min": 200,
+      "max": 400,
+      "radius": 3,
+      "areaEffect": "energyarea"
+    }
+  ],
+  "elements": {
+    "fire": 90,
+    "death": -20,
+    "holy": 85,
+    "ice": -15
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 34093,
+      "probability": 0.07273,
+      "name": "sphinx feather"
+    },
+    {
+      "id": 34094,
+      "probability": 0.06147,
+      "name": "sphinx tiara"
+    },
+    {
+      "id": 7890,
+      "probability": 0.05951,
+      "name": "magma amulet"
+    },
+    {
+      "id": 2155,
+      "probability": 0.04871,
+      "name": "green gem"
+    },
+    {
+      "id": 2158,
+      "probability": 0.03665,
+      "name": "blue gem"
+    },
+    {
+      "id": 7891,
+      "probability": 0.03585,
+      "name": "magma boots"
+    },
+    {
+      "id": 2143,
+      "probability": 0.03068,
+      "name": "white pearl"
+    },
+    {
+      "id": 7901,
+      "probability": 0.02987,
+      "name": "lightning headband"
+    },
+    {
+      "id": 7889,
+      "probability": 0.02424,
+      "name": "lightning pendant"
+    },
+    {
+      "id": 8920,
+      "probability": 0.02125,
+      "name": "wand of starstorm"
+    },
+    {
+      "id": 18390,
+      "probability": 0.02091,
+      "name": "wand of defiance"
+    },
+    {
+      "id": 7900,
+      "probability": 0.0193,
+      "name": "magma monocle"
+    },
+    {
+      "id": 7894,
+      "probability": 0.01195,
+      "name": "magma legs"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

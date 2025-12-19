@@ -1,0 +1,68 @@
+{
+  "creatureStatistics": {
+    "name": "Spectral Scum",
+    "health": 1,
+    "maxHealth": 1,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 19,
+    "outfit": {
+      "id": 195
+    },
+    "armor": 18
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "drunk",
+      "interval": 5000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 2,
+      "areaEffect": "poff"
+    }
+  ],
+  "immunities": {
+    "fire": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "BBooze! More booze!, Harrr Harrr!",
+      "Burp, Fart.",
+      "Nothing better than plundering and getting palstered!",
+      "Yarrr!, A pirate's unlife for me!"
+    ],
+    "slowness": 2,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "creatureStatistics": {
+    "name": "Reflection Of Mawhawk",
+    "health": 45000,
+    "maxHealth": 45000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 270,
+    "attack": 410,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 595
+    },
+    "armor": 30
+  },
+  "experience": 14000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 410
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.08,
+      "min": 135,
+      "max": 280,
+      "range": 7,
+      "radius": 5,
+      "target": true,
+      "shootEffect": "whirlwindaxe",
+      "areaEffect": "redspark"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.08,
+      "min": 90,
+      "max": 200,
+      "range": 7,
+      "target": true,
+      "shootEffect": "whirlwindaxe",
+      "areaEffect": "explosionarea"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 22396,
+      "probability": 1,
+      "name": "cluster of solace",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 22532,
+      "probability": 1,
+      "name": "frazzle tongue"
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 173
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 36
+    },
+    {
+      "id": 22598,
+      "probability": 1,
+      "name": "unrealized dream",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 18418,
+      "probability": 0.4,
+      "name": "blue crystal splinter",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 18417,
+      "probability": 0.4,
+      "name": "brown crystal splinter",
+      "min": 1,
+      "max": 9
+    },
+    {
+      "id": 18416,
+      "probability": 0.2,
+      "name": "green crystal splinter",
+      "min": 1,
+      "max": 6
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

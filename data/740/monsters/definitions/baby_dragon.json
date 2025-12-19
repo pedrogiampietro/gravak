@@ -1,0 +1,35 @@
+{
+  "creatureStatistics": {
+    "name": "Baby Dragon",
+    "health": 380,
+    "maxHealth": 380,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 176,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 0,
+    "outfit": {
+      "id": 271
+    }
+  },
+  "experience": 185,
+  "corpse": 2844,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

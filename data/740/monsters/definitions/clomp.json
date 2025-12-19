@@ -1,0 +1,86 @@
+{
+  "creatureStatistics": {
+    "name": "Clomp",
+    "health": 900,
+    "maxHealth": 900,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 430,
+    "attack": 260,
+    "attackSpeed": 2000,
+    "defense": 45,
+    "outfit": {
+      "id": 860
+    },
+    "armor": 45
+  },
+  "experience": 475,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 260
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "Snort!",
+      "Grunt!",
+      "Snarl!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 24842,
+      "probability": 0.18061,
+      "name": "raw meat"
+    },
+    {
+      "id": 5925,
+      "probability": 0.07211,
+      "name": "hardened bone"
+    },
+    {
+      "id": 11224,
+      "probability": 0.06923,
+      "name": "thick fur"
+    },
+    {
+      "id": 3973,
+      "probability": 0.00555,
+      "name": "tusk shield"
+    },
+    {
+      "id": 7432,
+      "probability": 0.00444,
+      "name": "furry club"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

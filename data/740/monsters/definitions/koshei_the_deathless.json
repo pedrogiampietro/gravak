@@ -1,0 +1,177 @@
+{
+  "creatureStatistics": {
+    "name": "Koshei The Deathless",
+    "health": 3000,
+    "maxHealth": 3000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 390,
+    "attack": 170,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 99
+    },
+    "armor": 20
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.3,
+      "min": 150,
+      "max": 300,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 170
+    },
+    {
+      "name": "lifedrain",
+      "interval": 3000,
+      "chance": 0.09,
+      "min": 60,
+      "max": 250,
+      "range": 1,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 1000,
+      "chance": 0.11,
+      "min": 70,
+      "max": 135,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 50,
+      "max": 140,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "cursecondition",
+      "interval": 3000,
+      "chance": 0.15,
+      "min": 54,
+      "max": 54,
+      "range": 1
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -900,
+      "duration": 30000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "energy": 80,
+    "holy": -15,
+    "fire": -10
+  },
+  "immunities": {
+    "death": true,
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "bonebeast",
+      "interval": 1000,
+      "chance": 0.16,
+      "maxSummons": 1
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Your pain will be beyond imagination!",
+      "You can't defeat me! I will ressurect and take your soul!",
+      "Death is my ally!",
+      "Welcome to my domain, visitor!",
+      "You will be my toy on the other side!",
+      "What a disgusting smell of life!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.8,
+      "name": "gold coin",
+      "min": 1,
+      "max": 12
+    },
+    {
+      "id": 2165,
+      "probability": 0.00888,
+      "name": "stealth ring"
+    },
+    {
+      "id": 2171,
+      "probability": 0.01666,
+      "name": "platinum amulet"
+    },
+    {
+      "id": 2175,
+      "probability": 0.1
+    },
+    {
+      "id": 2179,
+      "probability": 0.009,
+      "name": "gold ring"
+    },
+    {
+      "id": 2237,
+      "probability": 0.1
+    },
+    {
+      "id": 2401,
+      "probability": 0.1
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

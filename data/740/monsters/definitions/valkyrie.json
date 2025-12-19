@@ -1,0 +1,122 @@
+{
+  "creatureStatistics": {
+    "name": "Valkyrie",
+    "health": 190,
+    "maxHealth": 190,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 176,
+    "attack": 70,
+    "attackSpeed": 2000,
+    "defense": 12,
+    "outfit": {
+      "id": 139
+    },
+    "armor": 12
+  },
+  "experience": 85,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 10,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 70
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 50,
+      "range": 7,
+      "shootEffect": "spear"
+    }
+  ],
+  "elements": {
+    "ice": 10,
+    "fire": 10,
+    "holy": 5,
+    "death": -5,
+    "physical": -10
+  },
+  "sayings": {
+    "texts": [
+      "Another head for me!",
+      "Head off!",
+      "Your head will be mine!",
+      "Stand still!",
+      "One more head for me!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2389,
+      "probability": 0.55,
+      "name": "spear",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2148,
+      "probability": 0.32,
+      "name": "gold coin",
+      "min": 1,
+      "max": 12
+    },
+    {
+      "id": 2666,
+      "probability": 0.301,
+      "name": "meat"
+    },
+    {
+      "id": 2464,
+      "probability": 0.1,
+      "name": "chain armor"
+    },
+    {
+      "id": 2463,
+      "probability": 0.0082,
+      "name": "plate armor"
+    },
+    {
+      "id": 2229,
+      "probability": 0.0074
+    },
+    {
+      "id": 2269,
+      "probability": 0.005,
+      "name": "health potion"
+    },
+    {
+      "id": 2387,
+      "probability": 0.0042,
+      "name": "double axe"
+    },
+    {
+      "id": 2145,
+      "probability": 0.002,
+      "name": "small diamond"
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

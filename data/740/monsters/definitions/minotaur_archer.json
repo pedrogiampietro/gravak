@@ -1,0 +1,134 @@
+{
+  "creatureStatistics": {
+    "name": "Minotaur Archer",
+    "health": 100,
+    "maxHealth": 100,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 160,
+    "attack": 25,
+    "attackSpeed": 2000,
+    "defense": 6,
+    "outfit": {
+      "id": 24
+    },
+    "armor": 6
+  },
+  "experience": 65,
+  "corpse": 2876,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 29,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 25
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.4,
+      "min": 0,
+      "max": 80,
+      "range": 7,
+      "target": true,
+      "shootEffect": "bolt"
+    }
+  ],
+  "elements": {
+    "fire": 20,
+    "holy": 10,
+    "ice": -10,
+    "death": -5
+  },
+  "sayings": {
+    "texts": [
+      "Ruan Wihmpy!",
+      "Kaplar!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2543,
+      "probability": 0.90124,
+      "name": "bolt",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 2148,
+      "probability": 0.75036,
+      "name": "gold coin",
+      "min": 1,
+      "max": 30
+    },
+    {
+      "id": 12407,
+      "probability": 0.15323,
+      "name": "broken crossbow"
+    },
+    {
+      "id": 7363,
+      "probability": 0.1219,
+      "name": "piercing bolt",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 12439,
+      "probability": 0.08034,
+      "name": "piece of archer armor"
+    },
+    {
+      "id": 2666,
+      "probability": 0.04952,
+      "name": "meat"
+    },
+    {
+      "id": 12428,
+      "probability": 0.01973,
+      "name": "minotaur horn",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 5878,
+      "probability": 0.01925,
+      "name": "minotaur leather"
+    },
+    {
+      "id": 2455,
+      "probability": 0.00877,
+      "name": "crossbow"
+    },
+    {
+      "id": 2483,
+      "probability": 0.00539,
+      "name": "scale armor"
+    },
+    {
+      "id": 2465,
+      "probability": 0.00519,
+      "name": "brass armor"
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": 4
+  }
+}

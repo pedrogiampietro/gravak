@@ -1,0 +1,257 @@
+{
+  "creatureStatistics": {
+    "name": "Enslaved Dwarf",
+    "health": 3800,
+    "maxHealth": 3800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 270,
+    "attack": 501,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 494
+    },
+    "armor": 30
+  },
+  "experience": 2700,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 396,
+      "max": 478,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 501
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 340,
+      "range": 7,
+      "shootEffect": "largerock"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 250,
+      "range": 7,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "explosion",
+      "areaEffect": "explosion"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "radius": 5,
+      "target": false,
+      "duration": 6000,
+      "areaEffect": "yellowspark"
+    },
+    {
+      "name": "enslaved dwarf skill reducer 1",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "enslaved dwarf skill reducer 2",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 0,
+      "max": 0
+    }
+  ],
+  "elements": {
+    "physical": -3,
+    "energy": 5,
+    "earth": 30,
+    "ice": 10,
+    "death": 15
+  },
+  "immunities": {
+    "fire": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Bark!",
+      "Blood!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 149
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 2789,
+      "probability": 0.14724,
+      "name": "brown mushroom",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 5880,
+      "probability": 0.10357,
+      "name": "iron ore"
+    },
+    {
+      "id": 2150,
+      "probability": 0.10328,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2149,
+      "probability": 0.09826,
+      "name": "small emerald",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7590,
+      "probability": 0.06019,
+      "name": "great mana potion"
+    },
+    {
+      "id": 7591,
+      "probability": 0.05754,
+      "name": "great health potion"
+    },
+    {
+      "id": 11227,
+      "probability": 0.05341,
+      "name": "shiny stone"
+    },
+    {
+      "id": 18436,
+      "probability": 0.05193,
+      "name": "drill bolt",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 18417,
+      "probability": 0.04721,
+      "name": "brown crystal splinter",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2391,
+      "probability": 0.03924,
+      "name": "war hammer"
+    },
+    {
+      "id": 18420,
+      "probability": 0.03747,
+      "name": "red crystal fragment"
+    },
+    {
+      "id": 2532,
+      "probability": 0.03305,
+      "name": "ancient shield"
+    },
+    {
+      "id": 18416,
+      "probability": 0.03275,
+      "name": "green crystal splinter"
+    },
+    {
+      "id": 2515,
+      "probability": 0.02567,
+      "name": "guardian shield"
+    },
+    {
+      "id": 2208,
+      "probability": 0.02006,
+      "name": "axe ring"
+    },
+    {
+      "id": 18415,
+      "probability": 0.01977,
+      "name": "green crystal shard"
+    },
+    {
+      "id": 7454,
+      "probability": 0.01564,
+      "name": "glorious axe"
+    },
+    {
+      "id": 13757,
+      "probability": 0.01121,
+      "name": "coal"
+    },
+    {
+      "id": 7413,
+      "probability": 0.01121,
+      "name": "titan axe"
+    },
+    {
+      "id": 2528,
+      "probability": 0.00472,
+      "name": "tower shield"
+    },
+    {
+      "id": 7437,
+      "probability": 0.00384,
+      "name": "sapphire hammer"
+    },
+    {
+      "id": 2475,
+      "probability": 0.00325,
+      "name": "warrior helmet"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

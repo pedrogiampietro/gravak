@@ -1,0 +1,82 @@
+{
+  "creatureStatistics": {
+    "name": "Enraged White Deer",
+    "health": 255,
+    "maxHealth": 255,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 45,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 400
+    },
+    "armor": 15
+  },
+  "experience": 165,
+  "corpse": 2835,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 4000,
+      "chance": 0.15,
+      "min": 10,
+      "max": 40,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 45
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "*wheeze*",
+      "ROOOAAARR!!",
+      "*sniff*",
+      "*bell*"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 13534,
+      "probability": 0.19968,
+      "name": "white deer skin"
+    },
+    {
+      "id": 2671,
+      "probability": 0.19727,
+      "name": "ham"
+    },
+    {
+      "id": 13533,
+      "probability": 0.19647,
+      "name": "white deer antlers"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

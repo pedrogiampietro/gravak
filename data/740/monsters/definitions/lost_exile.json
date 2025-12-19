@@ -1,0 +1,273 @@
+{
+  "creatureStatistics": {
+    "name": "Lost Exile",
+    "health": 1600,
+    "maxHealth": 1600,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 120,
+    "attackSpeed": 2000,
+    "defense": 55,
+    "outfit": {
+      "id": 537
+    },
+    "armor": 55
+  },
+  "experience": 1800,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 160,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 120
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 150,
+      "max": 350,
+      "range": 3,
+      "length": 6,
+      "spread": 3,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 150,
+      "max": 250,
+      "range": 3,
+      "length": 5,
+      "spread": 5,
+      "areaEffect": "smoke"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 150,
+      "max": 290,
+      "range": 3,
+      "length": 5,
+      "spread": 5,
+      "shootEffect": "largerock",
+      "areaEffect": "poison"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 70,
+      "max": 250,
+      "range": 7
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "duration": 5000,
+      "shootEffect": "energy"
+    }
+  ],
+  "elements": {
+    "physical": 5,
+    "energy": 10,
+    "earth": 100,
+    "fire": 25,
+    "ice": 15,
+    "holy": -10,
+    "death": 20
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2152,
+      "probability": 0.59173,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 20135,
+      "probability": 0.15235,
+      "name": "red hair dye"
+    },
+    {
+      "id": 2789,
+      "probability": 0.14027,
+      "name": "brown mushroom",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 20127,
+      "probability": 0.13098,
+      "name": "wimp tooth chain"
+    },
+    {
+      "id": 13757,
+      "probability": 0.12401,
+      "name": "coal"
+    },
+    {
+      "id": 20130,
+      "probability": 0.12123,
+      "name": "holy ash"
+    },
+    {
+      "id": 9970,
+      "probability": 0.10358,
+      "name": "small topaz"
+    },
+    {
+      "id": 7590,
+      "probability": 0.09893,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 20110,
+      "probability": 0.09847,
+      "name": "bonecarving knife"
+    },
+    {
+      "id": 7588,
+      "probability": 0.09847,
+      "name": "strong health potion",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 20111,
+      "probability": 0.09336,
+      "name": "bone fetish"
+    },
+    {
+      "id": 20128,
+      "probability": 0.09196,
+      "name": "lost husher's staff"
+    },
+    {
+      "id": 20129,
+      "probability": 0.08407,
+      "name": "skull shatterer"
+    },
+    {
+      "id": 20137,
+      "probability": 0.07803,
+      "name": "basalt figurine"
+    },
+    {
+      "id": 20136,
+      "probability": 0.06317,
+      "name": "basalt fetish"
+    },
+    {
+      "id": 2213,
+      "probability": 0.02369,
+      "name": "dwarven ring"
+    },
+    {
+      "id": 2430,
+      "probability": 0.01301,
+      "name": "knight axe"
+    },
+    {
+      "id": 2515,
+      "probability": 0.00882,
+      "name": "guardian shield"
+    },
+    {
+      "id": 20109,
+      "probability": 0.00836,
+      "name": "buckle"
+    },
+    {
+      "id": 11339,
+      "probability": 0.00697,
+      "name": "clay lump"
+    },
+    {
+      "id": 7886,
+      "probability": 0.00697,
+      "name": "terra boots"
+    },
+    {
+      "id": 2436,
+      "probability": 0.00557,
+      "name": "skull staff"
+    },
+    {
+      "id": 2432,
+      "probability": 0.00372,
+      "name": "fire axe"
+    },
+    {
+      "id": 30309,
+      "probability": 0.00372,
+      "name": "suspicious device"
+    },
+    {
+      "id": 7885,
+      "probability": 0.00232,
+      "name": "terra legs"
+    },
+    {
+      "id": 7452,
+      "probability": 0.00186,
+      "name": "spiked squelcher"
+    },
+    {
+      "id": 2528,
+      "probability": 0.00139,
+      "name": "tower shield"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

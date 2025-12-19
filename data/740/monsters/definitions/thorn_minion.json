@@ -1,0 +1,106 @@
+{
+  "creatureStatistics": {
+    "name": "Thorn Minion",
+    "health": 3500,
+    "maxHealth": 3500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 150,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 717
+    },
+    "armor": 20
+  },
+  "experience": 1600,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.3,
+      "speedChange": 250,
+      "duration": 4000,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 150
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 100,
+      "max": 195,
+      "range": 7,
+      "shootEffect": "poison",
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -800,
+      "duration": 30000,
+      "shootEffect": "poison",
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 200,
+      "max": 280,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "groundshaker"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 200,
+      "max": 400,
+      "length": 4,
+      "spread": 0,
+      "areaEffect": "carniphila"
+    }
+  ],
+  "elements": {
+    "energy": 10,
+    "death": 20,
+    "fire": -10,
+    "ice": 20
+  },
+  "immunities": {
+    "earth": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "creatureStatistics": {
+    "name": "Pillar",
+    "health": 100,
+    "maxHealth": 100,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 100,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 0,
+    "outfit": {
+      "id": 0
+    }
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": true
+  },
+  "attacks": [
+    {
+      "name": "dipthrah skill reducer",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0
+    }
+  ],
+  "immunities": {
+    "physical": true,
+    "energy": true,
+    "fire": true,
+    "poison": true,
+    "ice": true,
+    "holy": true,
+    "death": true,
+    "lifedrain": true,
+    "paralyze": true,
+    "drown": true,
+    "invisible": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "creatureStatistics": {
+    "name": "Glooth Powered Minotaur",
+    "health": 3200,
+    "maxHealth": 3200,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 290,
+    "attackSpeed": 2000,
+    "defense": 45,
+    "outfit": {
+      "id": 607
+    },
+    "armor": 40
+  },
+  "experience": 2600,
+  "corpse": 2830,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 4000,
+      "chance": 0.15,
+      "min": 50,
+      "max": 145,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 290
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 200,
+      "radius": 3,
+      "areaEffect": "blackspark"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 100,
+      "max": 225,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "physical": 95,
+    "energy": 95,
+    "earth": 95,
+    "fire": 95,
+    "ice": 95,
+    "holy": 95,
+    "death": 95
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "POOOWEEER!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

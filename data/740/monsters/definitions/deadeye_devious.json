@@ -1,0 +1,99 @@
+{
+  "creatureStatistics": {
+    "name": "Deadeye Devious",
+    "health": 1450,
+    "maxHealth": 1450,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 300,
+    "attack": 550,
+    "attackSpeed": 2000,
+    "defense": 50,
+    "outfit": {
+      "id": 151
+    },
+    "armor": 35
+  },
+  "experience": 750,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 6000,
+      "chance": 0.65,
+      "min": 200,
+      "max": 250,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 550
+    },
+    {
+      "name": "physical",
+      "interval": 4000,
+      "chance": 0.6,
+      "min": 200,
+      "max": 250,
+      "shootEffect": "throwingknife"
+    }
+  ],
+  "immunities": {
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Let's kill 'em",
+      "Arrrgh!",
+      "You'll never take me alive!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 65
+    },
+    {
+      "id": 2463,
+      "probability": 0.04,
+      "name": "plate armor"
+    },
+    {
+      "id": 2476,
+      "probability": 0.012,
+      "name": "knight armor"
+    },
+    {
+      "id": 2666,
+      "probability": 1,
+      "name": "meat"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

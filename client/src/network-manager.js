@@ -224,6 +224,10 @@ NetworkManager.prototype.readPacket = function (packet) {
       return this.packetHandler.handleTradeOffer(packet.readTradeOffer());
     }
 
+    case 40: {
+      return this.packetHandler.handleDeath();
+    }
+
     default:
       throw ("An unknown packet was received from the server.");
 

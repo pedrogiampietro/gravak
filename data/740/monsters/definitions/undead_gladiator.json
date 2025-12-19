@@ -1,0 +1,180 @@
+{
+  "creatureStatistics": {
+    "name": "Undead Gladiator",
+    "health": 1000,
+    "maxHealth": 1000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 250,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 306
+    },
+    "armor": 35
+  },
+  "experience": 800,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.15,
+      "duration": 3000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 250
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 135,
+      "range": 7,
+      "shootEffect": "whirlwindsword"
+    }
+  ],
+  "elements": {
+    "earth": -10,
+    "holy": 10,
+    "fire": 80,
+    "energy": 20,
+    "death": -5
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Let's battle it out in a duel!",
+      "Bring it!",
+      "I'll fight here in eternity and beyond.",
+      "I will not give up!",
+      "Another foolish adventurer who tries to beat me."
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.95314,
+      "name": "gold coin",
+      "min": 1,
+      "max": 149
+    },
+    {
+      "id": 2399,
+      "probability": 0.14874,
+      "name": "throwing star",
+      "min": 1,
+      "max": 18
+    },
+    {
+      "id": 2419,
+      "probability": 0.10743,
+      "name": "scimitar"
+    },
+    {
+      "id": 8872,
+      "probability": 0.05209,
+      "name": "belted cape"
+    },
+    {
+      "id": 10573,
+      "probability": 0.05201,
+      "name": "broken gladiator shield"
+    },
+    {
+      "id": 2478,
+      "probability": 0.04923,
+      "name": "brass legs"
+    },
+    {
+      "id": 2465,
+      "probability": 0.0482,
+      "name": "brass armor"
+    },
+    {
+      "id": 3965,
+      "probability": 0.04519,
+      "name": "hunting spear"
+    },
+    {
+      "id": 2647,
+      "probability": 0.02268,
+      "name": "plate legs"
+    },
+    {
+      "id": 2463,
+      "probability": 0.02244,
+      "name": "plate armor"
+    },
+    {
+      "id": 2377,
+      "probability": 0.01982,
+      "name": "two handed sword"
+    },
+    {
+      "id": 2200,
+      "probability": 0.01927,
+      "name": "protection amulet"
+    },
+    {
+      "id": 2490,
+      "probability": 0.01395,
+      "name": "dark helmet"
+    },
+    {
+      "id": 7618,
+      "probability": 0.00404,
+      "name": "health potion"
+    },
+    {
+      "id": 2430,
+      "probability": 0.00246,
+      "name": "knight axe"
+    },
+    {
+      "id": 2497,
+      "probability": 0.00182,
+      "name": "crusader helmet"
+    },
+    {
+      "id": 5885,
+      "probability": 0.00166,
+      "name": "flask of warrior's sweat"
+    },
+    {
+      "id": 2165,
+      "probability": 0.00048,
+      "name": "stealth ring"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

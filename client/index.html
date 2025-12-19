@@ -4,15 +4,15 @@
 <meta charset="utf-8" />
 
 <!-- Metadata -->
-<meta name="description" content="Forby HTML5 Open Tibia Client">
-<meta name="keywords" content="HTML5, JavaScript, NodeJS, Open Tibia, Client, Forby">
-<meta name="author" content="Forby">
+<meta name="description" content="Gravak">
+<meta name="keywords" content="HTML5, JavaScript, NodeJS, Open Tibia, Client, Gravak">
+<meta name="author" content="Gravak">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Forby HTML5 Open Tibia Client</title>
+<title>Gravak</title>
 
 <!-- Style Icon -->
-<link rel="shortcut icon" type="image/png" href="/png/forby.png" />
+<link rel="shortcut icon" type="image/png" href="/png/Gravak.png" />
 
 <!-- Stylesheets -->
 <link rel="stylesheet" type="text/css" href="./css/hotbar.css">
@@ -383,12 +383,12 @@
           <div class="modal-body" style="text-align: center; max-width: 500px;">
             <p> Tibia Game Client and Game Server written in NodeJS/JavaScript.
               <hr>
-              <img src="png/forby.png" style="width: 68px; heigiht: 68px;"></img>
+              <img src="png/Gravak.png" style="width: 68px; heigiht: 68px;"></img>
               <hr>
               Load the required <b>Tibia.spr</b> and <b>Tibia.dat</b> files by clicking Load Assets. The asset versions
               must match the server version and both client/server support versions 7.4 and 10.98 but nothing in
               between.
-            <p> Copyright by Forby, 2019 - 2022
+            <p> Copyright by Gravak, 2019 - 2022
               <hr>
             <div class="modal-footer">
               <button action="confirm">Close</button>
@@ -592,6 +592,18 @@
                 <div class="modal-footer">
                   <button action="cancel" value="Cancel">Cancel</button>
                   <button action="confirm" value="Ok">Confirm</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Death Modal -->
+            <div id="death-modal" class="modal">
+              <div class="modal-header">You are dead.</div>
+              <div class="modal-body">
+                <div style="text-align: center;"><span id="death-message">You are dead.</span></div>
+                <hr>
+                <div class="modal-footer">
+                  <button action="confirm" value="Ok">Ok</button>
                 </div>
               </div>
             </div>
@@ -1223,6 +1235,7 @@
   <script src="src/modal-create-account.js"></script>
   <script src="src/modal-spellbook.js"></script>
   <script src="src/modal-confirm.js"></script>
+  <script src="src/modal-death.js"></script>
   <script src="src/modal-enter-name.js"></script>
   <script src="src/modal-map.js"></script>
   <script src="src/modal-text.js"></script>

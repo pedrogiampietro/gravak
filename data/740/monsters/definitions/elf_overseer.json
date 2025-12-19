@@ -1,0 +1,125 @@
+{
+  "creatureStatistics": {
+    "name": "Elf Overseer",
+    "health": 500,
+    "maxHealth": 500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 176,
+    "attack": 75,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 159
+    },
+    "armor": 15
+  },
+  "experience": 290,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 50,
+      "max": 72,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 75
+    },
+    {
+      "name": "drown",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 50,
+      "max": 90,
+      "length": 6,
+      "spread": 0,
+      "areaEffect": "bluebubble"
+    },
+    {
+      "name": "drown",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 40,
+      "max": 50,
+      "range": 4,
+      "radius": 2,
+      "target": true,
+      "areaEffect": "bluebubble"
+    }
+  ],
+  "elements": {
+    "holy": -5,
+    "energy": 20,
+    "ice": 10,
+    "death": 10
+  },
+  "immunities": {
+    "fire": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Do YOU want some more water, yes? YES?",
+      "DOWN WITH THE FIRES OF IGNORANCE!!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.51,
+      "name": "gold coin",
+      "min": 1,
+      "max": 50
+    },
+    {
+      "id": 2689,
+      "probability": 0.14,
+      "name": "bread",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2269,
+      "probability": 0.14,
+      "name": "health potion"
+    },
+    {
+      "id": 2513,
+      "probability": 0.11,
+      "name": "battle shield"
+    },
+    {
+      "id": 2268,
+      "probability": 0.085,
+      "name": "mana potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

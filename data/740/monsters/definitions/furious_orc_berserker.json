@@ -1,0 +1,60 @@
+{
+  "creatureStatistics": {
+    "name": "Furious Orc Berserker",
+    "health": 15,
+    "maxHealth": 15,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 380,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 2,
+    "outfit": {
+      "id": 74
+    },
+    "armor": 1
+  },
+  "experience": 0,
+  "corpse": 2820,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 15,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    }
+  ],
+  "loot": [
+    {
+      "id": 2666,
+      "probability": 0.2,
+      "name": "meat",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2684,
+      "probability": 0.09,
+      "min": 1,
+      "max": 2
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "creatureStatistics": {
+    "name": "Zoralurk",
+    "health": 55000,
+    "maxHealth": 55000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 400,
+    "attack": 1013,
+    "attackSpeed": 2000,
+    "defense": 65,
+    "outfit": {
+      "id": 12
+    },
+    "armor": 55
+  },
+  "experience": 30000,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.35,
+      "min": 300,
+      "max": 800,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 4000,
+      "chance": 0.8,
+      "speedChange": 440,
+      "duration": 6000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.1,
+      "duration": 10000,
+      "areaEffect": "dice"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.1,
+      "duration": 10000,
+      "areaEffect": "dice"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.1,
+      "duration": 10000,
+      "areaEffect": "dice"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.1,
+      "duration": 10000,
+      "areaEffect": "dice"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.1,
+      "duration": 10000,
+      "areaEffect": "dice"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1013
+    },
+    {
+      "name": "energy",
+      "interval": 1000,
+      "chance": 0.12,
+      "min": 600,
+      "max": 900,
+      "radius": 7,
+      "target": false,
+      "areaEffect": "energy"
+    },
+    {
+      "name": "earth",
+      "interval": 1000,
+      "chance": 0.12,
+      "min": 400,
+      "max": 800,
+      "radius": 7,
+      "target": false,
+      "areaEffect": "smallplants"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 500,
+      "max": 800,
+      "range": 7,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "fire",
+      "interval": 3000,
+      "chance": 0.35,
+      "min": 200,
+      "max": 600,
+      "range": 7,
+      "radius": 7,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    }
+  ],
+  "immunities": {
+    "energy": true,
+    "fire": true,
+    "earth": true,
+    "lifedrain": true,
+    "paralyze": true,
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "demon",
+      "interval": 4000,
+      "chance": 0.5,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "I AM ZORALURK, THE DEMON WITH A THOUSAND FACES!",
+      "BRING IT, COCKROACHES!"
+    ],
+    "slowness": 5,
+    "chance": 0.3
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 90
+    },
+    {
+      "id": 2195,
+      "probability": 0.16033,
+      "name": "boots of haste"
+    },
+    {
+      "id": 2393,
+      "probability": 0.6,
+      "name": "giant sword"
+    },
+    {
+      "id": 2407,
+      "probability": 0.2,
+      "name": "bright sword"
+    },
+    {
+      "id": 2407,
+      "probability": 0.2,
+      "name": "bright sword"
+    },
+    {
+      "id": 2641,
+      "probability": 0.07,
+      "name": "patched boots"
+    },
+    {
+      "id": 6530,
+      "probability": 0.16
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "creatureStatistics": {
+    "name": "Pirate Marauder",
+    "health": 210,
+    "maxHealth": 210,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 140,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 93
+    },
+    "armor": 15
+  },
+  "experience": 125,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 20,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 140
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 40,
+      "range": 7,
+      "shootEffect": "spear"
+    }
+  ],
+  "elements": {
+    "earth": 10,
+    "holy": 20,
+    "death": -5,
+    "fire": -10,
+    "energy": -5
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Plundeeeeer!",
+      "Give up!",
+      "Hiyaa!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2050,
+      "probability": 0.0988
+    },
+    {
+      "id": 2148,
+      "probability": 0.7767,
+      "name": "gold coin",
+      "min": 1,
+      "max": 40
+    },
+    {
+      "id": 2389,
+      "probability": 0.0514,
+      "name": "spear",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2464,
+      "probability": 0.03,
+      "name": "chain armor"
+    },
+    {
+      "id": 2510,
+      "probability": 0.05,
+      "name": "plate shield"
+    },
+    {
+      "id": 5091,
+      "probability": 0.0091
+    },
+    {
+      "id": 5792,
+      "probability": 0.0009
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

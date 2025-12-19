@@ -1,0 +1,258 @@
+{
+  "creatureStatistics": {
+    "name": "Ironblight",
+    "health": 6600,
+    "maxHealth": 6600,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 286,
+    "attack": 300,
+    "attackSpeed": 2000,
+    "defense": 84,
+    "outfit": {
+      "id": 498
+    },
+    "armor": 84
+  },
+  "experience": 4400,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 260,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.2,
+      "duration": 7000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 300
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 460,
+      "max": 480,
+      "radius": 6,
+      "target": false,
+      "shootEffect": "poison",
+      "areaEffect": "poison"
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 260,
+      "max": 350,
+      "length": 7,
+      "spread": 0,
+      "target": false,
+      "shootEffect": "ice",
+      "areaEffect": "iceattack"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 180,
+      "max": 250,
+      "radius": 2,
+      "target": true,
+      "shootEffect": "greenstar",
+      "areaEffect": "bigplants"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "length": 5,
+      "spread": 3,
+      "target": false,
+      "speedChange": -800,
+      "duration": 30000,
+      "areaEffect": "yellowspark"
+    }
+  ],
+  "elements": {
+    "physical": 15,
+    "energy": 25,
+    "fire": 60,
+    "ice": 20,
+    "death": 40
+  },
+  "immunities": {
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Clonk!",
+      "Yowl!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 199
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 10571,
+      "probability": 0.21215,
+      "name": "war crystal"
+    },
+    {
+      "id": 8473,
+      "probability": 0.18606,
+      "name": "ultimate health potion"
+    },
+    {
+      "id": 18432,
+      "probability": 0.17836,
+      "name": "crystalline spikes"
+    },
+    {
+      "id": 7590,
+      "probability": 0.17151,
+      "name": "great mana potion"
+    },
+    {
+      "id": 2150,
+      "probability": 0.15141,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 11227,
+      "probability": 0.14286,
+      "name": "shiny stone"
+    },
+    {
+      "id": 18417,
+      "probability": 0.12703,
+      "name": "brown crystal splinter",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 18420,
+      "probability": 0.10736,
+      "name": "red crystal fragment"
+    },
+    {
+      "id": 2149,
+      "probability": 0.10565,
+      "name": "small emerald",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 18415,
+      "probability": 0.05518,
+      "name": "green crystal shard"
+    },
+    {
+      "id": 9942,
+      "probability": 0.04962,
+      "name": "crystal of balance"
+    },
+    {
+      "id": 2156,
+      "probability": 0.03464,
+      "name": "red gem"
+    },
+    {
+      "id": 9980,
+      "probability": 0.02352,
+      "name": "crystal of power"
+    },
+    {
+      "id": 8912,
+      "probability": 0.01668,
+      "name": "springsprout rod"
+    },
+    {
+      "id": 18412,
+      "probability": 0.00898,
+      "name": "glacial rod"
+    },
+    {
+      "id": 5904,
+      "probability": 0.00898,
+      "name": "magic sulphur"
+    },
+    {
+      "id": 7885,
+      "probability": 0.00898,
+      "name": "terra legs"
+    },
+    {
+      "id": 7437,
+      "probability": 0.0077,
+      "name": "sapphire hammer"
+    },
+    {
+      "id": 2158,
+      "probability": 0.00599,
+      "name": "blue gem"
+    },
+    {
+      "id": 2438,
+      "probability": 0.00599,
+      "name": "epee"
+    },
+    {
+      "id": 2445,
+      "probability": 0.00556,
+      "name": "crystal mace"
+    },
+    {
+      "id": 11368,
+      "probability": 0.00257,
+      "name": "jade hat"
+    },
+    {
+      "id": 8855,
+      "probability": 0.00171,
+      "name": "composite hornbow"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "creatureStatistics": {
+    "name": "Mounted Thorn Knight",
+    "health": 100000,
+    "maxHealth": 100000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 430,
+    "attack": 1032,
+    "attackSpeed": 2000,
+    "defense": 60,
+    "outfit": {
+      "id": 512
+    },
+    "armor": 60
+  },
+  "experience": 15000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 1550,
+      "max": 2550,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.12,
+      "speedChange": 620,
+      "duration": 4000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1032
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 400,
+      "max": 700,
+      "length": 4,
+      "spread": 3,
+      "areaEffect": "poff"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 1400,
+      "max": 1700,
+      "length": 9,
+      "spread": 0,
+      "areaEffect": "carniphila"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 400,
+      "max": 700,
+      "length": 9,
+      "spread": 0,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 200,
+      "max": 250,
+      "radius": 10,
+      "areaEffect": "yellowspark"
+    }
+  ],
+  "elements": {
+    "energy": 80,
+    "holy": 80,
+    "earth": 100,
+    "death": 80,
+    "fire": 80,
+    "physical": 80,
+    "ice": 80
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

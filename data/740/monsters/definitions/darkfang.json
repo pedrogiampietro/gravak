@@ -1,0 +1,238 @@
+{
+  "creatureStatistics": {
+    "name": "Darkfang",
+    "health": 4800,
+    "maxHealth": 4800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 290,
+    "attackSpeed": 2000,
+    "defense": 45,
+    "outfit": {
+      "id": 308
+    },
+    "armor": 40
+  },
+  "experience": 4000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 4000,
+      "chance": 0.15,
+      "min": 150,
+      "max": 345,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 290
+    },
+    {
+      "name": "werewolf skill reducer",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 1
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 100,
+      "max": 300,
+      "radius": 8,
+      "target": false,
+      "areaEffect": "rednote"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.18,
+      "min": 200,
+      "max": 340,
+      "radius": 3,
+      "areaEffect": "groundshaker"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -600,
+      "duration": 20000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "energy": 20,
+    "earth": 70,
+    "fire": -5,
+    "ice": 10,
+    "death": 70
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "You are my next meal! Grrr!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 120
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 9
+    },
+    {
+      "id": 8473,
+      "probability": 1,
+      "name": "ultimate health potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 24708,
+      "probability": 1,
+      "name": "werewolf fangs"
+    },
+    {
+      "id": 11234,
+      "probability": 1,
+      "name": "werewolf fur"
+    },
+    {
+      "id": 5897,
+      "probability": 1,
+      "name": "wolf paw"
+    },
+    {
+      "id": 24849,
+      "probability": 0.84167,
+      "name": "onyx chip",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7439,
+      "probability": 0.83958,
+      "name": "berserk potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2144,
+      "probability": 0.80625,
+      "name": "black pearl",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 7759,
+      "probability": 0.8,
+      "name": "small enchanted sapphire",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2197,
+      "probability": 0.25417,
+      "name": "stone skin amulet"
+    },
+    {
+      "id": 2805,
+      "probability": 0.25208,
+      "name": "troll green"
+    },
+    {
+      "id": 7394,
+      "probability": 0.09792,
+      "name": "wolf trophy"
+    },
+    {
+      "id": 7428,
+      "probability": 0.08958,
+      "name": "bonebreaker"
+    },
+    {
+      "id": 7419,
+      "probability": 0.07292,
+      "name": "dreaded cleaver"
+    },
+    {
+      "id": 2169,
+      "probability": 0.06458,
+      "name": "time ring"
+    },
+    {
+      "id": 11306,
+      "probability": 0.05,
+      "name": "sai"
+    },
+    {
+      "id": 24739,
+      "probability": 0.02917,
+      "name": "moonlight crystals"
+    },
+    {
+      "id": 24716,
+      "probability": 0.02917,
+      "name": "werewolf amulet"
+    },
+    {
+      "id": 2171,
+      "probability": 0.02708,
+      "name": "platinum amulet"
+    },
+    {
+      "id": 25172,
+      "probability": 0.0125,
+      "name": "silver token"
+    },
+    {
+      "id": 24740,
+      "probability": 0.00417,
+      "name": "wolf backpack"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

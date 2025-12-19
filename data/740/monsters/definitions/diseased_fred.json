@@ -1,0 +1,118 @@
+{
+  "creatureStatistics": {
+    "name": "Diseased Fred",
+    "health": 1100,
+    "maxHealth": 1100,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 150,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 299
+    },
+    "armor": 20
+  },
+  "experience": 300,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 150,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 5000,
+      "chance": 0.6,
+      "min": 50,
+      "max": 80,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 150
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 65,
+      "max": 80,
+      "range": 7,
+      "target": true,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 100,
+      "max": 170,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "speed",
+      "interval": 3000,
+      "chance": 0.4,
+      "min": 0,
+      "max": 0,
+      "target": true,
+      "speedChange": -900,
+      "duration": 20000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "physical": 15,
+    "energy": 15,
+    "ice": 15,
+    "holy": 15,
+    "death": 55,
+    "fire": 15
+  },
+  "immunities": {
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "You will suffer the same fate as I do!",
+      "The pain! The pain!",
+      "Stay away! I am contagious!",
+      "The plague will get you!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.43,
+      "name": "gold coin",
+      "min": 1,
+      "max": 25
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

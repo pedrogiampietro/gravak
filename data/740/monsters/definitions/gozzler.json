@@ -1,0 +1,134 @@
+{
+  "creatureStatistics": {
+    "name": "Gozzler",
+    "health": 240,
+    "maxHealth": 240,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 110,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 313
+    },
+    "armor": 15
+  },
+  "experience": 180,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 30,
+      "max": 50,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 210,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 110
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 32,
+      "max": 135,
+      "range": 1,
+      "areaEffect": "redspark"
+    }
+  ],
+  "elements": {
+    "death": 50,
+    "holy": 50,
+    "physical": -5
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Huhuhuhuuu!",
+      "Let the fun begin!",
+      "Yihahaha!",
+      "I'll bite you! Nyehehehehe!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2146,
+      "probability": 0.0036,
+      "name": "small sapphire"
+    },
+    {
+      "id": 2148,
+      "probability": 0.525,
+      "name": "gold coin",
+      "min": 1,
+      "max": 70
+    },
+    {
+      "id": 2378,
+      "probability": 0.031,
+      "name": "battle axe"
+    },
+    {
+      "id": 2385,
+      "probability": 0.0825,
+      "name": "sabre"
+    },
+    {
+      "id": 2394,
+      "probability": 0.05,
+      "name": "morning star"
+    },
+    {
+      "id": 2409,
+      "probability": 0.0025,
+      "name": "serpent sword"
+    },
+    {
+      "id": 2423,
+      "probability": 0.009,
+      "name": "clerical mace"
+    },
+    {
+      "id": 2510,
+      "probability": 0.1,
+      "name": "plate shield"
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

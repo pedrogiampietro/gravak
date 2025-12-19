@@ -1,0 +1,120 @@
+{
+  "creatureStatistics": {
+    "name": "Smuggler",
+    "health": 130,
+    "maxHealth": 130,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 176,
+    "attack": 60,
+    "attackSpeed": 2000,
+    "defense": 8,
+    "outfit": {
+      "id": 134
+    },
+    "armor": 8
+  },
+  "experience": 48,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 15,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 60
+    }
+  ],
+  "elements": {
+    "physical": -5,
+    "death": -5
+  },
+  "sayings": {
+    "texts": [
+      "I will silence you forever!",
+      "You saw something you shouldn't!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.79815,
+      "name": "gold coin",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2050,
+      "probability": 0.30203,
+      "name": "torch",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2649,
+      "probability": 0.14782,
+      "name": "leather legs"
+    },
+    {
+      "id": 2671,
+      "probability": 0.10185,
+      "name": "ham"
+    },
+    {
+      "id": 2406,
+      "probability": 0.10051,
+      "name": "short sword"
+    },
+    {
+      "id": 2461,
+      "probability": 0.10036,
+      "name": "leather helmet"
+    },
+    {
+      "id": 2403,
+      "probability": 0.10012,
+      "name": "knife"
+    },
+    {
+      "id": 2376,
+      "probability": 0.05012,
+      "name": "sword"
+    },
+    {
+      "id": 8840,
+      "probability": 0.04896,
+      "name": "raspberry",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2404,
+      "probability": 0.04042,
+      "name": "combat knife"
+    },
+    {
+      "id": 7397,
+      "probability": 0.00112,
+      "name": "deer trophy"
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

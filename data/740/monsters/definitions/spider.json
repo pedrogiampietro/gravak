@@ -1,26 +1,57 @@
 {
   "creatureStatistics": {
     "name": "Spider",
-    "health": 30,
-    "maxHealth": 30,
+    "health": 20,
+    "maxHealth": 20,
     "mana": 0,
     "maxMana": 0,
-    "attack": 10,
-    "attackSlowness": 40,
-    "defense": 5,
-    "speed": 30,
+    "speed": 152,
+    "attack": 9,
+    "attackSpeed": 2000,
+    "defense": 2,
     "outfit": {
       "id": 30
-    }
+    },
+    "armor": 2
   },
-  "fluidType": 1,
-  "experience": 0,
+  "experience": 12,
   "corpse": 2807,
+  "fluidType": 3,
   "behaviour": {
-    "type": "HOSTILE",
-    "fleeHealth": 10,
+    "type": 2,
+    "fleeHealth": 6,
     "openDoors": false,
     "senseInvisible": false
   },
-  "loot": []
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 9
+    }
+  ],
+  "elements": {
+    "fire": -20
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.65,
+      "name": "gold coin",
+      "min": 1,
+      "max": 5
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
 }

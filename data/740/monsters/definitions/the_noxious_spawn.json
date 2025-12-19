@@ -1,0 +1,220 @@
+{
+  "creatureStatistics": {
+    "name": "The Noxious Spawn",
+    "health": 9500,
+    "maxHealth": 9500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 360,
+    "attack": 250,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 220
+    },
+    "armor": 18
+  },
+  "experience": 6000,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 275,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 900,
+      "max": 1000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 250
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.06,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -660,
+      "duration": 5000
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.07,
+      "min": 0,
+      "max": 550,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "smallplants"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 0,
+      "max": 550,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "rednote"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 0,
+      "max": 300,
+      "range": 1,
+      "shootEffect": "poison",
+      "areaEffect": "poison"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.11,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "duration": 4000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "elements": {
+    "ice": 20,
+    "fire": -10,
+    "energy": -10
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "earth": true
+  },
+  "sayings": {
+    "texts": [
+      "Sssssouls for the one",
+      "HISSSS",
+      "Tsssse one will risssse again",
+      "I bring your deathhh, mortalssss"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 10611,
+      "probability": 1,
+      "name": "snake skin"
+    },
+    {
+      "id": 11230,
+      "probability": 1,
+      "name": "winged tail"
+    },
+    {
+      "id": 2152,
+      "probability": 0.80822,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2149,
+      "probability": 0.71233,
+      "name": "small emerald",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 7590,
+      "probability": 0.64384,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 10309,
+      "probability": 0.45205,
+      "name": "claw of 'the noxious spawn'"
+    },
+    {
+      "id": 2528,
+      "probability": 0.43836,
+      "name": "tower shield"
+    },
+    {
+      "id": 7456,
+      "probability": 0.42466,
+      "name": "noble axe"
+    },
+    {
+      "id": 7386,
+      "probability": 0.36986,
+      "name": "mercenary sword"
+    },
+    {
+      "id": 2033,
+      "probability": 0.32877,
+      "name": "golden mug"
+    },
+    {
+      "id": 7368,
+      "probability": 0.31507,
+      "name": "assassin star",
+      "min": 1,
+      "max": 98
+    },
+    {
+      "id": 2487,
+      "probability": 0.30137,
+      "name": "crown armor"
+    },
+    {
+      "id": 2796,
+      "probability": 0.16438,
+      "name": "green mushroom"
+    },
+    {
+      "id": 8902,
+      "probability": 0.16438,
+      "name": "spellbook of mind control"
+    },
+    {
+      "id": 2168,
+      "probability": 0.12329,
+      "name": "life ring"
+    },
+    {
+      "id": 2498,
+      "probability": 0.0274,
+      "name": "royal helmet"
+    },
+    {
+      "id": 8880,
+      "probability": 0.0274,
+      "name": "swamplair armor"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

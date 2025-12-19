@@ -1,0 +1,145 @@
+{
+  "creatureStatistics": {
+    "name": "Evil Mastermind",
+    "health": 1295,
+    "maxHealth": 1295,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 350,
+    "attack": 77,
+    "attackSpeed": 1200,
+    "defense": 30,
+    "outfit": {
+      "id": 256
+    },
+    "armor": 30
+  },
+  "experience": 675,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 50,
+      "max": 110,
+      "areaEffect": "energy"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 1200,
+      "chance": 1,
+      "min": 0,
+      "max": 77
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 50,
+      "max": 78,
+      "range": 7,
+      "shootEffect": "suddendeath",
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 66,
+      "max": 72,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 36,
+      "max": 57,
+      "range": 7,
+      "shootEffect": "energy",
+      "areaEffect": "energyarea"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 70,
+      "max": 73,
+      "range": 7,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 59,
+      "max": 75,
+      "range": 7,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -600,
+      "duration": 20000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "ice": 20,
+    "physical": 5,
+    "energy": 90,
+    "holy": -5
+  },
+  "immunities": {
+    "earth": true,
+    "death": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "vampire",
+      "interval": 2000,
+      "chance": 0.4,
+      "maxSummons": 1
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "You won't stop my masterplan to flood the world market with fake Bonelord language dictionaries!",
+      "My calculations tell me you'll die!",
+      "You can't stop me!",
+      "Beware! My evil monolog is coming!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 3
+  }
+}

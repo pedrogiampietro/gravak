@@ -1,0 +1,119 @@
+{
+  "creatureStatistics": {
+    "name": "Spit Nettle",
+    "health": 150,
+    "maxHealth": 150,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 100,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 12,
+    "outfit": {
+      "id": 221
+    },
+    "armor": 12
+  },
+  "experience": 20,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 15,
+      "max": 37,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "earth",
+      "interval": 1000,
+      "chance": 0.2,
+      "min": 15,
+      "max": 40,
+      "range": 7,
+      "target": true,
+      "shootEffect": "poison"
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 40,
+      "max": 100,
+      "range": 7,
+      "target": true,
+      "shootEffect": "poison"
+    }
+  ],
+  "elements": {
+    "ice": 20,
+    "fire": -10
+  },
+  "immunities": {
+    "energy": true,
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "loot": [
+    {
+      "id": 2804,
+      "probability": 0.10954,
+      "name": "shadow herb"
+    },
+    {
+      "id": 2148,
+      "probability": 0.10703,
+      "name": "gold coin",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 12432,
+      "probability": 0.0984,
+      "name": "nettle spit"
+    },
+    {
+      "id": 2802,
+      "probability": 0.05556,
+      "name": "sling herb",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2747,
+      "probability": 0.00989,
+      "name": "grave flower"
+    },
+    {
+      "id": 11231,
+      "probability": 0.0091,
+      "name": "nettle blossom"
+    },
+    {
+      "id": 7732,
+      "probability": 0.00361,
+      "name": "seeds"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

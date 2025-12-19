@@ -1,0 +1,83 @@
+{
+  "creatureStatistics": {
+    "name": "Deathspawn",
+    "health": 225,
+    "maxHealth": 225,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 40,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 226
+    },
+    "armor": 1
+  },
+  "experience": 20,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 40
+    },
+    {
+      "name": "fire",
+      "interval": 1000,
+      "chance": 0.1,
+      "min": 400,
+      "max": 700,
+      "length": 7,
+      "spread": 0,
+      "areaEffect": "explosion"
+    },
+    {
+      "name": "energy",
+      "interval": 1000,
+      "chance": 0.11,
+      "min": 250,
+      "max": 450,
+      "length": 7,
+      "spread": 0,
+      "areaEffect": "purpleenergy"
+    }
+  ],
+  "elements": {
+    "holy": 10,
+    "fire": -15,
+    "energy": -15,
+    "ice": -15
+  },
+  "immunities": {
+    "death": true,
+    "earth": true
+  },
+  "sayings": {
+    "texts": [
+      "Ribbit!",
+      "Ribbit! Ribbit!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "creatureStatistics": {
+    "name": "Tirecz",
+    "health": 25000,
+    "maxHealth": 25000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 410,
+    "attackSpeed": 2000,
+    "defense": 19,
+    "outfit": {
+      "id": 334
+    },
+    "armor": 16
+  },
+  "experience": 6000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 410
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 120,
+      "max": 460,
+      "length": 8,
+      "spread": 3,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 290,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "yellowspark"
+    },
+    {
+      "name": "energy",
+      "interval": 3000,
+      "chance": 0.3,
+      "min": 80,
+      "max": 345,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "energy"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 200,
+      "max": 370,
+      "radius": 7,
+      "target": false,
+      "areaEffect": "redspark"
+    }
+  ],
+  "elements": {
+    "physical": 10,
+    "holy": 30,
+    "death": 20,
+    "energy": 30,
+    "ice": 30,
+    "earth": 30,
+    "fire": 50
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Hissss!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

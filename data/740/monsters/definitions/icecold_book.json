@@ -1,0 +1,208 @@
+{
+  "creatureStatistics": {
+    "name": "Icecold Book",
+    "health": 21000,
+    "maxHealth": 21000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 440,
+    "attack": 850,
+    "attackSpeed": 2000,
+    "defense": 82,
+    "outfit": {
+      "id": 1061
+    },
+    "armor": 82
+  },
+  "experience": 12750,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 200,
+      "max": 350
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 850
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 600,
+      "max": 800,
+      "range": 2,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "ice"
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 750,
+      "max": 1300,
+      "length": 5,
+      "spread": 0,
+      "areaEffect": "iceattack"
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 650,
+      "max": 950,
+      "target": false
+    }
+  ],
+  "elements": {
+    "fire": -10,
+    "ice": 100
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 0.91012,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 31225,
+      "probability": 0.622,
+      "name": "book page"
+    },
+    {
+      "id": 2145,
+      "probability": 0.46152,
+      "name": "small diamond"
+    },
+    {
+      "id": 2146,
+      "probability": 0.27227,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 9
+    },
+    {
+      "id": 2396,
+      "probability": 0.21188,
+      "name": "ice rapier"
+    },
+    {
+      "id": 26029,
+      "probability": 0.21157,
+      "name": "ultimate mana potion"
+    },
+    {
+      "id": 8473,
+      "probability": 0.18552,
+      "name": "ultimate health potion"
+    },
+    {
+      "id": 31223,
+      "probability": 0.18249,
+      "name": "quill"
+    },
+    {
+      "id": 31222,
+      "probability": 0.17067,
+      "name": "silken bookmark"
+    },
+    {
+      "id": 7902,
+      "probability": 0.1325,
+      "name": "glacier mask"
+    },
+    {
+      "id": 10578,
+      "probability": 0.12856,
+      "name": "frosty heart"
+    },
+    {
+      "id": 7387,
+      "probability": 0.06372,
+      "name": "diamond sceptre"
+    },
+    {
+      "id": 7896,
+      "probability": 0.04848,
+      "name": "glacier kilt"
+    },
+    {
+      "id": 7441,
+      "probability": 0.04706,
+      "name": "ice cube"
+    },
+    {
+      "id": 7892,
+      "probability": 0.03403,
+      "name": "glacier shoes"
+    },
+    {
+      "id": 2445,
+      "probability": 0.02646,
+      "name": "crystal mace"
+    },
+    {
+      "id": 7897,
+      "probability": 0.01777,
+      "name": "glacier robe"
+    },
+    {
+      "id": 2479,
+      "probability": 0.01646,
+      "name": "strange helmet"
+    },
+    {
+      "id": 7437,
+      "probability": 0.01616,
+      "name": "sapphire hammer"
+    },
+    {
+      "id": 8878,
+      "probability": 0.00919,
+      "name": "crystalline armor"
+    },
+    {
+      "id": 18412,
+      "probability": 0.00616,
+      "name": "glacial rod"
+    },
+    {
+      "id": 10220,
+      "probability": 0.00131,
+      "name": "leviathan's amulet"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

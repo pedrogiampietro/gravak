@@ -1,0 +1,98 @@
+{
+  "creatureStatistics": {
+    "name": "White Shade",
+    "health": 260,
+    "maxHealth": 260,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 8,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 560
+    },
+    "armor": 15
+  },
+  "experience": 120,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 30,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.05,
+      "duration": 6000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 8
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 4,
+      "max": 6,
+      "range": 7,
+      "shootEffect": "suddendeath",
+      "areaEffect": "yalaharighost"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 0,
+      "max": 0,
+      "radius": 4,
+      "target": false,
+      "speedChange": -400,
+      "duration": 3000,
+      "areaEffect": "blackspark"
+    }
+  ],
+  "elements": {
+    "holy": -10,
+    "physical": 90
+  },
+  "immunities": {
+    "lifedrain": true,
+    "paralyze": true,
+    "invisible": true,
+    "earth": true,
+    "death": true,
+    "drown": true
+  },
+  "sayings": {
+    "texts": [
+      "Leave this place... save yourself...",
+      "The dark ones.. must be stopped... unholy, twisted, EVIL!",
+      "No... don't go further stranger... danger lies in every step..."
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": 4
+  }
+}

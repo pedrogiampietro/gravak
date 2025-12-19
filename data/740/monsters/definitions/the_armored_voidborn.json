@@ -1,0 +1,78 @@
+{
+  "creatureStatistics": {
+    "name": "The Armored Voidborn",
+    "health": 60000,
+    "maxHealth": 60000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 550,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 987
+    },
+    "armor": 30
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 550
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 400,
+      "length": 7,
+      "spread": 5,
+      "areaEffect": "smallclouds"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 250,
+      "max": 440,
+      "radius": 5
+    }
+  ],
+  "elements": {
+    "physical": 97,
+    "energy": 97,
+    "earth": 97,
+    "fire": 97,
+    "drown": -1400,
+    "ice": 97,
+    "holy": 97,
+    "death": 97
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

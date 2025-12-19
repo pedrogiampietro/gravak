@@ -1,0 +1,163 @@
+{
+  "creatureStatistics": {
+    "name": "Blood Beast",
+    "health": 1600,
+    "maxHealth": 1600,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 28,
+    "outfit": {
+      "id": 602
+    },
+    "armor": 19
+  },
+  "experience": 1000,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.08,
+      "speedChange": 314,
+      "duration": 6000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.17,
+      "min": 80,
+      "max": 120,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "poison",
+      "interval": 2000,
+      "chance": 0.13,
+      "min": 65,
+      "max": 105,
+      "range": 5,
+      "target": true,
+      "shootEffect": "greenstar",
+      "areaEffect": "poison"
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.17,
+      "min": 300,
+      "max": 400,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "elements": {
+    "energy": 10,
+    "fire": -5
+  },
+  "immunities": {
+    "paralyze": true,
+    "lifedrain": true,
+    "earth": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Rawrrr!",
+      "*grlb*",
+      "Roarr!"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 23549,
+      "probability": 0.1601
+    },
+    {
+      "id": 10557,
+      "probability": 0.0508
+    },
+    {
+      "id": 23517,
+      "probability": 0.0372
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.6,
+      "min": 1,
+      "max": 50
+    },
+    {
+      "id": 23565,
+      "probability": 0.2004
+    },
+    {
+      "id": 7588,
+      "probability": 0.0771
+    },
+    {
+      "id": 7366,
+      "probability": 0.0829,
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 23554,
+      "probability": 0.0085
+    },
+    {
+      "id": 23550,
+      "probability": 0.0081
+    },
+    {
+      "id": 23549,
+      "probability": 0.0081
+    },
+    {
+      "id": 23551,
+      "probability": 0.0105
+    },
+    {
+      "id": 23529,
+      "probability": 0.0078
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

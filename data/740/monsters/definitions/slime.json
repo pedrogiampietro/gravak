@@ -5,27 +5,64 @@
     "maxHealth": 150,
     "mana": 0,
     "maxMana": 0,
-    "attack": 0,
-    "attackSlowness": 40,
-    "defense": 5,
-    "speed": 60,
+    "speed": 120,
+    "attack": 110,
+    "attackSpeed": 2000,
+    "defense": 3,
     "outfit": {
       "id": 19
-    }
+    },
+    "armor": 3
   },
-  "fluidType": 1,
   "experience": 160,
-  "corpse": 1496,
+  "corpse": 2963,
+  "fluidType": 3,
   "behaviour": {
-    "type": "NEUTRAL",
+    "type": 2,
     "fleeHealth": 0,
-    "openDoors": false,
+    "openDoors": true,
     "senseInvisible": false
   },
-  "loot": [],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 110
+    }
+  ],
+  "elements": {
+    "ice": 20,
+    "fire": -10,
+    "energy": -10
+  },
+  "immunities": {
+    "earth": true
+  },
+  "summons": [
+    {
+      "name": "Squidgy Slime",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 3
+    }
+  ],
   "sayings": {
-   "texts": ["Blubb"],
-   "slowness": 300,
-   "chance": 0.75
+    "texts": [
+      "Blubb"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
   }
 }

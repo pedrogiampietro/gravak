@@ -1,0 +1,379 @@
+{
+  "creatureStatistics": {
+    "name": "Hellgorak",
+    "health": 25850,
+    "maxHealth": 25850,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 330,
+    "attack": 910,
+    "attackSpeed": 2000,
+    "defense": 65,
+    "outfit": {
+      "id": 12
+    },
+    "armor": 70
+  },
+  "experience": 10000,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 150,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.22,
+      "min": 400,
+      "max": 1700,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 910
+    },
+    {
+      "name": "energy",
+      "interval": 1000,
+      "chance": 0.11,
+      "min": 250,
+      "max": 850,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "purpleenergy"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.14,
+      "min": 200,
+      "max": 400,
+      "radius": 5,
+      "target": false,
+      "areaEffect": "stun"
+    },
+    {
+      "name": "fire",
+      "interval": 1000,
+      "chance": 0.11,
+      "min": 50,
+      "max": 600,
+      "range": 7,
+      "radius": 5,
+      "target": true,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 0,
+      "max": 150,
+      "radius": 7,
+      "target": false,
+      "areaEffect": "poff"
+    }
+  ],
+  "elements": {
+    "physical": 98,
+    "energy": 98,
+    "earth": 98,
+    "fire": 98,
+    "drown": -205,
+    "ice": 98,
+    "holy": 95,
+    "death": 98
+  },
+  "immunities": {
+    "lifedrain": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "I'll sacrifice yours souls to seven!",
+      "I'm bad news for you mortals!",
+      "No man can defeat me!",
+      "Your puny skills are no match for me.",
+      "I smell your fear.",
+      "Delicious!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 6500,
+      "probability": 1,
+      "name": "demonic essence"
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 198
+    },
+    {
+      "id": 9813,
+      "probability": 0.51393,
+      "name": "slightly rusted legs"
+    },
+    {
+      "id": 8473,
+      "probability": 0.42605,
+      "name": "ultimate health potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 9810,
+      "probability": 0.32476,
+      "name": "slightly rusted armor"
+    },
+    {
+      "id": 8901,
+      "probability": 0.30493,
+      "name": "spellbook of warding"
+    },
+    {
+      "id": 3962,
+      "probability": 0.29957,
+      "name": "beastslayer axe"
+    },
+    {
+      "id": 8472,
+      "probability": 0.21115,
+      "name": "great spirit potion"
+    },
+    {
+      "id": 2152,
+      "probability": 0.20579,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 30
+    },
+    {
+      "id": 2487,
+      "probability": 0.18435,
+      "name": "crown armor"
+    },
+    {
+      "id": 7591,
+      "probability": 0.18274,
+      "name": "great health potion"
+    },
+    {
+      "id": 7590,
+      "probability": 0.17899,
+      "name": "great mana potion"
+    },
+    {
+      "id": 2125,
+      "probability": 0.14362,
+      "name": "crystal necklace"
+    },
+    {
+      "id": 2144,
+      "probability": 0.14148,
+      "name": "black pearl",
+      "min": 1,
+      "max": 25
+    },
+    {
+      "id": 2147,
+      "probability": 0.1313,
+      "name": "small ruby",
+      "min": 1,
+      "max": 25
+    },
+    {
+      "id": 2143,
+      "probability": 0.13076,
+      "name": "white pearl",
+      "min": 1,
+      "max": 25
+    },
+    {
+      "id": 2145,
+      "probability": 0.12808,
+      "name": "small diamond",
+      "min": 1,
+      "max": 25
+    },
+    {
+      "id": 7456,
+      "probability": 0.12165,
+      "name": "noble axe"
+    },
+    {
+      "id": 2150,
+      "probability": 0.12004,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 25
+    },
+    {
+      "id": 2149,
+      "probability": 0.1179,
+      "name": "small emerald",
+      "min": 1,
+      "max": 25
+    },
+    {
+      "id": 2146,
+      "probability": 0.11576,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 25
+    },
+    {
+      "id": 9970,
+      "probability": 0.11415,
+      "name": "small topaz",
+      "min": 1,
+      "max": 25
+    },
+    {
+      "id": 7894,
+      "probability": 0.11093,
+      "name": "magma legs"
+    },
+    {
+      "id": 8870,
+      "probability": 0.10343,
+      "name": "spirit cloak"
+    },
+    {
+      "id": 2133,
+      "probability": 0.10129,
+      "name": "ruby necklace"
+    },
+    {
+      "id": 8902,
+      "probability": 0.10021,
+      "name": "spellbook of mind control"
+    },
+    {
+      "id": 2488,
+      "probability": 0.09914,
+      "name": "crown legs"
+    },
+    {
+      "id": 2197,
+      "probability": 0.09753,
+      "name": "stone skin amulet"
+    },
+    {
+      "id": 2130,
+      "probability": 0.097,
+      "name": "golden amulet"
+    },
+    {
+      "id": 5954,
+      "probability": 0.09539,
+      "name": "demon horn",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2645,
+      "probability": 0.09539,
+      "name": "steel boots"
+    },
+    {
+      "id": 8871,
+      "probability": 0.09486,
+      "name": "focus cape"
+    },
+    {
+      "id": 8903,
+      "probability": 0.08896,
+      "name": "spellbook of lost souls"
+    },
+    {
+      "id": 2477,
+      "probability": 0.08789,
+      "name": "knight legs"
+    },
+    {
+      "id": 2656,
+      "probability": 0.08039,
+      "name": "blue robe"
+    },
+    {
+      "id": 7412,
+      "probability": 0.02304,
+      "name": "butcher's axe"
+    },
+    {
+      "id": 2466,
+      "probability": 0.02036,
+      "name": "golden armor"
+    },
+    {
+      "id": 7388,
+      "probability": 0.01179,
+      "name": "vile axe"
+    },
+    {
+      "id": 8904,
+      "probability": 0.01018,
+      "name": "spellscroll of prophecies"
+    },
+    {
+      "id": 7453,
+      "probability": 0.00804,
+      "name": "executioner"
+    },
+    {
+      "id": 2470,
+      "probability": 0.00643,
+      "name": "golden legs"
+    },
+    {
+      "id": 2136,
+      "probability": 0.00589,
+      "name": "demonbone amulet"
+    },
+    {
+      "id": 8879,
+      "probability": 0.00375,
+      "name": "voltage armor"
+    },
+    {
+      "id": 8926,
+      "probability": 0.00322,
+      "name": "demonwing axe"
+    },
+    {
+      "id": 2415,
+      "probability": 0.00268,
+      "name": "great axe"
+    },
+    {
+      "id": 8918,
+      "probability": 0.00161,
+      "name": "spellbook of dark mysteries"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "creatureStatistics": {
+    "name": "Hacker",
+    "health": 430,
+    "maxHealth": 430,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 83,
+    "attackSpeed": 2000,
+    "defense": 12,
+    "outfit": {
+      "id": 8
+    },
+    "armor": 15
+  },
+  "experience": 45,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 429,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.15,
+      "speedChange": 290,
+      "duration": 6000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "outfit",
+      "interval": 10000,
+      "chance": 0.15,
+      "duration": 500,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 83
+    }
+  ],
+  "immunities": {
+    "energy": true,
+    "fire": true,
+    "earth": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "Feel the wrath of me dos attack!",
+      "You're next!",
+      "Gimme free gold!",
+      "Me sooo smart!",
+      "Me have a cheating link for you!",
+      "Me is GM!",
+      "Gimme your password!",
+      "Me just need the code!",
+      "Me not stink!",
+      "Me other char is highlevel!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2044,
+      "probability": 0.06666,
+      "name": "lamp"
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 12
+    },
+    {
+      "id": 2378,
+      "probability": 0.05,
+      "name": "battle axe"
+    },
+    {
+      "id": 2381,
+      "probability": 0.1,
+      "name": "halberd"
+    },
+    {
+      "id": 2386,
+      "probability": 0.1,
+      "name": "axe"
+    },
+    {
+      "id": 2391,
+      "probability": 0.05,
+      "name": "war hammer"
+    },
+    {
+      "id": 2671,
+      "probability": 0.5,
+      "name": "ham"
+    },
+    {
+      "id": 6570,
+      "probability": 0.05538,
+      "name": "blue surprise bag"
+    },
+    {
+      "id": 6571,
+      "probability": 0.01538,
+      "name": "red surprise bag"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "creatureStatistics": {
+    "name": "Grorlam",
+    "health": 3000,
+    "maxHealth": 3000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 240,
+    "attack": 300,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 205
+    },
+    "armor": 15
+  },
+  "experience": 2400,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.25,
+      "min": 100,
+      "max": 150,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.06,
+      "speedChange": 270,
+      "duration": 6000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 300
+    },
+    {
+      "name": "physical",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 150,
+      "max": 200,
+      "range": 7,
+      "shootEffect": "largerock"
+    }
+  ],
+  "elements": {
+    "physical": 30,
+    "holy": 20,
+    "energy": 20,
+    "death": -5,
+    "fire": -10
+  },
+  "immunities": {
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 98
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 11227,
+      "probability": 1,
+      "name": "shiny stone"
+    },
+    {
+      "id": 2150,
+      "probability": 0.73077,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2509,
+      "probability": 0.65385,
+      "name": "steel shield"
+    },
+    {
+      "id": 11232,
+      "probability": 0.65385,
+      "name": "sulphurous stone"
+    },
+    {
+      "id": 2156,
+      "probability": 0.57692,
+      "name": "red gem"
+    },
+    {
+      "id": 2166,
+      "probability": 0.42308,
+      "name": "power ring"
+    },
+    {
+      "id": 2645,
+      "probability": 0.11538,
+      "name": "steel boots"
+    },
+    {
+      "id": 2124,
+      "probability": 0.03846,
+      "name": "crystal ring"
+    },
+    {
+      "id": 1294,
+      "probability": 0.03846,
+      "name": "small stone",
+      "min": 1,
+      "max": 3
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "creatureStatistics": {
+    "name": "Museum Stone Rhino",
+    "health": 3000,
+    "maxHealth": 3000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 290,
+    "attack": 263,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 936
+    },
+    "armor": 10
+  },
+  "experience": 1800,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 195
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 263
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 24842,
+      "probability": 0.13793,
+      "name": "raw meat"
+    },
+    {
+      "id": 5925,
+      "probability": 0.06897,
+      "name": "hardened bone"
+    },
+    {
+      "id": 27044,
+      "probability": 0.03448,
+      "name": "rhino hide"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

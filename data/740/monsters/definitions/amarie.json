@@ -1,0 +1,68 @@
+{
+  "creatureStatistics": {
+    "name": "Amarie",
+    "health": 100,
+    "maxHealth": 100,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 15,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 159
+    },
+    "armor": 10
+  },
+  "experience": 42,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 15
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 25,
+      "range": 7,
+      "shootEffect": "arrow"
+    }
+  ],
+  "immunities": {
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Aaaaah! Let me out of here!!",
+      "Help! Where am I?",
+      "Noooo! What are you doing?",
+      "Ulathil beia Thratha!",
+      "What is this devilish scheme??"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

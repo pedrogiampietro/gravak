@@ -1,0 +1,180 @@
+{
+  "creatureStatistics": {
+    "name": "Incredibly Old Witch",
+    "health": 100,
+    "maxHealth": 100,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 202,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 0,
+    "outfit": {
+      "id": 54
+    }
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "duration": 60000,
+      "areaEffect": "teleport",
+      "shootEffect": "suddendeath"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "duration": 60000,
+      "areaEffect": "teleport",
+      "shootEffect": "suddendeath"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "duration": 60000,
+      "areaEffect": "teleport",
+      "shootEffect": "suddendeath"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "duration": 60000,
+      "areaEffect": "teleport",
+      "shootEffect": "suddendeath"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "duration": 60000,
+      "areaEffect": "teleport",
+      "shootEffect": "suddendeath"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "duration": 60000,
+      "areaEffect": "teleport",
+      "shootEffect": "suddendeath"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "duration": 60000,
+      "areaEffect": "teleport",
+      "shootEffect": "suddendeath"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "duration": 60000,
+      "areaEffect": "teleport",
+      "shootEffect": "suddendeath"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "duration": 60000,
+      "areaEffect": "teleport",
+      "shootEffect": "suddendeath"
+    }
+  ],
+  "immunities": {
+    "physical": true,
+    "energy": true,
+    "fire": true,
+    "earth": true,
+    "drown": true,
+    "ice": true,
+    "holy": true,
+    "death": true,
+    "lifedrain": true,
+    "manadrain": true,
+    "paralyze": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Feel the wrath of the witch!",
+      "Oh how you will regret to have distubed me!",
+      "Everyone is so stupid!",
+      "Stupid people!",
+      "I will teach them all to leave me alone!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

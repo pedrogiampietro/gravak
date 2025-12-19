@@ -1,0 +1,185 @@
+{
+  "creatureStatistics": {
+    "name": "Minishabaal",
+    "health": 6000,
+    "maxHealth": 6000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 700,
+    "attack": 380,
+    "attackSpeed": 2000,
+    "defense": 29,
+    "outfit": {
+      "id": 237
+    },
+    "armor": 29
+  },
+  "experience": 4000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 350,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.5,
+      "min": 155,
+      "max": 255,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.12,
+      "speedChange": 800,
+      "duration": 4000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 4000,
+      "chance": 0.5,
+      "duration": 4000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 380
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 80,
+      "max": 350,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 3000,
+      "chance": 0.34,
+      "min": 120,
+      "max": 500,
+      "range": 7,
+      "radius": 2,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "diabolic imp skill reducer",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 0,
+      "max": 0,
+      "range": 5
+    }
+  ],
+  "elements": {
+    "earth": 50,
+    "ice": -10,
+    "holy": -5,
+    "death": 10
+  },
+  "immunities": {
+    "fire": true,
+    "lifedrain": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Diabolic Imp",
+      "interval": 2000,
+      "chance": 0.4,
+      "maxSummons": 3
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "I had Princess Lumelia as breakfast!",
+      "Naaa-Nana-Naaa-Naaa!",
+      "My brother will come and get you for this!",
+      "Get them Fluffy!",
+      "He He He!",
+      "Pftt, Ferumbras such an upstart!",
+      "My dragon is not that old, it's just second hand!",
+      "My other dragon is a red one!",
+      "When I am big I want to become the ruthless eighth!",
+      "WHERE'S FLUFFY?",
+      "Muahaha!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2136,
+      "probability": 0.00909,
+      "name": "demonbone amulet"
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 40
+    },
+    {
+      "id": 2150,
+      "probability": 0.01428,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2432,
+      "probability": 0.00666,
+      "name": "fire axe"
+    },
+    {
+      "id": 2470,
+      "probability": 0.0018,
+      "name": "golden legs"
+    },
+    {
+      "id": 2488,
+      "probability": 0.008,
+      "name": "crown legs"
+    },
+    {
+      "id": 2515,
+      "probability": 0.01333,
+      "name": "guardian shield"
+    },
+    {
+      "id": 2520,
+      "probability": 0.002,
+      "name": "demon shield"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

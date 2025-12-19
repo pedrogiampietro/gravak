@@ -1,0 +1,106 @@
+{
+  "creatureStatistics": {
+    "name": "Evil Sheep Lord",
+    "health": 400,
+    "maxHealth": 400,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 300,
+    "attack": 118,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 13
+    },
+    "armor": 30
+  },
+  "experience": 340,
+  "corpse": 2905,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 50,
+      "max": 100,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "outfit",
+      "interval": 1500,
+      "chance": 0.5,
+      "duration": 3000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 118
+    },
+    {
+      "name": "outfit",
+      "interval": 3000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "target": true,
+      "duration": 4000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "elements": {
+    "fire": -5,
+    "physical": -20
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Evil Sheep",
+      "interval": 2000,
+      "chance": 0.3,
+      "maxSummons": 3
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "You can COUNT on us!",
+      "Maeh!",
+      "I feel you're getting sleepy! Maeh!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.75,
+      "name": "gold coin",
+      "min": 1,
+      "max": 60
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "creatureStatistics": {
+    "name": "Roaring Water Elemental",
+    "health": 1750,
+    "maxHealth": 1750,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 390,
+    "attack": 225,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 11
+    },
+    "armor": 30
+  },
+  "experience": 1300,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 90,
+      "max": 150,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 225
+    },
+    {
+      "name": "ice",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 240,
+      "max": 320,
+      "radius": 2,
+      "target": true,
+      "areaEffect": "bluebubble",
+      "shootEffect": "ice"
+    }
+  ],
+  "elements": {
+    "physical": 50,
+    "holy": 30
+  },
+  "immunities": {
+    "fire": true,
+    "lifedrain": true,
+    "paralyze": true,
+    "invisible": true,
+    "drown": true
+  },
+  "loot": [
+    {
+      "id": 2146,
+      "probability": 0.04125,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2148,
+      "probability": 0.27,
+      "name": "gold coin",
+      "min": 1,
+      "max": 90
+    },
+    {
+      "id": 2148,
+      "probability": 0.27,
+      "name": "gold coin",
+      "min": 1,
+      "max": 87
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -604,6 +604,19 @@ const ServerErrorPacket = function (message) {
 ServerErrorPacket.prototype = Object.create(PacketWriter.prototype);
 ServerErrorPacket.prototype.constructor = ServerErrorPacket;
 
+const DeathPacket = function () {
+  /*
+   * Class DeathPacket
+   * Wrapper for the death packet (0x28)
+   */
+
+  // 0x28 = 40
+  PacketWriter.call(this, 0x28, 0);
+};
+
+DeathPacket.prototype = Object.create(PacketWriter.prototype);
+DeathPacket.prototype.constructor = DeathPacket;
+
 const LatencyPacket = function () {
   /*
    * Class LatencyPacket
@@ -846,11 +859,6 @@ const PlayerStatePacket = function (player) {
   let capacity = player.getProperty(CONST.PROPERTIES.CAPACITY);
   let capacityMax = player.getProperty(CONST.PROPERTIES.CAPACITY_MAX);
 
-  console.log("=== DEBUG PLAYER STATE PACKET CONSTRUCTION ===");
-  console.log("Raw values from player properties:");
-  console.log(`Health: ${health}/${healthMax}`);
-  console.log(`Mana: ${mana}/${manaMax}`);
-  console.log(`Capacity: ${capacity}/${capacityMax}`);
 
   // Basic player data
   this.writeUInt32(player.getId());
@@ -898,15 +906,6 @@ const PlayerStatePacket = function (player) {
   // Conditions
   this.writeUInt8(0);
 
-  console.log("=== DEBUG PACKET DATA BEING SENT ===");
-  console.log({
-    health,
-    healthMax,
-    mana,
-    manaMax,
-    capacity,
-    capacityMax,
-  });
 };
 
 PlayerStatePacket.prototype = Object.create(PacketWriter.prototype);
@@ -929,6 +928,8 @@ module.exports = {
   CreatureMovePacket,
   CreatureStatePacket,
   CreatureTeleportPacket,
+  CreatureTeleportPacket,
+  DeathPacket,
   EffectDistancePacket,
   EffectMagicPacket,
   EmotePacket,

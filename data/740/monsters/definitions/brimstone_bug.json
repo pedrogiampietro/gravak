@@ -1,0 +1,150 @@
+{
+  "creatureStatistics": {
+    "name": "Brimstone Bug",
+    "health": 1300,
+    "maxHealth": 1300,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 213,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 352
+    },
+    "armor": 25
+  },
+  "experience": 900,
+  "corpse": 2902,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 213
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -600,
+      "duration": 10000,
+      "shootEffect": "death",
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 140,
+      "max": 310,
+      "radius": 6,
+      "target": false,
+      "areaEffect": "smallplants"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 130,
+      "max": 200,
+      "length": 6,
+      "spread": 0,
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 80,
+      "max": 120,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "yellowbubble"
+    }
+  ],
+  "elements": {
+    "fire": -10,
+    "ice": -10,
+    "holy": -10,
+    "energy": -10,
+    "physical": -5
+  },
+  "immunities": {
+    "lifedrain": true,
+    "death": true,
+    "earth": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Chrrr!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2149,
+      "probability": 0.02702,
+      "name": "small emerald",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2165,
+      "probability": 0.00892,
+      "name": "stealth ring"
+    },
+    {
+      "id": 2171,
+      "probability": 0.0011,
+      "name": "platinum amulet"
+    },
+    {
+      "id": 2271,
+      "probability": 0.09003,
+      "name": "strong health potion"
+    },
+    {
+      "id": 2270,
+      "probability": 0.09025,
+      "name": "strong mana potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

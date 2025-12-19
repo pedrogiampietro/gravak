@@ -1,0 +1,233 @@
+{
+  "creatureStatistics": {
+    "name": "Ragiaz",
+    "health": 280000,
+    "maxHealth": 280000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 340,
+    "attack": 2300,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 862
+    },
+    "armor": 30
+  },
+  "experience": 50000,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 1000,
+      "max": 2000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.2,
+      "speedChange": 600,
+      "duration": 4000,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 2300
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 500,
+      "max": 900,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "smallclouds"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 500,
+      "max": 900,
+      "range": 4,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "suddendeath",
+      "areaEffect": "poff"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 1000,
+      "max": 1200,
+      "length": 10,
+      "spread": 3,
+      "areaEffect": "greenshimmer"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 1500,
+      "max": 1900,
+      "length": 10,
+      "spread": 0,
+      "areaEffect": "groundshaker"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "radius": 7,
+      "speedChange": -600,
+      "duration": 20000,
+      "areaEffect": "poff"
+    }
+  ],
+  "elements": {
+    "death": 10
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 18419,
+      "probability": 1,
+      "name": "cyan crystal fragment",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 275
+    },
+    {
+      "id": 7590,
+      "probability": 1,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 9
+    },
+    {
+      "id": 18421,
+      "probability": 1,
+      "name": "green crystal fragment",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 27
+    },
+    {
+      "id": 25172,
+      "probability": 1,
+      "name": "silver token"
+    },
+    {
+      "id": 6500,
+      "probability": 0.66667,
+      "name": "demonic essence"
+    },
+    {
+      "id": 2214,
+      "probability": 0.66667,
+      "name": "ring of healing"
+    },
+    {
+      "id": 8473,
+      "probability": 0.66667,
+      "name": "ultimate health potion",
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 7426,
+      "probability": 0.33333,
+      "name": "amber staff"
+    },
+    {
+      "id": 6558,
+      "probability": 0.33333,
+      "name": "flask of demonic blood",
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 8472,
+      "probability": 0.33333,
+      "name": "great spirit potion",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 2155,
+      "probability": 0.33333,
+      "name": "green gem"
+    },
+    {
+      "id": 18420,
+      "probability": 0.33333,
+      "name": "red crystal fragment",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2147,
+      "probability": 0.33333,
+      "name": "small ruby",
+      "min": 1,
+      "max": 9
+    },
+    {
+      "id": 2146,
+      "probability": 0.33333,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 2154,
+      "probability": 0.33333,
+      "name": "yellow gem"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

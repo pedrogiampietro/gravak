@@ -1,0 +1,144 @@
+{
+  "creatureStatistics": {
+    "name": "mad mage",
+    "health": 2500,
+    "maxHealth": 2500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 240,
+    "attack": 78,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 394
+    },
+    "armor": 20
+  },
+  "experience": 1800,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 1000,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.25,
+      "min": 35,
+      "max": 80,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 78
+    },
+    {
+      "name": "fire",
+      "interval": 1000,
+      "chance": 0.12,
+      "min": 50,
+      "max": 185,
+      "range": 7,
+      "target": true,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "manadrain",
+      "interval": 1400,
+      "chance": 0.24,
+      "min": 30,
+      "max": 90,
+      "range": 6,
+      "shootEffect": "ice"
+    },
+    {
+      "name": "firefield",
+      "interval": 1600,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 2,
+      "target": true,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "energy",
+      "interval": 1900,
+      "chance": 0.18,
+      "min": 70,
+      "max": 150,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "bigclouds"
+    }
+  ],
+  "elements": {
+    "physical": -20,
+    "holy": -10,
+    "earth": 50
+  },
+  "immunities": {
+    "energy": true,
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "stone golem",
+      "interval": 1000,
+      "chance": 0.1,
+      "maxSummons": 1
+    }
+  ],
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 66
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 2271,
+      "probability": 0.013,
+      "name": "strong health potion",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2270,
+      "probability": 0.012,
+      "name": "strong mana potion",
+      "min": 1,
+      "max": 2
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

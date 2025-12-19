@@ -1,0 +1,166 @@
+{
+  "creatureStatistics": {
+    "name": "Pirate Corsair",
+    "health": 675,
+    "maxHealth": 675,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 238,
+    "attack": 170,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 98
+    },
+    "armor": 20
+  },
+  "experience": 350,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 40,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 170
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 150,
+      "range": 7,
+      "shootEffect": "throwingstar"
+    },
+    {
+      "name": "pirate corsair skill reducer",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 0,
+      "max": 0
+    }
+  ],
+  "elements": {
+    "earth": 20,
+    "holy": 10,
+    "death": -5,
+    "ice": -5,
+    "fire": -10
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Give up!",
+      "Hiyaa!",
+      "Plundeeeeer!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.55352,
+      "name": "gold coin",
+      "min": 1,
+      "max": 86
+    },
+    {
+      "id": 11219,
+      "probability": 0.10163,
+      "name": "compass"
+    },
+    {
+      "id": 2385,
+      "probability": 0.09816,
+      "name": "sabre"
+    },
+    {
+      "id": 2399,
+      "probability": 0.08104,
+      "name": "throwing star",
+      "min": 1,
+      "max": 12
+    },
+    {
+      "id": 2489,
+      "probability": 0.01874,
+      "name": "dark armor"
+    },
+    {
+      "id": 2521,
+      "probability": 0.01105,
+      "name": "dark shield"
+    },
+    {
+      "id": 6096,
+      "probability": 0.01094,
+      "name": "pirate hat"
+    },
+    {
+      "id": 5926,
+      "probability": 0.01029,
+      "name": "pirate backpack"
+    },
+    {
+      "id": 7588,
+      "probability": 0.00802,
+      "name": "strong health potion"
+    },
+    {
+      "id": 6097,
+      "probability": 0.00574,
+      "name": "hook"
+    },
+    {
+      "id": 6126,
+      "probability": 0.00553,
+      "name": "peg leg"
+    },
+    {
+      "id": 6098,
+      "probability": 0.00488,
+      "name": "eye patch"
+    },
+    {
+      "id": 5462,
+      "probability": 0.00325,
+      "name": "pirate boots"
+    },
+    {
+      "id": 5813,
+      "probability": 0.00119,
+      "name": "skull candle"
+    },
+    {
+      "id": 5553,
+      "probability": 0.00098,
+      "name": "rum flask"
+    },
+    {
+      "id": 2114,
+      "probability": 0.00087,
+      "name": "piggy bank"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

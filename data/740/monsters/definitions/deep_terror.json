@@ -1,0 +1,109 @@
+{
+  "creatureStatistics": {
+    "name": "Deep Terror",
+    "health": 100000,
+    "maxHealth": 100000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 945,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 676
+    },
+    "armor": 30
+  },
+  "experience": 35000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.11,
+      "min": 500,
+      "max": 1000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 945
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.32,
+      "min": 200,
+      "max": 400,
+      "radius": 8,
+      "target": false,
+      "areaEffect": "carniphila"
+    },
+    {
+      "name": "poison",
+      "interval": 2000,
+      "chance": 0.19,
+      "min": 300,
+      "max": 700,
+      "range": 7,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "poison",
+      "areaEffect": "carniphila"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 500,
+      "max": 1000,
+      "length": 7,
+      "spread": 0,
+      "areaEffect": "groundshaker"
+    }
+  ],
+  "elements": {
+    "death": 10
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 23574,
+      "probability": 1,
+      "name": "glooth bag",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 9971,
+      "probability": 1,
+      "name": "gold ingot"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

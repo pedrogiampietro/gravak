@@ -1,0 +1,70 @@
+{
+  "creatureStatistics": {
+    "name": "Security Golem",
+    "health": 6500,
+    "maxHealth": 6500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 550,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 326
+    },
+    "armor": 30
+  },
+  "experience": 2750,
+  "corpse": 2813,
+  "fluidType": 4,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 550
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 100,
+      "max": 440,
+      "length": 6,
+      "spread": 4,
+      "areaEffect": "purpleenergy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 100,
+      "max": 320,
+      "length": 7,
+      "spread": 8,
+      "areaEffect": "energyarea"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

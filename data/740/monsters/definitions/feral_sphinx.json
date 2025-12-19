@@ -1,0 +1,210 @@
+{
+  "creatureStatistics": {
+    "name": "Feral Sphinx",
+    "health": 9800,
+    "maxHealth": 9800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 320,
+    "attack": 450,
+    "attackSpeed": 2000,
+    "defense": 90,
+    "outfit": {
+      "id": 1188
+    },
+    "armor": 90
+  },
+  "experience": 8800,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 200,
+      "max": 425,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 450
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 350,
+      "max": 500,
+      "length": 1,
+      "spread": 2,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 300,
+      "max": 500,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "energyarea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 350,
+      "max": 550,
+      "range": 1,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "holy",
+      "interval": 2000,
+      "chance": 0.08,
+      "min": 400,
+      "max": 580,
+      "length": 6,
+      "spread": 0,
+      "areaEffect": "holyarea"
+    }
+  ],
+  "elements": {
+    "fire": 80,
+    "death": -15,
+    "holy": 80,
+    "ice": -15
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "I am not as kind as my sisters!"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 18419,
+      "probability": 0.08064,
+      "name": "cyan crystal fragment"
+    },
+    {
+      "id": 2156,
+      "probability": 0.07692,
+      "name": "red gem"
+    },
+    {
+      "id": 2201,
+      "probability": 0.07427,
+      "name": "dragon necklace"
+    },
+    {
+      "id": 7890,
+      "probability": 0.06844,
+      "name": "magma amulet"
+    },
+    {
+      "id": 18415,
+      "probability": 0.05942,
+      "name": "green crystal shard"
+    },
+    {
+      "id": 34093,
+      "probability": 0.0557,
+      "name": "sphinx feather"
+    },
+    {
+      "id": 2187,
+      "probability": 0.05464,
+      "name": "wand of inferno"
+    },
+    {
+      "id": 34094,
+      "probability": 0.04775,
+      "name": "sphinx tiara"
+    },
+    {
+      "id": 2146,
+      "probability": 0.04615,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 8921,
+      "probability": 0.04191,
+      "name": "wand of draconia"
+    },
+    {
+      "id": 2432,
+      "probability": 0.03448,
+      "name": "fire axe"
+    },
+    {
+      "id": 2158,
+      "probability": 0.03395,
+      "name": "blue gem"
+    },
+    {
+      "id": 7891,
+      "probability": 0.02069,
+      "name": "magma boots"
+    },
+    {
+      "id": 7900,
+      "probability": 0.01538,
+      "name": "magma monocle"
+    },
+    {
+      "id": 7894,
+      "probability": 0.01432,
+      "name": "magma legs"
+    },
+    {
+      "id": 7761,
+      "probability": 0.01273,
+      "name": "small enchanted emerald",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2155,
+      "probability": 0.00743,
+      "name": "green gem"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

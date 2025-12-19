@@ -1,0 +1,99 @@
+{
+  "creatureStatistics": {
+    "name": "Lethal Lissy",
+    "health": 1450,
+    "maxHealth": 1450,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 240,
+    "attack": 250,
+    "attackSpeed": 2000,
+    "defense": 50,
+    "outfit": {
+      "id": 155
+    },
+    "armor": 35
+  },
+  "experience": 500,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 6000,
+      "chance": 0.65,
+      "min": 200,
+      "max": 250,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 250
+    }
+  ],
+  "immunities": {
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Pirate Cutthroat",
+      "interval": 2000,
+      "chance": 0.5,
+      "maxSummons": 4
+    }
+  ],
+  "loot": [
+    {
+      "id": 2145,
+      "probability": 1,
+      "name": "small diamond"
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 40
+    },
+    {
+      "id": 2387,
+      "probability": 0.015,
+      "name": "double axe"
+    },
+    {
+      "id": 2463,
+      "probability": 0.04,
+      "name": "plate armor"
+    },
+    {
+      "id": 2476,
+      "probability": 0.012,
+      "name": "knight armor"
+    },
+    {
+      "id": 6100,
+      "probability": 1
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "creatureStatistics": {
+    "name": "Dworc Venomsniper",
+    "health": 80,
+    "maxHealth": 80,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 152,
+    "attack": 15,
+    "attackSpeed": 2000,
+    "defense": 3,
+    "outfit": {
+      "id": 216
+    },
+    "armor": 3
+  },
+  "experience": 35,
+  "corpse": 2820,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 15,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 15
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 20,
+      "max": 40,
+      "range": 5
+    }
+  ],
+  "elements": {
+    "holy": 15,
+    "fire": -13,
+    "death": -8,
+    "ice": -13
+  },
+  "immunities": {
+    "earth": true
+  },
+  "sayings": {
+    "texts": [
+      "Brak brrretz!",
+      "Grow truk grrrrr.",
+      "Prek tars, dekklep zurk."
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.74992,
+      "name": "gold coin",
+      "min": 1,
+      "max": 13
+    },
+    {
+      "id": 2467,
+      "probability": 0.10048,
+      "name": "leather armor"
+    },
+    {
+      "id": 2410,
+      "probability": 0.07906,
+      "name": "throwing knife",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2050,
+      "probability": 0.05486,
+      "name": "torch"
+    },
+    {
+      "id": 2545,
+      "probability": 0.04957,
+      "name": "poison arrow",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2411,
+      "probability": 0.015,
+      "name": "poison dagger"
+    },
+    {
+      "id": 2229,
+      "probability": 0.00983,
+      "name": "skull (item)",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 3967,
+      "probability": 0.00502,
+      "name": "tribal mask"
+    },
+    {
+      "id": 7732,
+      "probability": 0.00193,
+      "name": "seeds"
+    },
+    {
+      "id": 3983,
+      "probability": 0.00099,
+      "name": "bast skirt"
+    },
+    {
+      "id": 2172,
+      "probability": 0.00097,
+      "name": "bronze amulet"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": 4
+  }
+}

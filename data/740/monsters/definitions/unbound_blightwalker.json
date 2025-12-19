@@ -1,0 +1,111 @@
+{
+  "creatureStatistics": {
+    "name": "Unbound Blightwalker",
+    "health": 7900,
+    "maxHealth": 7900,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 350,
+    "attack": 99,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 246
+    },
+    "armor": 10
+  },
+  "experience": 5850,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 99
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 220,
+      "max": 405,
+      "range": 1,
+      "target": true,
+      "shootEffect": "poison",
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "blightwalker curse",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.14,
+      "min": 65,
+      "max": 135,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "greenshimmer"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 0,
+      "max": 0,
+      "radius": 3,
+      "target": false,
+      "duration": 35000,
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "target": true,
+      "speedChange": -300,
+      "duration": 30000,
+      "shootEffect": "poison"
+    }
+  ],
+  "elements": {
+    "fire": 50,
+    "energy": 20,
+    "ice": 50,
+    "physical": -10,
+    "holy": -30
+  },
+  "immunities": {
+    "death": true,
+    "earth": true,
+    "lifedrain": true,
+    "invisible": true,
+    "drunk": true,
+    "paralyze": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

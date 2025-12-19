@@ -1,0 +1,183 @@
+{
+  "creatureStatistics": {
+    "name": "Tazhadur",
+    "health": 10000,
+    "maxHealth": 10000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 350,
+    "attack": 385,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 947
+    },
+    "armor": 10
+  },
+  "experience": 9000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 120,
+      "max": 202,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 385
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 110,
+      "max": 495,
+      "range": 7,
+      "radius": 5,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 310,
+      "max": 495,
+      "length": 9,
+      "spread": 4,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 710,
+      "max": 895,
+      "length": 9,
+      "spread": 0,
+      "areaEffect": "firearea"
+    }
+  ],
+  "elements": {
+    "energy": 20,
+    "earth": 50,
+    "ice": -10,
+    "holy": -5
+  },
+  "immunities": {
+    "fire": true,
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 27593,
+      "probability": 1,
+      "name": "dragon blood"
+    },
+    {
+      "id": 27594,
+      "probability": 1,
+      "name": "dragon tongue"
+    },
+    {
+      "id": 5920,
+      "probability": 1,
+      "name": "green dragon scale"
+    },
+    {
+      "id": 27596,
+      "probability": 1,
+      "name": "tooth of tazhadur"
+    },
+    {
+      "id": 5877,
+      "probability": 0.98598,
+      "name": "green dragon leather"
+    },
+    {
+      "id": 2148,
+      "probability": 0.90654,
+      "name": "gold coin",
+      "min": 1,
+      "max": 99
+    },
+    {
+      "id": 2672,
+      "probability": 0.39252,
+      "name": "dragon ham"
+    },
+    {
+      "id": 2387,
+      "probability": 0.10748,
+      "name": "double axe"
+    },
+    {
+      "id": 2201,
+      "probability": 0.08879,
+      "name": "dragon necklace"
+    },
+    {
+      "id": 2516,
+      "probability": 0.04673,
+      "name": "dragon shield"
+    },
+    {
+      "id": 2434,
+      "probability": 0.03738,
+      "name": "dragon hammer"
+    },
+    {
+      "id": 2187,
+      "probability": 0.02804,
+      "name": "wand of inferno"
+    },
+    {
+      "id": 2492,
+      "probability": 0.02336,
+      "name": "dragon scale mail"
+    },
+    {
+      "id": 7588,
+      "probability": 0.01869,
+      "name": "strong health potion"
+    },
+    {
+      "id": 7430,
+      "probability": 0.00935,
+      "name": "dragonbone staff"
+    },
+    {
+      "id": 2145,
+      "probability": 0.00467,
+      "name": "small diamond"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

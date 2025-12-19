@@ -1,0 +1,192 @@
+{
+  "creatureStatistics": {
+    "name": "Twisted Pooka",
+    "health": 700,
+    "maxHealth": 700,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 120,
+    "attackSpeed": 2000,
+    "defense": 41,
+    "outfit": {
+      "id": 978
+    },
+    "armor": 41
+  },
+  "experience": 600,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 40,
+      "max": 60,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 120
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 50,
+      "range": 4,
+      "target": true,
+      "shootEffect": "smallstone",
+      "areaEffect": "stones"
+    },
+    {
+      "name": "earthcondition",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 50,
+      "max": 100,
+      "range": 3,
+      "target": true,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.11,
+      "min": 0,
+      "max": 0,
+      "length": 4,
+      "spread": 2,
+      "target": false,
+      "duration": 5000,
+      "areaEffect": "stun"
+    }
+  ],
+  "elements": {
+    "physical": 20,
+    "energy": -10,
+    "earth": 40,
+    "fire": 20,
+    "ice": 20,
+    "holy": -20,
+    "death": 30
+  },
+  "immunities": {
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "*sniff sniff* Mhmmm ... mortal flesh.",
+      "Hoppel-di-hopp!",
+      "I'll gnaw away your toes!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 125
+    },
+    {
+      "id": 2684,
+      "probability": 0.20319,
+      "name": "carrot",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7588,
+      "probability": 0.12462,
+      "name": "strong health potion"
+    },
+    {
+      "id": 28349,
+      "probability": 0.09772,
+      "name": "shimmering beetles"
+    },
+    {
+      "id": 28350,
+      "probability": 0.09422,
+      "name": "fairy wings"
+    },
+    {
+      "id": 2799,
+      "probability": 0.07325,
+      "name": "stone herb"
+    },
+    {
+      "id": 1294,
+      "probability": 0.04787,
+      "name": "small stone",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2687,
+      "probability": 0.04331,
+      "name": "cookie",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 7760,
+      "probability": 0.03359,
+      "name": "small enchanted ruby",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2790,
+      "probability": 0.03176,
+      "name": "orange mushroom"
+    },
+    {
+      "id": 27618,
+      "probability": 0.02644,
+      "name": "prismatic quartz"
+    },
+    {
+      "id": 2165,
+      "probability": 0.00805,
+      "name": "stealth ring"
+    },
+    {
+      "id": 13298,
+      "probability": 0.00152,
+      "name": "carrot on a stick"
+    },
+    {
+      "id": 9941,
+      "probability": 0.00061,
+      "name": "crystal of focus"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "creatureStatistics": {
+    "name": "Death Reaper",
+    "health": 3900,
+    "maxHealth": 3900,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 320,
+    "attack": 320,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 300
+    },
+    "armor": 35
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 130,
+      "max": 205,
+      "areaEffect": "redspark"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 450,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 320
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 165,
+      "range": 7,
+      "shootEffect": "suddendeath",
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 350,
+      "max": 720,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "redspark"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 300,
+      "length": 7,
+      "spread": 3,
+      "areaEffect": "explosionarea"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 225,
+      "max": 275,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "redspark"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

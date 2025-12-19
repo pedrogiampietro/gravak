@@ -1,0 +1,170 @@
+{
+  "creatureStatistics": {
+    "name": "Gravelord Oshuran",
+    "health": 3100,
+    "maxHealth": 3100,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 440,
+    "attack": 250,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 99
+    },
+    "armor": 25
+  },
+  "experience": 2400,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 3000,
+      "chance": 0.15,
+      "min": 100,
+      "max": 120,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 250
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -300,
+      "duration": 30000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 180,
+      "max": 300,
+      "length": 7,
+      "spread": 0,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 100,
+      "max": 350,
+      "length": 7,
+      "spread": 0,
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 200,
+      "max": 245,
+      "range": 1,
+      "target": true,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "ice": 35,
+    "fire": 10,
+    "energy": 80,
+    "holy": -10
+  },
+  "immunities": {
+    "death": true,
+    "earth": true,
+    "lifedrain": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Bonebeast",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 4
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Your mortality is disgusting!"
+    ],
+    "slowness": 1,
+    "chance": 0.02
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "min": 1,
+      "max": 15
+    },
+    {
+      "id": 7589,
+      "probability": 0.175
+    },
+    {
+      "id": 2144,
+      "probability": 0.1596
+    },
+    {
+      "id": 2143,
+      "probability": 0.15
+    },
+    {
+      "id": 2214,
+      "probability": 0.1504
+    },
+    {
+      "id": 2656,
+      "probability": 0.005
+    },
+    {
+      "id": 7893,
+      "probability": 0.009
+    },
+    {
+      "id": 8904,
+      "probability": 0.003
+    },
+    {
+      "id": 2175,
+      "probability": 0.0465
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

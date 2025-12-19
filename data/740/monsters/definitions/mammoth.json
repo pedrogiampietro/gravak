@@ -1,0 +1,106 @@
+{
+  "creatureStatistics": {
+    "name": "Mammoth",
+    "health": 320,
+    "maxHealth": 320,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 110,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 199
+    },
+    "armor": 20
+  },
+  "experience": 160,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 110
+    }
+  ],
+  "elements": {
+    "physical": 10,
+    "earth": 20,
+    "fire": -10,
+    "ice": 20
+  },
+  "sayings": {
+    "texts": [
+      "Troooooot!",
+      "Hooooot-Toooooot!",
+      "Tooooot."
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.89882,
+      "name": "gold coin",
+      "min": 1,
+      "max": 40
+    },
+    {
+      "id": 2666,
+      "probability": 0.40278,
+      "name": "meat"
+    },
+    {
+      "id": 2671,
+      "probability": 0.29949,
+      "name": "ham"
+    },
+    {
+      "id": 11224,
+      "probability": 0.07669,
+      "name": "thick fur"
+    },
+    {
+      "id": 11238,
+      "probability": 0.07462,
+      "name": "mammoth tusk",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7381,
+      "probability": 0.02507,
+      "name": "mammoth whopper"
+    },
+    {
+      "id": 7432,
+      "probability": 0.00526,
+      "name": "furry club"
+    },
+    {
+      "id": 3973,
+      "probability": 0.00494,
+      "name": "tusk shield"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

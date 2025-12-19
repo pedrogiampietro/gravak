@@ -1,0 +1,181 @@
+{
+  "creatureStatistics": {
+    "name": "Execowtioner",
+    "health": 3500,
+    "maxHealth": 3500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 270,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 40,
+    "outfit": {
+      "id": 609
+    },
+    "armor": 40
+  },
+  "experience": 2400,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.08,
+      "min": 135,
+      "max": 280,
+      "range": 7,
+      "radius": 5,
+      "target": true,
+      "shootEffect": "whirlwindaxe",
+      "areaEffect": "redspark"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.08,
+      "min": 90,
+      "max": 200,
+      "range": 7,
+      "target": true,
+      "shootEffect": "whirlwindaxe",
+      "areaEffect": "explosionarea"
+    }
+  ],
+  "elements": {
+    "physical": 1,
+    "death": 15,
+    "energy": 10,
+    "ice": 10,
+    "earth": 20
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "I'm the one who puts the cute into execute!",
+      "I'm here to punish!",
+      "Justice is swift and unavoidable!",
+      "I'll bring justice!",
+      "There is excellence in execution!",
+      "Your sentence is death!"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "min": 1,
+      "max": 98
+    },
+    {
+      "id": 2152,
+      "probability": 0.6761,
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 9971,
+      "probability": 0.0039
+    },
+    {
+      "id": 5911,
+      "probability": 0.0323
+    },
+    {
+      "id": 5878,
+      "probability": 0.1471
+    },
+    {
+      "id": 12428,
+      "probability": 0.0658,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 23572,
+      "probability": 0.1316
+    },
+    {
+      "id": 7591,
+      "probability": 0.1148
+    },
+    {
+      "id": 7590,
+      "probability": 0.1006
+    },
+    {
+      "id": 2666,
+      "probability": 0.0723
+    },
+    {
+      "id": 9970,
+      "probability": 0.0581,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2147,
+      "probability": 0.0452,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7412,
+      "probability": 0.009
+    },
+    {
+      "id": 2487,
+      "probability": 0.0077
+    },
+    {
+      "id": 23547,
+      "probability": 0.0142
+    },
+    {
+      "id": 2430,
+      "probability": 0.0077
+    },
+    {
+      "id": 7413,
+      "probability": 0.0039
+    },
+    {
+      "id": 7401,
+      "probability": 0.0052
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

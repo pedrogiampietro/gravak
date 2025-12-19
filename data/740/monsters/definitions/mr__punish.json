@@ -1,0 +1,52 @@
+{
+  "creatureStatistics": {
+    "name": "Mr. Punish",
+    "health": 22000,
+    "maxHealth": 22000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 470,
+    "attack": 1280,
+    "attackSpeed": 2000,
+    "defense": 72,
+    "outfit": {
+      "id": 234
+    },
+    "armor": 64
+  },
+  "experience": 9000,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 2000,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1280
+    }
+  ],
+  "immunities": {
+    "energy": true,
+    "fire": true,
+    "earth": true,
+    "invisible": true
+  },
+  "loot": [],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

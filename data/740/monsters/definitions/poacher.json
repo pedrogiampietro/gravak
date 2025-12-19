@@ -1,0 +1,111 @@
+{
+  "creatureStatistics": {
+    "name": "Poacher",
+    "health": 90,
+    "maxHealth": 90,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 198,
+    "attack": 35,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 129
+    },
+    "armor": 10
+  },
+  "experience": 70,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 5,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 35
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 35,
+      "range": 7,
+      "shootEffect": "arrow"
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "You will not live to tell anyone!",
+      "You are my game today!",
+      "Look what has stepped into my trap!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2544,
+      "probability": 0.47154,
+      "name": "arrow",
+      "min": 1,
+      "max": 18
+    },
+    {
+      "id": 2461,
+      "probability": 0.30758,
+      "name": "leather helmet"
+    },
+    {
+      "id": 2649,
+      "probability": 0.27912,
+      "name": "leather legs"
+    },
+    {
+      "id": 2456,
+      "probability": 0.14901,
+      "name": "bow"
+    },
+    {
+      "id": 2690,
+      "probability": 0.11049,
+      "name": "roll",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2050,
+      "probability": 0.05082,
+      "name": "torch"
+    },
+    {
+      "id": 2545,
+      "probability": 0.02521,
+      "name": "poison arrow",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2578,
+      "probability": 0.01006,
+      "name": "closed trap"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

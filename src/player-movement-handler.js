@@ -39,6 +39,11 @@ PlayerMovementHandler.prototype.handleMovement = function (direction) {
     return this.__setMoveBuffer(direction);
   }
 
+  // Prevent movement if dead
+  if (this.__player.isDead) {
+    return;
+  }
+
   let position = this.__player
     .getPosition()
     .getPositionFromDirection(direction);

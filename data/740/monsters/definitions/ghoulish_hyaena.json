@@ -1,0 +1,116 @@
+{
+  "creatureStatistics": {
+    "name": "Ghoulish Hyaena",
+    "health": 400,
+    "maxHealth": 400,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 112,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 94
+    },
+    "armor": 20
+  },
+  "experience": 195,
+  "corpse": 2846,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 30,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 3000,
+      "duration": 2000
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 112
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 60,
+      "max": 0,
+      "length": 3,
+      "spread": 2,
+      "areaEffect": "poison"
+    }
+  ],
+  "elements": {
+    "earth": 70,
+    "holy": -10,
+    "fire": -10
+  },
+  "immunities": {
+    "death": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Grawrrr!!",
+      "Hoouu!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2147,
+      "probability": 0.027,
+      "name": "small ruby",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2148,
+      "probability": 0.89,
+      "name": "gold coin",
+      "min": 1,
+      "max": 40
+    },
+    {
+      "id": 2666,
+      "probability": 0.5106,
+      "name": "meat",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2575,
+      "probability": 0.65,
+      "name": "worm",
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 2269,
+      "probability": 0.1984,
+      "name": "health potion"
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

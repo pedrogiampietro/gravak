@@ -1,0 +1,116 @@
+{
+  "creatureStatistics": {
+    "name": "Crypt Shambler",
+    "health": 330,
+    "maxHealth": 330,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 140,
+    "attack": 140,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 100
+    },
+    "armor": 25
+  },
+  "experience": 195,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 140
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 28,
+      "max": 55,
+      "range": 1,
+      "target": true
+    }
+  ],
+  "elements": {
+    "holy": -25
+  },
+  "immunities": {
+    "lifedrain": true,
+    "paralyze": true,
+    "earth": true,
+    "death": true,
+    "drown": true
+  },
+  "sayings": {
+    "texts": [
+      "Aaaaahhhh!",
+      "Hoooohhh!",
+      "Uhhhhhhh!",
+      "Chhhhhhh!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.58,
+      "name": "gold coin",
+      "min": 1,
+      "max": 55
+    },
+    {
+      "id": 2575,
+      "probability": 0.09,
+      "name": "worm",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2230,
+      "probability": 0.05
+    },
+    {
+      "id": 2459,
+      "probability": 0.02,
+      "name": "iron helmet"
+    },
+    {
+      "id": 2377,
+      "probability": 0.0195,
+      "name": "two handed sword"
+    },
+    {
+      "id": 2399,
+      "probability": 0.01,
+      "name": "throwing star",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2145,
+      "probability": 0.005,
+      "name": "small diamond"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

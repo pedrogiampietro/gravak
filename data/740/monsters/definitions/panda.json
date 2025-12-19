@@ -1,0 +1,76 @@
+{
+  "creatureStatistics": {
+    "name": "Panda",
+    "health": 80,
+    "maxHealth": 80,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 156,
+    "attack": 20,
+    "attackSpeed": 2000,
+    "defense": 8,
+    "outfit": {
+      "id": 123
+    },
+    "armor": 8
+  },
+  "experience": 23,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 15,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 20
+    }
+  ],
+  "elements": {
+    "fire": -10
+  },
+  "immunities": {
+    "earth": true
+  },
+  "sayings": {
+    "texts": [
+      "Grrrr",
+      "Groar"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2666,
+      "probability": 0.69144,
+      "name": "meat"
+    },
+    {
+      "id": 2671,
+      "probability": 0.36695,
+      "name": "ham"
+    },
+    {
+      "id": 12401,
+      "probability": 0.09423,
+      "name": "bamboo stick"
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

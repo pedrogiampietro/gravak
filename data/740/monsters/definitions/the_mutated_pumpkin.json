@@ -1,0 +1,104 @@
+{
+  "creatureStatistics": {
+    "name": "The Mutated Pumpkin",
+    "health": 500000,
+    "maxHealth": 500000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 330,
+    "attack": 300,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 292
+    },
+    "armor": 30
+  },
+  "experience": 30000,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 2000,
+      "max": 2900,
+      "areaEffect": "greenspark"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 300
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 12,
+      "length": 5,
+      "spread": 2,
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "radius": 4,
+      "target": true,
+      "duration": 5000,
+      "areaEffect": "stun"
+    }
+  ],
+  "immunities": {
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "I had the Halloween Hare for breakfast!",
+      "Your soul will be mine...wait, wrong line",
+      "Trick or treat? I saw death!",
+      "No wait! Don't kill me! It's me, your friend!",
+      "Bunnies, bah! I'm the real thing!",
+      "Muahahahaha!",
+      "I've come to avenge all those mutilated pumpkins!",
+      "Wait until I get you!",
+      "Fear the spirit of Halloween!"
+    ],
+    "slowness": 5,
+    "chance": 0.2
+  },
+  "loot": [
+    {
+      "id": 6492,
+      "probability": 0.003
+    },
+    {
+      "id": 9006,
+      "probability": 0.0025
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

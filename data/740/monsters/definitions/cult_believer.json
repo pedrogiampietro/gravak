@@ -1,0 +1,127 @@
+{
+  "creatureStatistics": {
+    "name": "Cult Believer",
+    "health": 975,
+    "maxHealth": 975,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 260,
+    "attack": 200,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 132
+    },
+    "armor": 30
+  },
+  "experience": 850,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 150,
+      "max": 250
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 200
+    }
+  ],
+  "elements": {
+    "energy": 10,
+    "earth": 10,
+    "fire": 10,
+    "ice": 10,
+    "holy": 10
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "Death to the unbelievers!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 70
+    },
+    {
+      "id": 2666,
+      "probability": 0.12877,
+      "name": "meat"
+    },
+    {
+      "id": 7591,
+      "probability": 0.06066,
+      "name": "great health potion"
+    },
+    {
+      "id": 10556,
+      "probability": 0.04432,
+      "name": "cultish robe"
+    },
+    {
+      "id": 2145,
+      "probability": 0.02547,
+      "name": "small diamond"
+    },
+    {
+      "id": 2150,
+      "probability": 0.02455,
+      "name": "small amethyst"
+    },
+    {
+      "id": 2149,
+      "probability": 0.02388,
+      "name": "small emerald"
+    },
+    {
+      "id": 2661,
+      "probability": 0.01022,
+      "name": "scarf"
+    },
+    {
+      "id": 2164,
+      "probability": 0.00168,
+      "name": "might ring"
+    },
+    {
+      "id": 2114,
+      "probability": 0.00084,
+      "name": "piggy bank"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

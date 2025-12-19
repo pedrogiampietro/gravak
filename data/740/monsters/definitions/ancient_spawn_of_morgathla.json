@@ -1,0 +1,372 @@
+{
+  "creatureStatistics": {
+    "name": "Ancient Spawn Of Morgathla",
+    "health": 50000,
+    "maxHealth": 50000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 270,
+    "attack": 410,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 1067
+    },
+    "armor": 30
+  },
+  "experience": 2400,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 410
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.08,
+      "min": 135,
+      "max": 280,
+      "range": 7,
+      "radius": 5,
+      "target": true,
+      "shootEffect": "whirlwindaxe",
+      "areaEffect": "redspark"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.08,
+      "min": 90,
+      "max": 200,
+      "range": 7,
+      "target": true,
+      "shootEffect": "whirlwindaxe",
+      "areaEffect": "explosionarea"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 7440,
+      "probability": 1,
+      "name": "mastermind potion",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 400
+    },
+    {
+      "id": 2214,
+      "probability": 1,
+      "name": "ring of healing"
+    },
+    {
+      "id": 10548,
+      "probability": 1,
+      "name": "scarab pincers"
+    },
+    {
+      "id": 2440,
+      "probability": 0.76842,
+      "name": "daramian waraxe"
+    },
+    {
+      "id": 18415,
+      "probability": 0.72632,
+      "name": "green crystal shard",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 10549,
+      "probability": 0.67368,
+      "name": "ancient stone",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 8912,
+      "probability": 0.67368,
+      "name": "springsprout rod"
+    },
+    {
+      "id": 18413,
+      "probability": 0.64211,
+      "name": "blue crystal shard",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 18414,
+      "probability": 0.61053,
+      "name": "violet crystal shard",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 8473,
+      "probability": 0.57895,
+      "name": "ultimate health potion",
+      "min": 1,
+      "max": 24
+    },
+    {
+      "id": 25377,
+      "probability": 0.56842,
+      "name": "gold token",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 24849,
+      "probability": 0.56842,
+      "name": "onyx chip",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7590,
+      "probability": 0.52632,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 24
+    },
+    {
+      "id": 8472,
+      "probability": 0.48421,
+      "name": "great spirit potion",
+      "min": 1,
+      "max": 24
+    },
+    {
+      "id": 25172,
+      "probability": 0.44211,
+      "name": "silver token",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2159,
+      "probability": 0.4,
+      "name": "scarab coin",
+      "min": 1,
+      "max": 50
+    },
+    {
+      "id": 5904,
+      "probability": 0.29474,
+      "name": "magic sulphur"
+    },
+    {
+      "id": 5892,
+      "probability": 0.28421,
+      "name": "huge chunk of crude iron",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 12410,
+      "probability": 0.27368,
+      "name": "luminous orb"
+    },
+    {
+      "id": 2147,
+      "probability": 0.22105,
+      "name": "small ruby",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 9970,
+      "probability": 0.22105,
+      "name": "small topaz",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 2155,
+      "probability": 0.21053,
+      "name": "green gem",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2158,
+      "probability": 0.2,
+      "name": "blue gem",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2145,
+      "probability": 0.2,
+      "name": "small diamond",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 2135,
+      "probability": 0.18947,
+      "name": "scarab amulet"
+    },
+    {
+      "id": 2154,
+      "probability": 0.17895,
+      "name": "yellow gem",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2160,
+      "probability": 0.16842,
+      "name": "crystal coin",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7632,
+      "probability": 0.15789,
+      "name": "giant shimmering pearl",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2149,
+      "probability": 0.15789,
+      "name": "small emerald",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 8910,
+      "probability": 0.15789,
+      "name": "underworld rod"
+    },
+    {
+      "id": 2150,
+      "probability": 0.14737,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 2156,
+      "probability": 0.12632,
+      "name": "red gem",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7428,
+      "probability": 0.10526,
+      "name": "bonebreaker"
+    },
+    {
+      "id": 2451,
+      "probability": 0.10526,
+      "name": "djinn blade"
+    },
+    {
+      "id": 2162,
+      "probability": 0.08421,
+      "name": "magic light wand"
+    },
+    {
+      "id": 7903,
+      "probability": 0.07368,
+      "name": "terra hood"
+    },
+    {
+      "id": 2153,
+      "probability": 0.07368,
+      "name": "violet gem",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2540,
+      "probability": 0.06316,
+      "name": "scarab shield"
+    },
+    {
+      "id": 2142,
+      "probability": 0.05263,
+      "name": "ancient amulet"
+    },
+    {
+      "id": 30313,
+      "probability": 0.03158,
+      "name": "crude wood planks"
+    },
+    {
+      "id": 7885,
+      "probability": 0.03158,
+      "name": "terra legs"
+    },
+    {
+      "id": 30312,
+      "probability": 0.03158,
+      "name": "tinged pot"
+    },
+    {
+      "id": 15411,
+      "probability": 0.02105,
+      "name": "depth scutum"
+    },
+    {
+      "id": 13291,
+      "probability": 0.02105,
+      "name": "maxilla maximus"
+    },
+    {
+      "id": 7884,
+      "probability": 0.02105,
+      "name": "terra mantle"
+    },
+    {
+      "id": 5891,
+      "probability": 0.01053,
+      "name": "enchanted chicken wing"
+    },
+    {
+      "id": 24637,
+      "probability": 0.01053,
+      "name": "oriental shoes"
+    },
+    {
+      "id": 15453,
+      "probability": 0.01053,
+      "name": "warrior's shield"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

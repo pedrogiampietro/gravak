@@ -1,0 +1,134 @@
+{
+  "creatureStatistics": {
+    "name": "The Dark Dancer",
+    "health": 805,
+    "maxHealth": 805,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 170,
+    "attack": 45,
+    "attackSpeed": 2000,
+    "defense": 12,
+    "outfit": {
+      "id": 58
+    },
+    "armor": 11
+  },
+  "experience": 435,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.45,
+      "min": 75,
+      "max": 135,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 3000,
+      "chance": 0.5,
+      "duration": 5000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 45
+    },
+    {
+      "name": "physical",
+      "interval": 3000,
+      "chance": 0.7,
+      "min": 60,
+      "max": 95,
+      "range": 5,
+      "radius": 1,
+      "target": true,
+      "areaEffect": "mortarea",
+      "shootEffect": "suddendeath"
+    },
+    {
+      "name": "physical",
+      "interval": 6000,
+      "chance": 0.9,
+      "min": 60,
+      "max": 95,
+      "range": 5,
+      "radius": 1,
+      "target": true,
+      "areaEffect": "mortarea",
+      "shootEffect": "suddendeath"
+    },
+    {
+      "name": "speed",
+      "interval": 3500,
+      "chance": 0.35,
+      "min": 0,
+      "max": 0,
+      "range": 5,
+      "radius": 1,
+      "target": true,
+      "speedChange": -400,
+      "duration": 10000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "manadrain",
+      "interval": 4000,
+      "chance": 0.3,
+      "min": 2,
+      "max": 110,
+      "range": 5,
+      "radius": 1,
+      "target": true,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "fire": 40,
+    "death": 20
+  },
+  "immunities": {
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Ghoul",
+      "interval": 2000,
+      "chance": 0.2,
+      "maxSummons": 3
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "I hope you like my voice!"
+    ],
+    "slowness": 5,
+    "chance": 0.05
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

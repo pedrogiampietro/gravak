@@ -1,0 +1,136 @@
+{
+  "creatureStatistics": {
+    "name": "Lizard Sentinel",
+    "health": 265,
+    "maxHealth": 265,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 180,
+    "attack": 45,
+    "attackSpeed": 2000,
+    "defense": 17,
+    "outfit": {
+      "id": 114
+    },
+    "armor": 17
+  },
+  "experience": 110,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 10,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 45
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 0,
+      "max": 70,
+      "range": 7,
+      "shootEffect": "spear"
+    }
+  ],
+  "elements": {
+    "energy": 10,
+    "ice": 20,
+    "fire": -10
+  },
+  "immunities": {
+    "invisible": true,
+    "earth": true
+  },
+  "sayings": {
+    "texts": [
+      "Tssss!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.86497,
+      "name": "gold coin",
+      "min": 1,
+      "max": 54
+    },
+    {
+      "id": 2389,
+      "probability": 0.101,
+      "name": "spear",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2464,
+      "probability": 0.09189,
+      "name": "chain armor"
+    },
+    {
+      "id": 2483,
+      "probability": 0.08069,
+      "name": "scale armor"
+    },
+    {
+      "id": 3965,
+      "probability": 0.04424,
+      "name": "hunting spear"
+    },
+    {
+      "id": 5876,
+      "probability": 0.02207,
+      "name": "lizard leather"
+    },
+    {
+      "id": 5881,
+      "probability": 0.02031,
+      "name": "lizard scale"
+    },
+    {
+      "id": 2381,
+      "probability": 0.01504,
+      "name": "halberd"
+    },
+    {
+      "id": 2425,
+      "probability": 0.01317,
+      "name": "obsidian lance"
+    },
+    {
+      "id": 7618,
+      "probability": 0.01219,
+      "name": "health potion"
+    },
+    {
+      "id": 3974,
+      "probability": 0.00373,
+      "name": "sentinel shield"
+    },
+    {
+      "id": 2145,
+      "probability": 0.00088,
+      "name": "small diamond"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": 4
+  }
+}

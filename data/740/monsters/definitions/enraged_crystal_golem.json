@@ -1,0 +1,80 @@
+{
+  "creatureStatistics": {
+    "name": "Enraged Crystal Golem",
+    "health": 700,
+    "maxHealth": 700,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 150,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 508
+    },
+    "armor": 15
+  },
+  "experience": 550,
+  "corpse": 2813,
+  "fluidType": 4,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 150
+    }
+  ],
+  "elements": {
+    "physical": 15
+  },
+  "immunities": {
+    "fire": true,
+    "ice": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Crrrrk! Chhhhr!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2271,
+      "probability": 0.0714,
+      "name": "strong health potion"
+    },
+    {
+      "id": 2270,
+      "probability": 0.0827,
+      "name": "strong mana potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

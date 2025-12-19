@@ -1,0 +1,132 @@
+{
+  "creatureStatistics": {
+    "name": "Hunter",
+    "health": 150,
+    "maxHealth": 150,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 20,
+    "attackSpeed": 2000,
+    "defense": 8,
+    "outfit": {
+      "id": 129
+    },
+    "armor": 8
+  },
+  "experience": 150,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 10,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 20
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.5,
+      "min": 0,
+      "max": 100,
+      "range": 7,
+      "shootEffect": "arrow"
+    }
+  ],
+  "elements": {
+    "holy": 20,
+    "physical": -5
+  },
+  "sayings": {
+    "texts": [
+      "Guess who we're hunting, haha!",
+      "Guess who we are hunting!",
+      "Bullseye!",
+      "You'll make a nice trophy!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2544,
+      "probability": 0.82,
+      "min": 1,
+      "max": 22
+    },
+    {
+      "id": 2675,
+      "probability": 0.203,
+      "name": "orange",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2456,
+      "probability": 0.0577,
+      "name": "bow"
+    },
+    {
+      "id": 2546,
+      "probability": 0.0536,
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2465,
+      "probability": 0.0507,
+      "name": "brass armor"
+    },
+    {
+      "id": 2460,
+      "probability": 0.0505,
+      "name": "brass helmet"
+    },
+    {
+      "id": 2545,
+      "probability": 0.045,
+      "name": "poison arrow",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2050,
+      "probability": 0.033
+    },
+    {
+      "id": 7397,
+      "probability": 0.0052
+    },
+    {
+      "id": 2147,
+      "probability": 0.0017,
+      "name": "small ruby"
+    },
+    {
+      "id": 7400,
+      "probability": 0.0014
+    },
+    {
+      "id": 7394,
+      "probability": 0.0013
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": 4
+  }
+}

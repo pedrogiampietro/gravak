@@ -1,0 +1,349 @@
+{
+  "creatureStatistics": {
+    "name": "Demon",
+    "health": 8200,
+    "maxHealth": 8200,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 256,
+    "attack": 500,
+    "attackSpeed": 2000,
+    "defense": 44,
+    "outfit": {
+      "id": 35
+    },
+    "armor": 44
+  },
+  "experience": 6000,
+  "corpse": 2916,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 80,
+      "max": 250,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 320,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 500
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 30,
+      "max": 120,
+      "range": 7
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 150,
+      "max": 250,
+      "range": 7,
+      "radius": 7,
+      "target": false,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "firefield",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 300,
+      "max": 480,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "purpleenergy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 210,
+      "max": 300,
+      "range": 1,
+      "shootEffect": "energy"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "speedChange": -700,
+      "duration": 30000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "physical": 25,
+    "death": 20,
+    "energy": 50,
+    "earth": 40,
+    "ice": -12,
+    "holy": -12
+  },
+  "immunities": {
+    "fire": true,
+    "drown": true,
+    "lifedrain": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "fire elemental",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 1
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Your soul will be mine!",
+      "MUHAHAHAHA!",
+      "CHAMEK ATH UTHUL ARAK!",
+      "I SMELL FEEEEAAAAAR!",
+      "Your resistance is futile!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.99518,
+      "name": "gold coin",
+      "min": 1,
+      "max": 200
+    },
+    {
+      "id": 2152,
+      "probability": 0.99513,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 7590,
+      "probability": 0.25108,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 8472,
+      "probability": 0.24763,
+      "name": "great spirit potion",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 5954,
+      "probability": 0.20187,
+      "name": "demon horn"
+    },
+    {
+      "id": 8473,
+      "probability": 0.19831,
+      "name": "ultimate health potion",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2795,
+      "probability": 0.19782,
+      "name": "fire mushroom",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 6500,
+      "probability": 0.19738,
+      "name": "demonic essence"
+    },
+    {
+      "id": 7368,
+      "probability": 0.15452,
+      "name": "assassin star",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 9970,
+      "probability": 0.10167,
+      "name": "small topaz",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2147,
+      "probability": 0.10006,
+      "name": "small ruby",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2149,
+      "probability": 0.09802,
+      "name": "small emerald",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2150,
+      "probability": 0.09789,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2432,
+      "probability": 0.04037,
+      "name": "fire axe"
+    },
+    {
+      "id": 2151,
+      "probability": 0.0342,
+      "name": "talon"
+    },
+    {
+      "id": 2156,
+      "probability": 0.02959,
+      "name": "red gem"
+    },
+    {
+      "id": 2176,
+      "probability": 0.02852,
+      "name": "orb"
+    },
+    {
+      "id": 2214,
+      "probability": 0.02658,
+      "name": "ring of healing"
+    },
+    {
+      "id": 2164,
+      "probability": 0.02492,
+      "name": "might ring"
+    },
+    {
+      "id": 2165,
+      "probability": 0.02391,
+      "name": "stealth ring"
+    },
+    {
+      "id": 2393,
+      "probability": 0.0195,
+      "name": "giant sword"
+    },
+    {
+      "id": 2396,
+      "probability": 0.01906,
+      "name": "ice rapier"
+    },
+    {
+      "id": 2418,
+      "probability": 0.01367,
+      "name": "golden sickle"
+    },
+    {
+      "id": 1982,
+      "probability": 0.01232,
+      "name": "purple tome"
+    },
+    {
+      "id": 2462,
+      "probability": 0.01227,
+      "name": "devil helmet"
+    },
+    {
+      "id": 2179,
+      "probability": 0.01035,
+      "name": "gold ring"
+    },
+    {
+      "id": 2520,
+      "probability": 0.00755,
+      "name": "demon shield"
+    },
+    {
+      "id": 2171,
+      "probability": 0.00705,
+      "name": "platinum amulet"
+    },
+    {
+      "id": 2514,
+      "probability": 0.00475,
+      "name": "mastermind shield"
+    },
+    {
+      "id": 2470,
+      "probability": 0.00397,
+      "name": "golden legs"
+    },
+    {
+      "id": 7393,
+      "probability": 0.00088,
+      "name": "demon trophy"
+    },
+    {
+      "id": 2472,
+      "probability": 0.00088,
+      "name": "magic plate armor"
+    },
+    {
+      "id": 7382,
+      "probability": 0.00054,
+      "name": "demonrage sword"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

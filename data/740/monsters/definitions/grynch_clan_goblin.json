@@ -1,0 +1,287 @@
+{
+  "creatureStatistics": {
+    "name": "Grynch Clan Goblin",
+    "health": 80,
+    "maxHealth": 80,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 61
+    },
+    "armor": 5
+  },
+  "experience": 4,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 80,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.15,
+      "speedChange": 300,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "immunities": {
+    "fire": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "T'was not me hand in your pocket!",
+      "Look! Cool stuff in house. Let's get it!",
+      "Uhh! Nobody home! <chuckle>",
+      "Me just borrowed it!",
+      "Me no steal! Me found it!",
+      "Me had it for five minutes. It's family heirloom now!",
+      "Nice human won't hurt little, good goblin?",
+      "Gimmegimme!",
+      "Invite me in you lovely house plx!",
+      "Other Goblin stole it!",
+      "All presents mine!",
+      "Me got ugly ones purse",
+      "Free itans plz!",
+      "Not me! Not me!",
+      "Guys, help me here! Guys? Guys???",
+      "That only much dust in me pocket! Honest!",
+      "Can me have your stuff?",
+      "Halp, Big dumb one is after me!",
+      "Uh, So many shiny things!",
+      "Utani hur hur hur!",
+      "Mee? Stealing? Never!!!",
+      "Oh what fun it is to steal a one-horse open sleigh!",
+      "Must have it! Must have it!",
+      "Where me put me lockpick?",
+      "Catch me if you can!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5532,
+      "name": "gold coin",
+      "min": 1,
+      "max": 16
+    },
+    {
+      "id": 6497,
+      "probability": 0.29918,
+      "name": "christmas present bag"
+    },
+    {
+      "id": 2111,
+      "probability": 0.14919,
+      "name": "snowball",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2674,
+      "probability": 0.10196,
+      "name": "red apple",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2687,
+      "probability": 0.08023,
+      "name": "cookie",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2675,
+      "probability": 0.05033,
+      "name": "orange",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 6277,
+      "probability": 0.04934,
+      "name": "lump of cake dough"
+    },
+    {
+      "id": 7909,
+      "probability": 0.01998,
+      "name": "walnut",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 3606,
+      "probability": 0.01019,
+      "name": "egg",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2688,
+      "probability": 0.00997,
+      "name": "candy cane",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 10207,
+      "probability": 0.00965,
+      "name": "snowman package"
+    },
+    {
+      "id": 7910,
+      "probability": 0.00961,
+      "name": "peanut",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2661,
+      "probability": 0.00808,
+      "name": "scarf"
+    },
+    {
+      "id": 5894,
+      "probability": 0.00638,
+      "name": "bat wing",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2007,
+      "probability": 0.00543,
+      "name": "bottle"
+    },
+    {
+      "id": 4873,
+      "probability": 0.00476,
+      "name": "explorer brooch"
+    },
+    {
+      "id": 2324,
+      "probability": 0.004,
+      "name": "broom"
+    },
+    {
+      "id": 5902,
+      "probability": 0.004,
+      "name": "honeycomb"
+    },
+    {
+      "id": 6501,
+      "probability": 0.00391,
+      "name": "gingerbreadman"
+    },
+    {
+      "id": 5890,
+      "probability": 0.00382,
+      "name": "chicken feather",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2679,
+      "probability": 0.00341,
+      "name": "cherry",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2260,
+      "probability": 0.00121,
+      "name": "blank rune"
+    },
+    {
+      "id": 2983,
+      "probability": 0.00117,
+      "name": "flower bowl"
+    },
+    {
+      "id": 2036,
+      "probability": 0.00117,
+      "name": "watch"
+    },
+    {
+      "id": 1852,
+      "probability": 0.00112,
+      "name": "picture (landscape)"
+    },
+    {
+      "id": 6393,
+      "probability": 0.00108,
+      "name": "cream cake"
+    },
+    {
+      "id": 2162,
+      "probability": 0.00108,
+      "name": "magic light wand"
+    },
+    {
+      "id": 6393,
+      "probability": 0.00108,
+      "name": "valentine's cake"
+    },
+    {
+      "id": 5792,
+      "probability": 0.00103,
+      "name": "die"
+    },
+    {
+      "id": 2159,
+      "probability": 0.00099,
+      "name": "scarab coin"
+    },
+    {
+      "id": 2072,
+      "probability": 0.0009,
+      "name": "lute"
+    },
+    {
+      "id": 5022,
+      "probability": 0.00081,
+      "name": "orichalcum pearl"
+    },
+    {
+      "id": 2120,
+      "probability": 0.00081,
+      "name": "rope"
+    },
+    {
+      "id": 1684,
+      "probability": 0.00076,
+      "name": "small white pillow"
+    },
+    {
+      "id": 2560,
+      "probability": 0.00072,
+      "name": "mirror"
+    },
+    {
+      "id": 2114,
+      "probability": 0.00072,
+      "name": "piggy bank"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": 11
+  }
+}

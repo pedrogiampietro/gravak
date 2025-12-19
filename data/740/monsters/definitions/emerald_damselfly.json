@@ -1,0 +1,112 @@
+{
+  "creatureStatistics": {
+    "name": "Emerald Damselfly",
+    "health": 90,
+    "maxHealth": 90,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 4,
+    "attackSpeed": 2000,
+    "defense": 6,
+    "outfit": {
+      "id": 528
+    },
+    "armor": 6
+  },
+  "experience": 35,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 4,
+      "max": 10,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 4
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 12,
+      "range": 7,
+      "shootEffect": "poison"
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Bzzzzz!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.90901,
+      "name": "gold coin",
+      "min": 1,
+      "max": 18
+    },
+    {
+      "id": 19738,
+      "probability": 0.11824,
+      "name": "damselfly wing"
+    },
+    {
+      "id": 19743,
+      "probability": 0.09986,
+      "name": "damselfly eye"
+    },
+    {
+      "id": 2544,
+      "probability": 0.07541,
+      "name": "arrow",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2120,
+      "probability": 0.05031,
+      "name": "rope"
+    },
+    {
+      "id": 7618,
+      "probability": 0.03588,
+      "name": "health potion"
+    },
+    {
+      "id": 7620,
+      "probability": 0.0356,
+      "name": "mana potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

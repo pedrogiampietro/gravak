@@ -1,0 +1,135 @@
+{
+  "creatureStatistics": {
+    "name": "Glooth Blob",
+    "health": 750,
+    "maxHealth": 750,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 160,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 13,
+    "outfit": {
+      "id": 614
+    },
+    "armor": 11
+  },
+  "experience": 700,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.13,
+      "min": 400,
+      "max": 480,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "poison",
+      "interval": 2000,
+      "chance": 0.11,
+      "min": 85,
+      "max": 180,
+      "radius": 3,
+      "target": true,
+      "areaEffect": "greenbubble",
+      "shootEffect": "envenomedarrow"
+    },
+    {
+      "name": "poison",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 60,
+      "max": 105,
+      "range": 7,
+      "target": true,
+      "areaEffect": "poison",
+      "shootEffect": "poison"
+    }
+  ],
+  "elements": {
+    "fire": -10,
+    "ice": 20,
+    "energy": -10
+  },
+  "immunities": {
+    "earth": true,
+    "death": true,
+    "lifedrain": true
+  },
+  "summons": [
+    {
+      "name": "Glooth Blob",
+      "interval": 2000,
+      "chance": 0.06,
+      "maxSummons": 2
+    }
+  ],
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "min": 1,
+      "max": 70
+    },
+    {
+      "id": 23553,
+      "probability": 0.1541
+    },
+    {
+      "id": 2146,
+      "probability": 0.0331,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 9970,
+      "probability": 0.0342,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 23554,
+      "probability": 0.004
+    },
+    {
+      "id": 23550,
+      "probability": 0.0051
+    },
+    {
+      "id": 23549,
+      "probability": 0.0058
+    },
+    {
+      "id": 23551,
+      "probability": 0.0056
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

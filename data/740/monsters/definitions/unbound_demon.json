@@ -1,0 +1,153 @@
+{
+  "creatureStatistics": {
+    "name": "Unbound Demon",
+    "health": 7200,
+    "maxHealth": 7200,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 256,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 65,
+    "outfit": {
+      "id": 35
+    },
+    "armor": 40
+  },
+  "experience": 5000,
+  "corpse": 2916,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.14,
+      "min": 150,
+      "max": 250,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.1,
+      "speedChange": 388,
+      "duration": 4000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.13,
+      "min": 60,
+      "max": 120,
+      "range": 7,
+      "shootEffect": "suddendeath",
+      "areaEffect": "smallclouds"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.33,
+      "min": 150,
+      "max": 250,
+      "range": 7,
+      "radius": 7,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.07,
+      "min": 210,
+      "max": 300,
+      "range": 1,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "energy",
+      "areaEffect": "energy"
+    },
+    {
+      "name": "firefield",
+      "interval": 2000,
+      "chance": 0.14,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 300,
+      "max": 480,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "purpleenergy"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "speedChange": -700,
+      "duration": 30000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "physical": 30,
+    "earth": 40,
+    "energy": 50,
+    "death": 30,
+    "ice": -10,
+    "holy": -10
+  },
+  "immunities": {
+    "lifedrain": true,
+    "paralyze": true,
+    "fire": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "fire elemental",
+      "interval": 2000,
+      "chance": 0.08,
+      "maxSummons": 1
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

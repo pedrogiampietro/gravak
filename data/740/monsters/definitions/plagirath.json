@@ -1,0 +1,259 @@
+{
+  "creatureStatistics": {
+    "name": "Plagirath",
+    "health": 290000,
+    "maxHealth": 290000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 320,
+    "attack": 1350,
+    "attackSpeed": 2000,
+    "defense": 55,
+    "outfit": {
+      "id": 862
+    },
+    "armor": 55
+  },
+  "experience": 50000,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 3000,
+      "max": 4000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.3,
+      "speedChange": 440,
+      "duration": 6000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1350
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 500,
+      "max": 900,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 500,
+      "max": 900,
+      "range": 4,
+      "radius": 4,
+      "target": true,
+      "areaEffect": "poff"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 1000,
+      "max": 1200,
+      "length": 10,
+      "spread": 3,
+      "areaEffect": "poff"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 1500,
+      "max": 1900,
+      "length": 10,
+      "spread": 0,
+      "areaEffect": "poff"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "radius": 7,
+      "speedChange": -600,
+      "duration": 20000,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "elements": {
+    "fire": -25,
+    "energy": -10,
+    "ice": 10
+  },
+  "immunities": {
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "BOOOOOOOMMM!!!!!",
+      "WITHER AND DIE!",
+      "DEATH AND DECAY!",
+      "I CAN SENSE YOUR BODIES ROOTING!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 25172,
+      "probability": 1
+    },
+    {
+      "id": 11306,
+      "probability": 0.03
+    },
+    {
+      "id": 18411,
+      "probability": 0.0182
+    },
+    {
+      "id": 18419,
+      "probability": 0.23,
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 18420,
+      "probability": 0.23,
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 18421,
+      "probability": 0.23,
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 2143,
+      "probability": 0.12,
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 2146,
+      "probability": 0.12,
+      "min": 1,
+      "max": 9
+    },
+    {
+      "id": 2148,
+      "probability": 0.49,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.49,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2150,
+      "probability": 0.1,
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2152,
+      "probability": 0.08,
+      "min": 1,
+      "max": 58
+    },
+    {
+      "id": 25383,
+      "probability": 0.008
+    },
+    {
+      "id": 25415,
+      "probability": 0.005
+    },
+    {
+      "id": 25522,
+      "probability": 0.008
+    },
+    {
+      "id": 25523,
+      "probability": 0.008
+    },
+    {
+      "id": 6500,
+      "probability": 0.11
+    },
+    {
+      "id": 7386,
+      "probability": 0.05
+    },
+    {
+      "id": 7632,
+      "probability": 0.14,
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 7633,
+      "probability": 0.14,
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 7887,
+      "probability": 0.05
+    },
+    {
+      "id": 8473,
+      "probability": 0.23,
+      "min": 1,
+      "max": 15
+    },
+    {
+      "id": 8901,
+      "probability": 0.04
+    },
+    {
+      "id": 9970,
+      "probability": 0.1,
+      "min": 1,
+      "max": 8
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

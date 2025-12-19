@@ -1,0 +1,57 @@
+{
+  "creatureStatistics": {
+    "name": "Essence of Darkness",
+    "health": 1000,
+    "maxHealth": 1000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 100,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 315
+    },
+    "armor": 10
+  },
+  "experience": 30,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 100
+    }
+  ],
+  "elements": {
+    "fire": 98,
+    "holy": 80
+  },
+  "immunities": {
+    "physical": true,
+    "death": true,
+    "energy": true,
+    "ice": true,
+    "earth": true,
+    "lifedrain": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

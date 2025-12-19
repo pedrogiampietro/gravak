@@ -1,0 +1,68 @@
+{
+  "creatureStatistics": {
+    "name": "Tiger",
+    "health": 75,
+    "maxHealth": 75,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 40,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 125
+    },
+    "armor": 5
+  },
+  "experience": 40,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 220,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 40
+    }
+  ],
+  "elements": {
+    "death": -10,
+    "ice": -10
+  },
+  "loot": [
+    {
+      "id": 2666,
+      "probability": 0.3519,
+      "name": "meat",
+      "min": 1,
+      "max": 4
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

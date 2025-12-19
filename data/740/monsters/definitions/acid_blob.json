@@ -1,0 +1,95 @@
+{
+  "creatureStatistics": {
+    "name": "Acid Blob",
+    "health": 250,
+    "maxHealth": 250,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 180,
+    "attack": 80,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 314
+    },
+    "armor": 15
+  },
+  "experience": 250,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 80
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 10,
+      "max": 20,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 40,
+      "max": 60,
+      "length": 5,
+      "spread": 0,
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "target": true,
+      "shootEffect": "poison"
+    }
+  ],
+  "immunities": {
+    "death": true,
+    "earth": true
+  },
+  "summons": [
+    {
+      "name": "Acid Blob",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 3
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Kzzchhh!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

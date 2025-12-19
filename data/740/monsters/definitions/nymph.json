@@ -1,0 +1,201 @@
+{
+  "creatureStatistics": {
+    "name": "Nymph",
+    "health": 900,
+    "maxHealth": 900,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 228,
+    "attack": 205,
+    "attackSpeed": 2000,
+    "defense": 60,
+    "outfit": {
+      "id": 989
+    },
+    "armor": 60
+  },
+  "experience": 850,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 75,
+      "max": 90,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 205
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 85,
+      "max": 135,
+      "range": 7,
+      "target": true,
+      "shootEffect": "energy",
+      "areaEffect": "energy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 85,
+      "max": 135,
+      "range": 4,
+      "target": true,
+      "shootEffect": "energy",
+      "areaEffect": "hearts"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 85,
+      "max": 135,
+      "range": 7,
+      "target": true,
+      "areaEffect": "hearts"
+    }
+  ],
+  "elements": {
+    "physical": -10,
+    "earth": 60,
+    "holy": 40,
+    "death": 40
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "Looking at a nymph can blind you. Be careful, mortal being!",
+      "Are you one of those evil nightmare creatures? Leave this realm alone!",
+      "Come here, sweetheart! I won't hurt you! *giggle*",
+      "I'm just protecting nature's beauty!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.65362,
+      "name": "gold coin",
+      "min": 1,
+      "max": 110
+    },
+    {
+      "id": 28347,
+      "probability": 0.21834,
+      "name": "wild flowers"
+    },
+    {
+      "id": 28348,
+      "probability": 0.14822,
+      "name": "fresh fruit"
+    },
+    {
+      "id": 28351,
+      "probability": 0.12034,
+      "name": "dandelion seeds"
+    },
+    {
+      "id": 28352,
+      "probability": 0.12015,
+      "name": "colourful snail shell"
+    },
+    {
+      "id": 7590,
+      "probability": 0.03267,
+      "name": "great mana potion"
+    },
+    {
+      "id": 9970,
+      "probability": 0.02431,
+      "name": "small topaz",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2127,
+      "probability": 0.01943,
+      "name": "emerald bangle"
+    },
+    {
+      "id": 7762,
+      "probability": 0.01896,
+      "name": "small enchanted amethyst",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 10219,
+      "probability": 0.01136,
+      "name": "sacred tree amulet"
+    },
+    {
+      "id": 7589,
+      "probability": 0.00929,
+      "name": "strong mana potion"
+    },
+    {
+      "id": 28354,
+      "probability": 0.00845,
+      "name": "butterfly ring"
+    },
+    {
+      "id": 28356,
+      "probability": 0.00723,
+      "name": "dream blossom staff"
+    },
+    {
+      "id": 9927,
+      "probability": 0.00573,
+      "name": "flower wreath"
+    },
+    {
+      "id": 2745,
+      "probability": 0.00563,
+      "name": "blue rose"
+    },
+    {
+      "id": 8873,
+      "probability": 0.00554,
+      "name": "hibiscus dress"
+    },
+    {
+      "id": 2195,
+      "probability": 0.00347,
+      "name": "boots of haste"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

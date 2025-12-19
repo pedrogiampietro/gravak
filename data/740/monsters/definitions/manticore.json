@@ -1,0 +1,187 @@
+{
+  "creatureStatistics": {
+    "name": "Manticore",
+    "health": 6700,
+    "maxHealth": 6700,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 300,
+    "attack": 500,
+    "attackSpeed": 2000,
+    "defense": 78,
+    "outfit": {
+      "id": 1189
+    },
+    "armor": 78
+  },
+  "experience": 5100,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 500
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.13,
+      "min": 350,
+      "max": 450,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "fire"
+    },
+    {
+      "name": "poison",
+      "interval": 4000,
+      "chance": 0.15,
+      "min": 300,
+      "max": 400,
+      "radius": 3,
+      "target": true,
+      "areaEffect": "greenbubble",
+      "shootEffect": "envenomedarrow"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.22,
+      "min": 300,
+      "max": 500,
+      "range": 4,
+      "target": true,
+      "shootEffect": "burstarrow"
+    }
+  ],
+  "elements": {
+    "fire": 80,
+    "ice": -20
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "I'm spotting my next meal"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 34095,
+      "probability": 0.0928,
+      "name": "manticore tail"
+    },
+    {
+      "id": 34096,
+      "probability": 0.07723,
+      "name": "manticore ear"
+    },
+    {
+      "id": 2149,
+      "probability": 0.05706,
+      "name": "small emerald"
+    },
+    {
+      "id": 18421,
+      "probability": 0.04957,
+      "name": "green crystal fragment"
+    },
+    {
+      "id": 7840,
+      "probability": 0.04265,
+      "name": "flaming arrow",
+      "min": 1,
+      "max": 9
+    },
+    {
+      "id": 2153,
+      "probability": 0.02882,
+      "name": "violet gem"
+    },
+    {
+      "id": 7899,
+      "probability": 0.02824,
+      "name": "magma coat"
+    },
+    {
+      "id": 28393,
+      "probability": 0.02824,
+      "name": "rainbow quartz",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 27618,
+      "probability": 0.02594,
+      "name": "prismatic quartz"
+    },
+    {
+      "id": 7891,
+      "probability": 0.02248,
+      "name": "magma boots"
+    },
+    {
+      "id": 2191,
+      "probability": 0.01844,
+      "name": "wand of dragonbreath"
+    },
+    {
+      "id": 7900,
+      "probability": 0.01787,
+      "name": "magma monocle"
+    },
+    {
+      "id": 28415,
+      "probability": 0.01268,
+      "name": "royal star",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7894,
+      "probability": 0.01153,
+      "name": "magma legs"
+    },
+    {
+      "id": 8921,
+      "probability": 0.00865,
+      "name": "wand of draconia"
+    },
+    {
+      "id": 18409,
+      "probability": 0.00807,
+      "name": "wand of everblazing"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "creatureStatistics": {
+    "name": "Baron Brute",
+    "health": 5025,
+    "maxHealth": 5025,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 290,
+    "attack": 475,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 2
+    },
+    "armor": 22
+  },
+  "experience": 3000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 475
+    }
+  ],
+  "elements": {
+    "earth": -10,
+    "energy": -10,
+    "death": -5,
+    "holy": 10,
+    "fire": 80
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Mash'n!"
+    ],
+    "slowness": 2,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

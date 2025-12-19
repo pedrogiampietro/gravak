@@ -1,0 +1,176 @@
+{
+  "creatureStatistics": {
+    "name": "Enfeebled Silencer",
+    "health": 1100,
+    "maxHealth": 1100,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 330,
+    "attack": 150,
+    "attackSpeed": 2000,
+    "defense": 44,
+    "outfit": {
+      "id": 585
+    },
+    "armor": 44
+  },
+  "experience": 1100,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 450,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 80,
+      "max": 225,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 150
+    },
+    {
+      "name": "silencer skill reducer",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 3
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 40,
+      "max": 90,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "onyxarrow",
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "physical": 5,
+    "energy": 15,
+    "earth": 60,
+    "fire": 30,
+    "ice": 15,
+    "holy": -25,
+    "death": 65
+  },
+  "immunities": {
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "Prrrroooaaaah!!! PRROAAAH!!",
+      "PRRRROOOOOAAAAAHHHH!!!",
+      "HUUUSSSSSSSSH!!",
+      "Hussssssh!!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2152,
+      "probability": 0.39946,
+      "name": "platinum coin"
+    },
+    {
+      "id": 28350,
+      "probability": 0.11777,
+      "name": "fairy wings"
+    },
+    {
+      "id": 7368,
+      "probability": 0.07043,
+      "name": "assassin star",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 22534,
+      "probability": 0.03867,
+      "name": "silencer claws"
+    },
+    {
+      "id": 7407,
+      "probability": 0.01547,
+      "name": "haunted blade"
+    },
+    {
+      "id": 2165,
+      "probability": 0.01318,
+      "name": "stealth ring"
+    },
+    {
+      "id": 7451,
+      "probability": 0.00939,
+      "name": "shadow sceptre"
+    },
+    {
+      "id": 7454,
+      "probability": 0.00924,
+      "name": "glorious axe"
+    },
+    {
+      "id": 7886,
+      "probability": 0.00877,
+      "name": "terra boots"
+    },
+    {
+      "id": 7885,
+      "probability": 0.00841,
+      "name": "terra legs"
+    },
+    {
+      "id": 7387,
+      "probability": 0.00737,
+      "name": "diamond sceptre"
+    },
+    {
+      "id": 2195,
+      "probability": 0.00493,
+      "name": "boots of haste"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

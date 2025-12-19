@@ -1,0 +1,148 @@
+{
+  "creatureStatistics": {
+    "name": "Renegade Knight",
+    "health": 1450,
+    "maxHealth": 1450,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 33,
+    "outfit": {
+      "id": 268
+    },
+    "armor": 27
+  },
+  "experience": 1200,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 200,
+      "max": 250,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 25,
+      "max": 125,
+      "radius": 3,
+      "areaEffect": "yellowspark"
+    }
+  ],
+  "elements": {
+    "energy": 35,
+    "fire": 20,
+    "holy": 50,
+    "earth": 20
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "I'll teach you a lesson!",
+      "Feel my steel!",
+      "Take this!",
+      "Your abilities are no match for mine!",
+      "Let's see how good you are!",
+      "A challenge at last!"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 12406,
+      "probability": 0.01655
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2152,
+      "probability": 0.25165,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 12466,
+      "probability": 0.04635
+    },
+    {
+      "id": 2666,
+      "probability": 0.07615
+    },
+    {
+      "id": 2377,
+      "probability": 0.0596
+    },
+    {
+      "id": 2391,
+      "probability": 0.00993
+    },
+    {
+      "id": 5911,
+      "probability": 0.02317
+    },
+    {
+      "id": 2487,
+      "probability": 0.00662
+    },
+    {
+      "id": 2491,
+      "probability": 0.00331
+    },
+    {
+      "id": 7591,
+      "probability": 0.07284
+    },
+    {
+      "id": 2147,
+      "probability": 0.06622
+    },
+    {
+      "id": 2114,
+      "probability": 0.00331
+    },
+    {
+      "id": 2488,
+      "probability": 0.00331
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

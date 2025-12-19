@@ -1,0 +1,285 @@
+{
+  "creatureStatistics": {
+    "name": "Demon Outcast",
+    "health": 6900,
+    "maxHealth": 6900,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 296,
+    "attack": 400,
+    "attackSpeed": 2000,
+    "defense": 40,
+    "outfit": {
+      "id": 590
+    },
+    "armor": 40
+  },
+  "experience": 6200,
+  "corpse": 2916,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 250,
+      "max": 425,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 400
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 250,
+      "max": 450,
+      "length": 6,
+      "spread": 0,
+      "target": true,
+      "areaEffect": "purpleenergy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 350,
+      "max": 550,
+      "length": 8,
+      "spread": 0,
+      "target": true,
+      "areaEffect": "yellowenergy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 100,
+      "max": 250,
+      "radius": 3,
+      "target": true,
+      "areaEffect": "energy"
+    },
+    {
+      "name": "demon outcast skill reducer",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 5
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 80,
+      "max": 150,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "elements": {
+    "physical": 15,
+    "energy": -8,
+    "earth": 40,
+    "ice": 5,
+    "holy": -6,
+    "death": 30
+  },
+  "immunities": {
+    "fire": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "energy elemental",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Back in the evil business!",
+      "This prison break will have casualties!",
+      "At last someone to hurt",
+      "No one will imprison me again!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 2795,
+      "probability": 0.20245,
+      "name": "fire mushroom",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 8473,
+      "probability": 0.20029,
+      "name": "ultimate health potion",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7590,
+      "probability": 0.19829,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2145,
+      "probability": 0.1031,
+      "name": "small diamond",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2147,
+      "probability": 0.10055,
+      "name": "small ruby",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2146,
+      "probability": 0.10003,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2149,
+      "probability": 0.09939,
+      "name": "small emerald",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 9970,
+      "probability": 0.09784,
+      "name": "small topaz",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 7368,
+      "probability": 0.08655,
+      "name": "assassin star",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2214,
+      "probability": 0.02448,
+      "name": "ring of healing"
+    },
+    {
+      "id": 2393,
+      "probability": 0.0201,
+      "name": "giant sword"
+    },
+    {
+      "id": 2165,
+      "probability": 0.01397,
+      "name": "stealth ring"
+    },
+    {
+      "id": 2519,
+      "probability": 0.00903,
+      "name": "crown shield"
+    },
+    {
+      "id": 2396,
+      "probability": 0.00877,
+      "name": "ice rapier"
+    },
+    {
+      "id": 2164,
+      "probability": 0.00661,
+      "name": "might ring"
+    },
+    {
+      "id": 2171,
+      "probability": 0.00661,
+      "name": "platinum amulet"
+    },
+    {
+      "id": 2497,
+      "probability": 0.00571,
+      "name": "crusader helmet"
+    },
+    {
+      "id": 2462,
+      "probability": 0.00555,
+      "name": "devil helmet"
+    },
+    {
+      "id": 5906,
+      "probability": 0.00532,
+      "name": "demon dust"
+    },
+    {
+      "id": 22396,
+      "probability": 0.00468,
+      "name": "cluster of solace"
+    },
+    {
+      "id": 2520,
+      "probability": 0.00458,
+      "name": "demon shield"
+    },
+    {
+      "id": 2487,
+      "probability": 0.00274,
+      "name": "crown armor"
+    },
+    {
+      "id": 7382,
+      "probability": 0.00087,
+      "name": "demonrage sword"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

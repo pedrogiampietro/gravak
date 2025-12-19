@@ -1,0 +1,250 @@
+{
+  "creatureStatistics": {
+    "name": "Zavarash",
+    "health": 35000,
+    "maxHealth": 35000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 440,
+    "attack": 600,
+    "attackSpeed": 2000,
+    "defense": 65,
+    "outfit": {
+      "id": 12
+    },
+    "armor": 55
+  },
+  "experience": 21000,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 400,
+      "max": 600,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.18,
+      "speedChange": 784,
+      "duration": 7000,
+      "areaEffect": "greenshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.2,
+      "duration": 10000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 600
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 6000,
+      "range": 7,
+      "shootEffect": "throwingknife"
+    }
+  ],
+  "elements": {
+    "physical": 90,
+    "death": 65,
+    "energy": 60,
+    "fire": 70,
+    "ice": 60,
+    "earth": 60,
+    "holy": -20
+  },
+  "immunities": {
+    "lifedrain": true,
+    "paralyze": true,
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Dark Torturer",
+      "interval": 1000,
+      "chance": 1,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Harrr, Harrr!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 22396,
+      "probability": 1
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "min": 1,
+      "max": 97
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "min": 1,
+      "max": 50
+    },
+    {
+      "id": 5954,
+      "probability": 1
+    },
+    {
+      "id": 22598,
+      "probability": 0.6
+    },
+    {
+      "id": 6500,
+      "probability": 0.6
+    },
+    {
+      "id": 7632,
+      "probability": 0.4
+    },
+    {
+      "id": 18414,
+      "probability": 0.4,
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 7590,
+      "probability": 0.3444,
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 8473,
+      "probability": 0.3444,
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 8472,
+      "probability": 0.3444,
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 18413,
+      "probability": 0.3,
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 18415,
+      "probability": 0.3,
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 2155,
+      "probability": 0.2
+    },
+    {
+      "id": 2515,
+      "probability": 0.1503
+    },
+    {
+      "id": 2427,
+      "probability": 0.1503
+    },
+    {
+      "id": 2158,
+      "probability": 0.1503
+    },
+    {
+      "id": 9971,
+      "probability": 0.1503
+    },
+    {
+      "id": 7428,
+      "probability": 0.1503
+    },
+    {
+      "id": 2452,
+      "probability": 0.1294
+    },
+    {
+      "id": 2519,
+      "probability": 0.1154
+    },
+    {
+      "id": 22610,
+      "probability": 0.1
+    },
+    {
+      "id": 8891,
+      "probability": 0.0962
+    },
+    {
+      "id": 7387,
+      "probability": 0.0839
+    },
+    {
+      "id": 2520,
+      "probability": 0.0629
+    },
+    {
+      "id": 2514,
+      "probability": 0.014
+    },
+    {
+      "id": 7431,
+      "probability": 0.007
+    },
+    {
+      "id": 8877,
+      "probability": 0.0035
+    },
+    {
+      "id": 8928,
+      "probability": 0.0017
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

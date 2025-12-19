@@ -1,0 +1,94 @@
+{
+  "creatureStatistics": {
+    "name": "Shard Of Magnor",
+    "health": 1000,
+    "maxHealth": 1000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 600,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 1221
+    },
+    "armor": 78
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.14,
+      "min": 150,
+      "max": 350,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 600
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.5,
+      "min": 400,
+      "max": 1000,
+      "length": 7,
+      "spread": 0,
+      "areaEffect": "stones"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.7,
+      "min": 400,
+      "max": 1000,
+      "length": 7,
+      "spread": 3,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0,
+      "min": 400,
+      "max": 650,
+      "radius": 3,
+      "target": true,
+      "areaEffect": "greenchain"
+    }
+  ],
+  "elements": {
+    "fire": -20,
+    "ice": -20
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

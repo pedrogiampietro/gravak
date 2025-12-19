@@ -1,0 +1,97 @@
+{
+  "creatureStatistics": {
+    "name": "Mephiles",
+    "health": 415,
+    "maxHealth": 415,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 300,
+    "attack": 35,
+    "attackSpeed": 1200,
+    "defense": 35,
+    "outfit": {
+      "id": 237
+    },
+    "armor": 30
+  },
+  "experience": 415,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.4,
+      "speedChange": 400,
+      "duration": 40000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 4000,
+      "chance": 0.5,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 1200,
+      "chance": 1,
+      "min": 0,
+      "max": 35
+    },
+    {
+      "name": "fire",
+      "interval": 1500,
+      "chance": 0.7,
+      "min": 15,
+      "max": 45,
+      "range": 7,
+      "radius": 2,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    }
+  ],
+  "elements": {
+    "earth": 50,
+    "ice": -10,
+    "holy": -5,
+    "physical": -10
+  },
+  "immunities": {
+    "fire": true,
+    "lifedrain": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "I have a contract here which you should sign!",
+      "I sence so much potential in you. It's almost a shame I have to kill you.",
+      "Yes, slay me for the loot I might have. Give in to your greed.",
+      "Wealth, Power, it is all at your fingertips. All you have to do is a bit blackmailing and bullying.",
+      "Come on. being a bit evil won't hurt you."
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 3
+  }
+}

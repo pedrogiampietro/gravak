@@ -1,0 +1,98 @@
+{
+  "creatureStatistics": {
+    "name": "Demon Parrot",
+    "health": 360,
+    "maxHealth": 360,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 300,
+    "attack": 100,
+    "attackSpeed": 1200,
+    "defense": 35,
+    "outfit": {
+      "id": 217
+    },
+    "armor": 30
+  },
+  "experience": 225,
+  "corpse": 2916,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 1200,
+      "chance": 1,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "name": "drunk",
+      "interval": 1000,
+      "chance": 0.3,
+      "min": 0,
+      "max": 0,
+      "length": 5,
+      "spread": 0,
+      "areaEffect": "rednote"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 1000,
+      "chance": 0.3,
+      "min": 25,
+      "max": 45,
+      "range": 5,
+      "shootEffect": "suddendeath"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 1000,
+      "chance": 0.3,
+      "min": 15,
+      "max": 45,
+      "range": 1
+    }
+  ],
+  "immunities": {
+    "lifedrain": true,
+    "invisible": true,
+    "drown": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "ISHH THAT THE BESHHT YOU HAVE TO OFFERRR?",
+      "YOU ARRRRRE DOOMED!",
+      "I SHHMELL FEEAARRR!",
+      "MY SHHEED IS FEARRR AND MY HARRRVEST ISHH YOURRR SHHOUL!",
+      "Your shhoooul will be mineee!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 99
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

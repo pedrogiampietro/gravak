@@ -1,0 +1,167 @@
+{
+  "creatureStatistics": {
+    "name": "Ghastly Dragon",
+    "health": 7800,
+    "maxHealth": 7800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 320,
+    "attack": 603,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 351
+    },
+    "armor": 35
+  },
+  "experience": 4600,
+  "corpse": 2844,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 366,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 603
+    },
+    {
+      "name": "ghastly dragon curse",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 0,
+      "max": 0,
+      "range": 5
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 920,
+      "max": 1280,
+      "range": 5,
+      "target": true,
+      "areaEffect": "smallclouds"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 80,
+      "max": 230,
+      "range": 7,
+      "target": true,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 120,
+      "max": 250,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "bluebubble"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 110,
+      "max": 180,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "target": true,
+      "speedChange": -800,
+      "duration": 30000,
+      "areaEffect": "smallclouds"
+    }
+  ],
+  "elements": {
+    "fire": 10,
+    "ice": 50,
+    "physical": -10,
+    "holy": -15,
+    "energy": -10
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "death": true,
+    "earth": true
+  },
+  "sayings": {
+    "texts": [
+      "EMBRACE MY GIFTS!",
+      "I WILL FEAST ON YOUR SOUL!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.33725,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.33725,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.33725,
+      "name": "gold coin",
+      "min": 1,
+      "max": 66
+    },
+    {
+      "id": 2152,
+      "probability": 0.2984,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2273,
+      "probability": 0.3056,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 9810,
+      "probability": 0.0018
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

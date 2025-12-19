@@ -1,0 +1,120 @@
+{
+  "creatureStatistics": {
+    "name": "The Hag",
+    "health": 935,
+    "maxHealth": 935,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 205,
+    "attack": 100,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 264
+    },
+    "armor": 24
+  },
+  "experience": 510,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.35,
+      "min": 15,
+      "max": 75,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 3000,
+      "chance": 0.5,
+      "duration": 8000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "name": "drunk",
+      "interval": 3000,
+      "chance": 0.35,
+      "min": 0,
+      "max": 0,
+      "range": 5,
+      "radius": 1,
+      "target": true,
+      "duration": 15000
+    },
+    {
+      "name": "speed",
+      "interval": 4000,
+      "chance": 0.55,
+      "min": 0,
+      "max": 0,
+      "range": 5,
+      "radius": 1,
+      "target": true,
+      "speedChange": -400,
+      "duration": 12000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "fire": 30,
+    "ice": 20,
+    "energy": 10
+  },
+  "immunities": {
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Ghost",
+      "interval": 2000,
+      "chance": 0.26,
+      "maxSummons": 2
+    },
+    {
+      "name": "Crypt Shambler",
+      "interval": 2000,
+      "chance": 0.26,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "If you think I am to old to fight then you're wrong!",
+      "I've forgotten more things then you have ever learned!",
+      "Let me teach you a few things youngster!",
+      "I'll teach you respect for the old!"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": 5
+  }
+}

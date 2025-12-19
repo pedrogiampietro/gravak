@@ -1,0 +1,115 @@
+{
+  "creatureStatistics": {
+    "name": "Bragrumol",
+    "health": 38000,
+    "maxHealth": 38000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 600,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 856
+    },
+    "armor": 10
+  },
+  "experience": 18000,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 600
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.18,
+      "min": 300,
+      "max": 600,
+      "range": 5,
+      "shootEffect": "suddendeath"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.22,
+      "min": 300,
+      "max": 600,
+      "range": 5,
+      "radius": 4,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 300,
+      "max": 600,
+      "range": 5,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 300,
+      "max": 600,
+      "range": 5,
+      "length": 5,
+      "spread": 0,
+      "target": true,
+      "areaEffect": "greychain"
+    }
+  ],
+  "elements": {
+    "ice": -10,
+    "death": 50,
+    "fire": 30
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2156,
+      "probability": 0.85156,
+      "name": "red gem"
+    },
+    {
+      "id": 33979,
+      "probability": 0.10938,
+      "name": "sea horse figurine"
+    },
+    {
+      "id": 33980,
+      "probability": 0.03906,
+      "name": "golden mask"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

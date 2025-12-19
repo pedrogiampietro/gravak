@@ -1,0 +1,283 @@
+{
+  "creatureStatistics": {
+    "name": "Zushuka",
+    "health": 15000,
+    "maxHealth": 15000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 560,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 149
+    },
+    "armor": 20
+  },
+  "experience": 9000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 10000,
+      "chance": 0.01,
+      "min": 7500,
+      "max": 7515,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "healing",
+      "interval": 3000,
+      "chance": 0.15,
+      "min": 200,
+      "max": 500,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 560
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 100,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "iceattack"
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 110,
+      "range": 7,
+      "shootEffect": "snowball"
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 300,
+      "max": 750,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "icearea"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "duration": 4000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -330,
+      "duration": 20000,
+      "areaEffect": "icetornado"
+    }
+  ],
+  "elements": {
+    "fire": 50,
+    "earth": 40,
+    "holy": 30,
+    "energy": -10,
+    "death": -10
+  },
+  "immunities": {
+    "ice": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Cool down, will you?",
+      "Freeze!",
+      "Is this all you've got?",
+      "Pay for your ignorance!",
+      "And stay cool.",
+      "Your cold dead body will be a marvelous ice statue."
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.42,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.42,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 21400,
+      "probability": 0.92
+    },
+    {
+      "id": 7290,
+      "probability": 0.57
+    },
+    {
+      "id": 7449,
+      "probability": 0.42
+    },
+    {
+      "id": 8472,
+      "probability": 0.42,
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2396,
+      "probability": 0.42
+    },
+    {
+      "id": 2168,
+      "probability": 0.42
+    },
+    {
+      "id": 7443,
+      "probability": 0.35
+    },
+    {
+      "id": 7892,
+      "probability": 0.35
+    },
+    {
+      "id": 7440,
+      "probability": 0.35
+    },
+    {
+      "id": 2152,
+      "probability": 0.35
+    },
+    {
+      "id": 5909,
+      "probability": 0.35,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7439,
+      "probability": 0.28
+    },
+    {
+      "id": 2158,
+      "probability": 0.28
+    },
+    {
+      "id": 2663,
+      "probability": 0.28
+    },
+    {
+      "id": 7888,
+      "probability": 0.21
+    },
+    {
+      "id": 7590,
+      "probability": 0.21,
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 5912,
+      "probability": 0.14
+    },
+    {
+      "id": 2445,
+      "probability": 0.14
+    },
+    {
+      "id": 2201,
+      "probability": 0.14
+    },
+    {
+      "id": 7896,
+      "probability": 0.14
+    },
+    {
+      "id": 7897,
+      "probability": 0.14
+    },
+    {
+      "id": 9971,
+      "probability": 0.14
+    },
+    {
+      "id": 7591,
+      "probability": 0.14,
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 7459,
+      "probability": 0.14
+    },
+    {
+      "id": 2436,
+      "probability": 0.14
+    },
+    {
+      "id": 2195,
+      "probability": 0.07
+    },
+    {
+      "id": 7902,
+      "probability": 0.07
+    },
+    {
+      "id": 5911,
+      "probability": 0.07
+    },
+    {
+      "id": 21699,
+      "probability": 0.07
+    },
+    {
+      "id": 21700,
+      "probability": 0.03
+    },
+    {
+      "id": 7410,
+      "probability": 0.03
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

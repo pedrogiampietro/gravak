@@ -1,0 +1,54 @@
+{
+  "creatureStatistics": {
+    "name": "Menace",
+    "health": 6000,
+    "maxHealth": 6000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 215,
+    "attackSpeed": 2000,
+    "defense": 19,
+    "outfit": {
+      "id": 113
+    },
+    "armor": 16
+  },
+  "experience": 3250,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 215
+    }
+  ],
+  "elements": {
+    "fire": -10,
+    "ice": 10,
+    "energy": 20
+  },
+  "immunities": {
+    "earth": true,
+    "invisible": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

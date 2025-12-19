@@ -1,0 +1,79 @@
+{
+  "creatureStatistics": {
+    "name": "Lava Lurker",
+    "health": 5900,
+    "maxHealth": 5900,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 116,
+    "attack": 200,
+    "attackSpeed": 2000,
+    "defense": 82,
+    "outfit": {
+      "id": 1041
+    },
+    "armor": 82
+  },
+  "experience": 4000,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 200
+    },
+    {
+      "name": "fire",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 70,
+      "max": 300,
+      "range": 7,
+      "length": 3,
+      "spread": 3,
+      "areaEffect": "fire"
+    },
+    {
+      "name": "fire",
+      "interval": 1000,
+      "chance": 0.12,
+      "min": 0,
+      "max": 100,
+      "range": 7,
+      "length": 6,
+      "areaEffect": "fire"
+    }
+  ],
+  "immunities": {
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 7760,
+      "probability": 0.15146,
+      "name": "small enchanted ruby",
+      "min": 1,
+      "max": 2
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

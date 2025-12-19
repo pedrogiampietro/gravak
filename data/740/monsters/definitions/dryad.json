@@ -1,0 +1,161 @@
+{
+  "creatureStatistics": {
+    "name": "Dryad",
+    "health": 310,
+    "maxHealth": 310,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 90,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 137
+    },
+    "armor": 15
+  },
+  "experience": 190,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 30,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 15,
+      "max": 60,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.1,
+      "duration": 5000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 90
+    },
+    {
+      "name": "earth",
+      "interval": 2500,
+      "chance": 0.09,
+      "min": 20,
+      "max": 30,
+      "radius": 4,
+      "areaEffect": "bigplants"
+    },
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.06,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 7,
+      "target": false,
+      "speedChange": -200,
+      "duration": 20000,
+      "areaEffect": "poff"
+    },
+    {
+      "name": "drunk",
+      "interval": 1000,
+      "chance": 0.12,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "duration": 20000,
+      "areaEffect": "hearts"
+    }
+  ],
+  "elements": {
+    "energy": 30,
+    "ice": 20,
+    "fire": -20
+  },
+  "immunities": {
+    "invisible": true,
+    "earth": true
+  },
+  "sayings": {
+    "texts": [
+      "Feel the wrath of mother Nature!",
+      "Defiler of nature!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2787,
+      "probability": 0.55,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2148,
+      "probability": 0.4,
+      "min": 1,
+      "max": 30
+    },
+    {
+      "id": 7732,
+      "probability": 0.11,
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 9928,
+      "probability": 0.0128
+    },
+    {
+      "id": 9931,
+      "probability": 0.012
+    },
+    {
+      "id": 9929,
+      "probability": 0.011
+    },
+    {
+      "id": 9927,
+      "probability": 0.0097
+    },
+    {
+      "id": 2790,
+      "probability": 0.0078,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 13298,
+      "probability": 0.0021
+    },
+    {
+      "id": 2150,
+      "probability": 0.0013
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

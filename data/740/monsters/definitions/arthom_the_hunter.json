@@ -1,0 +1,144 @@
+{
+  "creatureStatistics": {
+    "name": "Arthom The Hunter",
+    "health": 500,
+    "maxHealth": 500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 20,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 129
+    },
+    "armor": 10
+  },
+  "experience": 550,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 20
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.5,
+      "min": 0,
+      "max": 100,
+      "range": 7,
+      "shootEffect": "arrow"
+    }
+  ],
+  "elements": {
+    "physical": -10,
+    "holy": 20
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 12425,
+      "probability": 1,
+      "name": "hunter's quiver"
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7364,
+      "probability": 0.48387,
+      "name": "sniper arrow",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2545,
+      "probability": 0.29032,
+      "name": "poison arrow",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2145,
+      "probability": 0.29032,
+      "name": "small diamond",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2147,
+      "probability": 0.25806,
+      "name": "small ruby",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2544,
+      "probability": 0.12903,
+      "name": "arrow",
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 2546,
+      "probability": 0.09677,
+      "name": "burst arrow",
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 2456,
+      "probability": 0.06452,
+      "name": "bow"
+    },
+    {
+      "id": 5875,
+      "probability": 0.06452,
+      "name": "sniper gloves"
+    },
+    {
+      "id": 2489,
+      "probability": 0.03226,
+      "name": "dark armor"
+    },
+    {
+      "id": 2201,
+      "probability": 0.03226,
+      "name": "dragon necklace"
+    },
+    {
+      "id": 7400,
+      "probability": 0.03226,
+      "name": "lion trophy"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": 4
+  }
+}

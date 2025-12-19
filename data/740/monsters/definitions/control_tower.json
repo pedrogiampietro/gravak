@@ -1,0 +1,106 @@
+{
+  "creatureStatistics": {
+    "name": "Control Tower",
+    "health": 7500,
+    "maxHealth": 7500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 100,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 0
+    },
+    "armor": 30
+  },
+  "experience": 3000,
+  "corpse": 2813,
+  "fluidType": 4,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "elements": {
+    "energy": 55,
+    "earth": 55,
+    "fire": 55,
+    "holy": 55
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 0.68,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 7591,
+      "probability": 0.08,
+      "name": "great health potion"
+    },
+    {
+      "id": 7590,
+      "probability": 0.05333,
+      "name": "great mana potion"
+    },
+    {
+      "id": 9930,
+      "probability": 0.04,
+      "name": "flask of rust remover"
+    },
+    {
+      "id": 9690,
+      "probability": 0.02667,
+      "name": "gear wheel"
+    },
+    {
+      "id": 23541,
+      "probability": 0.02667,
+      "name": "gearwheel chain"
+    },
+    {
+      "id": 23538,
+      "probability": 0.02667,
+      "name": "heat core"
+    },
+    {
+      "id": 23539,
+      "probability": 0.01333,
+      "name": "alloy legs"
+    },
+    {
+      "id": 5880,
+      "probability": 0.01333,
+      "name": "iron ore"
+    },
+    {
+      "id": 2645,
+      "probability": 0.01333,
+      "name": "steel boots"
+    },
+    {
+      "id": 10571,
+      "probability": 0.01333,
+      "name": "war crystal"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

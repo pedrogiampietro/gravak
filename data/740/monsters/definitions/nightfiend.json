@@ -1,0 +1,67 @@
+{
+  "creatureStatistics": {
+    "name": "Nightfiend",
+    "health": 2700,
+    "maxHealth": 2700,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 45,
+    "attackSpeed": 2000,
+    "defense": 11,
+    "outfit": {
+      "id": 556
+    },
+    "armor": 11
+  },
+  "experience": 2100,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 45
+    },
+    {
+      "name": "physical",
+      "interval": 1000,
+      "chance": 0.1,
+      "min": 5,
+      "max": 40,
+      "range": 7,
+      "shootEffect": "throwingknife"
+    }
+  ],
+  "elements": {
+    "physical": 5,
+    "energy": 5,
+    "ice": 5,
+    "fire": -5,
+    "holy": -5
+  },
+  "immunities": {
+    "death": true,
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

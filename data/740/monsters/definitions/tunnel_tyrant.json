@@ -1,0 +1,137 @@
+{
+  "creatureStatistics": {
+    "name": "Tunnel Tyrant",
+    "health": 5200,
+    "maxHealth": 5200,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 240,
+    "attack": 400,
+    "attackSpeed": 2000,
+    "defense": 76,
+    "outfit": {
+      "id": 1035
+    },
+    "armor": 76
+  },
+  "experience": 3400,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 400
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 70,
+      "max": 160,
+      "range": 3,
+      "length": 6,
+      "spread": 3,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 90,
+      "max": 160,
+      "range": 3,
+      "length": 6,
+      "spread": 3,
+      "areaEffect": "fire"
+    }
+  ],
+  "elements": {
+    "energy": 20,
+    "ice": -30
+  },
+  "immunities": {
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 30252,
+      "probability": 0.15862,
+      "name": "tunnel tyrant shell"
+    },
+    {
+      "id": 30251,
+      "probability": 0.11367,
+      "name": "tunnel tyrant head"
+    },
+    {
+      "id": 7759,
+      "probability": 0.07949,
+      "name": "small enchanted sapphire"
+    },
+    {
+      "id": 10609,
+      "probability": 0.07615,
+      "name": "lump of dirt"
+    },
+    {
+      "id": 7760,
+      "probability": 0.07169,
+      "name": "small enchanted ruby"
+    },
+    {
+      "id": 2153,
+      "probability": 0.04235,
+      "name": "violet gem"
+    },
+    {
+      "id": 26164,
+      "probability": 0.02415,
+      "name": "energy vein"
+    },
+    {
+      "id": 2158,
+      "probability": 0.01857,
+      "name": "blue gem"
+    },
+    {
+      "id": 2155,
+      "probability": 0.01449,
+      "name": "green gem"
+    },
+    {
+      "id": 30309,
+      "probability": 0.01077,
+      "name": "suspicious device"
+    },
+    {
+      "id": 2445,
+      "probability": 0.00892,
+      "name": "crystal mace"
+    },
+    {
+      "id": 8878,
+      "probability": 0.0052,
+      "name": "crystalline armor"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

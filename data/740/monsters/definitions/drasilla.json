@@ -1,0 +1,96 @@
+{
+  "creatureStatistics": {
+    "name": "Drasilla",
+    "health": 1260,
+    "maxHealth": 1260,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 170,
+    "attack": 120,
+    "attackSpeed": 2000,
+    "defense": 33,
+    "outfit": {
+      "id": 34
+    },
+    "armor": 32
+  },
+  "experience": 700,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 100,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 6000,
+      "chance": 0.65,
+      "min": 20,
+      "max": 50,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 120
+    },
+    {
+      "name": "fire",
+      "interval": 6000,
+      "chance": 0.6,
+      "min": 100,
+      "max": 180,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 3000,
+      "chance": 0.5,
+      "min": 70,
+      "max": 115,
+      "range": 10,
+      "radius": 5,
+      "target": true,
+      "areaEffect": "firearea"
+    }
+  ],
+  "elements": {
+    "energy": 20,
+    "ice": -10
+  },
+  "immunities": {
+    "fire": true,
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "FCHHHHHHHH!",
+      "GROOOOAAAAAAAAR!",
+      "DIRTY LITTLE HUMANS",
+      "YOU CAN'T KEEP ME HERE FOREVER"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

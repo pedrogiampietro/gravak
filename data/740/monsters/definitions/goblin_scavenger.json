@@ -1,0 +1,161 @@
+{
+  "creatureStatistics": {
+    "name": "Goblin Scavenger",
+    "health": 60,
+    "maxHealth": 60,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 132,
+    "attack": 15,
+    "attackSpeed": 2000,
+    "defense": 7,
+    "outfit": {
+      "id": 297
+    },
+    "armor": 7
+  },
+  "experience": 37,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 10,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 10,
+      "max": 16,
+      "areaEffect": "energy"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 15
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 30,
+      "range": 7,
+      "shootEffect": "spear"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 22,
+      "max": 30,
+      "range": 7,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 1,
+      "max": 30,
+      "range": 7,
+      "shootEffect": "suddendeath",
+      "areaEffect": "smallclouds"
+    }
+  ],
+  "elements": {
+    "energy": 20,
+    "earth": -10,
+    "holy": 20,
+    "death": -10
+  },
+  "sayings": {
+    "texts": [
+      "Shiny, shiny!",
+      "You mean!",
+      "All mine!",
+      "Uhh!",
+      "Gimme gimme!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.50077,
+      "name": "gold coin",
+      "min": 1,
+      "max": 9
+    },
+    {
+      "id": 1294,
+      "probability": 0.24937,
+      "name": "small stone",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2379,
+      "probability": 0.1819,
+      "name": "dagger"
+    },
+    {
+      "id": 2667,
+      "probability": 0.12982,
+      "name": "fish"
+    },
+    {
+      "id": 2230,
+      "probability": 0.12643,
+      "name": "bone"
+    },
+    {
+      "id": 2461,
+      "probability": 0.09855,
+      "name": "leather helmet"
+    },
+    {
+      "id": 2559,
+      "probability": 0.09448,
+      "name": "small axe"
+    },
+    {
+      "id": 2406,
+      "probability": 0.08993,
+      "name": "short sword"
+    },
+    {
+      "id": 2467,
+      "probability": 0.07696,
+      "name": "leather armor"
+    },
+    {
+      "id": 2235,
+      "probability": 0.07018,
+      "name": "mouldy cheese"
+    },
+    {
+      "id": 2449,
+      "probability": 0.05044,
+      "name": "bone club"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

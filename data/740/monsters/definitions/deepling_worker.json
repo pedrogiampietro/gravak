@@ -1,0 +1,85 @@
+{
+  "creatureStatistics": {
+    "name": "Deepling Worker",
+    "health": 190,
+    "maxHealth": 190,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 80,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 470
+    },
+    "armor": 10
+  },
+  "experience": 130,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 20,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 80
+    }
+  ],
+  "elements": {
+    "energy": -20,
+    "earth": -20
+  },
+  "immunities": {
+    "invisible": true,
+    "paralyze": true,
+    "drown": true,
+    "fire": true,
+    "ice": true
+  },
+  "sayings": {
+    "texts": [
+      "Qjell afar gou jey!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.7,
+      "name": "gold coin",
+      "min": 1,
+      "max": 25
+    },
+    {
+      "id": 2149,
+      "probability": 0.0011,
+      "name": "small emerald",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2667,
+      "probability": 0.1202,
+      "min": 1,
+      "max": 3
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

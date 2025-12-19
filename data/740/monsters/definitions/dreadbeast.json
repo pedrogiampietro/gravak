@@ -1,0 +1,125 @@
+{
+  "creatureStatistics": {
+    "name": "Dreadbeast",
+    "health": 800,
+    "maxHealth": 800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 136,
+    "attack": 50,
+    "attackSpeed": 2000,
+    "defense": 40,
+    "outfit": {
+      "id": 101
+    },
+    "armor": 40
+  },
+  "experience": 250,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 35,
+      "max": 65,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 50
+    },
+    {
+      "name": "drown",
+      "interval": 4000,
+      "chance": 0.3,
+      "min": 70,
+      "max": 90,
+      "range": 7,
+      "target": true,
+      "areaEffect": "bluebubble",
+      "shootEffect": "suddendeath"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 10,
+      "max": 80,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "purpleenergy"
+    }
+  ],
+  "elements": {
+    "holy": -50,
+    "fire": 55,
+    "ice": 40,
+    "physical": 30,
+    "energy": 15,
+    "drown": 75
+  },
+  "immunities": {
+    "death": true,
+    "earth": true,
+    "paralyze": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.1169,
+      "name": "gold coin",
+      "min": 1,
+      "max": 88
+    },
+    {
+      "id": 2230,
+      "probability": 0.0823
+    },
+    {
+      "id": 2463,
+      "probability": 0.0281,
+      "name": "plate armor"
+    },
+    {
+      "id": 2229,
+      "probability": 0.0281
+    },
+    {
+      "id": 2231,
+      "probability": 0.0195
+    },
+    {
+      "id": 2269,
+      "probability": 0.0087,
+      "name": "health potion"
+    },
+    {
+      "id": 2221,
+      "probability": 0.0065,
+      "name": "hardened bone"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "creatureStatistics": {
+    "name": "Priestess Of The Wild Sun",
+    "health": 8500,
+    "maxHealth": 8500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 320,
+    "attack": 350,
+    "attackSpeed": 2000,
+    "defense": 82,
+    "outfit": {
+      "id": 1199
+    },
+    "armor": 82
+  },
+  "experience": 6400,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 350
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.08,
+      "min": 300,
+      "max": 500,
+      "target": false,
+      "areaEffect": "explosion"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.14,
+      "min": 350,
+      "max": 500,
+      "range": 3,
+      "radius": 2,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "explosion"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 250,
+      "max": 400,
+      "radius": 3,
+      "areaEffect": "energyarea"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 250,
+      "max": 350,
+      "length": 4,
+      "spread": 3,
+      "areaEffect": "energy"
+    }
+  ],
+  "elements": {
+    "energy": 85,
+    "fire": 80,
+    "ice": -25
+  },
+  "immunities": {
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "Fafnar will burn you!",
+      "Fear the Wild Sun!",
+      "There is only one true sun!"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 34099,
+      "probability": 0.08759,
+      "name": "fafnar symbol"
+    },
+    {
+      "id": 34089,
+      "probability": 0.07183,
+      "name": "secret instruction"
+    },
+    {
+      "id": 33987,
+      "probability": 0.02927,
+      "name": "empty honey glass"
+    },
+    {
+      "id": 2454,
+      "probability": 0.02567,
+      "name": "war axe"
+    },
+    {
+      "id": 2188,
+      "probability": 0.02499,
+      "name": "wand of decay"
+    },
+    {
+      "id": 2418,
+      "probability": 0.01801,
+      "name": "golden sickle"
+    },
+    {
+      "id": 7383,
+      "probability": 0.01531,
+      "name": "relic sword"
+    },
+    {
+      "id": 18409,
+      "probability": 0.01283,
+      "name": "wand of everblazing"
+    },
+    {
+      "id": 33979,
+      "probability": 0.00653,
+      "name": "sea horse figurine"
+    },
+    {
+      "id": 33980,
+      "probability": 0.00563,
+      "name": "golden mask"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

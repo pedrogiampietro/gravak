@@ -1,0 +1,53 @@
+{
+  "creatureStatistics": {
+    "name": "Rift Lord",
+    "health": 5,
+    "maxHealth": 5,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 6,
+    "outfit": {
+      "id": 12
+    },
+    "armor": 5
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.19,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

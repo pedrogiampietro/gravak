@@ -1,5 +1,6 @@
 "use strict";
 
+const Actions = requireModule("actions");
 const Creature = requireModule("creature");
 const Corpse = requireModule("corpse");
 const DamageMap = requireModule("damage-map");
@@ -32,6 +33,23 @@ const Monster = function (cid, data) {
 
   // Container for the behaviour
   this.behaviourHandler = new MonsterBehaviour(this, data.behaviour);
+
+  // Initialize spell actions for monster abilities
+  this.spellActions = new Actions();
+
+  // Store attacks array for ranged/magic attacks
+  this.attacks = data.attacks || [];
+  this.specialAttacks = this.attacks.filter(a => a.name !== 'melee');
+
+  // If monster has special attacks, add the special attack action
+  if (this.specialAttacks.length > 0) {
+    this.behaviourHandler.actions.add(this.handleSpecialAttacks.bind(this));
+  }
+
+  // Load spells from data if provided (legacy format)
+  if (data.spells && Array.isArray(data.spells)) {
+    this.__addSpells(data.spells);
+  }
 
 }
 
@@ -285,6 +303,100 @@ Monster.prototype.__addSpells = function (spells) {
 
   spells.forEach(spell => this.spellActions.add(spell));
 
+}
+
+Monster.prototype.handleSpecialAttacks = function () {
+
+  /*
+   * Function Monster.handleSpecialAttacks
+   * Handles special attacks (fire, energy, lifedrain, etc) from the attacks array
+   */
+
+  // Must have a target before casting any special attacks
+  if (!this.behaviourHandler.hasTarget()) {
+    return;
+  }
+
+  const target = this.behaviourHandler.getTarget();
+
+  // Check if target is within range for any special attack
+  const distanceToTarget = this.position.manhattanDistance(target.position);
+
+  // Go through each special attack and try to cast it
+  for (const attack of this.specialAttacks) {
+    // Check chance
+    if (Math.random() > attack.chance) {
+      continue;
+    }
+
+    // Check range (default to 7 if not specified)
+    const range = attack.range || 7;
+    if (distanceToTarget > range) {
+      continue;
+    }
+
+    // Calculate damage
+    const damage = Number.prototype.random(attack.min, attack.max);
+
+    // Send projectile effect if shootEffect is specified
+    if (attack.shootEffect) {
+      const effectType = this.__getShootEffect(attack.shootEffect);
+      if (effectType !== null) {
+        gameServer.world.sendDistanceEffect(this.position, target.position, effectType);
+      }
+    }
+
+    // Send area effect if areaEffect is specified
+    if (attack.areaEffect) {
+      const effectType = this.__getMagicEffect(attack.areaEffect);
+      if (effectType !== null) {
+        gameServer.world.sendMagicEffect(target.position, effectType);
+      }
+    }
+
+    // Apply damage
+    if (damage > 0) {
+      gameServer.world.combatHandler.applyEnvironmentalDamage(target, damage, CONST.COLOR.ORANGE);
+    }
+
+    // Only one special attack per think cycle
+    break;
+  }
+
+}
+
+Monster.prototype.__getShootEffect = function (effectName) {
+  /*
+   * Maps shoot effect names to CONST values
+   */
+  const effectMap = {
+    'fire': CONST.EFFECT.PROJECTILE.FIRE,
+    'energy': CONST.EFFECT.PROJECTILE.ENERGY,
+    'poison': CONST.EFFECT.PROJECTILE.POISON,
+    'ice': CONST.EFFECT.PROJECTILE.ICE,
+    'earth': CONST.EFFECT.PROJECTILE.EARTH,
+    'death': CONST.EFFECT.PROJECTILE.DEATH,
+    'holy': CONST.EFFECT.PROJECTILE.HOLY
+  };
+  return effectMap[effectName.toLowerCase()] || null;
+}
+
+Monster.prototype.__getMagicEffect = function (effectName) {
+  /*
+   * Maps area effect names to CONST values
+   */
+  const effectMap = {
+    'firearea': CONST.EFFECT.MAGIC.HITBYFIRE,
+    'energyarea': CONST.EFFECT.MAGIC.ENERGY_AREA,
+    'icearea': CONST.EFFECT.MAGIC.ICE_AREA,
+    'eartharea': CONST.EFFECT.MAGIC.EARTH_AREA,
+    'blueshimmer': CONST.EFFECT.MAGIC.MAGIC_BLUE,
+    'redshimmer': CONST.EFFECT.MAGIC.MAGIC_RED,
+    'greenshimmer': CONST.EFFECT.MAGIC.MAGIC_GREEN,
+    'mortarea': CONST.EFFECT.MAGIC.DEATH_AREA,
+    'holyarea': CONST.EFFECT.MAGIC.HOLY_AREA
+  };
+  return effectMap[effectName.toLowerCase()] || null;
 }
 
 module.exports = Monster;

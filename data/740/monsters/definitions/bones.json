@@ -1,0 +1,128 @@
+{
+  "creatureStatistics": {
+    "name": "Bones",
+    "health": 9500,
+    "maxHealth": 9500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 300,
+    "attack": 845,
+    "attackSpeed": 2000,
+    "defense": 55,
+    "outfit": {
+      "id": 231
+    },
+    "armor": 50
+  },
+  "experience": 3750,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 100,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 5000,
+      "chance": 0.25,
+      "min": 60,
+      "max": 100,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 845
+    },
+    {
+      "name": "lifedrain",
+      "interval": 1000,
+      "chance": 0.13,
+      "min": 400,
+      "max": 600,
+      "radius": 1,
+      "target": true
+    },
+    {
+      "name": "death",
+      "interval": 3000,
+      "chance": 0.34,
+      "min": 180,
+      "max": 500,
+      "range": 1,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "death"
+    }
+  ],
+  "immunities": {
+    "drunk": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Your new name is breakfast.",
+      "Keep that dog away!",
+      "Out Fluffy! Out! Bad dog!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 90
+    },
+    {
+      "id": 2207,
+      "probability": 0.1,
+      "name": "sword ring"
+    },
+    {
+      "id": 2472,
+      "probability": 0.02,
+      "name": "magic plate armor"
+    },
+    {
+      "id": 6300,
+      "probability": 0.04
+    },
+    {
+      "id": 6570,
+      "probability": 0.05538,
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 6571,
+      "probability": 0.01538
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

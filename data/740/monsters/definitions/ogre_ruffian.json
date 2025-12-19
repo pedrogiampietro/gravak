@@ -1,0 +1,178 @@
+{
+  "creatureStatistics": {
+    "name": "Ogre Ruffian",
+    "health": 5500,
+    "maxHealth": 5500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 430,
+    "attack": 450,
+    "attackSpeed": 2000,
+    "defense": 102,
+    "outfit": {
+      "id": 1212
+    },
+    "armor": 102
+  },
+  "experience": 5000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 450
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.13,
+      "min": 250,
+      "max": 450,
+      "radius": 5,
+      "areaEffect": "groundshaker"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 200,
+      "max": 350,
+      "range": 4,
+      "radius": 5,
+      "target": true,
+      "shootEffect": "largerock",
+      "areaEffect": "poff"
+    }
+  ],
+  "elements": {
+    "ice": -20,
+    "physical": 50
+  },
+  "immunities": {
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin"
+    },
+    {
+      "id": 24845,
+      "probability": 0.1782,
+      "name": "ogre nose ring"
+    },
+    {
+      "id": 24844,
+      "probability": 0.16771,
+      "name": "ogre ear stud"
+    },
+    {
+      "id": 2146,
+      "probability": 0.12998,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2666,
+      "probability": 0.10063,
+      "name": "meat"
+    },
+    {
+      "id": 7387,
+      "probability": 0.05031,
+      "name": "diamond sceptre"
+    },
+    {
+      "id": 2149,
+      "probability": 0.04193,
+      "name": "small emerald"
+    },
+    {
+      "id": 2197,
+      "probability": 0.03564,
+      "name": "stone skin amulet"
+    },
+    {
+      "id": 2391,
+      "probability": 0.02935,
+      "name": "war hammer"
+    },
+    {
+      "id": 2156,
+      "probability": 0.02725,
+      "name": "red gem"
+    },
+    {
+      "id": 24847,
+      "probability": 0.02725,
+      "name": "skull fetish"
+    },
+    {
+      "id": 23540,
+      "probability": 0.01677,
+      "name": "metal spats"
+    },
+    {
+      "id": 20108,
+      "probability": 0.01677,
+      "name": "pair of iron fists"
+    },
+    {
+      "id": 18419,
+      "probability": 0.01468,
+      "name": "cyan crystal fragment"
+    },
+    {
+      "id": 24849,
+      "probability": 0.01468,
+      "name": "onyx chip"
+    },
+    {
+      "id": 2154,
+      "probability": 0.01468,
+      "name": "yellow gem"
+    },
+    {
+      "id": 2158,
+      "probability": 0.01048,
+      "name": "blue gem"
+    },
+    {
+      "id": 18416,
+      "probability": 0.00419,
+      "name": "green crystal splinter"
+    },
+    {
+      "id": 7761,
+      "probability": 0.00419,
+      "name": "small enchanted emerald"
+    },
+    {
+      "id": 24827,
+      "probability": 0.0021,
+      "name": "ogre klubba"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

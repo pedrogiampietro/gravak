@@ -1,0 +1,100 @@
+{
+  "creatureStatistics": {
+    "name": "Melting Frozen Horror",
+    "health": 70000,
+    "maxHealth": 70000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 240,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 261
+    },
+    "armor": 10
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "hirintror freeze",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 75,
+      "max": 150,
+      "range": 7,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "ice",
+      "areaEffect": "yellowspark"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.11,
+      "min": 0,
+      "max": 0,
+      "length": 8,
+      "spread": 0,
+      "speedChange": -800,
+      "duration": 20000,
+      "areaEffect": "energy"
+    },
+    {
+      "name": "hirintror skill reducer",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0
+    }
+  ],
+  "elements": {
+    "death": -50
+  },
+  "immunities": {
+    "paralyze": true,
+    "ice": true,
+    "drunk": true,
+    "lifedrain": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Chrrrrrk! Chrrrk!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

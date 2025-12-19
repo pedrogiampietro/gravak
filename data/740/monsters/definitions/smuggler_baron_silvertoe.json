@@ -1,0 +1,139 @@
+{
+  "creatureStatistics": {
+    "name": "Smuggler Baron Silvertoe",
+    "health": 280,
+    "maxHealth": 280,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 400,
+    "attack": 50,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 134
+    },
+    "armor": 15
+  },
+  "experience": 170,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 15,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 10,
+      "max": 50,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 50
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 40,
+      "range": 7,
+      "shootEffect": "throwingknife"
+    }
+  ],
+  "elements": {
+    "physical": -5,
+    "death": -5
+  },
+  "summons": [
+    {
+      "name": "Wild Warrior",
+      "interval": 2000,
+      "chance": 0.2,
+      "maxSummons": 3
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "I will make your death look like an accident!",
+      "You should not have interferred with my bussiness!",
+      "Bribes are expensive, murder is cheap!",
+      "I see some profit in your death!",
+      "I expect you to die!"
+    ],
+    "slowness": 1,
+    "chance": 0.02
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.8,
+      "min": 1,
+      "max": 30
+    },
+    {
+      "id": 2050,
+      "probability": 0.302,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2649,
+      "probability": 0.14
+    },
+    {
+      "id": 2671,
+      "probability": 0.1
+    },
+    {
+      "id": 2406,
+      "probability": 0.1
+    },
+    {
+      "id": 2461,
+      "probability": 0.1
+    },
+    {
+      "id": 2403,
+      "probability": 0.1
+    },
+    {
+      "id": 2376,
+      "probability": 0.05
+    },
+    {
+      "id": 8840,
+      "probability": 0.05,
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2404,
+      "probability": 0.04
+    },
+    {
+      "id": 7397,
+      "probability": 0.0011
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

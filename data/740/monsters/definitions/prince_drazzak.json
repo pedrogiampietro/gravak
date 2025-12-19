@@ -1,0 +1,191 @@
+{
+  "creatureStatistics": {
+    "name": "Prince Drazzak",
+    "health": 330000,
+    "maxHealth": 330000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 480,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 65,
+    "outfit": {
+      "id": 12
+    },
+    "armor": 55
+  },
+  "experience": 210000,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 2000,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 1500,
+      "max": 3000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.18,
+      "min": 1000,
+      "max": 3000,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "mortarea"
+    }
+  ],
+  "elements": {
+    "fire": 30,
+    "earth": 30,
+    "death": 30,
+    "ice": 30,
+    "energy": 30,
+    "holy": 30,
+    "physical": 30
+  },
+  "immunities": {
+    "paralyze": true,
+    "outfit": true,
+    "drunk": true,
+    "lifedrain": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "EVEN WITH ALL THAT TIME IN THE PRISON THAT WEAKENED ME, YOU ARE NO MATCH TO ME!",
+      "DIE!",
+      "SORCERERS MUST DIE!",
+      "DRUIDS MUST DIE!",
+      "PALADINS MUST DIE!",
+      "KNIGHTS MUST DIE!",
+      "GET OVER HERE!",
+      "CRUSH THEM ALL!",
+      "VARIPHOR WILL RULE!",
+      "THEY WILL ALL PAY!",
+      "NOT EVEN AEONS OF IMPRISONMENT WILL STOP ME!",
+      "They used you fools to escape and they left ME behind!!??"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 22396,
+      "probability": 1,
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 22598,
+      "probability": 0.01,
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 6500,
+      "probability": 1,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 5954,
+      "probability": 0.5
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "min": 1,
+      "max": 50
+    },
+    {
+      "id": 8473,
+      "probability": 1,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 8472,
+      "probability": 1,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 7590,
+      "probability": 1,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 22613,
+      "probability": 0.25
+    },
+    {
+      "id": 22608,
+      "probability": 0.025
+    },
+    {
+      "id": 22611,
+      "probability": 0.25
+    },
+    {
+      "id": 22612,
+      "probability": 0.25
+    },
+    {
+      "id": 5741,
+      "probability": 0.025
+    },
+    {
+      "id": 7417,
+      "probability": 0.025
+    },
+    {
+      "id": 22610,
+      "probability": 0.07
+    },
+    {
+      "id": 7418,
+      "probability": 0.01
+    },
+    {
+      "id": 7893,
+      "probability": 0.01
+    },
+    {
+      "id": 7632,
+      "probability": 0.05
+    },
+    {
+      "id": 7633,
+      "probability": 0.05
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

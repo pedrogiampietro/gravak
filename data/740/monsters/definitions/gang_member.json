@@ -1,0 +1,93 @@
+{
+  "creatureStatistics": {
+    "name": "Gang Member",
+    "health": 295,
+    "maxHealth": 295,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 70,
+    "attackSpeed": 2000,
+    "defense": 8,
+    "outfit": {
+      "id": 151
+    },
+    "armor": 8
+  },
+  "experience": 70,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 35,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 70
+    }
+  ],
+  "elements": {
+    "death": -5
+  },
+  "sayings": {
+    "texts": [
+      "This is our territory!",
+      "Help me guys!",
+      "I don't like the way you look!",
+      "You're wearing the wrong colours!",
+      "Don't mess with us!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.48971,
+      "name": "gold coin",
+      "min": 1,
+      "max": 30
+    },
+    {
+      "id": 2649,
+      "probability": 0.15541,
+      "name": "leather legs"
+    },
+    {
+      "id": 2398,
+      "probability": 0.09182,
+      "name": "mace"
+    },
+    {
+      "id": 2691,
+      "probability": 0.05251,
+      "name": "brown bread"
+    },
+    {
+      "id": 2468,
+      "probability": 0.0504,
+      "name": "studded legs"
+    },
+    {
+      "id": 2209,
+      "probability": 0.01029,
+      "name": "club ring"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

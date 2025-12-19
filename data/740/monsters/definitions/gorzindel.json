@@ -1,0 +1,216 @@
+{
+  "creatureStatistics": {
+    "name": "Gorzindel",
+    "health": 300000,
+    "maxHealth": 300000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 1000,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 1062
+    },
+    "armor": 30
+  },
+  "experience": 100000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1000
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 600,
+      "max": 2800,
+      "length": 8,
+      "shootEffect": "whirlwindaxe",
+      "areaEffect": "groundshaker"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 800,
+      "max": 1300,
+      "length": 6,
+      "spread": 0,
+      "target": false,
+      "areaEffect": "redspark"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 800,
+      "max": 1000,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "redspark"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 200,
+      "max": 800,
+      "radius": 9,
+      "target": false,
+      "areaEffect": "blackspark"
+    },
+    {
+      "name": "death",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 200,
+      "max": 600,
+      "radius": 9,
+      "target": false,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "energy": 5
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 7439,
+      "probability": 1,
+      "name": "berserk potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2160,
+      "probability": 1,
+      "name": "crystal coin",
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 7419,
+      "probability": 1,
+      "name": "dreaded cleaver"
+    },
+    {
+      "id": 24849,
+      "probability": 1,
+      "name": "onyx chip",
+      "min": 1,
+      "max": 12
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 58
+    },
+    {
+      "id": 25172,
+      "probability": 1,
+      "name": "silver token",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 2197,
+      "probability": 1,
+      "name": "stone skin amulet"
+    },
+    {
+      "id": 26029,
+      "probability": 1,
+      "name": "ultimate mana potion",
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 26030,
+      "probability": 1,
+      "name": "ultimate spirit potion",
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 2189,
+      "probability": 1,
+      "name": "wand of cosmic energy"
+    },
+    {
+      "id": 7427,
+      "probability": 0.5,
+      "name": "chaos mace"
+    },
+    {
+      "id": 5954,
+      "probability": 0.5,
+      "name": "demon horn"
+    },
+    {
+      "id": 2155,
+      "probability": 0.5,
+      "name": "green gem"
+    },
+    {
+      "id": 7440,
+      "probability": 0.5,
+      "name": "mastermind potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 9816,
+      "probability": 0.5,
+      "name": "slightly rusted shield"
+    },
+    {
+      "id": 2145,
+      "probability": 0.5,
+      "name": "small diamond",
+      "min": 1,
+      "max": 12
+    },
+    {
+      "id": 9970,
+      "probability": 0.5,
+      "name": "small topaz",
+      "min": 1,
+      "max": 12
+    },
+    {
+      "id": 2154,
+      "probability": 0.5,
+      "name": "yellow gem"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

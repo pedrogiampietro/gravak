@@ -1,0 +1,48 @@
+{
+  "creatureStatistics": {
+    "name": "Modified Gnarlhound",
+    "health": 1500,
+    "maxHealth": 1500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 450,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 200,
+    "outfit": {
+      "id": 515
+    },
+    "armor": 200
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 1500,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "elements": {
+    "physical": 90,
+    "fire": 90,
+    "energy": 90,
+    "ice": 90
+  },
+  "immunities": {
+    "death": true,
+    "holy": true,
+    "invisible": true,
+    "earth": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

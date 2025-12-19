@@ -1,0 +1,153 @@
+{
+  "creatureStatistics": {
+    "name": "Goldhanded Cultist Bride",
+    "health": 3000,
+    "maxHealth": 3000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 300,
+    "attack": 250,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 140
+    },
+    "armor": 30
+  },
+  "experience": 2000,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.3,
+      "speedChange": 290,
+      "duration": 6000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 250
+    },
+    {
+      "name": "lifedrain",
+      "interval": 3000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 150,
+      "radius": 5,
+      "areaEffect": "redspark"
+    },
+    {
+      "name": "manadrain",
+      "interval": 3000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 200,
+      "target": true,
+      "areaEffect": "bluebubble"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 250,
+      "range": 5,
+      "radius": 2,
+      "target": true,
+      "areaEffect": "redspark"
+    }
+  ],
+  "elements": {
+    "energy": 17,
+    "fire": 10,
+    "ice": 15,
+    "death": 15
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "Your backpack looks very compelling!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.49129,
+      "name": "gold coin",
+      "min": 1,
+      "max": 250
+    },
+    {
+      "id": 28345,
+      "probability": 0.25174,
+      "name": "golden brush"
+    },
+    {
+      "id": 27617,
+      "probability": 0.17073,
+      "name": "tiger eye"
+    },
+    {
+      "id": 24850,
+      "probability": 0.09669,
+      "name": "opal"
+    },
+    {
+      "id": 2154,
+      "probability": 0.04878,
+      "name": "yellow gem"
+    },
+    {
+      "id": 1997,
+      "probability": 0.0331,
+      "name": "golden bag"
+    },
+    {
+      "id": 2004,
+      "probability": 0.03223,
+      "name": "golden backpack"
+    },
+    {
+      "id": 9971,
+      "probability": 0.01481,
+      "name": "gold ingot"
+    },
+    {
+      "id": 2152,
+      "probability": 0.0122,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 10
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

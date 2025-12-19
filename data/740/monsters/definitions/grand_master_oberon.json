@@ -1,0 +1,107 @@
+{
+  "creatureStatistics": {
+    "name": "Grand Master Oberon",
+    "health": 30000,
+    "maxHealth": 30000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 1200,
+    "attackSpeed": 2000,
+    "defense": 60,
+    "outfit": {
+      "id": 1072
+    },
+    "armor": 82
+  },
+  "experience": 20000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.1,
+      "speedChange": 160,
+      "duration": 4000,
+      "areaEffect": "poff"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1200
+    },
+    {
+      "name": "holy",
+      "interval": 6000,
+      "chance": 0.8,
+      "min": 1000,
+      "max": 2250,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "holyarea"
+    },
+    {
+      "name": "earth",
+      "interval": 1000,
+      "chance": 0.2,
+      "min": 700,
+      "max": 1450,
+      "radius": 5,
+      "target": false,
+      "areaEffect": "blackspark"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 800,
+      "max": 1500,
+      "range": 7,
+      "shootEffect": "suddendeath",
+      "areaEffect": "mortarea"
+    }
+  ],
+  "elements": {
+    "physical": 10,
+    "holy": -20,
+    "death": 50
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 31509,
+      "probability": 1,
+      "name": "the spatial warp almanac"
+    },
+    {
+      "id": 31480,
+      "probability": 0.0069,
+      "name": "grant of arms"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

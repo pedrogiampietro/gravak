@@ -1,0 +1,96 @@
+{
+  "creatureStatistics": {
+    "name": "Swarmer",
+    "health": 460,
+    "maxHealth": 460,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 102,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 460
+    },
+    "armor": 10
+  },
+  "experience": 350,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 50,
+    "openDoors": false,
+    "senseInvisible": true
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 220,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 102
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 50,
+      "max": 110,
+      "range": 7,
+      "target": true,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "energy": 75,
+    "fire": -10,
+    "ice": -1
+  },
+  "immunities": {
+    "earth": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Flzlzlzlzlzlzlz!",
+      "Rzlrzlrzlrzlrzlrzl!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 75
+    },
+    {
+      "id": 2149,
+      "probability": 0.0092,
+      "name": "small emerald"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

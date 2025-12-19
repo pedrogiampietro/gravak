@@ -1,0 +1,122 @@
+{
+  "creatureStatistics": {
+    "name": "Knight Familiar",
+    "health": 10000,
+    "maxHealth": 10000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 309,
+    "attack": 200,
+    "attackSpeed": 2000,
+    "defense": 55,
+    "outfit": {
+      "id": 991
+    },
+    "armor": 55
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.75,
+      "min": 250,
+      "max": 300,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 200
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.17,
+      "min": 300,
+      "max": 350,
+      "range": 7,
+      "shootEffect": "death",
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 200,
+      "max": 250,
+      "range": 6,
+      "radius": 2,
+      "target": true,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "death",
+      "interval": 3000,
+      "chance": 0.25,
+      "min": 180,
+      "max": 250,
+      "range": 5,
+      "radius": 3,
+      "target": true,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "ice",
+      "interval": 3000,
+      "chance": 0.25,
+      "min": 180,
+      "max": 250,
+      "range": 5,
+      "radius": 3,
+      "target": true,
+      "areaEffect": "icearea"
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 200,
+      "max": 250,
+      "range": 6,
+      "radius": 2,
+      "target": true,
+      "areaEffect": "icetornado"
+    },
+    {
+      "name": "ice strike",
+      "interval": 2000,
+      "chance": 0.17,
+      "min": 300,
+      "max": 350,
+      "range": 5,
+      "target": true
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

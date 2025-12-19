@@ -1,0 +1,96 @@
+{
+  "creatureStatistics": {
+    "name": "Amazon",
+    "health": 110,
+    "maxHealth": 110,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 172,
+    "attack": 45,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 137
+    },
+    "armor": 10
+  },
+  "experience": 60,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 45
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 40,
+      "range": 7,
+      "shootEffect": "throwingknife"
+    }
+  ],
+  "elements": {
+    "physical": -5,
+    "death": -5
+  },
+  "sayings": {
+    "texts": [
+      "Yeeee ha!",
+      "Your head shall be mine!",
+      "Your head will be mine!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2229,
+      "probability": 0.8,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2148,
+      "probability": 0.4,
+      "name": "gold coin",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 2385,
+      "probability": 0.23,
+      "name": "sabre"
+    },
+    {
+      "id": 2050,
+      "probability": 0.01005
+    },
+    {
+      "id": 2147,
+      "probability": 0.0012,
+      "name": "small ruby"
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": 4
+  }
+}

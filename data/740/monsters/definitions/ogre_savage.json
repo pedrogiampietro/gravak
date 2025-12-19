@@ -1,0 +1,151 @@
+{
+  "creatureStatistics": {
+    "name": "Ogre Savage",
+    "health": 800,
+    "maxHealth": 800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 105,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 24,
+    "outfit": {
+      "id": 858
+    },
+    "armor": 30
+  },
+  "experience": 625,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 210,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 140,
+      "range": 7,
+      "shootEffect": "whirlwindclub"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 60,
+      "max": 200,
+      "range": 1,
+      "radius": 5,
+      "areaEffect": "explosionarea"
+    },
+    {
+      "name": "bleedcondition",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 20,
+      "max": 25,
+      "range": 1,
+      "radius": 4,
+      "areaEffect": "redspark"
+    }
+  ],
+  "elements": {
+    "energy": -10,
+    "death": 10,
+    "fire": 20,
+    "ice": 20,
+    "holy": 50
+  },
+  "immunities": {
+    "invisible": true,
+    "poison": true
+  },
+  "sayings": {
+    "texts": [
+      "You tasty!",
+      "Must! Chop! Food! Raahh!",
+      "UGGA UGGA!!"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 54
+    },
+    {
+      "id": 2271,
+      "probability": 0.1533,
+      "name": "strong health potion"
+    },
+    {
+      "id": 2687,
+      "probability": 0.0835,
+      "name": "cookie",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2147,
+      "probability": 0.0284,
+      "name": "small ruby",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2144,
+      "probability": 0.025,
+      "name": "small topaz",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2391,
+      "probability": 0.0151,
+      "name": "war hammer"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

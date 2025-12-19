@@ -1,0 +1,111 @@
+{
+  "creatureStatistics": {
+    "name": "Sin Devourer",
+    "health": 2700,
+    "maxHealth": 2700,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 100,
+    "attack": 30,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 320
+    },
+    "armor": 30
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.13,
+      "min": 60,
+      "max": 130,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.1,
+      "duration": 4000,
+      "areaEffect": "yellowbubble"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 30
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "target": true,
+      "speedChange": -600,
+      "duration": 15000,
+      "areaEffect": "sleep"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 360,
+      "max": 470,
+      "range": 1,
+      "target": true,
+      "areaEffect": "holyarea"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.4,
+      "min": 0,
+      "max": 0,
+      "range": 6,
+      "target": true,
+      "speedChange": -600,
+      "duration": 20000,
+      "areaEffect": "icearea",
+      "shootEffect": "snowball"
+    },
+    {
+      "name": "silencer skill reducer",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 0,
+      "max": 0,
+      "range": 4,
+      "areaEffect": "poff"
+    }
+  ],
+  "immunities": {
+    "energy": true,
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

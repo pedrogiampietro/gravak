@@ -1,0 +1,116 @@
+{
+  "creatureStatistics": {
+    "name": "Slick Water Elemental",
+    "health": 550,
+    "maxHealth": 550,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 280,
+    "attack": 175,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 286
+    },
+    "armor": 30
+  },
+  "experience": 450,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 90,
+      "max": 150,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 175
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 130,
+      "range": 7,
+      "target": true,
+      "shootEffect": "earth"
+    },
+    {
+      "name": "ice",
+      "interval": 1000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 220,
+      "range": 6,
+      "target": true,
+      "shootEffect": "snowball"
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.18,
+      "min": 0,
+      "max": 103,
+      "range": 4,
+      "target": true,
+      "shootEffect": "smallice"
+    }
+  ],
+  "elements": {
+    "physical": 40
+  },
+  "immunities": {
+    "ice": true,
+    "drown": true
+  },
+  "sayings": {
+    "texts": [
+      "Blubb",
+      "Splipsh Splash"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.225,
+      "name": "gold coin",
+      "min": 1,
+      "max": 70
+    },
+    {
+      "id": 2148,
+      "probability": 0.225,
+      "name": "gold coin",
+      "min": 1,
+      "max": 60
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "creatureStatistics": {
+    "name": "Leviathan",
+    "health": 6000,
+    "maxHealth": 6000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 758,
+    "attack": 298,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 275
+    },
+    "armor": 20
+  },
+  "experience": 5000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 600,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.25,
+      "min": 50,
+      "max": 150,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 298
+    },
+    {
+      "name": "earth",
+      "interval": 1000,
+      "chance": 0.08,
+      "min": 130,
+      "max": 460,
+      "length": 9,
+      "spread": 3,
+      "areaEffect": "bigplants"
+    },
+    {
+      "name": "ice",
+      "interval": 1000,
+      "chance": 0.1,
+      "min": 365,
+      "max": 491,
+      "length": 9,
+      "spread": 3,
+      "areaEffect": "icearea"
+    },
+    {
+      "name": "drown",
+      "interval": 1000,
+      "chance": 0.11,
+      "min": 15,
+      "max": 20,
+      "radius": 4,
+      "target": true,
+      "areaEffect": "bluebubble"
+    }
+  ],
+  "elements": {
+    "fire": 30,
+    "energy": -10,
+    "physical": -10,
+    "death": -10
+  },
+  "immunities": {
+    "ice": true,
+    "paralyze": true,
+    "invisible": true,
+    "drown": true
+  },
+  "sayings": {
+    "texts": [
+      "CHHHRRRR",
+      "HISSSS"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2146,
+      "probability": 0.1,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2148,
+      "probability": 0.4,
+      "name": "gold coin",
+      "min": 1,
+      "max": 80
+    },
+    {
+      "id": 2148,
+      "probability": 0.4,
+      "name": "gold coin",
+      "min": 1,
+      "max": 80
+    },
+    {
+      "id": 2152,
+      "probability": 0.4,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 6
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

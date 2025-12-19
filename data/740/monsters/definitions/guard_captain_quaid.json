@@ -1,0 +1,124 @@
+{
+  "creatureStatistics": {
+    "name": "Guard Captain Quaid",
+    "health": 55000,
+    "maxHealth": 55000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 185,
+    "attack": 580,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 1217
+    },
+    "armor": 10
+  },
+  "experience": 28000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 580
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.18,
+      "min": 500,
+      "max": 620,
+      "range": 4,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "earth",
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.22,
+      "min": 450,
+      "max": 700,
+      "range": 4,
+      "target": true,
+      "shootEffect": "throwingknife"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.14,
+      "min": 350,
+      "max": 550,
+      "length": 5,
+      "spread": 0,
+      "areaEffect": "explosion"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 400,
+      "max": 550,
+      "range": 4,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "burstarrow",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 300,
+      "max": 480,
+      "length": 5,
+      "spread": 0,
+      "areaEffect": "explosion"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 300,
+      "max": 450,
+      "radius": 3,
+      "areaEffect": "greenbubble"
+    }
+  ],
+  "elements": {
+    "physical": 85,
+    "holy": -20
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2146,
+      "probability": 1,
+      "name": "small sapphire"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

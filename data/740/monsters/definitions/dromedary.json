@@ -1,0 +1,74 @@
+{
+  "creatureStatistics": {
+    "name": "Dromedary",
+    "health": 45,
+    "maxHealth": 45,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 170,
+    "attack": 8,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 404
+    },
+    "armor": 5
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 45,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 8
+    },
+    {
+      "name": "drunk",
+      "interval": 4000,
+      "chance": 0.05,
+      "min": 0,
+      "max": 0,
+      "range": 1,
+      "target": true,
+      "duration": 6000,
+      "shootEffect": "explosion",
+      "areaEffect": "stun"
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Snort",
+      "Grunt!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2666,
+      "probability": 0.36,
+      "name": "meat",
+      "min": 1,
+      "max": 2
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": 4
+  }
+}

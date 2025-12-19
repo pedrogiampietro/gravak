@@ -1,0 +1,110 @@
+{
+  "creatureStatistics": {
+    "name": "Neutral Deepling Warrior",
+    "health": 1600,
+    "maxHealth": 1600,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 290,
+    "attack": 280,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 441
+    },
+    "armor": 10
+  },
+  "experience": 1500,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 115,
+      "max": 195
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 280
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 290,
+      "range": 7,
+      "target": true,
+      "shootEffect": "whirlwindaxe"
+    }
+  ],
+  "elements": {
+    "energy": -10,
+    "earth": -10,
+    "fire": 100,
+    "drown": 100,
+    "ice": 100,
+    "death": 10
+  },
+  "immunities": {
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 145
+    },
+    {
+      "id": 15488,
+      "probability": 0.30769,
+      "name": "deepling filet"
+    },
+    {
+      "id": 7591,
+      "probability": 0.23077,
+      "name": "great health potion"
+    },
+    {
+      "id": 15426,
+      "probability": 0.15385,
+      "name": "deeptags"
+    },
+    {
+      "id": 15425,
+      "probability": 0.11538,
+      "name": "deepling warts"
+    },
+    {
+      "id": 2168,
+      "probability": 0.07692,
+      "name": "life ring"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

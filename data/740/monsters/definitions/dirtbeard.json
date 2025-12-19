@@ -1,0 +1,91 @@
+{
+  "creatureStatistics": {
+    "name": "Dirtbeard",
+    "health": 630,
+    "maxHealth": 630,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 300,
+    "attack": 125,
+    "attackSpeed": 1200,
+    "defense": 35,
+    "outfit": {
+      "id": 98
+    },
+    "armor": 30
+  },
+  "experience": 375,
+  "corpse": 2849,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 50,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 1200,
+      "chance": 1,
+      "min": 0,
+      "max": 125
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 0,
+      "max": 100,
+      "range": 7,
+      "shootEffect": "throwingstar"
+    },
+    {
+      "name": "melee",
+      "interval": 1200,
+      "chance": 0.3,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "rednote"
+    }
+  ],
+  "elements": {
+    "earth": 20,
+    "holy": 10,
+    "ice": -5,
+    "fire": -10
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "pirate marauder",
+      "interval": 4000,
+      "chance": 0.3,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "You are no match for the scourge of the seas!",
+      "You move like a seasick whale!",
+      "Yarr, death to all landlubbers!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

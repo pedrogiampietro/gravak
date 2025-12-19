@@ -1,0 +1,60 @@
+{
+  "creatureStatistics": {
+    "name": "Insect Swarm",
+    "health": 50,
+    "maxHealth": 50,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 150,
+    "attack": 10,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 349
+    },
+    "armor": 5
+  },
+  "experience": 40,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 10
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 15,
+      "range": 1,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "fire": -10
+  },
+  "immunities": {
+    "earth": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

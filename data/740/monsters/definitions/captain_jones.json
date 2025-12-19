@@ -1,0 +1,116 @@
+{
+  "creatureStatistics": {
+    "name": "Captain Jones",
+    "health": 555,
+    "maxHealth": 555,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 100,
+    "attackSpeed": 2000,
+    "defense": 0,
+    "outfit": {
+      "id": 196
+    },
+    "armor": 0
+  },
+  "experience": 620,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 40,
+      "max": 70,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 50,
+      "max": 90,
+      "range": 7,
+      "target": true,
+      "shootEffect": "death",
+      "areaEffect": "smallclouds"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "target": true,
+      "duration": 4000,
+      "shootEffect": "explosion"
+    }
+  ],
+  "elements": {
+    "holy": -5
+  },
+  "immunities": {
+    "physical": true,
+    "paralyze": true,
+    "lifedrain": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 50
+    },
+    {
+      "id": 2165,
+      "probability": 0.2,
+      "name": "stealth ring"
+    },
+    {
+      "id": 2488,
+      "probability": 0.05,
+      "name": "crown legs"
+    },
+    {
+      "id": 2383,
+      "probability": 0.05,
+      "name": "spike sword"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

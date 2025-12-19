@@ -1,0 +1,78 @@
+{
+  "creatureStatistics": {
+    "name": "Insectoid Worker",
+    "health": 950,
+    "maxHealth": 950,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 163,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 403
+    },
+    "armor": 15
+  },
+  "experience": 650,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 163
+    }
+  ],
+  "elements": {
+    "physical": 5,
+    "fire": -10,
+    "energy": -5,
+    "ice": -5
+  },
+  "immunities": {
+    "earth": true,
+    "invisible": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 90
+    },
+    {
+      "id": 2149,
+      "probability": 0.0288,
+      "name": "small emerald"
+    },
+    {
+      "id": 2269,
+      "probability": 0.0509,
+      "name": "health potion"
+    },
+    {
+      "id": 15622,
+      "probability": 0.1499
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

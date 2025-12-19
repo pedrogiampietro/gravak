@@ -1,0 +1,95 @@
+{
+  "creatureStatistics": {
+    "name": "Honour Guard",
+    "health": 85,
+    "maxHealth": 85,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 154,
+    "attack": 25,
+    "attackSpeed": 2000,
+    "defense": 4,
+    "outfit": {
+      "id": 298
+    },
+    "armor": 4
+  },
+  "experience": 55,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 25
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 5,
+      "max": 13,
+      "range": 1,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "holy": -10
+  },
+  "immunities": {
+    "death": true
+  },
+  "sayings": {
+    "texts": [
+      "Horestis curse upon you!",
+      "Vengeance!",
+      "Thy punishment is at hand!",
+      "For the pharao!"
+    ],
+    "slowness": 1,
+    "chance": 0.02
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 15
+    },
+    {
+      "id": 2398,
+      "probability": 0.0376,
+      "name": "mace"
+    },
+    {
+      "id": 2419,
+      "probability": 0.0164
+    },
+    {
+      "id": 2789,
+      "probability": 0.0612,
+      "name": "brown mushroom",
+      "min": 1,
+      "max": 2
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

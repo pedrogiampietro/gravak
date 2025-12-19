@@ -1,0 +1,113 @@
+{
+  "creatureStatistics": {
+    "name": "Death Priest",
+    "health": 800,
+    "maxHealth": 800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 80,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 99
+    },
+    "armor": 20
+  },
+  "experience": 750,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 80,
+      "max": 200,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 80
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 120,
+      "max": 250,
+      "range": 7,
+      "target": true,
+      "shootEffect": "death",
+      "areaEffect": "mortarea"
+    }
+  ],
+  "elements": {
+    "energy": 75
+  },
+  "immunities": {
+    "death": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.35,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.35,
+      "name": "gold coin",
+      "min": 1,
+      "max": 44
+    },
+    {
+      "id": 2175,
+      "probability": 0.068
+    },
+    {
+      "id": 2214,
+      "probability": 0.01,
+      "name": "ring of healing"
+    },
+    {
+      "id": 2269,
+      "probability": 0.15,
+      "name": "health potion"
+    },
+    {
+      "id": 2268,
+      "probability": 0.15,
+      "name": "mana potion"
+    },
+    {
+      "id": 13739,
+      "probability": 0.27
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "creatureStatistics": {
+    "name": "Axeitus Headbanger",
+    "health": 365,
+    "maxHealth": 365,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 170,
+    "attack": 80,
+    "attackSpeed": 2000,
+    "defense": 17,
+    "outfit": {
+      "id": 71
+    },
+    "armor": 15
+  },
+  "experience": 140,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 80
+    },
+    {
+      "name": "physical",
+      "interval": 1000,
+      "chance": 0.8,
+      "min": 0,
+      "max": 50,
+      "range": 5,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "smallstone"
+    }
+  ],
+  "elements": {
+    "fire": -5
+  },
+  "immunities": {
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Hicks!",
+      "Stand still! Both of you! hicks",
+      "This victory will earn me a casket of beer."
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -118,7 +118,6 @@ NetworkManager.prototype.__readPacket = function (gameSocket, packet) {
 
   // Read the opcode of the packet
   let opcode = packet.readUInt8();
-  console.log("=== DEBUG PACKET OPCODE:", opcode);
 
   // The packet operational code
   switch (opcode) {

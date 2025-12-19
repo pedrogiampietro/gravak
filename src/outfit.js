@@ -1,6 +1,6 @@
 "use strict";
 
-const Outfit = function(outfit) {
+const Outfit = function (outfit) {
 
   /*
    * Class Outfit
@@ -13,8 +13,8 @@ const Outfit = function(outfit) {
    *
    */
 
-  // Identifier is required
-  this.id = outfit.id ?? 1;
+  // Identifier is required (use explicit check to allow id 0 for invisible/dead state)
+  this.id = outfit.id !== undefined ? outfit.id : 1;
 
   // Read the passed outfit details or set the default
   this.details = outfit.details ?? null;
@@ -28,7 +28,7 @@ const Outfit = function(outfit) {
 Outfit.prototype.OUTFITS = require(getDataFile("outfits", "outfits"));
 Outfit.prototype.MOUNTS = require(getDataFile("mounts", "mounts"));
 
-Outfit.prototype.getMountName = function(id) {
+Outfit.prototype.getMountName = function (id) {
 
   /*
    * Function Outfit.getMountName
@@ -36,7 +36,7 @@ Outfit.prototype.getMountName = function(id) {
    */
 
   // This mount does not exist
-  if(!this.MOUNTS.hasOwnProperty(id)) {
+  if (!this.MOUNTS.hasOwnProperty(id)) {
     return null;
   }
 
@@ -44,14 +44,14 @@ Outfit.prototype.getMountName = function(id) {
 
 }
 
-Outfit.prototype.getName = function(id) {
+Outfit.prototype.getName = function (id) {
 
   /*
    * Function Outfit.getName
    * Returns the name of an outfit with a particular identifier
    */
 
-  if(!this.OUTFITS.hasOwnProperty(id)) {
+  if (!this.OUTFITS.hasOwnProperty(id)) {
     return null;
   }
 
@@ -60,7 +60,7 @@ Outfit.prototype.getName = function(id) {
 
 }
 
-Outfit.prototype.toJSON = function() {
+Outfit.prototype.toJSON = function () {
 
   /*
    * Function Outfit.toJSON
@@ -78,7 +78,7 @@ Outfit.prototype.toJSON = function() {
 
 }
 
-Outfit.prototype.copy = function() {
+Outfit.prototype.copy = function () {
 
   /*
    * Function Outfit.copy
@@ -89,22 +89,22 @@ Outfit.prototype.copy = function() {
 
 }
 
-Outfit.prototype.isValid = function() {
+Outfit.prototype.isValid = function () {
 
   /*
    * Function Outfit.isValid
    * The outfit colors must be between 0 and 132
    */
 
-  if(this.details === null) {
+  if (this.details === null) {
     return true;
   }
 
   // Must be within these ranges
   return this.details.head >= 0 && this.details.head < 133 &&
-         this.details.body >= 0 && this.details.body < 133 &&
-         this.details.legs >= 0 && this.details.legs < 133 &&
-         this.details.feet >= 0 && this.details.feet < 133;
+    this.details.body >= 0 && this.details.body < 133 &&
+    this.details.legs >= 0 && this.details.legs < 133 &&
+    this.details.feet >= 0 && this.details.feet < 133;
 
 }
 

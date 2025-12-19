@@ -1,0 +1,108 @@
+{
+  "creatureStatistics": {
+    "name": "Bandit",
+    "health": 245,
+    "maxHealth": 245,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 180,
+    "attack": 45,
+    "attackSpeed": 2000,
+    "defense": 11,
+    "outfit": {
+      "id": 129
+    },
+    "armor": 11
+  },
+  "experience": 65,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 25,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 45
+    }
+  ],
+  "elements": {
+    "physical": -10,
+    "death": -5
+  },
+  "sayings": {
+    "texts": [
+      "Your money or your life!",
+      "Hand me your purse!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.48956,
+      "name": "gold coin",
+      "min": 1,
+      "max": 30
+    },
+    {
+      "id": 2386,
+      "probability": 0.29905,
+      "name": "axe"
+    },
+    {
+      "id": 2511,
+      "probability": 0.16794,
+      "name": "brass shield"
+    },
+    {
+      "id": 2649,
+      "probability": 0.14967,
+      "name": "leather legs"
+    },
+    {
+      "id": 2398,
+      "probability": 0.10342,
+      "name": "mace"
+    },
+    {
+      "id": 2685,
+      "probability": 0.07692,
+      "name": "tomato",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2458,
+      "probability": 0.04956,
+      "name": "chain helmet"
+    },
+    {
+      "id": 2465,
+      "probability": 0.02376,
+      "name": "brass armor"
+    },
+    {
+      "id": 2459,
+      "probability": 0.00544,
+      "name": "iron helmet"
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

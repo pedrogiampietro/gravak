@@ -1,0 +1,103 @@
+{
+  "creatureStatistics": {
+    "name": "Elf Scout",
+    "health": 160,
+    "maxHealth": 160,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 30,
+    "attackSpeed": 2000,
+    "defense": 7,
+    "outfit": {
+      "id": 64
+    },
+    "armor": 7
+  },
+  "experience": 75,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 30
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 80,
+      "range": 7,
+      "shootEffect": "arrow"
+    }
+  ],
+  "elements": {
+    "holy": 20,
+    "death": -10
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Tha'shi Ab'Dendriel!",
+      "Feel the sting of my arrows!",
+      "Thy blood will quench the soil's thirst!",
+      "Evicor guide my arrow.",
+      "Your existence will end here!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.75,
+      "name": "gold coin",
+      "min": 1,
+      "max": 25
+    },
+    {
+      "id": 2544,
+      "probability": 0.3071,
+      "min": 1,
+      "max": 12
+    },
+    {
+      "id": 2545,
+      "probability": 0.154,
+      "name": "poison arrow",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2456,
+      "probability": 0.04,
+      "name": "bow"
+    },
+    {
+      "id": 5921,
+      "probability": 0.0113
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": 4
+  }
+}

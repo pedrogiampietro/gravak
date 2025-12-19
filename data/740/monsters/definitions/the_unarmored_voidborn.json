@@ -1,0 +1,144 @@
+{
+  "creatureStatistics": {
+    "name": "The Unarmored Voidborn",
+    "health": 250000,
+    "maxHealth": 250000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 500,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 987
+    },
+    "armor": 30
+  },
+  "experience": 15000,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 500
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 400,
+      "length": 7,
+      "spread": 5,
+      "areaEffect": "smallclouds"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 250,
+      "max": 440,
+      "radius": 5
+    }
+  ],
+  "elements": {
+    "physical": -300,
+    "energy": -300,
+    "earth": -300,
+    "fire": -300,
+    "ice": -300,
+    "holy": -300,
+    "death": -300
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 26191,
+      "probability": 1,
+      "name": "energy bar",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 53
+    },
+    {
+      "id": 8472,
+      "probability": 1,
+      "name": "great spirit potion"
+    },
+    {
+      "id": 5904,
+      "probability": 1,
+      "name": "magic sulphur"
+    },
+    {
+      "id": 26165,
+      "probability": 1,
+      "name": "mysterious remains"
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 2156,
+      "probability": 1,
+      "name": "red gem"
+    },
+    {
+      "id": 26187,
+      "probability": 1,
+      "name": "ring of blue plasma"
+    },
+    {
+      "id": 24847,
+      "probability": 1,
+      "name": "skull fetish"
+    },
+    {
+      "id": 2146,
+      "probability": 1,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 13
+    },
+    {
+      "id": 8473,
+      "probability": 1,
+      "name": "ultimate health potion",
+      "min": 1,
+      "max": 7
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

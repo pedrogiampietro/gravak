@@ -1,0 +1,114 @@
+{
+  "creatureStatistics": {
+    "name": "Quara Constrictor Scout",
+    "health": 450,
+    "maxHealth": 450,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 150,
+    "attack": 135,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 46
+    },
+    "armor": 15
+  },
+  "experience": 200,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 20,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 135
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 80,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "blackspark"
+    }
+  ],
+  "elements": {
+    "energy": -10,
+    "physical": -5
+  },
+  "immunities": {
+    "lifedrain": true,
+    "fire": true,
+    "paralyze": true,
+    "ice": true
+  },
+  "sayings": {
+    "texts": [
+      "Gaaahhh!",
+      "Gluh! Gluh!",
+      "Tssss!",
+      "Boohaa!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.99953,
+      "name": "gold coin",
+      "min": 1,
+      "max": 50
+    },
+    {
+      "id": 12443,
+      "probability": 0.15123,
+      "name": "quara tentacle"
+    },
+    {
+      "id": 2670,
+      "probability": 0.10015,
+      "name": "shrimp"
+    },
+    {
+      "id": 2397,
+      "probability": 0.0809,
+      "name": "longsword"
+    },
+    {
+      "id": 2465,
+      "probability": 0.05076,
+      "name": "brass armor"
+    },
+    {
+      "id": 2150,
+      "probability": 0.04015,
+      "name": "small amethyst"
+    },
+    {
+      "id": 5895,
+      "probability": 0.00507,
+      "name": "fish fin"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

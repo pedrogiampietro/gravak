@@ -1,0 +1,94 @@
+{
+  "creatureStatistics": {
+    "name": "Death Blob",
+    "health": 320,
+    "maxHealth": 320,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 180,
+    "attack": 100,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 315
+    },
+    "armor": 15
+  },
+  "experience": 300,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 20,
+      "max": 30,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 35,
+      "max": 60,
+      "range": 3,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "poff"
+    },
+    {
+      "name": "death blob curse",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 0,
+      "max": 0,
+      "range": 5
+    }
+  ],
+  "elements": {
+    "physical": 30,
+    "ice": 10,
+    "fire": -10,
+    "holy": -10,
+    "energy": -10
+  },
+  "immunities": {
+    "death": true,
+    "earth": true
+  },
+  "summons": [
+    {
+      "name": "Death Blob",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 3
+    }
+  ],
+  "loot": [],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

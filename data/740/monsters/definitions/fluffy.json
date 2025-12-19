@@ -1,0 +1,151 @@
+{
+  "creatureStatistics": {
+    "name": "Fluffy",
+    "health": 4500,
+    "maxHealth": 4500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 310,
+    "attack": 648,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 240
+    },
+    "armor": 25
+  },
+  "experience": 3550,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 648
+    },
+    {
+      "name": "energy",
+      "interval": 1500,
+      "chance": 0.3,
+      "min": 100,
+      "max": 200,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "bluebubble"
+    },
+    {
+      "name": "earth",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 120,
+      "max": 300,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "physical",
+      "interval": 1000,
+      "chance": 0.25,
+      "min": 105,
+      "max": 235,
+      "range": 7,
+      "shootEffect": "suddendeath"
+    },
+    {
+      "name": "earth",
+      "interval": 1000,
+      "chance": 0.2,
+      "min": 135,
+      "max": 255,
+      "range": 7,
+      "radius": 6,
+      "target": false,
+      "areaEffect": "bluebubble"
+    }
+  ],
+  "immunities": {
+    "drunk": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Wooof!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 2230,
+      "probability": 0.25,
+      "name": "bone"
+    },
+    {
+      "id": 2383,
+      "probability": 0.025,
+      "name": "spike sword"
+    },
+    {
+      "id": 2430,
+      "probability": 0.02857,
+      "name": "knight axe"
+    },
+    {
+      "id": 2671,
+      "probability": 0.5,
+      "name": "ham",
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 6558,
+      "probability": 0.08888,
+      "name": "flask of demonic blood"
+    },
+    {
+      "id": 6570,
+      "probability": 0.05538,
+      "name": "blue surprise bag",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 6571,
+      "probability": 0.01538,
+      "name": "red surprise bag"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

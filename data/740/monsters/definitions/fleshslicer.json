@@ -1,0 +1,165 @@
+{
+  "creatureStatistics": {
+    "name": "Fleshslicer",
+    "health": 5700,
+    "maxHealth": 5700,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 360,
+    "attack": 300,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 457
+    },
+    "armor": 30
+  },
+  "experience": 5500,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 450,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 300
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 100,
+      "max": 450,
+      "length": 5,
+      "spread": 3,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 200,
+      "max": 500,
+      "range": 7,
+      "shootEffect": "poison",
+      "areaEffect": "poison"
+    }
+  ],
+  "immunities": {
+    "earth": true,
+    "invisible": true
+  },
+  "loot": [
+    {
+      "id": 15486,
+      "probability": 1,
+      "name": "compound eye",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 185
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 15485,
+      "probability": 1,
+      "name": "spidris mandible"
+    },
+    {
+      "id": 7590,
+      "probability": 0.82353,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 16096,
+      "probability": 0.76471,
+      "name": "dung ball (quest)",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2147,
+      "probability": 0.35294,
+      "name": "small ruby",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 3964,
+      "probability": 0.29412,
+      "name": "ripper lance"
+    },
+    {
+      "id": 2143,
+      "probability": 0.29412,
+      "name": "white pearl",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2156,
+      "probability": 0.23529,
+      "name": "red gem"
+    },
+    {
+      "id": 8473,
+      "probability": 0.17647,
+      "name": "ultimate health potion"
+    },
+    {
+      "id": 7632,
+      "probability": 0.11765,
+      "name": "giant shimmering pearl"
+    },
+    {
+      "id": 7413,
+      "probability": 0.11765,
+      "name": "titan axe"
+    },
+    {
+      "id": 6300,
+      "probability": 0.05882,
+      "name": "death ring"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

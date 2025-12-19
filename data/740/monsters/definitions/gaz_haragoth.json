@@ -1,0 +1,390 @@
+{
+  "creatureStatistics": {
+    "name": "Gaz'haragoth",
+    "health": 350000,
+    "maxHealth": 350000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 400,
+    "attack": 5000,
+    "attackSpeed": 2000,
+    "defense": 65,
+    "outfit": {
+      "id": 591
+    },
+    "armor": 55
+  },
+  "experience": 1000000,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 3000,
+      "chance": 0.35,
+      "min": 2500,
+      "max": 3500,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 4000,
+      "chance": 0.8,
+      "speedChange": 500,
+      "duration": 6000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 5000
+    },
+    {
+      "name": "ice",
+      "interval": 3000,
+      "chance": 0.35,
+      "min": 900,
+      "max": 1100,
+      "range": 7,
+      "radius": 7,
+      "target": true,
+      "shootEffect": "ice",
+      "areaEffect": "icearea"
+    },
+    {
+      "name": "melee",
+      "interval": 1800,
+      "chance": 0.4,
+      "min": 0,
+      "max": 1000,
+      "range": 7,
+      "radius": 5,
+      "target": false,
+      "areaEffect": "blackspark"
+    },
+    {
+      "name": "fire",
+      "interval": 3000,
+      "chance": 0.3,
+      "min": 4000,
+      "max": 6000,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "fire"
+    },
+    {
+      "name": "physical",
+      "interval": 2500,
+      "chance": 0.2,
+      "min": 200,
+      "max": 480,
+      "range": 7,
+      "radius": 5,
+      "target": false,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "elements": {
+    "physical": 50,
+    "energy": 50,
+    "earth": 50,
+    "fire": 50,
+    "ice": 50,
+    "holy": 50,
+    "death": 50
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Minion of Gaz'haragoth",
+      "interval": 4000,
+      "chance": 0.33,
+      "maxSummons": 6
+    },
+    {
+      "name": "Nightmare of Gaz'haragoth",
+      "interval": 4000,
+      "chance": 0.33,
+      "maxSummons": 6
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "NO ONE WILL ESCAPE ME!",
+      "I'LL KEEP THE ORDER UP!",
+      "You puny humans will be my snacks!",
+      "I've beaten tougher demons than you even know!",
+      "How dare you come to this place!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 22396,
+      "probability": 1,
+      "name": "cluster of solace",
+      "min": 1,
+      "max": 13
+    },
+    {
+      "id": 2160,
+      "probability": 1,
+      "name": "crystal coin",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 22397,
+      "probability": 1,
+      "name": "dream matter"
+    },
+    {
+      "id": 11258,
+      "probability": 1,
+      "name": "phoenix charm"
+    },
+    {
+      "id": 11262,
+      "probability": 1,
+      "name": "solitude charm"
+    },
+    {
+      "id": 11260,
+      "probability": 1,
+      "name": "spiritual charm"
+    },
+    {
+      "id": 11261,
+      "probability": 1,
+      "name": "twin sun charm"
+    },
+    {
+      "id": 11259,
+      "probability": 1,
+      "name": "unity charm"
+    },
+    {
+      "id": 6500,
+      "probability": 0.92857,
+      "name": "demonic essence"
+    },
+    {
+      "id": 22598,
+      "probability": 0.92857,
+      "name": "unrealized dream",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 5911,
+      "probability": 0.71429,
+      "name": "red piece of cloth"
+    },
+    {
+      "id": 5914,
+      "probability": 0.71429,
+      "name": "yellow piece of cloth"
+    },
+    {
+      "id": 18416,
+      "probability": 0.5,
+      "name": "green crystal splinter",
+      "min": 1,
+      "max": 23
+    },
+    {
+      "id": 18413,
+      "probability": 0.35714,
+      "name": "blue crystal shard",
+      "min": 1,
+      "max": 22
+    },
+    {
+      "id": 8472,
+      "probability": 0.35714,
+      "name": "great spirit potion",
+      "min": 1,
+      "max": 183
+    },
+    {
+      "id": 8473,
+      "probability": 0.35714,
+      "name": "ultimate health potion",
+      "min": 1,
+      "max": 119
+    },
+    {
+      "id": 2158,
+      "probability": 0.28571,
+      "name": "blue gem"
+    },
+    {
+      "id": 5954,
+      "probability": 0.28571,
+      "name": "demon horn"
+    },
+    {
+      "id": 7632,
+      "probability": 0.28571,
+      "name": "giant shimmering pearl"
+    },
+    {
+      "id": 7590,
+      "probability": 0.28571,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 181
+    },
+    {
+      "id": 18415,
+      "probability": 0.28571,
+      "name": "green crystal shard",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 6529,
+      "probability": 0.28571,
+      "name": "infernal bolt",
+      "min": 1,
+      "max": 194
+    },
+    {
+      "id": 18418,
+      "probability": 0.21429,
+      "name": "blue crystal splinter",
+      "min": 1,
+      "max": 27
+    },
+    {
+      "id": 18417,
+      "probability": 0.21429,
+      "name": "brown crystal splinter",
+      "min": 1,
+      "max": 28
+    },
+    {
+      "id": 22401,
+      "probability": 0.21429,
+      "name": "crude umbral slayer"
+    },
+    {
+      "id": 7368,
+      "probability": 0.14286,
+      "name": "assassin star",
+      "min": 1,
+      "max": 109
+    },
+    {
+      "id": 22404,
+      "probability": 0.14286,
+      "name": "crude umbral axe"
+    },
+    {
+      "id": 22398,
+      "probability": 0.14286,
+      "name": "crude umbral blade"
+    },
+    {
+      "id": 22614,
+      "probability": 0.14286,
+      "name": "nightmare beacon"
+    },
+    {
+      "id": 2195,
+      "probability": 0.07143,
+      "name": "boots of haste"
+    },
+    {
+      "id": 22419,
+      "probability": 0.07143,
+      "name": "crude umbral crossbow"
+    },
+    {
+      "id": 22413,
+      "probability": 0.07143,
+      "name": "crude umbral hammer"
+    },
+    {
+      "id": 22422,
+      "probability": 0.07143,
+      "name": "crude umbral spellbook"
+    },
+    {
+      "id": 22610,
+      "probability": 0.07143,
+      "name": "dream warden mask"
+    },
+    {
+      "id": 22613,
+      "probability": 0.07143,
+      "name": "eye pod"
+    },
+    {
+      "id": 2168,
+      "probability": 0.07143,
+      "name": "life ring"
+    },
+    {
+      "id": 7899,
+      "probability": 0.07143,
+      "name": "magma coat"
+    },
+    {
+      "id": 22616,
+      "probability": 0.07143,
+      "name": "nightmare hook"
+    },
+    {
+      "id": 22608,
+      "probability": 0.07143,
+      "name": "nightmare horn"
+    },
+    {
+      "id": 22611,
+      "probability": 0.07143,
+      "name": "psychedelic tapestry"
+    },
+    {
+      "id": 22408,
+      "probability": 0.07143,
+      "name": "umbral chopper"
+    },
+    {
+      "id": 22400,
+      "probability": 0.07143,
+      "name": "umbral masterblade"
+    },
+    {
+      "id": 18414,
+      "probability": 0.07143,
+      "name": "violet crystal shard",
+      "min": 1,
+      "max": 26
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

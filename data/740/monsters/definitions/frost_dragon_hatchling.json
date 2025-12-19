@@ -1,0 +1,125 @@
+{
+  "creatureStatistics": {
+    "name": "Frost Dragon Hatchling",
+    "health": 800,
+    "maxHealth": 800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 160,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 283
+    },
+    "armor": 15
+  },
+  "experience": 745,
+  "corpse": 2844,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 80,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 45,
+      "max": 50,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 160
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 60,
+      "max": 110,
+      "length": 5,
+      "spread": 2,
+      "areaEffect": "iceattack"
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 60,
+      "max": 110,
+      "radius": 4,
+      "target": true,
+      "areaEffect": "icearea"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "radius": 4,
+      "target": true,
+      "speedChange": -600,
+      "duration": 12000,
+      "shootEffect": "ice",
+      "areaEffect": "icearea"
+    }
+  ],
+  "elements": {
+    "energy": -5
+  },
+  "immunities": {
+    "fire": true,
+    "lifedrain": true,
+    "ice": true,
+    "earth": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Rooawwrr",
+      "Fchu?"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.8675,
+      "name": "gold coin",
+      "min": 1,
+      "max": 55
+    },
+    {
+      "id": 2672,
+      "probability": 0.796,
+      "name": "dragon ham"
+    },
+    {
+      "id": 2269,
+      "probability": 0.0056,
+      "name": "health potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

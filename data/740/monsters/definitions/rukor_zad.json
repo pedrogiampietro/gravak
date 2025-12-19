@@ -1,0 +1,169 @@
+{
+  "creatureStatistics": {
+    "name": "Rukor Zad",
+    "health": 380,
+    "maxHealth": 380,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 430,
+    "attack": 170,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 152
+    },
+    "armor": 15
+  },
+  "experience": 380,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.1,
+      "duration": 2000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 170
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 100,
+      "range": 7,
+      "shootEffect": "throwingstar"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 100,
+      "range": 7,
+      "shootEffect": "poisonarrow"
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 8,
+      "max": 8,
+      "range": 7,
+      "shootEffect": "poison",
+      "areaEffect": "poison"
+    },
+    {
+      "name": "drunk",
+      "interval": 3000,
+      "chance": 0.34,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "duration": 5000
+    }
+  ],
+  "elements": {
+    "physical": -5,
+    "death": -5
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "I can kill a man in a thousand ways. And that`s only with a spoon!",
+      "You shouldn't have come here!",
+      "Haiiii!"
+    ],
+    "slowness": 1,
+    "chance": 0.02
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.9321,
+      "min": 1,
+      "max": 50
+    },
+    {
+      "id": 2050,
+      "probability": 0.35,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2403,
+      "probability": 0.1975
+    },
+    {
+      "id": 2399,
+      "probability": 0.0921,
+      "min": 1,
+      "max": 14
+    },
+    {
+      "id": 7366,
+      "probability": 0.062,
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 2404,
+      "probability": 0.05
+    },
+    {
+      "id": 2457,
+      "probability": 0.0419
+    },
+    {
+      "id": 2510,
+      "probability": 0.0291
+    },
+    {
+      "id": 2513,
+      "probability": 0.0256
+    },
+    {
+      "id": 2509,
+      "probability": 0.0194
+    },
+    {
+      "id": 3968,
+      "probability": 0.0148
+    },
+    {
+      "id": 3969,
+      "probability": 0.0124
+    },
+    {
+      "id": 2145,
+      "probability": 0.0122
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

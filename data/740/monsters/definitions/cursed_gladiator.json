@@ -1,0 +1,73 @@
+{
+  "creatureStatistics": {
+    "name": "Cursed Gladiator",
+    "health": 435,
+    "maxHealth": 435,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 170,
+    "attack": 150,
+    "attackSpeed": 2000,
+    "defense": 26,
+    "outfit": {
+      "id": 100
+    },
+    "armor": 25
+  },
+  "experience": 215,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 150
+    },
+    {
+      "name": "lifedrain",
+      "interval": 4000,
+      "chance": 0.5,
+      "min": 0,
+      "max": 50,
+      "range": 5,
+      "radius": 1,
+      "target": true,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "earth": 20,
+    "fire": -5
+  },
+  "immunities": {
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Death where are you?",
+      "Slay me, end my curse."
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

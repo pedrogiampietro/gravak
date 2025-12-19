@@ -1,0 +1,248 @@
+{
+  "creatureStatistics": {
+    "name": "Broken Shaper",
+    "health": 2200,
+    "maxHealth": 2200,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 310,
+    "attack": 200,
+    "attackSpeed": 2000,
+    "defense": 37,
+    "outfit": {
+      "id": 932
+    },
+    "armor": 37
+  },
+  "experience": 1600,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 327,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 360,
+      "duration": 7000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 200
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.35,
+      "min": 0,
+      "max": 150,
+      "range": 7,
+      "target": true,
+      "shootEffect": "smallstone"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.35,
+      "min": 0,
+      "max": 100,
+      "length": 5,
+      "spread": 0,
+      "areaEffect": "rednote"
+    }
+  ],
+  "elements": {
+    "energy": -20,
+    "earth": 20,
+    "fire": -15
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "<grunt>",
+      "Raar!!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 173
+    },
+    {
+      "id": 2152,
+      "probability": 0.75194,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 27039,
+      "probability": 0.20255,
+      "name": "cave turnip",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 27041,
+      "probability": 0.19957,
+      "name": "cracked alabaster vase"
+    },
+    {
+      "id": 27040,
+      "probability": 0.1755,
+      "name": "ancient belt buckle"
+    },
+    {
+      "id": 27042,
+      "probability": 0.13976,
+      "name": "rhino horn carving"
+    },
+    {
+      "id": 2666,
+      "probability": 0.09722,
+      "name": "meat"
+    },
+    {
+      "id": 2260,
+      "probability": 0.08245,
+      "name": "blank rune"
+    },
+    {
+      "id": 7591,
+      "probability": 0.07196,
+      "name": "great health potion"
+    },
+    {
+      "id": 2789,
+      "probability": 0.061,
+      "name": "brown mushroom",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2146,
+      "probability": 0.05099,
+      "name": "small sapphire"
+    },
+    {
+      "id": 5022,
+      "probability": 0.04968,
+      "name": "orichalcum pearl",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 5913,
+      "probability": 0.04635,
+      "name": "brown piece of cloth"
+    },
+    {
+      "id": 24849,
+      "probability": 0.04373,
+      "name": "onyx chip"
+    },
+    {
+      "id": 27046,
+      "probability": 0.04361,
+      "name": "ancient coin"
+    },
+    {
+      "id": 2147,
+      "probability": 0.04027,
+      "name": "small ruby"
+    },
+    {
+      "id": 9809,
+      "probability": 0.02895,
+      "name": "rusted armor"
+    },
+    {
+      "id": 2214,
+      "probability": 0.02597,
+      "name": "ring of healing"
+    },
+    {
+      "id": 5914,
+      "probability": 0.02037,
+      "name": "yellow piece of cloth"
+    },
+    {
+      "id": 27047,
+      "probability": 0.0162,
+      "name": "coral brooch"
+    },
+    {
+      "id": 2396,
+      "probability": 0.0118,
+      "name": "ice rapier"
+    },
+    {
+      "id": 5912,
+      "probability": 0.01037,
+      "name": "blue piece of cloth"
+    },
+    {
+      "id": 2162,
+      "probability": 0.01025,
+      "name": "magic light wand"
+    },
+    {
+      "id": 5909,
+      "probability": 0.00965,
+      "name": "white piece of cloth"
+    },
+    {
+      "id": 5910,
+      "probability": 0.00643,
+      "name": "green piece of cloth"
+    },
+    {
+      "id": 5911,
+      "probability": 0.00536,
+      "name": "red piece of cloth"
+    },
+    {
+      "id": 2195,
+      "probability": 0.00226,
+      "name": "boots of haste"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

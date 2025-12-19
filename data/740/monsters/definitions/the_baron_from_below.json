@@ -1,0 +1,268 @@
+{
+  "creatureStatistics": {
+    "name": "The Baron From Below",
+    "health": 50000,
+    "maxHealth": 50000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 240,
+    "attack": 550,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 1045
+    },
+    "armor": 30
+  },
+  "experience": 40000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 550
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 1000,
+      "radius": 8,
+      "areaEffect": "blackspark"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 1000,
+      "length": 8,
+      "spread": 5,
+      "areaEffect": "yellowbubble"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 1000,
+      "length": 8,
+      "spread": 9,
+      "areaEffect": "poff"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1000,
+      "radius": 3,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 1000,
+      "radius": 5,
+      "areaEffect": "smallplants"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 30165,
+      "probability": 0.875,
+      "name": "heavy crystal fragment"
+    },
+    {
+      "id": 7440,
+      "probability": 0.875,
+      "name": "mastermind potion",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2152,
+      "probability": 0.875,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 66
+    },
+    {
+      "id": 2197,
+      "probability": 0.875,
+      "name": "stone skin amulet"
+    },
+    {
+      "id": 2392,
+      "probability": 0.625,
+      "name": "fire sword"
+    },
+    {
+      "id": 7590,
+      "probability": 0.625,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 15
+    },
+    {
+      "id": 8472,
+      "probability": 0.625,
+      "name": "great spirit potion",
+      "min": 1,
+      "max": 18
+    },
+    {
+      "id": 2155,
+      "probability": 0.625,
+      "name": "green gem"
+    },
+    {
+      "id": 18414,
+      "probability": 0.625,
+      "name": "violet crystal shard",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 2187,
+      "probability": 0.625,
+      "name": "wand of inferno"
+    },
+    {
+      "id": 5904,
+      "probability": 0.5,
+      "name": "magic sulphur"
+    },
+    {
+      "id": 2150,
+      "probability": 0.375,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 16
+    },
+    {
+      "id": 8473,
+      "probability": 0.375,
+      "name": "ultimate health potion",
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 30280,
+      "probability": 0.25,
+      "name": "longing eyes"
+    },
+    {
+      "id": 24742,
+      "probability": 0.125,
+      "name": "badger boots"
+    },
+    {
+      "id": 30278,
+      "probability": 0.125,
+      "name": "chitinous mouth (baron from below)"
+    },
+    {
+      "id": 2445,
+      "probability": 0.125,
+      "name": "crystal mace"
+    },
+    {
+      "id": 30306,
+      "probability": 0.125,
+      "name": "gnome shield"
+    },
+    {
+      "id": 25377,
+      "probability": 0.125,
+      "name": "gold token"
+    },
+    {
+      "id": 5892,
+      "probability": 0.125,
+      "name": "huge chunk of crude iron",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2156,
+      "probability": 0.125,
+      "name": "red gem"
+    },
+    {
+      "id": 25172,
+      "probability": 0.125,
+      "name": "silver token"
+    },
+    {
+      "id": 9822,
+      "probability": 0.125,
+      "name": "slightly rusted helmet"
+    },
+    {
+      "id": 9816,
+      "probability": 0.125,
+      "name": "slightly rusted shield"
+    },
+    {
+      "id": 2145,
+      "probability": 0.125,
+      "name": "small diamond",
+      "min": 1,
+      "max": 18
+    },
+    {
+      "id": 2149,
+      "probability": 0.125,
+      "name": "small emerald",
+      "min": 1,
+      "max": 12
+    },
+    {
+      "id": 2147,
+      "probability": 0.125,
+      "name": "small ruby",
+      "min": 1,
+      "max": 11
+    },
+    {
+      "id": 9970,
+      "probability": 0.125,
+      "name": "small topaz",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 2154,
+      "probability": 0.125,
+      "name": "yellow gem"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

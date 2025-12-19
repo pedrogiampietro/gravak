@@ -1,0 +1,62 @@
+{
+  "creatureStatistics": {
+    "name": "Magicthrower",
+    "health": 1,
+    "maxHealth": 1,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 100,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 0,
+    "outfit": {
+      "id": 0
+    }
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 100,
+      "range": 7,
+      "shootEffect": "energy"
+    }
+  ],
+  "immunities": {
+    "physical": true,
+    "energy": true,
+    "fire": true,
+    "earth": true,
+    "drown": true,
+    "ice": true,
+    "holy": true,
+    "death": true,
+    "lifedrain": true,
+    "manadrain": true,
+    "paralyze": true,
+    "drunk": true,
+    "outfit": true,
+    "invisible": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "creatureStatistics": {
+    "name": "Vile Grandmaster",
+    "health": 1700,
+    "maxHealth": 1700,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 33,
+    "outfit": {
+      "id": 268
+    },
+    "armor": 27
+  },
+  "experience": 1500,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 220,
+      "max": 280,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.22,
+      "min": 0,
+      "max": 225,
+      "range": 7,
+      "shootEffect": "whirlwindsword"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 25,
+      "max": 125,
+      "radius": 4,
+      "areaEffect": "groundshaker"
+    }
+  ],
+  "elements": {
+    "energy": 25,
+    "fire": 25,
+    "holy": 50,
+    "earth": 25
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "You'll make a fine trophy!",
+      "Is that the best, they can throw at me?",
+      "I've seen orcs tougher than you!",
+      "I will end this now!",
+      "Your gods won't help you!"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 12406,
+      "probability": 0.00724
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.6,
+      "min": 1,
+      "max": 55
+    },
+    {
+      "id": 2152,
+      "probability": 0.73188,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2121,
+      "probability": 0.07246
+    },
+    {
+      "id": 12466,
+      "probability": 0.08695
+    },
+    {
+      "id": 2666,
+      "probability": 0.07971
+    },
+    {
+      "id": 2147,
+      "probability": 0.02173
+    },
+    {
+      "id": 2146,
+      "probability": 0.02173
+    },
+    {
+      "id": 2391,
+      "probability": 0.01449
+    },
+    {
+      "id": 5911,
+      "probability": 0.02898
+    },
+    {
+      "id": 2487,
+      "probability": 0.01449
+    },
+    {
+      "id": 2491,
+      "probability": 0.01449
+    },
+    {
+      "id": 2392,
+      "probability": 0.02173
+    },
+    {
+      "id": 7591,
+      "probability": 0.0942
+    },
+    {
+      "id": 2488,
+      "probability": 0.00724
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

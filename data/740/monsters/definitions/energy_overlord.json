@@ -1,0 +1,109 @@
+{
+  "creatureStatistics": {
+    "name": "Energy Overlord",
+    "health": 4000,
+    "maxHealth": 4000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 290,
+    "attack": 200,
+    "attackSpeed": 2000,
+    "defense": 40,
+    "outfit": {
+      "id": 290
+    },
+    "armor": 40
+  },
+  "experience": 2800,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 90,
+      "max": 150,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 200
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 0,
+      "max": 800,
+      "length": 7,
+      "spread": 0,
+      "areaEffect": "purpleenergy"
+    },
+    {
+      "name": "energy",
+      "interval": 1000,
+      "chance": 0.11,
+      "min": 0,
+      "max": 200,
+      "range": 3,
+      "target": true,
+      "areaEffect": "purpleenergy"
+    },
+    {
+      "name": "earth",
+      "interval": 1000,
+      "chance": 0.09,
+      "min": 50,
+      "max": 200,
+      "radius": 5,
+      "target": false,
+      "areaEffect": "bigplants"
+    }
+  ],
+  "elements": {
+    "physical": 50,
+    "fire": -1
+  },
+  "immunities": {
+    "ice": true,
+    "energy": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 64
+    },
+    {
+      "id": 2152,
+      "probability": 0.25,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 2
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

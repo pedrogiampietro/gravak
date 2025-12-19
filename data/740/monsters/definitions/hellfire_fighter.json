@@ -1,0 +1,154 @@
+{
+  "creatureStatistics": {
+    "name": "Hellfire Fighter",
+    "health": 3800,
+    "maxHealth": 3800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 520,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 243
+    },
+    "armor": 35
+  },
+  "experience": 3900,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 520
+    },
+    {
+      "name": "firefield",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 3,
+      "target": false,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 392,
+      "max": 1500,
+      "length": 8,
+      "spread": 0,
+      "target": false,
+      "areaEffect": "fireattack"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 60,
+      "max": 330,
+      "range": 7,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "fire"
+    },
+    {
+      "name": "hellfire fighter soulfire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0
+    }
+  ],
+  "elements": {
+    "energy": 25,
+    "physical": 50,
+    "death": 20,
+    "ice": -25
+  },
+  "immunities": {
+    "fire": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "loot": [
+    {
+      "id": 2136,
+      "probability": 0.0019
+    },
+    {
+      "id": 2145,
+      "probability": 0.014,
+      "name": "small diamond"
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.4,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 46
+    },
+    {
+      "id": 2187,
+      "probability": 0.0945,
+      "name": "wand of inferno"
+    },
+    {
+      "id": 2260,
+      "probability": 0.3,
+      "name": "blank rune",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2392,
+      "probability": 0.0414,
+      "name": "fire sword"
+    },
+    {
+      "id": 2432,
+      "probability": 0.0044,
+      "name": "fire axe"
+    },
+    {
+      "id": 13757,
+      "probability": 0.0067
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

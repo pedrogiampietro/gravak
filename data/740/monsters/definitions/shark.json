@@ -1,0 +1,94 @@
+{
+  "creatureStatistics": {
+    "name": "Shark",
+    "health": 1200,
+    "maxHealth": 1200,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 175,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 453
+    },
+    "armor": 15
+  },
+  "experience": 700,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 175
+    }
+  ],
+  "elements": {
+    "physical": 1,
+    "fire": 1,
+    "ice": 1,
+    "energy": -5,
+    "earth": 20
+  },
+  "immunities": {
+    "invisible": true,
+    "drown": true
+  },
+  "sayings": {
+    "texts": [
+      "Rarr chomp chomp!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2146,
+      "probability": 0.01222,
+      "name": "small sapphire"
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.4,
+      "name": "gold coin",
+      "min": 1,
+      "max": 38
+    },
+    {
+      "id": 2667,
+      "probability": 0.25,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 7632,
+      "probability": 0.0055
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "creatureStatistics": {
+    "name": "Apprentice Sheng",
+    "health": 95,
+    "maxHealth": 95,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 170,
+    "attack": 10,
+    "attackSpeed": 2000,
+    "defense": 18,
+    "outfit": {
+      "id": 23
+    },
+    "armor": 18
+  },
+  "experience": 150,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 20,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 10
+    },
+    {
+      "name": "energy",
+      "interval": 1000,
+      "chance": 0.14,
+      "min": 15,
+      "max": 25,
+      "range": 7,
+      "shootEffect": "energyball",
+      "areaEffect": "energyarea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 15,
+      "max": 45,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "energyfield",
+      "interval": 1000,
+      "chance": 0.08,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "energy"
+    },
+    {
+      "name": "effect",
+      "interval": 1050,
+      "chance": 1,
+      "min": 0,
+      "max": 0,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "immunities": {
+    "energy": true
+  },
+  "summons": [
+    {
+      "name": "Hyaena",
+      "interval": 1050,
+      "chance": 1,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "I will protect the secrets of my master!",
+      "Kaplar!",
+      "This isle will become ours alone",
+      "You already know too much."
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 5878,
+      "probability": 1,
+      "name": "minotaur leather"
+    },
+    {
+      "id": 2162,
+      "probability": 0.82222,
+      "name": "magic light wand"
+    },
+    {
+      "id": 2148,
+      "probability": 0.71111,
+      "name": "gold coin",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2050,
+      "probability": 0.24444,
+      "name": "torch",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2649,
+      "probability": 0.13333,
+      "name": "leather legs"
+    },
+    {
+      "id": 2403,
+      "probability": 0.11111,
+      "name": "knife"
+    },
+    {
+      "id": 2684,
+      "probability": 0.06667,
+      "name": "carrot",
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 2461,
+      "probability": 0.06667,
+      "name": "leather helmet"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

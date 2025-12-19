@@ -1,0 +1,53 @@
+{
+  "creatureStatistics": {
+    "name": "Mechanical Fighter",
+    "health": 420,
+    "maxHealth": 420,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 500,
+    "attackSpeed": 2000,
+    "defense": 199,
+    "outfit": {
+      "id": 102
+    },
+    "armor": 199
+  },
+  "experience": 255,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 500
+    }
+  ],
+  "elements": {
+    "energy": 50
+  },
+  "immunities": {
+    "holy": true,
+    "earth": true,
+    "invisible": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,287 @@
+{
+  "creatureStatistics": {
+    "name": "Horadron",
+    "health": 30000,
+    "maxHealth": 30000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 320,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 65,
+    "outfit": {
+      "id": 12
+    },
+    "armor": 55
+  },
+  "experience": 18000,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.35,
+      "min": 400,
+      "max": 700,
+      "areaEffect": "redspark"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 600,
+      "max": 1000,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 600,
+      "max": 1000,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 100,
+      "max": 235,
+      "range": 7,
+      "target": true,
+      "shootEffect": "poison",
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 100,
+      "max": 250,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 300,
+      "max": 450,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "greenspark"
+    }
+  ],
+  "elements": {
+    "physical": 30,
+    "death": 30,
+    "energy": 30,
+    "fire": 30,
+    "ice": 30,
+    "holy": 30
+  },
+  "immunities": {
+    "poison": true,
+    "lifedrain": true,
+    "paralyze": true,
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Defiler",
+      "interval": 2000,
+      "chance": 0.12,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Even I fear the wrath of the princes. And the cold touch of those whom they serve! You are not prepared!",
+      "You foolish mortals with you medding you brought the end upon your world!",
+      "After all those aeons I smell freedom at last!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 22396,
+      "probability": 1
+    },
+    {
+      "id": 5954,
+      "probability": 1
+    },
+    {
+      "id": 6500,
+      "probability": 1
+    },
+    {
+      "id": 22397,
+      "probability": 0.1385
+    },
+    {
+      "id": 22610,
+      "probability": 0.0538
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "min": 1,
+      "max": 50
+    },
+    {
+      "id": 22598,
+      "probability": 1
+    },
+    {
+      "id": 8903,
+      "probability": 0.0513
+    },
+    {
+      "id": 8901,
+      "probability": 0.359
+    },
+    {
+      "id": 8902,
+      "probability": 0.1026
+    },
+    {
+      "id": 3962,
+      "probability": 0.3333
+    },
+    {
+      "id": 7456,
+      "probability": 0.1282
+    },
+    {
+      "id": 7453,
+      "probability": 0.0256
+    },
+    {
+      "id": 7388,
+      "probability": 0.0256
+    },
+    {
+      "id": 2466,
+      "probability": 0.0122
+    },
+    {
+      "id": 2656,
+      "probability": 0.0122
+    },
+    {
+      "id": 2487,
+      "probability": 0.1795
+    },
+    {
+      "id": 2470,
+      "probability": 0.0025
+    },
+    {
+      "id": 2415,
+      "probability": 0.0009
+    },
+    {
+      "id": 8926,
+      "probability": 0.0009
+    },
+    {
+      "id": 7895,
+      "probability": 0.0175
+    },
+    {
+      "id": 2477,
+      "probability": 0.0175
+    },
+    {
+      "id": 2488,
+      "probability": 0.2051
+    },
+    {
+      "id": 2645,
+      "probability": 0.1538
+    },
+    {
+      "id": 2145,
+      "probability": 0.1795,
+      "min": 1,
+      "max": 25
+    },
+    {
+      "id": 2150,
+      "probability": 0.0513,
+      "min": 1,
+      "max": 25
+    },
+    {
+      "id": 2149,
+      "probability": 0.1026,
+      "min": 1,
+      "max": 25
+    },
+    {
+      "id": 2146,
+      "probability": 0.2821,
+      "min": 1,
+      "max": 25
+    },
+    {
+      "id": 9970,
+      "probability": 0.1538,
+      "min": 1,
+      "max": 25
+    },
+    {
+      "id": 2147,
+      "probability": 0.2051,
+      "min": 1,
+      "max": 25
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

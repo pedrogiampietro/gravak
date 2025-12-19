@@ -1,0 +1,57 @@
+{
+  "creatureStatistics": {
+    "name": "Penguin",
+    "health": 33,
+    "maxHealth": 33,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 180,
+    "attack": 3,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 250
+    },
+    "armor": 5
+  },
+  "experience": 1,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 32,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 3
+    }
+  ],
+  "elements": {
+    "ice": 5,
+    "energy": -5
+  },
+  "loot": [
+    {
+      "id": 2667,
+      "probability": 0.075,
+      "min": 1,
+      "max": 2
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

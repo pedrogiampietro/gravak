@@ -1,0 +1,202 @@
+{
+  "creatureStatistics": {
+    "name": "Mahrdis",
+    "health": 3900,
+    "maxHealth": 3900,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 340,
+    "attack": 400,
+    "attackSpeed": 2000,
+    "defense": 42,
+    "outfit": {
+      "id": 90
+    },
+    "armor": 42
+  },
+  "experience": 3050,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.4,
+      "min": 150,
+      "max": 600,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 400
+    },
+    {
+      "name": "physical",
+      "interval": 1600,
+      "chance": 0.07,
+      "min": 60,
+      "max": 600,
+      "range": 1,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "fire",
+      "interval": 1000,
+      "chance": 0.07,
+      "min": 60,
+      "max": 600,
+      "range": 7,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.13,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -850,
+      "duration": 50000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.34,
+      "min": 80,
+      "max": 800,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "explosionarea"
+    },
+    {
+      "name": "firefield",
+      "interval": 1000,
+      "chance": 0.12,
+      "min": 0,
+      "max": 0,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "yellowspark"
+    },
+    {
+      "name": "firecondition",
+      "interval": 2000,
+      "chance": 0.13,
+      "min": 50,
+      "max": 500,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "explosion"
+    }
+  ],
+  "elements": {
+    "energy": 20,
+    "earth": 20,
+    "holy": -20,
+    "ice": -10
+  },
+  "immunities": {
+    "fire": true,
+    "death": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Fire Elemental",
+      "interval": 2000,
+      "chance": 0.3,
+      "maxSummons": 4
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Ashes to ashes!",
+      "Fire, Fire!",
+      "The eternal flame demands its due!",
+      "Burnnnnnnnnn!",
+      "May my flames engulf you!",
+      "This is why I'm hot."
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2353,
+      "probability": 1,
+      "name": "burning heart"
+    },
+    {
+      "id": 2148,
+      "probability": 0.88738,
+      "name": "gold coin",
+      "min": 1,
+      "max": 230
+    },
+    {
+      "id": 2147,
+      "probability": 0.12255,
+      "name": "small ruby",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7591,
+      "probability": 0.10213,
+      "name": "great health potion"
+    },
+    {
+      "id": 2168,
+      "probability": 0.06752,
+      "name": "life ring"
+    },
+    {
+      "id": 2432,
+      "probability": 0.00936,
+      "name": "fire axe"
+    },
+    {
+      "id": 2156,
+      "probability": 0.00624,
+      "name": "red gem"
+    },
+    {
+      "id": 2141,
+      "probability": 0.00142,
+      "name": "holy falcon"
+    },
+    {
+      "id": 11207,
+      "probability": 0.00113,
+      "name": "mini mummy"
+    },
+    {
+      "id": 2539,
+      "probability": 0.00113,
+      "name": "phoenix shield"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "creatureStatistics": {
+    "name": "Energetic Book",
+    "health": 18500,
+    "maxHealth": 18500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 440,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 82,
+    "outfit": {
+      "id": 1061
+    },
+    "armor": 82
+  },
+  "experience": 12034,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 600,
+      "max": 750,
+      "range": 3,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "energy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 800,
+      "max": 1000,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "energyarea"
+    },
+    {
+      "name": "holy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 650,
+      "max": 800,
+      "length": 6,
+      "spread": 0,
+      "areaEffect": "stun"
+    }
+  ],
+  "elements": {
+    "energy": 100,
+    "earth": -10,
+    "holy": 100
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 0.75436,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 35
+    },
+    {
+      "id": 31226,
+      "probability": 0.60117,
+      "name": "glowing rune",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 31225,
+      "probability": 0.45164,
+      "name": "book page",
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 26029,
+      "probability": 0.15343,
+      "name": "ultimate mana potion"
+    },
+    {
+      "id": 31222,
+      "probability": 0.12733,
+      "name": "silken bookmark"
+    },
+    {
+      "id": 8473,
+      "probability": 0.11318,
+      "name": "ultimate health potion"
+    },
+    {
+      "id": 26179,
+      "probability": 0.10965,
+      "name": "energy ball"
+    },
+    {
+      "id": 7901,
+      "probability": 0.03122,
+      "name": "lightning headband"
+    },
+    {
+      "id": 7889,
+      "probability": 0.02659,
+      "name": "lightning pendant"
+    },
+    {
+      "id": 2164,
+      "probability": 0.01732,
+      "name": "might ring"
+    },
+    {
+      "id": 18390,
+      "probability": 0.01683,
+      "name": "wand of defiance"
+    },
+    {
+      "id": 7895,
+      "probability": 0.01659,
+      "name": "lightning legs"
+    },
+    {
+      "id": 7893,
+      "probability": 0.01512,
+      "name": "lightning boots"
+    },
+    {
+      "id": 11355,
+      "probability": 0.00878,
+      "name": "spellweaver's robe"
+    },
+    {
+      "id": 7407,
+      "probability": 0.0061,
+      "name": "haunted blade"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

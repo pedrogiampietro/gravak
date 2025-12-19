@@ -1,0 +1,269 @@
+{
+  "creatureStatistics": {
+    "name": "Sir Baeloc",
+    "health": 50000,
+    "maxHealth": 50000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 1222
+    },
+    "armor": 78
+  },
+  "experience": 55000,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.35,
+      "min": 350,
+      "max": 550,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "manadrain",
+      "interval": 1800,
+      "chance": 0.4,
+      "min": 300,
+      "max": 500,
+      "radius": 5,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "physical",
+      "interval": 1800,
+      "chance": 0.89,
+      "min": 400,
+      "max": 1200,
+      "length": 7,
+      "spread": 0,
+      "areaEffect": "redspark"
+    }
+  ],
+  "elements": {
+    "fire": 20
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "summons": [
+    {
+      "name": "Retainer of Baeloc",
+      "interval": 2000,
+      "chance": 0.2,
+      "maxSummons": 6
+    }
+  ],
+  "loot": [
+    {
+      "id": 25172,
+      "probability": 1,
+      "name": "silver token",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2152,
+      "probability": 0.98667,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 26029,
+      "probability": 0.6,
+      "name": "ultimate mana potion",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 26031,
+      "probability": 0.54667,
+      "name": "supreme health potion",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 26030,
+      "probability": 0.48,
+      "name": "ultimate spirit potion",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 2156,
+      "probability": 0.36,
+      "name": "red gem",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2154,
+      "probability": 0.29333,
+      "name": "yellow gem",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 5888,
+      "probability": 0.28,
+      "name": "piece of hell steel",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2477,
+      "probability": 0.24,
+      "name": "knight legs"
+    },
+    {
+      "id": 7443,
+      "probability": 0.22667,
+      "name": "bullseye potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2155,
+      "probability": 0.22667,
+      "name": "green gem"
+    },
+    {
+      "id": 2158,
+      "probability": 0.2,
+      "name": "blue gem"
+    },
+    {
+      "id": 2436,
+      "probability": 0.18667,
+      "name": "skull staff"
+    },
+    {
+      "id": 7439,
+      "probability": 0.17333,
+      "name": "berserk potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 26198,
+      "probability": 0.17333,
+      "name": "collar of blue plasma"
+    },
+    {
+      "id": 9971,
+      "probability": 0.17333,
+      "name": "gold ingot"
+    },
+    {
+      "id": 7440,
+      "probability": 0.17333,
+      "name": "mastermind potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 5887,
+      "probability": 0.14667,
+      "name": "piece of royal steel"
+    },
+    {
+      "id": 2160,
+      "probability": 0.13333,
+      "name": "crystal coin",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7900,
+      "probability": 0.13333,
+      "name": "magma monocle"
+    },
+    {
+      "id": 26189,
+      "probability": 0.12,
+      "name": "ring of red plasma"
+    },
+    {
+      "id": 26199,
+      "probability": 0.10667,
+      "name": "collar of green plasma"
+    },
+    {
+      "id": 34246,
+      "probability": 0.10667,
+      "name": "young lich worm"
+    },
+    {
+      "id": 26185,
+      "probability": 0.08,
+      "name": "ring of blue plasma"
+    },
+    {
+      "id": 2153,
+      "probability": 0.06667,
+      "name": "violet gem"
+    },
+    {
+      "id": 34244,
+      "probability": 0.05333,
+      "name": "ancient liche bone"
+    },
+    {
+      "id": 26200,
+      "probability": 0.05333,
+      "name": "collar of red plasma"
+    },
+    {
+      "id": 26187,
+      "probability": 0.02667,
+      "name": "ring of green plasma"
+    },
+    {
+      "id": 34245,
+      "probability": 0.02667,
+      "name": "rotten heart"
+    },
+    {
+      "id": 34233,
+      "probability": 0.02667,
+      "name": "terra helmet"
+    },
+    {
+      "id": 34234,
+      "probability": 0.01333,
+      "name": "bear skin"
+    },
+    {
+      "id": 34394,
+      "probability": 0.01333,
+      "name": "final judgement"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

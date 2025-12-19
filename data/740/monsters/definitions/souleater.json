@@ -1,0 +1,159 @@
+{
+  "creatureStatistics": {
+    "name": "Souleater",
+    "health": 1100,
+    "maxHealth": 1100,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 210,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 355
+    },
+    "armor": 30
+  },
+  "experience": 1300,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.05,
+      "duration": 3000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 120,
+      "max": 125,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 210
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 1,
+      "min": 50,
+      "max": 100,
+      "range": 7,
+      "target": true,
+      "shootEffect": "smallice"
+    },
+    {
+      "name": "souleater drown",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 100,
+      "max": 200,
+      "length": 4,
+      "spread": 3,
+      "target": false,
+      "areaEffect": "rednote"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 30,
+      "max": 60,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "holy": -10,
+    "ice": 50,
+    "fire": -10,
+    "energy": -10,
+    "physical": 70
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "death": true
+  },
+  "sayings": {
+    "texts": [
+      "Life is such a fickle thing!",
+      "I will devour your soul.",
+      "Souuuls!",
+      "I will feed on you."
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.334,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.334,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2152,
+      "probability": 0.4961,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 2189,
+      "probability": 0.0091,
+      "name": "wand of cosmic energy"
+    },
+    {
+      "id": 6300,
+      "probability": 0.003
+    },
+    {
+      "id": 2273,
+      "probability": 0.08,
+      "name": "great mana potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

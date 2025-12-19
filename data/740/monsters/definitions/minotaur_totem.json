@@ -1,0 +1,53 @@
+{
+  "creatureStatistics": {
+    "name": "Minotaur Totem",
+    "health": 6000,
+    "maxHealth": 6000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 78,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 0
+    },
+    "armor": 10
+  },
+  "experience": 500,
+  "corpse": 2830,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 500,
+      "max": 1000
+    }
+  ],
+  "elements": {
+    "death": -20
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "creatureStatistics": {
+    "name": "Kalyassa",
+    "health": 10000,
+    "maxHealth": 10000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 350,
+    "attack": 500,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 947
+    },
+    "armor": 10
+  },
+  "experience": 9000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 600,
+      "max": 700,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 500
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 110,
+      "max": 495,
+      "range": 7,
+      "radius": 5,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 310,
+      "max": 495,
+      "length": 9,
+      "spread": 4,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 710,
+      "max": 895,
+      "length": 9,
+      "spread": 0,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "firefield",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 7,
+      "target": true,
+      "shootEffect": "fire"
+    }
+  ],
+  "elements": {
+    "energy": 70,
+    "earth": 50,
+    "holy": -5
+  },
+  "immunities": {
+    "fire": true,
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "summons": [
+    {
+      "name": "Dragon Lord",
+      "interval": 2000,
+      "chance": 0.2,
+      "maxSummons": 2
+    }
+  ],
+  "loot": [
+    {
+      "id": 27593,
+      "probability": 1,
+      "name": "dragon blood"
+    },
+    {
+      "id": 27594,
+      "probability": 1,
+      "name": "dragon tongue"
+    },
+    {
+      "id": 27597,
+      "probability": 1,
+      "name": "horn of kalyassa"
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 5948,
+      "probability": 0.97207,
+      "name": "red dragon leather"
+    },
+    {
+      "id": 2672,
+      "probability": 0.70391,
+      "name": "dragon ham"
+    },
+    {
+      "id": 2547,
+      "probability": 0.52514,
+      "name": "power bolt",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2167,
+      "probability": 0.19553,
+      "name": "energy ring"
+    },
+    {
+      "id": 2392,
+      "probability": 0.09497,
+      "name": "fire sword"
+    },
+    {
+      "id": 7591,
+      "probability": 0.09497,
+      "name": "great health potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7590,
+      "probability": 0.09497,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7365,
+      "probability": 0.09497,
+      "name": "onyx arrow",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2498,
+      "probability": 0.03352,
+      "name": "royal helmet"
+    },
+    {
+      "id": 2492,
+      "probability": 0.02793,
+      "name": "dragon scale mail"
+    },
+    {
+      "id": 2177,
+      "probability": 0.02793,
+      "name": "life crystal"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

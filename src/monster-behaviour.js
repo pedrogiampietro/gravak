@@ -96,6 +96,11 @@ MonsterBehaviour.prototype.handleActionTarget = function () {
     return this.setTarget(null);
   }
 
+  // Target is dead
+  if (this.getTarget().isZeroHealth()) {
+    return this.setTarget(null);
+  }
+
 }
 
 MonsterBehaviour.prototype.handleActionSpeak = function () {
@@ -126,6 +131,11 @@ MonsterBehaviour.prototype.handleActionAttack = function () {
   // We do not have a target
   if (!this.hasTarget()) {
     return this.actions.lock(this.handleActionAttack, Actions.prototype.GLOBAL_COOLDOWN);
+  }
+
+  // Target is dead - drop target immediately
+  if (this.getTarget().isZeroHealth()) {
+    return this.setTarget(null);
   }
 
   // Target is offline or missing
@@ -398,6 +408,11 @@ MonsterBehaviour.prototype.__findTarget = function () {
 
       // Cannot target invisible players
       if (player.isInvisible()) {
+        continue;
+      }
+
+      // Cannot target dead players
+      if (player.isZeroHealth()) {
         continue;
       }
 

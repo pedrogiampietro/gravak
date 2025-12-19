@@ -1,0 +1,118 @@
+{
+  "creatureStatistics": {
+    "name": "Minotaur",
+    "health": 100,
+    "maxHealth": 100,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 168,
+    "attack": 45,
+    "attackSpeed": 2000,
+    "defense": 11,
+    "outfit": {
+      "id": 25
+    },
+    "armor": 11
+  },
+  "experience": 50,
+  "corpse": 2830,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 45
+    }
+  ],
+  "elements": {
+    "fire": 20,
+    "holy": 10,
+    "ice": -10,
+    "death": -10
+  },
+  "sayings": {
+    "texts": [
+      "Kaplar!",
+      "Hurr"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.675,
+      "name": "gold coin",
+      "min": 1,
+      "max": 25
+    },
+    {
+      "id": 2510,
+      "probability": 0.2002,
+      "name": "plate shield"
+    },
+    {
+      "id": 2398,
+      "probability": 0.1284,
+      "name": "mace"
+    },
+    {
+      "id": 2464,
+      "probability": 0.1,
+      "name": "chain armor"
+    },
+    {
+      "id": 2460,
+      "probability": 0.077,
+      "name": "brass helmet"
+    },
+    {
+      "id": 2376,
+      "probability": 0.05
+    },
+    {
+      "id": 2666,
+      "probability": 0.05,
+      "name": "meat"
+    },
+    {
+      "id": 2386,
+      "probability": 0.04,
+      "name": "axe"
+    },
+    {
+      "id": 2182,
+      "probability": 0.0209,
+      "name": "minotaur horn",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2184,
+      "probability": 0.0099,
+      "name": "minotaur leather"
+    },
+    {
+      "id": 2554,
+      "probability": 0.0031
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

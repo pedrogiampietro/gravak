@@ -1,0 +1,240 @@
+{
+  "creatureStatistics": {
+    "name": "Seacrest Serpent",
+    "health": 3000,
+    "maxHealth": 3000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 500,
+    "attack": 530,
+    "attackSpeed": 2000,
+    "defense": 51,
+    "outfit": {
+      "id": 675
+    },
+    "armor": 51
+  },
+  "experience": 2600,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 145,
+      "max": 200,
+      "areaEffect": "bluenote"
+    },
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 0.1,
+      "areaEffect": "smallplants"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 530
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.07,
+      "min": 200,
+      "max": 260,
+      "range": 7,
+      "target": true,
+      "shootEffect": "earth",
+      "areaEffect": "rednote"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.11,
+      "min": 200,
+      "max": 285,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 0,
+      "max": 284,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "watersplash"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 200,
+      "max": 300,
+      "length": 4,
+      "spread": 0,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "elements": {
+    "physical": 10,
+    "energy": 10,
+    "earth": 10,
+    "fire": 20,
+    "death": 10
+  },
+  "immunities": {
+    "drown": true,
+    "ice": true,
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "LEAVE THESE GROUNDS...",
+      "THE DARK TIDE WILL SWALLOW YOU..."
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 24169,
+      "probability": 0.16853,
+      "name": "seacrest scale"
+    },
+    {
+      "id": 2672,
+      "probability": 0.1403,
+      "name": "dragon ham"
+    },
+    {
+      "id": 24170,
+      "probability": 0.1133,
+      "name": "seacrest hair"
+    },
+    {
+      "id": 7839,
+      "probability": 0.08305,
+      "name": "shiver arrow",
+      "min": 1,
+      "max": 19
+    },
+    {
+      "id": 7589,
+      "probability": 0.07919,
+      "name": "strong mana potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7588,
+      "probability": 0.07452,
+      "name": "strong health potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 24116,
+      "probability": 0.06843,
+      "name": "seacrest pearl"
+    },
+    {
+      "id": 2145,
+      "probability": 0.04284,
+      "name": "small diamond",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 5944,
+      "probability": 0.03533,
+      "name": "soul orb"
+    },
+    {
+      "id": 7896,
+      "probability": 0.02335,
+      "name": "glacier kilt"
+    },
+    {
+      "id": 2143,
+      "probability": 0.02132,
+      "name": "white pearl",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7902,
+      "probability": 0.02112,
+      "name": "glacier mask"
+    },
+    {
+      "id": 2144,
+      "probability": 0.01929,
+      "name": "black pearl",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7892,
+      "probability": 0.01848,
+      "name": "glacier shoes"
+    },
+    {
+      "id": 7632,
+      "probability": 0.01624,
+      "name": "giant shimmering pearl (green)"
+    },
+    {
+      "id": 24261,
+      "probability": 0.01076,
+      "name": "crest of the deep seas"
+    },
+    {
+      "id": 7888,
+      "probability": 0.01015,
+      "name": "glacier amulet"
+    },
+    {
+      "id": 8921,
+      "probability": 0.00893,
+      "name": "wand of draconia"
+    },
+    {
+      "id": 18390,
+      "probability": 0.00223,
+      "name": "wand of defiance"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

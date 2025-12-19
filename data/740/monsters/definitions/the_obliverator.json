@@ -1,0 +1,103 @@
+{
+  "creatureStatistics": {
+    "name": "The Obliverator",
+    "health": 9020,
+    "maxHealth": 9020,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 280,
+    "attack": 700,
+    "attackSpeed": 2000,
+    "defense": 45,
+    "outfit": {
+      "id": 35
+    },
+    "armor": 40
+  },
+  "experience": 6000,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 4000,
+      "chance": 0.05,
+      "min": 50,
+      "max": 200,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 700
+    },
+    {
+      "name": "fire",
+      "interval": 1000,
+      "chance": 0.2,
+      "min": 100,
+      "max": 250,
+      "range": 5,
+      "radius": 7,
+      "target": true,
+      "areaEffect": "firearea",
+      "shootEffect": "fire"
+    },
+    {
+      "name": "energy",
+      "interval": 3000,
+      "chance": 0.3,
+      "min": 200,
+      "max": 500,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "energy"
+    }
+  ],
+  "elements": {
+    "energy": 50,
+    "death": 35,
+    "holy": -15
+  },
+  "immunities": {
+    "fire": true,
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "fire elemental",
+      "interval": 2000,
+      "chance": 0.5,
+      "maxSummons": 3
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "NO ONE WILL BEAT ME!"
+    ],
+    "slowness": 1,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "creatureStatistics": {
+    "name": "Oodok Witchmaster",
+    "health": 450,
+    "maxHealth": 450,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 150,
+    "attack": 20,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 214
+    },
+    "armor": 10
+  },
+  "experience": 550,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 3,
+      "max": 9,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 200,
+      "duration": 4000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.15,
+      "duration": 7000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 20
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 40,
+      "range": 1,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -800,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "areaEffect": "teleport"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "duration": 5000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 6,
+      "max": 18,
+      "radius": 6,
+      "target": false,
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "poisonfield",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 1,
+      "target": true
+    }
+  ],
+  "elements": {
+    "earth": 100,
+    "fire": -5,
+    "ice": 20,
+    "holy": 35
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 98
+    },
+    {
+      "id": 2152,
+      "probability": 0.90909,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7618,
+      "probability": 0.52273,
+      "name": "health potion",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7620,
+      "probability": 0.47727,
+      "name": "mana potion",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2144,
+      "probability": 0.13636,
+      "name": "black pearl",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 5910,
+      "probability": 0.11364,
+      "name": "green piece of cloth"
+    },
+    {
+      "id": 2174,
+      "probability": 0.06818,
+      "name": "strange symbol"
+    },
+    {
+      "id": 2467,
+      "probability": 0.04545,
+      "name": "leather armor"
+    },
+    {
+      "id": 2411,
+      "probability": 0.04545,
+      "name": "poison dagger"
+    },
+    {
+      "id": 2181,
+      "probability": 0.04545,
+      "name": "terra rod"
+    },
+    {
+      "id": 2231,
+      "probability": 0.02273,
+      "name": "big bone"
+    },
+    {
+      "id": 2230,
+      "probability": 0.02273,
+      "name": "bone"
+    },
+    {
+      "id": 7440,
+      "probability": 0.02273,
+      "name": "mastermind potion"
+    },
+    {
+      "id": 3967,
+      "probability": 0.02273,
+      "name": "tribal mask"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

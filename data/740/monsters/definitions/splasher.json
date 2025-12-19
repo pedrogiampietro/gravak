@@ -1,0 +1,126 @@
+{
+  "creatureStatistics": {
+    "name": "Splasher",
+    "health": 1700,
+    "maxHealth": 1700,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 520,
+    "attack": 382,
+    "attackSpeed": 1000,
+    "defense": 15,
+    "outfit": {
+      "id": 72
+    },
+    "armor": 15
+  },
+  "experience": 500,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 40,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 100,
+      "max": 120,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 1000,
+      "chance": 1,
+      "min": 0,
+      "max": 382
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.08,
+      "min": 162,
+      "max": 228,
+      "range": 7,
+      "target": true,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.07,
+      "min": 106,
+      "max": 169,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 134,
+      "max": 148,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "bubbles"
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 101,
+      "max": 149,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "bubbles"
+    }
+  ],
+  "elements": {
+    "energy": -25,
+    "earth": -15
+  },
+  "immunities": {
+    "ice": true,
+    "fire": true,
+    "drown": true,
+    "paralyze": true
+  },
+  "sayings": {
+    "texts": [
+      "Qua hah tsh!",
+      "Teech tsha tshul!",
+      "Quara tsha Fach!",
+      "Tssssha Quara!",
+      "Blubber.",
+      "Blup."
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.13,
+      "name": "gold coin",
+      "min": 1,
+      "max": 4
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

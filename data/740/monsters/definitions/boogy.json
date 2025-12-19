@@ -1,0 +1,203 @@
+{
+  "creatureStatistics": {
+    "name": "Boogy",
+    "health": 1300,
+    "maxHealth": 1300,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 450,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 981
+    },
+    "armor": 35
+  },
+  "experience": 950,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 450,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 110,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 450
+    },
+    {
+      "name": "physical",
+      "interval": 3000,
+      "chance": 0.11,
+      "min": 100,
+      "max": 300,
+      "radius": 6,
+      "target": true,
+      "areaEffect": "redspark",
+      "shootEffect": "whirlwindclub"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 60,
+      "max": 115,
+      "range": 7,
+      "target": true,
+      "areaEffect": "explosionarea",
+      "shootEffect": "largerock"
+    }
+  ],
+  "elements": {
+    "physical": 10,
+    "earth": 70,
+    "ice": 10,
+    "holy": 40,
+    "death": 20
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "Go to sleep!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 193
+    },
+    {
+      "id": 28349,
+      "probability": 0.17498,
+      "name": "shimmering beetles"
+    },
+    {
+      "id": 28350,
+      "probability": 0.15272,
+      "name": "fairy wings"
+    },
+    {
+      "id": 7588,
+      "probability": 0.1519,
+      "name": "strong health potion"
+    },
+    {
+      "id": 28391,
+      "probability": 0.07997,
+      "name": "leaf star",
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 2791,
+      "probability": 0.04349,
+      "name": "wood mushroom"
+    },
+    {
+      "id": 18420,
+      "probability": 0.03442,
+      "name": "red crystal fragment",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 27618,
+      "probability": 0.03277,
+      "name": "prismatic quartz",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2802,
+      "probability": 0.03256,
+      "name": "sling herb"
+    },
+    {
+      "id": 27046,
+      "probability": 0.02927,
+      "name": "ancient coin",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7887,
+      "probability": 0.02906,
+      "name": "terra amulet"
+    },
+    {
+      "id": 7761,
+      "probability": 0.02391,
+      "name": "small enchanted emerald",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7439,
+      "probability": 0.01237,
+      "name": "berserk potion"
+    },
+    {
+      "id": 2418,
+      "probability": 0.00845,
+      "name": "golden sickle"
+    },
+    {
+      "id": 28355,
+      "probability": 0.00453,
+      "name": "wooden spellbook"
+    },
+    {
+      "id": 9980,
+      "probability": 0.00144,
+      "name": "crystal of power"
+    },
+    {
+      "id": 5015,
+      "probability": 0.00103,
+      "name": "mandrake"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

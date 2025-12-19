@@ -1,0 +1,163 @@
+{
+  "creatureStatistics": {
+    "name": "Renegade Quara Constrictor",
+    "health": 1500,
+    "maxHealth": 1500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 380,
+    "attack": 150,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 46
+    },
+    "armor": 35
+  },
+  "experience": 1250,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 3000,
+      "chance": 0.35,
+      "min": 150,
+      "max": 300,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 150
+    },
+    {
+      "name": "quara constrictor freeze",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "quara constrictor electrify",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 1
+    }
+  ],
+  "elements": {
+    "energy": -25,
+    "earth": -10
+  },
+  "immunities": {
+    "fire": true,
+    "drown": true,
+    "ice": true,
+    "paralyze": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 0.80782,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 12443,
+      "probability": 0.14621,
+      "name": "quara tentacle"
+    },
+    {
+      "id": 2178,
+      "probability": 0.06667,
+      "name": "mind stone"
+    },
+    {
+      "id": 7590,
+      "probability": 0.06437,
+      "name": "great mana potion"
+    },
+    {
+      "id": 2214,
+      "probability": 0.05149,
+      "name": "ring of healing"
+    },
+    {
+      "id": 2670,
+      "probability": 0.05103,
+      "name": "shrimp"
+    },
+    {
+      "id": 2150,
+      "probability": 0.0492,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7368,
+      "probability": 0.04598,
+      "name": "assassin star",
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 2147,
+      "probability": 0.04092,
+      "name": "small ruby",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 15649,
+      "probability": 0.03494,
+      "name": "vortex bolt",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 18414,
+      "probability": 0.01149,
+      "name": "violet crystal shard"
+    },
+    {
+      "id": 8911,
+      "probability": 0.00874,
+      "name": "northwind rod"
+    },
+    {
+      "id": 5895,
+      "probability": 0.00322,
+      "name": "fish fin"
+    },
+    {
+      "id": 2114,
+      "probability": 0.0023,
+      "name": "piggy bank"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

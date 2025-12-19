@@ -1,0 +1,323 @@
+{
+  "creatureStatistics": {
+    "name": "Lloyd",
+    "health": 64000,
+    "maxHealth": 64000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 400,
+    "attack": 1200,
+    "attackSpeed": 2000,
+    "defense": 55,
+    "outfit": {
+      "id": 940
+    },
+    "armor": 55
+  },
+  "experience": 50000,
+  "corpse": 2813,
+  "fluidType": 4,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 180,
+      "max": 250
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1200
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 130,
+      "max": 460,
+      "length": 6,
+      "spread": 0,
+      "areaEffect": "purpleenergy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 430,
+      "max": 660,
+      "radius": 2,
+      "target": false,
+      "areaEffect": "purplechain"
+    },
+    {
+      "name": "lloyd wave 1",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 430,
+      "max": 560
+    },
+    {
+      "name": "lloyd wave 2",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 230,
+      "max": 460
+    }
+  ],
+  "elements": {
+    "death": 50,
+    "holy": 50
+  },
+  "immunities": {
+    "fire": true,
+    "drown": true,
+    "lifedrain": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 200
+    },
+    {
+      "id": 7440,
+      "probability": 1,
+      "name": "mastermind potion"
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 35
+    },
+    {
+      "id": 2214,
+      "probability": 1,
+      "name": "ring of healing"
+    },
+    {
+      "id": 8920,
+      "probability": 1,
+      "name": "wand of starstorm"
+    },
+    {
+      "id": 18415,
+      "probability": 0.7125,
+      "name": "green crystal shard",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 18413,
+      "probability": 0.6875,
+      "name": "blue crystal shard",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 18414,
+      "probability": 0.6125,
+      "name": "violet crystal shard",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 8473,
+      "probability": 0.5875,
+      "name": "ultimate health potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 8472,
+      "probability": 0.575,
+      "name": "great spirit potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 7590,
+      "probability": 0.5125,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 26182,
+      "probability": 0.475,
+      "name": "collar of blue plasma"
+    },
+    {
+      "id": 12410,
+      "probability": 0.475,
+      "name": "luminous orb"
+    },
+    {
+      "id": 25377,
+      "probability": 0.3875,
+      "name": "gold token"
+    },
+    {
+      "id": 2156,
+      "probability": 0.2625,
+      "name": "red gem"
+    },
+    {
+      "id": 2145,
+      "probability": 0.25,
+      "name": "small diamond",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2149,
+      "probability": 0.225,
+      "name": "small emerald",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2158,
+      "probability": 0.2125,
+      "name": "blue gem"
+    },
+    {
+      "id": 5888,
+      "probability": 0.2125,
+      "name": "piece of hell steel",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2150,
+      "probability": 0.2125,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 7632,
+      "probability": 0.0875,
+      "name": "giant shimmering pearl"
+    },
+    {
+      "id": 7633,
+      "probability": 0.0875,
+      "name": "giant shimmering pearl"
+    },
+    {
+      "id": 9970,
+      "probability": 0.175,
+      "name": "small topaz",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2155,
+      "probability": 0.15,
+      "name": "green gem"
+    },
+    {
+      "id": 2147,
+      "probability": 0.1375,
+      "name": "small ruby",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2154,
+      "probability": 0.1375,
+      "name": "yellow gem"
+    },
+    {
+      "id": 9809,
+      "probability": 0.125,
+      "name": "rusted armor"
+    },
+    {
+      "id": 25172,
+      "probability": 0.125,
+      "name": "silver token"
+    },
+    {
+      "id": 5909,
+      "probability": 0.1,
+      "name": "white piece of cloth",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 8901,
+      "probability": 0.0875,
+      "name": "spellbook of warding"
+    },
+    {
+      "id": 5904,
+      "probability": 0.075,
+      "name": "magic sulphur"
+    },
+    {
+      "id": 11355,
+      "probability": 0.0625,
+      "name": "spellweaver's robe"
+    },
+    {
+      "id": 2153,
+      "probability": 0.0625,
+      "name": "violet gem"
+    },
+    {
+      "id": 7895,
+      "probability": 0.0375,
+      "name": "lightning legs"
+    },
+    {
+      "id": 5887,
+      "probability": 0.0375,
+      "name": "piece of royal steel",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2195,
+      "probability": 0.025,
+      "name": "boots of haste"
+    },
+    {
+      "id": 27049,
+      "probability": 0.025,
+      "name": "pillow backpack"
+    },
+    {
+      "id": 5891,
+      "probability": 0.0125,
+      "name": "enchanted chicken wing"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

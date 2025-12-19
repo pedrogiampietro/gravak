@@ -1,0 +1,142 @@
+{
+  "creatureStatistics": {
+    "name": "Golden Servant Replica",
+    "health": 2000,
+    "maxHealth": 2000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 220,
+    "attackSpeed": 2000,
+    "defense": 45,
+    "outfit": {
+      "id": 396
+    },
+    "armor": 40
+  },
+  "experience": 450,
+  "corpse": 2813,
+  "fluidType": 4,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.13,
+      "min": 40,
+      "max": 70,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 220
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.11,
+      "min": 80,
+      "max": 110,
+      "length": 5,
+      "spread": 1,
+      "areaEffect": "yellowenergy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 70,
+      "max": 110,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "energy",
+      "areaEffect": "purpleenergy"
+    }
+  ],
+  "elements": {
+    "earth": 80,
+    "fire": 10,
+    "ice": -5,
+    "death": -5
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.85419,
+      "name": "gold coin",
+      "min": 1,
+      "max": 137
+    },
+    {
+      "id": 7620,
+      "probability": 0.0529,
+      "name": "mana potion"
+    },
+    {
+      "id": 7618,
+      "probability": 0.04559,
+      "name": "health potion"
+    },
+    {
+      "id": 2381,
+      "probability": 0.0228,
+      "name": "halberd"
+    },
+    {
+      "id": 2796,
+      "probability": 0.01634,
+      "name": "green mushroom"
+    },
+    {
+      "id": 9690,
+      "probability": 0.00989,
+      "name": "gear wheel"
+    },
+    {
+      "id": 8900,
+      "probability": 0.0043,
+      "name": "spellbook of enlightenment"
+    },
+    {
+      "id": 2165,
+      "probability": 0.00301,
+      "name": "stealth ring"
+    },
+    {
+      "id": 13758,
+      "probability": 0.00258,
+      "name": "slime mould"
+    },
+    {
+      "id": 13938,
+      "probability": 0.00043,
+      "name": "golden can of oil"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

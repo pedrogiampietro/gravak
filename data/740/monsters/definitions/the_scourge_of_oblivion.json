@@ -1,0 +1,496 @@
+{
+  "creatureStatistics": {
+    "name": "The Scourge Of Oblivion",
+    "health": 800000,
+    "maxHealth": 800000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 450,
+    "attack": 1500,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 875
+    },
+    "armor": 30
+  },
+  "experience": 75000,
+  "corpse": 2813,
+  "fluidType": 4,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 6000,
+      "chance": 0.25,
+      "min": 2000,
+      "max": 5000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 1000,
+      "chance": 0.04,
+      "duration": 5000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 1000,
+      "chance": 0.17,
+      "duration": 2000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1500
+    },
+    {
+      "name": "manadrain",
+      "interval": 1000,
+      "chance": 0.07,
+      "min": 900,
+      "max": 1500,
+      "range": 7,
+      "shootEffect": "energy",
+      "areaEffect": "poff"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "radius": 5,
+      "target": false,
+      "duration": 9000,
+      "areaEffect": "smallclouds"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.08,
+      "min": 1550,
+      "max": 2550,
+      "range": 7,
+      "radius": 7,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 1075,
+      "max": 2405,
+      "range": 7,
+      "target": true,
+      "shootEffect": "energyball",
+      "areaEffect": "energy"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 1000,
+      "chance": 0.2,
+      "min": 600,
+      "max": 1500,
+      "radius": 8,
+      "target": false,
+      "areaEffect": "bluebubble"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 750,
+      "max": 1200,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "purpleenergy"
+    },
+    {
+      "name": "choking fear drown",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 450,
+      "max": 1400,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "suddendeath",
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "manadrain",
+      "interval": 1000,
+      "chance": 0.1,
+      "min": 800,
+      "max": 2300,
+      "radius": 8,
+      "target": false,
+      "areaEffect": "greenshimmer"
+    },
+    {
+      "name": "fire",
+      "interval": 1000,
+      "chance": 0.34,
+      "min": 100,
+      "max": 700,
+      "range": 7,
+      "radius": 7,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 300,
+      "max": 950,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "The Scourge Of Oblivion prepares a devestating attack!",
+      "The Scourge Of Oblivion activates its reflective shields!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2127,
+      "probability": 1,
+      "name": "emerald bangle"
+    },
+    {
+      "id": 26176,
+      "probability": 1,
+      "name": "plasmatic lightning"
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 25
+    },
+    {
+      "id": 25172,
+      "probability": 1,
+      "name": "silver token",
+      "min": 1,
+      "max": 22
+    },
+    {
+      "id": 26174,
+      "probability": 1,
+      "name": "spark sphere"
+    },
+    {
+      "id": 2160,
+      "probability": 0.94595,
+      "name": "crystal coin",
+      "min": 1,
+      "max": 22
+    },
+    {
+      "id": 18413,
+      "probability": 0.72973,
+      "name": "blue crystal shard",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 18414,
+      "probability": 0.54054,
+      "name": "violet crystal shard",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 18415,
+      "probability": 0.51351,
+      "name": "green crystal shard",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 28415,
+      "probability": 0.51351,
+      "name": "royal star",
+      "min": 1,
+      "max": 179
+    },
+    {
+      "id": 32717,
+      "probability": 0.48649,
+      "name": "giant sapphire"
+    },
+    {
+      "id": 5892,
+      "probability": 0.37838,
+      "name": "huge chunk of crude iron"
+    },
+    {
+      "id": 25377,
+      "probability": 0.35135,
+      "name": "gold token",
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 26031,
+      "probability": 0.35135,
+      "name": "supreme health potion",
+      "min": 1,
+      "max": 11
+    },
+    {
+      "id": 26029,
+      "probability": 0.35135,
+      "name": "ultimate mana potion",
+      "min": 1,
+      "max": 11
+    },
+    {
+      "id": 26030,
+      "probability": 0.2973,
+      "name": "ultimate spirit potion",
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 2154,
+      "probability": 0.27027,
+      "name": "yellow gem"
+    },
+    {
+      "id": 32715,
+      "probability": 0.24324,
+      "name": "giant ruby"
+    },
+    {
+      "id": 2147,
+      "probability": 0.24324,
+      "name": "small ruby",
+      "min": 1,
+      "max": 21
+    },
+    {
+      "id": 32716,
+      "probability": 0.21622,
+      "name": "giant emerald"
+    },
+    {
+      "id": 2156,
+      "probability": 0.21622,
+      "name": "red gem"
+    },
+    {
+      "id": 2145,
+      "probability": 0.21622,
+      "name": "small diamond",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 7439,
+      "probability": 0.18919,
+      "name": "berserk potion",
+      "min": 1,
+      "max": 17
+    },
+    {
+      "id": 7443,
+      "probability": 0.18919,
+      "name": "bullseye potion",
+      "min": 1,
+      "max": 19
+    },
+    {
+      "id": 25523,
+      "probability": 0.18919,
+      "name": "rift crossbow"
+    },
+    {
+      "id": 2436,
+      "probability": 0.18919,
+      "name": "skull staff"
+    },
+    {
+      "id": 2149,
+      "probability": 0.18919,
+      "name": "small emerald",
+      "min": 1,
+      "max": 21
+    },
+    {
+      "id": 26198,
+      "probability": 0.16216,
+      "name": "collar of blue plasma"
+    },
+    {
+      "id": 7440,
+      "probability": 0.16216,
+      "name": "mastermind potion",
+      "min": 1,
+      "max": 19
+    },
+    {
+      "id": 9970,
+      "probability": 0.16216,
+      "name": "small topaz",
+      "min": 1,
+      "max": 19
+    },
+    {
+      "id": 2158,
+      "probability": 0.13514,
+      "name": "blue gem"
+    },
+    {
+      "id": 2150,
+      "probability": 0.13514,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 23
+    },
+    {
+      "id": 26199,
+      "probability": 0.10811,
+      "name": "collar of green plasma"
+    },
+    {
+      "id": 7633,
+      "probability": 0.10811,
+      "name": "giant shimmering pearl (brown)"
+    },
+    {
+      "id": 2155,
+      "probability": 0.10811,
+      "name": "green gem"
+    },
+    {
+      "id": 25522,
+      "probability": 0.10811,
+      "name": "rift bow"
+    },
+    {
+      "id": 26133,
+      "probability": 0.10811,
+      "name": "void boots"
+    },
+    {
+      "id": 9971,
+      "probability": 0.08108,
+      "name": "gold ingot"
+    },
+    {
+      "id": 5904,
+      "probability": 0.08108,
+      "name": "magic sulphur"
+    },
+    {
+      "id": 25382,
+      "probability": 0.08108,
+      "name": "rift shield"
+    },
+    {
+      "id": 26185,
+      "probability": 0.08108,
+      "name": "ring of blue plasma"
+    },
+    {
+      "id": 26187,
+      "probability": 0.08108,
+      "name": "ring of green plasma"
+    },
+    {
+      "id": 2123,
+      "probability": 0.08108,
+      "name": "ring of the sky"
+    },
+    {
+      "id": 5809,
+      "probability": 0.08108,
+      "name": "soul stone"
+    },
+    {
+      "id": 8903,
+      "probability": 0.08108,
+      "name": "spellbook of lost souls"
+    },
+    {
+      "id": 7427,
+      "probability": 0.05405,
+      "name": "chaos mace"
+    },
+    {
+      "id": 26200,
+      "probability": 0.05405,
+      "name": "collar of red plasma"
+    },
+    {
+      "id": 31447,
+      "probability": 0.05405,
+      "name": "library ticket"
+    },
+    {
+      "id": 26189,
+      "probability": 0.05405,
+      "name": "ring of red plasma"
+    },
+    {
+      "id": 7414,
+      "probability": 0.02703,
+      "name": "abyss hammer"
+    },
+    {
+      "id": 5480,
+      "probability": 0.02703,
+      "name": "cat's paw"
+    },
+    {
+      "id": 2153,
+      "probability": 0.02703,
+      "name": "violet gem"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

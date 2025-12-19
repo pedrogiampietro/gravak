@@ -1,0 +1,81 @@
+{
+  "creatureStatistics": {
+    "name": "Pirate Skeleton",
+    "health": 190,
+    "maxHealth": 190,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 180,
+    "attack": 50,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 195
+    },
+    "armor": 15
+  },
+  "experience": 85,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 20,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 50
+    }
+  ],
+  "elements": {
+    "holy": -25
+  },
+  "immunities": {
+    "death": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.48,
+      "name": "gold coin",
+      "min": 1,
+      "max": 25
+    },
+    {
+      "id": 2229,
+      "probability": 0.0446
+    },
+    {
+      "id": 2230,
+      "probability": 0.0425
+    },
+    {
+      "id": 2231,
+      "probability": 0.0514
+    },
+    {
+      "id": 2376,
+      "probability": 0.0055
+    },
+    {
+      "id": 2406,
+      "probability": 0.01003,
+      "name": "short sword"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

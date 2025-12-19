@@ -1,0 +1,340 @@
+{
+  "creatureStatistics": {
+    "name": "Annihilon",
+    "health": 46500,
+    "maxHealth": 46500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 380,
+    "attack": 1707,
+    "attackSpeed": 2000,
+    "defense": 55,
+    "outfit": {
+      "id": 12
+    },
+    "armor": 60
+  },
+  "experience": 15000,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.14,
+      "min": 400,
+      "max": 900,
+      "areaEffect": "greenshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.04,
+      "speedChange": 500,
+      "duration": 7000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1707
+    },
+    {
+      "name": "death",
+      "interval": 1000,
+      "chance": 0.11,
+      "min": 0,
+      "max": 600,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 200,
+      "max": 700,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "icearea"
+    },
+    {
+      "name": "physical",
+      "interval": 3000,
+      "chance": 0.18,
+      "min": 50,
+      "max": 255,
+      "radius": 5,
+      "target": true,
+      "areaEffect": "groundshaker"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 50,
+      "max": 600,
+      "radius": 6,
+      "target": true,
+      "areaEffect": "firearea",
+      "shootEffect": "fire"
+    }
+  ],
+  "elements": {
+    "energy": 95,
+    "ice": 20,
+    "holy": -5,
+    "death": 95
+  },
+  "immunities": {
+    "lifedrain": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Flee as long as you can!",
+      "Annihilon's might will crush you all!",
+      "I am coming for you!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 9810,
+      "probability": 0.62097,
+      "name": "slightly rusted armor"
+    },
+    {
+      "id": 7632,
+      "probability": 0.37903,
+      "name": "giant shimmering pearl",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2452,
+      "probability": 0.28226,
+      "name": "heavy mace"
+    },
+    {
+      "id": 7368,
+      "probability": 0.2379,
+      "name": "assassin star",
+      "min": 1,
+      "max": 50
+    },
+    {
+      "id": 2158,
+      "probability": 0.22581,
+      "name": "blue gem"
+    },
+    {
+      "id": 2427,
+      "probability": 0.22581,
+      "name": "guardian halberd"
+    },
+    {
+      "id": 2154,
+      "probability": 0.22581,
+      "name": "yellow gem"
+    },
+    {
+      "id": 2127,
+      "probability": 0.22177,
+      "name": "emerald bangle"
+    },
+    {
+      "id": 9971,
+      "probability": 0.20968,
+      "name": "gold ingot"
+    },
+    {
+      "id": 2156,
+      "probability": 0.20968,
+      "name": "red gem"
+    },
+    {
+      "id": 6529,
+      "probability": 0.20565,
+      "name": "infernal bolt",
+      "min": 1,
+      "max": 46
+    },
+    {
+      "id": 7439,
+      "probability": 0.19758,
+      "name": "berserk potion"
+    },
+    {
+      "id": 2152,
+      "probability": 0.19758,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 30
+    },
+    {
+      "id": 2547,
+      "probability": 0.19758,
+      "name": "power bolt",
+      "min": 1,
+      "max": 99
+    },
+    {
+      "id": 2381,
+      "probability": 0.19355,
+      "name": "halberd"
+    },
+    {
+      "id": 7840,
+      "probability": 0.18952,
+      "name": "flaming arrow",
+      "min": 1,
+      "max": 96
+    },
+    {
+      "id": 5944,
+      "probability": 0.18952,
+      "name": "soul orb",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2153,
+      "probability": 0.17742,
+      "name": "violet gem"
+    },
+    {
+      "id": 7366,
+      "probability": 0.16935,
+      "name": "viper star",
+      "min": 1,
+      "max": 70
+    },
+    {
+      "id": 2155,
+      "probability": 0.16129,
+      "name": "green gem"
+    },
+    {
+      "id": 7440,
+      "probability": 0.15323,
+      "name": "mastermind potion"
+    },
+    {
+      "id": 7591,
+      "probability": 0.14516,
+      "name": "great health potion"
+    },
+    {
+      "id": 7421,
+      "probability": 0.14113,
+      "name": "onyx flail"
+    },
+    {
+      "id": 8473,
+      "probability": 0.13306,
+      "name": "ultimate health potion"
+    },
+    {
+      "id": 7590,
+      "probability": 0.12903,
+      "name": "great mana potion"
+    },
+    {
+      "id": 2519,
+      "probability": 0.125,
+      "name": "crown shield"
+    },
+    {
+      "id": 8472,
+      "probability": 0.125,
+      "name": "great spirit potion"
+    },
+    {
+      "id": 5954,
+      "probability": 0.11694,
+      "name": "demon horn",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 8891,
+      "probability": 0.10484,
+      "name": "paladin armor"
+    },
+    {
+      "id": 2528,
+      "probability": 0.10081,
+      "name": "tower shield"
+    },
+    {
+      "id": 2515,
+      "probability": 0.08468,
+      "name": "guardian shield"
+    },
+    {
+      "id": 7387,
+      "probability": 0.07258,
+      "name": "diamond sceptre"
+    },
+    {
+      "id": 2520,
+      "probability": 0.04032,
+      "name": "demon shield"
+    },
+    {
+      "id": 2514,
+      "probability": 0.03629,
+      "name": "mastermind shield"
+    },
+    {
+      "id": 7431,
+      "probability": 0.01613,
+      "name": "demonbone"
+    },
+    {
+      "id": 8877,
+      "probability": 0.0121,
+      "name": "lavos armor"
+    },
+    {
+      "id": 8928,
+      "probability": 0.0121,
+      "name": "obsidian truncheon"
+    },
+    {
+      "id": 8929,
+      "probability": 0.00403,
+      "name": "the stomper"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

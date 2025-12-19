@@ -1,0 +1,153 @@
+{
+  "creatureStatistics": {
+    "name": "The Sandking",
+    "health": 50000,
+    "maxHealth": 50000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 400,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 1013
+    },
+    "armor": 30
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 400
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 500,
+      "range": 4,
+      "radius": 4,
+      "target": true,
+      "areaEffect": "stones"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "radius": 5,
+      "speedChange": -650,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 18413,
+      "probability": 1,
+      "name": "blue crystal shard",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7632,
+      "probability": 1,
+      "name": "giant shimmering pearl"
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 177
+    },
+    {
+      "id": 18415,
+      "probability": 1,
+      "name": "green crystal shard",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2183,
+      "probability": 1,
+      "name": "hailstorm rod"
+    },
+    {
+      "id": 5892,
+      "probability": 1,
+      "name": "huge chunk of crude iron"
+    },
+    {
+      "id": 7440,
+      "probability": 1,
+      "name": "mastermind potion"
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 11
+    },
+    {
+      "id": 2214,
+      "probability": 1,
+      "name": "ring of healing"
+    },
+    {
+      "id": 2436,
+      "probability": 1,
+      "name": "skull staff"
+    },
+    {
+      "id": 9970,
+      "probability": 1,
+      "name": "small topaz",
+      "min": 1,
+      "max": 11
+    },
+    {
+      "id": 8473,
+      "probability": 1,
+      "name": "ultimate health potion",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 18414,
+      "probability": 1,
+      "name": "violet crystal shard",
+      "min": 1,
+      "max": 4
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

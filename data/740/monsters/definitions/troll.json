@@ -3,58 +3,124 @@
     "name": "Troll",
     "health": 50,
     "maxHealth": 50,
-    "attack": 1,
     "mana": 0,
     "maxMana": 0,
-    "attackSlowness": 40,
-    "defense": 5,
-    "speed": 30,
+    "speed": 126,
+    "attack": 15,
+    "attackSpeed": 2000,
+    "defense": 6,
     "outfit": {
       "id": 15
-    }
+    },
+    "armor": 6
   },
-  "fluidType": 0,
   "experience": 20,
   "corpse": 2806,
+  "fluidType": 1,
   "behaviour": {
-    "type": "HOSTILE",
-    "fleeHealth": 5,
-    "openDoors": true,
+    "type": 2,
+    "fleeHealth": 15,
+    "openDoors": false,
     "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 15
+    }
+  ],
+  "elements": {
+    "energy": 20,
+    "holy": 10,
+    "earth": -10,
+    "death": -10
+  },
+  "sayings": {
+    "texts": [
+      "Grrrr",
+      "Groar",
+      "Gruntz!",
+      "Hmmm, bugs",
+      "Hmmm, dogs"
+    ],
+    "slowness": 5,
+    "chance": 0.1
   },
   "loot": [
     {
       "id": 2148,
-      "probability": 1,
+      "probability": 0.65542,
+      "name": "gold coin",
       "min": 1,
-      "max": 5
+      "max": 12
     },
     {
-      "id": 2148,
-      "probability": 1,
-      "min": 1,
-      "max": 5
+      "id": 2380,
+      "probability": 0.1969,
+      "name": "hand axe"
+    },
+    {
+      "id": 2666,
+      "probability": 0.15431,
+      "name": "meat"
+    },
+    {
+      "id": 2389,
+      "probability": 0.12998,
+      "name": "spear"
     },
     {
       "id": 2461,
-      "probability": 0.1
+      "probability": 0.11892,
+      "name": "leather helmet"
     },
     {
-      "id": 2148,
-      "probability": 1,
-      "min": 1,
-      "max": 5
+      "id": 2643,
+      "probability": 0.09983,
+      "name": "leather boots"
+    },
+    {
+      "id": 2120,
+      "probability": 0.08131,
+      "name": "rope"
+    },
+    {
+      "id": 2448,
+      "probability": 0.05448,
+      "name": "studded club"
+    },
+    {
+      "id": 2512,
+      "probability": 0.05448,
+      "name": "wooden shield"
+    },
+    {
+      "id": 26642,
+      "probability": 0.02268,
+      "name": "heavy old tome"
+    },
+    {
+      "id": 10606,
+      "probability": 0.01189,
+      "name": "bunch of troll hair"
+    },
+    {
+      "id": 27071,
+      "probability": 0.00028,
+      "name": "old rag"
     }
   ],
-  "sayings": {
-    "texts": [
-      "Hmmm, bugs",
-      "Hmmm, dogs",
-      "Grrr",
-      "Groar",
-      "Gruntz!"
-    ],
-    "slowness": 300,
-    "chance": 0.75
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
   }
 }

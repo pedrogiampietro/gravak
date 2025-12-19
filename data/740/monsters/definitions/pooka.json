@@ -1,0 +1,185 @@
+{
+  "creatureStatistics": {
+    "name": "Pooka",
+    "health": 500,
+    "maxHealth": 500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 120,
+    "attackSpeed": 2000,
+    "defense": 38,
+    "outfit": {
+      "id": 977
+    },
+    "armor": 38
+  },
+  "experience": 500,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 40,
+      "max": 60,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 120
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 50,
+      "range": 4,
+      "target": true,
+      "shootEffect": "smallstone",
+      "areaEffect": "stones"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.11,
+      "min": 0,
+      "max": 0,
+      "length": 4,
+      "spread": 2,
+      "target": false,
+      "duration": 5000,
+      "areaEffect": "stun"
+    }
+  ],
+  "elements": {
+    "energy": -10,
+    "earth": 70,
+    "fire": 20,
+    "ice": 20,
+    "holy": 20,
+    "death": 10
+  },
+  "immunities": {
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "This was the initial trick, but the second follows quick!",
+      "Hoppel-di-hopp!",
+      "Jinx!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 134
+    },
+    {
+      "id": 2684,
+      "probability": 0.19032,
+      "name": "carrot",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7588,
+      "probability": 0.12396,
+      "name": "strong health potion"
+    },
+    {
+      "id": 28349,
+      "probability": 0.10381,
+      "name": "shimmering beetles"
+    },
+    {
+      "id": 1294,
+      "probability": 0.05147,
+      "name": "small stone",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 28393,
+      "probability": 0.04555,
+      "name": "rainbow quartz",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2687,
+      "probability": 0.03723,
+      "name": "cookie",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 7760,
+      "probability": 0.03417,
+      "name": "small enchanted ruby",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 24850,
+      "probability": 0.03373,
+      "name": "opal",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2790,
+      "probability": 0.02935,
+      "name": "orange mushroom"
+    },
+    {
+      "id": 2801,
+      "probability": 0.0276,
+      "name": "fern"
+    },
+    {
+      "id": 2165,
+      "probability": 0.01029,
+      "name": "stealth ring"
+    },
+    {
+      "id": 28356,
+      "probability": 0.00329,
+      "name": "dream blossom staff"
+    },
+    {
+      "id": 13298,
+      "probability": 0.00066,
+      "name": "carrot on a stick"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

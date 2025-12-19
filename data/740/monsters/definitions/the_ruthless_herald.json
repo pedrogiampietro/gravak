@@ -1,0 +1,117 @@
+{
+  "creatureStatistics": {
+    "name": "The Ruthless Herald",
+    "health": 100,
+    "maxHealth": 100,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 0,
+    "outfit": {
+      "id": 237
+    }
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 0,
+      "max": 0,
+      "radius": 3,
+      "target": true,
+      "duration": 60000,
+      "areaEffect": "teleport",
+      "shootEffect": "suddendeath"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 0,
+      "max": 0,
+      "radius": 3,
+      "target": true,
+      "duration": 60000,
+      "areaEffect": "teleport",
+      "shootEffect": "suddendeath"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 0,
+      "max": 0,
+      "radius": 3,
+      "target": true,
+      "duration": 60000,
+      "areaEffect": "teleport",
+      "shootEffect": "suddendeath"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 0,
+      "max": 0,
+      "radius": 3,
+      "target": true,
+      "duration": 6000,
+      "areaEffect": "teleport",
+      "shootEffect": "suddendeath"
+    }
+  ],
+  "immunities": {
+    "physical": true,
+    "energy": true,
+    "fire": true,
+    "earth": true,
+    "drown": true,
+    "ice": true,
+    "holy": true,
+    "death": true,
+    "lifedrain": true,
+    "manadrain": true,
+    "paralyze": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "I am so proud of my son Orshabaal.",
+      "Have you heard, the imperor is marrying an imp named April? What a fool.",
+      "The Ruthless Seven are going to make the easter bunny an honorary member!",
+      "They are coming ... perhaps for YOU!",
+      "Beware! The Ruthless Seven are coming!",
+      "Killing me is imp-ossible, because I am imp-roved! I am immune to any imp-act!",
+      "The one who kills me gets an imp-outfit.",
+      "Hey you! I've heard that! You're first to die when the masters come.",
+      "Nice to meet you. I am Harold, the ruthless herald.",
+      "Have you seen my friend Harvey? I could swear he's somewhere around.",
+      "My masters are on their way!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

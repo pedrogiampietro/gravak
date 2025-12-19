@@ -1,0 +1,185 @@
+{
+  "creatureStatistics": {
+    "name": "Lamassu",
+    "health": 8700,
+    "maxHealth": 8700,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 320,
+    "attack": 550,
+    "attackSpeed": 2000,
+    "defense": 82,
+    "outfit": {
+      "id": 1190
+    },
+    "armor": 82
+  },
+  "experience": 9000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 550
+    },
+    {
+      "name": "holy",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 350,
+      "max": 490,
+      "radius": 3,
+      "areaEffect": "holyarea"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 330,
+      "max": 410,
+      "range": 5,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "smallearth",
+      "areaEffect": "smallplants"
+    }
+  ],
+  "elements": {
+    "earth": 80,
+    "death": -30,
+    "holy": 80
+  },
+  "immunities": {
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin"
+    },
+    {
+      "id": 34098,
+      "probability": 0.13744,
+      "name": "lamassu horn"
+    },
+    {
+      "id": 2156,
+      "probability": 0.13744,
+      "name": "red gem",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 18420,
+      "probability": 0.10581,
+      "name": "red crystal fragment"
+    },
+    {
+      "id": 18413,
+      "probability": 0.10466,
+      "name": "blue crystal shard",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 18414,
+      "probability": 0.09603,
+      "name": "violet crystal shard",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7887,
+      "probability": 0.08108,
+      "name": "terra amulet"
+    },
+    {
+      "id": 34097,
+      "probability": 0.07131,
+      "name": "lamassu hoof"
+    },
+    {
+      "id": 7903,
+      "probability": 0.07016,
+      "name": "terra hood"
+    },
+    {
+      "id": 24850,
+      "probability": 0.0529,
+      "name": "opal"
+    },
+    {
+      "id": 2149,
+      "probability": 0.0506,
+      "name": "small emerald"
+    },
+    {
+      "id": 24849,
+      "probability": 0.03278,
+      "name": "onyx chip"
+    },
+    {
+      "id": 28393,
+      "probability": 0.0322,
+      "name": "rainbow quartz",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 18416,
+      "probability": 0.02818,
+      "name": "green crystal splinter"
+    },
+    {
+      "id": 18421,
+      "probability": 0.02588,
+      "name": "green crystal fragment"
+    },
+    {
+      "id": 2198,
+      "probability": 0.0207,
+      "name": "elven amulet"
+    },
+    {
+      "id": 2153,
+      "probability": 0.01955,
+      "name": "violet gem"
+    },
+    {
+      "id": 10219,
+      "probability": 0.01898,
+      "name": "sacred tree amulet"
+    },
+    {
+      "id": 2158,
+      "probability": 0.01495,
+      "name": "blue gem"
+    },
+    {
+      "id": 18415,
+      "probability": 0.00748,
+      "name": "green crystal shard"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,298 @@
+{
+  "creatureStatistics": {
+    "name": "The Blazing Time Guardian",
+    "health": 150000,
+    "maxHealth": 150000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 340,
+    "attack": 800,
+    "attackSpeed": 2000,
+    "defense": 70,
+    "outfit": {
+      "id": 944
+    },
+    "armor": 70
+  },
+  "experience": 50000,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 800
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 600,
+      "max": 780,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "energy",
+      "areaEffect": "energy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 600,
+      "max": 780,
+      "length": 9,
+      "spread": 0,
+      "areaEffect": "energy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 600,
+      "max": 780,
+      "length": 9,
+      "spread": 3,
+      "areaEffect": "energyarea"
+    },
+    {
+      "name": "energycondition",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 2000,
+      "max": 2000,
+      "radius": 7,
+      "areaEffect": "yellowspark"
+    },
+    {
+      "name": "bleedcondition",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 2000,
+      "max": 2000,
+      "length": 9,
+      "spread": 0,
+      "areaEffect": "yellowspark"
+    }
+  ],
+  "elements": {
+    "earth": 70,
+    "ice": -40,
+    "energy": 70,
+    "fire": 70,
+    "holy": 70,
+    "death": 70,
+    "physical": 70
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 200
+    },
+    {
+      "id": 7440,
+      "probability": 1,
+      "name": "mastermind potion"
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 35
+    },
+    {
+      "id": 2214,
+      "probability": 1,
+      "name": "ring of healing"
+    },
+    {
+      "id": 2436,
+      "probability": 1,
+      "name": "skull staff"
+    },
+    {
+      "id": 18415,
+      "probability": 0.84615,
+      "name": "green crystal shard",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 18414,
+      "probability": 0.69231,
+      "name": "violet crystal shard",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 18413,
+      "probability": 0.61538,
+      "name": "blue crystal shard",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7590,
+      "probability": 0.53846,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 8473,
+      "probability": 0.53846,
+      "name": "ultimate health potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 8472,
+      "probability": 0.46154,
+      "name": "great spirit potion",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 12410,
+      "probability": 0.46154,
+      "name": "luminous orb"
+    },
+    {
+      "id": 9970,
+      "probability": 0.38462,
+      "name": "small topaz",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2197,
+      "probability": 0.38462,
+      "name": "stone skin amulet"
+    },
+    {
+      "id": 2155,
+      "probability": 0.30769,
+      "name": "green gem"
+    },
+    {
+      "id": 25172,
+      "probability": 0.30769,
+      "name": "silver token"
+    },
+    {
+      "id": 7387,
+      "probability": 0.23077,
+      "name": "diamond sceptre"
+    },
+    {
+      "id": 7632,
+      "probability": 0.11538,
+      "name": "giant shimmering pearl"
+    },
+    {
+      "id": 7633,
+      "probability": 0.11538,
+      "name": "giant shimmering pearl"
+    },
+    {
+      "id": 22396,
+      "probability": 0.15385,
+      "name": "cluster of solace"
+    },
+    {
+      "id": 25377,
+      "probability": 0.15385,
+      "name": "gold token"
+    },
+    {
+      "id": 5892,
+      "probability": 0.15385,
+      "name": "huge chunk of crude iron"
+    },
+    {
+      "id": 5904,
+      "probability": 0.15385,
+      "name": "magic sulphur"
+    },
+    {
+      "id": 2156,
+      "probability": 0.15385,
+      "name": "red gem"
+    },
+    {
+      "id": 2150,
+      "probability": 0.15385,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2145,
+      "probability": 0.15385,
+      "name": "small diamond",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2154,
+      "probability": 0.15385,
+      "name": "yellow gem"
+    },
+    {
+      "id": 7897,
+      "probability": 0.07692,
+      "name": "glacier robe"
+    },
+    {
+      "id": 27612,
+      "probability": 0.07692,
+      "name": "part of a rune (three)"
+    },
+    {
+      "id": 2149,
+      "probability": 0.07692,
+      "name": "small emerald",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2147,
+      "probability": 0.07692,
+      "name": "small ruby",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 8904,
+      "probability": 0.07692,
+      "name": "spellscroll of prophecies"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

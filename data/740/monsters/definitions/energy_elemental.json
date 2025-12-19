@@ -1,0 +1,163 @@
+{
+  "creatureStatistics": {
+    "name": "Energy Elemental",
+    "health": 500,
+    "maxHealth": 500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 175,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 293
+    },
+    "armor": 15
+  },
+  "experience": 550,
+  "corpse": 2813,
+  "fluidType": 4,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 90,
+      "max": 150,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 175
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 125,
+      "max": 252,
+      "range": 7,
+      "radius": 2,
+      "target": true,
+      "shootEffect": "energy",
+      "areaEffect": "energy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 100,
+      "max": 130,
+      "range": 7,
+      "target": true,
+      "shootEffect": "energyball",
+      "areaEffect": "energy"
+    },
+    {
+      "name": "energy elemental electrify",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0
+    }
+  ],
+  "elements": {
+    "physical": 30,
+    "holy": 10,
+    "death": 5,
+    "earth": -15
+  },
+  "immunities": {
+    "fire": true,
+    "energy": true,
+    "ice": true,
+    "lifedrain": true,
+    "invisible": true,
+    "paralyze": true
+  },
+  "loot": [
+    {
+      "id": 2124,
+      "probability": 0.02
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 70
+    },
+    {
+      "id": 2150,
+      "probability": 0.05,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2167,
+      "probability": 0.00892,
+      "name": "energy ring"
+    },
+    {
+      "id": 2170,
+      "probability": 0.0102,
+      "name": "silver amulet"
+    },
+    {
+      "id": 2189,
+      "probability": 0.00636,
+      "name": "wand of cosmic energy"
+    },
+    {
+      "id": 2399,
+      "probability": 0.099,
+      "name": "throwing star",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2515,
+      "probability": 0.00243,
+      "name": "guardian shield"
+    },
+    {
+      "id": 2270,
+      "probability": 0.07692,
+      "name": "strong mana potion"
+    },
+    {
+      "id": 2268,
+      "probability": 0.11711,
+      "name": "mana potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

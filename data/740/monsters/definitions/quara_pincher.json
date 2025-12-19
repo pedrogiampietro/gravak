@@ -1,0 +1,143 @@
+{
+  "creatureStatistics": {
+    "name": "Quara Pincher",
+    "health": 1800,
+    "maxHealth": 1800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 396,
+    "attack": 340,
+    "attackSpeed": 2000,
+    "defense": 85,
+    "outfit": {
+      "id": 77
+    },
+    "armor": 85
+  },
+  "experience": 1200,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 340
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "range": 1,
+      "speedChange": -600,
+      "duration": 3000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "earth": -10,
+    "energy": -25,
+    "physical": 10
+  },
+  "immunities": {
+    "lifedrain": true,
+    "invisible": true,
+    "drown": true,
+    "fire": true,
+    "ice": true
+  },
+  "sayings": {
+    "texts": [
+      "Clank clank!",
+      "Clap!",
+      "Crrrk! Crrrk!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 150
+    },
+    {
+      "id": 2152,
+      "probability": 0.40655,
+      "name": "platinum coin"
+    },
+    {
+      "id": 12446,
+      "probability": 0.14711,
+      "name": "quara pincers"
+    },
+    {
+      "id": 7591,
+      "probability": 0.10371,
+      "name": "great health potion"
+    },
+    {
+      "id": 2147,
+      "probability": 0.07539,
+      "name": "small ruby",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2381,
+      "probability": 0.06979,
+      "name": "halberd"
+    },
+    {
+      "id": 2670,
+      "probability": 0.04919,
+      "name": "shrimp"
+    },
+    {
+      "id": 5895,
+      "probability": 0.01616,
+      "name": "fish fin"
+    },
+    {
+      "id": 2475,
+      "probability": 0.01481,
+      "name": "warrior helmet"
+    },
+    {
+      "id": 2487,
+      "probability": 0.0027,
+      "name": "crown armor"
+    },
+    {
+      "id": 7897,
+      "probability": 0.00116,
+      "name": "glacier robe"
+    },
+    {
+      "id": 13305,
+      "probability": 0.00045,
+      "name": "giant shrimp"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

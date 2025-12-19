@@ -1,0 +1,146 @@
+{
+  "creatureStatistics": {
+    "name": "Yakchal",
+    "health": 5750,
+    "maxHealth": 5750,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 389,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 149
+    },
+    "armor": 15
+  },
+  "experience": 4400,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.25,
+      "min": 50,
+      "max": 100,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 389
+    },
+    {
+      "name": "outfit",
+      "interval": 1000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "duration": 8000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.18,
+      "min": 0,
+      "max": 430,
+      "radius": 4,
+      "target": true,
+      "areaEffect": "icearea",
+      "shootEffect": "smallice"
+    },
+    {
+      "name": "physical",
+      "interval": 3000,
+      "chance": 0.34,
+      "min": 200,
+      "max": 310,
+      "range": 7,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "snowball"
+    },
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -600,
+      "duration": 20000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "fire": 50,
+    "earth": 40,
+    "holy": 26,
+    "energy": -10,
+    "death": -10
+  },
+  "immunities": {
+    "ice": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Ice Golem",
+      "interval": 1000,
+      "chance": 0.13,
+      "maxSummons": 4
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "So you think you are cool?",
+      "I hope it is not too cold for you! HeHeHe.",
+      "Freeze!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 88
+    },
+    {
+      "id": 2195,
+      "probability": 0.02,
+      "name": "boots of haste"
+    },
+    {
+      "id": 2436,
+      "probability": 0.045,
+      "name": "skull staff"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": 4
+  }
+}

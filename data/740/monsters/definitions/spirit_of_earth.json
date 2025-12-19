@@ -1,0 +1,61 @@
+{
+  "creatureStatistics": {
+    "name": "Spirit of Earth",
+    "health": 1200,
+    "maxHealth": 1200,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 180,
+    "attack": 180,
+    "attackSpeed": 2000,
+    "defense": 32,
+    "outfit": {
+      "id": 67
+    },
+    "armor": 30
+  },
+  "experience": 800,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 180
+    }
+  ],
+  "elements": {
+    "energy": 50,
+    "fire": -5
+  },
+  "immunities": {
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Show your strengh ... or perish."
+    ],
+    "slowness": 5,
+    "chance": 0.05
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

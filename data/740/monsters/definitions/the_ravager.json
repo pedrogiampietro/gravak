@@ -1,0 +1,158 @@
+{
+  "creatureStatistics": {
+    "name": "The Ravager",
+    "health": 53500,
+    "maxHealth": 53500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 340,
+    "attack": 400,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 87
+    },
+    "armor": 25
+  },
+  "experience": 14980,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 200,
+      "max": 400,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 400
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 200,
+      "max": 750,
+      "range": 7,
+      "shootEffect": "death",
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 700,
+      "max": 880,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "smallclouds"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.18,
+      "min": 400,
+      "max": 500,
+      "length": 7,
+      "spread": 0,
+      "areaEffect": "smoke"
+    }
+  ],
+  "elements": {
+    "energy": 10,
+    "earth": 1,
+    "ice": 50
+  },
+  "immunities": {
+    "death": true,
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2144,
+      "probability": 1,
+      "name": "black pearl",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 15
+    },
+    {
+      "id": 2159,
+      "probability": 1,
+      "name": "scarab coin",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2142,
+      "probability": 0.33871,
+      "name": "ancient amulet"
+    },
+    {
+      "id": 7591,
+      "probability": 0.29032,
+      "name": "great health potion",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 7590,
+      "probability": 0.17742,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2440,
+      "probability": 0.06452,
+      "name": "daramian waraxe"
+    },
+    {
+      "id": 2540,
+      "probability": 0.04839,
+      "name": "scarab shield"
+    },
+    {
+      "id": 2134,
+      "probability": 0.04839,
+      "name": "silver brooch"
+    },
+    {
+      "id": 9808,
+      "probability": 0.01613,
+      "name": "heavily rusted armor"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

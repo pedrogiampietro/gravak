@@ -1,0 +1,151 @@
+{
+  "creatureStatistics": {
+    "name": "Vashresamun",
+    "health": 4000,
+    "maxHealth": 4000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 340,
+    "attack": 200,
+    "attackSpeed": 2000,
+    "defense": 40,
+    "outfit": {
+      "id": 90
+    },
+    "armor": 40
+  },
+  "experience": 2950,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.2,
+      "min": 250,
+      "max": 450,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.12,
+      "speedChange": 370,
+      "duration": 30000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 200
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 200,
+      "max": 600,
+      "radius": 5,
+      "target": false,
+      "areaEffect": "purplenote"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 800,
+      "range": 1
+    }
+  ],
+  "elements": {
+    "holy": -10,
+    "ice": 20,
+    "fire": 20,
+    "energy": 20,
+    "earth": 20
+  },
+  "immunities": {
+    "death": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Banshee",
+      "interval": 2000,
+      "chance": 0.2,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "If music is the food of death, drop dead.",
+      "Are you enjoying my music?",
+      "Come my maidens, we have visitors!",
+      "Chakka Chakka!",
+      "Heheheheee!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.31,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.31,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.31,
+      "name": "gold coin",
+      "min": 1,
+      "max": 50
+    },
+    {
+      "id": 2072,
+      "probability": 0.092
+    },
+    {
+      "id": 2273,
+      "probability": 0.08,
+      "name": "great mana potion"
+    },
+    {
+      "id": 2124,
+      "probability": 0.01
+    },
+    {
+      "id": 2074,
+      "probability": 0.0033
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

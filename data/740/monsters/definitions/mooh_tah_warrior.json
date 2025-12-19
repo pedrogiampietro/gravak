@@ -1,0 +1,213 @@
+{
+  "creatureStatistics": {
+    "name": "Mooh'Tah Warrior",
+    "health": 1200,
+    "maxHealth": 1200,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 611
+    },
+    "armor": 30
+  },
+  "experience": 900,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.22,
+      "min": 110,
+      "max": 160,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.08,
+      "speedChange": 220,
+      "duration": 1000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.14,
+      "min": 150,
+      "max": 200,
+      "length": 4,
+      "spread": 0,
+      "areaEffect": "yellowenergy"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.11,
+      "min": 0,
+      "max": 135,
+      "range": 7,
+      "areaEffect": "explosionarea",
+      "shootEffect": "largerock"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 50,
+      "max": 150,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "blackspark"
+    },
+    {
+      "name": "silencer skill reducer",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 3
+    }
+  ],
+  "elements": {
+    "physical": 1,
+    "fire": 1,
+    "energy": 3,
+    "ice": 10,
+    "earth": 1,
+    "death": 1
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Feel the power of the Mooh'Tah!",
+      "Ommm!",
+      "I am at peace and you are dead!",
+      "There is no rage, there is only control!",
+      "You will not disrupt my inner balance!"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.6,
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 2152,
+      "probability": 0.3986,
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 23573,
+      "probability": 0.1503
+    },
+    {
+      "id": 7589,
+      "probability": 0.0711
+    },
+    {
+      "id": 7588,
+      "probability": 0.0639
+    },
+    {
+      "id": 5878,
+      "probability": 0.0553
+    },
+    {
+      "id": 2147,
+      "probability": 0.0547
+    },
+    {
+      "id": 2149,
+      "probability": 0.0528
+    },
+    {
+      "id": 2150,
+      "probability": 0.052
+    },
+    {
+      "id": 9970,
+      "probability": 0.0476
+    },
+    {
+      "id": 12428,
+      "probability": 0.0471,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 23548,
+      "probability": 0.0138
+    },
+    {
+      "id": 2207,
+      "probability": 0.0111
+    },
+    {
+      "id": 23537,
+      "probability": 0.0109
+    },
+    {
+      "id": 2515,
+      "probability": 0.0102
+    },
+    {
+      "id": 2477,
+      "probability": 0.0071
+    },
+    {
+      "id": 5911,
+      "probability": 0.0065
+    },
+    {
+      "id": 2476,
+      "probability": 0.0049
+    },
+    {
+      "id": 7401,
+      "probability": 0.0015
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

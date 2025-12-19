@@ -1,0 +1,289 @@
+{
+  "creatureStatistics": {
+    "name": "Cliff Strider",
+    "health": 9400,
+    "maxHealth": 9400,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 246,
+    "attack": 499,
+    "attackSpeed": 2000,
+    "defense": 89,
+    "outfit": {
+      "id": 497
+    },
+    "armor": 89
+  },
+  "experience": 5700,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 499
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 800,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "largerock",
+      "areaEffect": "stones"
+    },
+    {
+      "name": "cliff strider skill reducer",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "cliff strider electrify",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 1
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 1000,
+      "length": 6,
+      "spread": 0,
+      "target": false,
+      "areaEffect": "groundshaker"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 100,
+      "max": 300,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "yellowenergy"
+    }
+  ],
+  "elements": {
+    "physical": 10,
+    "fire": 20,
+    "ice": 20,
+    "death": 35
+  },
+  "immunities": {
+    "paralyze": true,
+    "earth": true,
+    "energy": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Knorrrr"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 196
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 7590,
+      "probability": 0.33641,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 8473,
+      "probability": 0.24406,
+      "name": "ultimate health potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 18429,
+      "probability": 0.17942,
+      "name": "vein of ore",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 5944,
+      "probability": 0.16887,
+      "name": "soul orb"
+    },
+    {
+      "id": 18427,
+      "probability": 0.15765,
+      "name": "pulverized ore"
+    },
+    {
+      "id": 18428,
+      "probability": 0.15369,
+      "name": "cliff strider claw"
+    },
+    {
+      "id": 5880,
+      "probability": 0.13918,
+      "name": "iron ore"
+    },
+    {
+      "id": 11227,
+      "probability": 0.12071,
+      "name": "shiny stone"
+    },
+    {
+      "id": 2144,
+      "probability": 0.09301,
+      "name": "black pearl"
+    },
+    {
+      "id": 18419,
+      "probability": 0.09301,
+      "name": "cyan crystal fragment"
+    },
+    {
+      "id": 18435,
+      "probability": 0.09169,
+      "name": "prismatic bolt",
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 2143,
+      "probability": 0.08971,
+      "name": "white pearl",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 18418,
+      "probability": 0.08905,
+      "name": "blue crystal splinter",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 18413,
+      "probability": 0.06728,
+      "name": "blue crystal shard"
+    },
+    {
+      "id": 2156,
+      "probability": 0.05739,
+      "name": "red gem"
+    },
+    {
+      "id": 9942,
+      "probability": 0.02704,
+      "name": "crystal of balance"
+    },
+    {
+      "id": 18390,
+      "probability": 0.01913,
+      "name": "wand of defiance"
+    },
+    {
+      "id": 7437,
+      "probability": 0.01517,
+      "name": "sapphire hammer"
+    },
+    {
+      "id": 5904,
+      "probability": 0.01451,
+      "name": "magic sulphur"
+    },
+    {
+      "id": 18412,
+      "probability": 0.01187,
+      "name": "glacial rod"
+    },
+    {
+      "id": 7452,
+      "probability": 0.01055,
+      "name": "spiked squelcher"
+    },
+    {
+      "id": 18453,
+      "probability": 0.00923,
+      "name": "crystal crossbow"
+    },
+    {
+      "id": 2477,
+      "probability": 0.00858,
+      "name": "knight legs"
+    },
+    {
+      "id": 9980,
+      "probability": 0.00792,
+      "name": "crystal of power"
+    },
+    {
+      "id": 2158,
+      "probability": 0.00726,
+      "name": "blue gem"
+    },
+    {
+      "id": 2393,
+      "probability": 0.0066,
+      "name": "giant sword"
+    },
+    {
+      "id": 18450,
+      "probability": 0.00594,
+      "name": "crystalline sword"
+    },
+    {
+      "id": 2497,
+      "probability": 0.00528,
+      "name": "crusader helmet"
+    },
+    {
+      "id": 2487,
+      "probability": 0.00462,
+      "name": "crown armor"
+    },
+    {
+      "id": 2645,
+      "probability": 0.00066,
+      "name": "steel boots"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

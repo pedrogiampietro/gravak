@@ -1,0 +1,111 @@
+{
+  "creatureStatistics": {
+    "name": "Corym Vanguard",
+    "health": 700,
+    "maxHealth": 700,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 140,
+    "attackSpeed": 2000,
+    "defense": 29,
+    "outfit": {
+      "id": 534
+    },
+    "armor": 29
+  },
+  "experience": 490,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 50,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 30,
+      "max": 60,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 140
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 50,
+      "max": 100,
+      "length": 5,
+      "spread": 3,
+      "target": false,
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 40,
+      "max": 70,
+      "radius": 4,
+      "target": true,
+      "areaEffect": "mortarea"
+    }
+  ],
+  "elements": {
+    "ice": 10,
+    "energy": 20
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Gimme! Gimme!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 2696,
+      "probability": 0.2
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

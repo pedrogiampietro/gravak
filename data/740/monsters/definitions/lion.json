@@ -1,0 +1,75 @@
+{
+  "creatureStatistics": {
+    "name": "Lion",
+    "health": 80,
+    "maxHealth": 80,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 40,
+    "attackSpeed": 2000,
+    "defense": 6,
+    "outfit": {
+      "id": 41
+    },
+    "armor": 6
+  },
+  "experience": 30,
+  "corpse": 2889,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 10,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 40
+    }
+  ],
+  "elements": {
+    "earth": 20,
+    "holy": 20,
+    "ice": -15,
+    "death": -8
+  },
+  "sayings": {
+    "texts": [
+      "Groarrr!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2666,
+      "probability": 0.45327,
+      "name": "meat"
+    },
+    {
+      "id": 2671,
+      "probability": 0.19265,
+      "name": "ham"
+    },
+    {
+      "id": 10608,
+      "probability": 0.01148,
+      "name": "lion's mane"
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

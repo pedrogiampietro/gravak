@@ -1,0 +1,206 @@
+{
+  "creatureStatistics": {
+    "name": "Glooth Golem",
+    "health": 2700,
+    "maxHealth": 2700,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 260,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 600
+    },
+    "armor": 27
+  },
+  "experience": 2200,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.13,
+      "speedChange": 404,
+      "duration": 4000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 200,
+      "max": 250,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 0.02,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 125,
+      "max": 245,
+      "range": 7,
+      "shootEffect": "energy"
+    },
+    {
+      "name": "war golem skill reducer",
+      "interval": 2000,
+      "chance": 0.16,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "war golem electrify",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 0,
+      "max": 0,
+      "range": 7
+    }
+  ],
+  "elements": {
+    "holy": 15,
+    "fire": 10,
+    "energy": 5,
+    "physical": 10,
+    "death": 30
+  },
+  "immunities": {
+    "invisible": true,
+    "earth": true,
+    "paralyze": true
+  },
+  "sayings": {
+    "texts": [
+      "*slosh*",
+      "*clank*"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 5880,
+      "probability": 0.0103
+    },
+    {
+      "id": 23554,
+      "probability": 0.0172
+    },
+    {
+      "id": 23541,
+      "probability": 0.0172
+    },
+    {
+      "id": 23536,
+      "probability": 0.0137
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.6,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 24124,
+      "probability": 0.0447
+    },
+    {
+      "id": 9690,
+      "probability": 0.0069
+    },
+    {
+      "id": 23514,
+      "probability": 0.0997
+    },
+    {
+      "id": 2152,
+      "probability": 0.5601,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 23474,
+      "probability": 0.1684
+    },
+    {
+      "id": 8473,
+      "probability": 0.0447
+    },
+    {
+      "id": 7590,
+      "probability": 0.0928
+    },
+    {
+      "id": 23538,
+      "probability": 0.0069
+    },
+    {
+      "id": 23550,
+      "probability": 0.0344
+    },
+    {
+      "id": 23549,
+      "probability": 0.0103
+    },
+    {
+      "id": 23551,
+      "probability": 0.0069
+    },
+    {
+      "id": 2154,
+      "probability": 0.0103
+    },
+    {
+      "id": 9970,
+      "probability": 0.0756,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2149,
+      "probability": 0.0859,
+      "min": 1,
+      "max": 4
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

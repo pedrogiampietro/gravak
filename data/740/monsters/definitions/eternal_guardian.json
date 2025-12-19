@@ -1,0 +1,145 @@
+{
+  "creatureStatistics": {
+    "name": "Eternal Guardian",
+    "health": 2500,
+    "maxHealth": 2500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 204,
+    "attack": 300,
+    "attackSpeed": 2000,
+    "defense": 62,
+    "outfit": {
+      "id": 345
+    },
+    "armor": 62
+  },
+  "experience": 1800,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 300
+    }
+  ],
+  "elements": {
+    "physical": 20,
+    "energy": 10,
+    "fire": 70,
+    "ice": 10,
+    "holy": 20,
+    "death": 20
+  },
+  "immunities": {
+    "earth": true,
+    "drown": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Zzrkrrch!",
+      "<crackle>"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.99955,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2152,
+      "probability": 0.99708,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 1294,
+      "probability": 0.30268,
+      "name": "small stone",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 10549,
+      "probability": 0.20024,
+      "name": "ancient stone"
+    },
+    {
+      "id": 11325,
+      "probability": 0.1002,
+      "name": "spiked iron ball"
+    },
+    {
+      "id": 11323,
+      "probability": 0.01991,
+      "name": "zaoan halberd"
+    },
+    {
+      "id": 5880,
+      "probability": 0.01682,
+      "name": "iron ore"
+    },
+    {
+      "id": 11227,
+      "probability": 0.00819,
+      "name": "shiny stone"
+    },
+    {
+      "id": 2528,
+      "probability": 0.00807,
+      "name": "tower shield"
+    },
+    {
+      "id": 11339,
+      "probability": 0.00729,
+      "name": "clay lump"
+    },
+    {
+      "id": 2427,
+      "probability": 0.00566,
+      "name": "guardian halberd"
+    },
+    {
+      "id": 11343,
+      "probability": 0.00499,
+      "name": "piece of marble rock"
+    },
+    {
+      "id": 13757,
+      "probability": 0.00443,
+      "name": "coal"
+    },
+    {
+      "id": 11307,
+      "probability": 0.00107,
+      "name": "zaoan sword"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "creatureStatistics": {
+    "name": "Orclops Doomhauler",
+    "health": 1700,
+    "maxHealth": 1700,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 240,
+    "attack": 215,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 934
+    },
+    "armor": 35
+  },
+  "experience": 1200,
+  "corpse": 2820,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.1,
+      "speedChange": 336,
+      "duration": 2000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 215
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.35,
+      "min": 117,
+      "max": 220,
+      "range": 7,
+      "target": true,
+      "shootEffect": "largerock"
+    },
+    {
+      "name": "cursecondition",
+      "interval": 2000,
+      "chance": 0.5,
+      "min": 100,
+      "max": 200,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "whirlwindclub",
+      "areaEffect": "explosionarea"
+    }
+  ],
+  "elements": {
+    "physical": 10,
+    "ice": -10,
+    "death": 10,
+    "fire": 15,
+    "earth": 30,
+    "energy": -10
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "Me mash!",
+      "GRRRRR!",
+      "Muhahaha!",
+      "Me strong, you weak!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 184
+    },
+    {
+      "id": 27038,
+      "probability": 0.2024,
+      "name": "bug meat"
+    },
+    {
+      "id": 27036,
+      "probability": 0.19822,
+      "name": "bone toothpick"
+    },
+    {
+      "id": 7588,
+      "probability": 0.16606,
+      "name": "strong health potion"
+    },
+    {
+      "id": 27037,
+      "probability": 0.14976,
+      "name": "beetle carapace"
+    },
+    {
+      "id": 2788,
+      "probability": 0.08105,
+      "name": "red mushroom",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2428,
+      "probability": 0.07863,
+      "name": "orcish axe"
+    },
+    {
+      "id": 2194,
+      "probability": 0.05969,
+      "name": "mysterious fetish"
+    },
+    {
+      "id": 2147,
+      "probability": 0.03227,
+      "name": "small ruby",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2144,
+      "probability": 0.03116,
+      "name": "black pearl",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 9970,
+      "probability": 0.02951,
+      "name": "small topaz",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 8843,
+      "probability": 0.02918,
+      "name": "onion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 18417,
+      "probability": 0.02445,
+      "name": "brown crystal splinter",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7452,
+      "probability": 0.01388,
+      "name": "spiked squelcher"
+    },
+    {
+      "id": 20108,
+      "probability": 0.01377,
+      "name": "pair of iron fists"
+    },
+    {
+      "id": 7439,
+      "probability": 0.01046,
+      "name": "berserk potion"
+    },
+    {
+      "id": 11374,
+      "probability": 0.01002,
+      "name": "beetle necklace"
+    },
+    {
+      "id": 3953,
+      "probability": 0.00947,
+      "name": "war drum"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

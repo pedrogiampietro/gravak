@@ -1,0 +1,81 @@
+{
+  "creatureStatistics": {
+    "name": "Sacred Spider",
+    "health": 550,
+    "maxHealth": 550,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 160,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 219
+    },
+    "armor": 25
+  },
+  "experience": 330,
+  "corpse": 2807,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 160
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 50,
+      "max": 80,
+      "range": 7,
+      "shootEffect": "poison"
+    }
+  ],
+  "elements": {
+    "fire": -5
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.4,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 19
+    },
+    {
+      "id": 2463,
+      "probability": 0.04761,
+      "name": "plate armor"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

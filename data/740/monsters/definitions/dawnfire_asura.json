@@ -1,0 +1,279 @@
+{
+  "creatureStatistics": {
+    "name": "Dawnfire Asura",
+    "health": 2900,
+    "maxHealth": 2900,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 280,
+    "attack": 269,
+    "attackSpeed": 2000,
+    "defense": 55,
+    "outfit": {
+      "id": 150
+    },
+    "armor": 55
+  },
+  "experience": 4100,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 50,
+      "max": 100,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 320,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 269
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 70,
+      "range": 7
+    },
+    {
+      "name": "firefield",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 50,
+      "max": 200,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "purpleenergy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 10,
+      "max": 100,
+      "range": 1,
+      "shootEffect": "energy",
+      "areaEffect": "energy"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "radius": 1,
+      "target": true,
+      "speedChange": -100,
+      "duration": 30000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "physical": -10,
+    "energy": -5,
+    "ice": -10,
+    "holy": -10,
+    "death": 20
+  },
+  "immunities": {
+    "fire": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Encounter the flames of destiny!",
+      "Fire and destruction!",
+      "I will end your torment. Do not run, little mortal.",
+      "Join me, brothers, for a BLOODY FRENZY!"
+    ],
+    "slowness": 2,
+    "chance": 0.07
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 0.8419,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 9
+    },
+    {
+      "id": 2148,
+      "probability": 0.69612,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 6558,
+      "probability": 0.2083,
+      "name": "flask of demonic blood"
+    },
+    {
+      "id": 5944,
+      "probability": 0.14157,
+      "name": "soul orb"
+    },
+    {
+      "id": 24630,
+      "probability": 0.12263,
+      "name": "golden lotus brooch"
+    },
+    {
+      "id": 24631,
+      "probability": 0.11211,
+      "name": "peacock feather fan"
+    },
+    {
+      "id": 6500,
+      "probability": 0.104,
+      "name": "demonic essence"
+    },
+    {
+      "id": 7590,
+      "probability": 0.09107,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2147,
+      "probability": 0.05981,
+      "name": "small ruby",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2149,
+      "probability": 0.03336,
+      "name": "small emerald",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2150,
+      "probability": 0.03306,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 9970,
+      "probability": 0.02825,
+      "name": "small topaz",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2145,
+      "probability": 0.02765,
+      "name": "small diamond",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 5911,
+      "probability": 0.02555,
+      "name": "red piece of cloth"
+    },
+    {
+      "id": 2663,
+      "probability": 0.02314,
+      "name": "mystic turban"
+    },
+    {
+      "id": 2187,
+      "probability": 0.01172,
+      "name": "wand of inferno"
+    },
+    {
+      "id": 2194,
+      "probability": 0.01022,
+      "name": "mysterious fetish"
+    },
+    {
+      "id": 2156,
+      "probability": 0.00932,
+      "name": "red gem"
+    },
+    {
+      "id": 8871,
+      "probability": 0.00751,
+      "name": "focus cape"
+    },
+    {
+      "id": 2133,
+      "probability": 0.00751,
+      "name": "ruby necklace"
+    },
+    {
+      "id": 7899,
+      "probability": 0.00421,
+      "name": "magma coat"
+    },
+    {
+      "id": 2158,
+      "probability": 0.00301,
+      "name": "blue gem"
+    },
+    {
+      "id": 6300,
+      "probability": 0.00271,
+      "name": "death ring"
+    },
+    {
+      "id": 24637,
+      "probability": 0.0018,
+      "name": "oriental shoes"
+    },
+    {
+      "id": 8902,
+      "probability": 0.0006,
+      "name": "spellbook of mind control"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

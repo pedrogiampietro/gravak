@@ -1,0 +1,225 @@
+{
+  "creatureStatistics": {
+    "name": "Retching Horror",
+    "health": 5300,
+    "maxHealth": 5300,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 360,
+    "attack": 400,
+    "attackSpeed": 2000,
+    "defense": 74,
+    "outfit": {
+      "id": 588
+    },
+    "armor": 74
+  },
+  "experience": 4100,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 400
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "length": 4,
+      "spread": 3,
+      "target": true,
+      "duration": 5000,
+      "areaEffect": "greenshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "radius": 4,
+      "target": true,
+      "speedChange": -700,
+      "duration": 15000,
+      "shootEffect": "whirlwindclub",
+      "areaEffect": "stun"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 110,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "blackspark"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 200,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "sniperarrow"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 200,
+      "max": 350,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "fireattack"
+    }
+  ],
+  "elements": {
+    "physical": 5,
+    "energy": 10,
+    "fire": 85,
+    "ice": 15,
+    "death": 20
+  },
+  "immunities": {
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Wait for us, little maggot...",
+      "We will devour you...",
+      "My little beetles, go forth, eat, feast!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 0.82759,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 9
+    },
+    {
+      "id": 2148,
+      "probability": 0.81103,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 22539,
+      "probability": 0.13379,
+      "name": "goosebump leather"
+    },
+    {
+      "id": 2789,
+      "probability": 0.1131,
+      "name": "brown mushroom",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7590,
+      "probability": 0.1131,
+      "name": "great mana potion"
+    },
+    {
+      "id": 22541,
+      "probability": 0.11034,
+      "name": "pool of chitinous glue"
+    },
+    {
+      "id": 7591,
+      "probability": 0.10759,
+      "name": "great health potion"
+    },
+    {
+      "id": 22363,
+      "probability": 0.04,
+      "name": "broken dream"
+    },
+    {
+      "id": 3962,
+      "probability": 0.03172,
+      "name": "beastslayer axe"
+    },
+    {
+      "id": 7386,
+      "probability": 0.02207,
+      "name": "mercenary sword"
+    },
+    {
+      "id": 7452,
+      "probability": 0.02207,
+      "name": "spiked squelcher"
+    },
+    {
+      "id": 2392,
+      "probability": 0.01793,
+      "name": "fire sword"
+    },
+    {
+      "id": 8910,
+      "probability": 0.01241,
+      "name": "underworld rod"
+    },
+    {
+      "id": 7421,
+      "probability": 0.01103,
+      "name": "onyx flail"
+    },
+    {
+      "id": 8920,
+      "probability": 0.01103,
+      "name": "wand of starstorm"
+    },
+    {
+      "id": 2519,
+      "probability": 0.0069,
+      "name": "crown shield"
+    },
+    {
+      "id": 7412,
+      "probability": 0.00414,
+      "name": "butcher's axe"
+    },
+    {
+      "id": 2528,
+      "probability": 0.00414,
+      "name": "tower shield"
+    },
+    {
+      "id": 22396,
+      "probability": 0.00276,
+      "name": "cluster of solace"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

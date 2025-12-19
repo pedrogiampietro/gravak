@@ -1,0 +1,90 @@
+{
+  "creatureStatistics": {
+    "name": "The Fire Empowered Duke",
+    "health": 50000,
+    "maxHealth": 50000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 270,
+    "attack": 800,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 1047
+    },
+    "armor": 30
+  },
+  "experience": 40000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 800
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 1000,
+      "range": 3,
+      "length": 6,
+      "spread": 8,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 1000,
+      "range": 3,
+      "length": 9,
+      "spread": 4,
+      "areaEffect": "fire"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 135,
+      "max": 1000,
+      "radius": 2,
+      "areaEffect": "explosionarea"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 1000,
+      "radius": 8,
+      "areaEffect": "blackspark"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

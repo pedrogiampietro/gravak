@@ -1,0 +1,103 @@
+{
+  "creatureStatistics": {
+    "name": "The Blightfather",
+    "health": 400,
+    "maxHealth": 400,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 290,
+    "attack": 200,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 348
+    },
+    "armor": 25
+  },
+  "experience": 600,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 80,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "invisible",
+      "interval": 1000,
+      "chance": 0.1,
+      "duration": 3000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 200
+    },
+    {
+      "name": "effect",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "poison"
+    }
+  ],
+  "elements": {
+    "death": 50,
+    "ice": -5,
+    "fire": -10
+  },
+  "immunities": {
+    "earth": true,
+    "invisible": true,
+    "lifedrain": true,
+    "paralyze": true
+  },
+  "sayings": {
+    "texts": [
+      "Crump!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.02,
+      "name": "gold coin",
+      "min": 1,
+      "max": 61
+    },
+    {
+      "id": 2148,
+      "probability": 0.02,
+      "name": "gold coin",
+      "min": 1,
+      "max": 60
+    },
+    {
+      "id": 2150,
+      "probability": 0.008,
+      "name": "small amethyst"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

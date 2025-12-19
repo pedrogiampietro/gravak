@@ -1,0 +1,92 @@
+{
+  "creatureStatistics": {
+    "name": "Shadow Hound",
+    "health": 555,
+    "maxHealth": 555,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 360,
+    "attack": 350,
+    "attackSpeed": 2000,
+    "defense": 55,
+    "outfit": {
+      "id": 322
+    },
+    "armor": 50
+  },
+  "experience": 600,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 60,
+      "max": 230,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 350
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.24,
+      "min": 60,
+      "max": 160,
+      "shootEffect": "fire",
+      "areaEffect": "fireattack"
+    },
+    {
+      "name": "monster soulfire",
+      "interval": 2000,
+      "chance": 0.14,
+      "min": 0,
+      "max": 0
+    }
+  ],
+  "elements": {
+    "holy": 30,
+    "energy": 10,
+    "fire": -10,
+    "ice": -10,
+    "physical": -20
+  },
+  "immunities": {
+    "death": true,
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Grrrr!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

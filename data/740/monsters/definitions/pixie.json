@@ -1,0 +1,213 @@
+{
+  "creatureStatistics": {
+    "name": "Pixie",
+    "health": 770,
+    "maxHealth": 770,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 240,
+    "attack": 250,
+    "attackSpeed": 2000,
+    "defense": 52,
+    "outfit": {
+      "id": 982
+    },
+    "armor": 52
+  },
+  "experience": 700,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 40,
+      "max": 75,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 250
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 85,
+      "max": 135,
+      "range": 7,
+      "target": true,
+      "shootEffect": "energy",
+      "areaEffect": "energy"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.11,
+      "min": 0,
+      "max": 0,
+      "length": 4,
+      "spread": 2,
+      "target": false,
+      "speedChange": -440,
+      "duration": 7000,
+      "areaEffect": "greenshimmer"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 0,
+      "max": 100,
+      "range": 4,
+      "shootEffect": "leafstar"
+    },
+    {
+      "name": "pixie skill reducer",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0
+    }
+  ],
+  "elements": {
+    "physical": -5,
+    "earth": 60,
+    "fire": -10,
+    "ice": -5,
+    "holy": 60,
+    "death": 30
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "Sweet dreams!",
+      "Let's try a step or two!",
+      "Glamour, glitter, glistering things! Do you have any of those?",
+      "You might be a threat! I'm sorry but I can't allow you to linger here."
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.6024,
+      "name": "gold coin",
+      "min": 1,
+      "max": 166
+    },
+    {
+      "id": 28347,
+      "probability": 0.17849,
+      "name": "wild flowers"
+    },
+    {
+      "id": 28351,
+      "probability": 0.14862,
+      "name": "dandelion seeds"
+    },
+    {
+      "id": 28348,
+      "probability": 0.09771,
+      "name": "fresh fruit"
+    },
+    {
+      "id": 28352,
+      "probability": 0.09653,
+      "name": "colourful snail shell"
+    },
+    {
+      "id": 28391,
+      "probability": 0.08925,
+      "name": "leaf star",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2800,
+      "probability": 0.05036,
+      "name": "star herb"
+    },
+    {
+      "id": 2162,
+      "probability": 0.04635,
+      "name": "magic light wand"
+    },
+    {
+      "id": 7590,
+      "probability": 0.03342,
+      "name": "great mana potion"
+    },
+    {
+      "id": 2744,
+      "probability": 0.03087,
+      "name": "red rose"
+    },
+    {
+      "id": 28393,
+      "probability": 0.03078,
+      "name": "rainbow quartz",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7762,
+      "probability": 0.02195,
+      "name": "small enchanted amethyst",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2796,
+      "probability": 0.01794,
+      "name": "green mushroom"
+    },
+    {
+      "id": 7589,
+      "probability": 0.00847,
+      "name": "strong mana potion"
+    },
+    {
+      "id": 28354,
+      "probability": 0.00601,
+      "name": "butterfly ring"
+    },
+    {
+      "id": 28356,
+      "probability": 0.00537,
+      "name": "dream blossom staff"
+    },
+    {
+      "id": 28355,
+      "probability": 0.00355,
+      "name": "wooden spellbook"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

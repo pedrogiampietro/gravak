@@ -1,0 +1,152 @@
+{
+  "creatureStatistics": {
+    "name": "Vicious Squire",
+    "health": 1000,
+    "maxHealth": 1000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 33,
+    "outfit": {
+      "id": 131
+    },
+    "armor": 27
+  },
+  "experience": 900,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.07,
+      "min": 150,
+      "max": 200,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 110,
+      "range": 7,
+      "shootEffect": "bolt"
+    }
+  ],
+  "elements": {
+    "energy": 40,
+    "ice": 10,
+    "fire": 30,
+    "holy": 50,
+    "earth": 50
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "For hurting me, my sire will kill you!",
+      "Your stuff will be mine soon!",
+      "I'll cut you a bloody grin!",
+      "You shouldn't have come here!",
+      "You are as good as dead!"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2455,
+      "probability": 0.12763
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "min": 1,
+      "max": 70
+    },
+    {
+      "id": 2661,
+      "probability": 0.00743
+    },
+    {
+      "id": 2543,
+      "probability": 0.21685,
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2666,
+      "probability": 0.11771
+    },
+    {
+      "id": 2145,
+      "probability": 0.02602
+    },
+    {
+      "id": 2149,
+      "probability": 0.03097
+    },
+    {
+      "id": 2150,
+      "probability": 0.02973
+    },
+    {
+      "id": 2391,
+      "probability": 0.00991
+    },
+    {
+      "id": 2381,
+      "probability": 0.0223
+    },
+    {
+      "id": 2477,
+      "probability": 0.00619
+    },
+    {
+      "id": 2515,
+      "probability": 0.00247
+    },
+    {
+      "id": 2475,
+      "probability": 0.00123
+    },
+    {
+      "id": 7591,
+      "probability": 0.05576
+    },
+    {
+      "id": 2164,
+      "probability": 0.00247
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

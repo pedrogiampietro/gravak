@@ -1,0 +1,123 @@
+{
+  "creatureStatistics": {
+    "name": "Death Dragon",
+    "health": 8350,
+    "maxHealth": 8350,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 330,
+    "attack": 480,
+    "attackSpeed": 2000,
+    "defense": 63,
+    "outfit": {
+      "id": 231
+    },
+    "armor": 45
+  },
+  "experience": 320,
+  "corpse": 2844,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 200,
+      "max": 250,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 480
+    },
+    {
+      "name": "poison",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 100,
+      "max": 400,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "poison",
+      "areaEffect": "poison"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 100,
+      "max": 400,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "death",
+      "areaEffect": "redspark"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.11,
+      "min": 0,
+      "max": 615,
+      "range": 7,
+      "shootEffect": "death",
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "undead dragon curse",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 200,
+      "max": 700,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 400,
+      "max": 550,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "smallclouds"
+    }
+  ],
+  "immunities": {
+    "earth": true,
+    "death": true,
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "creatureStatistics": {
+    "name": "Vulcongra",
+    "health": 1600,
+    "maxHealth": 1600,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 320,
+    "attack": 235,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 509
+    },
+    "armor": 35
+  },
+  "experience": 1100,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 220,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 235
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 195,
+      "max": 340,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "explosion"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 100,
+      "max": 200,
+      "range": 7,
+      "target": true,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "vulcongra soulfire",
+      "interval": 3000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    }
+  ],
+  "elements": {
+    "death": 5,
+    "ice": -5
+  },
+  "immunities": {
+    "fire": true,
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Fuchah! Fuchah!",
+      "Fuchah!",
+      "Yag! Yag! Yag!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 107
+    },
+    {
+      "id": 2152,
+      "probability": 0.14338,
+      "name": "platinum coin"
+    },
+    {
+      "id": 18424,
+      "probability": 0.12277,
+      "name": "magma clump"
+    },
+    {
+      "id": 2676,
+      "probability": 0.09563,
+      "name": "banana",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 10553,
+      "probability": 0.09041,
+      "name": "fiery heart"
+    },
+    {
+      "id": 18425,
+      "probability": 0.07893,
+      "name": "blazing bone"
+    },
+    {
+      "id": 7589,
+      "probability": 0.07319,
+      "name": "strong mana potion"
+    },
+    {
+      "id": 7588,
+      "probability": 0.0728,
+      "name": "strong health potion"
+    },
+    {
+      "id": 18417,
+      "probability": 0.04945,
+      "name": "brown crystal splinter"
+    },
+    {
+      "id": 2207,
+      "probability": 0.03053,
+      "name": "sword ring"
+    },
+    {
+      "id": 18420,
+      "probability": 0.02401,
+      "name": "red crystal fragment"
+    },
+    {
+      "id": 2187,
+      "probability": 0.00978,
+      "name": "wand of inferno"
+    },
+    {
+      "id": 7890,
+      "probability": 0.00887,
+      "name": "magma amulet"
+    },
+    {
+      "id": 13757,
+      "probability": 0.00848,
+      "name": "coal"
+    },
+    {
+      "id": 2392,
+      "probability": 0.003,
+      "name": "fire sword"
+    },
+    {
+      "id": 7899,
+      "probability": 0.0017,
+      "name": "magma coat"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

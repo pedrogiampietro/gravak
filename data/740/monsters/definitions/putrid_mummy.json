@@ -1,0 +1,155 @@
+{
+  "creatureStatistics": {
+    "name": "Putrid Mummy",
+    "health": 1500,
+    "maxHealth": 1500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 170,
+    "attack": 300,
+    "attackSpeed": 2000,
+    "defense": 40,
+    "outfit": {
+      "id": 976
+    },
+    "armor": 40
+  },
+  "experience": 900,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 100,
+      "max": 150,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 300
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 100,
+      "max": 150,
+      "range": 1,
+      "target": true,
+      "shootEffect": "earth",
+      "areaEffect": "carniphila"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "target": true,
+      "speedChange": -226,
+      "duration": 10000,
+      "shootEffect": "death",
+      "areaEffect": "mortarea"
+    }
+  ],
+  "elements": {
+    "earth": 100,
+    "fire": -20,
+    "ice": 20,
+    "holy": -25,
+    "death": 100
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "We will make you one of us!",
+      "Come to mummy!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.62513,
+      "name": "gold coin",
+      "min": 1,
+      "max": 64
+    },
+    {
+      "id": 28358,
+      "probability": 0.13863,
+      "name": "little bowl of myrrh"
+    },
+    {
+      "id": 28353,
+      "probability": 0.10859,
+      "name": "green bandage"
+    },
+    {
+      "id": 28357,
+      "probability": 0.09883,
+      "name": "single human eye"
+    },
+    {
+      "id": 2024,
+      "probability": 0.0973,
+      "name": "broken flask"
+    },
+    {
+      "id": 2159,
+      "probability": 0.08891,
+      "name": "scarab coin",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 13472,
+      "probability": 0.02196,
+      "name": "pharaoh banner"
+    },
+    {
+      "id": 2155,
+      "probability": 0.01845,
+      "name": "green gem"
+    },
+    {
+      "id": 2144,
+      "probability": 0.01052,
+      "name": "black pearl"
+    },
+    {
+      "id": 2411,
+      "probability": 0.0058,
+      "name": "poison dagger"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

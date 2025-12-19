@@ -1,0 +1,218 @@
+{
+  "creatureStatistics": {
+    "name": "The Evil Eye",
+    "health": 1200,
+    "maxHealth": 1200,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 240,
+    "attack": 90,
+    "attackSpeed": 2000,
+    "defense": 23,
+    "outfit": {
+      "id": 210
+    },
+    "armor": 19
+  },
+  "experience": 750,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.09,
+      "min": 1,
+      "max": 219,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 90
+    },
+    {
+      "name": "energy",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 60,
+      "max": 130,
+      "range": 7,
+      "shootEffect": "energy"
+    },
+    {
+      "name": "fire",
+      "interval": 1000,
+      "chance": 0.13,
+      "min": 85,
+      "max": 115,
+      "range": 7,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "physical",
+      "interval": 1000,
+      "chance": 0.17,
+      "min": 135,
+      "max": 175,
+      "range": 7,
+      "shootEffect": "suddendeath",
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "earth",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 40,
+      "max": 120,
+      "range": 7,
+      "shootEffect": "poison"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 1000,
+      "chance": 0.12,
+      "min": 110,
+      "max": 130,
+      "range": 7,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -850,
+      "duration": 20000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "earth",
+      "interval": 1000,
+      "chance": 0.08,
+      "min": 35,
+      "max": 85,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 1000,
+      "chance": 0.06,
+      "min": 75,
+      "max": 85,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "manadrain",
+      "interval": 1000,
+      "chance": 0.09,
+      "min": 150,
+      "max": 250,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "bluebubble"
+    }
+  ],
+  "elements": {
+    "holy": -20
+  },
+  "immunities": {
+    "earth": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "demon skeleton",
+      "interval": 1000,
+      "chance": 0.13,
+      "maxSummons": 5
+    },
+    {
+      "name": "ghost",
+      "interval": 1000,
+      "chance": 0.12,
+      "maxSummons": 5
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Inferior creatures, bow before my power!",
+      "653768764!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.33,
+      "name": "gold coin",
+      "min": 1,
+      "max": 29
+    },
+    {
+      "id": 2148,
+      "probability": 0.33,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.33,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2394,
+      "probability": 0.5,
+      "name": "morning star"
+    },
+    {
+      "id": 2377,
+      "probability": 0.34,
+      "name": "two handed sword"
+    },
+    {
+      "id": 2397,
+      "probability": 0.23,
+      "name": "longsword"
+    },
+    {
+      "id": 2175,
+      "probability": 0.23
+    },
+    {
+      "id": 2273,
+      "probability": 0.15,
+      "name": "great mana potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

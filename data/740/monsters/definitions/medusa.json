@@ -1,0 +1,214 @@
+{
+  "creatureStatistics": {
+    "name": "Medusa",
+    "health": 4500,
+    "maxHealth": 4500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 280,
+    "attack": 450,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 330
+    },
+    "armor": 30
+  },
+  "experience": 4050,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 600,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 150,
+      "max": 300,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 450
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 75,
+      "max": 150,
+      "range": 7,
+      "target": true,
+      "shootEffect": "earth",
+      "areaEffect": "carniphila"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 75,
+      "max": 150,
+      "range": 7,
+      "target": true,
+      "shootEffect": "earth",
+      "areaEffect": "carniphila"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 75,
+      "max": 150,
+      "range": 7,
+      "target": true,
+      "shootEffect": "earth",
+      "areaEffect": "carniphila"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 75,
+      "max": 150,
+      "range": 7,
+      "target": true,
+      "shootEffect": "earth",
+      "areaEffect": "carniphila"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 75,
+      "max": 150,
+      "range": 7,
+      "target": true,
+      "shootEffect": "earth",
+      "areaEffect": "carniphila"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 250,
+      "max": 500,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "carniphila"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 0,
+      "max": 0,
+      "radius": 7,
+      "target": true,
+      "speedChange": -900,
+      "areaEffect": "poff"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.01,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "target": true,
+      "duration": 3000
+    }
+  ],
+  "elements": {
+    "ice": 20,
+    "fire": -5,
+    "energy": -10
+  },
+  "immunities": {
+    "earth": true,
+    "paralyze": true,
+    "invisible": true,
+    "lifedrain": true,
+    "drown": true
+  },
+  "sayings": {
+    "texts": [
+      "You will make ssuch a fine ssstatue!",
+      "There isss no chhhanccce of esscape",
+      "Jusssst look at me!",
+      "Are you tired or why are you moving thhat sslow<chuckle>"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 90
+    },
+    {
+      "id": 2149,
+      "probability": 0.0377,
+      "name": "small emerald",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2152,
+      "probability": 0.7481,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 2476,
+      "probability": 0.0184,
+      "name": "knight armor"
+    },
+    {
+      "id": 2536,
+      "probability": 0.0304,
+      "name": "medusa shield"
+    },
+    {
+      "id": 2273,
+      "probability": 0.1,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 9810,
+      "probability": 0.005
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

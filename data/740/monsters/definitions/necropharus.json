@@ -1,0 +1,146 @@
+{
+  "creatureStatistics": {
+    "name": "Necropharus",
+    "health": 750,
+    "maxHealth": 750,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 240,
+    "attack": 102,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 209
+    },
+    "armor": 25
+  },
+  "experience": 1050,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.25,
+      "min": 60,
+      "max": 90,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 102
+    },
+    {
+      "name": "lifedrain",
+      "interval": 1000,
+      "chance": 0.2,
+      "min": 80,
+      "max": 120,
+      "range": 1,
+      "areaEffect": "redspark"
+    },
+    {
+      "name": "earth",
+      "interval": 1000,
+      "chance": 0.17,
+      "min": 50,
+      "max": 140,
+      "range": 7,
+      "shootEffect": "poison",
+      "areaEffect": "poison"
+    }
+  ],
+  "immunities": {
+    "earth": true,
+    "lifedrain": true,
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "ghoul",
+      "interval": 1000,
+      "chance": 0.2,
+      "maxSummons": 4
+    },
+    {
+      "name": "ghost",
+      "interval": 1000,
+      "chance": 0.17,
+      "maxSummons": 4
+    },
+    {
+      "name": "mummy",
+      "interval": 1000,
+      "chance": 0.15,
+      "maxSummons": 4
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "You will rise as my servant!",
+      "Praise to my master Urgith!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2423,
+      "probability": 0.55,
+      "name": "clerical mace"
+    },
+    {
+      "id": 2436,
+      "probability": 0.44,
+      "name": "skull staff"
+    },
+    {
+      "id": 2229,
+      "probability": 0.13
+    },
+    {
+      "id": 2231,
+      "probability": 0.055
+    },
+    {
+      "id": 2195,
+      "probability": 0.027,
+      "name": "boots of haste"
+    },
+    {
+      "id": 2270,
+      "probability": 0.027,
+      "name": "strong mana potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "creatureStatistics": {
+    "name": "Gnome Pack Crawler",
+    "health": 5000,
+    "maxHealth": 5000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 492
+    },
+    "armor": 30
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "immunities": {
+    "paralyze": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.33333,
+      "name": "gold coin",
+      "min": 1,
+      "max": 9
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

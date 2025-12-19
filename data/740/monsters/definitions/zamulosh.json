@@ -1,0 +1,213 @@
+{
+  "creatureStatistics": {
+    "name": "Zamulosh",
+    "health": 300000,
+    "maxHealth": 300000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 320,
+    "attack": 2300,
+    "attackSpeed": 3000,
+    "defense": 30,
+    "outfit": {
+      "id": 862
+    },
+    "armor": 30
+  },
+  "experience": 50000,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 220,
+      "max": 535,
+      "areaEffect": "yellowbubble"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 3000,
+      "chance": 1,
+      "min": 0,
+      "max": 2300
+    },
+    {
+      "name": "death",
+      "interval": 1000,
+      "chance": 0.1,
+      "min": 700,
+      "max": 800,
+      "length": 12,
+      "spread": 3,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 2600,
+      "max": 3300,
+      "length": 12,
+      "spread": 0,
+      "target": false,
+      "areaEffect": "teleport"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 900,
+      "max": 1500,
+      "length": 6,
+      "spread": 2,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.35,
+      "min": 0,
+      "max": 0,
+      "radius": 8,
+      "speedChange": -600,
+      "duration": 15000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "earth": -1,
+    "holy": -1
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 18418,
+      "probability": 1,
+      "name": "blue crystal splinter",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 179
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 28
+    },
+    {
+      "id": 25172,
+      "probability": 1,
+      "name": "silver token"
+    },
+    {
+      "id": 2165,
+      "probability": 1,
+      "name": "stealth ring"
+    },
+    {
+      "id": 2169,
+      "probability": 1,
+      "name": "time ring"
+    },
+    {
+      "id": 8473,
+      "probability": 1,
+      "name": "ultimate health potion",
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 18417,
+      "probability": 0.66667,
+      "name": "brown crystal splinter",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 6500,
+      "probability": 0.66667,
+      "name": "demonic essence"
+    },
+    {
+      "id": 6558,
+      "probability": 0.66667,
+      "name": "flask of demonic blood",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 8472,
+      "probability": 0.66667,
+      "name": "great spirit potion",
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 18416,
+      "probability": 0.66667,
+      "name": "green crystal splinter",
+      "min": 1,
+      "max": 11
+    },
+    {
+      "id": 2158,
+      "probability": 0.33333,
+      "name": "blue gem"
+    },
+    {
+      "id": 25411,
+      "probability": 0.33333,
+      "name": "book of lies"
+    },
+    {
+      "id": 7632,
+      "probability": 0.33333,
+      "name": "giant shimmering pearl"
+    },
+    {
+      "id": 2150,
+      "probability": 0.33333,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 9
+    },
+    {
+      "id": 2146,
+      "probability": 0.33333,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 3
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

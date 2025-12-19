@@ -1,0 +1,169 @@
+{
+  "creatureStatistics": {
+    "name": "Bonelord",
+    "health": 260,
+    "maxHealth": 260,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 150,
+    "attack": 5,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 17
+    },
+    "armor": 5
+  },
+  "experience": 170,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 5
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 15,
+      "max": 45,
+      "range": 7,
+      "shootEffect": "energy"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 25,
+      "max": 45,
+      "range": 7,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 30,
+      "max": 50,
+      "range": 7,
+      "shootEffect": "suddendeath",
+      "areaEffect": "smallclouds"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 5,
+      "max": 45,
+      "range": 7,
+      "shootEffect": "poison"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 5,
+      "max": 50,
+      "range": 7,
+      "shootEffect": "death"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 0,
+      "max": 45,
+      "range": 7,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 5,
+      "max": 35,
+      "range": 7
+    }
+  ],
+  "elements": {
+    "ice": 20,
+    "fire": -10
+  },
+  "immunities": {
+    "invisible": true,
+    "earth": true,
+    "lifedrain": true
+  },
+  "summons": [
+    {
+      "name": "Skeleton",
+      "interval": 2000,
+      "chance": 0.2,
+      "maxSummons": 6
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Eye for eye!",
+      "Here's looking at you!",
+      "Let me take a look at you!",
+      "You've got the look!",
+      "I've got to look!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.99,
+      "name": "gold coin",
+      "min": 1,
+      "max": 48
+    },
+    {
+      "id": 2397,
+      "probability": 0.09,
+      "name": "longsword"
+    },
+    {
+      "id": 2394,
+      "probability": 0.07,
+      "name": "morning star"
+    },
+    {
+      "id": 2175,
+      "probability": 0.05
+    },
+    {
+      "id": 2377,
+      "probability": 0.0395,
+      "name": "two handed sword"
+    },
+    {
+      "id": 2268,
+      "probability": 0.003,
+      "name": "mana potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": 4
+  }
+}

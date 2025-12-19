@@ -1,0 +1,100 @@
+{
+  "creatureStatistics": {
+    "name": "Nomad",
+    "health": 160,
+    "maxHealth": 160,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 205,
+    "attack": 80,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 146
+    },
+    "armor": 15
+  },
+  "experience": 60,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 15,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 80
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "radius": 1,
+      "target": false,
+      "areaEffect": "whitenote"
+    }
+  ],
+  "elements": {
+    "fire": 20,
+    "holy": 20,
+    "physical": -10,
+    "ice": -10,
+    "death": -10
+  },
+  "sayings": {
+    "texts": [
+      "We are the true sons of the desert!",
+      "I will leave your remains to the vultures!",
+      "We are swift as the wind of the desert!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5625,
+      "name": "gold coin",
+      "min": 1,
+      "max": 40
+    },
+    {
+      "id": 2386,
+      "probability": 0.0273,
+      "name": "axe"
+    },
+    {
+      "id": 2398,
+      "probability": 0.0212,
+      "name": "mace"
+    },
+    {
+      "id": 2459,
+      "probability": 0.0065,
+      "name": "iron helmet"
+    },
+    {
+      "id": 2465,
+      "probability": 0.0235,
+      "name": "brass armor"
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

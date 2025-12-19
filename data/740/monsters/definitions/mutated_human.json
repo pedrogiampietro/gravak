@@ -1,0 +1,180 @@
+{
+  "creatureStatistics": {
+    "name": "Mutated Human",
+    "health": 240,
+    "maxHealth": 240,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 154,
+    "attack": 90,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 323
+    },
+    "armor": 15
+  },
+  "experience": 150,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 220,
+      "duration": 5000,
+      "areaEffect": "greenbubble"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 90
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 50,
+      "max": 60,
+      "length": 3,
+      "spread": 1,
+      "target": false,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 190,
+      "max": 280,
+      "length": 1,
+      "spread": 0,
+      "target": true,
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "target": true,
+      "speedChange": -600,
+      "duration": 30000,
+      "areaEffect": "stun"
+    }
+  ],
+  "elements": {
+    "ice": 20,
+    "holy": -25
+  },
+  "immunities": {
+    "death": true,
+    "earth": true,
+    "paralyze": true,
+    "lifedrain": true,
+    "drunk": true,
+    "drown": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Take that creature off my back!! I can fell it!",
+      "HEEEEEEEELP!",
+      "You will be the next infected one... GRAAAAAAAAARRR!",
+      "Science... is a curse.",
+      "Run as fast as you can.",
+      "Oh by the gods! What is this... aaaaaargh!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.88222,
+      "name": "gold coin",
+      "min": 1,
+      "max": 130
+    },
+    {
+      "id": 11225,
+      "probability": 0.19936,
+      "name": "mutated flesh"
+    },
+    {
+      "id": 2226,
+      "probability": 0.10064,
+      "name": "fishbone"
+    },
+    {
+      "id": 3607,
+      "probability": 0.08076,
+      "name": "cheese"
+    },
+    {
+      "id": 2483,
+      "probability": 0.07833,
+      "name": "scale armor"
+    },
+    {
+      "id": 3976,
+      "probability": 0.07081,
+      "name": "worm",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2376,
+      "probability": 0.05069,
+      "name": "sword"
+    },
+    {
+      "id": 2161,
+      "probability": 0.04946,
+      "name": "strange talisman"
+    },
+    {
+      "id": 9808,
+      "probability": 0.02007,
+      "name": "heavily rusted armor"
+    },
+    {
+      "id": 7910,
+      "probability": 0.00534,
+      "name": "peanut"
+    },
+    {
+      "id": 2801,
+      "probability": 0.00421,
+      "name": "fern"
+    },
+    {
+      "id": 2170,
+      "probability": 0.00102,
+      "name": "silver amulet"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

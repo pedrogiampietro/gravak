@@ -1,0 +1,58 @@
+{
+  "creatureStatistics": {
+    "name": "Aggressive Lava",
+    "health": 5000,
+    "maxHealth": 5000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 150,
+    "attack": 450,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 614
+    },
+    "armor": 30
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 450
+    },
+    {
+      "name": "aggresive lava bomb",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 0,
+      "max": 650
+    }
+  ],
+  "elements": {
+    "fire": 100
+  },
+  "immunities": {
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

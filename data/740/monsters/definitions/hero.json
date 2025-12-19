@@ -1,0 +1,225 @@
+{
+  "creatureStatistics": {
+    "name": "Hero",
+    "health": 1400,
+    "maxHealth": 1400,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 280,
+    "attack": 240,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 73
+    },
+    "armor": 35
+  },
+  "experience": 1200,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 200,
+      "max": 250,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 240
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 120,
+      "range": 7,
+      "shootEffect": "arrow"
+    }
+  ],
+  "elements": {
+    "energy": 40,
+    "ice": 10,
+    "fire": 30,
+    "holy": 50,
+    "earth": 50,
+    "physical": 10,
+    "death": -20
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Let's have a fight!",
+      "Welcome to my battleground!",
+      "Have you seen princess Lumelia?",
+      "I will sing a tune at your grave."
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.60324,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 1949,
+      "probability": 0.45128,
+      "name": "scroll"
+    },
+    {
+      "id": 2544,
+      "probability": 0.27005,
+      "name": "arrow",
+      "min": 1,
+      "max": 13
+    },
+    {
+      "id": 2744,
+      "probability": 0.20384,
+      "name": "red rose"
+    },
+    {
+      "id": 2681,
+      "probability": 0.20164,
+      "name": "grapes"
+    },
+    {
+      "id": 2456,
+      "probability": 0.13005,
+      "name": "bow"
+    },
+    {
+      "id": 7364,
+      "probability": 0.11558,
+      "name": "sniper arrow",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2666,
+      "probability": 0.08585,
+      "name": "meat"
+    },
+    {
+      "id": 2652,
+      "probability": 0.07964,
+      "name": "green tunic"
+    },
+    {
+      "id": 2121,
+      "probability": 0.05153,
+      "name": "wedding ring"
+    },
+    {
+      "id": 12466,
+      "probability": 0.05038,
+      "name": "scroll of heroic deeds"
+    },
+    {
+      "id": 2120,
+      "probability": 0.02079,
+      "name": "rope"
+    },
+    {
+      "id": 5911,
+      "probability": 0.02013,
+      "name": "red piece of cloth"
+    },
+    {
+      "id": 2377,
+      "probability": 0.01612,
+      "name": "two handed sword"
+    },
+    {
+      "id": 2071,
+      "probability": 0.01577,
+      "name": "lyre"
+    },
+    {
+      "id": 2661,
+      "probability": 0.0112,
+      "name": "scarf"
+    },
+    {
+      "id": 2391,
+      "probability": 0.00959,
+      "name": "war hammer"
+    },
+    {
+      "id": 12406,
+      "probability": 0.00952,
+      "name": "small notebook"
+    },
+    {
+      "id": 7591,
+      "probability": 0.00736,
+      "name": "great health potion"
+    },
+    {
+      "id": 2487,
+      "probability": 0.00614,
+      "name": "crown armor"
+    },
+    {
+      "id": 2488,
+      "probability": 0.00586,
+      "name": "crown legs"
+    },
+    {
+      "id": 2164,
+      "probability": 0.00527,
+      "name": "might ring"
+    },
+    {
+      "id": 2392,
+      "probability": 0.00478,
+      "name": "fire sword"
+    },
+    {
+      "id": 2491,
+      "probability": 0.0045,
+      "name": "crown helmet"
+    },
+    {
+      "id": 2519,
+      "probability": 0.00202,
+      "name": "crown shield"
+    },
+    {
+      "id": 2114,
+      "probability": 0.00073,
+      "name": "piggy bank"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

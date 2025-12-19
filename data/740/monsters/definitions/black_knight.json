@@ -1,0 +1,191 @@
+{
+  "creatureStatistics": {
+    "name": "Black Knight",
+    "health": 1800,
+    "maxHealth": 1800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 300,
+    "attackSpeed": 2000,
+    "defense": 42,
+    "outfit": {
+      "id": 131
+    },
+    "armor": 42
+  },
+  "experience": 1600,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 300
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 200,
+      "range": 7,
+      "shootEffect": "spear"
+    }
+  ],
+  "elements": {
+    "fire": 95,
+    "energy": 80,
+    "physical": 10,
+    "death": 20,
+    "holy": -8
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "earth": true,
+    "ice": true
+  },
+  "sayings": {
+    "texts": [
+      "MINE!",
+      "NO PRISONERS!",
+      "NO MERCY!",
+      "By Bolg's blood!",
+      "You're no match for me!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.48586,
+      "name": "gold coin",
+      "min": 1,
+      "max": 143
+    },
+    {
+      "id": 2389,
+      "probability": 0.29429,
+      "name": "spear",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2691,
+      "probability": 0.206,
+      "name": "brown bread",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2120,
+      "probability": 0.14426,
+      "name": "rope"
+    },
+    {
+      "id": 2478,
+      "probability": 0.1307,
+      "name": "brass legs"
+    },
+    {
+      "id": 2381,
+      "probability": 0.12522,
+      "name": "halberd"
+    },
+    {
+      "id": 2463,
+      "probability": 0.10935,
+      "name": "plate armor"
+    },
+    {
+      "id": 3351,
+      "probability": 0.10531,
+      "name": "steel helmet"
+    },
+    {
+      "id": 2377,
+      "probability": 0.09608,
+      "name": "two handed sword"
+    },
+    {
+      "id": 2417,
+      "probability": 0.06896,
+      "name": "battle hammer"
+    },
+    {
+      "id": 2475,
+      "probability": 0.04703,
+      "name": "warrior helmet"
+    },
+    {
+      "id": 2430,
+      "probability": 0.02654,
+      "name": "knight axe"
+    },
+    {
+      "id": 2490,
+      "probability": 0.02424,
+      "name": "dark helmet"
+    },
+    {
+      "id": 2489,
+      "probability": 0.0202,
+      "name": "dark armor"
+    },
+    {
+      "id": 2477,
+      "probability": 0.01039,
+      "name": "knight legs"
+    },
+    {
+      "id": 2476,
+      "probability": 0.0075,
+      "name": "knight armor"
+    },
+    {
+      "id": 2133,
+      "probability": 0.0075,
+      "name": "ruby necklace"
+    },
+    {
+      "id": 7895,
+      "probability": 0.00577,
+      "name": "lightning legs"
+    },
+    {
+      "id": 2195,
+      "probability": 0.00404,
+      "name": "boots of haste"
+    },
+    {
+      "id": 2414,
+      "probability": 0.00289,
+      "name": "dragon lance"
+    },
+    {
+      "id": 2114,
+      "probability": 0.00115,
+      "name": "piggy bank"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

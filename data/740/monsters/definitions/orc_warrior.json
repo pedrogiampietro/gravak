@@ -1,0 +1,114 @@
+{
+  "creatureStatistics": {
+    "name": "Orc Warrior",
+    "health": 125,
+    "maxHealth": 125,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 60,
+    "attackSpeed": 2000,
+    "defense": 8,
+    "outfit": {
+      "id": 7
+    },
+    "armor": 8
+  },
+  "experience": 50,
+  "corpse": 2860,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 10,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 60
+    }
+  ],
+  "elements": {
+    "energy": 30,
+    "holy": 10,
+    "earth": -10,
+    "death": -10
+  },
+  "sayings": {
+    "texts": [
+      "Grow truk grrrr.",
+      "Trak grrrr brik.",
+      "Alk!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.64165,
+      "name": "gold coin",
+      "min": 1,
+      "max": 15
+    },
+    {
+      "id": 2666,
+      "probability": 0.15373,
+      "name": "meat"
+    },
+    {
+      "id": 12409,
+      "probability": 0.09694,
+      "name": "broken helmet"
+    },
+    {
+      "id": 2464,
+      "probability": 0.07516,
+      "name": "chain armor"
+    },
+    {
+      "id": 12435,
+      "probability": 0.03696,
+      "name": "orc leather"
+    },
+    {
+      "id": 26642,
+      "probability": 0.01776,
+      "name": "heavy old tome"
+    },
+    {
+      "id": 12436,
+      "probability": 0.01001,
+      "name": "skull belt"
+    },
+    {
+      "id": 11113,
+      "probability": 0.00681,
+      "name": "orc tooth"
+    },
+    {
+      "id": 2530,
+      "probability": 0.00506,
+      "name": "copper shield"
+    },
+    {
+      "id": 2411,
+      "probability": 0.00041,
+      "name": "poison dagger"
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

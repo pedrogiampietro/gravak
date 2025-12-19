@@ -1,0 +1,118 @@
+{
+  "creatureStatistics": {
+    "name": "Goblin Leader",
+    "health": 50,
+    "maxHealth": 50,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 120,
+    "attack": 50,
+    "attackSpeed": 2000,
+    "defense": 7,
+    "outfit": {
+      "id": 61
+    },
+    "armor": 7
+  },
+  "experience": 75,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 10,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 50
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 45,
+      "range": 7,
+      "shootEffect": "smallstone"
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Go go, Gobo attack!!",
+      "Me the greenest and the meanest!",
+      "Me have power to crush you!",
+      "Goblinkiller! Catch him !!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.49369,
+      "name": "gold coin",
+      "min": 1,
+      "max": 9
+    },
+    {
+      "id": 2379,
+      "probability": 0.17498,
+      "name": "dagger"
+    },
+    {
+      "id": 2667,
+      "probability": 0.12989,
+      "name": "fish"
+    },
+    {
+      "id": 2230,
+      "probability": 0.11545,
+      "name": "bone"
+    },
+    {
+      "id": 2559,
+      "probability": 0.10704,
+      "name": "small axe"
+    },
+    {
+      "id": 2461,
+      "probability": 0.09862,
+      "name": "leather helmet"
+    },
+    {
+      "id": 2406,
+      "probability": 0.09862,
+      "name": "short sword"
+    },
+    {
+      "id": 2467,
+      "probability": 0.07456,
+      "name": "leather armor"
+    },
+    {
+      "id": 2235,
+      "probability": 0.07276,
+      "name": "mouldy cheese"
+    },
+    {
+      "id": 2449,
+      "probability": 0.04871,
+      "name": "bone club"
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

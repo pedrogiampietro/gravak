@@ -1,0 +1,372 @@
+{
+  "creatureStatistics": {
+    "name": "Soul Of Dragonking Zyrtarch",
+    "health": 150000,
+    "maxHealth": 150000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 400,
+    "attack": 1200,
+    "attackSpeed": 2000,
+    "defense": 64,
+    "outfit": {
+      "id": 938
+    },
+    "armor": 52
+  },
+  "experience": 70700,
+  "corpse": 2844,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 450,
+      "max": 550,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1200
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 110,
+      "max": 495,
+      "range": 7,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 110,
+      "max": 495,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 110,
+      "max": 495,
+      "radius": 8,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "energycondition",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 1100,
+      "max": 1100,
+      "radius": 5,
+      "areaEffect": "yellowenergy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 710,
+      "max": 895,
+      "length": 9,
+      "spread": 4,
+      "areaEffect": "energyarea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 710,
+      "max": 895,
+      "length": 9,
+      "spread": 4,
+      "areaEffect": "fire"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 710,
+      "max": 895,
+      "length": 9,
+      "spread": 0,
+      "areaEffect": "firearea"
+    }
+  ],
+  "immunities": {
+    "fire": true,
+    "drown": true,
+    "lifedrain": true,
+    "paralyze": true,
+    "invisible": true,
+    "earth": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 200
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 35
+    },
+    {
+      "id": 5948,
+      "probability": 1,
+      "name": "red dragon leather"
+    },
+    {
+      "id": 5882,
+      "probability": 1,
+      "name": "red dragon scale"
+    },
+    {
+      "id": 5904,
+      "probability": 0.76744,
+      "name": "magic sulphur"
+    },
+    {
+      "id": 5889,
+      "probability": 0.76744,
+      "name": "piece of draconian steel"
+    },
+    {
+      "id": 18413,
+      "probability": 0.74419,
+      "name": "blue crystal shard",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 18414,
+      "probability": 0.67442,
+      "name": "violet crystal shard",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7590,
+      "probability": 0.60465,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 18415,
+      "probability": 0.60465,
+      "name": "green crystal shard",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 8472,
+      "probability": 0.51163,
+      "name": "great spirit potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 8473,
+      "probability": 0.4186,
+      "name": "ultimate health potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 25377,
+      "probability": 0.32558,
+      "name": "gold token"
+    },
+    {
+      "id": 2156,
+      "probability": 0.32558,
+      "name": "red gem"
+    },
+    {
+      "id": 9970,
+      "probability": 0.32558,
+      "name": "small topaz",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 25172,
+      "probability": 0.27907,
+      "name": "silver token"
+    },
+    {
+      "id": 2147,
+      "probability": 0.23256,
+      "name": "small ruby",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2158,
+      "probability": 0.2093,
+      "name": "blue gem"
+    },
+    {
+      "id": 9971,
+      "probability": 0.18605,
+      "name": "gold ingot"
+    },
+    {
+      "id": 2155,
+      "probability": 0.18605,
+      "name": "green gem"
+    },
+    {
+      "id": 2145,
+      "probability": 0.18605,
+      "name": "small diamond",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 8902,
+      "probability": 0.18605,
+      "name": "spellbook of mind control"
+    },
+    {
+      "id": 9980,
+      "probability": 0.16279,
+      "name": "crystal of power"
+    },
+    {
+      "id": 7632,
+      "probability": 0.08139,
+      "name": "giant shimmering pearl"
+    },
+    {
+      "id": 7633,
+      "probability": 0.08139,
+      "name": "giant shimmering pearl"
+    },
+    {
+      "id": 2150,
+      "probability": 0.16279,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 12608,
+      "probability": 0.13953,
+      "name": "broken key ring"
+    },
+    {
+      "id": 9809,
+      "probability": 0.13953,
+      "name": "rusted armor"
+    },
+    {
+      "id": 9810,
+      "probability": 0.11628,
+      "name": "slightly rusted armor"
+    },
+    {
+      "id": 2154,
+      "probability": 0.11628,
+      "name": "yellow gem"
+    },
+    {
+      "id": 8849,
+      "probability": 0.09302,
+      "name": "modified crossbow"
+    },
+    {
+      "id": 2149,
+      "probability": 0.09302,
+      "name": "small emerald",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 7430,
+      "probability": 0.06977,
+      "name": "dragonbone staff"
+    },
+    {
+      "id": 2492,
+      "probability": 0.04651,
+      "name": "dragon scale mail"
+    },
+    {
+      "id": 27624,
+      "probability": 0.04651,
+      "name": "golden talon"
+    },
+    {
+      "id": 5887,
+      "probability": 0.04651,
+      "name": "piece of royal steel"
+    },
+    {
+      "id": 11308,
+      "probability": 0.02326,
+      "name": "drachaku"
+    },
+    {
+      "id": 27623,
+      "probability": 0.02326,
+      "name": "dragon crown"
+    },
+    {
+      "id": 12646,
+      "probability": 0.02326,
+      "name": "draken boots"
+    },
+    {
+      "id": 11305,
+      "probability": 0.02326,
+      "name": "drakinata"
+    },
+    {
+      "id": 27611,
+      "probability": 0.02326,
+      "name": "part of a rune (two)"
+    },
+    {
+      "id": 12648,
+      "probability": 0.02326,
+      "name": "snake god's sceptre"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

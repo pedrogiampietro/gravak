@@ -1,0 +1,190 @@
+{
+  "creatureStatistics": {
+    "name": "Humongous Fungus",
+    "health": 3400,
+    "maxHealth": 3400,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 270,
+    "attack": 330,
+    "attackSpeed": 2000,
+    "defense": 45,
+    "outfit": {
+      "id": 488
+    },
+    "armor": 45
+  },
+  "experience": 2600,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 225,
+      "max": 380,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.15,
+      "duration": 4000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 330
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 180,
+      "max": 350,
+      "range": 7,
+      "shootEffect": "smallearth",
+      "areaEffect": "smallplants"
+    },
+    {
+      "name": "poisonfield",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "radius": 4,
+      "target": false
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 500,
+      "max": 1000,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 130,
+      "max": 260,
+      "length": 5,
+      "spread": 0,
+      "target": false,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 400,
+      "max": 640,
+      "range": 7,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "greenspark"
+    }
+  ],
+  "elements": {
+    "energy": 15,
+    "ice": 15,
+    "fire": 5,
+    "holy": 5,
+    "death": 15
+  },
+  "immunities": {
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Munch munch munch!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.6,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.6,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 2271,
+      "probability": 0.05,
+      "name": "strong health potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2270,
+      "probability": 0.05,
+      "name": "strong mana potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2273,
+      "probability": 0.05,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2274,
+      "probability": 0.05,
+      "name": "great health potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2268,
+      "probability": 0.05,
+      "name": "mana potion",
+      "min": 1,
+      "max": 3
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

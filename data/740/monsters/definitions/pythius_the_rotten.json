@@ -1,0 +1,147 @@
+{
+  "creatureStatistics": {
+    "name": "Pythius The Rotten",
+    "health": 9500,
+    "maxHealth": 9500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 350,
+    "attack": 210,
+    "attackSpeed": 1950,
+    "defense": 45,
+    "outfit": {
+      "id": 231
+    },
+    "armor": 40
+  },
+  "experience": 7000,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 1950,
+      "chance": 1,
+      "min": 0,
+      "max": 210
+    },
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 0.16,
+      "min": 0,
+      "max": 795,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "redspark"
+    },
+    {
+      "name": "physical",
+      "interval": 2800,
+      "chance": 0.15,
+      "min": 0,
+      "max": 400,
+      "range": 7,
+      "shootEffect": "suddendeath",
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.17,
+      "min": 55,
+      "max": 155,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "poison",
+      "areaEffect": "poison"
+    },
+    {
+      "name": "earth",
+      "interval": 2500,
+      "chance": 0.14,
+      "min": 333,
+      "max": 413,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.18,
+      "min": 165,
+      "max": 200,
+      "length": 7,
+      "spread": 0,
+      "areaEffect": "redspark"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2500,
+      "chance": 0.22,
+      "min": 85,
+      "max": 110,
+      "range": 8,
+      "shootEffect": "ice"
+    },
+    {
+      "name": "drowncondition",
+      "interval": 1000,
+      "chance": 0.45,
+      "min": 0,
+      "max": 0,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "poff"
+    }
+  ],
+  "elements": {
+    "holy": -20
+  },
+  "immunities": {
+    "death": true,
+    "earth": true,
+    "energy": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Undead Gladiator",
+      "interval": 1000,
+      "chance": 0.1,
+      "maxSummons": 3
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "YOU'LL NEVER GET MY TREASURE!",
+      "MINIONS, MEET YOUR NEW BROTHER!",
+      "YOU WILL REGRET THAT YOU ARE BORN!",
+      "YOU MADE A HUGE WASTE!",
+      "I SENSE LIFE"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

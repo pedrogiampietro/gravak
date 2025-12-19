@@ -1,0 +1,80 @@
+{
+  "creatureStatistics": {
+    "name": "Glooth Horror",
+    "health": 15000,
+    "maxHealth": 15000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 100,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 677
+    },
+    "armor": 15
+  },
+  "experience": 900,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 400,
+      "max": 700,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 300,
+      "max": 700,
+      "length": 8,
+      "spread": 3
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.08,
+      "min": 0,
+      "max": 0,
+      "radius": 8,
+      "target": false,
+      "duration": 15000,
+      "areaEffect": "greenspark"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

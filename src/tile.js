@@ -9,7 +9,7 @@ const { TilePacket, ItemRemovePacket, ItemAddPacket } = requireModule("protocol"
 const { OTBBitFlag, TileFlag } = require("./bitflag");
 const PathfinderNode = requireModule("pathfinder-node");
 
-const Tile = function(id, position) {
+const Tile = function (id, position) {
 
   /*
    * Class Tile
@@ -36,7 +36,7 @@ const Tile = function(id, position) {
 Tile.prototype = Object.create(Thing.prototype);
 Tile.prototype.constructor = Tile;
 
-Tile.prototype.getFriction = function() {
+Tile.prototype.getFriction = function () {
 
   /*
    * Function Tile.getFriction
@@ -47,7 +47,7 @@ Tile.prototype.getFriction = function() {
 
 }
 
-Tile.prototype.broadcastNeighbours = function(packet) {
+Tile.prototype.broadcastNeighbours = function (packet) {
 
   /*
    * Function Tile.broadcastNeighbours
@@ -58,7 +58,7 @@ Tile.prototype.broadcastNeighbours = function(packet) {
 
 }
 
-Tile.prototype.distanceManhattan = function(other) {
+Tile.prototype.distanceManhattan = function (other) {
 
   /*
    * Function Tile.distanceManhattan
@@ -69,7 +69,7 @@ Tile.prototype.distanceManhattan = function(other) {
 
 }
 
-Tile.prototype.writePlayers = function(packet) {
+Tile.prototype.writePlayers = function (packet) {
 
   /*
    * Function Tile.writePlayers
@@ -80,13 +80,13 @@ Tile.prototype.writePlayers = function(packet) {
 
 }
 
-Tile.prototype.isHouseTile = function() {
+Tile.prototype.isHouseTile = function () {
 
   return this.hasOwnProperty("house");
 
 }
 
-Tile.prototype.addCreature = function(creature) {
+Tile.prototype.addCreature = function (creature) {
 
   /*
    * Function Tile.addCreature
@@ -96,16 +96,16 @@ Tile.prototype.addCreature = function(creature) {
   creature.position = this.position;
 
   // Write tile condition
-  if(creature.isPlayer()) {
+  if (creature.isPlayer()) {
 
-    if(this.isProtectionZone()) {
+    if (this.isProtectionZone()) {
 
       // Drop the combat lock
-      if(creature.isInCombat()) {
+      if (creature.isInCombat()) {
         creature.combatLock.unlock();
       }
 
-      if(creature.actionHandler.targetHandler.hasTarget()) {
+      if (creature.actionHandler.targetHandler.hasTarget()) {
         creature.actionHandler.targetHandler.setTarget(null)
       }
 
@@ -113,7 +113,7 @@ Tile.prototype.addCreature = function(creature) {
 
   }
 
-  if(!this.hasOwnProperty("creatures")) {
+  if (!this.hasOwnProperty("creatures")) {
     this.creatures = new Set();
   }
 
@@ -121,7 +121,7 @@ Tile.prototype.addCreature = function(creature) {
 
 }
 
-Tile.prototype.eliminateItem = function(thing) {
+Tile.prototype.eliminateItem = function (thing) {
 
   /*
    * Function Tile.eliminateItem
@@ -136,7 +136,7 @@ Tile.prototype.eliminateItem = function(thing) {
 
 }
 
-Tile.prototype.addThing = function(thing, index) {
+Tile.prototype.addThing = function (thing, index) {
 
   /*
    * Function Tile.addThing
@@ -144,27 +144,27 @@ Tile.prototype.addThing = function(thing, index) {
    * Decaying items however, may need to be inserted with the appropriate index
    */
 
-  if(!this.hasOwnProperty("itemStack")) {
+  if (!this.hasOwnProperty("itemStack")) {
     this.itemStack = new ItemStack();
   }
 
   // Guard
-  if(!this.itemStack.isValidIndex(index)) {
+  if (!this.itemStack.isValidIndex(index)) {
     return;
   }
 
   // Guard
-  if(this.isFull()) {
+  if (this.isFull()) {
     return this.eliminateItem(thing)
   }
 
   // Do not allow items to be added on expertise doors
-  if(this.itemStack.hasMagicDoor()) {
+  if (this.itemStack.hasMagicDoor()) {
     return;
   }
 
   // Attach listeners to close magic doors on tile exit
-  if(thing.isMagicDoor() && thing.isOpened()) {
+  if (thing.isMagicDoor() && thing.isOpened()) {
     this.once("exit", thing.close.bind(thing));
   }
 
@@ -175,11 +175,11 @@ Tile.prototype.addThing = function(thing, index) {
   let currentThing = this.peekIndex(index);
 
   // Whether we need to check for stacking
-  if(currentThing !== null && thing.isStackable() && currentThing.id === thing.id && currentThing.count < Item.prototype.MAXIMUM_STACK_COUNT) {
+  if (currentThing !== null && thing.isStackable() && currentThing.id === thing.id && currentThing.count < Item.prototype.MAXIMUM_STACK_COUNT) {
     return this.__addStackable(index, currentThing, thing);
   }
 
-  if(!this.hasOwnProperty("itemStack")) {
+  if (!this.hasOwnProperty("itemStack")) {
     this.itemStack = new ItemStack();
   }
 
@@ -191,7 +191,7 @@ Tile.prototype.addThing = function(thing, index) {
 
 }
 
-Tile.prototype.addTopThing = function(thing) {
+Tile.prototype.addTopThing = function (thing) {
 
   /*
    * Function Tile.addTopThing
@@ -202,7 +202,7 @@ Tile.prototype.addTopThing = function(thing) {
 
 }
 
-Tile.prototype.hasElevation = function() {
+Tile.prototype.hasElevation = function () {
 
   /*
    * Function Tile.hasElevation
@@ -213,7 +213,7 @@ Tile.prototype.hasElevation = function() {
 
 }
 
-Tile.prototype.hasDestination = function() {
+Tile.prototype.hasDestination = function () {
 
   /*
    * Function Tile.hasDestination
@@ -221,11 +221,11 @@ Tile.prototype.hasDestination = function() {
    */
 
   // Could be a teleporter or floor change (stair?)
-  if(this.__getFloorChange() !== null) {
+  if (this.__getFloorChange() !== null) {
     return true;
   }
 
-  if(!this.hasItems()) {
+  if (!this.hasItems()) {
     return false;
   }
 
@@ -233,7 +233,7 @@ Tile.prototype.hasDestination = function() {
 
 }
 
-Tile.prototype.replace = function(id) {
+Tile.prototype.replace = function (id) {
 
   /*
    * Function Tile.replace
@@ -244,7 +244,7 @@ Tile.prototype.replace = function(id) {
   this.id = id;
 
   // If the new identifier is said to be decaying (e.g., pickholes)
-  if(this.isDecaying()) {
+  if (this.isDecaying()) {
     this.scheduleDecay();
   }
 
@@ -252,14 +252,14 @@ Tile.prototype.replace = function(id) {
 
 }
 
-Tile.prototype.getItems = function() {
+Tile.prototype.getItems = function () {
 
   /*
    * Function Tile.getItems
    * Returns a reference to the items that are placed on the tile
    */
 
-  if(!this.hasItems()) {
+  if (!this.hasItems()) {
     return new Array();
   }
 
@@ -267,8 +267,8 @@ Tile.prototype.getItems = function() {
 
 }
 
-Tile.prototype.getScore = function() {
-  
+Tile.prototype.getScore = function () {
+
   /*
    * Function Tile.getScore
    * Returns the A* cost of walking on a tile
@@ -276,10 +276,10 @@ Tile.prototype.getScore = function() {
 
   // Currently implemented as a constant
   return this.pathfinderNode.getScore();
-  
+
 }
 
-Tile.prototype.getWeight = function(current) {
+Tile.prototype.getWeight = function (current) {
 
   /*
    * Function Tile.getCost
@@ -287,23 +287,23 @@ Tile.prototype.getWeight = function(current) {
    */
 
   // Moving diagonally is not preferred
-  if(this.getPosition().isDiagonal(current.getPosition())) {
+  if (this.getPosition().isDiagonal(current.getPosition())) {
     return 3 * this.getFriction();
   }
 
   // Currently implemented as a constant
-  return this.getFriction(); 
+  return this.getFriction();
 
 }
 
-Tile.prototype.getNumberCharacters = function() {
+Tile.prototype.getNumberCharacters = function () {
 
   /*
    * Function Tile.getNumberCharacters
    * Returns the total number of characters on a tile
    */
 
-  if(!this.hasOwnProperty("creatures")) {
+  if (!this.hasOwnProperty("creatures")) {
     return 0;
   }
 
@@ -311,7 +311,7 @@ Tile.prototype.getNumberCharacters = function() {
 
 }
 
-Tile.prototype.__getFloorChange = function() {
+Tile.prototype.__getFloorChange = function () {
 
   /*
    * Function Tile.__getFloorChange
@@ -319,7 +319,7 @@ Tile.prototype.__getFloorChange = function() {
    */
 
   // Tiles with null identifier do not have a floor change
-  if(this.id === 0) {
+  if (this.id === 0) {
     return null;
   }
 
@@ -327,11 +327,11 @@ Tile.prototype.__getFloorChange = function() {
   let floorChange = this.getAttribute("floorchange");
 
   // A floorchange is configured on the tile itself
-  if(floorChange !== null) {
+  if (floorChange !== null) {
     return floorChange;
   }
 
-  if(!this.hasItems()) {
+  if (!this.hasItems()) {
     return null;
   }
 
@@ -340,7 +340,7 @@ Tile.prototype.__getFloorChange = function() {
 
 }
 
-Tile.prototype.enablePathfinding = function(target) {
+Tile.prototype.enablePathfinding = function (target) {
 
   /*
    * Function Tile.prototype.enablePathfinding
@@ -351,7 +351,7 @@ Tile.prototype.enablePathfinding = function(target) {
 
 }
 
-Tile.prototype.disablePathfinding = function() {
+Tile.prototype.disablePathfinding = function () {
 
   /*
    * Function Tile.prototype.disablePathfinding
@@ -362,7 +362,7 @@ Tile.prototype.disablePathfinding = function() {
 
 }
 
-Tile.prototype.setZoneFlags = function(flags) {
+Tile.prototype.setZoneFlags = function (flags) {
 
   /*
    * Function Tile.setZoneFlags
@@ -370,11 +370,11 @@ Tile.prototype.setZoneFlags = function(flags) {
    */
 
   // Create
-  this.tilezoneFlags = new TileFlag(flags); 
+  this.tilezoneFlags = new TileFlag(flags);
 
 }
 
-Tile.prototype.isNoLogoutZone = function() {
+Tile.prototype.isNoLogoutZone = function () {
 
   /*
    * Function Tile.isNoLogoutZone
@@ -385,7 +385,7 @@ Tile.prototype.isNoLogoutZone = function() {
 
 }
 
-Tile.prototype.isProtectionZone = function() {
+Tile.prototype.isProtectionZone = function () {
 
   /*
    * Function Tile.isProtectionZone
@@ -396,7 +396,7 @@ Tile.prototype.isProtectionZone = function() {
 
 }
 
-Tile.prototype.isBlockSolid = function() {
+Tile.prototype.isBlockSolid = function () {
 
   /*
    * Function Tile.isBlockSolid
@@ -404,7 +404,7 @@ Tile.prototype.isBlockSolid = function() {
    */
 
   // Id of zero means nothing is there
-  if(this.id === 0) {
+  if (this.id === 0) {
     return true;
   }
 
@@ -413,13 +413,13 @@ Tile.prototype.isBlockSolid = function() {
 
 }
 
-Tile.prototype.isOccupiedAny = function() {
+Tile.prototype.isOccupiedAny = function () {
 
-  if(this.isOccupied()) {
+  if (this.isOccupied()) {
     return true;
   }
 
-  if(this.isOccupiedCharacters()) {
+  if (this.isOccupiedCharacters()) {
     return true;
   }
 
@@ -427,7 +427,7 @@ Tile.prototype.isOccupiedAny = function() {
 
 }
 
-Tile.prototype.isOccupied = function() {
+Tile.prototype.isOccupied = function () {
 
   /*
    * Function Tile.isOccupied
@@ -435,12 +435,12 @@ Tile.prototype.isOccupied = function() {
    */
 
   // The tile is a block solid (e.g., lava)
-  if(this.isBlockSolid()) {
+  if (this.isBlockSolid()) {
     return true;
   }
 
   // The tile items contain a block solid (e.g., a wall)
-  if(this.hasItems() && this.itemStack.isBlockSolid()) {
+  if (this.hasItems() && this.itemStack.isBlockSolid()) {
     return true;
   }
 
@@ -448,21 +448,21 @@ Tile.prototype.isOccupied = function() {
 
 }
 
-Tile.prototype.hasItems = function() {
+Tile.prototype.hasItems = function () {
 
   return this.hasOwnProperty("itemStack");
 
 }
 
 
-Tile.prototype.isOccupiedCharacters = function() {
+Tile.prototype.isOccupiedCharacters = function () {
 
   /*
    * Function Tile.isOccupiedCharacters
    * Returns true if the tile is occupied by any item (e.g., prevents closing a door)
    */
 
-  if(!this.hasOwnProperty("creatures")) {
+  if (!this.hasOwnProperty("creatures")) {
     return false;
   }
 
@@ -470,11 +470,11 @@ Tile.prototype.isOccupiedCharacters = function() {
 
 }
 
-Tile.prototype.deleteIndex = function(index) {
+Tile.prototype.deleteIndex = function (index) {
 
   let thing = this.peekIndex(index);
 
-  if(thing === null) {
+  if (thing === null) {
     return null;
   }
 
@@ -483,14 +483,14 @@ Tile.prototype.deleteIndex = function(index) {
 
 }
 
-Tile.prototype.deleteThing = function(thing) {
+Tile.prototype.deleteThing = function (thing) {
 
   /*
    * Function Tile._removeItemReference
    * Removes an item on the tile by reference
    */
 
-  if(!this.hasItems()) {
+  if (!this.hasItems()) {
     return;
   }
 
@@ -498,7 +498,7 @@ Tile.prototype.deleteThing = function(thing) {
   let index = this.itemStack.__items.indexOf(thing);
 
   // The requested item does not exist in the container
-  if(index === -1) {
+  if (index === -1) {
     return -1;
   }
 
@@ -508,7 +508,7 @@ Tile.prototype.deleteThing = function(thing) {
 
 }
 
-Tile.prototype.removeIndex = function(index, amount) {
+Tile.prototype.removeIndex = function (index, amount) {
 
   /*
    * Function Tile.removeIndex
@@ -518,12 +518,12 @@ Tile.prototype.removeIndex = function(index, amount) {
   // Take a peek at the item at the index
   let thing = this.peekIndex(index);
 
-  if(thing === null) {
+  if (thing === null) {
     return null;
   }
 
   // The thing is not stackable: remove the currently peeked at thing but return a reference to the item
-  if(!thing.isStackable()) {
+  if (!thing.isStackable()) {
     this.__deleteThing(thing, index);
     return thing;
   }
@@ -532,7 +532,7 @@ Tile.prototype.removeIndex = function(index, amount) {
 
 }
 
-Tile.prototype.isTrashholder = function() {
+Tile.prototype.isTrashholder = function () {
 
   /*
    * Function Tile.isTrashholder
@@ -540,28 +540,28 @@ Tile.prototype.isTrashholder = function() {
    */
 
   // Definitely not a trashholder
-  if(this.id === 0) {
+  if (this.id === 0) {
     return false;
   }
 
   // Check the tile prototype like lava?
-  if(this.getPrototype().isTrashholder()) {
+  if (this.getPrototype().isTrashholder()) {
     return true;
   }
- 
+
   // Item prototypes like a dustbin?
   return this.hasItems() && this.itemStack.isTrashholder();
 
 }
 
-Tile.prototype.getTopItem = function() {
+Tile.prototype.getTopItem = function () {
 
   /*
    * Function Tile.getTopItem
    * Returns at the top item of the stack
    */
 
-  if(!this.hasItems()) {
+  if (!this.hasItems()) {
     return null;
   }
 
@@ -569,14 +569,14 @@ Tile.prototype.getTopItem = function() {
 
 }
 
-Tile.prototype.peekIndex = function(index) {
+Tile.prototype.peekIndex = function (index) {
 
   /*
    * Function Tile.peekIndex
    * Peeks at the item at the specified index
    */
 
-  if(!this.hasItems()) {
+  if (!this.hasItems()) {
     return null;
   }
 
@@ -584,14 +584,14 @@ Tile.prototype.peekIndex = function(index) {
 
 }
 
-Tile.prototype.isFull = function() {
+Tile.prototype.isFull = function () {
 
   /*
    * Function Tile.isFull
    * Returns true if the stack is full and does not accept any more items
    */
 
-  if(!this.hasItems()) {
+  if (!this.hasItems()) {
     return false;
   }
 
@@ -599,37 +599,37 @@ Tile.prototype.isFull = function() {
 
 }
 
-Tile.prototype.getMaximumAddCount = function(player, item, index) {
+Tile.prototype.getMaximumAddCount = function (player, item, index) {
 
   /*
    * Function Tile.getMaximumAddCount
    * Returns true if you can add an item to a tile
    */
 
-  if(!this.hasItems()) {
+  if (!this.hasItems()) {
     return Item.prototype.MAXIMUM_STACK_COUNT;
   }
 
   // Must be a valid index requested
-  if(!this.itemStack.isValidIndex(index)) {
+  if (!this.itemStack.isValidIndex(index)) {
     return 0;
   }
 
-  if(this.isHouseTile() && !player.ownsHouseTile(this)) {
+  if (this.isHouseTile() && !player.ownsHouseTile(this)) {
     return 0;
   }
 
   // Thrashholders always accept items but remove them
-  if(this.isTrashholder()) {
+  if (this.isTrashholder()) {
     return Item.prototype.MAXIMUM_STACK_COUNT;
   }
 
   // The tile is full and no longer accepts items
-  if(this.isFull()) {
+  if (this.isFull()) {
     return 0;
   }
 
-  if(this.itemStack.hasMagicDoor()) {
+  if (this.itemStack.hasMagicDoor()) {
     return 0;
   }
 
@@ -637,15 +637,15 @@ Tile.prototype.getMaximumAddCount = function(player, item, index) {
   let thing = this.peekIndex(index);
 
   // If the slot is empty we can add the maximum stack count
-  if(thing === null) {
+  if (thing === null) {
     return Item.prototype.MAXIMUM_STACK_COUNT;
   }
 
   // Not empty but the identifiers match and the item is stackable
-  if(thing.id === item.id && thing.isStackable()) {
+  if (thing.id === item.id && thing.isStackable()) {
 
     // If the tile is full only allow up to the maximum
-    if(this.isFull()) {
+    if (this.isFull()) {
       return Item.prototype.MAXIMUM_STACK_COUNT - thing.count;
     }
 
@@ -656,7 +656,7 @@ Tile.prototype.getMaximumAddCount = function(player, item, index) {
 
 }
 
-Tile.prototype.getChunk = function() {
+Tile.prototype.getChunk = function () {
 
   /*
    * Function Tile.getChunk
@@ -667,7 +667,7 @@ Tile.prototype.getChunk = function() {
 
 }
 
-Tile.prototype.broadcast = function(packet) {
+Tile.prototype.broadcast = function (packet) {
 
   /*
    * Function Tile.broadcast
@@ -678,29 +678,33 @@ Tile.prototype.broadcast = function(packet) {
 
 }
 
-Tile.prototype.removeCreature = function(creature) {
+Tile.prototype.removeCreature = function (creature) {
 
   /*
    * Function Tile.removeCreature
    * Removes the reference of a creature from the tile
    */
 
+  if (!this.hasOwnProperty("creatures")) {
+    return;
+  }
+
   this.creatures.delete(creature);
 
-  if(this.creatures.size === 0) {
+  if (this.creatures.size === 0) {
     delete this.creatures;
   }
 
 }
 
-Tile.prototype.getCreature = function() {
+Tile.prototype.getCreature = function () {
 
   /*
    * Function Tile.getCreature
    * Returns a single creature from the tile with given priorities
    */
 
-  if(!this.hasOwnProperty("creatures")) {
+  if (!this.hasOwnProperty("creatures")) {
     return null;
   }
 
@@ -708,30 +712,30 @@ Tile.prototype.getCreature = function() {
 
 }
 
-Tile.prototype.getDestination = function() {
-    
+Tile.prototype.getDestination = function () {
+
   /*
    * Function Tile.getDestination
    * Handles a floor change event by stepping on a floor change tile
    */
-  
+
   let destination = null;
 
   // Perhaps a teleporter?
-  if(this.hasItems()) {
+  if (this.hasItems()) {
     destination = this.itemStack.getTeleporterDestination();
   }
-      
+
   // Destination was found through teleporter
-  if(destination !== null) {
+  if (destination !== null) {
     return destination;
-  } 
+  }
 
   // A floor change on the item
   let change = this.__getFloorChange();
 
   // Teleport to the appropriate tile
-  switch(change) {
+  switch (change) {
     case "north": return this.position.north().up();
     case "west": return this.position.west().up();
     case "east": return this.position.east().up();
@@ -743,7 +747,7 @@ Tile.prototype.getDestination = function() {
 
 }
 
-Tile.prototype.__getInverseFloorChange = function() {
+Tile.prototype.__getInverseFloorChange = function () {
 
   /*
    * Function Tile.__getInverseFloorChange
@@ -754,22 +758,22 @@ Tile.prototype.__getInverseFloorChange = function() {
   let tile = gameServer.world.getTileFromWorldPosition(this.position.down());
 
   // There is no available tile
-  if(tile === null) {
+  if (tile === null) {
     return null;
   }
-  
+
   // Map to the appropriate (reserved) direction
-  switch(tile.__getFloorChange()) {
+  switch (tile.__getFloorChange()) {
     case "north": return tile.position.south();
     case "west": return tile.position.east();
-    case "east":return tile.position.west();
+    case "east": return tile.position.west();
     case "south": return tile.position.north();
     default: return tile.position;
-  }   
-    
+  }
+
 }
 
-Tile.prototype.scheduleDecay = function() {
+Tile.prototype.scheduleDecay = function () {
 
   /*
    * Function Tile.scheduleDecay
@@ -785,7 +789,7 @@ Tile.prototype.scheduleDecay = function() {
 }
 
 
-Tile.prototype.__deleteThingStackableItem = function(index, currentItem, count) {
+Tile.prototype.__deleteThingStackableItem = function (index, currentItem, count) {
 
   /*
    * Function Tile.__deleteThingStackableItem
@@ -793,12 +797,12 @@ Tile.prototype.__deleteThingStackableItem = function(index, currentItem, count) 
    */
 
   // More requested than available in the item
-  if(count > currentItem.count) {
+  if (count > currentItem.count) {
     return null;
   }
 
   // Exactly equal: still remove the item completely
-  if(count === currentItem.count) {
+  if (count === currentItem.count) {
     this.__deleteThing(currentItem, index);
     return currentItem;
   }
@@ -808,7 +812,7 @@ Tile.prototype.__deleteThingStackableItem = function(index, currentItem, count) 
 
 }
 
-Tile.prototype.__handleSplitStack = function(index, currentItem, count) {
+Tile.prototype.__handleSplitStack = function (index, currentItem, count) {
 
   /*
    * Function Tile.__handleSplitStack
@@ -823,7 +827,7 @@ Tile.prototype.__handleSplitStack = function(index, currentItem, count) {
 
 }
 
-Tile.prototype.__addStackable = function(index, currentItem, thing) {
+Tile.prototype.__addStackable = function (index, currentItem, thing) {
 
   /*
    * Function Tile.__addStackable
@@ -834,7 +838,7 @@ Tile.prototype.__addStackable = function(index, currentItem, thing) {
   let overflow = (currentItem.count + thing.count) - Item.prototype.MAXIMUM_STACK_COUNT;
 
   // Overflow? We have to split the stack into a bigger and smaller pile
-  if(overflow > 0) {
+  if (overflow > 0) {
     this.__splitStack(index, currentItem, overflow);
   } else {
     this.__replaceFungibleItem(index, currentItem, currentItem.count + thing.count);
@@ -842,7 +846,7 @@ Tile.prototype.__addStackable = function(index, currentItem, thing) {
 
 }
 
-Tile.prototype.__splitStack = function(index, currentItem, overflow) {
+Tile.prototype.__splitStack = function (index, currentItem, overflow) {
 
   /*
    * Function Tile.__splitStack
@@ -856,7 +860,7 @@ Tile.prototype.__splitStack = function(index, currentItem, overflow) {
 
 }
 
-Tile.prototype.__replaceFungibleItem = function(index, thing, count) {
+Tile.prototype.__replaceFungibleItem = function (index, thing, count) {
 
   /*
    * Function Tile.__replaceFungibleItem
@@ -871,20 +875,20 @@ Tile.prototype.__replaceFungibleItem = function(index, thing, count) {
 
 }
 
-Tile.prototype.isBlockProjectile = function() {
+Tile.prototype.isBlockProjectile = function () {
 
   return this.hasOwnProperty("itemStack") && this.itemStack.isBlockProjectile();
 
 }
 
-Tile.prototype.__deleteThing = function(thing, index) {
+Tile.prototype.__deleteThing = function (thing, index) {
 
   /*
    * Function Tile.__deleteThing
    * Removes an item from the tile
    */
 
-  if(!this.hasItems()) {
+  if (!this.hasItems()) {
     return;
   }
 

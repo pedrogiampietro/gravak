@@ -1,0 +1,256 @@
+{
+  "creatureStatistics": {
+    "name": "Sight Of Surrender",
+    "health": 28000,
+    "maxHealth": 28000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 340,
+    "attack": 1100,
+    "attackSpeed": 2000,
+    "defense": 70,
+    "outfit": {
+      "id": 583
+    },
+    "armor": 70
+  },
+  "experience": 17000,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 550,
+      "max": 1100,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 520,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1100
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 500,
+      "max": 800,
+      "length": 8,
+      "spread": 0,
+      "target": true,
+      "areaEffect": "yellowenergy"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 500,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "largerock"
+    }
+  ],
+  "elements": {
+    "physical": 40,
+    "death": 10,
+    "fire": 35,
+    "energy": 10,
+    "ice": 30,
+    "earth": 10,
+    "holy": -5
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "BOW LOW!",
+      "FEEL THE TRUE MEANING OF VANQUISH!",
+      "HAHAHAHA DO YOU WANT TO AMUSE YOUR MASTER?",
+      "NOW YOU WILL SURRENDER!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 22518,
+      "probability": 1,
+      "name": "broken visor"
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 22517,
+      "probability": 1,
+      "name": "sight of surrender's eye"
+    },
+    {
+      "id": 8473,
+      "probability": 0.76987,
+      "name": "ultimate health potion",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 7590,
+      "probability": 0.76407,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 8472,
+      "probability": 0.75442,
+      "name": "great spirit potion",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 18418,
+      "probability": 0.35099,
+      "name": "blue crystal splinter",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 18416,
+      "probability": 0.32754,
+      "name": "green crystal splinter",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 18417,
+      "probability": 0.32147,
+      "name": "brown crystal splinter",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 18413,
+      "probability": 0.25855,
+      "name": "blue crystal shard",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 18414,
+      "probability": 0.24558,
+      "name": "violet crystal shard",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 18415,
+      "probability": 0.23841,
+      "name": "green crystal shard",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2197,
+      "probability": 0.1479,
+      "name": "stone skin amulet"
+    },
+    {
+      "id": 2445,
+      "probability": 0.05215,
+      "name": "crystal mace"
+    },
+    {
+      "id": 2164,
+      "probability": 0.05188,
+      "name": "might ring"
+    },
+    {
+      "id": 22396,
+      "probability": 0.02953,
+      "name": "cluster of solace",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2645,
+      "probability": 0.02511,
+      "name": "steel boots"
+    },
+    {
+      "id": 2472,
+      "probability": 0.01821,
+      "name": "magic plate armor"
+    },
+    {
+      "id": 7421,
+      "probability": 0.01325,
+      "name": "onyx flail"
+    },
+    {
+      "id": 7422,
+      "probability": 0.01269,
+      "name": "jade hammer"
+    },
+    {
+      "id": 2528,
+      "probability": 0.01269,
+      "name": "tower shield"
+    },
+    {
+      "id": 2444,
+      "probability": 0.00883,
+      "name": "hammer of wrath"
+    },
+    {
+      "id": 2497,
+      "probability": 0.008,
+      "name": "crusader helmet"
+    },
+    {
+      "id": 2488,
+      "probability": 0.00552,
+      "name": "crown legs"
+    },
+    {
+      "id": 22542,
+      "probability": 0.00386,
+      "name": "string of mending"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

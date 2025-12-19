@@ -1,0 +1,303 @@
+{
+  "creatureStatistics": {
+    "name": "Latrivan",
+    "health": 25000,
+    "maxHealth": 25000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 390,
+    "attack": 878,
+    "attackSpeed": 2000,
+    "defense": 45,
+    "outfit": {
+      "id": 12
+    },
+    "armor": 35
+  },
+  "experience": 10000,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 878
+    },
+    {
+      "name": "fire",
+      "interval": 1000,
+      "chance": 0.1,
+      "min": 50,
+      "max": 850,
+      "length": 7,
+      "spread": 0,
+      "areaEffect": "explosion"
+    }
+  ],
+  "elements": {
+    "ice": -10,
+    "energy": 35,
+    "death": -12
+  },
+  "immunities": {
+    "fire": true
+  },
+  "sayings": {
+    "texts": [
+      "I might reward you for killing my brother ~ with a swift dead!",
+      "Colateral damage is so fun!",
+      "Golgordan you fool!",
+      "We are the brothers of fear!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 273
+    },
+    {
+      "id": 7591,
+      "probability": 0.37674,
+      "name": "great health potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2214,
+      "probability": 0.26977,
+      "name": "ring of healing"
+    },
+    {
+      "id": 2387,
+      "probability": 0.19535,
+      "name": "double axe"
+    },
+    {
+      "id": 2165,
+      "probability": 0.19535,
+      "name": "stealth ring"
+    },
+    {
+      "id": 2162,
+      "probability": 0.17674,
+      "name": "magic light wand"
+    },
+    {
+      "id": 2150,
+      "probability": 0.16744,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 19
+    },
+    {
+      "id": 2144,
+      "probability": 0.15814,
+      "name": "black pearl",
+      "min": 1,
+      "max": 15
+    },
+    {
+      "id": 2143,
+      "probability": 0.15814,
+      "name": "white pearl",
+      "min": 1,
+      "max": 13
+    },
+    {
+      "id": 2402,
+      "probability": 0.14419,
+      "name": "silver dagger"
+    },
+    {
+      "id": 2170,
+      "probability": 0.13953,
+      "name": "silver amulet"
+    },
+    {
+      "id": 6300,
+      "probability": 0.13488,
+      "name": "death ring"
+    },
+    {
+      "id": 2146,
+      "probability": 0.13488,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2197,
+      "probability": 0.13488,
+      "name": "stone skin amulet"
+    },
+    {
+      "id": 2149,
+      "probability": 0.12558,
+      "name": "small emerald",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2520,
+      "probability": 0.11628,
+      "name": "demon shield"
+    },
+    {
+      "id": 2432,
+      "probability": 0.10698,
+      "name": "fire axe"
+    },
+    {
+      "id": 9971,
+      "probability": 0.10698,
+      "name": "gold ingot"
+    },
+    {
+      "id": 6500,
+      "probability": 0.10233,
+      "name": "demonic essence"
+    },
+    {
+      "id": 2167,
+      "probability": 0.09767,
+      "name": "energy ring"
+    },
+    {
+      "id": 2145,
+      "probability": 0.08372,
+      "name": "small diamond",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2393,
+      "probability": 0.06977,
+      "name": "giant sword"
+    },
+    {
+      "id": 2396,
+      "probability": 0.06977,
+      "name": "ice rapier"
+    },
+    {
+      "id": 2179,
+      "probability": 0.06512,
+      "name": "gold ring"
+    },
+    {
+      "id": 2462,
+      "probability": 0.05581,
+      "name": "devil helmet"
+    },
+    {
+      "id": 2164,
+      "probability": 0.05581,
+      "name": "might ring"
+    },
+    {
+      "id": 7365,
+      "probability": 0.04186,
+      "name": "onyx arrow",
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 2200,
+      "probability": 0.04186,
+      "name": "protection amulet"
+    },
+    {
+      "id": 2182,
+      "probability": 0.04186,
+      "name": "snakebite rod"
+    },
+    {
+      "id": 2436,
+      "probability": 0.03256,
+      "name": "skull staff"
+    },
+    {
+      "id": 2192,
+      "probability": 0.02791,
+      "name": "crystal ball"
+    },
+    {
+      "id": 2178,
+      "probability": 0.02791,
+      "name": "mind stone"
+    },
+    {
+      "id": 2186,
+      "probability": 0.02791,
+      "name": "moonlight rod"
+    },
+    {
+      "id": 2195,
+      "probability": 0.02326,
+      "name": "boots of haste"
+    },
+    {
+      "id": 2155,
+      "probability": 0.02326,
+      "name": "green gem"
+    },
+    {
+      "id": 2188,
+      "probability": 0.02326,
+      "name": "wand of decay"
+    },
+    {
+      "id": 2158,
+      "probability": 0.01395,
+      "name": "blue gem"
+    },
+    {
+      "id": 2185,
+      "probability": 0.01395,
+      "name": "necrotic rod"
+    },
+    {
+      "id": 2470,
+      "probability": 0.0093,
+      "name": "golden legs"
+    },
+    {
+      "id": 2418,
+      "probability": 0.0093,
+      "name": "golden sickle"
+    },
+    {
+      "id": 2514,
+      "probability": 0.0093,
+      "name": "mastermind shield"
+    },
+    {
+      "id": 7368,
+      "probability": 0.00465,
+      "name": "assassin star"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

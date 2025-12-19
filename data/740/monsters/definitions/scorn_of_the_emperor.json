@@ -1,0 +1,105 @@
+{
+  "creatureStatistics": {
+    "name": "Scorn of the Emperor",
+    "health": 7800,
+    "maxHealth": 7800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 410,
+    "attack": 374,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 351
+    },
+    "armor": 45
+  },
+  "experience": 4600,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 366,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 374
+    },
+    {
+      "name": "physical",
+      "interval": 3000,
+      "chance": 0.17,
+      "min": 150,
+      "max": 250,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "bluebubble"
+    },
+    {
+      "name": "physical",
+      "interval": 3000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 500,
+      "range": 7,
+      "shootEffect": "suddendeath",
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -600,
+      "duration": 20000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.21,
+      "min": 200,
+      "max": 450,
+      "radius": 6,
+      "target": false,
+      "areaEffect": "poff"
+    }
+  ],
+  "elements": {
+    "ice": 50,
+    "fire": 10,
+    "physical": -10,
+    "energy": -10,
+    "holy": -15
+  },
+  "immunities": {
+    "death": true,
+    "earth": true
+  },
+  "summons": [
+    {
+      "name": "Draken Warmaster",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 2
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

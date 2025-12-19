@@ -1,0 +1,114 @@
+{
+  "creatureStatistics": {
+    "name": "Salamander",
+    "health": 70,
+    "maxHealth": 70,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 120,
+    "attack": 10,
+    "attackSpeed": 2000,
+    "defense": 3,
+    "outfit": {
+      "id": 529
+    },
+    "armor": 3
+  },
+  "experience": 25,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 10,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 6000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 4,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 10
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Chrrch!",
+      "Chhh!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.71933,
+      "name": "gold coin",
+      "min": 1,
+      "max": 15
+    },
+    {
+      "id": 19737,
+      "probability": 0.34928,
+      "name": "insectoid eggs"
+    },
+    {
+      "id": 2544,
+      "probability": 0.07985,
+      "name": "arrow",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2120,
+      "probability": 0.05077,
+      "name": "rope"
+    },
+    {
+      "id": 2398,
+      "probability": 0.03978,
+      "name": "mace"
+    },
+    {
+      "id": 2460,
+      "probability": 0.01976,
+      "name": "brass helmet"
+    },
+    {
+      "id": 7618,
+      "probability": 0.0148,
+      "name": "health potion"
+    },
+    {
+      "id": 2456,
+      "probability": 0.00739,
+      "name": "bow"
+    },
+    {
+      "id": 2419,
+      "probability": 0.00487,
+      "name": "scimitar"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

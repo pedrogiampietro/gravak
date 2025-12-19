@@ -1,0 +1,182 @@
+{
+  "creatureStatistics": {
+    "name": "Cobra Vizier",
+    "health": 8500,
+    "maxHealth": 8500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 320,
+    "attack": 480,
+    "attackSpeed": 2000,
+    "defense": 82,
+    "outfit": {
+      "id": 1217
+    },
+    "armor": 82
+  },
+  "experience": 7650,
+  "corpse": 2817,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.08,
+      "speedChange": 340,
+      "duration": 5000,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 480
+    },
+    {
+      "name": "explosion wave",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 280,
+      "max": 400
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 350,
+      "max": 520,
+      "range": 4,
+      "radius": 4,
+      "target": true,
+      "areaEffect": "greenbubble",
+      "shootEffect": "smallearth"
+    }
+  ],
+  "elements": {
+    "physical": 10
+  },
+  "immunities": {
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "COMBINE FORCES MY BRETHEN!",
+      "Feel the cobras wrath!",
+      "OH NO, YOU WON'T!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 0.71279,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2181,
+      "probability": 0.32193,
+      "name": "terra rod"
+    },
+    {
+      "id": 34334,
+      "probability": 0.14817,
+      "name": "cobra crest"
+    },
+    {
+      "id": 7886,
+      "probability": 0.14169,
+      "name": "terra boots"
+    },
+    {
+      "id": 7903,
+      "probability": 0.13073,
+      "name": "terra hood"
+    },
+    {
+      "id": 2182,
+      "probability": 0.12375,
+      "name": "snakebite rod"
+    },
+    {
+      "id": 18419,
+      "probability": 0.11279,
+      "name": "cyan crystal fragment"
+    },
+    {
+      "id": 2156,
+      "probability": 0.07458,
+      "name": "red gem"
+    },
+    {
+      "id": 7633,
+      "probability": 0.06512,
+      "name": "giant shimmering pearl"
+    },
+    {
+      "id": 18421,
+      "probability": 0.05017,
+      "name": "green crystal fragment"
+    },
+    {
+      "id": 27048,
+      "probability": 0.04485,
+      "name": "gemmed figurine"
+    },
+    {
+      "id": 18414,
+      "probability": 0.03754,
+      "name": "violet crystal shard"
+    },
+    {
+      "id": 2127,
+      "probability": 0.03306,
+      "name": "emerald bangle"
+    },
+    {
+      "id": 2155,
+      "probability": 0.03189,
+      "name": "green gem"
+    },
+    {
+      "id": 18420,
+      "probability": 0.02807,
+      "name": "red crystal fragment"
+    },
+    {
+      "id": 2409,
+      "probability": 0.02542,
+      "name": "serpent sword"
+    },
+    {
+      "id": 24849,
+      "probability": 0.00897,
+      "name": "onyx chip",
+      "min": 1,
+      "max": 3
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

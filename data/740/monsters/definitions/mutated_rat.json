@@ -1,0 +1,194 @@
+{
+  "creatureStatistics": {
+    "name": "Mutated Rat",
+    "health": 550,
+    "maxHealth": 550,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 158,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 305
+    },
+    "armor": 15
+  },
+  "experience": 450,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 80,
+      "max": 95,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 158
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 45,
+      "max": 85,
+      "range": 7,
+      "shootEffect": "poison",
+      "areaEffect": "poison"
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 80,
+      "max": 100,
+      "length": 5,
+      "spread": 0,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "target": true,
+      "speedChange": -600,
+      "duration": 30000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 30,
+      "max": 70,
+      "range": 7,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 80,
+      "max": 0,
+      "range": 7,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "poison"
+    }
+  ],
+  "elements": {
+    "fire": -10,
+    "holy": 10
+  },
+  "immunities": {
+    "death": true,
+    "earth": true,
+    "paralyze": true,
+    "lifedrain": true,
+    "drunk": true,
+    "drown": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Grrrrrrrrrrrrrr!",
+      "Fcccccchhhhhh"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.78725,
+      "name": "gold coin",
+      "min": 1,
+      "max": 130
+    },
+    {
+      "id": 2229,
+      "probability": 0.20298,
+      "name": "skull (item)"
+    },
+    {
+      "id": 2799,
+      "probability": 0.04874,
+      "name": "stone herb"
+    },
+    {
+      "id": 10585,
+      "probability": 0.03852,
+      "name": "mutated rat tail"
+    },
+    {
+      "id": 2510,
+      "probability": 0.03777,
+      "name": "plate shield"
+    },
+    {
+      "id": 2381,
+      "probability": 0.02957,
+      "name": "halberd"
+    },
+    {
+      "id": 2796,
+      "probability": 0.0137,
+      "name": "green mushroom"
+    },
+    {
+      "id": 2235,
+      "probability": 0.0095,
+      "name": "mouldy cheese"
+    },
+    {
+      "id": 2165,
+      "probability": 0.00562,
+      "name": "stealth ring"
+    },
+    {
+      "id": 7618,
+      "probability": 0.00507,
+      "name": "health potion"
+    },
+    {
+      "id": 8900,
+      "probability": 0.00297,
+      "name": "spellbook of enlightenment"
+    },
+    {
+      "id": 2528,
+      "probability": 0.0005,
+      "name": "tower shield"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

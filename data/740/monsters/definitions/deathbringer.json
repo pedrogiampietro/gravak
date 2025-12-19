@@ -1,0 +1,119 @@
+{
+  "creatureStatistics": {
+    "name": "Deathbringer",
+    "health": 8440,
+    "maxHealth": 8440,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 300,
+    "attack": 465,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 231
+    },
+    "armor": 15
+  },
+  "experience": 5100,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 465
+    },
+    {
+      "name": "fire",
+      "interval": 1000,
+      "chance": 0.1,
+      "min": 80,
+      "max": 120,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "redspark"
+    },
+    {
+      "name": "fire",
+      "interval": 3000,
+      "chance": 0.17,
+      "min": 300,
+      "max": 450,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 300,
+      "max": 450,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 80,
+      "max": 100,
+      "radius": 6,
+      "target": false,
+      "areaEffect": "poff"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 3000,
+      "chance": 0.25,
+      "min": 80,
+      "max": 150,
+      "range": 7,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "energy": 10,
+    "holy": -15
+  },
+  "immunities": {
+    "death": true,
+    "fire": true,
+    "ice": true,
+    "earth": true,
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "YOU FOOLS WILL PAY!",
+      "YOU ALL WILL DIE!!",
+      "DEATH, DESTRUCTION!",
+      "I will eat your soul!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

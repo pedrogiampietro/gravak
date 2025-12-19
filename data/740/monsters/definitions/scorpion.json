@@ -1,0 +1,54 @@
+{
+  "creatureStatistics": {
+    "name": "Scorpion",
+    "health": 45,
+    "maxHealth": 45,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 150,
+    "attack": 50,
+    "attackSpeed": 2000,
+    "defense": 14,
+    "outfit": {
+      "id": 43
+    },
+    "armor": 14
+  },
+  "experience": 45,
+  "corpse": 2897,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 5,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 50
+    }
+  ],
+  "elements": {
+    "energy": 20,
+    "fire": -10,
+    "ice": -10
+  },
+  "immunities": {
+    "earth": true
+  },
+  "loot": [],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

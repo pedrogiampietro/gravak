@@ -1,0 +1,112 @@
+{
+  "creatureStatistics": {
+    "name": "Firestarter",
+    "health": 180,
+    "maxHealth": 180,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 180,
+    "attack": 15,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 159
+    },
+    "armor": 15
+  },
+  "experience": 80,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 15
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 21,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "burstarrow",
+      "areaEffect": "explosion"
+    },
+    {
+      "name": "firefield",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "fire"
+    }
+  ],
+  "elements": {
+    "death": -20,
+    "ice": -20
+  },
+  "immunities": {
+    "fire": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "FIRE!",
+      "BURN!",
+      "DEATH to the FALSE GOD!!",
+      "You shall burn in the thornfires!!",
+      "DOWN with the followers of the bog!!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.79,
+      "name": "gold coin",
+      "min": 1,
+      "max": 35
+    },
+    {
+      "id": 2397,
+      "probability": 0.06,
+      "name": "longsword"
+    },
+    {
+      "id": 2456,
+      "probability": 0.04,
+      "name": "bow"
+    },
+    {
+      "id": 5921,
+      "probability": 0.0093
+    },
+    {
+      "id": 13757,
+      "probability": 0.1528
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

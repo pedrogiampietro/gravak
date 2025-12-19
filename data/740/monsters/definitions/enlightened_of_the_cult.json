@@ -1,0 +1,180 @@
+{
+  "creatureStatistics": {
+    "name": "Enlightened of the Cult",
+    "health": 700,
+    "maxHealth": 700,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 100,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 193
+    },
+    "armor": 25
+  },
+  "experience": 500,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 60,
+      "max": 90,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.15,
+      "duration": 4000,
+      "areaEffect": "yellowbubble"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 70,
+      "max": 185,
+      "range": 1,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "holy",
+      "areaEffect": "holyarea"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "target": true,
+      "duration": 5000,
+      "shootEffect": "holy",
+      "areaEffect": "holydamage"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "target": true,
+      "speedChange": -360,
+      "duration": 6000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "holy": 20,
+    "ice": 5,
+    "physical": 10,
+    "energy": -5,
+    "death": -5
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Crypt Shambler",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 2
+    },
+    {
+      "name": "Ghost",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Praise to my master Urgith!",
+      "You will rise as my servant!",
+      "Praise to my masters! Long live the triangle!",
+      "You will die in the name of the triangle!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 1962,
+      "probability": 0.0091
+    },
+    {
+      "id": 2146,
+      "probability": 0.0055,
+      "name": "small sapphire"
+    },
+    {
+      "id": 2148,
+      "probability": 0.6455,
+      "name": "gold coin",
+      "min": 1,
+      "max": 70
+    },
+    {
+      "id": 2167,
+      "probability": 0.0045,
+      "name": "energy ring"
+    },
+    {
+      "id": 2171,
+      "probability": 0.002,
+      "name": "platinum amulet"
+    },
+    {
+      "id": 2187,
+      "probability": 0.0018,
+      "name": "wand of inferno"
+    },
+    {
+      "id": 2436,
+      "probability": 0.0035,
+      "name": "skull staff"
+    },
+    {
+      "id": 6090,
+      "probability": 0.0049
+    },
+    {
+      "id": 2270,
+      "probability": 0.0074,
+      "name": "strong mana potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

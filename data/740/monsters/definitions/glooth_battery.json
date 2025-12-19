@@ -1,0 +1,129 @@
+{
+  "creatureStatistics": {
+    "name": "Glooth Battery",
+    "health": 8000,
+    "maxHealth": 8000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 100,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 0
+    },
+    "armor": 30
+  },
+  "experience": 3000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 4000,
+      "chance": 0.15,
+      "min": 133,
+      "max": 454,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "poison",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 206,
+      "max": 252,
+      "radius": 6,
+      "target": false,
+      "areaEffect": "greenbubble"
+    }
+  ],
+  "elements": {
+    "energy": 25,
+    "earth": 1,
+    "fire": 25,
+    "ice": 25,
+    "holy": 25
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 0.75,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 7590,
+      "probability": 0.13462,
+      "name": "great mana potion"
+    },
+    {
+      "id": 9930,
+      "probability": 0.09615,
+      "name": "flask of rust remover"
+    },
+    {
+      "id": 7591,
+      "probability": 0.09615,
+      "name": "great health potion"
+    },
+    {
+      "id": 23541,
+      "probability": 0.07692,
+      "name": "gearwheel chain"
+    },
+    {
+      "id": 9690,
+      "probability": 0.03846,
+      "name": "gear wheel"
+    },
+    {
+      "id": 2645,
+      "probability": 0.03846,
+      "name": "steel boots"
+    },
+    {
+      "id": 9978,
+      "probability": 0.01923,
+      "name": "crystal pedestal"
+    },
+    {
+      "id": 5880,
+      "probability": 0.01923,
+      "name": "iron ore"
+    },
+    {
+      "id": 7440,
+      "probability": 0.01923,
+      "name": "mastermind potion"
+    },
+    {
+      "id": 23540,
+      "probability": 0.01923,
+      "name": "metal spats"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

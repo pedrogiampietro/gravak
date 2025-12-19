@@ -1,0 +1,186 @@
+{
+  "creatureStatistics": {
+    "name": "Lokathmor",
+    "health": 300000,
+    "maxHealth": 300000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 1200,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 1062
+    },
+    "armor": 30
+  },
+  "experience": 100000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1200
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.08,
+      "min": 1100,
+      "max": 2800,
+      "range": 7,
+      "radius": 5,
+      "target": true,
+      "shootEffect": "whirlwindaxe",
+      "areaEffect": "redspark"
+    },
+    {
+      "name": "death",
+      "interval": 1000,
+      "chance": 0.08,
+      "min": 800,
+      "max": 1900,
+      "radius": 9,
+      "target": false,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 5000,
+      "chance": 0.18,
+      "min": 1100,
+      "max": 2500,
+      "length": 0,
+      "spread": 0,
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "poison",
+      "interval": 1000,
+      "chance": 0.2,
+      "min": 1000,
+      "max": 255,
+      "range": 7,
+      "radius": 6,
+      "target": false,
+      "areaEffect": "bluebubble"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.08,
+      "min": 90,
+      "max": 200,
+      "range": 7,
+      "target": true,
+      "shootEffect": "whirlwindaxe",
+      "areaEffect": "explosionarea"
+    }
+  ],
+  "elements": {
+    "energy": -5,
+    "earth": -15,
+    "fire": 30,
+    "ice": 10
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2195,
+      "probability": 1,
+      "name": "boots of haste"
+    },
+    {
+      "id": 2160,
+      "probability": 1,
+      "name": "crystal coin",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 5954,
+      "probability": 1,
+      "name": "demon horn"
+    },
+    {
+      "id": 7632,
+      "probability": 1,
+      "name": "giant shimmering pearl"
+    },
+    {
+      "id": 8472,
+      "probability": 1,
+      "name": "great spirit potion",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 7440,
+      "probability": 1,
+      "name": "mastermind potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 39
+    },
+    {
+      "id": 25172,
+      "probability": 1,
+      "name": "silver token",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 9822,
+      "probability": 1,
+      "name": "slightly rusted helmet"
+    },
+    {
+      "id": 2150,
+      "probability": 1,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 12
+    },
+    {
+      "id": 2197,
+      "probability": 1,
+      "name": "stone skin amulet"
+    },
+    {
+      "id": 26029,
+      "probability": 1,
+      "name": "ultimate mana potion",
+      "min": 1,
+      "max": 8
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

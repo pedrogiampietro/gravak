@@ -1,0 +1,126 @@
+{
+  "creatureStatistics": {
+    "name": "Humorless Fungus",
+    "health": 2500,
+    "maxHealth": 2500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 475,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 517
+    },
+    "armor": 25
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 0,
+      "max": 230,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.1,
+      "duration": 5000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 475
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 40,
+      "max": 197,
+      "range": 7,
+      "target": true,
+      "shootEffect": "smallearth",
+      "areaEffect": "smallplants"
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 525,
+      "range": 7,
+      "target": true,
+      "shootEffect": "snowball",
+      "areaEffect": "icearea"
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 400,
+      "max": 640,
+      "range": 7,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "duration": 4000,
+      "areaEffect": "stun"
+    }
+  ],
+  "elements": {
+    "holy": 5,
+    "fire": 5,
+    "energy": 15,
+    "ice": 15
+  },
+  "immunities": {
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Munch munch munch!",
+      "Chatter"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": 4
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "creatureStatistics": {
+    "name": "The Bloodweb",
+    "health": 1750,
+    "maxHealth": 1750,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 340,
+    "attack": 250,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 263
+    },
+    "armor": 25
+  },
+  "experience": 1450,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 3000,
+      "chance": 0.4,
+      "speedChange": 380,
+      "duration": 80000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 250
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 7,
+      "target": false,
+      "speedChange": -850,
+      "duration": 8000,
+      "areaEffect": "poff"
+    },
+    {
+      "name": "energy",
+      "interval": 1000,
+      "chance": 0.25,
+      "min": 60,
+      "max": 150,
+      "range": 7,
+      "target": true,
+      "shootEffect": "energy",
+      "areaEffect": "energy"
+    }
+  ],
+  "elements": {
+    "earth": 20,
+    "energy": -20
+  },
+  "immunities": {
+    "fire": true,
+    "ice": true,
+    "paralyze": true,
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Screeech!"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 9
+    },
+    {
+      "id": 7441,
+      "probability": 0.99231,
+      "name": "ice cube"
+    },
+    {
+      "id": 7589,
+      "probability": 0.70769,
+      "name": "strong mana potion"
+    },
+    {
+      "id": 5879,
+      "probability": 0.65385,
+      "name": "spider silk"
+    },
+    {
+      "id": 7902,
+      "probability": 0.28462,
+      "name": "glacier mask"
+    },
+    {
+      "id": 7896,
+      "probability": 0.26154,
+      "name": "glacier kilt"
+    },
+    {
+      "id": 11306,
+      "probability": 0.20769,
+      "name": "sai"
+    },
+    {
+      "id": 7437,
+      "probability": 0.12308,
+      "name": "sapphire hammer"
+    },
+    {
+      "id": 2476,
+      "probability": 0.08462,
+      "name": "knight armor"
+    },
+    {
+      "id": 5801,
+      "probability": 0.05385,
+      "name": "jewelled backpack"
+    },
+    {
+      "id": 2477,
+      "probability": 0.05385,
+      "name": "knight legs"
+    },
+    {
+      "id": 7290,
+      "probability": 0.01538,
+      "name": "shard"
+    },
+    {
+      "id": 2169,
+      "probability": 0.01538,
+      "name": "time ring"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

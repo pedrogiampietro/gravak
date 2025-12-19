@@ -4,14 +4,14 @@ require("./require");
 
 const GameServer = requireModule("gameserver");
 
-if(require.main === module) {
+if (require.main === module) {
 
   /*
    * Function main
    * Function called when the engine script is executed
    */
 
-  console.log("Starting NodeJS Forby Open Tibia Server");
+  console.log("Starting NodeJS Gravak Open Tibia Server");
   console.log("Creating server with version %s".format(CONFIG.SERVER.CLIENT_VERSION));
   console.log("Setting data directory to %s".format(getDataFile("")));
 

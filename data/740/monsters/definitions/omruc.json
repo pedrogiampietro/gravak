@@ -1,0 +1,221 @@
+{
+  "creatureStatistics": {
+    "name": "Omruc",
+    "health": 4300,
+    "maxHealth": 4300,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 370,
+    "attack": 120,
+    "attackSpeed": 2000,
+    "defense": 60,
+    "outfit": {
+      "id": 90
+    },
+    "armor": 60
+  },
+  "experience": 2950,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.17,
+      "min": 100,
+      "max": 200,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.14,
+      "duration": 8000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 120
+    },
+    {
+      "name": "lifedrain",
+      "interval": 5000,
+      "chance": 0.2,
+      "min": 100,
+      "max": 250,
+      "range": 1
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 200,
+      "max": 500,
+      "shootEffect": "poisonarrow"
+    },
+    {
+      "name": "fire",
+      "interval": 1000,
+      "chance": 0.2,
+      "min": 120,
+      "max": 450,
+      "range": 3,
+      "shootEffect": "burstarrow",
+      "areaEffect": "explosionarea"
+    },
+    {
+      "name": "melee",
+      "interval": 3000,
+      "chance": 0.2,
+      "min": 150,
+      "max": 500,
+      "shootEffect": "arrow"
+    },
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.25,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -900,
+      "duration": 50000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "energy": 5,
+    "ice": 5,
+    "fire": 20,
+    "earth": 20,
+    "holy": -10
+  },
+  "immunities": {
+    "death": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Stalker",
+      "interval": 2000,
+      "chance": 1,
+      "maxSummons": 4
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Now chhhou shhhee me ... Now chhhou don't.",
+      "Chhhhou are marked ashhh my prey.",
+      "Psssst, I am over chhhere.",
+      "Catchhhh me if chhhou can.",
+      "Die!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2352,
+      "probability": 1,
+      "name": "crystal arrow"
+    },
+    {
+      "id": 2148,
+      "probability": 0.85417,
+      "name": "gold coin",
+      "min": 1,
+      "max": 211
+    },
+    {
+      "id": 2674,
+      "probability": 0.78125,
+      "name": "red apple",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2545,
+      "probability": 0.57292,
+      "name": "poison arrow",
+      "min": 1,
+      "max": 19
+    },
+    {
+      "id": 2546,
+      "probability": 0.47917,
+      "name": "burst arrow",
+      "min": 1,
+      "max": 15
+    },
+    {
+      "id": 7365,
+      "probability": 0.33333,
+      "name": "onyx arrow",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 2544,
+      "probability": 0.22917,
+      "name": "arrow",
+      "min": 1,
+      "max": 25
+    },
+    {
+      "id": 2547,
+      "probability": 0.17708,
+      "name": "power bolt",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 7591,
+      "probability": 0.11458,
+      "name": "great health potion"
+    },
+    {
+      "id": 2145,
+      "probability": 0.09375,
+      "name": "small diamond",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2165,
+      "probability": 0.03125,
+      "name": "stealth ring"
+    },
+    {
+      "id": 11207,
+      "probability": 0.02083,
+      "name": "mini mummy"
+    },
+    {
+      "id": 2195,
+      "probability": 0.01042,
+      "name": "boots of haste"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

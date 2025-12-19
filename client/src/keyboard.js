@@ -96,6 +96,11 @@ Keyboard.prototype.handleInput = function () {
     // Cancel pathfinding when any input is given
     gameClient.world.pathfinder.setPathfindCache(null);
 
+    // Block all input when player is dead
+    if (gameClient.player && gameClient.player.isDead) {
+      return;
+    }
+
     // Must have confirmation from the server before moving to the next tile is allowed
     if (!gameClient.player.__serverWalkConfirmation) {
       return;

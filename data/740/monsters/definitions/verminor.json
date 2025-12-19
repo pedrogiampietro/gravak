@@ -1,0 +1,377 @@
+{
+  "creatureStatistics": {
+    "name": "Verminor",
+    "health": 80000,
+    "maxHealth": 80000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 380,
+    "attack": 2520,
+    "attackSpeed": 2000,
+    "defense": 145,
+    "outfit": {
+      "id": 12
+    },
+    "armor": 188
+  },
+  "experience": 35000,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 1000,
+      "max": 3000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.08,
+      "speedChange": 480,
+      "duration": 6000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 2520
+    },
+    {
+      "name": "death",
+      "interval": 1000,
+      "chance": 0.08,
+      "min": 800,
+      "max": 1900,
+      "radius": 9,
+      "target": false,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.12,
+      "min": 0,
+      "max": 0,
+      "radius": 6,
+      "target": false,
+      "speedChange": -850,
+      "duration": 60000,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "physical",
+      "interval": 1000,
+      "chance": 0.1,
+      "min": 600,
+      "max": 1450,
+      "radius": 5,
+      "target": false,
+      "areaEffect": "blackspark"
+    },
+    {
+      "name": "fire",
+      "interval": 3000,
+      "chance": 0.13,
+      "min": 300,
+      "max": 800,
+      "range": 7,
+      "radius": 7,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "manadrain",
+      "interval": 3000,
+      "chance": 0.08,
+      "min": 600,
+      "max": 700,
+      "radius": 10,
+      "target": false,
+      "areaEffect": "energyarea"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 400,
+      "max": 800,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 5000,
+      "chance": 0.18,
+      "min": 800,
+      "max": 1000,
+      "length": 0,
+      "spread": 0,
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.06,
+      "min": 600,
+      "max": 1200,
+      "radius": 14,
+      "target": false,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "immunities": {
+    "energy": true,
+    "fire": true,
+    "earth": true,
+    "lifedrain": true,
+    "paralyze": true,
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "BOW TO THE POWER OF THE RUTHLESS SEVEN!",
+      "DESTRUCTION!",
+      "CHAOS!",
+      "DEATH TO ALL!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2124,
+      "probability": 0.055,
+      "name": "crystal ring"
+    },
+    {
+      "id": 2142,
+      "probability": 0.035,
+      "name": "ancient amulet"
+    },
+    {
+      "id": 2145,
+      "probability": 0.095,
+      "name": "small diamond",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2146,
+      "probability": 0.135,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2148,
+      "probability": 0.999,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.888,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.777,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.666,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2149,
+      "probability": 0.155,
+      "name": "small emerald",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2150,
+      "probability": 0.135,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 2151,
+      "probability": 0.14,
+      "name": "talon",
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 2153,
+      "probability": 0.015,
+      "name": "green gem"
+    },
+    {
+      "id": 2158,
+      "probability": 0.015,
+      "name": "blue gem"
+    },
+    {
+      "id": 2162,
+      "probability": 0.115,
+      "name": "magic lightwand"
+    },
+    {
+      "id": 2164,
+      "probability": 0.05,
+      "name": "might ring"
+    },
+    {
+      "id": 2165,
+      "probability": 0.095,
+      "name": "stealth ring"
+    },
+    {
+      "id": 2167,
+      "probability": 0.135,
+      "name": "energy ring"
+    },
+    {
+      "id": 2170,
+      "probability": 0.13,
+      "name": "silver amulet"
+    },
+    {
+      "id": 2171,
+      "probability": 0.045,
+      "name": "platinum amulet"
+    },
+    {
+      "id": 2178,
+      "probability": 0.04,
+      "name": "mind stone"
+    },
+    {
+      "id": 2179,
+      "probability": 0.08,
+      "name": "gold ring"
+    },
+    {
+      "id": 2188,
+      "probability": 0.025,
+      "name": "wand of decay"
+    },
+    {
+      "id": 2192,
+      "probability": 0.025,
+      "name": "crystal ball"
+    },
+    {
+      "id": 2195,
+      "probability": 0.04,
+      "name": "boots of haste"
+    },
+    {
+      "id": 2214,
+      "probability": 0.13,
+      "name": "ring of healing"
+    },
+    {
+      "id": 2231,
+      "probability": 0.09,
+      "name": "big bone"
+    },
+    {
+      "id": 2377,
+      "probability": 0.2,
+      "name": "two handed sword"
+    },
+    {
+      "id": 2387,
+      "probability": 0.2,
+      "name": "double axe"
+    },
+    {
+      "id": 2393,
+      "probability": 0.125,
+      "name": "giant sword"
+    },
+    {
+      "id": 2396,
+      "probability": 0.075,
+      "name": "ice rapier"
+    },
+    {
+      "id": 2432,
+      "probability": 0.17,
+      "name": "fire axe"
+    },
+    {
+      "id": 2436,
+      "probability": 0.05,
+      "name": "skull staff"
+    },
+    {
+      "id": 2462,
+      "probability": 0.11,
+      "name": "devil helmet"
+    },
+    {
+      "id": 2470,
+      "probability": 0.05,
+      "name": "golden legs"
+    },
+    {
+      "id": 2472,
+      "probability": 0.03,
+      "name": "magic plate armor"
+    },
+    {
+      "id": 2514,
+      "probability": 0.075,
+      "name": "mastermind shield"
+    },
+    {
+      "id": 2520,
+      "probability": 0.155,
+      "name": "demon shield"
+    },
+    {
+      "id": 3955,
+      "probability": 0.001,
+      "name": "voodoo doll"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

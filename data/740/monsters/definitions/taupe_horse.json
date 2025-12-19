@@ -1,0 +1,44 @@
+{
+  "creatureStatistics": {
+    "name": "Horse",
+    "health": 75,
+    "maxHealth": 75,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 0,
+    "outfit": {
+      "id": 435
+    }
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 75,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "sayings": {
+    "texts": [
+      "Weeeeheeeeeee",
+      "*snort*",
+      "*Weeeeheeeeaaa*"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

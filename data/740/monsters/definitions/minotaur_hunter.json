@@ -1,0 +1,254 @@
+{
+  "creatureStatistics": {
+    "name": "Minotaur Hunter",
+    "health": 1400,
+    "maxHealth": 1400,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 150,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 612
+    },
+    "armor": 30
+  },
+  "experience": 1700,
+  "corpse": 2830,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 300,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.13,
+      "min": 95,
+      "max": 180,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.11,
+      "speedChange": 520,
+      "duration": 5000,
+      "areaEffect": "poff"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 150
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 0,
+      "max": 150,
+      "range": 7,
+      "shootEffect": "spear",
+      "areaEffect": "explosionarea"
+    },
+    {
+      "name": "bleedcondition",
+      "interval": 2000,
+      "chance": 0.35,
+      "min": 300,
+      "max": 400,
+      "range": 7,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "throwingknife",
+      "areaEffect": "blackspark"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.21,
+      "min": 160,
+      "max": 260,
+      "range": 7,
+      "radius": 2,
+      "target": true,
+      "shootEffect": "burstarrow",
+      "areaEffect": "explosion"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.11,
+      "min": 35,
+      "max": 150,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "explosionarea"
+    }
+  ],
+  "elements": {
+    "fire": 10,
+    "holy": 10,
+    "ice": -5
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "You are marked for death!",
+      "This time the prey is you!",
+      "You are hunted!",
+      "Bullseye!",
+      "You'll make a fine trophy!"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.99464,
+      "name": "gold coin",
+      "min": 1,
+      "max": 200
+    },
+    {
+      "id": 2152,
+      "probability": 0.35026,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 3965,
+      "probability": 0.15007,
+      "name": "hunting spear",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2260,
+      "probability": 0.1499,
+      "name": "blank rune",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7378,
+      "probability": 0.11751,
+      "name": "royal spear",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 7589,
+      "probability": 0.10135,
+      "name": "strong mana potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7588,
+      "probability": 0.09908,
+      "name": "strong health potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 5944,
+      "probability": 0.07011,
+      "name": "soul orb"
+    },
+    {
+      "id": 12428,
+      "probability": 0.05046,
+      "name": "minotaur horn",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 5878,
+      "probability": 0.0485,
+      "name": "minotaur leather"
+    },
+    {
+      "id": 2147,
+      "probability": 0.0255,
+      "name": "small ruby",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2150,
+      "probability": 0.02454,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2165,
+      "probability": 0.024,
+      "name": "stealth ring"
+    },
+    {
+      "id": 5910,
+      "probability": 0.01537,
+      "name": "green piece of cloth"
+    },
+    {
+      "id": 5912,
+      "probability": 0.01506,
+      "name": "blue piece of cloth"
+    },
+    {
+      "id": 5911,
+      "probability": 0.01484,
+      "name": "red piece of cloth"
+    },
+    {
+      "id": 23546,
+      "probability": 0.00746,
+      "name": "mino shield"
+    },
+    {
+      "id": 2154,
+      "probability": 0.00556,
+      "name": "yellow gem"
+    },
+    {
+      "id": 2156,
+      "probability": 0.00535,
+      "name": "red gem"
+    },
+    {
+      "id": 7401,
+      "probability": 0.00162,
+      "name": "minotaur trophy"
+    },
+    {
+      "id": 23537,
+      "probability": 0.00104,
+      "name": "mooh'tah plate"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

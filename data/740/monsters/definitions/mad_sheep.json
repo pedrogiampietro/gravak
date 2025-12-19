@@ -1,0 +1,76 @@
+{
+  "creatureStatistics": {
+    "name": "Mad Sheep",
+    "health": 22,
+    "maxHealth": 22,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 272,
+    "attack": 1,
+    "attackSpeed": 2000,
+    "defense": 1,
+    "outfit": {
+      "id": 14
+    },
+    "armor": 1
+  },
+  "experience": 0,
+  "corpse": 2905,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.5,
+      "min": 5,
+      "max": 10,
+      "areaEffect": "hearts"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 292,
+      "duration": 5000
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1
+    }
+  ],
+  "elements": {
+    "fire": -1
+  },
+  "sayings": {
+    "texts": [
+      "Maeh",
+      "Groar!",
+      "Fchhhh",
+      "Meow!",
+      "Woof!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

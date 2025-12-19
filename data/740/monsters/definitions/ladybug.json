@@ -1,0 +1,88 @@
+{
+  "creatureStatistics": {
+    "name": "Ladybug",
+    "health": 255,
+    "maxHealth": 255,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 4,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 448
+    },
+    "armor": 10
+  },
+  "experience": 70,
+  "corpse": 2902,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 60,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 4
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 20,
+      "range": 1,
+      "shootEffect": "poison"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 20,
+      "range": 7,
+      "shootEffect": "poison"
+    }
+  ],
+  "elements": {
+    "earth": 5,
+    "physical": -5,
+    "fire": -5,
+    "ice": -5
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Nee pah!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.65,
+      "name": "gold coin",
+      "min": 1,
+      "max": 40
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

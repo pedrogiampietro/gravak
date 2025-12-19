@@ -1,0 +1,111 @@
+{
+  "creatureStatistics": {
+    "name": "Monk",
+    "health": 240,
+    "maxHealth": 240,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 240,
+    "attack": 130,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 57
+    },
+    "armor": 30
+  },
+  "experience": 200,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 30,
+      "max": 50,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 300,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 130
+    }
+  ],
+  "elements": {
+    "holy": 50,
+    "death": 50,
+    "physical": -5
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Repent Heretic!",
+      "A prayer to the almighty one!",
+      "I will punish the sinners!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2689,
+      "probability": 0.2,
+      "name": "bread"
+    },
+    {
+      "id": 2148,
+      "probability": 0.15,
+      "name": "gold coin",
+      "min": 1,
+      "max": 18
+    },
+    {
+      "id": 1949,
+      "probability": 0.017
+    },
+    {
+      "id": 2044,
+      "probability": 0.0084
+    },
+    {
+      "id": 2401,
+      "probability": 0.0044
+    },
+    {
+      "id": 2169,
+      "probability": 0.001,
+      "name": "power ring"
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

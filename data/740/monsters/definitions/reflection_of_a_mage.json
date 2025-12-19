@@ -1,0 +1,145 @@
+{
+  "creatureStatistics": {
+    "name": "Reflection Of A Mage",
+    "health": 3500,
+    "maxHealth": 3500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 100,
+    "attack": 78,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 416
+    },
+    "armor": 30
+  },
+  "experience": 3250,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 78
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.35,
+      "min": 100,
+      "max": 200,
+      "range": 7,
+      "radius": 5,
+      "target": true,
+      "shootEffect": "energyball",
+      "areaEffect": "energy"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 100,
+      "max": 200,
+      "range": 7
+    },
+    {
+      "name": "energyfield",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 2,
+      "target": true,
+      "shootEffect": "energy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 101,
+      "max": 300,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "bigclouds"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 373
+    },
+    {
+      "id": 2114,
+      "probability": 0.8,
+      "name": "piggy bank"
+    },
+    {
+      "id": 2152,
+      "probability": 0.6,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 12
+    },
+    {
+      "id": 7368,
+      "probability": 0.4,
+      "name": "assassin star",
+      "min": 1,
+      "max": 15
+    },
+    {
+      "id": 7591,
+      "probability": 0.4,
+      "name": "great health potion",
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 7443,
+      "probability": 0.2,
+      "name": "bullseye potion"
+    },
+    {
+      "id": 7590,
+      "probability": 0.2,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 9
+    },
+    {
+      "id": 2146,
+      "probability": 0.2,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 3
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

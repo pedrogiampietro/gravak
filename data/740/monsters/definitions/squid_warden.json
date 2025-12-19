@@ -1,0 +1,202 @@
+{
+  "creatureStatistics": {
+    "name": "Squid Warden",
+    "health": 16500,
+    "maxHealth": 16500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 430,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 78,
+    "outfit": {
+      "id": 1059
+    },
+    "armor": 78
+  },
+  "experience": 15300,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 600,
+      "max": 900,
+      "range": 2,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "ice"
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 600,
+      "max": 900,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "icearea"
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 500,
+      "max": 700,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "snowball",
+      "areaEffect": "groundshaker"
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 500,
+      "max": 700,
+      "length": 5,
+      "spread": 0,
+      "areaEffect": "bluenote"
+    }
+  ],
+  "elements": {
+    "fire": -15,
+    "ice": 100
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2146,
+      "probability": 0.6799,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2152,
+      "probability": 0.50734,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 50
+    },
+    {
+      "id": 31226,
+      "probability": 0.35273,
+      "name": "glowing rune",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 10578,
+      "probability": 0.22589,
+      "name": "frosty heart"
+    },
+    {
+      "id": 26029,
+      "probability": 0.17217,
+      "name": "ultimate mana potion"
+    },
+    {
+      "id": 31224,
+      "probability": 0.15985,
+      "name": "inkwell (black)"
+    },
+    {
+      "id": 8473,
+      "probability": 0.15396,
+      "name": "ultimate health potion"
+    },
+    {
+      "id": 7441,
+      "probability": 0.13915,
+      "name": "ice cube"
+    },
+    {
+      "id": 7902,
+      "probability": 0.07639,
+      "name": "glacier mask"
+    },
+    {
+      "id": 2396,
+      "probability": 0.05294,
+      "name": "ice rapier"
+    },
+    {
+      "id": 2445,
+      "probability": 0.04914,
+      "name": "crystal mace"
+    },
+    {
+      "id": 7449,
+      "probability": 0.04534,
+      "name": "crystal sword"
+    },
+    {
+      "id": 23565,
+      "probability": 0.04416,
+      "name": "slime heart"
+    },
+    {
+      "id": 7387,
+      "probability": 0.04101,
+      "name": "diamond sceptre"
+    },
+    {
+      "id": 10580,
+      "probability": 0.04049,
+      "name": "piece of dead brain"
+    },
+    {
+      "id": 7896,
+      "probability": 0.02686,
+      "name": "glacier kilt"
+    },
+    {
+      "id": 7897,
+      "probability": 0.0228,
+      "name": "glacier robe"
+    },
+    {
+      "id": 7437,
+      "probability": 0.00904,
+      "name": "sapphire hammer"
+    },
+    {
+      "id": 18412,
+      "probability": 0.00708,
+      "name": "glacial rod"
+    },
+    {
+      "id": 8878,
+      "probability": 0.00694,
+      "name": "crystalline armor"
+    },
+    {
+      "id": 10220,
+      "probability": 0.00288,
+      "name": "leviathan's amulet"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

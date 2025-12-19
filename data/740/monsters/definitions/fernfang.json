@@ -1,0 +1,170 @@
+{
+  "creatureStatistics": {
+    "name": "Fernfang",
+    "health": 400,
+    "maxHealth": 400,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 240,
+    "attack": 50,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 206
+    },
+    "armor": 15
+  },
+  "experience": 600,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 90,
+      "max": 120,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.07,
+      "speedChange": 310,
+      "duration": 10000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "effect",
+      "interval": 1000,
+      "chance": 0.05,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "outfit",
+      "interval": 1000,
+      "chance": 0.05,
+      "duration": 14000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 50
+    },
+    {
+      "name": "manadrain",
+      "interval": 1000,
+      "chance": 0.25,
+      "min": 25,
+      "max": 45,
+      "range": 7,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "holy",
+      "interval": 2000,
+      "chance": 0.8,
+      "min": 65,
+      "max": 180,
+      "range": 7,
+      "shootEffect": "holy",
+      "areaEffect": "holyarea"
+    }
+  ],
+  "elements": {
+    "ice": 70,
+    "earth": 40
+  },
+  "immunities": {
+    "invisible": true,
+    "lifedrain": true
+  },
+  "summons": [
+    {
+      "name": "War Wolf",
+      "interval": 1000,
+      "chance": 0.13,
+      "maxSummons": 3
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "You desecrated this place!",
+      "I will cleanse this isle!",
+      "Grrrrrrr",
+      "Yoooohhuuuu!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 94
+    },
+    {
+      "id": 2152,
+      "probability": 0.97,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2155,
+      "probability": 0.43,
+      "name": "yellow gem"
+    },
+    {
+      "id": 2169,
+      "probability": 0.41,
+      "name": "power ring"
+    },
+    {
+      "id": 2260,
+      "probability": 0.17,
+      "name": "blank rune"
+    },
+    {
+      "id": 2689,
+      "probability": 0.12,
+      "name": "bread"
+    },
+    {
+      "id": 2044,
+      "probability": 0.12
+    },
+    {
+      "id": 2401,
+      "probability": 0.12
+    },
+    {
+      "id": 2270,
+      "probability": 0.102,
+      "name": "strong mana potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

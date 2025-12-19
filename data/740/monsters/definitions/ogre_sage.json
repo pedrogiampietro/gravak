@@ -1,0 +1,186 @@
+{
+  "creatureStatistics": {
+    "name": "Ogre Sage",
+    "health": 4800,
+    "maxHealth": 4800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 460,
+    "attack": 450,
+    "attackSpeed": 2000,
+    "defense": 93,
+    "outfit": {
+      "id": 1214
+    },
+    "armor": 93
+  },
+  "experience": 5500,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 490,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 450
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.24,
+      "min": 50,
+      "max": 130,
+      "range": 7,
+      "target": true,
+      "shootEffect": "smallstone"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.16,
+      "min": 100,
+      "max": 165,
+      "range": 4,
+      "shootEffect": "smallearth",
+      "areaEffect": "poison"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 115,
+      "max": 200,
+      "range": 7,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "death",
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.13,
+      "min": 200,
+      "max": 300,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "smallearth",
+      "areaEffect": "greenspark"
+    }
+  ],
+  "elements": {
+    "earth": 75,
+    "energy": -30,
+    "holy": -10
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin"
+    },
+    {
+      "id": 24845,
+      "probability": 0.12795,
+      "name": "ogre nose ring"
+    },
+    {
+      "id": 24844,
+      "probability": 0.10774,
+      "name": "ogre ear stud"
+    },
+    {
+      "id": 24840,
+      "probability": 0.09428,
+      "name": "shamanic talisman"
+    },
+    {
+      "id": 12408,
+      "probability": 0.09091,
+      "name": "broken shamanic staff"
+    },
+    {
+      "id": 24847,
+      "probability": 0.08081,
+      "name": "skull fetish"
+    },
+    {
+      "id": 7886,
+      "probability": 0.07071,
+      "name": "terra boots"
+    },
+    {
+      "id": 7887,
+      "probability": 0.06061,
+      "name": "terra amulet"
+    },
+    {
+      "id": 18414,
+      "probability": 0.06061,
+      "name": "violet crystal shard"
+    },
+    {
+      "id": 18421,
+      "probability": 0.05051,
+      "name": "green crystal fragment"
+    },
+    {
+      "id": 20111,
+      "probability": 0.0404,
+      "name": "bone fetish"
+    },
+    {
+      "id": 2154,
+      "probability": 0.03704,
+      "name": "yellow gem"
+    },
+    {
+      "id": 10219,
+      "probability": 0.02694,
+      "name": "sacred tree amulet"
+    },
+    {
+      "id": 2153,
+      "probability": 0.02694,
+      "name": "violet gem"
+    },
+    {
+      "id": 24839,
+      "probability": 0.0101,
+      "name": "ogre scepta"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

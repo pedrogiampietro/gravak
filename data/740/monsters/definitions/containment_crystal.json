@@ -1,0 +1,61 @@
+{
+  "creatureStatistics": {
+    "name": "Containment Crystal",
+    "health": 20000,
+    "maxHealth": 20000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 100,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 0
+    },
+    "armor": 10
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 300,
+      "max": 400
+    }
+  ],
+  "attacks": [
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.4,
+      "min": 100,
+      "max": 220,
+      "radius": 3,
+      "areaEffect": "purpleenergy"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

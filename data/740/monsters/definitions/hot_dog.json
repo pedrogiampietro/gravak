@@ -1,0 +1,93 @@
+{
+  "creatureStatistics": {
+    "name": "Hot Dog",
+    "health": 505,
+    "maxHealth": 505,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 300,
+    "attack": 55,
+    "attackSpeed": 1200,
+    "defense": 2,
+    "outfit": {
+      "id": 32
+    },
+    "armor": 1
+  },
+  "experience": 190,
+  "corpse": 2839,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 1200,
+      "chance": 1,
+      "min": 0,
+      "max": 55
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 30,
+      "max": 60,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "fire"
+    },
+    {
+      "name": "fire",
+      "interval": 1000,
+      "chance": 0.3,
+      "min": 50,
+      "max": 50,
+      "range": 7,
+      "target": true,
+      "areaEffect": "fireattack"
+    }
+  ],
+  "elements": {
+    "holy": -5,
+    "physical": -20
+  },
+  "immunities": {
+    "fire": true,
+    "drown": true,
+    "lifedrain": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Wuff Wuff",
+      "Grrr Wuff",
+      "Show me how good you are without some rolled newspaper!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 75
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

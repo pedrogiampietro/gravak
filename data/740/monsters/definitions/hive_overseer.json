@@ -1,0 +1,153 @@
+{
+  "creatureStatistics": {
+    "name": "Hive Overseer",
+    "health": 7500,
+    "maxHealth": 7500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 450,
+    "attackSpeed": 2000,
+    "defense": 45,
+    "outfit": {
+      "id": 458
+    },
+    "armor": 45
+  },
+  "experience": 5500,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.5,
+      "min": 50,
+      "max": 100,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 500,
+      "max": 700,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 450
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 60,
+      "max": 80,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 600,
+      "max": 1000,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "greenbubble"
+    }
+  ],
+  "elements": {
+    "fire": 70,
+    "energy": 20,
+    "physical": 60,
+    "holy": 10
+  },
+  "immunities": {
+    "earth": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Spidris Elite",
+      "interval": 2000,
+      "chance": 0.4,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Zopp!",
+      "Kropp!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2147,
+      "probability": 0.16,
+      "name": "small ruby",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2148,
+      "probability": 0.4,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.58,
+      "name": "gold coin",
+      "min": 1,
+      "max": 98
+    },
+    {
+      "id": 2152,
+      "probability": 0.84,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 2645,
+      "probability": 0.0055,
+      "name": "steel boots"
+    },
+    {
+      "id": 2273,
+      "probability": 0.18,
+      "name": "great mana potion"
+    },
+    {
+      "id": 7632,
+      "probability": 0.06
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

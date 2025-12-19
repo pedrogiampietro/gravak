@@ -1,0 +1,86 @@
+{
+  "creatureStatistics": {
+    "name": "Infernal Frog",
+    "health": 655,
+    "maxHealth": 655,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 20,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 224
+    },
+    "armor": 5
+  },
+  "experience": 190,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 40,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.2,
+      "speedChange": 400,
+      "duration": 8000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 20
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 16,
+      "max": 32,
+      "target": true,
+      "shootEffect": "poison"
+    }
+  ],
+  "immunities": {
+    "earth": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Ribbit!",
+      "Ribbit! Ribbit!",
+      "No Kisses for you!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.77,
+      "name": "gold coin",
+      "min": 1,
+      "max": 65
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

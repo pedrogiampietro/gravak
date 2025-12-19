@@ -1,0 +1,152 @@
+{
+  "creatureStatistics": {
+    "name": "Xogixath",
+    "health": 28000,
+    "maxHealth": 28000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 650,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 842
+    },
+    "armor": 10
+  },
+  "experience": 22000,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 650
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.16,
+      "min": 450,
+      "max": 550,
+      "range": 5,
+      "target": true,
+      "shootEffect": "suddendeath",
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.14,
+      "min": 400,
+      "max": 480,
+      "range": 5,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 400,
+      "max": 550,
+      "radius": 4,
+      "areaEffect": "explosion"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 420,
+      "max": 600,
+      "length": 5,
+      "spread": 0,
+      "areaEffect": "fire"
+    }
+  ],
+  "elements": {
+    "death": 50,
+    "ice": -10
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 9
+    },
+    {
+      "id": 18418,
+      "probability": 0.16667,
+      "name": "blue crystal splinter"
+    },
+    {
+      "id": 18421,
+      "probability": 0.16667,
+      "name": "green crystal fragment"
+    },
+    {
+      "id": 18415,
+      "probability": 0.16667,
+      "name": "green crystal shard"
+    },
+    {
+      "id": 2156,
+      "probability": 0.11111,
+      "name": "red gem"
+    },
+    {
+      "id": 2197,
+      "probability": 0.11111,
+      "name": "stone skin amulet"
+    },
+    {
+      "id": 6300,
+      "probability": 0.05556,
+      "name": "death ring"
+    },
+    {
+      "id": 7759,
+      "probability": 0.05556,
+      "name": "small enchanted sapphire",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 8921,
+      "probability": 0.05556,
+      "name": "wand of draconia"
+    },
+    {
+      "id": 2187,
+      "probability": 0.05556,
+      "name": "wand of inferno"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

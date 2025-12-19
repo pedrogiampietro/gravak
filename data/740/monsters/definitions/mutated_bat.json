@@ -1,0 +1,188 @@
+{
+  "creatureStatistics": {
+    "name": "Mutated Bat",
+    "health": 900,
+    "maxHealth": 900,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 168,
+    "attackSpeed": 2000,
+    "defense": 19,
+    "outfit": {
+      "id": 307
+    },
+    "armor": 19
+  },
+  "experience": 615,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 300,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 80,
+      "max": 95,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 168
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 70,
+      "max": 180,
+      "range": 7,
+      "shootEffect": "poison"
+    },
+    {
+      "name": "drown",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 30,
+      "max": 90,
+      "radius": 6,
+      "target": false,
+      "areaEffect": "whitenote"
+    },
+    {
+      "name": "mutated bat curse",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 190,
+      "max": 240,
+      "length": 4,
+      "spread": 3,
+      "target": false,
+      "areaEffect": "poison"
+    }
+  ],
+  "elements": {
+    "fire": -10
+  },
+  "immunities": {
+    "death": true,
+    "earth": true,
+    "drown": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Shriiiiiek"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.92495,
+      "name": "gold coin",
+      "min": 1,
+      "max": 130
+    },
+    {
+      "id": 9808,
+      "probability": 0.12568,
+      "name": "heavily rusted armor"
+    },
+    {
+      "id": 2513,
+      "probability": 0.08554,
+      "name": "battle shield"
+    },
+    {
+      "id": 2425,
+      "probability": 0.06597,
+      "name": "obsidian lance"
+    },
+    {
+      "id": 10579,
+      "probability": 0.05205,
+      "name": "mutated bat ear"
+    },
+    {
+      "id": 2800,
+      "probability": 0.04862,
+      "name": "star herb"
+    },
+    {
+      "id": 5894,
+      "probability": 0.04761,
+      "name": "bat wing",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2167,
+      "probability": 0.01029,
+      "name": "energy ring"
+    },
+    {
+      "id": 2144,
+      "probability": 0.00908,
+      "name": "black pearl",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 9809,
+      "probability": 0.00726,
+      "name": "rusted armor"
+    },
+    {
+      "id": 2150,
+      "probability": 0.00625,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 10016,
+      "probability": 0.00141,
+      "name": "batwing hat"
+    },
+    {
+      "id": 2529,
+      "probability": 0.00121,
+      "name": "black shield"
+    },
+    {
+      "id": 7386,
+      "probability": 0.00121,
+      "name": "mercenary sword"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

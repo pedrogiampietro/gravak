@@ -1,0 +1,134 @@
+{
+  "creatureStatistics": {
+    "name": "Barbarian Skullhunter",
+    "health": 135,
+    "maxHealth": 135,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 168,
+    "attack": 65,
+    "attackSpeed": 2000,
+    "defense": 8,
+    "outfit": {
+      "id": 254
+    },
+    "armor": 8
+  },
+  "experience": 85,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 65
+    }
+  ],
+  "elements": {
+    "physical": 10,
+    "energy": 20,
+    "earth": -10,
+    "ice": 50,
+    "holy": 10,
+    "death": -5
+  },
+  "immunities": {
+    "paralyze": true
+  },
+  "sayings": {
+    "texts": [
+      "You will become my trophy.",
+      "Fight harder, coward.",
+      "Show that you are a worthy opponent."
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.74364,
+      "name": "gold coin",
+      "min": 1,
+      "max": 30
+    },
+    {
+      "id": 2050,
+      "probability": 0.60308,
+      "name": "torch"
+    },
+    {
+      "id": 2460,
+      "probability": 0.1995,
+      "name": "brass helmet"
+    },
+    {
+      "id": 2403,
+      "probability": 0.15045,
+      "name": "knife"
+    },
+    {
+      "id": 2473,
+      "probability": 0.07886,
+      "name": "viking helmet"
+    },
+    {
+      "id": 2483,
+      "probability": 0.04024,
+      "name": "scale armor"
+    },
+    {
+      "id": 2229,
+      "probability": 0.03002,
+      "name": "skull (item)"
+    },
+    {
+      "id": 7618,
+      "probability": 0.00914,
+      "name": "health potion"
+    },
+    {
+      "id": 5913,
+      "probability": 0.00521,
+      "name": "brown piece of cloth"
+    },
+    {
+      "id": 2168,
+      "probability": 0.0024,
+      "name": "life ring"
+    },
+    {
+      "id": 7457,
+      "probability": 0.00099,
+      "name": "fur boots"
+    },
+    {
+      "id": 7462,
+      "probability": 0.00095,
+      "name": "ragnir helmet"
+    },
+    {
+      "id": 7449,
+      "probability": 0.00087,
+      "name": "crystal sword"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

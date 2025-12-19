@@ -1,0 +1,142 @@
+{
+  "creatureStatistics": {
+    "name": "Lizard Snakecharmer",
+    "health": 325,
+    "maxHealth": 325,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 184,
+    "attack": 30,
+    "attackSpeed": 2000,
+    "defense": 22,
+    "outfit": {
+      "id": 115
+    },
+    "armor": 22
+  },
+  "experience": 210,
+  "corpse": 2817,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.5,
+      "min": 50,
+      "max": 100,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.2,
+      "duration": 3000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 30
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 100,
+      "max": 200,
+      "range": 7,
+      "shootEffect": "poison"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 50,
+      "max": 110,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "poison",
+      "areaEffect": "greenbubble"
+    }
+  ],
+  "elements": {
+    "energy": 20,
+    "ice": 20,
+    "physical": -10,
+    "fire": -10
+  },
+  "immunities": {
+    "invisible": true,
+    "earth": true
+  },
+  "summons": [
+    {
+      "name": "cobra",
+      "interval": 2000,
+      "chance": 0.2,
+      "maxSummons": 6
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "I ssssmell warm blood!",
+      "Shhhhhhhh"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.8374,
+      "name": "gold coin",
+      "min": 1,
+      "max": 55
+    },
+    {
+      "id": 3077,
+      "probability": 0.45
+    },
+    {
+      "id": 2268,
+      "probability": 0.007,
+      "name": "mana potion"
+    },
+    {
+      "id": 2150,
+      "probability": 0.0037,
+      "name": "small amethyst"
+    },
+    {
+      "id": 2168,
+      "probability": 0.0019,
+      "name": "life ring"
+    },
+    {
+      "id": 2155,
+      "probability": 0.0003,
+      "name": "yellow gem"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": 4
+  }
+}

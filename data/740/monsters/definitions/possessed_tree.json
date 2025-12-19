@@ -1,0 +1,84 @@
+{
+  "creatureStatistics": {
+    "name": "Possessed Tree",
+    "health": 2500,
+    "maxHealth": 2500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 162,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 310
+    },
+    "armor": 10
+  },
+  "experience": 1300,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 162
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "length": 5,
+      "spread": 0,
+      "speedChange": -700,
+      "duration": 15000,
+      "areaEffect": "smallplants"
+    },
+    {
+      "name": "poison",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 86,
+      "max": 200,
+      "range": 4,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "poison",
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "poison",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 286,
+      "max": 300,
+      "length": 4,
+      "spread": 0,
+      "areaEffect": "carniphila"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

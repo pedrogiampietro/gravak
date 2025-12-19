@@ -1,0 +1,201 @@
+{
+  "creatureStatistics": {
+    "name": "Orc Warlord",
+    "health": 950,
+    "maxHealth": 950,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 234,
+    "attack": 250,
+    "attackSpeed": 2000,
+    "defense": 28,
+    "outfit": {
+      "id": 2
+    },
+    "armor": 28
+  },
+  "experience": 670,
+  "corpse": 2860,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.05,
+      "duration": 2000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 250
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 200,
+      "range": 7,
+      "shootEffect": "throwingstar"
+    }
+  ],
+  "elements": {
+    "fire": 80,
+    "energy": 20,
+    "holy": 10,
+    "earth": -10,
+    "death": -5
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Ranat Ulderek!",
+      "Orc buta bana!",
+      "Ikem rambo zambo!",
+      "Futchi maruk buta!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 12409,
+      "probability": 0.25259,
+      "name": "broken helmet"
+    },
+    {
+      "id": 12435,
+      "probability": 0.20351,
+      "name": "orc leather"
+    },
+    {
+      "id": 2148,
+      "probability": 0.18998,
+      "name": "gold coin",
+      "min": 1,
+      "max": 45
+    },
+    {
+      "id": 2399,
+      "probability": 0.14658,
+      "name": "throwing star",
+      "min": 1,
+      "max": 18
+    },
+    {
+      "id": 2667,
+      "probability": 0.10484,
+      "name": "fish",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 11113,
+      "probability": 0.10033,
+      "name": "orc tooth"
+    },
+    {
+      "id": 2463,
+      "probability": 0.05526,
+      "name": "plate armor"
+    },
+    {
+      "id": 2428,
+      "probability": 0.05426,
+      "name": "orcish axe"
+    },
+    {
+      "id": 12436,
+      "probability": 0.04958,
+      "name": "skull belt"
+    },
+    {
+      "id": 3965,
+      "probability": 0.04825,
+      "name": "hunting spear"
+    },
+    {
+      "id": 2647,
+      "probability": 0.03907,
+      "name": "plate legs"
+    },
+    {
+      "id": 2419,
+      "probability": 0.02972,
+      "name": "scimitar"
+    },
+    {
+      "id": 2377,
+      "probability": 0.01953,
+      "name": "two handed sword"
+    },
+    {
+      "id": 2200,
+      "probability": 0.01853,
+      "name": "protection amulet"
+    },
+    {
+      "id": 2490,
+      "probability": 0.01285,
+      "name": "dark helmet"
+    },
+    {
+      "id": 2465,
+      "probability": 0.00935,
+      "name": "brass armor"
+    },
+    {
+      "id": 7618,
+      "probability": 0.00384,
+      "name": "health potion"
+    },
+    {
+      "id": 2497,
+      "probability": 0.00301,
+      "name": "crusader helmet"
+    },
+    {
+      "id": 2434,
+      "probability": 0.00234,
+      "name": "dragon hammer"
+    },
+    {
+      "id": 7891,
+      "probability": 0.00184,
+      "name": "magma boots"
+    },
+    {
+      "id": 7395,
+      "probability": 0.00134,
+      "name": "orc trophy"
+    },
+    {
+      "id": 2165,
+      "probability": 0.00117,
+      "name": "stealth ring"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

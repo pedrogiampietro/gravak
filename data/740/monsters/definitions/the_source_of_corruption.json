@@ -1,0 +1,146 @@
+{
+  "creatureStatistics": {
+    "name": "The Source Of Corruption",
+    "health": 500000,
+    "maxHealth": 500000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 120,
+    "attack": 1500,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 979
+    },
+    "armor": 30
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1500
+    },
+    {
+      "name": "source of corruption wave",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 10549,
+      "probability": 1,
+      "name": "ancient stone"
+    },
+    {
+      "id": 26163,
+      "probability": 1,
+      "name": "crystallized anger"
+    },
+    {
+      "id": 7632,
+      "probability": 1,
+      "name": "giant shimmering pearl"
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 200
+    },
+    {
+      "id": 25377,
+      "probability": 1,
+      "name": "gold token"
+    },
+    {
+      "id": 5904,
+      "probability": 1,
+      "name": "magic sulphur"
+    },
+    {
+      "id": 7418,
+      "probability": 1,
+      "name": "nightmare blade"
+    },
+    {
+      "id": 24849,
+      "probability": 1,
+      "name": "onyx chip"
+    },
+    {
+      "id": 5888,
+      "probability": 1,
+      "name": "piece of hell steel",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 30
+    },
+    {
+      "id": 25172,
+      "probability": 1,
+      "name": "silver token",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2146,
+      "probability": 1,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 26173,
+      "probability": 1,
+      "name": "solid rage"
+    },
+    {
+      "id": 8473,
+      "probability": 1,
+      "name": "ultimate health potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2154,
+      "probability": 1,
+      "name": "yellow gem"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

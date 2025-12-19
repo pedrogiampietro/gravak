@@ -1,0 +1,51 @@
+{
+  "creatureStatistics": {
+    "name": "Force Field",
+    "health": 10000,
+    "maxHealth": 10000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 100,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 0
+    },
+    "armor": 30
+  },
+  "experience": 0,
+  "corpse": 2820,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "immunities": {
+    "physical": true,
+    "energy": true,
+    "fire": true,
+    "earth": true,
+    "ice": true,
+    "holy": true,
+    "death": true,
+    "lifedrain": true,
+    "manadrain": true,
+    "paralyze": true,
+    "drunk": true,
+    "outfit": true,
+    "invisible": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

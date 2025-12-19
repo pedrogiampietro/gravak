@@ -1,0 +1,149 @@
+{
+  "creatureStatistics": {
+    "name": "Wyvern",
+    "health": 795,
+    "maxHealth": 795,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 186,
+    "attack": 120,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 239
+    },
+    "armor": 25
+  },
+  "experience": 515,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 300,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 45,
+      "max": 65,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 300,
+      "duration": 5000,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 120
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 240,
+      "max": 240,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "length": 3,
+      "spread": 2,
+      "duration": 5000,
+      "areaEffect": "rednote"
+    }
+  ],
+  "elements": {
+    "energy": 20,
+    "ice": 10
+  },
+  "immunities": {
+    "drunk": true,
+    "invisible": true,
+    "earth": true
+  },
+  "sayings": {
+    "texts": [
+      "Shriiiek"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.99981,
+      "name": "gold coin",
+      "min": 1,
+      "max": 90
+    },
+    {
+      "id": 2672,
+      "probability": 0.60229,
+      "name": "dragon ham"
+    },
+    {
+      "id": 10561,
+      "probability": 0.1199,
+      "name": "wyvern talisman"
+    },
+    {
+      "id": 2146,
+      "probability": 0.04949,
+      "name": "small sapphire"
+    },
+    {
+      "id": 2547,
+      "probability": 0.0338,
+      "name": "power bolt"
+    },
+    {
+      "id": 7588,
+      "probability": 0.02473,
+      "name": "strong health potion"
+    },
+    {
+      "id": 2187,
+      "probability": 0.00784,
+      "name": "wand of inferno"
+    },
+    {
+      "id": 2127,
+      "probability": 0.0059,
+      "name": "emerald bangle"
+    },
+    {
+      "id": 7408,
+      "probability": 0.00459,
+      "name": "wyvern fang"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

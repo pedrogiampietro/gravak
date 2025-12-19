@@ -1,0 +1,181 @@
+{
+  "creatureStatistics": {
+    "name": "Shaburak Lord",
+    "health": 2100,
+    "maxHealth": 2100,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 251,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 409
+    },
+    "armor": 20
+  },
+  "experience": 1200,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 100,
+      "max": 150,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 251
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 30,
+      "max": 75,
+      "range": 7,
+      "radius": 6,
+      "target": false,
+      "shootEffect": "fire",
+      "areaEffect": "fireattack"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 80,
+      "max": 170,
+      "length": 4,
+      "spread": 3,
+      "target": false,
+      "areaEffect": "fire"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 140,
+      "max": 200,
+      "length": 4,
+      "spread": 0,
+      "target": false,
+      "areaEffect": "fireattack"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "radius": 1,
+      "target": true,
+      "speedChange": -650,
+      "duration": 15000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "energy": 50,
+    "ice": 50,
+    "earth": -30
+  },
+  "immunities": {
+    "fire": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "GREEN IS MEAN!",
+      "WE RULE!",
+      "POWER TO THE SHABURAK!",
+      "DEATH TO THE ASKARAK!",
+      "ONLY WE ARE TRUE DEMONS!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2147,
+      "probability": 0.0612,
+      "name": "small ruby",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 78
+    },
+    {
+      "id": 2152,
+      "probability": 0.33333,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2167,
+      "probability": 0.01652,
+      "name": "energy ring"
+    },
+    {
+      "id": 2187,
+      "probability": 0.008,
+      "name": "wand of inferno"
+    },
+    {
+      "id": 2645,
+      "probability": 0.0016,
+      "name": "steel boots"
+    },
+    {
+      "id": 2789,
+      "probability": 0.05346,
+      "name": "brown mushroom"
+    },
+    {
+      "id": 2271,
+      "probability": 0.07,
+      "name": "strong health potion"
+    },
+    {
+      "id": 2270,
+      "probability": 0.07,
+      "name": "strong mana potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

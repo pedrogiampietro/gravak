@@ -1,0 +1,126 @@
+{
+  "creatureStatistics": {
+    "name": "Death Priest Shargon",
+    "health": 65000,
+    "maxHealth": 65000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 340,
+    "attack": 800,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 278
+    },
+    "armor": 30
+  },
+  "experience": 20000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 699,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 800
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 0,
+      "max": 660,
+      "range": 7,
+      "radius": 6,
+      "shootEffect": "death",
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "holy",
+      "interval": 2000,
+      "chance": 0.18,
+      "min": 350,
+      "max": 1000,
+      "length": 6,
+      "spread": 2,
+      "areaEffect": "purpleenergy"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 91
+    },
+    {
+      "id": 2185,
+      "probability": 1,
+      "name": "necrotic rod"
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 14
+    },
+    {
+      "id": 7590,
+      "probability": 0.3,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 9969,
+      "probability": 0.2,
+      "name": "black skull (item)"
+    },
+    {
+      "id": 9971,
+      "probability": 0.2,
+      "name": "gold ingot"
+    },
+    {
+      "id": 7591,
+      "probability": 0.2,
+      "name": "great health potion",
+      "min": 1,
+      "max": 5
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

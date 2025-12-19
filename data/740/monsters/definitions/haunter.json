@@ -1,0 +1,97 @@
+{
+  "creatureStatistics": {
+    "name": "Haunter",
+    "health": 8500,
+    "maxHealth": 8500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 270,
+    "attack": 150,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 320
+    },
+    "armor": 25
+  },
+  "experience": 4000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.16,
+      "min": 100,
+      "max": 155,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.16,
+      "speedChange": 360,
+      "duration": 80000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 150
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.16,
+      "min": 0,
+      "max": 130,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "energy"
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.16,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "target": true,
+      "shootEffect": "poison",
+      "areaEffect": "poison"
+    }
+  ],
+  "elements": {
+    "death": 10
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Surrender and I'll end it quick!"
+    ],
+    "slowness": 2,
+    "chance": 0.09
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

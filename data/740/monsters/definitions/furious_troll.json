@@ -1,0 +1,90 @@
+{
+  "creatureStatistics": {
+    "name": "Furious Troll",
+    "health": 245,
+    "maxHealth": 245,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 100,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 281
+    },
+    "armor": 15
+  },
+  "experience": 185,
+  "corpse": 2806,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 100
+    }
+  ],
+  "immunities": {
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Mechanical Fighter",
+      "interval": 2000,
+      "chance": 0.9,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Slice! Slice!",
+      "DIE!!!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.47,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.47,
+      "name": "gold coin",
+      "min": 1,
+      "max": 46
+    },
+    {
+      "id": 2152,
+      "probability": 0.06,
+      "name": "platinum coin"
+    },
+    {
+      "id": 2391,
+      "probability": 0.0075,
+      "name": "war hammer"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

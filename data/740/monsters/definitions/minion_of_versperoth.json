@@ -1,0 +1,125 @@
+{
+  "creatureStatistics": {
+    "name": "Minion Of Versperoth",
+    "health": 9000,
+    "maxHealth": 9000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 310,
+    "attack": 390,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 491
+    },
+    "armor": 30
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 390
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 350,
+      "max": 700,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "fireattack"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 600,
+      "max": 1300,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "lava golem soulfire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 220,
+      "max": 350,
+      "radius": 4,
+      "target": true,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "length": 5,
+      "spread": 3,
+      "target": false,
+      "speedChange": -300,
+      "duration": 10000,
+      "areaEffect": "yellowspark"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 280,
+      "max": 350,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "fire"
+    }
+  ],
+  "elements": {
+    "physical": 30,
+    "energy": 30,
+    "ice": -5,
+    "death": 35
+  },
+  "immunities": {
+    "earth": true,
+    "fire": true,
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "Grrrrunt"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

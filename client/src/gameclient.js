@@ -1,8 +1,8 @@
-const GameClient = function() {
+const GameClient = function () {
 
   /*
    * Class GameClient
-   * Main container for the HTML5 ForbyJS Game Client
+   * Main container for the HTML5 GravakJS Game Client
    *
    * API:
    *
@@ -53,7 +53,7 @@ const GameClient = function() {
 
 }
 
-GameClient.prototype.setServerData = function(packet) {
+GameClient.prototype.setServerData = function (packet) {
 
   /*
    * Function GameClient.setServerData
@@ -63,7 +63,7 @@ GameClient.prototype.setServerData = function(packet) {
   let serverData = packet.readServerData();
 
   // The server suggested client version must match the local version
-  if(serverData.clientVersion !== this.spriteBuffer.getVersion() || serverData.clientVersion !== this.dataObjects.getVersion()) {
+  if (serverData.clientVersion !== this.spriteBuffer.getVersion() || serverData.clientVersion !== this.dataObjects.getVersion()) {
     gameClient.disconnect();
     packet.discard();
     return gameClient.interface.modalManager.open("floater-connecting", "Server version (%s) mismatch with client sprite (%s) or object (%s) data.".format(serverData.clientVersion, this.spriteBuffer.getVersion(), this.dataObjects.getVersion()));
@@ -74,7 +74,7 @@ GameClient.prototype.setServerData = function(packet) {
 
   // Update the clock speed
   Clock.prototype.CLOCK_SPEED = serverData.clock;
-  
+
   // Update the client & server version
   this.__setServerVersion(serverData.version);
   this.__setClientVersion(serverData.clientVersion);
@@ -97,7 +97,7 @@ GameClient.prototype.setServerData = function(packet) {
 
 }
 
-GameClient.prototype.getFrame = function() {
+GameClient.prototype.getFrame = function () {
 
   /*
    * Function GameClient.getFrame
@@ -108,7 +108,7 @@ GameClient.prototype.getFrame = function() {
 
 }
 
-GameClient.prototype.isRunning = function() {
+GameClient.prototype.isRunning = function () {
 
   /*
    * Function GameClient.isRunning
@@ -119,7 +119,7 @@ GameClient.prototype.isRunning = function() {
 
 }
 
-GameClient.prototype.getTickInterval = function() {
+GameClient.prototype.getTickInterval = function () {
 
   /*
    * Function GameClient.getTickInterval
@@ -130,7 +130,7 @@ GameClient.prototype.getTickInterval = function() {
 
 }
 
-GameClient.prototype.setErrorModal = function(message) {
+GameClient.prototype.setErrorModal = function (message) {
 
   /*
    * Function GameClient.setErrorModal
@@ -141,7 +141,7 @@ GameClient.prototype.setErrorModal = function(message) {
 
 }
 
-GameClient.prototype.reset = function() {
+GameClient.prototype.reset = function () {
 
   /*
    * Function GameClient.reset
@@ -158,8 +158,8 @@ GameClient.prototype.reset = function() {
   // Clear the screen
   this.renderer.screen.clear();
 
-  if(gameClient.player) {
-  // Close all references to contains
+  if (gameClient.player) {
+    // Close all references to contains
     this.player.closeAllContainers();
     gameClient.player = null;
   }
@@ -169,14 +169,14 @@ GameClient.prototype.reset = function() {
 
 }
 
-GameClient.prototype.connect = function(host, port) {
+GameClient.prototype.connect = function (host, port) {
 
   /*
    * Function GameClient.connect
    * Delegates to the network manager to connect to the gameserver at host & port
    */
 
-  if(this.networkManager.isConnected()) {
+  if (this.networkManager.isConnected()) {
     return;
   }
 
@@ -184,7 +184,7 @@ GameClient.prototype.connect = function(host, port) {
 
 }
 
-GameClient.prototype.disconnect = function() {
+GameClient.prototype.disconnect = function () {
 
   /*
    * Function GameClient.disconnect
@@ -192,10 +192,10 @@ GameClient.prototype.disconnect = function() {
    */
 
   this.networkManager.close();
-  
+
 }
 
-GameClient.prototype.send = function(buffer) {
+GameClient.prototype.send = function (buffer) {
 
   /*
    * Public Function GameClient.send
@@ -206,7 +206,7 @@ GameClient.prototype.send = function(buffer) {
 
 }
 
-GameClient.prototype.isSelf = function(creature) {
+GameClient.prototype.isSelf = function (creature) {
 
   /*
    * Function GameClient.isSelf
@@ -217,7 +217,7 @@ GameClient.prototype.isSelf = function(creature) {
 
 }
 
-GameClient.prototype.handleAcceptLogin = function(packet) {
+GameClient.prototype.handleAcceptLogin = function (packet) {
 
   /*
    * Function GameClient.handleAcceptLogin
@@ -244,13 +244,13 @@ GameClient.prototype.handleAcceptLogin = function(packet) {
 
 }
 
-GameClient.prototype.isConnected = function() {
+GameClient.prototype.isConnected = function () {
 
   return this.networkManager.isConnected();
 
 }
 
-GameClient.prototype.hasExtendedAnimations = function(id) {
+GameClient.prototype.hasExtendedAnimations = function (id) {
 
   /*
    * Function GameClient.hasExtendedAnimations
@@ -258,10 +258,10 @@ GameClient.prototype.hasExtendedAnimations = function(id) {
    */
 
   return this.dataObjects.__version >= 1050;
-	
+
 }
 
-GameClient.prototype.__setServerVersion = function(version) {
+GameClient.prototype.__setServerVersion = function (version) {
 
 
   /*
@@ -273,7 +273,7 @@ GameClient.prototype.__setServerVersion = function(version) {
 
 }
 
-GameClient.prototype.__setClientVersion = function(version) {
+GameClient.prototype.__setClientVersion = function (version) {
 
 
   /*
@@ -285,7 +285,7 @@ GameClient.prototype.__setClientVersion = function(version) {
 
 }
 
-GameClient.prototype.__setTickInterval = function(tick) {
+GameClient.prototype.__setTickInterval = function (tick) {
 
   /*
    * Function GameClient.__setTickInterval
@@ -296,7 +296,7 @@ GameClient.prototype.__setTickInterval = function(tick) {
 
 }
 
-GameClient.prototype.__loop = function() {
+GameClient.prototype.__loop = function () {
 
   /*
    * Function GameClient.__loop
@@ -311,7 +311,7 @@ GameClient.prototype.__loop = function() {
 
   // Read the keyboard input
   this.keyboard.handleInput();
- 
+
   // Request to render the frame
   this.renderer.render();
 

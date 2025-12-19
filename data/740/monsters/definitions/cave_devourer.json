@@ -1,0 +1,145 @@
+{
+  "creatureStatistics": {
+    "name": "Cave Devourer",
+    "health": 4500,
+    "maxHealth": 4500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 240,
+    "attack": 400,
+    "attackSpeed": 2000,
+    "defense": 40,
+    "outfit": {
+      "id": 1036
+    },
+    "armor": 40
+  },
+  "experience": 2380,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 400
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 70,
+      "max": 160,
+      "range": 3,
+      "length": 6,
+      "spread": 3,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 90,
+      "max": 160,
+      "range": 3,
+      "length": 6,
+      "spread": 3,
+      "areaEffect": "fire"
+    }
+  ],
+  "elements": {
+    "fire": -20
+  },
+  "immunities": {
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 30255,
+      "probability": 0.18853,
+      "name": "cave devourer eyes"
+    },
+    {
+      "id": 30256,
+      "probability": 0.18432,
+      "name": "cave devourer maw"
+    },
+    {
+      "id": 30257,
+      "probability": 0.14685,
+      "name": "cave devourer legs"
+    },
+    {
+      "id": 18304,
+      "probability": 0.14379,
+      "name": "crystalline arrow",
+      "min": 1,
+      "max": 40
+    },
+    {
+      "id": 23565,
+      "probability": 0.11434,
+      "name": "slime heart",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 18415,
+      "probability": 0.07419,
+      "name": "green crystal shard"
+    },
+    {
+      "id": 7760,
+      "probability": 0.06883,
+      "name": "small enchanted ruby"
+    },
+    {
+      "id": 18413,
+      "probability": 0.0631,
+      "name": "blue crystal shard"
+    },
+    {
+      "id": 7759,
+      "probability": 0.06157,
+      "name": "small enchanted sapphire"
+    },
+    {
+      "id": 18419,
+      "probability": 0.05736,
+      "name": "cyan crystal fragment"
+    },
+    {
+      "id": 18414,
+      "probability": 0.04283,
+      "name": "violet crystal shard"
+    },
+    {
+      "id": 2165,
+      "probability": 0.01989,
+      "name": "stealth ring"
+    },
+    {
+      "id": 30309,
+      "probability": 0.01338,
+      "name": "suspicious device"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

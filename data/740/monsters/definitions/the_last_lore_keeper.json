@@ -1,0 +1,424 @@
+{
+  "creatureStatistics": {
+    "name": "The Last Lore Keeper",
+    "health": 750000,
+    "maxHealth": 750000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 450,
+    "attack": 1000,
+    "attackSpeed": 2000,
+    "defense": 50,
+    "outfit": {
+      "id": 939
+    },
+    "armor": 50
+  },
+  "experience": 45000,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 1500,
+      "max": 3000,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1000
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.07,
+      "min": 650,
+      "max": 900,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "explosionarea"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 850,
+      "max": 2260,
+      "length": 10,
+      "spread": 0,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 640,
+      "max": 800,
+      "radius": 5,
+      "areaEffect": "smallclouds"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 420,
+      "max": 954,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "purpleenergy"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 640,
+      "max": 800,
+      "radius": 5,
+      "target": true,
+      "areaEffect": "stones"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "radius": 7,
+      "target": true,
+      "speedChange": -900,
+      "areaEffect": "poff"
+    }
+  ],
+  "elements": {
+    "ice": 20,
+    "fire": 20,
+    "energy": 20,
+    "earth": 20,
+    "holy": 20,
+    "physical": 20,
+    "death": 20
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "You shall not pass!",
+      "You are not worthy!",
+      "This knowledge is forbidden!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 10549,
+      "probability": 1,
+      "name": "ancient stone"
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 200
+    },
+    {
+      "id": 24849,
+      "probability": 1,
+      "name": "onyx chip"
+    },
+    {
+      "id": 25377,
+      "probability": 0.99627,
+      "name": "gold token",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 5880,
+      "probability": 0.99627,
+      "name": "iron ore"
+    },
+    {
+      "id": 5887,
+      "probability": 0.99627,
+      "name": "piece of royal steel"
+    },
+    {
+      "id": 2152,
+      "probability": 0.99627,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 35
+    },
+    {
+      "id": 25172,
+      "probability": 0.99627,
+      "name": "silver token",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 18413,
+      "probability": 0.73881,
+      "name": "blue crystal shard",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 18414,
+      "probability": 0.67164,
+      "name": "violet crystal shard",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 18415,
+      "probability": 0.64925,
+      "name": "green crystal shard",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7590,
+      "probability": 0.57836,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 8473,
+      "probability": 0.54104,
+      "name": "ultimate health potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 8472,
+      "probability": 0.53358,
+      "name": "great spirit potion",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2156,
+      "probability": 0.27985,
+      "name": "red gem"
+    },
+    {
+      "id": 2146,
+      "probability": 0.27612,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 2154,
+      "probability": 0.26119,
+      "name": "yellow gem"
+    },
+    {
+      "id": 2149,
+      "probability": 0.20896,
+      "name": "small emerald",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 9971,
+      "probability": 0.20522,
+      "name": "gold ingot"
+    },
+    {
+      "id": 2158,
+      "probability": 0.1903,
+      "name": "blue gem"
+    },
+    {
+      "id": 24850,
+      "probability": 0.17164,
+      "name": "opal",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 10577,
+      "probability": 0.16791,
+      "name": "mystical hourglass"
+    },
+    {
+      "id": 9970,
+      "probability": 0.16418,
+      "name": "small topaz",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 7632,
+      "probability": 0.07836,
+      "name": "giant shimmering pearl"
+    },
+    {
+      "id": 7633,
+      "probability": 0.07836,
+      "name": "giant shimmering pearl"
+    },
+    {
+      "id": 2155,
+      "probability": 0.15672,
+      "name": "green gem"
+    },
+    {
+      "id": 5909,
+      "probability": 0.14925,
+      "name": "white piece of cloth",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 5904,
+      "probability": 0.14552,
+      "name": "magic sulphur"
+    },
+    {
+      "id": 2150,
+      "probability": 0.14179,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 2147,
+      "probability": 0.14179,
+      "name": "small ruby",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 26189,
+      "probability": 0.12687,
+      "name": "ring of red plasma"
+    },
+    {
+      "id": 5891,
+      "probability": 0.11567,
+      "name": "enchanted chicken wing"
+    },
+    {
+      "id": 2436,
+      "probability": 0.11194,
+      "name": "skull staff"
+    },
+    {
+      "id": 2153,
+      "probability": 0.10821,
+      "name": "violet gem"
+    },
+    {
+      "id": 7437,
+      "probability": 0.09701,
+      "name": "sapphire hammer"
+    },
+    {
+      "id": 27610,
+      "probability": 0.05597,
+      "name": "part of a rune"
+    },
+    {
+      "id": 8857,
+      "probability": 0.03731,
+      "name": "silkweaver bow"
+    },
+    {
+      "id": 8879,
+      "probability": 0.02985,
+      "name": "voltage armor"
+    },
+    {
+      "id": 3972,
+      "probability": 0.01866,
+      "name": "bonelord helmet"
+    },
+    {
+      "id": 2466,
+      "probability": 0.01866,
+      "name": "golden armor"
+    },
+    {
+      "id": 2452,
+      "probability": 0.01493,
+      "name": "heavy mace"
+    },
+    {
+      "id": 8904,
+      "probability": 0.01493,
+      "name": "spellscroll of prophecies"
+    },
+    {
+      "id": 27632,
+      "probability": 0.00746,
+      "name": "astral glyph"
+    },
+    {
+      "id": 27631,
+      "probability": 0.00746,
+      "name": "astral source"
+    },
+    {
+      "id": 27627,
+      "probability": 0.00746,
+      "name": "forbidden tome"
+    },
+    {
+      "id": 27628,
+      "probability": 0.00746,
+      "name": "key to knowledge"
+    },
+    {
+      "id": 7418,
+      "probability": 0.00746,
+      "name": "nightmare blade"
+    },
+    {
+      "id": 18450,
+      "probability": 0.00373,
+      "name": "crystalline sword"
+    },
+    {
+      "id": 5809,
+      "probability": 0.00373,
+      "name": "soul stone"
+    },
+    {
+      "id": 22414,
+      "probability": 0.00373,
+      "name": "umbral hammer"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

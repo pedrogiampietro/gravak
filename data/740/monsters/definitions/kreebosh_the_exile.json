@@ -1,0 +1,138 @@
+{
+  "creatureStatistics": {
+    "name": "Kreebosh the Exile",
+    "health": 705,
+    "maxHealth": 705,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 270,
+    "attack": 100,
+    "attackSpeed": 2000,
+    "defense": 40,
+    "outfit": {
+      "id": 103
+    },
+    "armor": 30
+  },
+  "experience": 350,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "name": "fire",
+      "interval": 6000,
+      "chance": 0.8,
+      "min": 0,
+      "max": 120,
+      "radius": 3,
+      "areaEffect": "energy"
+    },
+    {
+      "name": "speed",
+      "interval": 3500,
+      "chance": 0.35,
+      "min": 0,
+      "max": 0,
+      "range": 5,
+      "radius": 1,
+      "target": true,
+      "speedChange": -450,
+      "duration": 20000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "physical",
+      "interval": 6000,
+      "chance": 0.4,
+      "min": 20,
+      "max": 100,
+      "range": 5,
+      "radius": 1,
+      "target": true,
+      "areaEffect": "mortarea",
+      "shootEffect": "suddendeath"
+    },
+    {
+      "name": "energy",
+      "interval": 5000,
+      "chance": 0.2,
+      "min": 40,
+      "max": 200,
+      "range": 5,
+      "radius": 1,
+      "target": true,
+      "areaEffect": "firearea",
+      "shootEffect": "energy"
+    },
+    {
+      "name": "drunk",
+      "interval": 1000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "range": 5,
+      "radius": 1,
+      "target": true,
+      "duration": 30000
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.5,
+      "min": 0,
+      "max": 0,
+      "range": 5,
+      "radius": 1,
+      "target": true,
+      "duration": 60000,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "elements": {
+    "energy": 55,
+    "death": -10
+  },
+  "immunities": {
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Green Djinn",
+      "interval": 5000,
+      "chance": 0.2,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "I bet you wish you weren't here."
+    ],
+    "slowness": 5,
+    "chance": 0.05
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

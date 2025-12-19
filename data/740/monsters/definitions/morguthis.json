@@ -1,0 +1,184 @@
+{
+  "creatureStatistics": {
+    "name": "Morguthis",
+    "health": 4800,
+    "maxHealth": 4800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 320,
+    "attack": 1000,
+    "attackSpeed": 2000,
+    "defense": 75,
+    "outfit": {
+      "id": 90
+    },
+    "armor": 75
+  },
+  "experience": 3000,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.13,
+      "min": 200,
+      "max": 300,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.07,
+      "speedChange": 600,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.1,
+      "duration": 4000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1000
+    },
+    {
+      "name": "lifedrain",
+      "interval": 3000,
+      "chance": 0.07,
+      "min": 55,
+      "max": 550,
+      "range": 1
+    },
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.25,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -650,
+      "duration": 50000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "physical",
+      "interval": 1000,
+      "chance": 0.2,
+      "min": 40,
+      "max": 400,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "blackspark"
+    },
+    {
+      "name": "physical",
+      "interval": 3000,
+      "chance": 0.07,
+      "min": 50,
+      "max": 500,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "mortarea"
+    }
+  ],
+  "elements": {
+    "ice": 20,
+    "fire": 20,
+    "energy": 20,
+    "physical": 20,
+    "earth": -10,
+    "holy": -20
+  },
+  "immunities": {
+    "death": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Hero",
+      "interval": 2000,
+      "chance": 1,
+      "maxSummons": 3
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Vengeance!",
+      "You will make a fine trophy.",
+      "Come and fight me, cowards!",
+      "I am the supreme warrior!",
+      "Let me hear the music of battle.",
+      "Anotherone to bite the dust!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.3,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.3,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.3,
+      "name": "gold coin",
+      "min": 1,
+      "max": 21
+    },
+    {
+      "id": 2274,
+      "probability": 0.095,
+      "name": "great health potion"
+    },
+    {
+      "id": 2430,
+      "probability": 0.06,
+      "name": "knight axe"
+    },
+    {
+      "id": 2645,
+      "probability": 0.0015,
+      "name": "steel boots"
+    },
+    {
+      "id": 2136,
+      "probability": 0.0014
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

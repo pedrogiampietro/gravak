@@ -1,0 +1,67 @@
+{
+  "creatureStatistics": {
+    "name": "Mole",
+    "health": 200,
+    "maxHealth": 200,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 160,
+    "attack": 200,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 1048
+    },
+    "armor": 20
+  },
+  "experience": 100,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 200
+    }
+  ],
+  "elements": {
+    "physical": 5,
+    "energy": 10,
+    "earth": 40,
+    "fire": -10,
+    "holy": -10,
+    "death": 40
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.80142,
+      "name": "gold coin",
+      "min": 1,
+      "max": 75
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

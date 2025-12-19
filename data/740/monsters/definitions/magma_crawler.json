@@ -1,0 +1,189 @@
+{
+  "creatureStatistics": {
+    "name": "Magma Crawler",
+    "health": 4800,
+    "maxHealth": 4800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 203,
+    "attackSpeed": 2000,
+    "defense": 45,
+    "outfit": {
+      "id": 492
+    },
+    "armor": 45
+  },
+  "experience": 2700,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 300,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.1,
+      "duration": 5000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 203
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 300,
+      "max": 1100,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 290,
+      "max": 800,
+      "length": 3,
+      "spread": 2,
+      "areaEffect": "fireattack"
+    },
+    {
+      "name": "magma crawler soulfire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "monster soulfire",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 140,
+      "max": 180,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "fire"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "radius": 2,
+      "spread": 0,
+      "target": false,
+      "speedChange": -800,
+      "duration": 20000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "ice": 10,
+    "energy": 10,
+    "death": 5,
+    "physical": 5
+  },
+  "immunities": {
+    "fire": true,
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Crrroak!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2145,
+      "probability": 0.088,
+      "name": "small diamond",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2152,
+      "probability": 0.95,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2155,
+      "probability": 0.0103,
+      "name": "yellow gem"
+    },
+    {
+      "id": 2167,
+      "probability": 0.0165,
+      "name": "energy ring"
+    },
+    {
+      "id": 2392,
+      "probability": 0.0168,
+      "name": "fire sword"
+    },
+    {
+      "id": 2273,
+      "probability": 0.065,
+      "name": "great mana potion"
+    },
+    {
+      "id": 2274,
+      "probability": 0.0727,
+      "name": "great health potion"
+    },
+    {
+      "id": 13757,
+      "probability": 0.01675
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": 4
+  }
+}

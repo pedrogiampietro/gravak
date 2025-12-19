@@ -1,0 +1,65 @@
+{
+  "creatureStatistics": {
+    "name": "Ghulosh' Deathgaze",
+    "health": 300000,
+    "maxHealth": 300000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 1063
+    },
+    "armor": 30
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 6000,
+      "max": 6000,
+      "length": 8,
+      "spread": 0,
+      "target": false,
+      "areaEffect": "mortarea"
+    }
+  ],
+  "elements": {
+    "physical": 100,
+    "energy": 100,
+    "earth": 100,
+    "fire": 100,
+    "lifedrain": 100,
+    "drown": -40,
+    "ice": 100,
+    "holy": 100,
+    "death": 100
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

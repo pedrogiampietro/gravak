@@ -1,0 +1,64 @@
+{
+  "creatureStatistics": {
+    "name": "Sandcrawler",
+    "health": 30,
+    "maxHealth": 30,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 170,
+    "attack": 3,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 350
+    },
+    "armor": 10
+  },
+  "experience": 20,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 3
+    }
+  ],
+  "elements": {
+    "fire": -5
+  },
+  "sayings": {
+    "texts": [
+      "Chrk chrk!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.33333,
+      "name": "gold coin",
+      "min": 1,
+      "max": 6
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

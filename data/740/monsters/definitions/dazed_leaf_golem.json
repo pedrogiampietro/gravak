@@ -1,0 +1,96 @@
+{
+  "creatureStatistics": {
+    "name": "Dazed Leaf Golem",
+    "health": 10000,
+    "maxHealth": 10000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 350,
+    "attack": 200,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 567
+    },
+    "armor": 30
+  },
+  "experience": 8000,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 200
+    },
+    {
+      "name": "physical",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 180,
+      "range": 7,
+      "shootEffect": "snowball",
+      "areaEffect": "poff"
+    },
+    {
+      "name": "energy",
+      "interval": 1000,
+      "chance": 0.12,
+      "min": 0,
+      "max": 175,
+      "length": 3,
+      "spread": 3,
+      "areaEffect": "poff"
+    }
+  ],
+  "elements": {
+    "earth": 50
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.9,
+      "name": "gold coin",
+      "min": 1,
+      "max": 924
+    },
+    {
+      "id": 21428,
+      "probability": 0.4,
+      "name": "fir cone",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 21427,
+      "probability": 0.3,
+      "name": "dowser",
+      "min": 1,
+      "max": 2
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

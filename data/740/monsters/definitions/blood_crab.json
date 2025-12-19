@@ -1,0 +1,89 @@
+{
+  "creatureStatistics": {
+    "name": "Blood Crab",
+    "health": 290,
+    "maxHealth": 290,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 160,
+    "attack": 110,
+    "attackSpeed": 2000,
+    "defense": 28,
+    "outfit": {
+      "id": 200
+    },
+    "armor": 28
+  },
+  "experience": 160,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 110
+    }
+  ],
+  "elements": {
+    "physical": 5,
+    "fire": -10,
+    "energy": -5
+  },
+  "immunities": {
+    "ice": true,
+    "earth": true,
+    "drown": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.85818,
+      "name": "gold coin",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 2667,
+      "probability": 0.14803,
+      "name": "fish"
+    },
+    {
+      "id": 10550,
+      "probability": 0.06053,
+      "name": "bloody pincers"
+    },
+    {
+      "id": 2464,
+      "probability": 0.05122,
+      "name": "chain armor"
+    },
+    {
+      "id": 2478,
+      "probability": 0.02143,
+      "name": "brass legs"
+    },
+    {
+      "id": 2143,
+      "probability": 0.00517,
+      "name": "white pearl"
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

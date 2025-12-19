@@ -1,0 +1,154 @@
+{
+  "creatureStatistics": {
+    "name": "Dragonling",
+    "health": 2600,
+    "maxHealth": 2600,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 330,
+    "attack": 210,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 505
+    },
+    "armor": 25
+  },
+  "experience": 2200,
+  "corpse": 2844,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 900,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 100,
+      "max": 200,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 210
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 120,
+      "max": 250,
+      "length": 5,
+      "spread": 2,
+      "target": false,
+      "shootEffect": "fire",
+      "areaEffect": "fire"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 115,
+      "max": 180,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "purpleenergy"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 95,
+      "max": 150,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "explosion"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "radius": 1,
+      "target": true,
+      "speedChange": -700,
+      "duration": 16000,
+      "shootEffect": "explosion",
+      "areaEffect": "stun"
+    }
+  ],
+  "elements": {
+    "energy": -5,
+    "ice": -5
+  },
+  "immunities": {
+    "fire": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "FCHHHHHHHHHHHHHHHH",
+      "FI?"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.375,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.375,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.375,
+      "name": "gold coin",
+      "min": 1,
+      "max": 27
+    },
+    {
+      "id": 2271,
+      "probability": 0.2448,
+      "name": "strong health potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2270,
+      "probability": 0.169,
+      "name": "strong mana potion",
+      "min": 1,
+      "max": 2
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

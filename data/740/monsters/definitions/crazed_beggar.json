@@ -1,0 +1,144 @@
+{
+  "creatureStatistics": {
+    "name": "Crazed Beggar",
+    "health": 100,
+    "maxHealth": 100,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 154,
+    "attack": 25,
+    "attackSpeed": 2000,
+    "defense": 4,
+    "outfit": {
+      "id": 153
+    },
+    "armor": 4
+  },
+  "experience": 35,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 10,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 25
+    }
+  ],
+  "elements": {
+    "physical": 5,
+    "energy": 20,
+    "earth": -10,
+    "holy": 10,
+    "death": -10
+  },
+  "sayings": {
+    "texts": [
+      "Hehehe!",
+      "Raahhh!",
+      "You are one of THEM! Die!",
+      "Wanna buy roses??",
+      "Make it stop!",
+      "They're coming! They're coming!",
+      "Gimme money!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.99393,
+      "name": "gold coin",
+      "min": 1,
+      "max": 9
+    },
+    {
+      "id": 2237,
+      "probability": 0.60572,
+      "name": "dirty cape"
+    },
+    {
+      "id": 2690,
+      "probability": 0.19237,
+      "name": "roll"
+    },
+    {
+      "id": 2666,
+      "probability": 0.0985,
+      "name": "meat"
+    },
+    {
+      "id": 2567,
+      "probability": 0.09474,
+      "name": "wooden spoon"
+    },
+    {
+      "id": 2556,
+      "probability": 0.06672,
+      "name": "wooden hammer"
+    },
+    {
+      "id": 2744,
+      "probability": 0.05055,
+      "name": "red rose"
+    },
+    {
+      "id": 2570,
+      "probability": 0.04708,
+      "name": "rolling pin"
+    },
+    {
+      "id": 2802,
+      "probability": 0.00607,
+      "name": "sling herb"
+    },
+    {
+      "id": 1681,
+      "probability": 0.00607,
+      "name": "small blue pillow"
+    },
+    {
+      "id": 5553,
+      "probability": 0.0052,
+      "name": "rum flask"
+    },
+    {
+      "id": 6092,
+      "probability": 0.0038,
+      "name": "very noble-looking watch"
+    },
+    {
+      "id": 2072,
+      "probability": 0.00376,
+      "name": "lute"
+    },
+    {
+      "id": 9808,
+      "probability": 0.00289,
+      "name": "heavily rusted armor"
+    },
+    {
+      "id": 2213,
+      "probability": 0.00144,
+      "name": "dwarven ring"
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

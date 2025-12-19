@@ -1,0 +1,140 @@
+{
+  "creatureStatistics": {
+    "name": "Dark Magician",
+    "health": 325,
+    "maxHealth": 325,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 40,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 133
+    },
+    "armor": 15
+  },
+  "experience": 185,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 60,
+      "max": 80,
+      "areaEffect": "greenshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.1,
+      "duration": 5000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 40
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 5,
+      "max": 40,
+      "range": 7,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 20,
+      "max": 30,
+      "range": 7,
+      "shootEffect": "energy"
+    }
+  ],
+  "elements": {
+    "fire": 10,
+    "earth": 20,
+    "energy": 20,
+    "ice": 10,
+    "holy": 20,
+    "death": -5
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Feel the power of my runes!",
+      "Killing you is getting expensive!",
+      "My secrets are mine alone!",
+      "Stand Still!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.751,
+      "name": "gold coin",
+      "min": 1,
+      "max": 55
+    },
+    {
+      "id": 2188,
+      "probability": 0.0028,
+      "name": "wand of decay"
+    },
+    {
+      "id": 2260,
+      "probability": 0.1,
+      "name": "blank rune"
+    },
+    {
+      "id": 2271,
+      "probability": 0.03,
+      "name": "strong health potion"
+    },
+    {
+      "id": 2270,
+      "probability": 0.0286,
+      "name": "strong mana potion"
+    },
+    {
+      "id": 2269,
+      "probability": 0.12,
+      "name": "health potion"
+    },
+    {
+      "id": 2268,
+      "probability": 0.119,
+      "name": "mana potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

@@ -1,0 +1,356 @@
+{
+  "creatureStatistics": {
+    "name": "Vexclaw",
+    "health": 8500,
+    "maxHealth": 8500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 270,
+    "attack": 550,
+    "attackSpeed": 2000,
+    "defense": 55,
+    "outfit": {
+      "id": 854
+    },
+    "armor": 55
+  },
+  "experience": 6248,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 180,
+      "max": 250,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 320,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 550
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 120,
+      "range": 7
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 150,
+      "max": 250,
+      "range": 7,
+      "radius": 7,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "choking fear drown",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 150,
+      "max": 400,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "suddendeath",
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 50,
+      "max": 200,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "purpleenergy"
+    },
+    {
+      "name": "firefield",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 300,
+      "max": 490,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "purpleenergy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 210,
+      "max": 300,
+      "range": 1,
+      "shootEffect": "energy",
+      "areaEffect": "energy"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "radius": 1,
+      "target": true,
+      "speedChange": -300,
+      "duration": 30000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "physical": 5,
+    "energy": 10,
+    "earth": 40,
+    "fire": 75,
+    "ice": -5,
+    "holy": -10,
+    "death": 20
+  },
+  "immunities": {
+    "drown": true,
+    "lifedrain": true,
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "Power is miiiiine!",
+      "Weakness must be culled!",
+      "Will Prove my power!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.8732,
+      "name": "gold coin",
+      "min": 1,
+      "max": 197
+    },
+    {
+      "id": 2152,
+      "probability": 0.8717,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 9
+    },
+    {
+      "id": 8472,
+      "probability": 0.16146,
+      "name": "great spirit potion",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 7590,
+      "probability": 0.16051,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 25384,
+      "probability": 0.13373,
+      "name": "vexclaw talon"
+    },
+    {
+      "id": 8473,
+      "probability": 0.12938,
+      "name": "ultimate health potion",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 6500,
+      "probability": 0.12775,
+      "name": "demonic essence"
+    },
+    {
+      "id": 2795,
+      "probability": 0.12286,
+      "name": "fire mushroom",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 2149,
+      "probability": 0.06836,
+      "name": "small emerald",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2147,
+      "probability": 0.06714,
+      "name": "small ruby",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2150,
+      "probability": 0.06524,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 9970,
+      "probability": 0.06184,
+      "name": "small topaz",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2156,
+      "probability": 0.03262,
+      "name": "red gem"
+    },
+    {
+      "id": 2154,
+      "probability": 0.0318,
+      "name": "yellow gem"
+    },
+    {
+      "id": 2396,
+      "probability": 0.03085,
+      "name": "ice rapier"
+    },
+    {
+      "id": 2432,
+      "probability": 0.02637,
+      "name": "fire axe"
+    },
+    {
+      "id": 2167,
+      "probability": 0.01808,
+      "name": "energy ring"
+    },
+    {
+      "id": 2164,
+      "probability": 0.01699,
+      "name": "might ring"
+    },
+    {
+      "id": 2393,
+      "probability": 0.01373,
+      "name": "giant sword"
+    },
+    {
+      "id": 2214,
+      "probability": 0.01087,
+      "name": "ring of healing"
+    },
+    {
+      "id": 2462,
+      "probability": 0.0087,
+      "name": "devil helmet"
+    },
+    {
+      "id": 2520,
+      "probability": 0.00557,
+      "name": "demon shield"
+    },
+    {
+      "id": 2171,
+      "probability": 0.00462,
+      "name": "platinum amulet"
+    },
+    {
+      "id": 25383,
+      "probability": 0.00408,
+      "name": "rift lance"
+    },
+    {
+      "id": 25382,
+      "probability": 0.00326,
+      "name": "rift shield"
+    },
+    {
+      "id": 2470,
+      "probability": 0.00299,
+      "name": "golden legs"
+    },
+    {
+      "id": 25523,
+      "probability": 0.00299,
+      "name": "rift crossbow"
+    },
+    {
+      "id": 2514,
+      "probability": 0.00272,
+      "name": "mastermind shield"
+    },
+    {
+      "id": 25522,
+      "probability": 0.00122,
+      "name": "rift bow"
+    },
+    {
+      "id": 2472,
+      "probability": 0.00095,
+      "name": "magic plate armor"
+    },
+    {
+      "id": 7382,
+      "probability": 0.00082,
+      "name": "demonrage sword"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

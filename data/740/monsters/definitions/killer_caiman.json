@@ -1,0 +1,114 @@
+{
+  "creatureStatistics": {
+    "name": "Killer Caiman",
+    "health": 1500,
+    "maxHealth": 1500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 186,
+    "attack": 180,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 358
+    },
+    "armor": 35
+  },
+  "experience": 900,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 10,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 700,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 180
+    }
+  ],
+  "elements": {
+    "physical": 10,
+    "energy": -5,
+    "earth": 20,
+    "ice": 10
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.99997,
+      "name": "gold coin",
+      "min": 1,
+      "max": 180
+    },
+    {
+      "id": 2671,
+      "probability": 0.39807,
+      "name": "ham"
+    },
+    {
+      "id": 11196,
+      "probability": 0.24966,
+      "name": "piece of crocodile leather",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2149,
+      "probability": 0.09963,
+      "name": "small emerald",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2425,
+      "probability": 0.04982,
+      "name": "obsidian lance"
+    },
+    {
+      "id": 11245,
+      "probability": 0.04828,
+      "name": "bunch of ripe rice",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7632,
+      "probability": 0.00974,
+      "name": "giant shimmering pearl (green)"
+    },
+    {
+      "id": 3982,
+      "probability": 0.00486,
+      "name": "crocodile boots"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

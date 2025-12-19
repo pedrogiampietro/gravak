@@ -1,0 +1,193 @@
+{
+  "creatureStatistics": {
+    "name": "Rustheap Golem",
+    "health": 2800,
+    "maxHealth": 2800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 33,
+    "outfit": {
+      "id": 603
+    },
+    "armor": 26
+  },
+  "experience": 2300,
+  "corpse": 2813,
+  "fluidType": 4,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.11,
+      "speedChange": 428,
+      "duration": 6000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "war golem electrify",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 1
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 0,
+      "max": 0,
+      "radius": 3,
+      "target": true,
+      "speedChange": -900,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 110,
+      "max": 210,
+      "range": 7,
+      "shootEffect": "energy"
+    }
+  ],
+  "elements": {
+    "fire": 70,
+    "energy": -5,
+    "physical": -5,
+    "death": 10
+  },
+  "immunities": {
+    "invisible": true,
+    "paralyze": true,
+    "lifedrain": true
+  },
+  "sayings": {
+    "texts": [
+      "*clatter*",
+      "*krrk*",
+      "*frzzp*"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 8309,
+      "probability": 0.0195
+    },
+    {
+      "id": 9930,
+      "probability": 0.0586
+    },
+    {
+      "id": 23567,
+      "probability": 0.1498
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.8,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.6,
+      "min": 1,
+      "max": 90
+    },
+    {
+      "id": 5880,
+      "probability": 0.0033
+    },
+    {
+      "id": 24124,
+      "probability": 0.0195
+    },
+    {
+      "id": 2152,
+      "probability": 0.5831,
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2143,
+      "probability": 0.013
+    },
+    {
+      "id": 2144,
+      "probability": 0.0163
+    },
+    {
+      "id": 7588,
+      "probability": 0.101,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7589,
+      "probability": 0.0717,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2391,
+      "probability": 0.0358
+    },
+    {
+      "id": 7452,
+      "probability": 0.0033
+    },
+    {
+      "id": 23542,
+      "probability": 0.0033
+    },
+    {
+      "id": 23541,
+      "probability": 0.0293
+    },
+    {
+      "id": 9810,
+      "probability": 0.0586
+    },
+    {
+      "id": 9813,
+      "probability": 0.0423
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

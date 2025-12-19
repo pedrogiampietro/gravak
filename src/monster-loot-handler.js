@@ -2,7 +2,7 @@
 
 const LootEntry = requireModule("monster-loot-entry");
 
-const LootHandler = function(loot) {
+const LootHandler = function (loot) {
 
   /*
    * Class LootHandler
@@ -14,7 +14,7 @@ const LootHandler = function(loot) {
 
 }
 
-LootHandler.prototype.addLoot = function(corpse) {
+LootHandler.prototype.addLoot = function (corpse) {
 
   /*
    * Function LootHandler.addLoot
@@ -22,28 +22,28 @@ LootHandler.prototype.addLoot = function(corpse) {
    */
 
   // Invalid: too much loot for the container size..
-  if(this.loots.length > corpse.getSize()) {
+  if (this.loots.length > corpse.getSize()) {
     return console.warn("Corpse loot exceeds the corpse size");
   }
 
   // Add each entry in the loot table
-  this.loots.forEach(function(loot) {
+  this.loots.forEach(function (loot) {
 
     // Check the probability
-    if(!loot.roll()) {
+    if (!loot.roll()) {
       return;
     }
 
     // Create the thing
     let item = gameServer.database.createThing(loot.getId());
 
-    // Cannot be picked up
-    if(!item.isPickupable()) {
+    // Item doesn't exist in database or cannot be picked up
+    if (item === null || !item.isPickupable()) {
       return;
     }
 
     // Set the random between minimum and maximum
-    if(loot.hasCount() && item.isStackable()) {
+    if (loot.hasCount() && item.isStackable()) {
       item.setCount(loot.rollCount());
     }
 

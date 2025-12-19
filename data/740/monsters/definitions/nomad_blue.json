@@ -1,0 +1,116 @@
+{
+  "creatureStatistics": {
+    "name": "Nomad",
+    "health": 160,
+    "maxHealth": 160,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 6,
+    "outfit": {
+      "id": 146
+    },
+    "armor": 5
+  },
+  "experience": 60,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 15,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "areaEffect": "whitenote"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    }
+  ],
+  "elements": {
+    "fire": 20,
+    "holy": 20,
+    "physical": -10,
+    "ice": -10,
+    "death": -10
+  },
+  "sayings": {
+    "texts": [
+      "We are the true sons of the desert!",
+      "I will leave your remains to the vultures!",
+      "We are swift as the wind of the desert!",
+      "Your riches will be mine!"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5621,
+      "min": 1,
+      "max": 40
+    },
+    {
+      "id": 8838,
+      "probability": 0.0487,
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 12412,
+      "probability": 0.0214
+    },
+    {
+      "id": 2386,
+      "probability": 0.0273
+    },
+    {
+      "id": 2398,
+      "probability": 0.0212
+    },
+    {
+      "id": 12448,
+      "probability": 0.0642
+    },
+    {
+      "id": 2465,
+      "probability": 0.0235
+    },
+    {
+      "id": 2509,
+      "probability": 0.0092
+    },
+    {
+      "id": 2459,
+      "probability": 0.0065
+    },
+    {
+      "id": 8267,
+      "probability": 0.0021
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

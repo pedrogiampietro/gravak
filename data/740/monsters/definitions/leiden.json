@@ -1,0 +1,65 @@
+{
+  "creatureStatistics": {
+    "name": "Leiden",
+    "health": 30000,
+    "maxHealth": 30000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 240,
+    "attack": 400,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 988
+    },
+    "armor": 30
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 400
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "summons": [
+    {
+      "name": "Barkless Fanatic",
+      "interval": 2000,
+      "chance": 0.2,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Bring me the pain! Make me suffer!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

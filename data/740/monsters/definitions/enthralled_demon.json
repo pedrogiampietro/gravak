@@ -1,0 +1,164 @@
+{
+  "creatureStatistics": {
+    "name": "Enthralled Demon",
+    "health": 8200,
+    "maxHealth": 8200,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 256,
+    "attack": 130,
+    "attackSpeed": 2000,
+    "defense": 65,
+    "outfit": {
+      "id": 35
+    },
+    "armor": 40
+  },
+  "experience": 100,
+  "corpse": 2916,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.14,
+      "min": 150,
+      "max": 250,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.1,
+      "speedChange": 388,
+      "duration": 4000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 130
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.13,
+      "min": 60,
+      "max": 120,
+      "range": 7,
+      "shootEffect": "suddendeath",
+      "areaEffect": "smallclouds"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.33,
+      "min": 150,
+      "max": 250,
+      "range": 7,
+      "radius": 7,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "drown",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 350,
+      "max": 450,
+      "radius": 7
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.07,
+      "min": 210,
+      "max": 300,
+      "range": 1,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "energy",
+      "areaEffect": "energy"
+    },
+    {
+      "name": "firefield",
+      "interval": 2000,
+      "chance": 0.14,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "duration": 25000,
+      "shootEffect": "suddendeath",
+      "areaEffect": "smallclouds"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 300,
+      "max": 480,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "purpleenergy"
+    }
+  ],
+  "elements": {
+    "physical": 30,
+    "earth": 40,
+    "energy": 50,
+    "death": 30,
+    "ice": -10,
+    "holy": -10
+  },
+  "immunities": {
+    "lifedrain": true,
+    "paralyze": true,
+    "fire": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "MUHAHAHAHA!",
+      "I SMELL FEEEEEAAAR!",
+      "CHAMEK ATH UTHUL ARAK!",
+      "Your resistance is futile!",
+      "Your soul will be mine!"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

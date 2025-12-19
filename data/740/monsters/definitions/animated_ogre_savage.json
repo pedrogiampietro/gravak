@@ -1,0 +1,110 @@
+{
+  "creatureStatistics": {
+    "name": "Animated Ogre Savage",
+    "health": 1400,
+    "maxHealth": 1400,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 240,
+    "attack": 300,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 858
+    },
+    "armor": 20
+  },
+  "experience": 950,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 80,
+      "max": 95,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 300
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 70,
+      "max": 180,
+      "range": 7,
+      "shootEffect": "poison"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 116
+    },
+    {
+      "id": 24844,
+      "probability": 0.26667,
+      "name": "ogre ear stud"
+    },
+    {
+      "id": 2194,
+      "probability": 0.13333,
+      "name": "mysterious fetish"
+    },
+    {
+      "id": 24845,
+      "probability": 0.13333,
+      "name": "ogre nose ring"
+    },
+    {
+      "id": 7588,
+      "probability": 0.13333,
+      "name": "strong health potion"
+    },
+    {
+      "id": 8844,
+      "probability": 0.06667,
+      "name": "jalapeno pepper",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 24849,
+      "probability": 0.06667,
+      "name": "onyx chip"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

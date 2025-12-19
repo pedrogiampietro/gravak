@@ -1,0 +1,167 @@
+{
+  "creatureStatistics": {
+    "name": "Ogre Shaman",
+    "health": 800,
+    "maxHealth": 800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 105,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 24,
+    "outfit": {
+      "id": 859
+    },
+    "armor": 30
+  },
+  "experience": 625,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 0,
+      "max": 0,
+      "areaEffect": "mortarea"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.11,
+      "min": 80,
+      "max": 110,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "earth",
+      "areaEffect": "carniphila"
+    },
+    {
+      "name": "terra wave",
+      "interval": 2000,
+      "chance": 0.13,
+      "min": 90,
+      "max": 200,
+      "areaEffect": "smallplants"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.11,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "duration": 2000,
+      "shootEffect": "earth",
+      "areaEffect": "greenshimmer"
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 20,
+      "max": 40,
+      "range": 7
+    }
+  ],
+  "elements": {
+    "fire": 20,
+    "energy": 20,
+    "ice": 20,
+    "holy": -10
+  },
+  "immunities": {
+    "invisible": true,
+    "poison": true,
+    "death": true
+  },
+  "summons": [
+    {
+      "name": "Terror Bird",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 1
+    },
+    {
+      "name": "Dworc Voodoomaster",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 1
+    },
+    {
+      "name": "Dworc Fleshhunter",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 1
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Stay here, soul food!",
+      "You more delicate than clomp!",
+      "The spirits hunger!",
+      "A sacrifice for Great Hunger!"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 90
+    },
+    {
+      "id": 2270,
+      "probability": 0.1565,
+      "name": "strong mana potion"
+    },
+    {
+      "id": 2229,
+      "probability": 0.097
+    },
+    {
+      "id": 2147,
+      "probability": 0.0313,
+      "name": "small ruby"
+    },
+    {
+      "id": 2188,
+      "probability": 0.0233,
+      "name": "wand of decay"
+    },
+    {
+      "id": 3955,
+      "probability": 0.0004
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 5
+  }
+}

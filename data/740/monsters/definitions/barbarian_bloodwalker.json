@@ -1,0 +1,137 @@
+{
+  "creatureStatistics": {
+    "name": "Barbarian Bloodwalker",
+    "health": 305,
+    "maxHealth": 305,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 236,
+    "attack": 240,
+    "attackSpeed": 2000,
+    "defense": 9,
+    "outfit": {
+      "id": 255
+    },
+    "armor": 9
+  },
+  "experience": 195,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 240,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 240
+    }
+  ],
+  "elements": {
+    "physical": 10,
+    "energy": 10,
+    "earth": -5,
+    "ice": 50,
+    "holy": 20,
+    "death": -10
+  },
+  "sayings": {
+    "texts": [
+      "YAAAHEEE!",
+      "SLAUGHTER!",
+      "CARNAGE!",
+      "You can run but you can't hide"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5513,
+      "name": "gold coin",
+      "min": 1,
+      "max": 12
+    },
+    {
+      "id": 2458,
+      "probability": 0.10639,
+      "name": "chain helmet"
+    },
+    {
+      "id": 2464,
+      "probability": 0.1027,
+      "name": "chain armor"
+    },
+    {
+      "id": 2044,
+      "probability": 0.08135,
+      "name": "lamp"
+    },
+    {
+      "id": 2381,
+      "probability": 0.07013,
+      "name": "halberd"
+    },
+    {
+      "id": 2378,
+      "probability": 0.05934,
+      "name": "battle axe"
+    },
+    {
+      "id": 2671,
+      "probability": 0.04955,
+      "name": "ham"
+    },
+    {
+      "id": 7618,
+      "probability": 0.0095,
+      "name": "health potion"
+    },
+    {
+      "id": 5911,
+      "probability": 0.00504,
+      "name": "red piece of cloth"
+    },
+    {
+      "id": 3962,
+      "probability": 0.0035,
+      "name": "beastslayer axe"
+    },
+    {
+      "id": 7290,
+      "probability": 0.00317,
+      "name": "shard"
+    },
+    {
+      "id": 7457,
+      "probability": 0.00086,
+      "name": "fur boots"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

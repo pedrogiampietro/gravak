@@ -1,0 +1,81 @@
+{
+  "creatureStatistics": {
+    "name": "Deathslicer",
+    "health": 1,
+    "maxHealth": 1,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 500,
+    "attackSpeed": 2000,
+    "defense": 199,
+    "outfit": {
+      "id": 102
+    },
+    "armor": 199
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 20,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 500
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 200,
+      "max": 400,
+      "radius": 2,
+      "target": false,
+      "areaEffect": "yellowspark"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 100,
+      "max": 200,
+      "length": 5,
+      "spread": 0,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "immunities": {
+    "physical": true,
+    "energy": true,
+    "fire": true,
+    "earth": true,
+    "drown": true,
+    "ice": true,
+    "holy": true,
+    "death": true,
+    "lifedrain": true,
+    "manadrain": true,
+    "paralyze": true,
+    "drunk": true,
+    "outfit": true,
+    "invisible": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

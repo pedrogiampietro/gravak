@@ -158,7 +158,6 @@ PacketReader.prototype.readMoveEvent = function (player) {
    */
 
   let type = this.readUInt8();
-  console.log("=== DEBUG readMoveEvent ===");
   console.log("Type:", type);
 
   switch (type) {
@@ -168,7 +167,6 @@ PacketReader.prototype.readMoveEvent = function (player) {
       console.log("Container ID:", containerId);
       let container = player.containerManager.getContainerFromId(containerId);
       console.log("Container found:", container ? container.constructor.name : null);
-      console.log("Opened containers:", Array.from(player.containerManager.__openedContainers.keys()));
       return container;
     case 1:
       return process.gameServer.world.getTileFromWorldPosition(this.readWorldPosition());

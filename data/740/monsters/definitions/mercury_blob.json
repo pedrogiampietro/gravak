@@ -1,0 +1,105 @@
+{
+  "creatureStatistics": {
+    "name": "Mercury Blob",
+    "health": 150,
+    "maxHealth": 150,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 180,
+    "attack": 75,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 316
+    },
+    "armor": 15
+  },
+  "experience": 180,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 20,
+      "max": 30,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 75
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "target": true,
+      "duration": 3000,
+      "areaEffect": "stun",
+      "shootEffect": "holy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 10,
+      "max": 30,
+      "range": 7,
+      "target": true,
+      "areaEffect": "energy",
+      "shootEffect": "energy"
+    }
+  ],
+  "elements": {
+    "fire": 10,
+    "earth": 65,
+    "ice": 15,
+    "physical": 5,
+    "holy": 65,
+    "lifedrain": 80
+  },
+  "immunities": {
+    "death": true
+  },
+  "summons": [
+    {
+      "name": "Mercury Blob",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 3
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Crackle"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

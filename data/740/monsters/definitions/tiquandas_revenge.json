@@ -1,0 +1,132 @@
+{
+  "creatureStatistics": {
+    "name": "Tiquandas Revenge",
+    "health": 1800,
+    "maxHealth": 1800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 440,
+    "attack": 160,
+    "attackSpeed": 2000,
+    "defense": 31,
+    "outfit": {
+      "id": 120
+    },
+    "armor": 30
+  },
+  "experience": 2635,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 400,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1200,
+      "chance": 0.35,
+      "min": 600,
+      "max": 800,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 160
+    },
+    {
+      "name": "earth",
+      "interval": 1000,
+      "chance": 0.25,
+      "min": 60,
+      "max": 200,
+      "range": 7,
+      "shootEffect": "poison",
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.34,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -850,
+      "duration": 30000,
+      "shootEffect": "poison",
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "earth",
+      "interval": 1000,
+      "chance": 0.12,
+      "min": 40,
+      "max": 130,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "poison"
+    }
+  ],
+  "immunities": {
+    "earth": true,
+    "invisible": true
+  },
+  "loot": [
+    {
+      "id": 5015,
+      "probability": 1,
+      "name": "mandrake"
+    },
+    {
+      "id": 7732,
+      "probability": 1,
+      "name": "seeds"
+    },
+    {
+      "id": 2148,
+      "probability": 0.87234,
+      "name": "gold coin",
+      "min": 1,
+      "max": 118
+    },
+    {
+      "id": 2666,
+      "probability": 0.70213,
+      "name": "meat"
+    },
+    {
+      "id": 2671,
+      "probability": 0.38298,
+      "name": "ham"
+    },
+    {
+      "id": 2792,
+      "probability": 0.21277,
+      "name": "dark mushroom",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 13298,
+      "probability": 0.12766,
+      "name": "carrot on a stick"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

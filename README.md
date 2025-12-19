@@ -1,4 +1,4 @@
-# Forby HTML5 Open Tibia Client and Server
+# Gravak HTML5 Open Tibia Client and Server
 
 # Installation
 

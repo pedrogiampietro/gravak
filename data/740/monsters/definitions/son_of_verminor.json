@@ -1,0 +1,129 @@
+{
+  "creatureStatistics": {
+    "name": "Son of Verminor",
+    "health": 8500,
+    "maxHealth": 8500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 240,
+    "attack": 473,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 19
+    },
+    "armor": 20
+  },
+  "experience": 5900,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 250,
+      "max": 350,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "outfit",
+      "interval": 5000,
+      "chance": 0.1,
+      "duration": 6000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "outfit",
+      "interval": 5000,
+      "chance": 0.1,
+      "duration": 6000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "outfit",
+      "interval": 5000,
+      "chance": 0.1,
+      "duration": 6000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "outfit",
+      "interval": 5000,
+      "chance": 0.1,
+      "duration": 6000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 473
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 150,
+      "max": 200,
+      "range": 7,
+      "target": true,
+      "shootEffect": "poison"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 350,
+      "max": 390,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 220,
+      "max": 270,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "smallclouds"
+    }
+  ],
+  "elements": {
+    "fire": 10,
+    "energy": 20
+  },
+  "immunities": {
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Blubb"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "creatureStatistics": {
+    "name": "Spirit Of Fertility",
+    "health": 1250,
+    "maxHealth": 1250,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 280,
+    "attack": 220,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 11
+    },
+    "armor": 30
+  },
+  "experience": 1100,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 60,
+      "max": 75,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 220
+    },
+    {
+      "name": "drown",
+      "interval": 2000,
+      "chance": 0.17,
+      "min": 130,
+      "max": 250,
+      "radius": 5,
+      "target": true,
+      "shootEffect": "snowball",
+      "areaEffect": "bluebubble"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

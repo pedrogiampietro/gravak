@@ -1,0 +1,184 @@
+{
+  "creatureStatistics": {
+    "name": "Arctic Faun",
+    "health": 300,
+    "maxHealth": 300,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 200,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 980
+    },
+    "armor": 30
+  },
+  "experience": 300,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 200
+    },
+    {
+      "name": "physical",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 180,
+      "range": 7,
+      "shootEffect": "snowball",
+      "areaEffect": "poff"
+    },
+    {
+      "name": "energy",
+      "interval": 1000,
+      "chance": 0.12,
+      "min": 0,
+      "max": 175,
+      "length": 3,
+      "spread": 3,
+      "areaEffect": "poff"
+    }
+  ],
+  "elements": {
+    "physical": 10,
+    "energy": -10,
+    "earth": 70,
+    "fire": -15,
+    "ice": 80,
+    "holy": 30,
+    "death": 20
+  },
+  "immunities": {
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "Dance with me!",
+      "In vino veritas! Hahaha!",
+      "Wine, women and song!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 105
+    },
+    {
+      "id": 28351,
+      "probability": 0.15133,
+      "name": "dandelion seeds"
+    },
+    {
+      "id": 7588,
+      "probability": 0.11406,
+      "name": "strong health potion"
+    },
+    {
+      "id": 28348,
+      "probability": 0.09923,
+      "name": "fresh fruit"
+    },
+    {
+      "id": 28349,
+      "probability": 0.09713,
+      "name": "shimmering beetles"
+    },
+    {
+      "id": 28391,
+      "probability": 0.08282,
+      "name": "leaf star",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2760,
+      "probability": 0.08046,
+      "name": "goat grass"
+    },
+    {
+      "id": 2687,
+      "probability": 0.06103,
+      "name": "cookie",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2681,
+      "probability": 0.05276,
+      "name": "grapes"
+    },
+    {
+      "id": 2074,
+      "probability": 0.05079,
+      "name": "panpipes"
+    },
+    {
+      "id": 28393,
+      "probability": 0.04988,
+      "name": "rainbow quartz",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 1294,
+      "probability": 0.04935,
+      "name": "small stone",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7591,
+      "probability": 0.0357,
+      "name": "great health potion"
+    },
+    {
+      "id": 2664,
+      "probability": 0.01024,
+      "name": "wood cape"
+    },
+    {
+      "id": 9928,
+      "probability": 0.00341,
+      "name": "leaf legs"
+    },
+    {
+      "id": 5792,
+      "probability": 0.0021,
+      "name": "die"
+    },
+    {
+      "id": 28355,
+      "probability": 0.0021,
+      "name": "wooden spellbook"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

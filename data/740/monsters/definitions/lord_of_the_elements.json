@@ -1,0 +1,167 @@
+{
+  "creatureStatistics": {
+    "name": "Lord of the Elements",
+    "health": 8000,
+    "maxHealth": 8000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 370,
+    "attack": 690,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 290
+    },
+    "armor": 30
+  },
+  "experience": 8000,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.25,
+      "min": 100,
+      "max": 195,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "outfit",
+      "interval": 1500,
+      "chance": 0.4,
+      "duration": 3000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "outfit",
+      "interval": 1500,
+      "chance": 0.4,
+      "duration": 3000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "outfit",
+      "interval": 1500,
+      "chance": 0.4,
+      "duration": 3000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "outfit",
+      "interval": 1500,
+      "chance": 0.4,
+      "duration": 3000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 690
+    }
+  ],
+  "elements": {
+    "physical": 1,
+    "fire": 30,
+    "energy": 30,
+    "ice": 30,
+    "earth": 45
+  },
+  "immunities": {
+    "holy": true,
+    "death": true,
+    "drown": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Blistering Fire Elemental",
+      "interval": 4000,
+      "chance": 0.5,
+      "maxSummons": 2
+    },
+    {
+      "name": "Jagged Earth Elemental",
+      "interval": 4000,
+      "chance": 0.5,
+      "maxSummons": 2
+    },
+    {
+      "name": "Roaring Water Elemental",
+      "interval": 4000,
+      "chance": 0.5,
+      "maxSummons": 2
+    },
+    {
+      "name": "Overcharged Energy Elemental",
+      "interval": 4000,
+      "chance": 0.5,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "WHO DARES CALLING ME?",
+      "I'LL FREEZE YOU THEN I CRUSH YOU!"
+    ],
+    "slowness": 5,
+    "chance": 0.3
+  },
+  "loot": [
+    {
+      "id": 2146,
+      "probability": 0.07142,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2147,
+      "probability": 0.11111,
+      "name": "small ruby",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2149,
+      "probability": 0.11111,
+      "name": "small emerald",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2150,
+      "probability": 0.11111,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2152,
+      "probability": 0.5,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 9
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

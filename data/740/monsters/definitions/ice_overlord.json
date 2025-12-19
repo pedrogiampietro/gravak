@@ -1,0 +1,105 @@
+{
+  "creatureStatistics": {
+    "name": "Ice Overlord",
+    "health": 4000,
+    "maxHealth": 4000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 390,
+    "attack": 400,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 11
+    },
+    "armor": 30
+  },
+  "experience": 2800,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 90,
+      "max": 150,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 400
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.18,
+      "min": 0,
+      "max": 0,
+      "radius": 6,
+      "target": false,
+      "speedChange": -800,
+      "duration": 5000,
+      "areaEffect": "icetornado"
+    },
+    {
+      "name": "ice",
+      "interval": 1000,
+      "chance": 0.09,
+      "min": 50,
+      "max": 400,
+      "range": 7,
+      "target": true,
+      "shootEffect": "smallice",
+      "areaEffect": "iceattack"
+    }
+  ],
+  "elements": {
+    "physical": 50,
+    "energy": -25
+  },
+  "immunities": {
+    "fire": true,
+    "ice": true,
+    "earth": true,
+    "drown": true,
+    "invisible": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 38
+    },
+    {
+      "id": 2152,
+      "probability": 0.5,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 3
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

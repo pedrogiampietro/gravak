@@ -1,0 +1,69 @@
+{
+  "creatureStatistics": {
+    "name": "Incineron",
+    "health": 7000,
+    "maxHealth": 7000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 260,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 243
+    },
+    "armor": 25
+  },
+  "experience": 3500,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.35,
+      "min": 0,
+      "max": 1000,
+      "length": 8,
+      "spread": 1,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.35,
+      "min": 0,
+      "max": 395,
+      "range": 7,
+      "radius": 7,
+      "target": false,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    }
+  ],
+  "elements": {
+    "energy": 20
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "fire": true,
+    "ice": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

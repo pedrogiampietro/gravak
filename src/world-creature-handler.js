@@ -377,12 +377,14 @@ CreatureHandler.prototype.dieCreature = function (creature) {
   // Generate the corpse
   let corpse = creature.createCorpse();
 
-  // Add the corpse
-  gameServer.world.addTopThing(creature.getPosition(), corpse);
+  // Add the corpse only if it exists
+  if (corpse !== null) {
+    gameServer.world.addTopThing(creature.getPosition(), corpse);
 
-  // Also add a splash when the creature is killed
-  if (corpse instanceof Corpse) {
-    gameServer.world.addSplash(2016, creature.getPosition(), corpse.getFluidType());
+    // Also add a splash when the creature is killed
+    if (corpse instanceof Corpse) {
+      gameServer.world.addSplash(2016, creature.getPosition(), corpse.getFluidType());
+    }
   }
 
   // Remove the creature from the world
@@ -628,7 +630,7 @@ CreatureHandler.prototype.moveCreature = function (creature, position) {
   // Losing target
   if (creature.isPlayer() && creature.actionHandler.targetHandler.hasTarget()) {
     if (!creature.canSee(creature.actionHandler.targetHandler.getTarget().getPosition())) {
-      creature.setTarget(null);
+      creature.actionHandler.targetHandler.setTarget(null);
       creature.sendCancelMessage("Target lost.");
     }
   }

@@ -1,0 +1,83 @@
+{
+  "creatureStatistics": {
+    "name": "Sharptooth",
+    "health": 2500,
+    "maxHealth": 2500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 290,
+    "attack": 1000,
+    "attackSpeed": 2000,
+    "defense": 29,
+    "outfit": {
+      "id": 20
+    },
+    "armor": 20
+  },
+  "experience": 1600,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 210,
+      "areaEffect": "greenshimmer"
+    },
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 200,
+      "max": 240,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1000
+    }
+  ],
+  "elements": {
+    "energy": -5,
+    "earth": 80
+  },
+  "immunities": {
+    "ice": true,
+    "fire": true,
+    "lifedrain": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Gnarrr!",
+      "Tcharrr!",
+      "Rrrah!",
+      "Rraaar!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

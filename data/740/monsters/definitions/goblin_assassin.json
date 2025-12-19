@@ -1,0 +1,158 @@
+{
+  "creatureStatistics": {
+    "name": "Goblin Assassin",
+    "health": 75,
+    "maxHealth": 75,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 140,
+    "attack": 15,
+    "attackSpeed": 2000,
+    "defense": 6,
+    "outfit": {
+      "id": 296
+    },
+    "armor": 6
+  },
+  "experience": 52,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 15,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.1,
+      "duration": 2000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 160,
+      "duration": 3000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 15
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "duration": 10000,
+      "shootEffect": "poison"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 35,
+      "range": 6,
+      "shootEffect": "throwingknife"
+    }
+  ],
+  "elements": {
+    "energy": 20,
+    "earth": -10,
+    "holy": 20,
+    "death": -10
+  },
+  "sayings": {
+    "texts": [
+      "Goblin Powahhh!",
+      "Me kill you!",
+      "Me green menace!",
+      "Gobabunga!",
+      "Gooobliiiins!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.4981,
+      "name": "gold coin",
+      "min": 1,
+      "max": 9
+    },
+    {
+      "id": 2379,
+      "probability": 0.17664,
+      "name": "dagger"
+    },
+    {
+      "id": 2667,
+      "probability": 0.12472,
+      "name": "fish"
+    },
+    {
+      "id": 2230,
+      "probability": 0.12282,
+      "name": "bone"
+    },
+    {
+      "id": 1294,
+      "probability": 0.1062,
+      "name": "small stone",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2461,
+      "probability": 0.1013,
+      "name": "leather helmet"
+    },
+    {
+      "id": 2559,
+      "probability": 0.09687,
+      "name": "small axe"
+    },
+    {
+      "id": 2406,
+      "probability": 0.08816,
+      "name": "short sword"
+    },
+    {
+      "id": 2467,
+      "probability": 0.07281,
+      "name": "leather armor"
+    },
+    {
+      "id": 2235,
+      "probability": 0.06933,
+      "name": "mouldy cheese"
+    },
+    {
+      "id": 2449,
+      "probability": 0.05065,
+      "name": "bone club"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

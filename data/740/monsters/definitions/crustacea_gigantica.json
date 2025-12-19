@@ -1,0 +1,85 @@
+{
+  "creatureStatistics": {
+    "name": "Crustacea Gigantica",
+    "health": 1600,
+    "maxHealth": 1600,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 290,
+    "attack": 600,
+    "attackSpeed": 2000,
+    "defense": 45,
+    "outfit": {
+      "id": 383
+    },
+    "armor": 30
+  },
+  "experience": 1800,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 600
+    }
+  ],
+  "elements": {
+    "physical": 12,
+    "death": 10,
+    "energy": -10
+  },
+  "immunities": {
+    "ice": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Chrchrchr",
+      "Klonklonk",
+      "Chrrrrr"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 43
+    },
+    {
+      "id": 2270,
+      "probability": 0.14285,
+      "name": "strong mana potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

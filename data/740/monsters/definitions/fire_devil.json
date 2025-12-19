@@ -1,0 +1,120 @@
+{
+  "creatureStatistics": {
+    "name": "Fire Devil",
+    "health": 200,
+    "maxHealth": 200,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 180,
+    "attack": 35,
+    "attackSpeed": 2000,
+    "defense": 13,
+    "outfit": {
+      "id": 40
+    },
+    "armor": 13
+  },
+  "experience": 145,
+  "corpse": 2886,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 35
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 60,
+      "max": 90,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 20,
+      "max": 50,
+      "range": 7,
+      "radius": 2,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    }
+  ],
+  "elements": {
+    "energy": 30,
+    "earth": 20,
+    "death": 5,
+    "physical": -5,
+    "ice": -20,
+    "holy": -10
+  },
+  "immunities": {
+    "fire": true
+  },
+  "sayings": {
+    "texts": [
+      "Hot, eh?",
+      "Hell, oh, hell!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2260,
+      "probability": 0.11,
+      "name": "blank rune"
+    },
+    {
+      "id": 2419,
+      "probability": 0.03
+    },
+    {
+      "id": 2050,
+      "probability": 0.0137,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2387,
+      "probability": 0.012,
+      "name": "double axe"
+    },
+    {
+      "id": 2150,
+      "probability": 0.0028,
+      "name": "small amethyst"
+    },
+    {
+      "id": 2515,
+      "probability": 0.0021,
+      "name": "guardian shield"
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": 4
+  }
+}

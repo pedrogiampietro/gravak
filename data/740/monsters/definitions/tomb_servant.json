@@ -1,0 +1,100 @@
+{
+  "creatureStatistics": {
+    "name": "Tomb Servant",
+    "health": 475,
+    "maxHealth": 475,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 130,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 100
+    },
+    "armor": 30
+  },
+  "experience": 215,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 130
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 40,
+      "max": 55,
+      "range": 7,
+      "target": true,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "immunities": {
+    "death": true,
+    "earth": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Chaarr!!",
+      "Ngl..Nglll...Gll"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.41,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.41,
+      "name": "gold coin",
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 2230,
+      "probability": 0.49
+    },
+    {
+      "id": 2397,
+      "probability": 0.0656,
+      "name": "longsword"
+    },
+    {
+      "id": 2575,
+      "probability": 0.25325,
+      "name": "worm",
+      "min": 1,
+      "max": 12
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "creatureStatistics": {
+    "name": "Dragon Essence",
+    "health": 30000,
+    "maxHealth": 30000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 500,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 248
+    },
+    "armor": 22
+  },
+  "experience": 0,
+  "corpse": 2844,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.16,
+      "min": 150,
+      "max": 200,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.08,
+      "speedChange": 262,
+      "duration": 7000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 500
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.18,
+      "min": 850,
+      "max": 1250,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "icearea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 450,
+      "max": 720,
+      "range": 7,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "fire"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 750,
+      "max": 880,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "fire"
+    }
+  ],
+  "elements": {
+    "poison": -10,
+    "energy": -10
+  },
+  "immunities": {
+    "paralyze": true,
+    "ice": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

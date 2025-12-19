@@ -1,0 +1,101 @@
+{
+  "creatureStatistics": {
+    "name": "Fire Overlord",
+    "health": 4000,
+    "maxHealth": 4000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 300,
+    "attack": 450,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 243
+    },
+    "armor": 25
+  },
+  "experience": 2800,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 450
+    },
+    {
+      "name": "firefield",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "fire",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 300,
+      "max": 900,
+      "length": 1,
+      "areaEffect": "fireattack"
+    },
+    {
+      "name": "fire",
+      "interval": 1000,
+      "chance": 0.13,
+      "min": 200,
+      "max": 350,
+      "radius": 4,
+      "target": true,
+      "areaEffect": "firearea"
+    }
+  ],
+  "elements": {
+    "physical": 1,
+    "death": 20,
+    "energy": 20,
+    "earth": 80,
+    "ice": -25
+  },
+  "immunities": {
+    "fire": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 75
+    },
+    {
+      "id": 2152,
+      "probability": 0.5,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 3
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

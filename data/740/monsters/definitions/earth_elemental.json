@@ -1,0 +1,163 @@
+{
+  "creatureStatistics": {
+    "name": "Earth Elemental",
+    "health": 650,
+    "maxHealth": 650,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 110,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 301
+    },
+    "armor": 25
+  },
+  "experience": 450,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 80,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 60,
+      "max": 80,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 110
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 72,
+      "max": 105,
+      "range": 7,
+      "target": true,
+      "shootEffect": "smallearth",
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 100,
+      "range": 7,
+      "radius": 2,
+      "target": true,
+      "shootEffect": "largerock",
+      "areaEffect": "poff"
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 200,
+      "max": 260,
+      "length": 6,
+      "spread": 0,
+      "areaEffect": "bigplants"
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 100,
+      "max": 140,
+      "radius": 5,
+      "target": false,
+      "shootEffect": "poison",
+      "areaEffect": "poison"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 5,
+      "target": true,
+      "speedChange": -330,
+      "duration": 5000,
+      "areaEffect": "smallplants"
+    }
+  ],
+  "elements": {
+    "death": 50,
+    "ice": 85,
+    "physical": 50,
+    "holy": 50,
+    "fire": -25
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "earth": true,
+    "energy": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.43,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 30
+    },
+    {
+      "id": 2260,
+      "probability": 0.1,
+      "name": "blank rune"
+    },
+    {
+      "id": 2270,
+      "probability": 0.0191,
+      "name": "strong mana potion"
+    },
+    {
+      "id": 9808,
+      "probability": 0.0035
+    },
+    {
+      "id": 2144,
+      "probability": 0.0062,
+      "name": "small topaz"
+    },
+    {
+      "id": 13757,
+      "probability": 0.0047
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

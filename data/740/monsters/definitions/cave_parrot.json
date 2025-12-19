@@ -1,0 +1,50 @@
+{
+  "creatureStatistics": {
+    "name": "Cave Parrot",
+    "health": 30,
+    "maxHealth": 30,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 320,
+    "attack": 5,
+    "attackSpeed": 2000,
+    "defense": 2,
+    "outfit": {
+      "id": 217
+    },
+    "armor": 2
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 5
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

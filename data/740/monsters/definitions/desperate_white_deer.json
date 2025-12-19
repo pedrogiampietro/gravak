@@ -1,0 +1,73 @@
+{
+  "creatureStatistics": {
+    "name": "Desperate White Deer",
+    "health": 55,
+    "maxHealth": 255,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 225,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 400
+    },
+    "armor": 15
+  },
+  "experience": 35,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 55,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 400,
+      "duration": 4000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "*bell*",
+      "ROOOAAARR!!",
+      "*sniff*",
+      "*wheeze*"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 13533,
+      "probability": 0.21286,
+      "name": "white deer antlers"
+    },
+    {
+      "id": 13534,
+      "probability": 0.20418,
+      "name": "white deer skin"
+    },
+    {
+      "id": 2671,
+      "probability": 0.19595,
+      "name": "ham"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

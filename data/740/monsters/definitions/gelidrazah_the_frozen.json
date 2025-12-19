@@ -1,0 +1,166 @@
+{
+  "creatureStatistics": {
+    "name": "Gelidrazah The Frozen",
+    "health": 10000,
+    "maxHealth": 10000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 350,
+    "attack": 380,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 947
+    },
+    "armor": 10
+  },
+  "experience": 9000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 180,
+      "max": 240
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 380
+    }
+  ],
+  "elements": {
+    "fire": -20,
+    "death": 10
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "ice": true,
+    "earth": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 27593,
+      "probability": 1,
+      "name": "dragon blood"
+    },
+    {
+      "id": 27594,
+      "probability": 1,
+      "name": "dragon tongue"
+    },
+    {
+      "id": 27595,
+      "probability": 1,
+      "name": "scale of gelidrazah"
+    },
+    {
+      "id": 2148,
+      "probability": 0.87243,
+      "name": "gold coin",
+      "min": 1,
+      "max": 138
+    },
+    {
+      "id": 2672,
+      "probability": 0.81481,
+      "name": "dragon ham"
+    },
+    {
+      "id": 2152,
+      "probability": 0.66667,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7290,
+      "probability": 0.30453,
+      "name": "shard"
+    },
+    {
+      "id": 7888,
+      "probability": 0.26337,
+      "name": "glacier amulet"
+    },
+    {
+      "id": 2146,
+      "probability": 0.11523,
+      "name": "small sapphire"
+    },
+    {
+      "id": 7902,
+      "probability": 0.107,
+      "name": "glacier mask"
+    },
+    {
+      "id": 21696,
+      "probability": 0.09465,
+      "name": "icicle bow"
+    },
+    {
+      "id": 21697,
+      "probability": 0.06173,
+      "name": "runic ice shield"
+    },
+    {
+      "id": 2167,
+      "probability": 0.05761,
+      "name": "energy ring"
+    },
+    {
+      "id": 7441,
+      "probability": 0.0535,
+      "name": "ice cube"
+    },
+    {
+      "id": 18412,
+      "probability": 0.03704,
+      "name": "glacial rod"
+    },
+    {
+      "id": 2033,
+      "probability": 0.03292,
+      "name": "golden mug"
+    },
+    {
+      "id": 8887,
+      "probability": 0.01646,
+      "name": "frozen plate"
+    },
+    {
+      "id": 7409,
+      "probability": 0.00823,
+      "name": "northern star"
+    },
+    {
+      "id": 2177,
+      "probability": 0.00412,
+      "name": "life crystal"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

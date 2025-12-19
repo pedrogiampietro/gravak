@@ -1,0 +1,104 @@
+{
+  "creatureStatistics": {
+    "name": "Thawing Dragon Lord",
+    "health": 25000,
+    "maxHealth": 25000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 300,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 1077
+    },
+    "armor": 30
+  },
+  "experience": 2100,
+  "corpse": 2844,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 300
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 800,
+      "max": 1200,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.12,
+      "min": 0,
+      "max": 0,
+      "radius": 6,
+      "target": false,
+      "speedChange": -250,
+      "duration": 60000,
+      "areaEffect": "fire"
+    },
+    {
+      "name": "firefield",
+      "interval": 1000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "fire"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 9971,
+      "probability": 0.41905,
+      "name": "gold ingot",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 15515,
+      "probability": 0.04762,
+      "name": "bar of gold"
+    },
+    {
+      "id": 7441,
+      "probability": 0.00952,
+      "name": "ice cube"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "creatureStatistics": {
+    "name": "Feroxa",
+    "health": 50000,
+    "maxHealth": 50000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 350,
+    "attack": 1800,
+    "attackSpeed": 2000,
+    "defense": 55,
+    "outfit": {
+      "id": 731
+    },
+    "armor": 50
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.12,
+      "speedChange": 450,
+      "duration": 10000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.2,
+      "duration": 5000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1800
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 700,
+      "max": 1050,
+      "radius": 6,
+      "target": false,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 700,
+      "max": 1250,
+      "length": 9,
+      "spread": 1,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 450,
+      "max": 700,
+      "radius": 7,
+      "areaEffect": "yellowspark"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

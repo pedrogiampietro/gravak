@@ -1,0 +1,179 @@
+{
+  "creatureStatistics": {
+    "name": "Haunted Treeling",
+    "health": 450,
+    "maxHealth": 450,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 150,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 310
+    },
+    "armor": 20
+  },
+  "experience": 310,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 150
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 30,
+      "max": 100,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "length": 5,
+      "spread": 0,
+      "speedChange": -700,
+      "duration": 15000,
+      "areaEffect": "smallplants"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 100,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "smallearth",
+      "areaEffect": "carniphila"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 55,
+      "max": 100,
+      "radius": 4,
+      "target": true,
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "radius": 1,
+      "target": false,
+      "areaEffect": "poison"
+    }
+  ],
+  "elements": {
+    "fire": -5,
+    "ice": 10,
+    "holy": 20,
+    "death": 10
+  },
+  "immunities": {
+    "earth": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Knarrrz",
+      "Huuhuuhuuuhuuaarrr",
+      "Knorrrrrr"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.92016,
+      "name": "gold coin",
+      "min": 1,
+      "max": 95
+    },
+    {
+      "id": 4860,
+      "probability": 0.29201,
+      "name": "wooden trash"
+    },
+    {
+      "id": 2788,
+      "probability": 0.07814,
+      "name": "red mushroom"
+    },
+    {
+      "id": 7618,
+      "probability": 0.05051,
+      "name": "health potion"
+    },
+    {
+      "id": 2787,
+      "probability": 0.05033,
+      "name": "white mushroom",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 10600,
+      "probability": 0.04983,
+      "name": "haunted piece of wood"
+    },
+    {
+      "id": 2790,
+      "probability": 0.01817,
+      "name": "orange mushroom"
+    },
+    {
+      "id": 7588,
+      "probability": 0.01081,
+      "name": "strong health potion"
+    },
+    {
+      "id": 2213,
+      "probability": 0.00655,
+      "name": "dwarven ring"
+    },
+    {
+      "id": 2149,
+      "probability": 0.00646,
+      "name": "small emerald"
+    },
+    {
+      "id": 7443,
+      "probability": 0.00103,
+      "name": "bullseye potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

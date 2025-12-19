@@ -1,0 +1,181 @@
+{
+  "creatureStatistics": {
+    "name": "Ogre Rowdy",
+    "health": 4500,
+    "maxHealth": 4500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 420,
+    "attack": 450,
+    "attackSpeed": 2000,
+    "defense": 98,
+    "outfit": {
+      "id": 1213
+    },
+    "armor": 98
+  },
+  "experience": 4200,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 450
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.13,
+      "min": 250,
+      "max": 400,
+      "range": 5,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "whirlwindaxe",
+      "areaEffect": "explosion"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 200,
+      "max": 450,
+      "radius": 3,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.18,
+      "min": 280,
+      "max": 420,
+      "range": 3,
+      "target": true,
+      "shootEffect": "flammingarrow"
+    }
+  ],
+  "elements": {
+    "fire": 70,
+    "ice": -30
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin"
+    },
+    {
+      "id": 7840,
+      "probability": 0.24595,
+      "name": "flaming arrow",
+      "min": 1,
+      "max": 9
+    },
+    {
+      "id": 24845,
+      "probability": 0.18447,
+      "name": "ogre nose ring"
+    },
+    {
+      "id": 24844,
+      "probability": 0.17476,
+      "name": "ogre ear stud"
+    },
+    {
+      "id": 24847,
+      "probability": 0.11327,
+      "name": "skull fetish"
+    },
+    {
+      "id": 2187,
+      "probability": 0.08091,
+      "name": "wand of inferno"
+    },
+    {
+      "id": 8921,
+      "probability": 0.05016,
+      "name": "wand of draconia"
+    },
+    {
+      "id": 27618,
+      "probability": 0.04531,
+      "name": "prismatic quartz"
+    },
+    {
+      "id": 2149,
+      "probability": 0.03722,
+      "name": "small emerald"
+    },
+    {
+      "id": 18413,
+      "probability": 0.03074,
+      "name": "blue crystal shard"
+    },
+    {
+      "id": 8844,
+      "probability": 0.02589,
+      "name": "jalapeno pepper",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 24849,
+      "probability": 0.02265,
+      "name": "onyx chip"
+    },
+    {
+      "id": 18414,
+      "probability": 0.01942,
+      "name": "violet crystal shard"
+    },
+    {
+      "id": 18409,
+      "probability": 0.01294,
+      "name": "wand of everblazing"
+    },
+    {
+      "id": 2158,
+      "probability": 0.01133,
+      "name": "blue gem"
+    },
+    {
+      "id": 24850,
+      "probability": 0.01133,
+      "name": "opal"
+    },
+    {
+      "id": 24828,
+      "probability": 0.00971,
+      "name": "ogre choppa"
+    },
+    {
+      "id": 7633,
+      "probability": 0.00809,
+      "name": "giant shimmering pearl"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

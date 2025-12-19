@@ -1,0 +1,131 @@
+{
+  "creatureStatistics": {
+    "name": "Forest Fury",
+    "health": 480,
+    "maxHealth": 480,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 125,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 569
+    },
+    "armor": 20
+  },
+  "experience": 235,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 125
+    },
+    {
+      "name": "physical",
+      "interval": 1500,
+      "chance": 0.4,
+      "min": 0,
+      "max": 100,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "huntingspear",
+      "areaEffect": "greenshimmer"
+    },
+    {
+      "name": "forest fury skill reducer",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "range": 5
+    }
+  ],
+  "elements": {
+    "holy": 10,
+    "fire": -5
+  },
+  "sayings": {
+    "texts": [
+      "To arms, sisters!",
+      "Feel the wrath of mother forest!",
+      "By the power of Greenskull!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.87797,
+      "name": "gold coin",
+      "min": 1,
+      "max": 55
+    },
+    {
+      "id": 2543,
+      "probability": 0.50567,
+      "name": "bolt",
+      "min": 1,
+      "max": 15
+    },
+    {
+      "id": 2666,
+      "probability": 0.24975,
+      "name": "meat"
+    },
+    {
+      "id": 7363,
+      "probability": 0.14846,
+      "name": "piercing bolt",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 21312,
+      "probability": 0.12036,
+      "name": "venison"
+    },
+    {
+      "id": 21311,
+      "probability": 0.07445,
+      "name": "elven hoof"
+    },
+    {
+      "id": 2455,
+      "probability": 0.02579,
+      "name": "crossbow"
+    },
+    {
+      "id": 9970,
+      "probability": 0.00482,
+      "name": "small topaz"
+    },
+    {
+      "id": 7438,
+      "probability": 0.00079,
+      "name": "elvish bow"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

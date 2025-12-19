@@ -1,0 +1,201 @@
+{
+  "creatureStatistics": {
+    "name": "Animated Feather",
+    "health": 13000,
+    "maxHealth": 13000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 420,
+    "attack": 400,
+    "attackSpeed": 2000,
+    "defense": 79,
+    "outfit": {
+      "id": 1058
+    },
+    "armor": 79
+  },
+  "experience": 9860,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 400
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 600,
+      "max": 800,
+      "range": 2,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "ice"
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 600,
+      "max": 900,
+      "target": false
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 800,
+      "max": 1200,
+      "length": 3,
+      "spread": 2,
+      "areaEffect": "iceattack"
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 600,
+      "max": 800,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "ice",
+      "areaEffect": "icearea"
+    }
+  ],
+  "elements": {
+    "fire": -18
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true,
+    "ice": true
+  },
+  "loot": [
+    {
+      "id": 31226,
+      "probability": 0.77837,
+      "name": "glowing rune",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2152,
+      "probability": 0.77277,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 21
+    },
+    {
+      "id": 2146,
+      "probability": 0.3992,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 12
+    },
+    {
+      "id": 26029,
+      "probability": 0.17509,
+      "name": "ultimate mana potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7441,
+      "probability": 0.14186,
+      "name": "ice cube"
+    },
+    {
+      "id": 2167,
+      "probability": 0.138,
+      "name": "energy ring"
+    },
+    {
+      "id": 31223,
+      "probability": 0.13128,
+      "name": "quill"
+    },
+    {
+      "id": 7902,
+      "probability": 0.07317,
+      "name": "glacier mask"
+    },
+    {
+      "id": 7387,
+      "probability": 0.04679,
+      "name": "diamond sceptre"
+    },
+    {
+      "id": 2145,
+      "probability": 0.04617,
+      "name": "small diamond",
+      "min": 1,
+      "max": 12
+    },
+    {
+      "id": 2177,
+      "probability": 0.03609,
+      "name": "life crystal"
+    },
+    {
+      "id": 7888,
+      "probability": 0.03074,
+      "name": "glacier amulet"
+    },
+    {
+      "id": 2445,
+      "probability": 0.028,
+      "name": "crystal mace"
+    },
+    {
+      "id": 2033,
+      "probability": 0.02713,
+      "name": "golden mug"
+    },
+    {
+      "id": 2183,
+      "probability": 0.02277,
+      "name": "hailstorm rod"
+    },
+    {
+      "id": 18412,
+      "probability": 0.00958,
+      "name": "glacial rod"
+    },
+    {
+      "id": 7437,
+      "probability": 0.00946,
+      "name": "sapphire hammer"
+    },
+    {
+      "id": 10220,
+      "probability": 0.0046,
+      "name": "leviathan's amulet"
+    },
+    {
+      "id": 8878,
+      "probability": 0.00162,
+      "name": "crystalline armor"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "creatureStatistics": {
+    "name": "Dragonking Zyrtarch",
+    "health": 150000,
+    "maxHealth": 150000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 280,
+    "attack": 1000,
+    "attackSpeed": 2000,
+    "defense": 64,
+    "outfit": {
+      "id": 938
+    },
+    "armor": 52
+  },
+  "experience": 1600,
+  "corpse": 2844,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1000
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 110,
+      "max": 495,
+      "range": 7,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 110,
+      "max": 495,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 110,
+      "max": 495,
+      "radius": 5,
+      "areaEffect": "yellowspark"
+    },
+    {
+      "name": "firecondition",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 1100,
+      "max": 1100,
+      "radius": 5,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 710,
+      "max": 895,
+      "length": 9,
+      "spread": 4,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 710,
+      "max": 895,
+      "length": 9,
+      "spread": 0,
+      "areaEffect": "fire"
+    }
+  ],
+  "immunities": {
+    "fire": true,
+    "drown": true,
+    "lifedrain": true,
+    "paralyze": true,
+    "invisible": true,
+    "energy": true,
+    "ice": true,
+    "earth": true,
+    "death": true,
+    "holy": true,
+    "physical": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

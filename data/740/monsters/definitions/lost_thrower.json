@@ -1,0 +1,164 @@
+{
+  "creatureStatistics": {
+    "name": "Lost Thrower",
+    "health": 1700,
+    "maxHealth": 1700,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 301,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 539
+    },
+    "armor": 30
+  },
+  "experience": 1200,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 100,
+      "max": 500,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.1,
+      "duration": 5000,
+      "areaEffect": "teleport"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 301
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 250,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "throwingstar",
+      "areaEffect": "explosionarea"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 2,
+      "target": false,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 150,
+      "max": 300,
+      "range": 7,
+      "radius": 2,
+      "target": true,
+      "shootEffect": "whirlwindclub",
+      "areaEffect": "stun"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "radius": 3,
+      "target": true,
+      "duration": 6000,
+      "shootEffect": "whirlwindaxe",
+      "areaEffect": "explosionarea"
+    }
+  ],
+  "elements": {
+    "death": 5,
+    "ice": 5,
+    "energy": 15,
+    "fire": 40
+  },
+  "immunities": {
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 37
+    },
+    {
+      "id": 2152,
+      "probability": 0.7,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2789,
+      "probability": 0.145,
+      "name": "brown mushroom",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2273,
+      "probability": 0.1347,
+      "name": "great mana potion"
+    },
+    {
+      "id": 2274,
+      "probability": 0.1473,
+      "name": "great health potion"
+    },
+    {
+      "id": 13757,
+      "probability": 0.1218
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": 4
+  }
+}

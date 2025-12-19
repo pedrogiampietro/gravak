@@ -89,7 +89,6 @@ Spellbook.prototype.handleSpell = function (sid) {
    * Handles casting of a spell by an entity
    */
 
-  console.log("=== DEBUG SPELLBOOK.HANDLESPELL ===");
   console.log("SID:", sid);
 
   // Ignore cast requests that are already on cooldown

@@ -1,0 +1,209 @@
+{
+  "creatureStatistics": {
+    "name": "Glooth Anemone",
+    "health": 2400,
+    "maxHealth": 2400,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 180,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 604
+    },
+    "armor": 15
+  },
+  "experience": 1800,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 50,
+      "max": 100,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 100,
+      "max": 200,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "gloothspear",
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.07,
+      "min": 50,
+      "max": 100,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "poison",
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "radius": 5,
+      "target": false,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "energy": 10,
+    "death": 5,
+    "fire": -5
+  },
+  "immunities": {
+    "paralyze": true,
+    "lifedrain": true,
+    "invisible": true,
+    "poison": true
+  },
+  "summons": [
+    {
+      "name": "Glooth Blob",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "*shglib*"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 23515,
+      "probability": 0.1019
+    },
+    {
+      "id": 23568,
+      "probability": 0.2102
+    },
+    {
+      "id": 2796,
+      "probability": 0.0318
+    },
+    {
+      "id": 23554,
+      "probability": 0.0032
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.6,
+      "min": 1,
+      "max": 70
+    },
+    {
+      "id": 7588,
+      "probability": 0.0669,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7589,
+      "probability": 0.0669,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 8473,
+      "probability": 0.0096
+    },
+    {
+      "id": 2152,
+      "probability": 0.5732,
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 9970,
+      "probability": 0.0924,
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2149,
+      "probability": 0.086,
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2147,
+      "probability": 0.1115,
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 23534,
+      "probability": 0.0064
+    },
+    {
+      "id": 23543,
+      "probability": 0.051
+    },
+    {
+      "id": 23550,
+      "probability": 0.0032
+    },
+    {
+      "id": 23549,
+      "probability": 0.0127
+    },
+    {
+      "id": 23551,
+      "probability": 0.0064
+    },
+    {
+      "id": 23529,
+      "probability": 0.0127
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "creatureStatistics": {
+    "name": "Bovinus",
+    "health": 150,
+    "maxHealth": 150,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 170,
+    "attack": 50,
+    "attackSpeed": 2000,
+    "defense": 11,
+    "outfit": {
+      "id": 25
+    },
+    "armor": 9
+  },
+  "experience": 60,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 50
+    }
+  ],
+  "elements": {
+    "fire": 20
+  },
+  "immunities": {
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

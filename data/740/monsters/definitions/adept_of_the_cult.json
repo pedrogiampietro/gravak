@@ -1,0 +1,149 @@
+{
+  "creatureStatistics": {
+    "name": "Adept of the Cult",
+    "health": 430,
+    "maxHealth": 430,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 215,
+    "attack": 90,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 194
+    },
+    "armor": 20
+  },
+  "experience": 400,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 3000,
+      "chance": 0.2,
+      "min": 45,
+      "max": 60,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.1,
+      "duration": 3000,
+      "areaEffect": "yellowbubble"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 90
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 70,
+      "max": 150,
+      "range": 7,
+      "target": true,
+      "shootEffect": "poison",
+      "areaEffect": "poison"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "duration": 4000,
+      "shootEffect": "holy",
+      "areaEffect": "holydamage"
+    }
+  ],
+  "elements": {
+    "holy": 30,
+    "earth": 40,
+    "ice": 20,
+    "energy": -5,
+    "death": -5
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Ghoul",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Feel the power of the cult!",
+      "Praise the voodoo!",
+      "Power to the cult!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 1962,
+      "probability": 0.0094
+    },
+    {
+      "id": 2147,
+      "probability": 0.0032,
+      "name": "small ruby"
+    },
+    {
+      "id": 2148,
+      "probability": 0.6552,
+      "name": "gold coin",
+      "min": 1,
+      "max": 60
+    },
+    {
+      "id": 2169,
+      "probability": 0.0042
+    },
+    {
+      "id": 2170,
+      "probability": 0.0102,
+      "name": "silver amulet"
+    },
+    {
+      "id": 2423,
+      "probability": 0.0126,
+      "name": "clerical mace"
+    },
+    {
+      "id": 6089,
+      "probability": 0.007
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

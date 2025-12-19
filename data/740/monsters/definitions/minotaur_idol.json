@@ -1,0 +1,72 @@
+{
+  "creatureStatistics": {
+    "name": "Minotaur Idol",
+    "health": 5200,
+    "maxHealth": 5200,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 300,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 1011
+    },
+    "armor": 30
+  },
+  "experience": 0,
+  "corpse": 2830,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 50,
+      "max": 100,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 300
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 300,
+      "range": 4,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "whirlwindclub",
+      "areaEffect": "explosionarea"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

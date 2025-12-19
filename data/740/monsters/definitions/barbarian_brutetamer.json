@@ -1,0 +1,131 @@
+{
+  "creatureStatistics": {
+    "name": "Barbarian Brutetamer",
+    "health": 145,
+    "maxHealth": 145,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 20,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 264
+    },
+    "armor": 10
+  },
+  "experience": 90,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 10,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.4,
+      "min": 50,
+      "max": 80,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 20
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 34,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "snowball"
+    },
+    {
+      "name": "barbarian brutetamer skill reducer",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 5
+    }
+  ],
+  "elements": {
+    "ice": 50,
+    "holy": 10,
+    "energy": 20,
+    "physical": -20,
+    "death": -1
+  },
+  "immunities": {
+    "lifedrain": true,
+    "paralyze": true,
+    "outfit": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "summons": [
+    {
+      "name": "War Wolf",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "To me, creatures of the wild!",
+      "My instincts tell me about your cowardice."
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 1958,
+      "probability": 0.05
+    },
+    {
+      "id": 2148,
+      "probability": 0.58,
+      "name": "gold coin",
+      "min": 1,
+      "max": 15
+    },
+    {
+      "id": 2401,
+      "probability": 0.065
+    },
+    {
+      "id": 2464,
+      "probability": 0.089,
+      "name": "chain armor"
+    },
+    {
+      "id": 2268,
+      "probability": 0.0063,
+      "name": "mana potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

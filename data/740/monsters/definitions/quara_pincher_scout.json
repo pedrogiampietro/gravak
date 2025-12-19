@@ -1,0 +1,117 @@
+{
+  "creatureStatistics": {
+    "name": "Quara Pincher Scout",
+    "health": 775,
+    "maxHealth": 775,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 156,
+    "attack": 240,
+    "attackSpeed": 2000,
+    "defense": 45,
+    "outfit": {
+      "id": 77
+    },
+    "armor": 45
+  },
+  "experience": 600,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 240
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "range": 1,
+      "speedChange": -600,
+      "duration": 3000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "energy": -10,
+    "physical": 10
+  },
+  "immunities": {
+    "ice": true,
+    "fire": true,
+    "lifedrain": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Clank clank!",
+      "Clap!",
+      "Crrrk! Crrrk!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.8991,
+      "name": "gold coin",
+      "min": 1,
+      "max": 129
+    },
+    {
+      "id": 12446,
+      "probability": 0.09912,
+      "name": "quara pincers"
+    },
+    {
+      "id": 2463,
+      "probability": 0.04965,
+      "name": "plate armor"
+    },
+    {
+      "id": 2147,
+      "probability": 0.03836,
+      "name": "small ruby",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2381,
+      "probability": 0.02056,
+      "name": "halberd"
+    },
+    {
+      "id": 5895,
+      "probability": 0.00808,
+      "name": "fish fin"
+    },
+    {
+      "id": 2177,
+      "probability": 0.00781,
+      "name": "life crystal"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

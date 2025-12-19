@@ -1,0 +1,138 @@
+{
+  "creatureStatistics": {
+    "name": "Deepling Spellsinger",
+    "health": 850,
+    "maxHealth": 850,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 152,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 443
+    },
+    "armor": 25
+  },
+  "experience": 1000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 60,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 152
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 180,
+      "max": 350,
+      "length": 10,
+      "spread": 3,
+      "areaEffect": "icetornado"
+    },
+    {
+      "name": "drown",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 90,
+      "max": 130,
+      "radius": 4,
+      "target": true,
+      "areaEffect": "bubbles"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 60,
+      "max": 140,
+      "range": 7,
+      "areaEffect": "smallplants"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 60,
+      "max": 140,
+      "range": 7,
+      "areaEffect": "smallplants"
+    },
+    {
+      "name": "deepling spellsinger skill reducer",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 0,
+      "max": 0,
+      "range": 5
+    }
+  ],
+  "elements": {
+    "earth": -20,
+    "energy": -20,
+    "death": 50
+  },
+  "immunities": {
+    "invisible": true,
+    "ice": true,
+    "drown": true,
+    "fire": true
+  },
+  "sayings": {
+    "texts": [
+      "Jey Obu giotja!!",
+      "Mmmmmoooaaaaaahaaa!!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2146,
+      "probability": 0.02854,
+      "name": "small sapphire"
+    },
+    {
+      "id": 2148,
+      "probability": 0.7,
+      "name": "gold coin",
+      "min": 1,
+      "max": 60
+    },
+    {
+      "id": 2152,
+      "probability": 0.8,
+      "name": "platinum coin"
+    },
+    {
+      "id": 2168,
+      "probability": 0.02439,
+      "name": "life ring"
+    },
+    {
+      "id": 2667,
+      "probability": 0.03448
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

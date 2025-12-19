@@ -1,0 +1,146 @@
+{
+  "creatureStatistics": {
+    "name": "Herald of Gloom",
+    "health": 350,
+    "maxHealth": 350,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 260,
+    "attack": 90,
+    "attackSpeed": 2000,
+    "defense": 55,
+    "outfit": {
+      "id": 320
+    },
+    "armor": 50
+  },
+  "experience": 450,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.15,
+      "speedChange": 200,
+      "duration": 20000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 5000,
+      "chance": 0.2,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "outfit",
+      "interval": 1500,
+      "chance": 0.2,
+      "duration": 6000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "outfit",
+      "interval": 1500,
+      "chance": 0.1,
+      "duration": 6000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "outfit",
+      "interval": 1500,
+      "chance": 0.1,
+      "duration": 6000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "outfit",
+      "interval": 1500,
+      "chance": 0.1,
+      "duration": 6000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "outfit",
+      "interval": 1500,
+      "chance": 0.1,
+      "duration": 6000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "outfit",
+      "interval": 1500,
+      "chance": 0.1,
+      "duration": 6000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 90
+    },
+    {
+      "name": "speed",
+      "interval": 3000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "target": true,
+      "speedChange": -600,
+      "duration": 30000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "holy",
+      "interval": 2000,
+      "chance": 0.24,
+      "min": 90,
+      "max": 170,
+      "range": 4,
+      "shootEffect": "smallholy"
+    }
+  ],
+  "elements": {
+    "physical": -5,
+    "energy": -5,
+    "death": -5,
+    "ice": 20,
+    "holy": 20
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "The powers of light are waning.",
+      "You will join us in eternal night!",
+      "The shadows will engulf the world."
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -8,12 +8,12 @@ const url = require("url");
 
 const AccountDatabase = requireModule("account-database");
 
-const LoginServer = function(host, port) {
+const LoginServer = function (host, port) {
 
   /*
    * Class LoginServer
    *
-   * Wrapper for the Forby HTML5 Open Tibia Server
+   * Wrapper for the Gravak HTML5 Open Tibia Server
    * Checks database of accounts / bcrypt passwords and returns a HMAC token to be provided to the gameserver
    * The gameserver uses the validity of the HMAC token to allow a websocket connection and load the required account file
    *
@@ -37,7 +37,7 @@ const LoginServer = function(host, port) {
 
 }
 
-LoginServer.prototype.__handleClose = function() {
+LoginServer.prototype.__handleClose = function () {
 
   /*
    * LoginServer.__handleClose
@@ -48,7 +48,7 @@ LoginServer.prototype.__handleClose = function() {
 
 }
 
-LoginServer.prototype.__handleListening = function() {
+LoginServer.prototype.__handleListening = function () {
 
   /*
    * LoginServer.__handleListening
@@ -59,7 +59,7 @@ LoginServer.prototype.__handleListening = function() {
 
 }
 
-LoginServer.prototype.initialize = function() {
+LoginServer.prototype.initialize = function () {
 
   /*
    * LoginServer.initialize
@@ -70,46 +70,46 @@ LoginServer.prototype.initialize = function() {
 
 }
 
-LoginServer.prototype.__generateToken = function(name) {
+LoginServer.prototype.__generateToken = function (name) {
 
   /*
    * LoginServer.__generateToken
    * Generates a simple HMAC token for the client to identify itself with.
    */
 
-   // Token is only c valid for a few seconds
-   let expire = Date.now() + CONFIG.LOGIN.TOKEN_VALID_MS;
-   let hmac = crypto.createHmac("sha256", CONFIG.HMAC.SHARED_SECRET).update(name + expire).digest("hex");
+  // Token is only c valid for a few seconds
+  let expire = Date.now() + CONFIG.LOGIN.TOKEN_VALID_MS;
+  let hmac = crypto.createHmac("sha256", CONFIG.HMAC.SHARED_SECRET).update(name + expire).digest("hex");
 
-   // Return the JSON payload
-   return new Object({
-     "name": name,
-     "expire": expire,
-     "hmac": hmac
-   });
+  // Return the JSON payload
+  return new Object({
+    "name": name,
+    "expire": expire,
+    "hmac": hmac
+  });
 
 }
 
-LoginServer.prototype.__isValidCreateAccount = function(queryObject) {
+LoginServer.prototype.__isValidCreateAccount = function (queryObject) {
 
   /*
    * LoginServer.__isValidCreateAccount
    * Returns true if the request to create the account is valid 
    */
 
-  for(let property of ["account", "password", "name", "sex"]) {
-    if(!Object.prototype.hasOwnProperty.call(queryObject, "account")) {
+  for (let property of ["account", "password", "name", "sex"]) {
+    if (!Object.prototype.hasOwnProperty.call(queryObject, "account")) {
       return false;
     }
   }
 
   // Accept only lower case letters for the character name
-  if(!/^[a-z]+$/.test(queryObject.name)) {
+  if (!/^[a-z]+$/.test(queryObject.name)) {
     return false;
   }
 
   // Must be male or female
-  if(queryObject.sex !== "male" && queryObject.sex !== "female") {
+  if (queryObject.sex !== "male" && queryObject.sex !== "female") {
     return false;
   }
 
@@ -117,7 +117,7 @@ LoginServer.prototype.__isValidCreateAccount = function(queryObject) {
 
 }
 
-LoginServer.prototype.__createAccount = function(queryObject, response) {
+LoginServer.prototype.__createAccount = function (queryObject, response) {
 
   /*
    * LoginServer.__createAccount
@@ -125,15 +125,15 @@ LoginServer.prototype.__createAccount = function(queryObject, response) {
    */
 
   // Is valid
-  if(!this.__isValidCreateAccount(queryObject)) {
+  if (!this.__isValidCreateAccount(queryObject)) {
     response.statusCode = 400;
     return response.end();
   }
 
-  this.accountDatabase.createAccount(queryObject, function(error, accountObject) {
+  this.accountDatabase.createAccount(queryObject, function (error, accountObject) {
 
     // Failure creating the account
-    if(error !== null) {
+    if (error !== null) {
       response.statusCode = error;
       return response.end();
     }
@@ -146,7 +146,7 @@ LoginServer.prototype.__createAccount = function(queryObject, response) {
 
 }
 
-LoginServer.prototype.__handleRequest = function(request, response) {
+LoginServer.prototype.__handleRequest = function (request, response) {
 
   /*
    * LoginServer.__handleRequest
@@ -158,7 +158,7 @@ LoginServer.prototype.__handleRequest = function(request, response) {
   response.setHeader("Access-Control-Allow-Methods", "OPTIONS, GET, POST");
 
   // Only GET (for tokens) and POST (for account creation)
-  if(request.method !== "GET" && request.method !== "POST") {
+  if (request.method !== "GET" && request.method !== "POST") {
     response.statusCode = 501;
     return response.end();
   }
@@ -166,13 +166,13 @@ LoginServer.prototype.__handleRequest = function(request, response) {
   // Data submitted in the querystring
   let requestObject = url.parse(request.url, true);
 
-  if(requestObject.pathname !== "/") {
+  if (requestObject.pathname !== "/") {
     response.statusCode = 404;
     return response.end();
   }
 
   // POST requests means creating account
-  if(request.method === "POST") {
+  if (request.method === "POST") {
     return this.__createAccount(requestObject.query, response);
   }
 
@@ -180,37 +180,37 @@ LoginServer.prototype.__handleRequest = function(request, response) {
 
 }
 
-LoginServer.prototype.__getAccount = function(queryObject, response) {
+LoginServer.prototype.__getAccount = function (queryObject, response) {
 
   // Account or password were not supplied
-  if(!queryObject.account || !queryObject.password) {
+  if (!queryObject.account || !queryObject.password) {
     response.statusCode = 401;
     return response.end();
   }
 
-  this.accountDatabase.getAccountCredentials(queryObject.account, function(error, result) {
+  this.accountDatabase.getAccountCredentials(queryObject.account, function (error, result) {
 
     // Does not exist
-    if(result === undefined) {
+    if (result === undefined) {
       response.statusCode = 401;
       return response.end();
     }
 
     // Compare the submitted password with the hashed + salted password
-    bcrypt.compare(queryObject.password, result.hash, function(error, isPasswordCorrect) {
+    bcrypt.compare(queryObject.password, result.hash, function (error, isPasswordCorrect) {
 
-      if(error) {
+      if (error) {
         response.statusCode = 500;
         return response.end();
       }
 
-      if(!isPasswordCorrect) {
+      if (!isPasswordCorrect) {
         response.statusCode = 401;
         return response.end();
       }
 
       // Valid return a HMAC token to be verified by the GameServer
-      response.writeHead(200, {"Content-Type": "application/json"});
+      response.writeHead(200, { "Content-Type": "application/json" });
 
       // Return the host and port of the game server too in addition to the token
       response.end(JSON.stringify({

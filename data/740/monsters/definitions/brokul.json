@@ -1,0 +1,131 @@
+{
+  "creatureStatistics": {
+    "name": "Brokul",
+    "health": 50000,
+    "maxHealth": 50000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 500,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 1076
+    },
+    "armor": 30
+  },
+  "experience": 23000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.2,
+      "min": 200,
+      "max": 500,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "healing",
+      "interval": 3000,
+      "chance": 0.2,
+      "min": 500,
+      "max": 1000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 500
+    },
+    {
+      "name": "holy",
+      "interval": 2000,
+      "chance": 0.14,
+      "min": 100,
+      "max": 700,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.18,
+      "min": 300,
+      "max": 700,
+      "radius": 4,
+      "areaEffect": "explosionarea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.14,
+      "min": 300,
+      "max": 840,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "fire"
+    },
+    {
+      "name": "holy",
+      "interval": 2000,
+      "chance": 0.14,
+      "min": 300,
+      "max": 700,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "holyarea"
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.29,
+      "min": 300,
+      "max": 840,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "areaEffect": "firearea"
+    }
+  ],
+  "elements": {
+    "earth": 100,
+    "fire": 100,
+    "ice": 100
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "summons": [
+    {
+      "name": "neutral deepling warrior",
+      "interval": 1000,
+      "chance": 0.7,
+      "maxSummons": 5
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

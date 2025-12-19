@@ -1,0 +1,53 @@
+{
+  "creatureStatistics": {
+    "name": "Enraged Squirrel",
+    "health": 35,
+    "maxHealth": 35,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 300,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 1,
+    "outfit": {
+      "id": 274
+    },
+    "armor": 1
+  },
+  "experience": 15,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "immunities": {
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "Chchch"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 7909,
+      "probability": 0.02564,
+      "name": "walnut"
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": false,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

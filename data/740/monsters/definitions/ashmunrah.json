@@ -1,0 +1,224 @@
+{
+  "creatureStatistics": {
+    "name": "Ashmunrah",
+    "health": 5000,
+    "maxHealth": 5000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 430,
+    "attack": 1000,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 87
+    },
+    "armor": 25
+  },
+  "experience": 3100,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.2,
+      "min": 200,
+      "max": 400,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 1000,
+      "chance": 0.07,
+      "duration": 2000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "outfit",
+      "interval": 1000,
+      "chance": 0.03,
+      "duration": 6000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1000
+    },
+    {
+      "name": "lifedrain",
+      "interval": 3000,
+      "chance": 0.07,
+      "min": 100,
+      "max": 700,
+      "range": 1
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 100,
+      "max": 500,
+      "range": 7,
+      "shootEffect": "poison",
+      "areaEffect": "poison"
+    },
+    {
+      "name": "physical",
+      "interval": 3000,
+      "chance": 0.12,
+      "min": 120,
+      "max": 750,
+      "range": 7,
+      "shootEffect": "energy",
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "speed",
+      "interval": 3000,
+      "chance": 0.25,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -650,
+      "duration": 50000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.18,
+      "min": 50,
+      "max": 550,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "yellowbubble"
+    }
+  ],
+  "elements": {
+    "physical": 10,
+    "energy": 20,
+    "earth": 25,
+    "fire": -5,
+    "ice": 20,
+    "holy": -10
+  },
+  "immunities": {
+    "death": true,
+    "lifedrain": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Ancient Scarab",
+      "interval": 1000,
+      "chance": 1,
+      "maxSummons": 4
+    },
+    {
+      "name": "Green Djinn",
+      "interval": 1000,
+      "chance": 1,
+      "maxSummons": 4
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "No mortal or undead will steal my secrets!",
+      "Ahhhh all those long years.",
+      "My traitorous son has thee.",
+      "Come to me, my allys and underlings.",
+      "I might be trapped but not without power.",
+      "Ages come, ages go. Ashmunrah remains.",
+      "You will be history soon."
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.33,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.33,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.33,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 7590,
+      "probability": 0.12005,
+      "name": "great mana potion"
+    },
+    {
+      "id": 2164,
+      "probability": 0.04662,
+      "name": "might ring"
+    },
+    {
+      "id": 2134,
+      "probability": 0.04196,
+      "name": "silver brooch"
+    },
+    {
+      "id": 2487,
+      "probability": 0.00466,
+      "name": "crown armor"
+    },
+    {
+      "id": 11207,
+      "probability": 0.00175,
+      "name": "mini mummy"
+    },
+    {
+      "id": 2444,
+      "probability": 0.00117,
+      "name": "hammer of wrath"
+    },
+    {
+      "id": 2140,
+      "probability": 0.00117,
+      "name": "holy scarab"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

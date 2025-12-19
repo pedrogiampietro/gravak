@@ -1,0 +1,93 @@
+{
+  "creatureStatistics": {
+    "name": "Undead Minion",
+    "health": 850,
+    "maxHealth": 850,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 248,
+    "attackSpeed": 1000,
+    "defense": 25,
+    "outfit": {
+      "id": 37
+    },
+    "armor": 25
+  },
+  "experience": 550,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 1000,
+      "chance": 1,
+      "min": 0,
+      "max": 248
+    },
+    {
+      "name": "lifedrain",
+      "interval": 1000,
+      "chance": 0.13,
+      "min": 100,
+      "max": 160,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "mortarea"
+    }
+  ],
+  "immunities": {
+    "fire": true,
+    "earth": true,
+    "lifedrain": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 40
+    },
+    {
+      "id": 2260,
+      "probability": 0.1,
+      "name": "blank rune"
+    },
+    {
+      "id": 2513,
+      "probability": 0.01,
+      "name": "battle shield"
+    },
+    {
+      "id": 2515,
+      "probability": 0.05,
+      "name": "guardian shield"
+    },
+    {
+      "id": 6570,
+      "probability": 0.05538
+    },
+    {
+      "id": 6571,
+      "probability": 0.01538
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

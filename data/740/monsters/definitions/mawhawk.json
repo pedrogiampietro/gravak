@@ -1,0 +1,108 @@
+{
+  "creatureStatistics": {
+    "name": "Mawhawk",
+    "health": 45000,
+    "maxHealth": 45000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 270,
+    "attack": 450,
+    "attackSpeed": 2000,
+    "defense": 55,
+    "outfit": {
+      "id": 595
+    },
+    "armor": 55
+  },
+  "experience": 14000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 450
+    },
+    {
+      "name": "earth",
+      "interval": 1800,
+      "chance": 0.1,
+      "min": 300,
+      "max": 685,
+      "length": 7,
+      "spread": 0,
+      "areaEffect": "stones"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 250,
+      "max": 590,
+      "radius": 6,
+      "areaEffect": "bigplants"
+    }
+  ],
+  "elements": {
+    "ice": -10,
+    "fire": -10
+  },
+  "immunities": {
+    "earth": true,
+    "energy": true,
+    "lifedrain": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Knorrrr!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2152,
+      "probability": 0.1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 25
+    },
+    {
+      "id": 2392,
+      "probability": 0.1,
+      "name": "fire sword"
+    },
+    {
+      "id": 2221,
+      "probability": 0.1,
+      "name": "hardened bone"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

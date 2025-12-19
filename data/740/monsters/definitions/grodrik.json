@@ -1,0 +1,56 @@
+{
+  "creatureStatistics": {
+    "name": "Grodrik",
+    "health": 120,
+    "maxHealth": 120,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 170,
+    "attack": 35,
+    "attackSpeed": 2000,
+    "defense": 7,
+    "outfit": {
+      "id": 160
+    },
+    "armor": 7
+  },
+  "experience": 60,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 35
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "By the great mother of fire! What is this?",
+      "Can I at least have a beer??",
+      "I'll hail no one, not even Durin, until I am brought back to where I was just moments ago!",
+      "If I ever find out who is behind all that... GRR!",
+      "What the... where is this place?"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

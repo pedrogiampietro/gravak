@@ -1,0 +1,147 @@
+{
+  "creatureStatistics": {
+    "name": "Deepling Master Librarian",
+    "health": 1700,
+    "maxHealth": 1700,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 210,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 443
+    },
+    "armor": 20
+  },
+  "experience": 1900,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 250,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 40,
+      "max": 80,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 210
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 260,
+      "max": 450,
+      "length": 10,
+      "spread": 3,
+      "areaEffect": "icetornado"
+    },
+    {
+      "name": "drown",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 150,
+      "max": 280,
+      "radius": 4,
+      "target": true,
+      "areaEffect": "bubbles"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 80,
+      "max": 140,
+      "range": 7,
+      "areaEffect": "smallplants"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 60,
+      "max": 140,
+      "range": 7,
+      "areaEffect": "smallplants"
+    },
+    {
+      "name": "deepling spellsinger skill reducer",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 5
+    }
+  ],
+  "immunities": {
+    "invisible": true,
+    "ice": true,
+    "fire": true
+  },
+  "sayings": {
+    "texts": [
+      "Mmmmmoooaaaaaahaaa!!!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2146,
+      "probability": 0.0844,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2152,
+      "probability": 0.9,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2168,
+      "probability": 0.032,
+      "name": "life ring"
+    },
+    {
+      "id": 2667,
+      "probability": 0.0909,
+      "min": 1,
+      "max": 2
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

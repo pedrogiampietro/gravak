@@ -1,0 +1,104 @@
+{
+  "creatureStatistics": {
+    "name": "Grave Guard",
+    "health": 720,
+    "maxHealth": 720,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 147,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 234
+    },
+    "armor": 35
+  },
+  "experience": 485,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 147
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 0,
+      "max": 0,
+      "radius": 1,
+      "target": false,
+      "areaEffect": "bluenote"
+    }
+  ],
+  "elements": {
+    "energy": 30,
+    "earth": 90,
+    "ice": -10,
+    "holy": -10,
+    "death": 10
+  },
+  "immunities": {
+    "fire": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.95445,
+      "name": "gold coin",
+      "min": 1,
+      "max": 129
+    },
+    {
+      "id": 2747,
+      "probability": 0.69968,
+      "name": "grave flower"
+    },
+    {
+      "id": 7620,
+      "probability": 0.20318,
+      "name": "mana potion"
+    },
+    {
+      "id": 7618,
+      "probability": 0.1992,
+      "name": "health potion"
+    },
+    {
+      "id": 2159,
+      "probability": 0.04802,
+      "name": "scarab coin"
+    },
+    {
+      "id": 6300,
+      "probability": 0.02181,
+      "name": "death ring"
+    },
+    {
+      "id": 2440,
+      "probability": 0.00933,
+      "name": "daramian waraxe"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

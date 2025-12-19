@@ -1,0 +1,104 @@
+{
+  "creatureStatistics": {
+    "name": "Tremorak",
+    "health": 10000,
+    "maxHealth": 10000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 290,
+    "attack": 115,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 285
+    },
+    "armor": 30
+  },
+  "experience": 1300,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.16,
+      "min": 75,
+      "max": 200,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 115
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.16,
+      "min": 0,
+      "max": 255,
+      "radius": 7,
+      "target": false,
+      "areaEffect": "groundshaker"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.16,
+      "min": 0,
+      "max": 405,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "groundshaker"
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.16,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "target": true,
+      "shootEffect": "poison"
+    }
+  ],
+  "elements": {
+    "death": 35,
+    "ice": 20,
+    "physical": 50,
+    "holy": 50,
+    "fire": -15,
+    "energy": 85
+  },
+  "immunities": {
+    "earth": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "STOMP STOMP!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

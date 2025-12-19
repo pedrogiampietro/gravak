@@ -1,0 +1,246 @@
+{
+  "creatureStatistics": {
+    "name": "Shadowpelt",
+    "health": 6000,
+    "maxHealth": 6000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 200,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 1040
+    },
+    "armor": 30
+  },
+  "experience": 4600,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.07,
+      "min": 120,
+      "max": 310,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.1,
+      "speedChange": 520,
+      "duration": 5000,
+      "areaEffect": "poff"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 200
+    },
+    {
+      "name": "physical",
+      "interval": 100,
+      "chance": 0.22,
+      "min": 200,
+      "max": 310,
+      "radius": 3,
+      "areaEffect": "explosionarea"
+    },
+    {
+      "name": "outfit",
+      "interval": 1000,
+      "chance": 0.01,
+      "min": 0,
+      "max": 0,
+      "radius": 1,
+      "target": true,
+      "duration": 2000
+    },
+    {
+      "name": "lifedrain",
+      "interval": 100,
+      "chance": 0.15,
+      "min": 100,
+      "max": 200,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "whitenote"
+    }
+  ],
+  "elements": {
+    "energy": 15,
+    "fire": -5,
+    "ice": 10
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 5896,
+      "probability": 1,
+      "name": "bear paw"
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 24713,
+      "probability": 1,
+      "name": "werebear fur"
+    },
+    {
+      "id": 24712,
+      "probability": 1,
+      "name": "werebear skull"
+    },
+    {
+      "id": 2148,
+      "probability": 0.80729,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2144,
+      "probability": 0.53646,
+      "name": "black pearl",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 24850,
+      "probability": 0.46354,
+      "name": "opal",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7591,
+      "probability": 0.34201,
+      "name": "great health potion"
+    },
+    {
+      "id": 7432,
+      "probability": 0.29167,
+      "name": "furry club"
+    },
+    {
+      "id": 27617,
+      "probability": 0.28646,
+      "name": "tiger eye",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7759,
+      "probability": 0.20833,
+      "name": "small enchanted sapphire",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 5902,
+      "probability": 0.16319,
+      "name": "honeycomb"
+    },
+    {
+      "id": 8473,
+      "probability": 0.14062,
+      "name": "ultimate health potion"
+    },
+    {
+      "id": 2671,
+      "probability": 0.13194,
+      "name": "ham"
+    },
+    {
+      "id": 7419,
+      "probability": 0.0816,
+      "name": "dreaded cleaver"
+    },
+    {
+      "id": 7633,
+      "probability": 0.07639,
+      "name": "giant shimmering pearl (brown)"
+    },
+    {
+      "id": 24741,
+      "probability": 0.06597,
+      "name": "fur armor"
+    },
+    {
+      "id": 24759,
+      "probability": 0.05382,
+      "name": "werebear trophy"
+    },
+    {
+      "id": 24716,
+      "probability": 0.03819,
+      "name": "werewolf amulet"
+    },
+    {
+      "id": 24739,
+      "probability": 0.03299,
+      "name": "moonlight crystals"
+    },
+    {
+      "id": 2214,
+      "probability": 0.03299,
+      "name": "ring of healing"
+    },
+    {
+      "id": 7452,
+      "probability": 0.03125,
+      "name": "spiked squelcher"
+    },
+    {
+      "id": 7383,
+      "probability": 0.0191,
+      "name": "relic sword"
+    },
+    {
+      "id": 7439,
+      "probability": 0.01736,
+      "name": "berserk potion"
+    },
+    {
+      "id": 25172,
+      "probability": 0.01736,
+      "name": "silver token"
+    },
+    {
+      "id": 2197,
+      "probability": 0.00694,
+      "name": "stone skin amulet"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

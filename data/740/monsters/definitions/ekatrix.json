@@ -1,0 +1,148 @@
+{
+  "creatureStatistics": {
+    "name": "Ekatrix",
+    "health": 500,
+    "maxHealth": 500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 204,
+    "attack": 20,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 54
+    },
+    "armor": 10
+  },
+  "experience": 200,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 20
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 30,
+      "max": 75,
+      "range": 7,
+      "shootEffect": "fire",
+      "areaEffect": "fire"
+    },
+    {
+      "name": "firefield",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.01,
+      "min": 0,
+      "max": 0,
+      "range": 5,
+      "target": true,
+      "duration": 2000
+    }
+  ],
+  "elements": {
+    "physical": -5,
+    "energy": 100,
+    "earth": 20,
+    "holy": -5
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 60
+    },
+    {
+      "id": 10569,
+      "probability": 1,
+      "name": "witch broom"
+    },
+    {
+      "id": 2654,
+      "probability": 0.59459,
+      "name": "cape"
+    },
+    {
+      "id": 2324,
+      "probability": 0.43243,
+      "name": "broom"
+    },
+    {
+      "id": 2651,
+      "probability": 0.37838,
+      "name": "coat"
+    },
+    {
+      "id": 2129,
+      "probability": 0.35135,
+      "name": "wolf tooth chain"
+    },
+    {
+      "id": 2687,
+      "probability": 0.24324,
+      "name": "cookie",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2800,
+      "probability": 0.13514,
+      "name": "star herb"
+    },
+    {
+      "id": 13537,
+      "probability": 0.02703,
+      "name": "bag of apple slices"
+    },
+    {
+      "id": 2199,
+      "probability": 0.02703,
+      "name": "garlic necklace"
+    },
+    {
+      "id": 2185,
+      "probability": 0.02703,
+      "name": "necrotic rod"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": 4
+  }
+}

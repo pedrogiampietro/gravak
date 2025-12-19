@@ -1,0 +1,132 @@
+{
+  "creatureStatistics": {
+    "name": "Sun-Marked Goanna",
+    "health": 7800,
+    "maxHealth": 7800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 350,
+    "attackSpeed": 2000,
+    "defense": 84,
+    "outfit": {
+      "id": 1195
+    },
+    "armor": 84
+  },
+  "experience": 7600,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.05,
+      "speedChange": 500,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 350
+    },
+    {
+      "name": "wave t",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 250,
+      "max": 380
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 450,
+      "max": 550,
+      "range": 3,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "earth",
+      "areaEffect": "explosion"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 210,
+      "max": 300,
+      "radius": 5,
+      "areaEffect": "groundshaker"
+    }
+  ],
+  "elements": {
+    "earth": 75
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 34084,
+      "probability": 0.75,
+      "name": "goanna hide with sun symbol"
+    },
+    {
+      "id": 18437,
+      "probability": 0.5,
+      "name": "envenomed arrow"
+    },
+    {
+      "id": 7850,
+      "probability": 0.25,
+      "name": "earth arrow",
+      "min": 1,
+      "max": 14
+    },
+    {
+      "id": 34084,
+      "probability": 0.25,
+      "name": "goanna hide with sun symbol"
+    },
+    {
+      "id": 7903,
+      "probability": 0.25,
+      "name": "terra hood"
+    },
+    {
+      "id": 2181,
+      "probability": 0.25,
+      "name": "terra rod"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

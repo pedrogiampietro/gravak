@@ -1,0 +1,186 @@
+{
+  "creatureStatistics": {
+    "name": "Diamond Servant",
+    "health": 1000,
+    "maxHealth": 1000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 172,
+    "attack": 100,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 397
+    },
+    "armor": 25
+  },
+  "experience": 700,
+  "corpse": 2813,
+  "fluidType": 4,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 100,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 80,
+      "max": 120,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "yellowenergy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 125,
+      "max": 170,
+      "length": 5,
+      "spread": 2,
+      "target": false,
+      "shootEffect": "energy",
+      "areaEffect": "energy"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "target": true,
+      "duration": 3000,
+      "shootEffect": "death",
+      "areaEffect": "stun"
+    }
+  ],
+  "elements": {
+    "earth": 75,
+    "fire": 10,
+    "holy": -15
+  },
+  "immunities": {
+    "energy": true,
+    "invisible": true,
+    "paralyze": true
+  },
+  "sayings": {
+    "texts": [
+      "Error. LOAD 'PROGRAM',8,1",
+      "Remain. Obedient."
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.94036,
+      "name": "gold coin",
+      "min": 1,
+      "max": 179
+    },
+    {
+      "id": 5944,
+      "probability": 0.44999,
+      "name": "soul orb"
+    },
+    {
+      "id": 2177,
+      "probability": 0.09389,
+      "name": "life crystal"
+    },
+    {
+      "id": 7589,
+      "probability": 0.06047,
+      "name": "strong mana potion"
+    },
+    {
+      "id": 7588,
+      "probability": 0.05834,
+      "name": "strong health potion"
+    },
+    {
+      "id": 9976,
+      "probability": 0.05237,
+      "name": "crystal pedestal"
+    },
+    {
+      "id": 9690,
+      "probability": 0.05019,
+      "name": "gear wheel"
+    },
+    {
+      "id": 10572,
+      "probability": 0.04967,
+      "name": "gear crystal"
+    },
+    {
+      "id": 2164,
+      "probability": 0.00903,
+      "name": "might ring"
+    },
+    {
+      "id": 7889,
+      "probability": 0.00695,
+      "name": "lightning pendant"
+    },
+    {
+      "id": 2154,
+      "probability": 0.00561,
+      "name": "yellow gem"
+    },
+    {
+      "id": 13758,
+      "probability": 0.0055,
+      "name": "slime mould"
+    },
+    {
+      "id": 2189,
+      "probability": 0.0055,
+      "name": "wand of cosmic energy"
+    },
+    {
+      "id": 7440,
+      "probability": 0.00415,
+      "name": "mastermind potion"
+    },
+    {
+      "id": 10221,
+      "probability": 0.00114,
+      "name": "shockwave amulet"
+    },
+    {
+      "id": 8878,
+      "probability": 0.00016,
+      "name": "crystalline armor"
+    },
+    {
+      "id": 7428,
+      "probability": 0.0001,
+      "name": "bonebreaker"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

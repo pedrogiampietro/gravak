@@ -1,0 +1,118 @@
+{
+  "creatureStatistics": {
+    "name": "Troll Champion",
+    "health": 75,
+    "maxHealth": 75,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 35,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 281
+    },
+    "armor": 10
+  },
+  "experience": 40,
+  "corpse": 2806,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 15,
+    "openDoors": false,
+    "senseInvisible": true
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 35
+    }
+  ],
+  "elements": {
+    "energy": 15,
+    "holy": 10,
+    "earth": -10,
+    "death": -10
+  },
+  "sayings": {
+    "texts": [
+      "Meee maity!",
+      "Grrrr",
+      "Whaaaz up!?",
+      "Gruntz!",
+      "Groar"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.64606,
+      "name": "gold coin",
+      "min": 1,
+      "max": 12
+    },
+    {
+      "id": 2389,
+      "probability": 0.25082,
+      "name": "spear"
+    },
+    {
+      "id": 2666,
+      "probability": 0.09962,
+      "name": "meat"
+    },
+    {
+      "id": 2643,
+      "probability": 0.09936,
+      "name": "leather boots"
+    },
+    {
+      "id": 2512,
+      "probability": 0.05322,
+      "name": "wooden shield"
+    },
+    {
+      "id": 2544,
+      "probability": 0.05069,
+      "name": "arrow",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2448,
+      "probability": 0.05069,
+      "name": "studded club"
+    },
+    {
+      "id": 10606,
+      "probability": 0.03075,
+      "name": "bunch of troll hair"
+    },
+    {
+      "id": 12471,
+      "probability": 0.00909,
+      "name": "trollroot"
+    },
+    {
+      "id": 2170,
+      "probability": 0.00127,
+      "name": "silver amulet"
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

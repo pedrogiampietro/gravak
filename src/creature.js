@@ -488,14 +488,11 @@ Creature.prototype.increaseHealth = function (amount) {
    */
 
   // Add debug logs
-  console.log("=== DEBUG HEALTH INCREASE ===");
   console.log(
     `Current Health before increase: ${this.getProperty(
       CONST.PROPERTIES.HEALTH
     )}`
   );
-  console.log(`Max Health: ${this.getProperty(CONST.PROPERTIES.HEALTH_MAX)}`);
-  console.log(`Amount to increase: ${amount}`);
 
   this.setProperty(
     CONST.PROPERTIES.HEALTH,

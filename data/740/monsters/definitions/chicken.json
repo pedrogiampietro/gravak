@@ -1,0 +1,62 @@
+{
+  "creatureStatistics": {
+    "name": "Chicken",
+    "health": 15,
+    "maxHealth": 15,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 128,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 1,
+    "outfit": {
+      "id": 111
+    },
+    "armor": 1
+  },
+  "experience": 0,
+  "corpse": 2909,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 15,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "sayings": {
+    "texts": [
+      "Gokgoooook",
+      "Cluck Cluck"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2575,
+      "probability": 0.1,
+      "name": "worm"
+    },
+    {
+      "id": 2666,
+      "probability": 0.0212,
+      "name": "meat",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2695,
+      "probability": 0.01
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

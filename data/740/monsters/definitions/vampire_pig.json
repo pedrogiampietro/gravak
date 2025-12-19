@@ -1,0 +1,98 @@
+{
+  "creatureStatistics": {
+    "name": "Vampire Pig",
+    "health": 305,
+    "maxHealth": 305,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 300,
+    "attack": 100,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 60
+    },
+    "armor": 30
+  },
+  "experience": 165,
+  "corpse": 2909,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 30,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.2,
+      "duration": 1500,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 15,
+      "max": 25,
+      "radius": 4,
+      "target": true,
+      "areaEffect": "bats"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 35,
+      "max": 55,
+      "range": 3,
+      "target": true
+    }
+  ],
+  "elements": {
+    "physical": 10
+  },
+  "immunities": {
+    "lifedrain": true,
+    "drown": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Oink",
+      "Oink oink"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.9,
+      "name": "gold coin",
+      "min": 1,
+      "max": 40
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

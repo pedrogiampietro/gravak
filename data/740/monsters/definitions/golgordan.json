@@ -1,0 +1,101 @@
+{
+  "creatureStatistics": {
+    "name": "Golgordan",
+    "health": 40000,
+    "maxHealth": 40000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 350,
+    "attack": 575,
+    "attackSpeed": 2000,
+    "defense": 54,
+    "outfit": {
+      "id": 12
+    },
+    "armor": 48
+  },
+  "experience": 10000,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 575
+    },
+    {
+      "name": "death",
+      "interval": 3000,
+      "chance": 0.15,
+      "min": 250,
+      "max": 850,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 1000,
+      "chance": 0.11,
+      "min": 300,
+      "max": 350,
+      "length": 5,
+      "spread": 2,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "physical",
+      "interval": 1000,
+      "chance": 0.08,
+      "min": 50,
+      "max": 955,
+      "radius": 6,
+      "target": false,
+      "areaEffect": "groundshaker"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 50,
+      "max": 200,
+      "radius": 7,
+      "target": true,
+      "areaEffect": "firearea"
+    }
+  ],
+  "elements": {
+    "ice": -10,
+    "holy": 15,
+    "physical": 20,
+    "fire": -5
+  },
+  "immunities": {
+    "death": true
+  },
+  "sayings": {
+    "texts": [
+      "Latrivan your fool"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

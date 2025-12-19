@@ -1,0 +1,132 @@
+{
+  "creatureStatistics": {
+    "name": "Dwarf Guard",
+    "health": 245,
+    "maxHealth": 245,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 206,
+    "attack": 140,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 70
+    },
+    "armor": 15
+  },
+  "experience": 165,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 140
+    }
+  ],
+  "elements": {
+    "earth": 20,
+    "physical": 20,
+    "fire": -5,
+    "death": -5
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Hail Durin!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2787,
+      "probability": 0.55243,
+      "name": "white mushroom",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2643,
+      "probability": 0.40075,
+      "name": "leather boots"
+    },
+    {
+      "id": 2148,
+      "probability": 0.39985,
+      "name": "gold coin",
+      "min": 1,
+      "max": 30
+    },
+    {
+      "id": 2483,
+      "probability": 0.09009,
+      "name": "scale armor"
+    },
+    {
+      "id": 2513,
+      "probability": 0.06014,
+      "name": "battle shield"
+    },
+    {
+      "id": 2417,
+      "probability": 0.03849,
+      "name": "battle hammer"
+    },
+    {
+      "id": 3351,
+      "probability": 0.01549,
+      "name": "steel helmet"
+    },
+    {
+      "id": 2387,
+      "probability": 0.00592,
+      "name": "double axe"
+    },
+    {
+      "id": 5880,
+      "probability": 0.00481,
+      "name": "iron ore"
+    },
+    {
+      "id": 7618,
+      "probability": 0.00394,
+      "name": "health potion"
+    },
+    {
+      "id": 2208,
+      "probability": 0.00198,
+      "name": "axe ring"
+    },
+    {
+      "id": 13757,
+      "probability": 0.00195,
+      "name": "coal"
+    },
+    {
+      "id": 2150,
+      "probability": 0.0012,
+      "name": "small amethyst"
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

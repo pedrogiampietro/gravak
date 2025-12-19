@@ -1,0 +1,100 @@
+{
+  "creatureStatistics": {
+    "name": "Stone Rhino",
+    "health": 3000,
+    "maxHealth": 3000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 290,
+    "attack": 400,
+    "attackSpeed": 2000,
+    "defense": 72,
+    "outfit": {
+      "id": 936
+    },
+    "armor": 72
+  },
+  "experience": 1800,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 195,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 400
+    }
+  ],
+  "elements": {
+    "physical": 10,
+    "ice": 10,
+    "earth": 20,
+    "fire": 10
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "SNIFF!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 24842,
+      "probability": 0.17625,
+      "name": "raw meat"
+    },
+    {
+      "id": 5925,
+      "probability": 0.10024,
+      "name": "hardened bone"
+    },
+    {
+      "id": 27044,
+      "probability": 0.08694,
+      "name": "rhino hide"
+    },
+    {
+      "id": 27045,
+      "probability": 0.04608,
+      "name": "rhino horn"
+    },
+    {
+      "id": 3973,
+      "probability": 0.01378,
+      "name": "tusk shield"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

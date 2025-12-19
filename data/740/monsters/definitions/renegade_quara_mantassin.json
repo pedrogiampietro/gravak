@@ -1,0 +1,129 @@
+{
+  "creatureStatistics": {
+    "name": "Renegade Quara Mantassin",
+    "health": 1200,
+    "maxHealth": 1200,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 590,
+    "attack": 140,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 72
+    },
+    "armor": 15
+  },
+  "experience": 1000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.2,
+      "duration": 2000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 140
+    }
+  ],
+  "elements": {
+    "energy": -25,
+    "earth": -10
+  },
+  "immunities": {
+    "fire": true,
+    "drown": true,
+    "ice": true,
+    "paralyze": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 12445,
+      "probability": 0.13123,
+      "name": "mantassin tail"
+    },
+    {
+      "id": 2178,
+      "probability": 0.09302,
+      "name": "mind stone"
+    },
+    {
+      "id": 2670,
+      "probability": 0.0436,
+      "name": "shrimp"
+    },
+    {
+      "id": 2146,
+      "probability": 0.03322,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2396,
+      "probability": 0.0299,
+      "name": "ice rapier"
+    },
+    {
+      "id": 2165,
+      "probability": 0.02658,
+      "name": "stealth ring"
+    },
+    {
+      "id": 2479,
+      "probability": 0.01453,
+      "name": "strange helmet"
+    },
+    {
+      "id": 18413,
+      "probability": 0.01329,
+      "name": "blue crystal shard"
+    },
+    {
+      "id": 2656,
+      "probability": 0.00914,
+      "name": "blue robe"
+    },
+    {
+      "id": 2167,
+      "probability": 0.00914,
+      "name": "energy ring"
+    },
+    {
+      "id": 5895,
+      "probability": 0.00914,
+      "name": "fish fin"
+    },
+    {
+      "id": 2377,
+      "probability": 0.00914,
+      "name": "two handed sword"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

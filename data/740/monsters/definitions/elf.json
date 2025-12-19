@@ -1,0 +1,130 @@
+{
+  "creatureStatistics": {
+    "name": "Elf",
+    "health": 100,
+    "maxHealth": 100,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 15,
+    "attackSpeed": 2000,
+    "defense": 6,
+    "outfit": {
+      "id": 62
+    },
+    "armor": 6
+  },
+  "experience": 42,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 15
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 25,
+      "range": 7,
+      "shootEffect": "arrow"
+    }
+  ],
+  "elements": {
+    "holy": 20,
+    "death": -10
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Ulathil beia Thratha!",
+      "Bahaha aka!",
+      "You are not welcome here.",
+      "Flee as long as you can.",
+      "Death to the defilers!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.44661,
+      "name": "gold coin",
+      "min": 1,
+      "max": 30
+    },
+    {
+      "id": 8839,
+      "probability": 0.20013,
+      "name": "plum",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2482,
+      "probability": 0.15055,
+      "name": "studded helmet"
+    },
+    {
+      "id": 2643,
+      "probability": 0.11113,
+      "name": "leather boots"
+    },
+    {
+      "id": 2397,
+      "probability": 0.10918,
+      "name": "longsword"
+    },
+    {
+      "id": 2484,
+      "probability": 0.0901,
+      "name": "studded armor"
+    },
+    {
+      "id": 2510,
+      "probability": 0.08957,
+      "name": "plate shield"
+    },
+    {
+      "id": 2544,
+      "probability": 0.07026,
+      "name": "arrow",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 10552,
+      "probability": 0.01984,
+      "name": "elvish talisman"
+    },
+    {
+      "id": 5921,
+      "probability": 0.01011,
+      "name": "heaven blossom"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

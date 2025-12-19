@@ -1,0 +1,200 @@
+{
+  "creatureStatistics": {
+    "name": "Deathling Spellsinger",
+    "health": 7200,
+    "maxHealth": 7200,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 310,
+    "attack": 300,
+    "attackSpeed": 2000,
+    "defense": 72,
+    "outfit": {
+      "id": 1088
+    },
+    "armor": 72
+  },
+  "experience": 6400,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 300
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 200,
+      "max": 400,
+      "range": 3,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "huntingspear",
+      "areaEffect": "redspark"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 150,
+      "max": 300,
+      "range": 3,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "largerock",
+      "areaEffect": "explosionarea"
+    },
+    {
+      "name": "holy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 400,
+      "max": 700,
+      "length": 6,
+      "spread": 0,
+      "areaEffect": "holyarea"
+    }
+  ],
+  "elements": {
+    "energy": -10,
+    "earth": -10,
+    "fire": 100,
+    "ice": 100,
+    "death": 10
+  },
+  "immunities": {
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "BOQOL\"°",
+      "QOL\" VBOXCL°"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 0.85682,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 14
+    },
+    {
+      "id": 18304,
+      "probability": 0.25142,
+      "name": "crystalline arrow",
+      "min": 1,
+      "max": 25
+    },
+    {
+      "id": 2149,
+      "probability": 0.13388,
+      "name": "small emerald",
+      "min": 1,
+      "max": 14
+    },
+    {
+      "id": 15426,
+      "probability": 0.13047,
+      "name": "deeptags"
+    },
+    {
+      "id": 15488,
+      "probability": 0.12934,
+      "name": "deepling filet"
+    },
+    {
+      "id": 15452,
+      "probability": 0.09508,
+      "name": "deepling ridge"
+    },
+    {
+      "id": 7591,
+      "probability": 0.08373,
+      "name": "great health potion"
+    },
+    {
+      "id": 15425,
+      "probability": 0.0826,
+      "name": "deepling warts"
+    },
+    {
+      "id": 7590,
+      "probability": 0.07919,
+      "name": "great mana potion"
+    },
+    {
+      "id": 15649,
+      "probability": 0.05423,
+      "name": "vortex bolt",
+      "min": 1,
+      "max": 25
+    },
+    {
+      "id": 13870,
+      "probability": 0.04924,
+      "name": "eye of a deepling"
+    },
+    {
+      "id": 13838,
+      "probability": 0.03404,
+      "name": "heavy trident"
+    },
+    {
+      "id": 15453,
+      "probability": 0.03222,
+      "name": "warrior's shield"
+    },
+    {
+      "id": 5895,
+      "probability": 0.03109,
+      "name": "fish fin"
+    },
+    {
+      "id": 15451,
+      "probability": 0.02973,
+      "name": "warrior's axe"
+    },
+    {
+      "id": 7759,
+      "probability": 0.02269,
+      "name": "small enchanted sapphire",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2168,
+      "probability": 0.02156,
+      "name": "life ring"
+    },
+    {
+      "id": 15403,
+      "probability": 0.00295,
+      "name": "necklace of the deep"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

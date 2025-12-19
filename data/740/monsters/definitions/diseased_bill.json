@@ -1,0 +1,118 @@
+{
+  "creatureStatistics": {
+    "name": "Diseased Bill",
+    "health": 1000,
+    "maxHealth": 1000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 240,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 299
+    },
+    "armor": 20
+  },
+  "experience": 300,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 150,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 5000,
+      "chance": 0.6,
+      "min": 50,
+      "max": 80,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 240
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 200,
+      "max": 250,
+      "range": 7,
+      "target": true,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "physical",
+      "interval": 1000,
+      "chance": 0.4,
+      "min": 100,
+      "max": 175,
+      "radius": 2,
+      "target": false,
+      "shootEffect": "smallearth"
+    },
+    {
+      "name": "speed",
+      "interval": 3000,
+      "chance": 0.4,
+      "min": 0,
+      "max": 0,
+      "target": true,
+      "speedChange": -900,
+      "duration": 20000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "physical": 10,
+    "holy": 25,
+    "fire": 25,
+    "energy": 25,
+    "ice": 25,
+    "death": 75
+  },
+  "immunities": {
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "People like you are the plague and I'll be the cure!",
+      "You all will pay for not helping me!",
+      "Cough! Cough!",
+      "Desolate! Everything is so desolate!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.4,
+      "name": "gold coin",
+      "min": 1,
+      "max": 25
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

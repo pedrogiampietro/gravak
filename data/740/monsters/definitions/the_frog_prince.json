@@ -1,0 +1,61 @@
+{
+  "creatureStatistics": {
+    "name": "The Frog Prince",
+    "health": 55,
+    "maxHealth": 55,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 320,
+    "attack": 1,
+    "attackSpeed": 2000,
+    "defense": 2,
+    "outfit": {
+      "id": 224
+    },
+    "armor": 3
+  },
+  "experience": 1,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1
+    }
+  ],
+  "elements": {
+    "earth": 80,
+    "energy": 90,
+    "ice": 90,
+    "fire": 90,
+    "physical": 98
+  },
+  "sayings": {
+    "texts": [
+      "Don't Kill me!!!",
+      "Have mercy!",
+      "Perhaps a kiss might release me!"
+    ],
+    "slowness": 1,
+    "chance": 0.02
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

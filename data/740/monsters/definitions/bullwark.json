@@ -1,0 +1,200 @@
+{
+  "creatureStatistics": {
+    "name": "Bullwark",
+    "health": 72000,
+    "maxHealth": 72000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 300,
+    "attack": 200,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 607
+    },
+    "armor": 30
+  },
+  "experience": 22000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.01,
+      "min": 4000,
+      "max": 6000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.11,
+      "speedChange": 660,
+      "duration": 7000,
+      "areaEffect": "blackspark"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 200
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.19,
+      "min": 200,
+      "max": 400,
+      "radius": 6,
+      "target": false,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "bleedcondition",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 400,
+      "max": 600,
+      "radius": 8,
+      "target": false,
+      "areaEffect": "iceattack"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.08,
+      "min": 250,
+      "max": 400,
+      "range": 7,
+      "radius": 6,
+      "target": true,
+      "shootEffect": "largerock",
+      "areaEffect": "stones"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.13,
+      "min": 200,
+      "max": 400,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "whirlwindclub",
+      "areaEffect": "explosion"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.06,
+      "min": 0,
+      "max": 0,
+      "length": 3,
+      "spread": 2,
+      "target": false,
+      "duration": 50000,
+      "areaEffect": "blackspark"
+    }
+  ],
+  "elements": {
+    "energy": 15,
+    "fire": 5,
+    "ice": 15,
+    "death": 10
+  },
+  "immunities": {
+    "earth": true,
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 23570,
+      "probability": 1,
+      "name": "giant pacifier"
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 200
+    },
+    {
+      "id": 7591,
+      "probability": 1,
+      "name": "great health potion",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 5878,
+      "probability": 1,
+      "name": "minotaur leather"
+    },
+    {
+      "id": 23571,
+      "probability": 1,
+      "name": "moohtant horn",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2671,
+      "probability": 0.5,
+      "name": "ham"
+    },
+    {
+      "id": 2666,
+      "probability": 0.5,
+      "name": "meat"
+    },
+    {
+      "id": 23537,
+      "probability": 0.5,
+      "name": "mooh'tah plate"
+    },
+    {
+      "id": 2150,
+      "probability": 0.5,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 9970,
+      "probability": 0.5,
+      "name": "small topaz",
+      "min": 1,
+      "max": 5
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

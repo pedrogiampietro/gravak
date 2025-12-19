@@ -1,0 +1,82 @@
+{
+  "creatureStatistics": {
+    "name": "Ghost Wolf",
+    "health": 160,
+    "maxHealth": 160,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 135,
+    "attack": 80,
+    "attackSpeed": 2000,
+    "defense": 8,
+    "outfit": {
+      "id": 730
+    },
+    "armor": 12
+  },
+  "experience": 65,
+  "corpse": 2826,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 20,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.2,
+      "duration": 5000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 80
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 30,
+      "max": 60,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "suddendeath",
+      "areaEffect": "mortarea"
+    }
+  ],
+  "elements": {
+    "holy": -5,
+    "fire": -5,
+    "earth": 10,
+    "death": 20,
+    "physical": 45
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.6932,
+      "name": "gold coin",
+      "min": 1,
+      "max": 20
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

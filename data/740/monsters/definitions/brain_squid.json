@@ -1,0 +1,225 @@
+{
+  "creatureStatistics": {
+    "name": "Brain Squid",
+    "health": 18000,
+    "maxHealth": 18000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 430,
+    "attack": 200,
+    "attackSpeed": 2000,
+    "defense": 78,
+    "outfit": {
+      "id": 1059
+    },
+    "armor": 78
+  },
+  "experience": 17672,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 200
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 200,
+      "max": 470,
+      "range": 7,
+      "shootEffect": "energy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.13,
+      "min": 200,
+      "max": 505,
+      "radius": 3,
+      "areaEffect": "energyarea"
+    }
+  ],
+  "elements": {
+    "energy": 100,
+    "holy": 100,
+    "death": -15
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 0.75181,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 18414,
+      "probability": 0.34219,
+      "name": "violet crystal shard",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 31226,
+      "probability": 0.23458,
+      "name": "glowing rune",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 26179,
+      "probability": 0.19056,
+      "name": "energy ball"
+    },
+    {
+      "id": 26172,
+      "probability": 0.1846,
+      "name": "instable proto matter"
+    },
+    {
+      "id": 26201,
+      "probability": 0.14994,
+      "name": "energy drink"
+    },
+    {
+      "id": 26191,
+      "probability": 0.1476,
+      "name": "energy bar"
+    },
+    {
+      "id": 26175,
+      "probability": 0.12399,
+      "name": "frozen lightning"
+    },
+    {
+      "id": 26029,
+      "probability": 0.11952,
+      "name": "ultimate mana potion"
+    },
+    {
+      "id": 31224,
+      "probability": 0.11059,
+      "name": "inkwell (black)"
+    },
+    {
+      "id": 26166,
+      "probability": 0.0772,
+      "name": "odd organ"
+    },
+    {
+      "id": 18418,
+      "probability": 0.07316,
+      "name": "blue crystal splinter"
+    },
+    {
+      "id": 2147,
+      "probability": 0.06104,
+      "name": "small ruby",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 7901,
+      "probability": 0.05168,
+      "name": "lightning headband",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2153,
+      "probability": 0.04679,
+      "name": "violet gem"
+    },
+    {
+      "id": 18419,
+      "probability": 0.0419,
+      "name": "cyan crystal fragment"
+    },
+    {
+      "id": 26189,
+      "probability": 0.02892,
+      "name": "ring of red plasma"
+    },
+    {
+      "id": 26187,
+      "probability": 0.02318,
+      "name": "ring of green plasma"
+    },
+    {
+      "id": 26185,
+      "probability": 0.02127,
+      "name": "ring of blue plasma"
+    },
+    {
+      "id": 2164,
+      "probability": 0.02084,
+      "name": "might ring"
+    },
+    {
+      "id": 7889,
+      "probability": 0.01893,
+      "name": "lightning pendant"
+    },
+    {
+      "id": 26200,
+      "probability": 0.01786,
+      "name": "collar of red plasma"
+    },
+    {
+      "id": 23565,
+      "probability": 0.01765,
+      "name": "slime heart"
+    },
+    {
+      "id": 26198,
+      "probability": 0.01361,
+      "name": "collar of blue plasma"
+    },
+    {
+      "id": 10580,
+      "probability": 0.01106,
+      "name": "piece of dead brain"
+    },
+    {
+      "id": 18390,
+      "probability": 0.01106,
+      "name": "wand of defiance"
+    },
+    {
+      "id": 26199,
+      "probability": 0.00681,
+      "name": "collar of green plasma"
+    },
+    {
+      "id": 11355,
+      "probability": 0.00489,
+      "name": "spellweaver's robe"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

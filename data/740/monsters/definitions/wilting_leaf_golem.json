@@ -1,0 +1,112 @@
+{
+  "creatureStatistics": {
+    "name": "Wilting Leaf Golem",
+    "health": 380,
+    "maxHealth": 380,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 145,
+    "attack": 120,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 573
+    },
+    "armor": 15
+  },
+  "experience": 145,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 120
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 50,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "largerock",
+      "areaEffect": "explosion"
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 150,
+      "max": 200,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "radius": 3,
+      "speedChange": -600,
+      "duration": 15000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "earth": 40,
+    "fire": -5,
+    "ice": -1
+  },
+  "sayings": {
+    "texts": [
+      "*crackle*",
+      "*swwwwishhhh*"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.9723,
+      "name": "gold coin",
+      "min": 1,
+      "max": 45
+    },
+    {
+      "id": 2149,
+      "probability": 0.0083,
+      "name": "small emerald"
+    },
+    {
+      "id": 2787,
+      "probability": 0.0486,
+      "name": "white mushroom",
+      "min": 1,
+      "max": 3
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": 1
+  }
+}

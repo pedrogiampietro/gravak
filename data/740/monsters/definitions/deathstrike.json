@@ -1,0 +1,109 @@
+{
+  "creatureStatistics": {
+    "name": "Deathstrike",
+    "health": 200000,
+    "maxHealth": 200000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 470,
+    "attack": 540,
+    "attackSpeed": 1300,
+    "defense": 35,
+    "outfit": {
+      "id": 500
+    },
+    "armor": 25
+  },
+  "experience": 40000,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 10000,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.25,
+      "min": 1000,
+      "max": 5500,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 1300,
+      "chance": 1,
+      "min": 0,
+      "max": 540
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -400,
+      "duration": 2500,
+      "shootEffect": "whirlwindaxe"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 1,
+      "min": 820,
+      "max": 950,
+      "range": 7,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "energy",
+      "interval": 1000,
+      "chance": 0.12,
+      "min": 350,
+      "max": 800,
+      "range": 3,
+      "target": true,
+      "areaEffect": "purpleenergy"
+    }
+  ],
+  "elements": {
+    "physical": 10,
+    "death": -20,
+    "energy": -20
+  },
+  "immunities": {
+    "outfit": true,
+    "fire": true,
+    "earth": true,
+    "drown": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Deeestructiooon!",
+      "Maaahhhrrr!",
+      "You are nothing!",
+      "Taaake ... this!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

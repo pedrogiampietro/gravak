@@ -1,0 +1,177 @@
+{
+  "creatureStatistics": {
+    "name": "Nightstalker",
+    "health": 700,
+    "maxHealth": 700,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 260,
+    "attack": 90,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 320
+    },
+    "armor": 15
+  },
+  "experience": 500,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 240,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.1,
+      "duration": 4000,
+      "areaEffect": "yellowbubble"
+    },
+    {
+      "name": "outfit",
+      "interval": 5000,
+      "chance": 0.1,
+      "duration": 4000
+    },
+    {
+      "name": "outfit",
+      "interval": 5000,
+      "chance": 0.1,
+      "duration": 4000
+    },
+    {
+      "name": "outfit",
+      "interval": 5000,
+      "chance": 0.1,
+      "duration": 4000
+    },
+    {
+      "name": "outfit",
+      "interval": 5000,
+      "chance": 0.1,
+      "duration": 4000
+    },
+    {
+      "name": "outfit",
+      "interval": 5000,
+      "chance": 0.1,
+      "duration": 4000
+    },
+    {
+      "name": "outfit",
+      "interval": 5000,
+      "chance": 0.01,
+      "duration": 4000
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 90
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 60,
+      "max": 170,
+      "range": 7,
+      "target": true,
+      "areaEffect": "holyarea"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "target": true,
+      "speedChange": -600,
+      "duration": 15000,
+      "areaEffect": "sleep"
+    }
+  ],
+  "elements": {
+    "physical": -5,
+    "energy": -5,
+    "death": -5,
+    "ice": 20,
+    "holy": 20
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "The sunlight is so depressing.",
+      "Come with me, my child.",
+      "I've been in the shadow under your bed last night.",
+      "You never know what hides in the night.",
+      "I remember your face - and I know where you sleep.",
+      "Only the sweetest and cruelest dreams for you, my love."
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2124,
+      "probability": 0.0103
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2171,
+      "probability": 0.00121,
+      "name": "platinum amulet"
+    },
+    {
+      "id": 2195,
+      "probability": 0.00121,
+      "name": "boots of haste"
+    },
+    {
+      "id": 2270,
+      "probability": 0.01612,
+      "name": "strong mana potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

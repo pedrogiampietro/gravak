@@ -3,61 +3,113 @@
     "name": "Skeleton",
     "health": 50,
     "maxHealth": 50,
-    "attack": 10,
     "mana": 0,
     "maxMana": 0,
-    "attackSlowness": 40,
-    "defense": 10,
-    "speed": 50,
+    "speed": 154,
+    "attack": 17,
+    "attackSpeed": 2000,
+    "defense": 2,
     "outfit": {
       "id": 33
-    }
+    },
+    "armor": 2
   },
-  "fluidType": 2,
   "experience": 35,
   "corpse": 2843,
+  "fluidType": 2,
   "behaviour": {
-    "type": "HOSTILE",
+    "type": 2,
     "fleeHealth": 0,
-    "openDoors": true,
+    "openDoors": false,
     "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 17
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 7,
+      "max": 13,
+      "range": 1
+    }
+  ],
+  "elements": {
+    "holy": -25
+  },
+  "immunities": {
+    "death": true,
+    "drown": true,
+    "lifedrain": true
   },
   "loot": [
     {
-      "id": 2229,
-      "probability": 1,
-      "min": 1,
-      "max": 1
-    },
-    {
       "id": 2230,
-      "probability": 1
-    },
-    {
-      "id": 2231,
-      "probability": 1
+      "probability": 0.50915,
+      "name": "bone"
     },
     {
       "id": 2148,
-      "probability": 1,
+      "probability": 0.44978,
+      "name": "gold coin",
       "min": 1,
-      "max": 7
+      "max": 10
+    },
+    {
+      "id": 2050,
+      "probability": 0.10285,
+      "name": "torch"
+    },
+    {
+      "id": 12437,
+      "probability": 0.10178,
+      "name": "pelvis bone"
     },
     {
       "id": 2473,
-      "probability": 0.5
+      "probability": 0.07687,
+      "name": "viking helmet"
+    },
+    {
+      "id": 2388,
+      "probability": 0.05375,
+      "name": "hatchet"
+    },
+    {
+      "id": 2398,
+      "probability": 0.04625,
+      "name": "mace"
+    },
+    {
+      "id": 2376,
+      "probability": 0.02107,
+      "name": "sword"
+    },
+    {
+      "id": 26642,
+      "probability": 0.02036,
+      "name": "heavy old tome"
+    },
+    {
+      "id": 2511,
+      "probability": 0.0092,
+      "name": "brass shield"
     }
   ],
-  "spells": [{
-    "id": 6,
-    "chance": 1,
-    "cooldown": 50
-  }],
-  "sayings": {
-    "texts": [
-      "Rattle!"
-    ],
-    "slowness": 300,
-    "chance": 0.75
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
   }
 }

@@ -1,0 +1,146 @@
+{
+  "creatureStatistics": {
+    "name": "Ghoul",
+    "health": 100,
+    "maxHealth": 100,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 144,
+    "attack": 70,
+    "attackSpeed": 2000,
+    "defense": 8,
+    "outfit": {
+      "id": 18
+    },
+    "armor": 8
+  },
+  "experience": 85,
+  "corpse": 2846,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.05,
+      "min": 9,
+      "max": 15,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 70
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 15,
+      "max": 27,
+      "range": 1,
+      "radius": 1,
+      "target": true,
+      "areaEffect": "smallclouds"
+    }
+  ],
+  "elements": {
+    "energy": 30,
+    "earth": 20,
+    "ice": 10,
+    "holy": -25
+  },
+  "immunities": {
+    "death": true,
+    "drown": true,
+    "lifedrain": true,
+    "drunk": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.69832,
+      "name": "gold coin",
+      "min": 1,
+      "max": 30
+    },
+    {
+      "id": 11208,
+      "probability": 0.14661,
+      "name": "rotten piece of cloth"
+    },
+    {
+      "id": 3976,
+      "probability": 0.09815,
+      "name": "worm",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2050,
+      "probability": 0.05171,
+      "name": "torch"
+    },
+    {
+      "id": 12423,
+      "probability": 0.05064,
+      "name": "ghoul snack"
+    },
+    {
+      "id": 26642,
+      "probability": 0.02066,
+      "name": "heavy old tome"
+    },
+    {
+      "id": 12440,
+      "probability": 0.01028,
+      "name": "pile of grave earth"
+    },
+    {
+      "id": 2483,
+      "probability": 0.01012,
+      "name": "scale armor"
+    },
+    {
+      "id": 2473,
+      "probability": 0.01012,
+      "name": "viking helmet"
+    },
+    {
+      "id": 5913,
+      "probability": 0.01001,
+      "name": "brown piece of cloth"
+    },
+    {
+      "id": 2229,
+      "probability": 0.0032,
+      "name": "skull (item)"
+    },
+    {
+      "id": 2168,
+      "probability": 0.00181,
+      "name": "life ring"
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

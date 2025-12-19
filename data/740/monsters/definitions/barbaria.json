@@ -1,0 +1,127 @@
+{
+  "creatureStatistics": {
+    "name": "Barbaria",
+    "health": 345,
+    "maxHealth": 345,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 280,
+    "attack": 70,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 264
+    },
+    "armor": 10
+  },
+  "experience": 355,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.25,
+      "min": 50,
+      "max": 80,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 70
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.34,
+      "min": 30,
+      "max": 80,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "snowball"
+    },
+    {
+      "name": "energy",
+      "interval": 3000,
+      "chance": 0.2,
+      "min": 35,
+      "max": 70,
+      "range": 7,
+      "shootEffect": "fire",
+      "areaEffect": "energy"
+    }
+  ],
+  "elements": {
+    "physical": -20,
+    "ice": 50,
+    "holy": 10,
+    "energy": 20,
+    "death": -5
+  },
+  "immunities": {
+    "lifedrain": true,
+    "paralyze": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "War Wolf",
+      "interval": 2000,
+      "chance": 0.4,
+      "maxSummons": 1
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "To me, creatures of the wild!",
+      "My instincts tell me about your cowardice."
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 1958,
+      "probability": 0.15
+    },
+    {
+      "id": 2050,
+      "probability": 0.25
+    },
+    {
+      "id": 2148,
+      "probability": 0.48,
+      "name": "gold coin",
+      "min": 1,
+      "max": 35
+    },
+    {
+      "id": 2464,
+      "probability": 0.11,
+      "name": "chain armor"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

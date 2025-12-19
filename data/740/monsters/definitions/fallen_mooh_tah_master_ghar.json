@@ -1,0 +1,110 @@
+{
+  "creatureStatistics": {
+    "name": "Fallen Mooh'tah Master Ghar",
+    "health": 7990,
+    "maxHealth": 7990,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 525,
+    "attackSpeed": 2000,
+    "defense": 33,
+    "outfit": {
+      "id": 29
+    },
+    "armor": 30
+  },
+  "experience": 4400,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 525
+    },
+    {
+      "name": "fire",
+      "interval": 6000,
+      "chance": 0.3,
+      "min": 80,
+      "max": 300,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 3000,
+      "chance": 0.45,
+      "min": 80,
+      "max": 400,
+      "radius": 5,
+      "target": true,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "death",
+      "interval": 4000,
+      "chance": 0.3,
+      "min": 80,
+      "max": 270,
+      "shootEffect": "death",
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 4500,
+      "chance": 0.4,
+      "min": 10,
+      "max": 200,
+      "range": 10,
+      "shootEffect": "poison"
+    },
+    {
+      "name": "earth",
+      "interval": 5000,
+      "chance": 0.3,
+      "min": 60,
+      "max": 300,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "poison"
+    }
+  ],
+  "elements": {
+    "fire": 60
+  },
+  "immunities": {
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "I will finish you!",
+      "You are no match for a master of the Mooh'Tha!",
+      "I might be fallen but you will fall before me!"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

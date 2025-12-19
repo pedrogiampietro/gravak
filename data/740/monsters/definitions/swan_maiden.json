@@ -1,0 +1,210 @@
+{
+  "creatureStatistics": {
+    "name": "Swan Maiden",
+    "health": 800,
+    "maxHealth": 800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 234,
+    "attack": 215,
+    "attackSpeed": 2000,
+    "defense": 54,
+    "outfit": {
+      "id": 138
+    },
+    "armor": 54
+  },
+  "experience": 700,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 85,
+      "max": 105,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 215
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 60,
+      "max": 115,
+      "range": 7,
+      "target": true,
+      "shootEffect": "energy",
+      "areaEffect": "energy"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.11,
+      "min": 82,
+      "max": 215,
+      "range": 7,
+      "target": true,
+      "shootEffect": "holy",
+      "areaEffect": "holyarea"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.11,
+      "min": 0,
+      "max": 0,
+      "radius": 6,
+      "speedChange": -450,
+      "duration": 5000,
+      "areaEffect": "faeexplosion"
+    }
+  ],
+  "elements": {
+    "physical": -10,
+    "earth": 30,
+    "fire": -10,
+    "holy": 30,
+    "death": 50
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "Nightmarish monster! This dream is not meant for you!",
+      "You won't steal my robe! Back off!",
+      "You are not allowed to lay eyes on me in this shape!",
+      "Are you stalking me? You will bitterly regret this!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.60417,
+      "name": "gold coin",
+      "min": 1,
+      "max": 90
+    },
+    {
+      "id": 28347,
+      "probability": 0.2053,
+      "name": "wild flowers"
+    },
+    {
+      "id": 28352,
+      "probability": 0.1446,
+      "name": "colourful snail shell"
+    },
+    {
+      "id": 2803,
+      "probability": 0.0525,
+      "name": "powder herb"
+    },
+    {
+      "id": 7590,
+      "probability": 0.03117,
+      "name": "great mana potion"
+    },
+    {
+      "id": 2134,
+      "probability": 0.02836,
+      "name": "silver brooch"
+    },
+    {
+      "id": 7761,
+      "probability": 0.02648,
+      "name": "small enchanted emerald",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 24850,
+      "probability": 0.01945,
+      "name": "opal",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2143,
+      "probability": 0.01828,
+      "name": "white pearl",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 27047,
+      "probability": 0.01664,
+      "name": "coral brooch"
+    },
+    {
+      "id": 2796,
+      "probability": 0.01312,
+      "name": "green mushroom"
+    },
+    {
+      "id": 2423,
+      "probability": 0.01172,
+      "name": "clerical mace"
+    },
+    {
+      "id": 2195,
+      "probability": 0.00867,
+      "name": "boots of haste"
+    },
+    {
+      "id": 7589,
+      "probability": 0.00797,
+      "name": "strong mana potion"
+    },
+    {
+      "id": 28354,
+      "probability": 0.00727,
+      "name": "butterfly ring"
+    },
+    {
+      "id": 8874,
+      "probability": 0.00469,
+      "name": "summer dress"
+    },
+    {
+      "id": 9927,
+      "probability": 0.00375,
+      "name": "flower wreath"
+    },
+    {
+      "id": 7387,
+      "probability": 0.00328,
+      "name": "diamond sceptre"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

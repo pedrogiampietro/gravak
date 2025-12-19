@@ -1,0 +1,69 @@
+{
+  "creatureStatistics": {
+    "name": "Tormented Ghost",
+    "health": 210,
+    "maxHealth": 210,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 160,
+    "attack": 100,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 48
+    },
+    "armor": 10
+  },
+  "experience": 5,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "name": "lifedrain",
+      "interval": 3000,
+      "chance": 0.15,
+      "min": 40,
+      "max": 70,
+      "range": 1
+    }
+  ],
+  "immunities": {
+    "earth": true,
+    "death": true,
+    "physical": true,
+    "lifedrain": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Haaahhh!",
+      "Grrglll"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

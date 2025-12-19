@@ -1,0 +1,54 @@
+{
+  "creatureStatistics": {
+    "name": "Cat",
+    "health": 20,
+    "maxHealth": 20,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 276
+    },
+    "armor": 5
+  },
+  "experience": 0,
+  "corpse": 2909,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 8,
+    "openDoors": false,
+    "senseInvisible": true
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Mew!",
+      "Meow!",
+      "Meow meow!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

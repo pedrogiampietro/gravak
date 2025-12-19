@@ -1,0 +1,80 @@
+{
+  "creatureStatistics": {
+    "name": "Evil Sheep",
+    "health": 350,
+    "maxHealth": 350,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 90,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 14
+    },
+    "armor": 30
+  },
+  "experience": 240,
+  "corpse": 2905,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 20,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 90
+    },
+    {
+      "name": "physical",
+      "interval": 4000,
+      "chance": 0.3,
+      "min": 0,
+      "max": 50,
+      "range": 7,
+      "target": true,
+      "shootEffect": "snowball"
+    }
+  ],
+  "elements": {
+    "fire": -10,
+    "ice": 20,
+    "physical": 20
+  },
+  "immunities": {
+    "lifedrain": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Grrrr"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 50
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

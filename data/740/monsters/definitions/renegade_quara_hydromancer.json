@@ -1,0 +1,185 @@
+{
+  "creatureStatistics": {
+    "name": "Renegade Quara Hydromancer",
+    "health": 2000,
+    "maxHealth": 2000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 490,
+    "attack": 90,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 47
+    },
+    "armor": 30
+  },
+  "experience": 1800,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 100,
+      "max": 120,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 90
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -350,
+      "duration": 15000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "energy": -25,
+    "earth": -10
+  },
+  "immunities": {
+    "fire": true,
+    "drown": true,
+    "ice": true,
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 0.80392,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 12444,
+      "probability": 0.17965,
+      "name": "quara eye"
+    },
+    {
+      "id": 2178,
+      "probability": 0.10599,
+      "name": "mind stone"
+    },
+    {
+      "id": 2149,
+      "probability": 0.07207,
+      "name": "small emerald",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2670,
+      "probability": 0.07101,
+      "name": "shrimp"
+    },
+    {
+      "id": 9970,
+      "probability": 0.06571,
+      "name": "small topaz",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7590,
+      "probability": 0.05776,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 8870,
+      "probability": 0.05193,
+      "name": "spirit cloak"
+    },
+    {
+      "id": 7591,
+      "probability": 0.0514,
+      "name": "great health potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 5910,
+      "probability": 0.03021,
+      "name": "green piece of cloth"
+    },
+    {
+      "id": 5914,
+      "probability": 0.02915,
+      "name": "yellow piece of cloth"
+    },
+    {
+      "id": 18415,
+      "probability": 0.02597,
+      "name": "green crystal shard"
+    },
+    {
+      "id": 2168,
+      "probability": 0.01961,
+      "name": "life ring"
+    },
+    {
+      "id": 5895,
+      "probability": 0.01272,
+      "name": "fish fin"
+    },
+    {
+      "id": 7632,
+      "probability": 0.01219,
+      "name": "giant shimmering pearl (green)"
+    },
+    {
+      "id": 2189,
+      "probability": 0.01113,
+      "name": "wand of cosmic energy"
+    },
+    {
+      "id": 2476,
+      "probability": 0.00689,
+      "name": "knight armor"
+    },
+    {
+      "id": 2155,
+      "probability": 0.0053,
+      "name": "green gem"
+    },
+    {
+      "id": 7632,
+      "probability": 0.00053,
+      "name": "giant shimmering pearl"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

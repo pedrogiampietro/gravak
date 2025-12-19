@@ -1,0 +1,73 @@
+{
+  "creatureStatistics": {
+    "name": "Bane Bringer",
+    "health": 2500,
+    "maxHealth": 2500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 260,
+    "attack": 150,
+    "attackSpeed": 2000,
+    "defense": 55,
+    "outfit": {
+      "id": 310
+    },
+    "armor": 50
+  },
+  "experience": 400,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 150
+    }
+  ],
+  "elements": {
+    "holy": -50,
+    "death": -90,
+    "fire": -80,
+    "energy": -80,
+    "ice": -80,
+    "earth": -80,
+    "physical": 10
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "You shall not succeed!",
+      "This time we will prevail!"
+    ],
+    "slowness": 5,
+    "chance": 0.3
+  },
+  "loot": [
+    {
+      "id": 2250,
+      "probability": 0.14285,
+      "min": 1,
+      "max": 96
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

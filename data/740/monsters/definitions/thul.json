@@ -1,0 +1,119 @@
+{
+  "creatureStatistics": {
+    "name": "Thul",
+    "health": 2950,
+    "maxHealth": 2950,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 520,
+    "attack": 1354,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 46
+    },
+    "armor": 15
+  },
+  "experience": 2700,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1354
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 0,
+      "max": 170,
+      "radius": 3,
+      "areaEffect": "blackspark"
+    },
+    {
+      "name": "poisonfield",
+      "interval": 2000,
+      "chance": 0.19,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 3,
+      "target": false,
+      "shootEffect": "poison"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.18,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -360,
+      "duration": 5000,
+      "shootEffect": "snowball"
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 108,
+      "max": 137,
+      "range": 7,
+      "target": true,
+      "shootEffect": "ice",
+      "areaEffect": "icearea"
+    }
+  ],
+  "elements": {
+    "energy": -15
+  },
+  "immunities": {
+    "lifedrain": true,
+    "ice": true,
+    "earth": true
+  },
+  "summons": [
+    {
+      "name": "Massive Water Elementals",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Gaaahhh!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 77
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

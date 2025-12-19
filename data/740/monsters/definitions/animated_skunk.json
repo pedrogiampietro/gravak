@@ -1,0 +1,66 @@
+{
+  "creatureStatistics": {
+    "name": "Animated Skunk",
+    "health": 20,
+    "maxHealth": 20,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 120,
+    "attack": 5,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 106
+    },
+    "armor": 30
+  },
+  "experience": 3,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 5
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 1,
+      "max": 3,
+      "range": 1,
+      "target": true
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 9114,
+      "probability": 0.04959,
+      "name": "bulb of garlic"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

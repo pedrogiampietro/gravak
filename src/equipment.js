@@ -521,15 +521,12 @@ Equipment.prototype.getTotalWeight = function () {
    */
 
   let totalWeight = 0;
-  console.log("=== DEBUG EQUIPMENT WEIGHT ===");
   this.container.__slots.forEach((slot, index) => {
     if (slot !== null) {
       let itemWeight = slot.getWeight();
-      console.log(`Slot ${index}: ID ${slot.id} - Weight: ${itemWeight}`);
       totalWeight += itemWeight;
     }
   });
-  console.log(`Total equipment weight: ${totalWeight}`);
   return totalWeight;
 };
 

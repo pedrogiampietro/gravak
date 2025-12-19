@@ -1,0 +1,82 @@
+{
+  "creatureStatistics": {
+    "name": "Angry Plant",
+    "health": 10000,
+    "maxHealth": 10000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 110,
+    "attack": 100,
+    "attackSpeed": 2000,
+    "defense": 22,
+    "outfit": {
+      "id": 120
+    },
+    "armor": 22
+  },
+  "experience": 150,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 60,
+      "max": 95,
+      "range": 7,
+      "shootEffect": "poison",
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -800,
+      "duration": 30000,
+      "shootEffect": "poison",
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 40,
+      "max": 130,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "poison"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "earth": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

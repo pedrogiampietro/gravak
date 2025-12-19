@@ -1,0 +1,175 @@
+{
+  "creatureStatistics": {
+    "name": "Witch",
+    "health": 300,
+    "maxHealth": 300,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 204,
+    "attack": 20,
+    "attackSpeed": 2000,
+    "defense": 8,
+    "outfit": {
+      "id": 54
+    },
+    "armor": 8
+  },
+  "experience": 120,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 30,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 20
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 30,
+      "max": 75,
+      "range": 7,
+      "shootEffect": "fire",
+      "areaEffect": "fire"
+    },
+    {
+      "name": "firefield",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "outfit",
+      "interval": 2000,
+      "chance": 0.01,
+      "min": 0,
+      "max": 0,
+      "range": 5,
+      "target": true,
+      "duration": 2000
+    }
+  ],
+  "elements": {
+    "earth": 20,
+    "death": -5,
+    "physical": -5
+  },
+  "immunities": {
+    "invisible": true,
+    "energy": true
+  },
+  "sayings": {
+    "texts": [
+      "Horax pokti!",
+      "Herba budinia ex!",
+      "Hihihihi!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.63913,
+      "name": "gold coin",
+      "min": 1,
+      "max": 40
+    },
+    {
+      "id": 2687,
+      "probability": 0.30001,
+      "name": "cookie",
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 2129,
+      "probability": 0.10121,
+      "name": "wolf tooth chain"
+    },
+    {
+      "id": 10569,
+      "probability": 0.10009,
+      "name": "witch broom"
+    },
+    {
+      "id": 2800,
+      "probability": 0.09005,
+      "name": "star herb"
+    },
+    {
+      "id": 2643,
+      "probability": 0.05017,
+      "name": "leather boots"
+    },
+    {
+      "id": 2654,
+      "probability": 0.04958,
+      "name": "cape"
+    },
+    {
+      "id": 2405,
+      "probability": 0.03892,
+      "name": "sickle"
+    },
+    {
+      "id": 2199,
+      "probability": 0.02515,
+      "name": "garlic necklace"
+    },
+    {
+      "id": 2651,
+      "probability": 0.02008,
+      "name": "coat"
+    },
+    {
+      "id": 2185,
+      "probability": 0.01085,
+      "name": "necrotic rod"
+    },
+    {
+      "id": 13537,
+      "probability": 0.00895,
+      "name": "bag of apple slices"
+    },
+    {
+      "id": 2402,
+      "probability": 0.00556,
+      "name": "silver dagger"
+    },
+    {
+      "id": 10570,
+      "probability": 0.0009,
+      "name": "witch hat"
+    },
+    {
+      "id": 11211,
+      "probability": 0.00006,
+      "name": "stuffed toad"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": 4
+  }
+}

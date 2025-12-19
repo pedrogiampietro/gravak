@@ -1,0 +1,106 @@
+{
+  "creatureStatistics": {
+    "name": "Quara Mantassin Scout",
+    "health": 220,
+    "maxHealth": 220,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 140,
+    "attack": 110,
+    "attackSpeed": 2000,
+    "defense": 7,
+    "outfit": {
+      "id": 72
+    },
+    "armor": 7
+  },
+  "experience": 100,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 110
+    }
+  ],
+  "elements": {
+    "energy": -10
+  },
+  "immunities": {
+    "ice": true,
+    "fire": true,
+    "invisible": true,
+    "lifedrain": true
+  },
+  "sayings": {
+    "texts": [
+      "Zuerk Pachak!",
+      "Shrrrr"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.93987,
+      "name": "gold coin",
+      "min": 1,
+      "max": 30
+    },
+    {
+      "id": 12445,
+      "probability": 0.07916,
+      "name": "mantassin tail"
+    },
+    {
+      "id": 2464,
+      "probability": 0.0499,
+      "name": "chain armor"
+    },
+    {
+      "id": 2146,
+      "probability": 0.00996,
+      "name": "small sapphire"
+    },
+    {
+      "id": 2229,
+      "probability": 0.00979,
+      "name": "skull (item)"
+    },
+    {
+      "id": 2377,
+      "probability": 0.00802,
+      "name": "two handed sword"
+    },
+    {
+      "id": 2165,
+      "probability": 0.00711,
+      "name": "stealth ring"
+    },
+    {
+      "id": 5895,
+      "probability": 0.00365,
+      "name": "fish fin"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

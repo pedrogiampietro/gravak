@@ -1,0 +1,114 @@
+{
+  "creatureStatistics": {
+    "name": "Barkless Fanatic",
+    "health": 3200,
+    "maxHealth": 3200,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 300,
+    "attack": 230,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 990
+    },
+    "armor": 30
+  },
+  "experience": 2500,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 230
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 220,
+      "max": 450,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "spear",
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 150,
+      "radius": 6,
+      "target": false,
+      "areaEffect": "greenbubble"
+    }
+  ],
+  "elements": {
+    "energy": 17,
+    "fire": 10,
+    "ice": 15,
+    "death": 15
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "PAIN PURIFIES! PAIN PURIFIES!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.50158,
+      "name": "gold coin",
+      "min": 1,
+      "max": 200
+    },
+    {
+      "id": 28398,
+      "probability": 0.09842,
+      "name": "fig leaf"
+    },
+    {
+      "id": 27617,
+      "probability": 0.04783,
+      "name": "tiger eye"
+    },
+    {
+      "id": 28399,
+      "probability": 0.0184,
+      "name": "bed of nails"
+    },
+    {
+      "id": 28400,
+      "probability": 0.01104,
+      "name": "torn shirt"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

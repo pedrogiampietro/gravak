@@ -1,0 +1,75 @@
+{
+  "creatureStatistics": {
+    "name": "Sir Nictros",
+    "health": 50000,
+    "maxHealth": 50000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 1222
+    },
+    "armor": 78
+  },
+  "experience": 55000,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.35,
+      "min": 350,
+      "max": 550,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "manadrain",
+      "interval": 1800,
+      "chance": 0.4,
+      "min": 300,
+      "max": 500,
+      "radius": 5,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "physical",
+      "interval": 1800,
+      "chance": 0.89,
+      "min": 400,
+      "max": 1000,
+      "length": 7,
+      "spread": 0,
+      "areaEffect": "redspark"
+    }
+  ],
+  "elements": {
+    "fire": 20
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

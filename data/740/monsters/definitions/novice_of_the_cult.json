@@ -1,0 +1,115 @@
+{
+  "creatureStatistics": {
+    "name": "Novice of the Cult",
+    "health": 285,
+    "maxHealth": 285,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 65,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 133
+    },
+    "armor": 15
+  },
+  "experience": 100,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 40,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 20,
+      "max": 40,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 65
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 20,
+      "max": 80,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "poison",
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "earth": 10,
+    "ice": 10,
+    "holy": 10,
+    "physical": -10,
+    "energy": -8,
+    "fire": -5,
+    "death": -8
+  },
+  "summons": [
+    {
+      "name": "Chicken",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 1
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Fear us!",
+      "You will not tell anyone what you have seen!",
+      "Your curiosity will be punished!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 1962,
+      "probability": 0.007
+    },
+    {
+      "id": 2145,
+      "probability": 0.0021,
+      "name": "small diamond"
+    },
+    {
+      "id": 2148,
+      "probability": 0.4338,
+      "name": "gold coin",
+      "min": 1,
+      "max": 40
+    },
+    {
+      "id": 6087,
+      "probability": 0.0097
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "creatureStatistics": {
+    "name": "Inky",
+    "health": 600,
+    "maxHealth": 600,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 520,
+    "attack": 741,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 46
+    },
+    "armor": 15
+  },
+  "experience": 250,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 741
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 87,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "blackspark"
+    },
+    {
+      "name": "poisonfield",
+      "interval": 2000,
+      "chance": 0.19,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 3,
+      "target": false,
+      "shootEffect": "poison"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.07,
+      "min": 56,
+      "max": 87,
+      "range": 7,
+      "target": true,
+      "shootEffect": "snowball"
+    },
+    {
+      "name": "energycondition",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 75,
+      "max": 75,
+      "range": 1,
+      "target": true,
+      "shootEffect": "energy"
+    }
+  ],
+  "elements": {
+    "energy": -15
+  },
+  "immunities": {
+    "lifedrain": true,
+    "ice": true,
+    "earth": true
+  },
+  "sayings": {
+    "texts": [
+      "Tssss!",
+      "Gaaahhh!",
+      "Gluh! Gluh!",
+      "Boohaa!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

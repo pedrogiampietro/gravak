@@ -1,0 +1,101 @@
+{
+  "creatureStatistics": {
+    "name": "Toad",
+    "health": 135,
+    "maxHealth": 135,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 30,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 222
+    },
+    "armor": 15
+  },
+  "experience": 60,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 10,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 200,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 30
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 8,
+      "max": 17,
+      "range": 7,
+      "shootEffect": "poison",
+      "areaEffect": "greenbubble"
+    }
+  ],
+  "elements": {
+    "earth": 20,
+    "ice": 20,
+    "fire": -10
+  },
+  "sayings": {
+    "texts": [
+      "Ribbit, ribbit!",
+      "Ribbit!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.8,
+      "name": "gold coin",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 2391,
+      "probability": 0.00148,
+      "name": "war hammer"
+    },
+    {
+      "id": 2398,
+      "probability": 0.02854,
+      "name": "mace"
+    },
+    {
+      "id": 2667,
+      "probability": 0.2
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

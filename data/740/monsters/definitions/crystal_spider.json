@@ -1,0 +1,206 @@
+{
+  "creatureStatistics": {
+    "name": "Crystal Spider",
+    "health": 1250,
+    "maxHealth": 1250,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 250,
+    "attackSpeed": 2000,
+    "defense": 43,
+    "outfit": {
+      "id": 263
+    },
+    "armor": 43
+  },
+  "experience": 900,
+  "corpse": 2807,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 250,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 250
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 6,
+      "target": false,
+      "speedChange": -800,
+      "duration": 15000,
+      "areaEffect": "poff"
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 50,
+      "max": 100,
+      "range": 7,
+      "target": true,
+      "shootEffect": "ice",
+      "areaEffect": "icearea"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "target": true,
+      "speedChange": -600,
+      "duration": 10000,
+      "shootEffect": "snowball"
+    }
+  ],
+  "elements": {
+    "earth": 20,
+    "energy": -20
+  },
+  "immunities": {
+    "fire": true,
+    "ice": true,
+    "paralyze": true,
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Screeech!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 197
+    },
+    {
+      "id": 7589,
+      "probability": 0.14973,
+      "name": "strong mana potion"
+    },
+    {
+      "id": 2463,
+      "probability": 0.09929,
+      "name": "plate armor"
+    },
+    {
+      "id": 7364,
+      "probability": 0.05874,
+      "name": "sniper arrow",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 3351,
+      "probability": 0.05164,
+      "name": "steel helmet"
+    },
+    {
+      "id": 7441,
+      "probability": 0.04906,
+      "name": "ice cube"
+    },
+    {
+      "id": 7449,
+      "probability": 0.02517,
+      "name": "crystal sword"
+    },
+    {
+      "id": 5879,
+      "probability": 0.01983,
+      "name": "spider silk"
+    },
+    {
+      "id": 2125,
+      "probability": 0.0164,
+      "name": "crystal necklace"
+    },
+    {
+      "id": 2124,
+      "probability": 0.01587,
+      "name": "crystal ring"
+    },
+    {
+      "id": 2169,
+      "probability": 0.01485,
+      "name": "time ring"
+    },
+    {
+      "id": 2477,
+      "probability": 0.00747,
+      "name": "knight legs"
+    },
+    {
+      "id": 7290,
+      "probability": 0.00717,
+      "name": "shard"
+    },
+    {
+      "id": 7902,
+      "probability": 0.00664,
+      "name": "glacier mask"
+    },
+    {
+      "id": 2476,
+      "probability": 0.00559,
+      "name": "knight armor"
+    },
+    {
+      "id": 7437,
+      "probability": 0.00142,
+      "name": "sapphire hammer"
+    },
+    {
+      "id": 2171,
+      "probability": 0.00123,
+      "name": "platinum amulet"
+    },
+    {
+      "id": 5801,
+      "probability": 0.00083,
+      "name": "jewelled backpack"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

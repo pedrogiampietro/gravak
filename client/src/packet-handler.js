@@ -385,6 +385,26 @@ PacketHandler.prototype.handleAdvanceLevel = function () {
 
 }
 
+PacketHandler.prototype.handleDeath = function () {
+
+  /*
+   * Function PacketHandler.handleDeath
+   * Handles the death packet
+   */
+
+  console.log("=== DEATH PACKET RECEIVED ===");
+
+  // Set the death state to block all input
+  if (gameClient.player) {
+    gameClient.player.isDead = true;
+    console.log("Player isDead set to true");
+  }
+
+  console.log("Opening death modal...");
+  gameClient.interface.modalManager.open("death-modal");
+
+}
+
 PacketHandler.prototype.handleServerError = function (message) {
 
   return gameClient.interface.modalManager.open("floater-connecting", message);
@@ -760,8 +780,8 @@ PacketHandler.prototype.handleEntityRemove = function (id) {
     return
   }
 
-  // Never dereference self
-  if (gameClient.isSelf(creature)) {
+  // Never dereference self UNLESS we are dead (death removes the visual sprite)
+  if (gameClient.isSelf(creature) && !gameClient.player.isDead) {
     return;
   }
 

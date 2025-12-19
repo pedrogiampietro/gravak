@@ -1,0 +1,176 @@
+{
+  "creatureStatistics": {
+    "name": "Tanjis",
+    "health": 30000,
+    "maxHealth": 30000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 560,
+    "attack": 600,
+    "attackSpeed": 2000,
+    "defense": 40,
+    "outfit": {
+      "id": 446
+    },
+    "armor": 40
+  },
+  "experience": 15000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 60,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 3000,
+      "chance": 0.4,
+      "min": 800,
+      "max": 1100,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 600
+    },
+    {
+      "name": "manadrain",
+      "interval": 2500,
+      "chance": 0.2,
+      "min": 200,
+      "max": 600,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "poison",
+      "areaEffect": "carniphila"
+    },
+    {
+      "name": "ice",
+      "interval": 3500,
+      "chance": 0.27,
+      "min": 200,
+      "max": 400,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "ice",
+      "areaEffect": "icearea"
+    },
+    {
+      "name": "ice",
+      "interval": 3500,
+      "chance": 0.15,
+      "min": 100,
+      "max": 400,
+      "range": 1,
+      "radius": 1,
+      "target": true
+    },
+    {
+      "name": "drown",
+      "interval": 2300,
+      "chance": 0.11,
+      "min": 200,
+      "max": 500,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "ice",
+      "areaEffect": "watersplash"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2300,
+      "chance": 0.14,
+      "min": 200,
+      "max": 600,
+      "range": 7,
+      "radius": 7,
+      "target": false,
+      "areaEffect": "bubbles"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 100,
+      "max": 400,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "largerock"
+    },
+    {
+      "name": "death",
+      "interval": 1200,
+      "chance": 0.07,
+      "min": 300,
+      "max": 800,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "smallclouds"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.14,
+      "min": 200,
+      "max": 500,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "purpleenergy"
+    },
+    {
+      "name": "speed",
+      "interval": 2150,
+      "chance": 0.16,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "speedChange": -600,
+      "duration": 15000
+    }
+  ],
+  "elements": {
+    "earth": -20,
+    "energy": -20,
+    "physical": -20,
+    "death": -20
+  },
+  "immunities": {
+    "ice": true,
+    "paralyze": true,
+    "drown": true,
+    "fire": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "JAUL QJELL, JAKNH JEH KENH!!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

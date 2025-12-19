@@ -1,0 +1,111 @@
+{
+  "creatureStatistics": {
+    "name": "The First Dragon",
+    "health": 50000,
+    "maxHealth": 50000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 350,
+    "attack": 1200,
+    "attackSpeed": 2000,
+    "defense": 64,
+    "outfit": {
+      "id": 947
+    },
+    "armor": 52
+  },
+  "experience": 9000,
+  "corpse": 2844,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 1500,
+      "max": 4500,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 1200
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 410,
+      "max": 695,
+      "range": 5,
+      "radius": 5,
+      "target": true,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "radius": 7,
+      "speedChange": -600,
+      "duration": 10000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 1010,
+      "max": 1995,
+      "length": 9,
+      "spread": 3,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 410,
+      "max": 595,
+      "radius": 7,
+      "areaEffect": "fire"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 150,
+      "max": 280,
+      "radius": 6,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "immunities": {
+    "drown": true,
+    "lifedrain": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

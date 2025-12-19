@@ -1,0 +1,66 @@
+{
+  "creatureStatistics": {
+    "name": "Necromancer Servant",
+    "health": 600,
+    "maxHealth": 600,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 45,
+    "attackSpeed": 2000,
+    "defense": 11,
+    "outfit": {
+      "id": 9
+    },
+    "armor": 11
+  },
+  "experience": 590,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 10,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 45
+    },
+    {
+      "name": "physical",
+      "interval": 1000,
+      "chance": 0.1,
+      "min": 5,
+      "max": 40,
+      "range": 7,
+      "shootEffect": "throwingknife"
+    }
+  ],
+  "elements": {
+    "physical": -8,
+    "death": -7
+  },
+  "sayings": {
+    "texts": [
+      "Blib!",
+      "Blub!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": 4
+  }
+}

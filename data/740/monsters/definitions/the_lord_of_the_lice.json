@@ -1,0 +1,149 @@
+{
+  "creatureStatistics": {
+    "name": "The Lord Of The Lice",
+    "health": 80000,
+    "maxHealth": 80000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 200,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 305
+    },
+    "armor": 30
+  },
+  "experience": 600,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 250,
+      "max": 550,
+      "areaEffect": "greenspark"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 200
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 120,
+      "max": 310,
+      "range": 7,
+      "shootEffect": "poison",
+      "areaEffect": "poison"
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.22,
+      "min": 1000,
+      "max": 1800,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 80,
+      "max": 80,
+      "radius": 3,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 300,
+      "max": 420,
+      "range": 7,
+      "radius": 7,
+      "target": false,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 7590,
+      "probability": 1,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 16
+    },
+    {
+      "id": 8472,
+      "probability": 1,
+      "name": "great spirit potion",
+      "min": 1,
+      "max": 17
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 16
+    },
+    {
+      "id": 8473,
+      "probability": 1,
+      "name": "ultimate health potion",
+      "min": 1,
+      "max": 13
+    },
+    {
+      "id": 2150,
+      "probability": 0.66667,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 12
+    },
+    {
+      "id": 2168,
+      "probability": 0.33333,
+      "name": "life ring"
+    },
+    {
+      "id": 2147,
+      "probability": 0.33333,
+      "name": "small ruby",
+      "min": 1,
+      "max": 7
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

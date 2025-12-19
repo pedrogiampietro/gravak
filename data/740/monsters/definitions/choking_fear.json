@@ -1,0 +1,181 @@
+{
+  "creatureStatistics": {
+    "name": "Choking Fear",
+    "health": 5800,
+    "maxHealth": 5800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 260,
+    "attack": 499,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 586
+    },
+    "armor": 35
+  },
+  "experience": 4700,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 80,
+      "max": 150,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 499
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 700,
+      "max": 900,
+      "length": 5,
+      "spread": 3,
+      "target": false,
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 300,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "explosion",
+      "areaEffect": "sleep"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "radius": 1,
+      "target": true,
+      "speedChange": -800,
+      "duration": 15000,
+      "shootEffect": "explosion",
+      "areaEffect": "sleep"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 130,
+      "max": 300,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "rednote"
+    },
+    {
+      "name": "choking fear drown",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 250,
+      "max": 500,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "suddendeath",
+      "areaEffect": "mortarea"
+    }
+  ],
+  "elements": {
+    "ice": 10,
+    "energy": 15,
+    "death": 50,
+    "physical": 10
+  },
+  "immunities": {
+    "earth": true,
+    "fire": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Ah, sweet air... don't you miss it?",
+      "Murr tat muuza!",
+      "kchh"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 2167,
+      "probability": 0.03,
+      "name": "energy ring"
+    },
+    {
+      "id": 2168,
+      "probability": 0.042,
+      "name": "life ring"
+    },
+    {
+      "id": 2214,
+      "probability": 0.03,
+      "name": "ring of healing"
+    },
+    {
+      "id": 2515,
+      "probability": 0.0154,
+      "name": "guardian shield"
+    },
+    {
+      "id": 2273,
+      "probability": 0.2,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 3
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "creatureStatistics": {
+    "name": "Blood Hand",
+    "health": 700,
+    "maxHealth": 700,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 158,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 552
+    },
+    "armor": 25
+  },
+  "experience": 750,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 70,
+      "max": 90,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "effect",
+      "interval": 2000,
+      "chance": 0.1,
+      "areaEffect": "insects"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 158
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 50,
+      "max": 100,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "radius": 4,
+      "target": true,
+      "speedChange": -600,
+      "duration": 15000,
+      "areaEffect": "yellowspark"
+    },
+    {
+      "name": "bleedcondition",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 120,
+      "max": 160,
+      "radius": 6,
+      "target": false,
+      "areaEffect": "blackspark"
+    }
+  ],
+  "elements": {
+    "energy": 5,
+    "ice": 5,
+    "death": 5,
+    "fire": -10,
+    "holy": -5
+  },
+  "immunities": {
+    "invisible": true,
+    "earth": true,
+    "drown": true
+  },
+  "sayings": {
+    "texts": [
+      "Blood for the dark god!",
+      "Die, filth!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 30
+    },
+    {
+      "id": 2195,
+      "probability": 0.0021,
+      "name": "boots of haste"
+    },
+    {
+      "id": 2436,
+      "probability": 0.0013,
+      "name": "skull staff"
+    },
+    {
+      "id": 2270,
+      "probability": 0.0559,
+      "name": "strong mana potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

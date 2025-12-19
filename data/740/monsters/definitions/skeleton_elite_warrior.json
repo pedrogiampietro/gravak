@@ -1,0 +1,153 @@
+{
+  "creatureStatistics": {
+    "name": "Skeleton Elite Warrior",
+    "health": 7800,
+    "maxHealth": 7800,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 310,
+    "attack": 300,
+    "attackSpeed": 2000,
+    "defense": 75,
+    "outfit": {
+      "id": 298
+    },
+    "armor": 75
+  },
+  "experience": 4500,
+  "corpse": 2843,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 300
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 300,
+      "max": 450,
+      "range": 1,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "physical",
+      "interval": 1500,
+      "chance": 0.2,
+      "min": 300,
+      "max": 450,
+      "range": 7,
+      "shootEffect": "suddendeath",
+      "areaEffect": "mortarea"
+    }
+  ],
+  "elements": {
+    "energy": -5,
+    "earth": 5,
+    "fire": -5,
+    "holy": -25,
+    "death": 100
+  },
+  "immunities": {
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 15
+    },
+    {
+      "id": 2230,
+      "probability": 0.50151,
+      "name": "bone"
+    },
+    {
+      "id": 5944,
+      "probability": 0.25629,
+      "name": "soul orb",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2787,
+      "probability": 0.25056,
+      "name": "white mushroom"
+    },
+    {
+      "id": 12437,
+      "probability": 0.15664,
+      "name": "pelvis bone",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 11233,
+      "probability": 0.10236,
+      "name": "unholy bone"
+    },
+    {
+      "id": 2430,
+      "probability": 0.06208,
+      "name": "knight axe"
+    },
+    {
+      "id": 7381,
+      "probability": 0.05134,
+      "name": "mammoth whopper"
+    },
+    {
+      "id": 27036,
+      "probability": 0.05022,
+      "name": "bone toothpick"
+    },
+    {
+      "id": 5741,
+      "probability": 0.03152,
+      "name": "skull helmet"
+    },
+    {
+      "id": 2789,
+      "probability": 0.0195,
+      "name": "brown mushroom"
+    },
+    {
+      "id": 2376,
+      "probability": 0.0195,
+      "name": "sword"
+    },
+    {
+      "id": 2398,
+      "probability": 0.01862,
+      "name": "mace"
+    },
+    {
+      "id": 6553,
+      "probability": 0.00374,
+      "name": "ruthless axe"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

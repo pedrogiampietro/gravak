@@ -1,0 +1,164 @@
+{
+  "creatureStatistics": {
+    "name": "Askarak Demon",
+    "health": 1500,
+    "maxHealth": 1500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 143,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 420
+    },
+    "armor": 15
+  },
+  "experience": 900,
+  "corpse": 2916,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 143
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 20,
+      "max": 60,
+      "range": 7,
+      "radius": 6,
+      "target": false,
+      "shootEffect": "poison",
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 75,
+      "max": 140,
+      "length": 4,
+      "spread": 3,
+      "target": false,
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 130,
+      "max": 170,
+      "length": 4,
+      "spread": 0,
+      "target": false,
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "radius": 1,
+      "target": true,
+      "speedChange": -600,
+      "duration": 15000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "energy": 50,
+    "ice": 50,
+    "fire": -30
+  },
+  "immunities": {
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "POWER TO THE ASKARAK!",
+      "GREEN WILL RULE!",
+      "GREEN IS MEAN!",
+      "ONLY WE ARE TRUE DEMONS!",
+      "RED IS MAD"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.4,
+      "name": "gold coin",
+      "min": 1,
+      "max": 35
+    },
+    {
+      "id": 2149,
+      "probability": 0.0625,
+      "name": "small emerald",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2167,
+      "probability": 0.00961,
+      "name": "energy ring"
+    },
+    {
+      "id": 2789,
+      "probability": 0.03846,
+      "name": "brown mushroom",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2271,
+      "probability": 0.05263,
+      "name": "strong health potion"
+    },
+    {
+      "id": 2270,
+      "probability": 0.05263,
+      "name": "strong mana potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

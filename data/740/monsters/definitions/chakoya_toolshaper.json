@@ -1,0 +1,136 @@
+{
+  "creatureStatistics": {
+    "name": "Chakoya Toolshaper",
+    "health": 80,
+    "maxHealth": 80,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 136,
+    "attack": 35,
+    "attackSpeed": 2000,
+    "defense": 7,
+    "outfit": {
+      "id": 259
+    },
+    "armor": 7
+  },
+  "experience": 40,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 35
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 45,
+      "range": 7,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "smallstone"
+    }
+  ],
+  "elements": {
+    "energy": -15,
+    "fire": 40,
+    "holy": 10,
+    "death": -5
+  },
+  "immunities": {
+    "ice": true
+  },
+  "sayings": {
+    "texts": [
+      "Chikuva!!",
+      "Jinuma jamjam!",
+      "Suvituka siq chuqua!",
+      "Kiyosa sipaju!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.78354,
+      "name": "gold coin",
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": 2667,
+      "probability": 0.25021,
+      "name": "fish",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2398,
+      "probability": 0.05209,
+      "name": "mace"
+    },
+    {
+      "id": 3456,
+      "probability": 0.01016,
+      "name": "pick"
+    },
+    {
+      "id": 2541,
+      "probability": 0.00874,
+      "name": "bone shield"
+    },
+    {
+      "id": 22727,
+      "probability": 0.00461,
+      "name": "fireproof horn"
+    },
+    {
+      "id": 7441,
+      "probability": 0.00404,
+      "name": "ice cube"
+    },
+    {
+      "id": 7381,
+      "probability": 0.00179,
+      "name": "mammoth whopper"
+    },
+    {
+      "id": 7158,
+      "probability": 0.00122,
+      "name": "rainbow trout"
+    },
+    {
+      "id": 7159,
+      "probability": 0.00075,
+      "name": "green perch"
+    },
+    {
+      "id": 2669,
+      "probability": 0.00066,
+      "name": "northern pike"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

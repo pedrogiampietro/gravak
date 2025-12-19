@@ -1,0 +1,266 @@
+{
+  "creatureStatistics": {
+    "name": "Terofar",
+    "health": 40000,
+    "maxHealth": 40000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 440,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 65,
+    "outfit": {
+      "id": 12
+    },
+    "armor": 55
+  },
+  "experience": 24000,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 300,
+      "max": 500,
+      "areaEffect": "redspark"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.18,
+      "speedChange": 784,
+      "duration": 7000,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 700,
+      "max": 1500,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "smallclouds"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.18,
+      "min": 0,
+      "max": 750,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "whirlwindaxe"
+    }
+  ],
+  "elements": {
+    "physical": 50,
+    "death": 50,
+    "energy": 50,
+    "fire": 50,
+    "ice": 50,
+    "holy": 50
+  },
+  "immunities": {
+    "poison": true,
+    "lifedrain": true,
+    "paralyze": true,
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "IT TOOK AN ARMY OF YOUR KIND TO DEFEAT THE WARDEN. NOW YOU ARE ALONE!",
+      "FEELS GOOD TO BE BACK IN ACTION!",
+      "THE WARDS ARE FAILING! MY ESCAPE IS ONLY A MATTER OF TIME!!",
+      "Terofar cast a greater death curse on you!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 22396,
+      "probability": 1
+    },
+    {
+      "id": 22598,
+      "probability": 1
+    },
+    {
+      "id": 22397,
+      "probability": 1
+    },
+    {
+      "id": 6500,
+      "probability": 1
+    },
+    {
+      "id": 5954,
+      "probability": 1
+    },
+    {
+      "id": 22610,
+      "probability": 0.0356
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "min": 1,
+      "max": 50
+    },
+    {
+      "id": 7590,
+      "probability": 0.3333,
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 8473,
+      "probability": 0.0389,
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 8472,
+      "probability": 0.0278,
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 18413,
+      "probability": 0.2222,
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 18414,
+      "probability": 0.3333,
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 18415,
+      "probability": 0.4444,
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 9971,
+      "probability": 0.1667
+    },
+    {
+      "id": 7632,
+      "probability": 0.3889
+    },
+    {
+      "id": 7633,
+      "probability": 0.3889
+    },
+    {
+      "id": 2520,
+      "probability": 0.1111
+    },
+    {
+      "id": 2515,
+      "probability": 0.2222
+    },
+    {
+      "id": 2519,
+      "probability": 0.1111
+    },
+    {
+      "id": 2514,
+      "probability": 0.0096
+    },
+    {
+      "id": 8891,
+      "probability": 0.0556
+    },
+    {
+      "id": 8879,
+      "probability": 0.1111
+    },
+    {
+      "id": 8877,
+      "probability": 0.0611
+    },
+    {
+      "id": 2155,
+      "probability": 0.1667
+    },
+    {
+      "id": 2158,
+      "probability": 0.1111
+    },
+    {
+      "id": 8882,
+      "probability": 0.0041
+    },
+    {
+      "id": 2472,
+      "probability": 0.0061
+    },
+    {
+      "id": 2645,
+      "probability": 0.0091
+    },
+    {
+      "id": 2498,
+      "probability": 0.0091
+    },
+    {
+      "id": 7886,
+      "probability": 0.0291
+    },
+    {
+      "id": 2195,
+      "probability": 0.0191
+    },
+    {
+      "id": 5741,
+      "probability": 0.0191
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

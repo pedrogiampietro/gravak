@@ -1,0 +1,70 @@
+{
+  "creatureStatistics": {
+    "name": "An Astral Glyph",
+    "health": 50000,
+    "maxHealth": 50000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 470,
+    "attack": 780,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 0
+    },
+    "armor": 10
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 4,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 780
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 200,
+      "max": 400,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "yellowspark"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 200,
+      "max": 400,
+      "radius": 5,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "immunities": {
+    "energy": true,
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

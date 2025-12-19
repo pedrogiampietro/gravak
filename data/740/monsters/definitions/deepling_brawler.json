@@ -1,0 +1,81 @@
+{
+  "creatureStatistics": {
+    "name": "Deepling Brawler",
+    "health": 380,
+    "maxHealth": 380,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 100,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 470
+    },
+    "armor": 15
+  },
+  "experience": 260,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 40,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "name": "drown",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 60,
+      "max": 120,
+      "range": 7,
+      "target": true,
+      "shootEffect": "spear",
+      "areaEffect": "bluebubble"
+    }
+  ],
+  "elements": {
+    "energy": -10,
+    "earth": -1
+  },
+  "immunities": {
+    "invisible": true,
+    "paralyze": true,
+    "drown": true,
+    "fire": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.61,
+      "name": "gold coin",
+      "min": 1,
+      "max": 44
+    },
+    {
+      "id": 2667,
+      "probability": 0.1912,
+      "min": 1,
+      "max": 3
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

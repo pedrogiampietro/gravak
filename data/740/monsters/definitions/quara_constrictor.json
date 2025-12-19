@@ -1,0 +1,141 @@
+{
+  "creatureStatistics": {
+    "name": "Quara Constrictor",
+    "health": 450,
+    "maxHealth": 450,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 380,
+    "attack": 150,
+    "attackSpeed": 2000,
+    "defense": 14,
+    "outfit": {
+      "id": 46
+    },
+    "armor": 14
+  },
+  "experience": 250,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 30,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 150
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 50,
+      "max": 90,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "blackspark"
+    },
+    {
+      "name": "quara constrictor freeze",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 40,
+      "max": 70,
+      "range": 7,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "iceattack"
+    },
+    {
+      "name": "quara constrictor electrify",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 1
+    }
+  ],
+  "elements": {
+    "earth": -10,
+    "energy": -25
+  },
+  "immunities": {
+    "lifedrain": true,
+    "paralyze": true,
+    "drown": true,
+    "fire": true,
+    "ice": true
+  },
+  "sayings": {
+    "texts": [
+      "Gaaahhh!",
+      "Gluh! Gluh!",
+      "Tssss!",
+      "Boohaa!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.87662,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 12443,
+      "probability": 0.14598,
+      "name": "quara tentacle"
+    },
+    {
+      "id": 2397,
+      "probability": 0.06951,
+      "name": "longsword"
+    },
+    {
+      "id": 2670,
+      "probability": 0.05169,
+      "name": "shrimp"
+    },
+    {
+      "id": 2465,
+      "probability": 0.04804,
+      "name": "brass armor"
+    },
+    {
+      "id": 2150,
+      "probability": 0.03042,
+      "name": "small amethyst"
+    },
+    {
+      "id": 5895,
+      "probability": 0.00484,
+      "name": "fish fin"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

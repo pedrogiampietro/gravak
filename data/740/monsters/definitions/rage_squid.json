@@ -1,0 +1,250 @@
+{
+  "creatureStatistics": {
+    "name": "Rage Squid",
+    "health": 17000,
+    "maxHealth": 17000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 430,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 78,
+    "outfit": {
+      "id": 1059
+    },
+    "armor": 78
+  },
+  "experience": 14820,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 700,
+      "max": 100,
+      "radius": 2,
+      "target": false,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 500,
+      "max": 700,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "explosion"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 500,
+      "max": 700,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "fire"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 175,
+      "max": 200,
+      "length": 5,
+      "spread": 0,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "fire": 100,
+    "ice": -15
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 0.74842,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 29
+    },
+    {
+      "id": 8473,
+      "probability": 0.29792,
+      "name": "ultimate health potion",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 7590,
+      "probability": 0.19273,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 8472,
+      "probability": 0.18852,
+      "name": "great spirit potion",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 31226,
+      "probability": 0.18569,
+      "name": "glowing rune",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2795,
+      "probability": 0.15069,
+      "name": "fire mushroom",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 31224,
+      "probability": 0.11465,
+      "name": "inkwell (black)"
+    },
+    {
+      "id": 9970,
+      "probability": 0.07839,
+      "name": "small topaz",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2149,
+      "probability": 0.07608,
+      "name": "small emerald",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2147,
+      "probability": 0.07325,
+      "name": "small ruby",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 6500,
+      "probability": 0.07177,
+      "name": "demonic essence"
+    },
+    {
+      "id": 2150,
+      "probability": 0.07104,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2432,
+      "probability": 0.05906,
+      "name": "fire axe"
+    },
+    {
+      "id": 23565,
+      "probability": 0.02711,
+      "name": "slime heart"
+    },
+    {
+      "id": 2151,
+      "probability": 0.02606,
+      "name": "talon"
+    },
+    {
+      "id": 2393,
+      "probability": 0.02312,
+      "name": "giant sword"
+    },
+    {
+      "id": 2156,
+      "probability": 0.02207,
+      "name": "red gem"
+    },
+    {
+      "id": 2176,
+      "probability": 0.02154,
+      "name": "orb"
+    },
+    {
+      "id": 2171,
+      "probability": 0.02028,
+      "name": "platinum amulet"
+    },
+    {
+      "id": 2520,
+      "probability": 0.02018,
+      "name": "demon shield"
+    },
+    {
+      "id": 2164,
+      "probability": 0.01692,
+      "name": "might ring"
+    },
+    {
+      "id": 7382,
+      "probability": 0.01503,
+      "name": "demonrage sword"
+    },
+    {
+      "id": 10580,
+      "probability": 0.00988,
+      "name": "piece of dead brain"
+    },
+    {
+      "id": 1982,
+      "probability": 0.00893,
+      "name": "purple tome"
+    },
+    {
+      "id": 2462,
+      "probability": 0.00799,
+      "name": "devil helmet"
+    },
+    {
+      "id": 2472,
+      "probability": 0.00357,
+      "name": "magic plate armor"
+    },
+    {
+      "id": 18409,
+      "probability": 0.00221,
+      "name": "wand of everblazing"
+    },
+    {
+      "id": 7393,
+      "probability": 0.00053,
+      "name": "demon trophy"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "creatureStatistics": {
+    "name": "Iron Servant",
+    "health": 350,
+    "maxHealth": 350,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 45,
+    "attackSpeed": 2000,
+    "defense": 17,
+    "outfit": {
+      "id": 395
+    },
+    "armor": 17
+  },
+  "experience": 210,
+  "corpse": 2813,
+  "fluidType": 4,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 50,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 45
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 60,
+      "range": 7,
+      "shootEffect": "smallstone",
+      "areaEffect": "explosionarea"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "target": true,
+      "duration": 2000,
+      "shootEffect": "explosion",
+      "areaEffect": "stun"
+    }
+  ],
+  "elements": {
+    "energy": 25,
+    "earth": -10,
+    "fire": 25,
+    "holy": 20,
+    "death": -10
+  },
+  "immunities": {
+    "invisible": true,
+    "paralyze": true
+  },
+  "sayings": {
+    "texts": [
+      "Error. LOAD 'PROGRAM',8,1",
+      "Remain. Obedient."
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.82109,
+      "name": "gold coin",
+      "min": 1,
+      "max": 55
+    },
+    {
+      "id": 9690,
+      "probability": 0.04825,
+      "name": "gear wheel"
+    },
+    {
+      "id": 7618,
+      "probability": 0.01964,
+      "name": "health potion"
+    },
+    {
+      "id": 2381,
+      "probability": 0.01022,
+      "name": "halberd"
+    },
+    {
+      "id": 9808,
+      "probability": 0.00504,
+      "name": "heavily rusted armor"
+    },
+    {
+      "id": 13758,
+      "probability": 0.0031,
+      "name": "slime mould"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "creatureStatistics": {
+    "name": "Draken Abomination",
+    "health": 6250,
+    "maxHealth": 6250,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 420,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 357
+    },
+    "armor": 30
+  },
+  "experience": 3800,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 650,
+      "max": 700,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 420
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 310,
+      "max": 630,
+      "length": 4,
+      "spread": 3,
+      "areaEffect": "explosion"
+    },
+    {
+      "name": "draken abomination curse",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 5
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 170,
+      "max": 370,
+      "length": 4,
+      "spread": 0,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 4,
+      "target": false,
+      "duration": 9000,
+      "shootEffect": "poison",
+      "areaEffect": "poison"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "greenspark"
+    }
+  ],
+  "elements": {
+    "holy": -5,
+    "energy": -5,
+    "ice": 5
+  },
+  "immunities": {
+    "fire": true,
+    "earth": true,
+    "death": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Death Blob",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Ugggh!",
+      "Gll"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.47,
+      "name": "gold coin",
+      "min": 1,
+      "max": 98
+    },
+    {
+      "id": 2152,
+      "probability": 0.5059,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 2666,
+      "probability": 0.5045,
+      "name": "meat",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2273,
+      "probability": 0.0995,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2144,
+      "probability": 0.029,
+      "name": "small topaz",
+      "min": 1,
+      "max": 4
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

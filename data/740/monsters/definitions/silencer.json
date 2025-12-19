@@ -1,0 +1,193 @@
+{
+  "creatureStatistics": {
+    "name": "Silencer",
+    "health": 5400,
+    "maxHealth": 5400,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 470,
+    "attack": 315,
+    "attackSpeed": 2000,
+    "defense": 71,
+    "outfit": {
+      "id": 585
+    },
+    "armor": 71
+  },
+  "experience": 5100,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 490,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 220,
+      "max": 425,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 315
+    },
+    {
+      "name": "silencer skill reducer",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 3
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 40,
+      "max": 150,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "onyxarrow",
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "physical": 5,
+    "death": 70,
+    "fire": 30,
+    "energy": 15,
+    "ice": 10,
+    "holy": -25
+  },
+  "immunities": {
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Prrrroooaaaah!!! PRROAAAH!!",
+      "PRRRROOOOOAAAAAHHHH!!!",
+      "HUUUSSSSSSSSH!!",
+      "Hussssssh!!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 0.99919,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 2148,
+      "probability": 0.99717,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 22534,
+      "probability": 0.1635,
+      "name": "silencer claws"
+    },
+    {
+      "id": 22535,
+      "probability": 0.09528,
+      "name": "silencer resonating chamber"
+    },
+    {
+      "id": 7368,
+      "probability": 0.08357,
+      "name": "assassin star",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 7454,
+      "probability": 0.02584,
+      "name": "glorious axe"
+    },
+    {
+      "id": 7413,
+      "probability": 0.01978,
+      "name": "titan axe"
+    },
+    {
+      "id": 7407,
+      "probability": 0.01938,
+      "name": "haunted blade"
+    },
+    {
+      "id": 2165,
+      "probability": 0.01534,
+      "name": "stealth ring"
+    },
+    {
+      "id": 2521,
+      "probability": 0.01453,
+      "name": "dark shield"
+    },
+    {
+      "id": 7387,
+      "probability": 0.01373,
+      "name": "diamond sceptre"
+    },
+    {
+      "id": 7451,
+      "probability": 0.0109,
+      "name": "shadow sceptre"
+    },
+    {
+      "id": 7886,
+      "probability": 0.00929,
+      "name": "terra boots"
+    },
+    {
+      "id": 7885,
+      "probability": 0.00888,
+      "name": "terra legs"
+    },
+    {
+      "id": 22396,
+      "probability": 0.00686,
+      "name": "cluster of solace"
+    },
+    {
+      "id": 2195,
+      "probability": 0.00444,
+      "name": "boots of haste"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

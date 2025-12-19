@@ -1,0 +1,132 @@
+{
+  "creatureStatistics": {
+    "name": "Dragon Lord Hatchling",
+    "health": 750,
+    "maxHealth": 750,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 90,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 272
+    },
+    "armor": 20
+  },
+  "experience": 645,
+  "corpse": 2844,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 30,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 26,
+      "max": 48,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 90
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 90,
+      "max": 125,
+      "length": 5,
+      "spread": 2,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 55,
+      "max": 105,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "firefield",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "fire"
+    }
+  ],
+  "elements": {
+    "earth": 10,
+    "ice": -10,
+    "energy": -10
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "fire": true
+  },
+  "sayings": {
+    "texts": [
+      "Fchu?",
+      "Rooawwrr"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.3375,
+      "name": "gold coin",
+      "min": 1,
+      "max": 90
+    },
+    {
+      "id": 2148,
+      "probability": 0.3375,
+      "name": "gold coin",
+      "min": 1,
+      "max": 75
+    },
+    {
+      "id": 2672,
+      "probability": 0.8,
+      "name": "dragon ham"
+    },
+    {
+      "id": 2268,
+      "probability": 0.003,
+      "name": "mana potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

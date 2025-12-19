@@ -1,0 +1,99 @@
+{
+  "creatureStatistics": {
+    "name": "Deepling Scout",
+    "health": 240,
+    "maxHealth": 240,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 100,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 413
+    },
+    "armor": 10
+  },
+  "experience": 160,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 50,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "name": "drown",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 40,
+      "max": 100,
+      "range": 7,
+      "target": true,
+      "shootEffect": "spear",
+      "areaEffect": "bluebubble"
+    }
+  ],
+  "elements": {
+    "earth": -10,
+    "energy": -10
+  },
+  "immunities": {
+    "invisible": true,
+    "ice": true,
+    "drown": true,
+    "fire": true
+  },
+  "sayings": {
+    "texts": [
+      "Njaaarh!!",
+      "Begjone, intrjuder!!",
+      "Djon't djare stjare injo the eyes of the djeep!",
+      "Ljeave this sjacred pljace while you cjan"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.6,
+      "name": "gold coin",
+      "min": 1,
+      "max": 50
+    },
+    {
+      "id": 2149,
+      "probability": 0.00121,
+      "name": "small emerald"
+    },
+    {
+      "id": 2168,
+      "probability": 0.02127,
+      "name": "life ring"
+    },
+    {
+      "id": 9809,
+      "probability": 0.00925
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "creatureStatistics": {
+    "name": "Jaul",
+    "health": 90000,
+    "maxHealth": 90000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 560,
+    "attack": 2000,
+    "attackSpeed": 2000,
+    "defense": 40,
+    "outfit": {
+      "id": 444
+    },
+    "armor": 40
+  },
+  "experience": 30000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 60,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 1000,
+      "max": 2300,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "healing",
+      "interval": 5500,
+      "chance": 0.1,
+      "min": 14000,
+      "max": 21000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 2000
+    },
+    {
+      "name": "fire",
+      "interval": 2200,
+      "chance": 0.19,
+      "min": 0,
+      "max": 1000,
+      "range": 7,
+      "radius": 7,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "manadrain",
+      "interval": 3000,
+      "chance": 0.32,
+      "min": 200,
+      "max": 800,
+      "range": 7,
+      "radius": 7,
+      "target": true,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "earth",
+      "interval": 1300,
+      "chance": 0.27,
+      "min": 0,
+      "max": 600,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "explosionarea"
+    },
+    {
+      "name": "death",
+      "interval": 1200,
+      "chance": 0.06,
+      "min": 300,
+      "max": 900,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "fire",
+      "interval": 1000,
+      "chance": 0.05,
+      "min": 500,
+      "max": 1000,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "fire"
+    },
+    {
+      "name": "ice",
+      "interval": 1000,
+      "chance": 0.05,
+      "min": 1000,
+      "max": 2000,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "icearea"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 4000,
+      "chance": 0.1,
+      "min": 500,
+      "max": 1000,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "watersplash"
+    },
+    {
+      "name": "speed",
+      "interval": 1900,
+      "chance": 0.14,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "speedChange": -600,
+      "duration": 15000
+    }
+  ],
+  "elements": {
+    "death": -1
+  },
+  "immunities": {
+    "ice": true,
+    "paralyze": true,
+    "drown": true,
+    "fire": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "QJELL AFAR GOU JEY!!",
+      "DIE!! KENH!!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 15408,
+      "probability": 0.33333
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

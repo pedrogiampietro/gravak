@@ -1,0 +1,168 @@
+{
+  "creatureStatistics": {
+    "name": "Yaga The Crone",
+    "health": 620,
+    "maxHealth": 620,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 240,
+    "attack": 90,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 54
+    },
+    "armor": 15
+  },
+  "experience": 375,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "invisible",
+      "interval": 1000,
+      "chance": 0.09,
+      "duration": 3000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "outfit",
+      "interval": 4000,
+      "chance": 0.09,
+      "duration": 4000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 90
+    },
+    {
+      "name": "fire",
+      "interval": 2500,
+      "chance": 0.5,
+      "min": 30,
+      "max": 50,
+      "range": 7,
+      "shootEffect": "fire",
+      "areaEffect": "fire"
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 3000,
+      "chance": 0.13,
+      "min": 200,
+      "max": 300,
+      "range": 7,
+      "shootEffect": "poison"
+    },
+    {
+      "name": "firefield",
+      "interval": 2000,
+      "chance": 0.13,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "shootEffect": "fire"
+    }
+  ],
+  "elements": {
+    "death": -5,
+    "earth": 1,
+    "physical": -1
+  },
+  "immunities": {
+    "energy": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Where did I park my hut?",
+      "You will taste so sweet!",
+      "Hexipooh, bewitched are you!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2654,
+      "probability": 0.68,
+      "name": "cape"
+    },
+    {
+      "id": 2324,
+      "probability": 0.64,
+      "name": "broom"
+    },
+    {
+      "id": 2687,
+      "probability": 0.64,
+      "name": "cookie",
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 2148,
+      "probability": 0.32,
+      "name": "gold coin",
+      "min": 1,
+      "max": 74
+    },
+    {
+      "id": 2129,
+      "probability": 0.24,
+      "name": "wolf tooth chain"
+    },
+    {
+      "id": 2800,
+      "probability": 0.2,
+      "name": "star herb"
+    },
+    {
+      "id": 2651,
+      "probability": 0.08,
+      "name": "coat"
+    },
+    {
+      "id": 2199,
+      "probability": 0.08,
+      "name": "garlic necklace"
+    },
+    {
+      "id": 8902,
+      "probability": 0.08,
+      "name": "spellbook of mind control"
+    },
+    {
+      "id": 2185,
+      "probability": 0.04,
+      "name": "necrotic rod"
+    },
+    {
+      "id": 2402,
+      "probability": 0.04,
+      "name": "silver dagger"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

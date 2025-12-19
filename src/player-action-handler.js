@@ -47,6 +47,11 @@ ActionHandler.prototype.handleActionAttack = function () {
     return;
   }
 
+  // Prevent attack if dead
+  if (this.__player.isDead) {
+    return;
+  }
+
   // Drop the target if it is dead
   if (!gameServer.world.creatureHandler.isCreatureActive(this.targetHandler.getTarget())) {
     return this.targetHandler.setTarget(null);
@@ -103,9 +108,7 @@ ActionHandler.prototype.handleActionRegeneration = function () {
     if (isSated) {
       manaRegen += 5;
       console.log("=== MANA REGEN ===");
-      console.log("Mana before:", this.__player.getProperty(CONST.PROPERTIES.MANA));
       this.__player.increaseMana(manaRegen);
-      console.log("Mana after:", this.__player.getProperty(CONST.PROPERTIES.MANA));
     } else if (manaRegen > 0) {
       this.__player.increaseMana(manaRegen);
     }

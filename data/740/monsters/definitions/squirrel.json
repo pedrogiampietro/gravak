@@ -1,0 +1,60 @@
+{
+  "creatureStatistics": {
+    "name": "Squirrel",
+    "health": 20,
+    "maxHealth": 20,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 480,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 1,
+    "outfit": {
+      "id": 274
+    },
+    "armor": 1
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 20,
+    "openDoors": false,
+    "senseInvisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Chchch"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 11213,
+      "probability": 0.36613,
+      "name": "acorn"
+    },
+    {
+      "id": 7910,
+      "probability": 0.00652,
+      "name": "peanut"
+    },
+    {
+      "id": 7909,
+      "probability": 0.00516,
+      "name": "walnut"
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

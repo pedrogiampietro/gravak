@@ -1,0 +1,44 @@
+{
+  "creatureStatistics": {
+    "name": "Rift Phantom",
+    "health": 100,
+    "maxHealth": 100,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 160,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 48
+    },
+    "armor": 10
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "immunities": {
+    "physical": true,
+    "death": true,
+    "earth": true,
+    "drown": true,
+    "lifedrain": true,
+    "paralyze": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

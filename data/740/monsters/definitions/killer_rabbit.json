@@ -1,0 +1,94 @@
+{
+  "creatureStatistics": {
+    "name": "Killer Rabbit",
+    "health": 205,
+    "maxHealth": 205,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 300,
+    "attack": 100,
+    "attackSpeed": 1200,
+    "defense": 35,
+    "outfit": {
+      "id": 74
+    },
+    "armor": 30
+  },
+  "experience": 160,
+  "corpse": 3008,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.4,
+      "speedChange": 380,
+      "duration": 8000,
+      "areaEffect": "energy"
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.3,
+      "duration": 2000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 1200,
+      "chance": 1,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 0,
+      "max": 50,
+      "range": 1
+    }
+  ],
+  "summons": [
+    {
+      "name": "killer rabbit",
+      "interval": 2000,
+      "chance": 0.3,
+      "maxSummons": 2
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Who is lunch NOW?"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.5,
+      "name": "gold coin",
+      "min": 1,
+      "max": 90
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

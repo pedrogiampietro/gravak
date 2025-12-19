@@ -1,0 +1,75 @@
+{
+  "creatureStatistics": {
+    "name": "Squire Of Nictros",
+    "health": 1000,
+    "maxHealth": 1000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 180,
+    "attack": 250,
+    "attackSpeed": 2000,
+    "defense": 45,
+    "outfit": {
+      "id": 306
+    },
+    "armor": 45
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.15,
+      "duration": 3000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 250
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 190,
+      "max": 335,
+      "range": 7,
+      "shootEffect": "whirlwindsword"
+    }
+  ],
+  "elements": {
+    "earth": -10,
+    "holy": 10,
+    "fire": 80,
+    "energy": 20,
+    "death": -5
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

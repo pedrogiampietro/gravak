@@ -1,0 +1,174 @@
+{
+  "creatureStatistics": {
+    "name": "Grand Mother Foulscale",
+    "health": 1850,
+    "maxHealth": 1850,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 180,
+    "attack": 170,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 34
+    },
+    "armor": 27
+  },
+  "experience": 1400,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 400,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.17,
+      "min": 34,
+      "max": 66,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 170
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 45,
+      "max": 85,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.08,
+      "min": 90,
+      "max": 150,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "firearea"
+    }
+  ],
+  "elements": {
+    "earth": 80,
+    "energy": 20,
+    "ice": -10
+  },
+  "immunities": {
+    "fire": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "dragon hatchling",
+      "interval": 4000,
+      "chance": 0.4,
+      "maxSummons": 4
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "GROOAAARRR",
+      "FCHHHHH"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 5877,
+      "probability": 1,
+      "name": "green dragon leather"
+    },
+    {
+      "id": 5920,
+      "probability": 1,
+      "name": "green dragon scale"
+    },
+    {
+      "id": 2148,
+      "probability": 0.86486,
+      "name": "gold coin",
+      "min": 1,
+      "max": 97
+    },
+    {
+      "id": 2672,
+      "probability": 0.32432,
+      "name": "dragon ham"
+    },
+    {
+      "id": 2387,
+      "probability": 0.16216,
+      "name": "double axe"
+    },
+    {
+      "id": 2647,
+      "probability": 0.16216,
+      "name": "plate legs"
+    },
+    {
+      "id": 2434,
+      "probability": 0.13514,
+      "name": "dragon hammer"
+    },
+    {
+      "id": 2455,
+      "probability": 0.08108,
+      "name": "crossbow"
+    },
+    {
+      "id": 2546,
+      "probability": 0.05405,
+      "name": "burst arrow",
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 2516,
+      "probability": 0.05405,
+      "name": "dragon shield"
+    },
+    {
+      "id": 3351,
+      "probability": 0.05405,
+      "name": "steel helmet"
+    },
+    {
+      "id": 2413,
+      "probability": 0.02703,
+      "name": "broadsword"
+    },
+    {
+      "id": 7430,
+      "probability": 0.02703,
+      "name": "dragonbone staff"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "creatureStatistics": {
+    "name": "Dragon Hatchling",
+    "health": 380,
+    "maxHealth": 380,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 170,
+    "attack": 55,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 271
+    },
+    "armor": 10
+  },
+  "experience": 185,
+  "corpse": 2844,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 20,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 8,
+      "max": 33,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 55
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 60,
+      "max": 90,
+      "length": 5,
+      "spread": 2,
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 30,
+      "max": 55,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    }
+  ],
+  "elements": {
+    "earth": 75,
+    "ice": -10,
+    "energy": -5
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "fire": true
+  },
+  "sayings": {
+    "texts": [
+      "Fchu?",
+      "Rooawwrr"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.675,
+      "name": "gold coin",
+      "min": 1,
+      "max": 55
+    },
+    {
+      "id": 2672,
+      "probability": 0.61,
+      "name": "dragon ham"
+    },
+    {
+      "id": 2269,
+      "probability": 0.004,
+      "name": "health potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

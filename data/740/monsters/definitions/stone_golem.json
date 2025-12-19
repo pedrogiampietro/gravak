@@ -1,0 +1,123 @@
+{
+  "creatureStatistics": {
+    "name": "Stone Golem",
+    "health": 270,
+    "maxHealth": 270,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 180,
+    "attack": 110,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 67
+    },
+    "armor": 30
+  },
+  "experience": 160,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 110
+    }
+  ],
+  "elements": {
+    "physical": 10,
+    "fire": 20,
+    "energy": 15,
+    "death": 20,
+    "ice": -10
+  },
+  "immunities": {
+    "paralyze": true,
+    "drown": true,
+    "earth": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.95794,
+      "name": "gold coin",
+      "min": 1,
+      "max": 40
+    },
+    {
+      "id": 1294,
+      "probability": 0.12849,
+      "name": "small stone",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 11232,
+      "probability": 0.10115,
+      "name": "sulphurous stone"
+    },
+    {
+      "id": 2166,
+      "probability": 0.05137,
+      "name": "power ring"
+    },
+    {
+      "id": 2395,
+      "probability": 0.02572,
+      "name": "carlin sword"
+    },
+    {
+      "id": 5880,
+      "probability": 0.02054,
+      "name": "iron ore"
+    },
+    {
+      "id": 10549,
+      "probability": 0.01017,
+      "name": "ancient stone"
+    },
+    {
+      "id": 11227,
+      "probability": 0.00782,
+      "name": "shiny stone"
+    },
+    {
+      "id": 13757,
+      "probability": 0.00528,
+      "name": "coal"
+    },
+    {
+      "id": 11343,
+      "probability": 0.00416,
+      "name": "piece of marble rock"
+    },
+    {
+      "id": 2124,
+      "probability": 0.00181,
+      "name": "crystal ring"
+    },
+    {
+      "id": 2156,
+      "probability": 0.00048,
+      "name": "red gem"
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

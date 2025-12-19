@@ -1,0 +1,131 @@
+{
+  "creatureStatistics": {
+    "name": "Tzumrah The Dazzler",
+    "health": 1700,
+    "maxHealth": 1700,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 150,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 193
+    },
+    "armor": 25
+  },
+  "experience": 1700,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 60,
+      "max": 90,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.15,
+      "duration": 4000,
+      "areaEffect": "yellowbubble"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 150
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 70,
+      "max": 185,
+      "range": 1,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "holy",
+      "areaEffect": "holyarea"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "target": true,
+      "duration": 5000,
+      "shootEffect": "holy",
+      "areaEffect": "holydamage"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "target": true,
+      "speedChange": -360,
+      "duration": 6000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "energy": -5,
+    "fire": 20
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "Your beating heart will burst into flames!",
+      "Your reeking carcass will feed the sharks!",
+      "Your living soul will serve my master!",
+      "Your warm blood will quench my thirst!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 122
+    },
+    {
+      "id": 12411,
+      "probability": 0.33333,
+      "name": "cultish symbol"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

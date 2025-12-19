@@ -1,0 +1,112 @@
+{
+  "creatureStatistics": {
+    "name": "Iron Servant Replica",
+    "health": 1000,
+    "maxHealth": 1000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 154,
+    "attackSpeed": 2000,
+    "defense": 17,
+    "outfit": {
+      "id": 395
+    },
+    "armor": 17
+  },
+  "experience": 210,
+  "corpse": 2813,
+  "fluidType": 4,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 154
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 0,
+      "max": 60,
+      "range": 7,
+      "shootEffect": "explosion",
+      "areaEffect": "explosionarea"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.14,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "duration": 2000,
+      "shootEffect": "explosion",
+      "areaEffect": "stun"
+    }
+  ],
+  "elements": {
+    "earth": -10,
+    "holy": 20,
+    "fire": 25,
+    "energy": 25,
+    "death": -10
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.82462,
+      "name": "gold coin",
+      "min": 1,
+      "max": 55
+    },
+    {
+      "id": 9690,
+      "probability": 0.05374,
+      "name": "gear wheel"
+    },
+    {
+      "id": 7618,
+      "probability": 0.0232,
+      "name": "health potion"
+    },
+    {
+      "id": 2381,
+      "probability": 0.00953,
+      "name": "halberd"
+    },
+    {
+      "id": 9808,
+      "probability": 0.00489,
+      "name": "heavily rusted armor"
+    },
+    {
+      "id": 13758,
+      "probability": 0.00269,
+      "name": "slime mould"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

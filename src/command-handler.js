@@ -60,9 +60,6 @@ CommandHandler.prototype.handleCommandAddSkill = function (
       const currentLevel = Math.floor(currentExp / 100) + 1;
       const targetLevel = currentLevel + Number(amount);
 
-      console.log("[AddSkill] Current Level:", currentLevel);
-      console.log("[AddSkill] Current Exp:", currentExp);
-      console.log("[AddSkill] Target Level:", targetLevel);
 
       // Calcular exp necessária
       const Skill = requireModule("skill");
@@ -71,7 +68,6 @@ CommandHandler.prototype.handleCommandAddSkill = function (
       const currentLevelExp = skillInstance.getExperience(currentLevel);
       const expRequired = targetExp - currentLevelExp;
 
-      console.log("[AddSkill] Required Exp:", expRequired);
 
       // Recalcular atributos baseados no novo level
       const newHealth = 150 + (targetLevel - 1) * 5;
@@ -183,7 +179,6 @@ CommandHandler.prototype.handleCommandAddSkill = function (
     }
   }
 
-  console.log("[AddSkill] Invalid skill type:", skill);
   return gameServer.world.broadcastPacket(
     new ServerMessagePacket("Invalid skill type. Available: level")
   );
@@ -307,7 +302,6 @@ CommandHandler.prototype.handle = function (player, message) {
       let npcFile = npcName + ".json";
       let npcPath = path.join(process.cwd(), "data", "740", "npcs", "definitions", npcFile);
 
-      console.log("Trying to load NPC from:", npcPath);
 
       // Clear cache to allow reloading
       if (require.cache[npcPath]) {
@@ -322,7 +316,6 @@ CommandHandler.prototype.handle = function (player, message) {
 
       return player.sendCancelMessage("Spawned NPC: " + data.creatureStatistics.name);
     } catch (error) {
-      console.log("NPC spawn error:", error);
       return player.sendCancelMessage("NPC error: " + error.message);
     }
   }

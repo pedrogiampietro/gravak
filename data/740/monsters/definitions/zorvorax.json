@@ -1,0 +1,206 @@
+{
+  "creatureStatistics": {
+    "name": "Zorvorax",
+    "health": 10000,
+    "maxHealth": 10000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 350,
+    "attack": 385,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 928
+    },
+    "armor": 10
+  },
+  "experience": 9000,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 120,
+      "max": 360,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 385
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 120,
+      "max": 650,
+      "range": 7,
+      "radius": 5,
+      "target": true,
+      "shootEffect": "death",
+      "areaEffect": "blacksmoke"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.11,
+      "min": 330,
+      "max": 805,
+      "range": 7,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "undead dragon curse",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.09,
+      "min": 300,
+      "max": 780,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "smallclouds"
+    }
+  ],
+  "elements": {
+    "physical": 10,
+    "energy": 20,
+    "fire": 20,
+    "ice": 50,
+    "holy": -35
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "death": true,
+    "earth": true,
+    "drown": true
+  },
+  "loot": [
+    {
+      "id": 27598,
+      "probability": 1,
+      "name": "bones of zorvorax"
+    },
+    {
+      "id": 6300,
+      "probability": 1,
+      "name": "death ring"
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 11233,
+      "probability": 1,
+      "name": "unholy bone",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 9971,
+      "probability": 0.7644,
+      "name": "gold ingot"
+    },
+    {
+      "id": 2152,
+      "probability": 0.65969,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7430,
+      "probability": 0.35602,
+      "name": "dragonbone staff"
+    },
+    {
+      "id": 7590,
+      "probability": 0.35602,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7591,
+      "probability": 0.33508,
+      "name": "great health potion",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 8472,
+      "probability": 0.33508,
+      "name": "great spirit potion",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 5925,
+      "probability": 0.30366,
+      "name": "hardened bone"
+    },
+    {
+      "id": 9810,
+      "probability": 0.27749,
+      "name": "slightly rusted armor"
+    },
+    {
+      "id": 6500,
+      "probability": 0.25131,
+      "name": "demonic essence"
+    },
+    {
+      "id": 5741,
+      "probability": 0.05759,
+      "name": "skull helmet"
+    },
+    {
+      "id": 5944,
+      "probability": 0.04188,
+      "name": "soul orb"
+    },
+    {
+      "id": 2173,
+      "probability": 0.01571,
+      "name": "amulet of loss"
+    },
+    {
+      "id": 13291,
+      "probability": 0.01047,
+      "name": "maxilla maximus"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

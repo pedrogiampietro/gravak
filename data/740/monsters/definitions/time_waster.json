@@ -1,0 +1,81 @@
+{
+  "creatureStatistics": {
+    "name": "Time Waster",
+    "health": 1000,
+    "maxHealth": 1000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 100,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 0
+    },
+    "armor": 10
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.17,
+      "min": 40,
+      "max": 60,
+      "range": 7,
+      "shootEffect": "suddendeath",
+      "areaEffect": "yalaharighost"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.18,
+      "min": 0,
+      "max": 0,
+      "radius": 2,
+      "target": true,
+      "speedChange": -450,
+      "duration": 20000,
+      "areaEffect": "blackspark"
+    }
+  ],
+  "immunities": {
+    "death": true,
+    "lifedrain": true,
+    "earth": true,
+    "drown": true,
+    "invisible": true,
+    "paralyze": true,
+    "drunk": true,
+    "physical": true,
+    "energy": true,
+    "fire": true,
+    "ice": true,
+    "holy": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

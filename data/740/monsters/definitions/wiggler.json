@@ -1,0 +1,142 @@
+{
+  "creatureStatistics": {
+    "name": "Wiggler",
+    "health": 1200,
+    "maxHealth": 1200,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 200,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 510
+    },
+    "armor": 15
+  },
+  "experience": 900,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 359,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 510,
+      "duration": 5000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 200
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 180,
+      "max": 270,
+      "length": 4,
+      "spread": 3,
+      "target": false
+    },
+    {
+      "name": "poisoncondition",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 160,
+      "max": 200,
+      "range": 7,
+      "shootEffect": "poisonarrow",
+      "areaEffect": "smallplants"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "length": 3,
+      "spread": 2,
+      "target": false,
+      "speedChange": -700,
+      "duration": 30000,
+      "areaEffect": "blackspark"
+    }
+  ],
+  "elements": {
+    "death": 10,
+    "energy": 5,
+    "fire": -5
+  },
+  "immunities": {
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Zzzrp!",
+      "Crick! Crick!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2152,
+      "probability": 0.1479,
+      "name": "platinum coin"
+    },
+    {
+      "id": 2409,
+      "probability": 0.0136,
+      "name": "serpent sword"
+    },
+    {
+      "id": 2787,
+      "probability": 0.07142,
+      "name": "white mushroom",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2271,
+      "probability": 0.0493,
+      "name": "strong health potion"
+    },
+    {
+      "id": 2270,
+      "probability": 0.0525,
+      "name": "strong mana potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "creatureStatistics": {
+    "name": "Damaged Worker Golem",
+    "health": 260,
+    "maxHealth": 260,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 45,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 304
+    },
+    "armor": 25
+  },
+  "experience": 95,
+  "corpse": 2813,
+  "fluidType": 4,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 5,
+      "max": 11,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 45
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 45,
+      "range": 7,
+      "shootEffect": "smallstone"
+    }
+  ],
+  "elements": {
+    "earth": 50,
+    "holy": 50,
+    "fire": -10,
+    "energy": -5,
+    "physical": 25,
+    "ice": 10,
+    "death": 10
+  },
+  "immunities": {
+    "invisible": true,
+    "paralyze": true
+  },
+  "sayings": {
+    "texts": [
+      "Klonk klonk klonk",
+      "Failure! Failure!",
+      "Good morning citizen. How may I serve you?",
+      "Target identified: Rat! Termination initiated!",
+      "Rrrtttarrrttarrrtta",
+      "Danger will...chrrr! Danger!",
+      "Self-diagnosis failed.",
+      "Aw... chhhrrr orders."
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.6881,
+      "name": "gold coin",
+      "min": 1,
+      "max": 88
+    },
+    {
+      "id": 2207,
+      "probability": 0.0057,
+      "name": "sword ring"
+    },
+    {
+      "id": 9808,
+      "probability": 0.0079
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

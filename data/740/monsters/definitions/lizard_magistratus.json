@@ -1,0 +1,109 @@
+{
+  "creatureStatistics": {
+    "name": "Lizard Magistratus",
+    "health": 8000,
+    "maxHealth": 8000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 60,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 115
+    },
+    "armor": 15
+  },
+  "experience": 2000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.5,
+      "min": 200,
+      "max": 250,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 60
+    },
+    {
+      "name": "lizard magistratus curse",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 5
+    }
+  ],
+  "elements": {
+    "fire": 80
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Shhhhhhhh"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2147,
+      "probability": 0.0897,
+      "name": "small ruby",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2148,
+      "probability": 0.7723,
+      "name": "gold coin",
+      "min": 1,
+      "max": 50
+    },
+    {
+      "id": 2152,
+      "probability": 0.134,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 19
+    },
+    {
+      "id": 2270,
+      "probability": 0.0628,
+      "name": "strong mana potion"
+    },
+    {
+      "id": 2273,
+      "probability": 0.0448,
+      "name": "great mana potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": 4
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "creatureStatistics": {
+    "name": "Webster",
+    "health": 2950,
+    "maxHealth": 2950,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 290,
+    "attack": 250,
+    "attackSpeed": 2000,
+    "defense": 34,
+    "outfit": {
+      "id": 263
+    },
+    "armor": 29
+  },
+  "experience": 1200,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": true
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 5000,
+      "chance": 1,
+      "speedChange": 500,
+      "duration": 2500,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 250
+    },
+    {
+      "name": "speed",
+      "interval": 3500,
+      "chance": 0.65,
+      "min": 0,
+      "max": 0,
+      "range": 1,
+      "radius": 1,
+      "target": true,
+      "speedChange": -500,
+      "duration": 40,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "energy",
+      "interval": 3000,
+      "chance": 0.75,
+      "min": 13,
+      "max": 80,
+      "range": 7,
+      "shootEffect": "energy"
+    }
+  ],
+  "elements": {
+    "energy": -20
+  },
+  "immunities": {
+    "ice": true,
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "You are lost!",
+      "Come my little morsel."
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

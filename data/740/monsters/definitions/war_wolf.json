@@ -1,0 +1,84 @@
+{
+  "creatureStatistics": {
+    "name": "War Wolf",
+    "health": 140,
+    "maxHealth": 140,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 264,
+    "attack": 50,
+    "attackSpeed": 2000,
+    "defense": 8,
+    "outfit": {
+      "id": 3
+    },
+    "armor": 8
+  },
+  "experience": 55,
+  "corpse": 2826,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 50
+    }
+  ],
+  "elements": {
+    "earth": 20,
+    "holy": 10,
+    "ice": -10,
+    "death": -10
+  },
+  "immunities": {
+    "outfit": true
+  },
+  "sayings": {
+    "texts": [
+      "Grrrrrrr",
+      "Yoooohhuuuu!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2671,
+      "probability": 0.3917,
+      "name": "ham"
+    },
+    {
+      "id": 11235,
+      "probability": 0.04951,
+      "name": "warwolf fur"
+    },
+    {
+      "id": 5897,
+      "probability": 0.00993,
+      "name": "wolf paw"
+    },
+    {
+      "id": 7394,
+      "probability": 0.00048,
+      "name": "wolf trophy"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

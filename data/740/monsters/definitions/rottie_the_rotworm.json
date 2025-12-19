@@ -1,0 +1,101 @@
+{
+  "creatureStatistics": {
+    "name": "Rottie The Rotworm",
+    "health": 65,
+    "maxHealth": 65,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 180,
+    "attack": 25,
+    "attackSpeed": 2000,
+    "defense": 11,
+    "outfit": {
+      "id": 26
+    },
+    "armor": 8
+  },
+  "experience": 40,
+  "corpse": 2824,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 25
+    }
+  ],
+  "loot": [
+    {
+      "id": 10609,
+      "probability": 1,
+      "name": "lump of dirt"
+    },
+    {
+      "id": 2148,
+      "probability": 0.84211,
+      "name": "gold coin",
+      "min": 1,
+      "max": 18
+    },
+    {
+      "id": 2398,
+      "probability": 0.63158,
+      "name": "mace"
+    },
+    {
+      "id": 3976,
+      "probability": 0.47368,
+      "name": "worm",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2376,
+      "probability": 0.26316,
+      "name": "sword"
+    },
+    {
+      "id": 2671,
+      "probability": 0.21053,
+      "name": "ham"
+    },
+    {
+      "id": 2530,
+      "probability": 0.15789,
+      "name": "copper shield"
+    },
+    {
+      "id": 2666,
+      "probability": 0.15789,
+      "name": "meat"
+    },
+    {
+      "id": 2480,
+      "probability": 0.10526,
+      "name": "legion helmet"
+    },
+    {
+      "id": 2412,
+      "probability": 0.05263,
+      "name": "katana"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

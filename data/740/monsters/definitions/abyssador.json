@@ -1,0 +1,151 @@
+{
+  "creatureStatistics": {
+    "name": "Abyssador",
+    "health": 300000,
+    "maxHealth": 300000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 470,
+    "attack": 960,
+    "attackSpeed": 2500,
+    "defense": 20,
+    "outfit": {
+      "id": 495
+    },
+    "armor": 15
+  },
+  "experience": 50000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 100,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.01,
+      "min": 0,
+      "max": 300000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "healing",
+      "interval": 5000,
+      "chance": 0.3,
+      "min": 1000,
+      "max": 1000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 2000,
+      "chance": 0.25,
+      "duration": 3000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2500,
+      "chance": 1,
+      "min": 0,
+      "max": 960
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -400,
+      "duration": 2500,
+      "shootEffect": "earth"
+    },
+    {
+      "name": "fire",
+      "interval": 800,
+      "chance": 0.1,
+      "min": 820,
+      "max": 1250,
+      "range": 7,
+      "radius": 10,
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "energy",
+      "interval": 750,
+      "chance": 0.1,
+      "min": 650,
+      "max": 1300,
+      "range": 3,
+      "radius": 12,
+      "target": true,
+      "areaEffect": "greenspark"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 700,
+      "chance": 0.1,
+      "min": 600,
+      "max": 1230,
+      "range": 3,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "poison"
+    },
+    {
+      "name": "earth",
+      "interval": 700,
+      "chance": 0.12,
+      "min": 40,
+      "max": 130,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "poison"
+    }
+  ],
+  "elements": {
+    "physical": 10,
+    "death": -20,
+    "energy": -20
+  },
+  "immunities": {
+    "drown": true,
+    "paralyze": true,
+    "invisible": true,
+    "earth": true,
+    "drunk": true,
+    "outfit": true
+  },
+  "sayings": {
+    "texts": [
+      "*** BRAINS *** SMALL ***",
+      "*** LIVE *** DRY ***",
+      "*** IMPORTANT ***",
+      "*** FIRE *** HOME *** VICTORY ***",
+      "*** EXISTENCE *** FUTILE ***",
+      "*** TIME ***",
+      "*** STEALTH ***",
+      "*** DEATH ***"
+    ],
+    "slowness": 3,
+    "chance": 0.1
+  },
+  "loot": [],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

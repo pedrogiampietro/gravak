@@ -132,45 +132,30 @@ ConditionManager.prototype.add = function (condition, properties) {
    * Adds a condition to the creature
    */
 
-  console.log("=== DEBUG CONDITIONMANAGER.ADD ===");
-  console.log("Condition ID:", condition.id);
-  console.log("Getting condition from database...");
 
   let conditionDef = process.gameServer.database.getCondition(condition.id);
-  console.log("Condition definition:", conditionDef ? "found" : "null");
 
   if (conditionDef === null) {
-    console.log("ERROR: Condition definition is null!");
     return;
   }
 
   let { onStart, onTick, onExpire } = conditionDef;
-  console.log("onStart:", typeof onStart, "onTick:", typeof onTick, "onExpire:", typeof onExpire);
 
-  console.log("Calling onStart...");
   onStart.call(condition, this.__creature, properties);
-  console.log("onStart complete");
 
   // Reference
   this.__conditions.set(condition.id, condition);
-  console.log("Condition stored in map");
 
   // Start the first tick of the condition
   if (condition.numberTicks !== -1) {
-    console.log("Starting tick condition...");
     this.__tickCondition(condition);
-    console.log("Tick condition started");
   }
 
   // Players need to be informed
   if (this.__creature.isPlayer()) {
-    console.log("Broadcasting ToggleConditionPacket...");
-    console.log("Creature ID:", this.__creature.getId());
     this.__creature.broadcast(new ToggleConditionPacket(true, this.__creature.getId(), condition.id));
-    console.log("Broadcast complete");
   }
 
-  console.log("ConditionManager.add complete");
 
 }
 

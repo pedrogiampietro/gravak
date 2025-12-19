@@ -1,4 +1,4 @@
-const ModalManager = function() {
+const ModalManager = function () {
 
   /*
    * Class ModalManager
@@ -26,12 +26,13 @@ const ModalManager = function() {
   this.register(OfferModal, "offer-modal");
   this.register(MapModal, "map-modal");
   this.register(SpellbookModal, "spellbook-modal");
+  this.register(DeathModal, "death-modal");
 
   this.__addEventListeners();
 
 }
 
-ModalManager.prototype.__addEventListeners = function() {
+ModalManager.prototype.__addEventListeners = function () {
 
   /*
    * Function ModalManager.__addEventListeners
@@ -54,16 +55,16 @@ ModalManager.prototype.__addEventListeners = function() {
 
 }
 
-ModalManager.prototype.__handleHeaderMouseDown = function(event) {
+ModalManager.prototype.__handleHeaderMouseDown = function (event) {
 
   /*
    * Function ModalManager.__handleHeaderMouseDown
    * Handles dragging of modal windows ("this" references the header element)
    */
- 
+
   event.preventDefault();
 
-  let __handleRelease = function(event) {
+  let __handleRelease = function (event) {
 
     /*
      * Function ModalManager.__handleHeaderMouseDown.__handleRelease
@@ -78,7 +79,7 @@ ModalManager.prototype.__handleHeaderMouseDown = function(event) {
 
   }
 
-  let __handleDrag = function(event) {
+  let __handleDrag = function (event) {
 
     /*
      * Function ModalManager.__handleHeaderMouseDown.__handleDrag
@@ -86,7 +87,7 @@ ModalManager.prototype.__handleHeaderMouseDown = function(event) {
      */
 
     event.preventDefault();
-    
+
     let rect = gameClient.renderer.screen.canvas.getBoundingClientRect();
 
     let modalElement = this.parentElement;
@@ -94,11 +95,11 @@ ModalManager.prototype.__handleHeaderMouseDown = function(event) {
     // Calculate the required offset
     let left = event.clientX - rect.left - 0.5 * modalElement.offsetWidth;
     let top = event.clientY - rect.top - 0.5 * this.offsetHeight;
-    
+
     // Clamp to the game window
     left = left.clamp(0, rect.width - modalElement.offsetWidth);
     top = top.clamp(0, rect.height - modalElement.offsetHeight);
-    
+
     // Set the position of the modal
     modalElement.style.left = "%spx".format(left);
     modalElement.style.top = "%spx".format(top);
@@ -111,7 +112,7 @@ ModalManager.prototype.__handleHeaderMouseDown = function(event) {
 
 }
 
-ModalManager.prototype.register = function(Class, id) {
+ModalManager.prototype.register = function (Class, id) {
 
   /*
    * Function ModalManager.register
@@ -119,7 +120,7 @@ ModalManager.prototype.register = function(Class, id) {
    */
 
   // Prevent double registering of modals
-  if(this.__modals.hasOwnProperty(id)) {
+  if (this.__modals.hasOwnProperty(id)) {
     return console.error("A modal with identifier " + id + " already exists.");
   }
 
@@ -128,14 +129,14 @@ ModalManager.prototype.register = function(Class, id) {
 
 }
 
-ModalManager.prototype.handleConfirm = function() {
+ModalManager.prototype.handleConfirm = function () {
 
   /*
    * Function ModalManager.handleConfirm
    * Generic confirm function to trigger confirm in any modal
    */
 
-  if(!this.isOpened()) {
+  if (!this.isOpened()) {
     return;
   }
 
@@ -144,14 +145,14 @@ ModalManager.prototype.handleConfirm = function() {
 
 }
 
-ModalManager.prototype.close = function() {
+ModalManager.prototype.close = function () {
 
   /*
    * Function ModalManager.close
    * Closes the currently opened modal
    */
 
-  if(!this.isOpened()) {
+  if (!this.isOpened()) {
     return;
   }
 
@@ -160,13 +161,13 @@ ModalManager.prototype.close = function() {
   this.__openedModal = null;
 
   // Remove focus from any focused element and return it to the gamescreen
-  if(document.activeElement) {
+  if (document.activeElement) {
     document.activeElement.blur();
   }
 
 }
 
-ModalManager.prototype.render = function() {
+ModalManager.prototype.render = function () {
 
   /*
    * Function ModalManager.render
@@ -174,7 +175,7 @@ ModalManager.prototype.render = function() {
    */
 
   // Nothing is opened
-  if(!this.isOpened()) {
+  if (!this.isOpened()) {
     return;
   }
 
@@ -182,7 +183,7 @@ ModalManager.prototype.render = function() {
 
 }
 
-ModalManager.prototype.get = function(id) {
+ModalManager.prototype.get = function (id) {
 
   /*
    * Function ModalManager.get
@@ -190,7 +191,7 @@ ModalManager.prototype.get = function(id) {
    */
 
   // The requested modal does not exist
-  if(!this.__modals.hasOwnProperty(id)) {
+  if (!this.__modals.hasOwnProperty(id)) {
     return null;
   }
 
@@ -198,7 +199,7 @@ ModalManager.prototype.get = function(id) {
 
 }
 
-ModalManager.prototype.isOpened = function() {
+ModalManager.prototype.isOpened = function () {
 
   /*
    * Function ModalManager.isOpened
@@ -209,7 +210,7 @@ ModalManager.prototype.isOpened = function() {
 
 }
 
-ModalManager.prototype.open = function(id, options) {
+ModalManager.prototype.open = function (id, options) {
 
   /*
    * Function ModalManager.open
@@ -217,12 +218,12 @@ ModalManager.prototype.open = function(id, options) {
    */
 
   // Does not exist
-  if(!this.__modals.hasOwnProperty(id)) {
+  if (!this.__modals.hasOwnProperty(id)) {
     return null;
   }
 
   // Already opened: close the previous modal
-  if(this.isOpened()) {
+  if (this.isOpened()) {
     this.close();
   }
 

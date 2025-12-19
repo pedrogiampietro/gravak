@@ -1,0 +1,287 @@
+{
+  "creatureStatistics": {
+    "name": "Ghazbaran",
+    "health": 77000,
+    "maxHealth": 77000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 400,
+    "attack": 2191,
+    "attackSpeed": 2000,
+    "defense": 65,
+    "outfit": {
+      "id": 12
+    },
+    "armor": 55
+  },
+  "experience": 15000,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 3500,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 3000,
+      "chance": 0.35,
+      "min": 300,
+      "max": 800,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 4000,
+      "chance": 0.8,
+      "speedChange": 440,
+      "duration": 6000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 2191
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.4,
+      "min": 250,
+      "max": 500,
+      "range": 7,
+      "radius": 6,
+      "target": false,
+      "areaEffect": "blackspark"
+    },
+    {
+      "name": "physical",
+      "interval": 3000,
+      "chance": 0.34,
+      "min": 120,
+      "max": 500,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "whirlwindsword",
+      "areaEffect": "redspark"
+    },
+    {
+      "name": "energy",
+      "interval": 4000,
+      "chance": 0.3,
+      "min": 100,
+      "max": 800,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "physical",
+      "interval": 3000,
+      "chance": 0.2,
+      "min": 200,
+      "max": 480,
+      "range": 14,
+      "radius": 5,
+      "target": false,
+      "areaEffect": "poff"
+    },
+    {
+      "name": "physical",
+      "interval": 4000,
+      "chance": 0.15,
+      "min": 100,
+      "max": 650,
+      "range": 7,
+      "radius": 13,
+      "target": false,
+      "areaEffect": "yellowspark"
+    },
+    {
+      "name": "physical",
+      "interval": 4000,
+      "chance": 0.18,
+      "min": 200,
+      "max": 600,
+      "radius": 14,
+      "target": false,
+      "areaEffect": "bluebubble"
+    },
+    {
+      "name": "physical",
+      "interval": 3000,
+      "chance": 0.15,
+      "min": 200,
+      "max": 750,
+      "range": 7,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "energyarea"
+    }
+  ],
+  "elements": {
+    "physical": 30,
+    "holy": -5,
+    "death": 1
+  },
+  "immunities": {
+    "fire": true,
+    "ice": true,
+    "earth": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Deathslicer",
+      "interval": 4000,
+      "chance": 0.2,
+      "maxSummons": 4
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "COME AND GIVE ME SOME AMUSEMENT",
+      "IS THAT THE BEST YOU HAVE TO OFFER?",
+      "I AM GHAZBARAN OF THE TRIANGLE... AND I AM HERE TO CHALLENGE YOU ALL.",
+      "FLAWLESS VICTORY!"
+    ],
+    "slowness": 5,
+    "chance": 0.3
+  },
+  "loot": [
+    {
+      "id": 2124,
+      "probability": 0.08333,
+      "name": "crystal ring"
+    },
+    {
+      "id": 2145,
+      "probability": 0.25,
+      "name": "small diamond",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2146,
+      "probability": 0.25,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2149,
+      "probability": 0.25,
+      "name": "small emerald",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2150,
+      "probability": 0.25,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 17
+    },
+    {
+      "id": 2151,
+      "probability": 0.125,
+      "name": "talon",
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 69
+    },
+    {
+      "id": 2153,
+      "probability": 0.2,
+      "name": "green gem"
+    },
+    {
+      "id": 2158,
+      "probability": 0.14285,
+      "name": "blue gem"
+    },
+    {
+      "id": 2164,
+      "probability": 0.125,
+      "name": "might ring"
+    },
+    {
+      "id": 2165,
+      "probability": 0.125,
+      "name": "stealth ring"
+    },
+    {
+      "id": 2178,
+      "probability": 0.2
+    },
+    {
+      "id": 2178,
+      "probability": 0.2,
+      "name": "mind stone"
+    },
+    {
+      "id": 2179,
+      "probability": 0.2,
+      "name": "gold ring"
+    },
+    {
+      "id": 2214,
+      "probability": 0.2,
+      "name": "ring of healing"
+    },
+    {
+      "id": 2466,
+      "probability": 0.08333,
+      "name": "golden armor"
+    },
+    {
+      "id": 2472,
+      "probability": 0.08333,
+      "name": "magic plate armor"
+    },
+    {
+      "id": 2520,
+      "probability": 0.125,
+      "name": "demon shield"
+    },
+    {
+      "id": 6300,
+      "probability": 0.25,
+      "name": "death ring"
+    },
+    {
+      "id": 2273,
+      "probability": 0.2,
+      "name": "great mana potion"
+    },
+    {
+      "id": 2274,
+      "probability": 0.2,
+      "name": "great health potion"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

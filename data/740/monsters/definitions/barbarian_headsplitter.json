@@ -1,0 +1,141 @@
+{
+  "creatureStatistics": {
+    "name": "Barbarian Headsplitter",
+    "health": 100,
+    "maxHealth": 100,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 168,
+    "attack": 50,
+    "attackSpeed": 2000,
+    "defense": 7,
+    "outfit": {
+      "id": 253
+    },
+    "armor": 7
+  },
+  "experience": 85,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 50
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 60,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "whirlwindaxe"
+    }
+  ],
+  "elements": {
+    "energy": 20,
+    "earth": -10,
+    "ice": 50,
+    "holy": 20,
+    "death": -10
+  },
+  "immunities": {
+    "paralyze": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "I will regain my honor with your blood!",
+      "Surrender is not option!",
+      "Its you or me!",
+      "Die! Die! Die!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.75228,
+      "name": "gold coin",
+      "min": 1,
+      "max": 30
+    },
+    {
+      "id": 2050,
+      "probability": 0.59812,
+      "name": "torch"
+    },
+    {
+      "id": 2460,
+      "probability": 0.2017,
+      "name": "brass helmet"
+    },
+    {
+      "id": 2403,
+      "probability": 0.14928,
+      "name": "knife"
+    },
+    {
+      "id": 2473,
+      "probability": 0.0496,
+      "name": "viking helmet"
+    },
+    {
+      "id": 2483,
+      "probability": 0.04046,
+      "name": "scale armor"
+    },
+    {
+      "id": 2229,
+      "probability": 0.03194,
+      "name": "skull (item)"
+    },
+    {
+      "id": 5913,
+      "probability": 0.00968,
+      "name": "brown piece of cloth"
+    },
+    {
+      "id": 7618,
+      "probability": 0.00531,
+      "name": "health potion"
+    },
+    {
+      "id": 2168,
+      "probability": 0.00228,
+      "name": "life ring"
+    },
+    {
+      "id": 7461,
+      "probability": 0.00112,
+      "name": "krimhorn helmet"
+    },
+    {
+      "id": 7457,
+      "probability": 0.00087,
+      "name": "fur boots"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

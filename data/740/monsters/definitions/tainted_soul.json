@@ -1,0 +1,105 @@
+{
+  "creatureStatistics": {
+    "name": "Tainted Soul",
+    "health": 250,
+    "maxHealth": 250,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 170,
+    "attack": 30,
+    "attackSpeed": 2000,
+    "defense": 10,
+    "outfit": {
+      "id": 712
+    },
+    "armor": 10
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.01,
+      "min": 20,
+      "max": 30,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 30
+    },
+    {
+      "name": "lifedrain",
+      "interval": 3000,
+      "chance": 0.07,
+      "min": 22,
+      "max": 48,
+      "range": 1
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 15,
+      "max": 25,
+      "radius": 6,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "elements": {
+    "physical": 50,
+    "energy": 20,
+    "holy": -10,
+    "death": 100
+  },
+  "immunities": {
+    "paralyze": true,
+    "drunk": true
+  },
+  "summons": [
+    {
+      "name": "Tainted Soul",
+      "interval": 2000,
+      "chance": 0.4,
+      "maxSummons": 1
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "*Crinkle*",
+      "*Sizzle*"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2147,
+      "probability": 0.01256,
+      "name": "small ruby"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

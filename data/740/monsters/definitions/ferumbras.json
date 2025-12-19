@@ -1,0 +1,299 @@
+{
+  "creatureStatistics": {
+    "name": "Ferumbras",
+    "health": 90000,
+    "maxHealth": 90000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 320,
+    "attack": 350,
+    "attackSpeed": 2000,
+    "defense": 120,
+    "outfit": {
+      "id": 229
+    },
+    "armor": 100
+  },
+  "experience": 35000,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 2500,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 900,
+      "max": 1500,
+      "areaEffect": "greenshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 3000,
+      "chance": 0.3,
+      "speedChange": 360,
+      "duration": 7000,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 4000,
+      "chance": 0.2,
+      "duration": 5000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 350
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 300,
+      "max": 700,
+      "range": 7,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "earth",
+      "interval": 3000,
+      "chance": 0.2,
+      "min": 250,
+      "max": 550,
+      "radius": 6,
+      "target": false,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.18,
+      "min": 200,
+      "max": 400,
+      "radius": 6,
+      "target": false,
+      "areaEffect": "energy"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.16,
+      "min": 225,
+      "max": 375,
+      "radius": 6,
+      "target": false,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.21,
+      "min": 200,
+      "max": 450,
+      "radius": 6,
+      "target": false,
+      "areaEffect": "poff"
+    },
+    {
+      "name": "effect",
+      "interval": 3000,
+      "chance": 0.2,
+      "min": 200,
+      "max": 600,
+      "radius": 5,
+      "target": false,
+      "areaEffect": "blackspark"
+    },
+    {
+      "name": "firecondition",
+      "interval": 3000,
+      "chance": 0.2,
+      "min": 200,
+      "max": 800,
+      "range": 7,
+      "radius": 7,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 50,
+      "max": 250,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "greenspark"
+    }
+  ],
+  "elements": {
+    "fire": 90,
+    "energy": 90,
+    "holy": 20,
+    "ice": 20,
+    "physical": 10
+  },
+  "immunities": {
+    "earth": true,
+    "lifedrain": true,
+    "paralyze": true,
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Demon",
+      "interval": 3000,
+      "chance": 0.12,
+      "maxSummons": 4
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "NOONE WILL STOP ME THIS TIME!",
+      "THE POWER IS MINE!",
+      "I returned from death and you dream about defeating me?",
+      "Witness the first seconds of my eternal world domination!",
+      "Even in my weakened state I will crush you all!"
+    ],
+    "slowness": 5,
+    "chance": 0.2
+  },
+  "loot": [
+    {
+      "id": 5903,
+      "probability": 1,
+      "name": "Ferumbras' hat"
+    },
+    {
+      "id": 2148,
+      "probability": 0.97,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.97,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.33,
+      "name": "gold coin",
+      "min": 1,
+      "max": 70
+    },
+    {
+      "id": 2466,
+      "probability": 0.24,
+      "name": "golden armor"
+    },
+    {
+      "id": 2470,
+      "probability": 0.22,
+      "name": "golden legs"
+    },
+    {
+      "id": 2520,
+      "probability": 0.2,
+      "name": "demon shield"
+    },
+    {
+      "id": 2149,
+      "probability": 0.16,
+      "name": "small emerald",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 7632,
+      "probability": 0.14,
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 7633,
+      "probability": 0.14,
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2472,
+      "probability": 0.14,
+      "name": "magic plate armor"
+    },
+    {
+      "id": 2514,
+      "probability": 0.14,
+      "name": "mastermind shield"
+    },
+    {
+      "id": 2146,
+      "probability": 0.12,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 98
+    },
+    {
+      "id": 2150,
+      "probability": 0.1,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 54
+    },
+    {
+      "id": 2144,
+      "probability": 0.1,
+      "name": "small topaz",
+      "min": 1,
+      "max": 87
+    },
+    {
+      "id": 2152,
+      "probability": 0.081,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 58
+    },
+    {
+      "id": 2145,
+      "probability": 0.04,
+      "name": "small diamond",
+      "min": 1,
+      "max": 82
+    },
+    {
+      "id": 2147,
+      "probability": 0.04,
+      "name": "small ruby",
+      "min": 1,
+      "max": 92
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

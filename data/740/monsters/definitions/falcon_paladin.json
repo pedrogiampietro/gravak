@@ -1,0 +1,209 @@
+{
+  "creatureStatistics": {
+    "name": "Falcon Paladin",
+    "health": 8500,
+    "maxHealth": 8500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 250,
+    "attackSpeed": 2000,
+    "defense": 82,
+    "outfit": {
+      "id": 1071
+    },
+    "armor": 82
+  },
+  "experience": 6544,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 250
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.5,
+      "min": 400,
+      "max": 550,
+      "range": 5,
+      "target": true,
+      "shootEffect": "royalspear"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 200,
+      "max": 500,
+      "range": 5,
+      "target": true,
+      "shootEffect": "bolt"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 350,
+      "max": 450,
+      "range": 7,
+      "radius": 2,
+      "target": true,
+      "shootEffect": "powerbolt",
+      "areaEffect": "energy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 250,
+      "max": 350,
+      "length": 5,
+      "spread": 0,
+      "areaEffect": "purpleenergy"
+    }
+  ],
+  "elements": {
+    "physical": 10,
+    "holy": -10,
+    "death": 50
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "Uuunngh!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 0.89752,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 8472,
+      "probability": 0.48174,
+      "name": "great spirit potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2145,
+      "probability": 0.47468,
+      "name": "small diamond",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2149,
+      "probability": 0.4647,
+      "name": "small emerald",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2150,
+      "probability": 0.46446,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7368,
+      "probability": 0.30015,
+      "name": "assassin star",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2147,
+      "probability": 0.23588,
+      "name": "small ruby",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 9970,
+      "probability": 0.22833,
+      "name": "small topaz",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7365,
+      "probability": 0.18427,
+      "name": "onyx arrow",
+      "min": 1,
+      "max": 15
+    },
+    {
+      "id": 2156,
+      "probability": 0.09056,
+      "name": "red gem"
+    },
+    {
+      "id": 2155,
+      "probability": 0.05672,
+      "name": "green gem"
+    },
+    {
+      "id": 2153,
+      "probability": 0.05331,
+      "name": "violet gem"
+    },
+    {
+      "id": 7632,
+      "probability": 0.01972,
+      "name": "giant shimmering pearl (green)"
+    },
+    {
+      "id": 31478,
+      "probability": 0.01266,
+      "name": "damaged armor plates"
+    },
+    {
+      "id": 31479,
+      "probability": 0.01047,
+      "name": "falcon crest"
+    },
+    {
+      "id": 2514,
+      "probability": 0.00414,
+      "name": "mastermind shield"
+    },
+    {
+      "id": 2466,
+      "probability": 0.00341,
+      "name": "golden armor"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

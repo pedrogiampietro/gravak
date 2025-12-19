@@ -79,7 +79,6 @@ UseHandler.prototype.handleItemUse = function (packet) {
     return;
   }
 
-  console.log("=== DEBUG handleItemUse ===");
   console.log("Packet which constructor:", packet.which.constructor.name);
   if (packet.which.constructor.name === "Tile") {
     console.log("Tile ID:", packet.which.id);
@@ -142,14 +141,12 @@ UseHandler.prototype.handleTileUse = function (tile) {
    * Handles the tile use event
    */
 
-  console.log("=== DEBUG handleTileUse ===");
   console.log("Player pos:", this.__player.position.toString());
   console.log("Tile pos:", tile.position.toString());
   console.log("Besides:", this.__player.position.besides(tile.position));
 
   // For the rest of the actions the player must be besides the tile
   if (!this.__player.position.besides(tile.position)) {
-    console.log("DEBUG: failed besides check");
     return null;
   }
 

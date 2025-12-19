@@ -1,0 +1,101 @@
+{
+  "creatureStatistics": {
+    "name": "Crystalcrusher",
+    "health": 570,
+    "maxHealth": 570,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 167,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 511
+    },
+    "armor": 20
+  },
+  "experience": 500,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 5,
+      "max": 15,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 129,
+      "max": 175,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 167
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 110,
+      "max": 260,
+      "radius": 3,
+      "target": true,
+      "areaEffect": "greenbubble"
+    }
+  ],
+  "elements": {
+    "death": 10,
+    "fire": 15,
+    "holy": -1,
+    "energy": -5,
+    "ice": -3
+  },
+  "immunities": {
+    "earth": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Creak!",
+      "Crunch!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.85,
+      "name": "gold coin",
+      "min": 1,
+      "max": 90
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "creatureStatistics": {
+    "name": "Coldheart",
+    "health": 7000,
+    "maxHealth": 7000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 195,
+    "attack": 220,
+    "attackSpeed": 2000,
+    "defense": 26,
+    "outfit": {
+      "id": 261
+    },
+    "armor": 25
+  },
+  "experience": 3500,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 220
+    },
+    {
+      "name": "ice",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 0,
+      "max": 710,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "icearea"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "ice": true,
+    "fire": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

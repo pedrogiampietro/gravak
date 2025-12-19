@@ -1,46 +1,71 @@
 {
   "creatureStatistics": {
     "name": "Rat",
-    "health": 2,
+    "health": 20,
+    "maxHealth": 20,
     "mana": 0,
     "maxMana": 0,
-    "maxHealth": 2000,
-    "attack": 20,
-    "attackSpeed": 40,
-    "defense": 5,
-    "speed": 300,
+    "speed": 134,
+    "attack": 8,
+    "attackSpeed": 2000,
+    "defense": 1,
     "outfit": {
       "id": 21
-    }
+    },
+    "armor": 1
   },
-  "fluidType": 0,
-  "experience": 50,
+  "experience": 5,
   "corpse": 2813,
+  "fluidType": 1,
   "behaviour": {
     "type": 2,
     "fleeHealth": 5,
-    "openDoors": true,
-    "senseInvisible": false,
-    "sayings": {
-      "texts": [
-        "Meep!"
-      ],
-      "slowness": 300,
-      "chance": 0.75
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 8
     }
+  ],
+  "elements": {
+    "earth": 20,
+    "holy": 20,
+    "ice": -10,
+    "death": -10
+  },
+  "sayings": {
+    "texts": [
+      "Meep!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
   },
   "loot": [
     {
       "id": 2148,
       "probability": 1,
+      "name": "gold coin",
       "min": 1,
       "max": 4
     },
     {
       "id": 2696,
-      "probability": 0.1,
-      "min": 1,
-      "max": 1
+      "probability": 0.3941
     }
-  ]
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
 }

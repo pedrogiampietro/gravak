@@ -1,0 +1,150 @@
+{
+  "creatureStatistics": {
+    "name": "Stone Devourer",
+    "health": 4200,
+    "maxHealth": 4200,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 990,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 486
+    },
+    "armor": 35
+  },
+  "experience": 2900,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 990
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 230,
+      "max": 460,
+      "range": 7,
+      "target": true,
+      "shootEffect": "smallearth",
+      "areaEffect": "stones"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 650,
+      "range": 7,
+      "target": true,
+      "shootEffect": "largerock"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 150,
+      "max": 260,
+      "length": 5,
+      "spread": 0,
+      "target": false,
+      "areaEffect": "stones"
+    }
+  ],
+  "elements": {
+    "death": 1,
+    "ice": 30,
+    "physical": 1,
+    "energy": 30,
+    "holy": 30
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "fire": true,
+    "earth": true
+  },
+  "sayings": {
+    "texts": [
+      "Rumble!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2152,
+      "probability": 0.92,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 2393,
+      "probability": 0.0057,
+      "name": "giant sword"
+    },
+    {
+      "id": 2271,
+      "probability": 0.1384,
+      "name": "strong health potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2270,
+      "probability": 0.149,
+      "name": "strong mana potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2273,
+      "probability": 0.1561,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2268,
+      "probability": 0.1505,
+      "name": "mana potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 8748,
+      "probability": 0.1136
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

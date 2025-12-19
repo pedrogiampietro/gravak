@@ -1,0 +1,109 @@
+{
+  "creatureStatistics": {
+    "name": "Shadow Fiend",
+    "health": 4000,
+    "maxHealth": 4000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 260,
+    "attack": 90,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 320
+    },
+    "armor": 30
+  },
+  "experience": 500,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.13,
+      "min": 160,
+      "max": 230,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 90
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.19,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "target": true,
+      "speedChange": -600,
+      "duration": 15000,
+      "areaEffect": "sleep"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.12,
+      "min": 360,
+      "max": 470,
+      "radius": 5,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "range": 6,
+      "radius": 4,
+      "speedChange": -600,
+      "duration": 20000,
+      "areaEffect": "smallclouds"
+    },
+    {
+      "name": "silencer skill reducer",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 0,
+      "max": 0,
+      "range": 4,
+      "areaEffect": "poff"
+    }
+  ],
+  "elements": {
+    "physical": 40,
+    "energy": 40,
+    "death": 40,
+    "ice": 40,
+    "holy": 40
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

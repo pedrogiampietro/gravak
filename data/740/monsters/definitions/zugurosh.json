@@ -1,0 +1,201 @@
+{
+  "creatureStatistics": {
+    "name": "Zugurosh",
+    "health": 90500,
+    "maxHealth": 90500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 340,
+    "attack": 715,
+    "attackSpeed": 2000,
+    "defense": 55,
+    "outfit": {
+      "id": 12
+    },
+    "armor": 45
+  },
+  "experience": 10000,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 400,
+      "max": 900,
+      "areaEffect": "greenshimmer"
+    },
+    {
+      "name": "invisible",
+      "interval": 1000,
+      "chance": 0.05,
+      "duration": 6000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 715
+    },
+    {
+      "name": "fire",
+      "interval": 3000,
+      "chance": 0.2,
+      "min": 250,
+      "max": 850,
+      "radius": 4,
+      "target": true,
+      "areaEffect": "explosion"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 100,
+      "max": 350,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "smallclouds"
+    },
+    {
+      "name": "manadrain",
+      "interval": 1000,
+      "chance": 0.13,
+      "min": 60,
+      "max": 230,
+      "radius": 5,
+      "target": false,
+      "areaEffect": "watersplash"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 500,
+      "length": 7,
+      "spread": 0,
+      "areaEffect": "mortarea"
+    }
+  ],
+  "elements": {
+    "ice": -15,
+    "energy": -5,
+    "earth": -8,
+    "fire": 25
+  },
+  "immunities": {
+    "death": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "You will run out of resources soon enough!!",
+      "One little mistake and your all are mine!",
+      "I sense your strength fading!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 50
+    },
+    {
+      "id": 2149,
+      "probability": 0.01428,
+      "name": "small emerald",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2151,
+      "probability": 0.06,
+      "name": "talon",
+      "min": 1,
+      "max": 11
+    },
+    {
+      "id": 2158,
+      "probability": 0.04444,
+      "name": "blue gem"
+    },
+    {
+      "id": 2171,
+      "probability": 0.02333,
+      "name": "platinum amulet"
+    },
+    {
+      "id": 2195,
+      "probability": 0.04444,
+      "name": "boots of haste"
+    },
+    {
+      "id": 2393,
+      "probability": 0.03,
+      "name": "giant sword"
+    },
+    {
+      "id": 2432,
+      "probability": 0.05555,
+      "name": "fire axe"
+    },
+    {
+      "id": 2462,
+      "probability": 0.097,
+      "name": "devil helmet"
+    },
+    {
+      "id": 2470,
+      "probability": 0.065,
+      "name": "golden legs"
+    },
+    {
+      "id": 2477,
+      "probability": 0.06666,
+      "name": "knight legs"
+    },
+    {
+      "id": 2520,
+      "probability": 0.09999,
+      "name": "demon shield"
+    },
+    {
+      "id": 6300,
+      "probability": 0.07777
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

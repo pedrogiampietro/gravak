@@ -1,0 +1,45 @@
+{
+  "creatureStatistics": {
+    "name": "Seagull",
+    "health": 25,
+    "maxHealth": 25,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 260,
+    "attack": 3,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 223
+    },
+    "armor": 5
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 25,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 3
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": 11
+  }
+}

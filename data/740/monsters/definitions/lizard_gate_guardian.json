@@ -1,0 +1,118 @@
+{
+  "creatureStatistics": {
+    "name": "Lizard Gate Guardian",
+    "health": 5000,
+    "maxHealth": 5000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 276,
+    "attack": 349,
+    "attackSpeed": 2000,
+    "defense": 40,
+    "outfit": {
+      "id": 343
+    },
+    "armor": 40
+  },
+  "experience": 2500,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 175,
+      "max": 275,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 349
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 220,
+      "max": 375,
+      "range": 7,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "poison",
+      "areaEffect": "poison"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 130
+    },
+    {
+      "id": 8473,
+      "probability": 0.57143,
+      "name": "ultimate health potion"
+    },
+    {
+      "id": 5876,
+      "probability": 0.14286,
+      "name": "lizard leather"
+    },
+    {
+      "id": 5881,
+      "probability": 0.14286,
+      "name": "lizard scale"
+    },
+    {
+      "id": 2152,
+      "probability": 0.14286,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 11303,
+      "probability": 0.14286,
+      "name": "zaoan shoes"
+    },
+    {
+      "id": 11301,
+      "probability": 0.04762,
+      "name": "zaoan armor"
+    },
+    {
+      "id": 11304,
+      "probability": 0.04762,
+      "name": "zaoan legs"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

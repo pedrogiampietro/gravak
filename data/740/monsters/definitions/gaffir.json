@@ -1,0 +1,140 @@
+{
+  "creatureStatistics": {
+    "name": "Gaffir",
+    "health": 48500,
+    "maxHealth": 48500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 190,
+    "attack": 550,
+    "attackSpeed": 2000,
+    "defense": 83,
+    "outfit": {
+      "id": 1217
+    },
+    "armor": 83
+  },
+  "experience": 25000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 550
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.08,
+      "min": 450,
+      "max": 650,
+      "radius": 3,
+      "areaEffect": "groundshaker"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 400,
+      "max": 580,
+      "length": 5,
+      "spread": 0,
+      "areaEffect": "explosion"
+    },
+    {
+      "name": "fire",
+      "interval": 3000,
+      "chance": 0.14,
+      "min": 500,
+      "max": 750,
+      "range": 4,
+      "target": true,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.16,
+      "min": 500,
+      "max": 620,
+      "range": 4,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "earth",
+      "areaEffect": "greenbubble"
+    },
+    {
+      "name": "earth",
+      "interval": 3000,
+      "chance": 0.12,
+      "min": 320,
+      "max": 500,
+      "radius": 2,
+      "areaEffect": "greenbubble"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "summons": [
+    {
+      "name": "Black Cobra",
+      "interval": 2000,
+      "chance": 0.1,
+      "maxSummons": 1
+    }
+  ],
+  "loot": [
+    {
+      "id": 9970,
+      "probability": 0.20163,
+      "name": "small topaz"
+    },
+    {
+      "id": 2146,
+      "probability": 0.19619,
+      "name": "small sapphire"
+    },
+    {
+      "id": 2145,
+      "probability": 0.17439,
+      "name": "small diamond"
+    },
+    {
+      "id": 2149,
+      "probability": 0.14714,
+      "name": "small emerald"
+    },
+    {
+      "id": 2147,
+      "probability": 0.14169,
+      "name": "small ruby"
+    },
+    {
+      "id": 2150,
+      "probability": 0.13896,
+      "name": "small amethyst"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

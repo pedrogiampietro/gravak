@@ -1,0 +1,71 @@
+{
+  "creatureStatistics": {
+    "name": "Gryphon",
+    "health": 3200,
+    "maxHealth": 3200,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 320,
+    "attack": 350,
+    "attackSpeed": 2000,
+    "defense": 76,
+    "outfit": {
+      "id": 1220
+    },
+    "armor": 76
+  },
+  "experience": 1000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 350
+    },
+    {
+      "name": "holy",
+      "interval": 2000,
+      "chance": 0.13,
+      "min": 250,
+      "max": 450,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "holyarea"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 200,
+      "max": 300,
+      "length": 3,
+      "spread": 0,
+      "target": false,
+      "areaEffect": "fire"
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

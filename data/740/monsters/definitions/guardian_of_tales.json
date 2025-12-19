@@ -1,0 +1,170 @@
+{
+  "creatureStatistics": {
+    "name": "Guardian Of Tales",
+    "health": 15000,
+    "maxHealth": 15000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 420,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 77,
+    "outfit": {
+      "id": 1063
+    },
+    "armor": 77
+  },
+  "experience": 9204,
+  "corpse": 2813,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 1000,
+      "max": 1600,
+      "range": 3,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "death"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 600,
+      "max": 800,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "fire"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 500,
+      "max": 650,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "fireattack"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 400,
+      "max": 750,
+      "length": 6,
+      "spread": 0,
+      "areaEffect": "explosionarea"
+    }
+  ],
+  "elements": {
+    "fire": 100,
+    "ice": -12,
+    "death": 50
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 0.85439,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 32
+    },
+    {
+      "id": 2145,
+      "probability": 0.57661,
+      "name": "small diamond",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 31225,
+      "probability": 0.44041,
+      "name": "book page",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 31226,
+      "probability": 0.38262,
+      "name": "glowing rune",
+      "min": 1,
+      "max": 8
+    },
+    {
+      "id": 2239,
+      "probability": 0.37948,
+      "name": "burnt scroll"
+    },
+    {
+      "id": 2187,
+      "probability": 0.09633,
+      "name": "wand of inferno"
+    },
+    {
+      "id": 5944,
+      "probability": 0.09543,
+      "name": "soul orb"
+    },
+    {
+      "id": 8901,
+      "probability": 0.05466,
+      "name": "spellbook of warding"
+    },
+    {
+      "id": 10581,
+      "probability": 0.05287,
+      "name": "piece of hellfire armor"
+    },
+    {
+      "id": 2432,
+      "probability": 0.03808,
+      "name": "fire axe"
+    },
+    {
+      "id": 2392,
+      "probability": 0.01389,
+      "name": "fire sword"
+    },
+    {
+      "id": 7894,
+      "probability": 0.00896,
+      "name": "magma legs"
+    },
+    {
+      "id": 7899,
+      "probability": 0.00851,
+      "name": "magma coat"
+    },
+    {
+      "id": 13757,
+      "probability": 0.00269,
+      "name": "coal"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

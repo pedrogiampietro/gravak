@@ -1,0 +1,167 @@
+{
+  "creatureStatistics": {
+    "name": "Orc Leader",
+    "health": 450,
+    "maxHealth": 450,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 230,
+    "attack": 185,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 59
+    },
+    "armor": 20
+  },
+  "experience": 270,
+  "corpse": 2860,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 185
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 70,
+      "range": 7,
+      "shootEffect": "throwingknife"
+    }
+  ],
+  "elements": {
+    "energy": 20,
+    "holy": 20,
+    "earth": -10,
+    "death": -10
+  },
+  "immunities": {
+    "invisible": true,
+    "fire": true
+  },
+  "sayings": {
+    "texts": [
+      "Ulderek futgyr human!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2667,
+      "probability": 0.30075,
+      "name": "fish"
+    },
+    {
+      "id": 2148,
+      "probability": 0.28207,
+      "name": "gold coin",
+      "min": 1,
+      "max": 35
+    },
+    {
+      "id": 12435,
+      "probability": 0.19721,
+      "name": "orc leather"
+    },
+    {
+      "id": 2510,
+      "probability": 0.1014,
+      "name": "plate shield"
+    },
+    {
+      "id": 2410,
+      "probability": 0.10007,
+      "name": "throwing knife",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2789,
+      "probability": 0.09833,
+      "name": "brown mushroom"
+    },
+    {
+      "id": 2207,
+      "probability": 0.03778,
+      "name": "sword ring"
+    },
+    {
+      "id": 2397,
+      "probability": 0.0297,
+      "name": "longsword"
+    },
+    {
+      "id": 7378,
+      "probability": 0.02647,
+      "name": "royal spear"
+    },
+    {
+      "id": 2478,
+      "probability": 0.02435,
+      "name": "brass legs"
+    },
+    {
+      "id": 2419,
+      "probability": 0.02191,
+      "name": "scimitar"
+    },
+    {
+      "id": 12436,
+      "probability": 0.02115,
+      "name": "skull belt"
+    },
+    {
+      "id": 2463,
+      "probability": 0.01597,
+      "name": "plate armor"
+    },
+    {
+      "id": 11113,
+      "probability": 0.01022,
+      "name": "orc tooth"
+    },
+    {
+      "id": 2413,
+      "probability": 0.00748,
+      "name": "broadsword"
+    },
+    {
+      "id": 7618,
+      "probability": 0.00583,
+      "name": "health potion"
+    },
+    {
+      "id": 2647,
+      "probability": 0.00396,
+      "name": "plate legs"
+    },
+    {
+      "id": 2475,
+      "probability": 0.00114,
+      "name": "warrior helmet"
+    }
+  ],
+  "flags": {
+    "summonable": true,
+    "attackable": true,
+    "convinceable": true,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

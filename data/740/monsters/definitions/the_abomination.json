@@ -1,0 +1,127 @@
+{
+  "creatureStatistics": {
+    "name": "The Abomination",
+    "health": 285000,
+    "maxHealth": 285000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 340,
+    "attack": 600,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 238
+    },
+    "armor": 25
+  },
+  "experience": 8500,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.75,
+      "min": 505,
+      "max": 605,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 600
+    },
+    {
+      "name": "speed",
+      "interval": 1000,
+      "chance": 0.12,
+      "min": 0,
+      "max": 0,
+      "radius": 6,
+      "target": false,
+      "speedChange": -800,
+      "duration": 10000,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "earth",
+      "interval": 1000,
+      "chance": 0.09,
+      "min": 200,
+      "max": 650,
+      "radius": 4,
+      "target": false,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 1000,
+      "chance": 0.11,
+      "min": 400,
+      "max": 900,
+      "radius": 4,
+      "target": true,
+      "areaEffect": "greennote",
+      "shootEffect": "poison"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.19,
+      "min": 350,
+      "max": 850,
+      "length": 7,
+      "shootEffect": "poison"
+    }
+  ],
+  "immunities": {
+    "earth": true,
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "DEATH IS INEVITABLE!",
+      "I AM THE ESSENCE OF DEATH!"
+    ],
+    "slowness": 1,
+    "chance": 0.02
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2152,
+      "probability": 0.1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 3
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

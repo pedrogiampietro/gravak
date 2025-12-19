@@ -1,0 +1,78 @@
+{
+  "creatureStatistics": {
+    "name": "Rocko",
+    "health": 10000,
+    "maxHealth": 10000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 180,
+    "attack": 190,
+    "attackSpeed": 2000,
+    "defense": 18,
+    "outfit": {
+      "id": 67
+    },
+    "armor": 10
+  },
+  "experience": 3400,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 190
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 125,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 411,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "groundshaker"
+    }
+  ],
+  "elements": {
+    "holy": -10,
+    "physical": 15,
+    "fire": 30,
+    "energy": 25,
+    "ice": 20
+  },
+  "immunities": {
+    "paralyze": true,
+    "earth": true,
+    "death": true,
+    "invisible": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

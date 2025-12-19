@@ -1,0 +1,215 @@
+{
+  "creatureStatistics": {
+    "name": "Elf Arcanist",
+    "health": 220,
+    "maxHealth": 220,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 220,
+    "attack": 35,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 63
+    },
+    "armor": 15
+  },
+  "experience": 175,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 40,
+      "max": 60,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 35
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 70,
+      "range": 7,
+      "shootEffect": "arrow"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 30,
+      "max": 50,
+      "range": 7,
+      "shootEffect": "energy",
+      "areaEffect": "energy"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 70,
+      "max": 85,
+      "range": 7,
+      "shootEffect": "suddendeath",
+      "areaEffect": "mortarea"
+    }
+  ],
+  "elements": {
+    "fire": 50,
+    "energy": 20,
+    "death": 20,
+    "holy": -10
+  },
+  "immunities": {
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Feel my wrath!",
+      "For the Daughter of the Stars!",
+      "I'll bring balance upon you!",
+      "Tha'shi Cenath!",
+      "Vihil Ealuel!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.37127,
+      "name": "gold coin",
+      "min": 1,
+      "max": 49
+    },
+    {
+      "id": 1949,
+      "probability": 0.305,
+      "name": "scroll"
+    },
+    {
+      "id": 2682,
+      "probability": 0.21814,
+      "name": "melon"
+    },
+    {
+      "id": 2260,
+      "probability": 0.17953,
+      "name": "blank rune"
+    },
+    {
+      "id": 2689,
+      "probability": 0.13899,
+      "name": "bread"
+    },
+    {
+      "id": 10552,
+      "probability": 0.1007,
+      "name": "elvish talisman"
+    },
+    {
+      "id": 12421,
+      "probability": 0.07786,
+      "name": "elven astral observer"
+    },
+    {
+      "id": 2652,
+      "probability": 0.07294,
+      "name": "green tunic"
+    },
+    {
+      "id": 2544,
+      "probability": 0.06127,
+      "name": "arrow",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2802,
+      "probability": 0.04846,
+      "name": "sling herb"
+    },
+    {
+      "id": 7618,
+      "probability": 0.0405,
+      "name": "health potion"
+    },
+    {
+      "id": 7589,
+      "probability": 0.02991,
+      "name": "strong mana potion"
+    },
+    {
+      "id": 2047,
+      "probability": 0.02192,
+      "name": "candlestick"
+    },
+    {
+      "id": 2198,
+      "probability": 0.02047,
+      "name": "elven amulet"
+    },
+    {
+      "id": 5922,
+      "probability": 0.02047,
+      "name": "holy orchid"
+    },
+    {
+      "id": 2189,
+      "probability": 0.01126,
+      "name": "wand of cosmic energy"
+    },
+    {
+      "id": 2177,
+      "probability": 0.01059,
+      "name": "life crystal"
+    },
+    {
+      "id": 2642,
+      "probability": 0.00974,
+      "name": "sandals"
+    },
+    {
+      "id": 2600,
+      "probability": 0.00951,
+      "name": "inkwell"
+    },
+    {
+      "id": 2747,
+      "probability": 0.00803,
+      "name": "grave flower"
+    },
+    {
+      "id": 2154,
+      "probability": 0.00048,
+      "name": "yellow gem"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": 4
+  }
+}

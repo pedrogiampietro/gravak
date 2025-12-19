@@ -1,0 +1,221 @@
+{
+  "creatureStatistics": {
+    "name": "Faun",
+    "health": 900,
+    "maxHealth": 900,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 210,
+    "attack": 370,
+    "attackSpeed": 2000,
+    "defense": 45,
+    "outfit": {
+      "id": 980
+    },
+    "armor": 45
+  },
+  "experience": 800,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 75,
+      "max": 90,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 370
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 60,
+      "max": 115,
+      "range": 7,
+      "target": true,
+      "shootEffect": "poison",
+      "areaEffect": "poison"
+    },
+    {
+      "name": "drunk",
+      "interval": 2000,
+      "chance": 0.11,
+      "min": 0,
+      "max": 0,
+      "length": 4,
+      "spread": 2,
+      "target": false,
+      "duration": 25000,
+      "areaEffect": "purplenote"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 0,
+      "max": 100,
+      "range": 7,
+      "shootEffect": "leafstar"
+    }
+  ],
+  "elements": {
+    "physical": 10,
+    "energy": -10,
+    "earth": 70,
+    "fire": -15,
+    "holy": 30,
+    "death": 20
+  },
+  "immunities": {
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "In vino veritas! Hahaha!",
+      "Wine, women and song!",
+      "Are you posing a threat to this realm? I suppose so."
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 191
+    },
+    {
+      "id": 28351,
+      "probability": 0.15328,
+      "name": "dandelion seeds"
+    },
+    {
+      "id": 7588,
+      "probability": 0.12058,
+      "name": "strong health potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 28349,
+      "probability": 0.0981,
+      "name": "shimmering beetles"
+    },
+    {
+      "id": 28348,
+      "probability": 0.0926,
+      "name": "fresh fruit"
+    },
+    {
+      "id": 28391,
+      "probability": 0.0808,
+      "name": "leaf star",
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 2760,
+      "probability": 0.0764,
+      "name": "goat grass"
+    },
+    {
+      "id": 2687,
+      "probability": 0.06021,
+      "name": "cookie",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 28393,
+      "probability": 0.05644,
+      "name": "rainbow quartz",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2074,
+      "probability": 0.05612,
+      "name": "panpipes"
+    },
+    {
+      "id": 1294,
+      "probability": 0.05392,
+      "name": "small stone",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2681,
+      "probability": 0.05266,
+      "name": "grapes"
+    },
+    {
+      "id": 7591,
+      "probability": 0.03459,
+      "name": "great health potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 7759,
+      "probability": 0.0239,
+      "name": "small enchanted sapphire",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2664,
+      "probability": 0.02232,
+      "name": "wood cape"
+    },
+    {
+      "id": 9928,
+      "probability": 0.00566,
+      "name": "leaf legs"
+    },
+    {
+      "id": 28355,
+      "probability": 0.00424,
+      "name": "wooden spellbook"
+    },
+    {
+      "id": 5792,
+      "probability": 0.00079,
+      "name": "die"
+    },
+    {
+      "id": 5015,
+      "probability": 0.00016,
+      "name": "mandrake"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

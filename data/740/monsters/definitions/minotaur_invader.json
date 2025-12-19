@@ -1,0 +1,164 @@
+{
+  "creatureStatistics": {
+    "name": "Minotaur Invader",
+    "health": 1850,
+    "maxHealth": 1850,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 240,
+    "attack": 350,
+    "attackSpeed": 2000,
+    "defense": 40,
+    "outfit": {
+      "id": 29
+    },
+    "armor": 40
+  },
+  "experience": 1600,
+  "corpse": 2830,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 350
+    }
+  ],
+  "elements": {
+    "fire": 20,
+    "ice": -10,
+    "holy": 10,
+    "death": -10
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "sayings": {
+    "texts": [
+      "For the victory!",
+      "We will crush the enemy!"
+    ],
+    "slowness": 1,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 200
+    },
+    {
+      "id": 2152,
+      "probability": 0.49284,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 12438,
+      "probability": 0.14792,
+      "name": "piece of warrior armor"
+    },
+    {
+      "id": 9970,
+      "probability": 0.10395,
+      "name": "small topaz",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 12428,
+      "probability": 0.08248,
+      "name": "minotaur horn",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 5878,
+      "probability": 0.05521,
+      "name": "minotaur leather"
+    },
+    {
+      "id": 2150,
+      "probability": 0.05249,
+      "name": "small amethyst"
+    },
+    {
+      "id": 2147,
+      "probability": 0.04618,
+      "name": "small ruby"
+    },
+    {
+      "id": 23537,
+      "probability": 0.00937,
+      "name": "mooh'tah plate"
+    },
+    {
+      "id": 5912,
+      "probability": 0.00801,
+      "name": "blue piece of cloth"
+    },
+    {
+      "id": 2156,
+      "probability": 0.00784,
+      "name": "red gem"
+    },
+    {
+      "id": 2430,
+      "probability": 0.0075,
+      "name": "knight axe"
+    },
+    {
+      "id": 2515,
+      "probability": 0.00699,
+      "name": "guardian shield"
+    },
+    {
+      "id": 5911,
+      "probability": 0.00682,
+      "name": "red piece of cloth"
+    },
+    {
+      "id": 2475,
+      "probability": 0.00596,
+      "name": "warrior helmet"
+    },
+    {
+      "id": 7413,
+      "probability": 0.00204,
+      "name": "titan axe"
+    },
+    {
+      "id": 2158,
+      "probability": 0.00187,
+      "name": "blue gem"
+    },
+    {
+      "id": 7401,
+      "probability": 0.00187,
+      "name": "minotaur trophy"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

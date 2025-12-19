@@ -1,0 +1,111 @@
+{
+  "creatureStatistics": {
+    "name": "Furious Scorpion",
+    "health": 15000,
+    "maxHealth": 15000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 200,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 398
+    },
+    "armor": 30
+  },
+  "experience": 12000,
+  "corpse": 2897,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 200
+    },
+    {
+      "name": "physical",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 180,
+      "range": 7,
+      "shootEffect": "snowball",
+      "areaEffect": "poff"
+    },
+    {
+      "name": "energy",
+      "interval": 1000,
+      "chance": 0.12,
+      "min": 0,
+      "max": 175,
+      "length": 3,
+      "spread": 3,
+      "areaEffect": "poff"
+    }
+  ],
+  "elements": {
+    "earth": 70
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2148,
+      "probability": 0.93478,
+      "name": "gold coin",
+      "min": 1,
+      "max": 117
+    },
+    {
+      "id": 2439,
+      "probability": 0.19565,
+      "name": "daramian mace"
+    },
+    {
+      "id": 3351,
+      "probability": 0.19565,
+      "name": "steel helmet"
+    },
+    {
+      "id": 2149,
+      "probability": 0.1087,
+      "name": "small emerald",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2529,
+      "probability": 0.04348,
+      "name": "black shield"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

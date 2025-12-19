@@ -1,0 +1,142 @@
+{
+  "creatureStatistics": {
+    "name": "The Weakened Count",
+    "health": 740,
+    "maxHealth": 740,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 238,
+    "attack": 190,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 68
+    },
+    "armor": 30
+  },
+  "experience": 450,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "speedChange": 300,
+      "duration": 3000,
+      "areaEffect": "redshimmer"
+    },
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 15,
+      "max": 25
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 190
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 95,
+      "range": 1,
+      "target": true,
+      "areaEffect": "smallclouds"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 1,
+      "target": true,
+      "speedChange": -400,
+      "duration": 60000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "physical": 10,
+    "fire": -10,
+    "holy": -10
+  },
+  "immunities": {
+    "lifedrain": true,
+    "paralyze": true,
+    "invisible": true,
+    "earth": true,
+    "death": true
+  },
+  "sayings": {
+    "texts": [
+      "1... 2... 2... Uh, can't concentrate."
+    ],
+    "slowness": 1,
+    "chance": 0.02
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 92
+    },
+    {
+      "id": 2747,
+      "probability": 0.0191,
+      "name": "grave flower"
+    },
+    {
+      "id": 2271,
+      "probability": 0.015,
+      "name": "strong health potion"
+    },
+    {
+      "id": 2383,
+      "probability": 0.01,
+      "name": "spike sword"
+    },
+    {
+      "id": 2229,
+      "probability": 0.01,
+      "name": "skull"
+    },
+    {
+      "id": 2396,
+      "probability": 0.0047,
+      "name": "ice rapier"
+    },
+    {
+      "id": 2534,
+      "probability": 0.002,
+      "name": "vampire shield"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

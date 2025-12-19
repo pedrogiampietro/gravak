@@ -1,0 +1,100 @@
+{
+  "creatureStatistics": {
+    "name": "Somewhat Beatable Dragon",
+    "health": 1900,
+    "maxHealth": 1900,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 230,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 39
+    },
+    "armor": 35
+  },
+  "experience": 0,
+  "corpse": 2844,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 300,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 57,
+      "max": 93,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 230
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 100,
+      "max": 200,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "fire",
+      "areaEffect": "firearea"
+    },
+    {
+      "name": "firefield",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "fire"
+    },
+    {
+      "name": "fire",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 150,
+      "max": 230,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "firearea"
+    }
+  ],
+  "elements": {
+    "earth": 80,
+    "energy": 20,
+    "ice": -10
+  },
+  "immunities": {
+    "paralyze": true,
+    "drunk": true,
+    "lifedrain": true,
+    "invisible": true,
+    "fire": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

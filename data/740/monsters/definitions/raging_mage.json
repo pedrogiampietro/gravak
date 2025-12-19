@@ -1,0 +1,241 @@
+{
+  "creatureStatistics": {
+    "name": "Raging Mage",
+    "health": 3500,
+    "maxHealth": 3500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 200,
+    "attack": 78,
+    "attackSpeed": 2000,
+    "defense": 25,
+    "outfit": {
+      "id": 416
+    },
+    "armor": 25
+  },
+  "experience": 3250,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 300,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 78
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.35,
+      "min": 100,
+      "max": 200,
+      "range": 7,
+      "radius": 5,
+      "target": true,
+      "shootEffect": "energyball",
+      "areaEffect": "energy"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 100,
+      "max": 200,
+      "range": 7
+    },
+    {
+      "name": "energyfield",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 2,
+      "target": true,
+      "shootEffect": "energy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 101,
+      "max": 300,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "bigclouds"
+    }
+  ],
+  "elements": {
+    "physical": -25,
+    "death": 15
+  },
+  "immunities": {
+    "energy": true,
+    "outfit": true,
+    "fire": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "golden servant",
+      "interval": 2000,
+      "chance": 0.5,
+      "maxSummons": 1
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "Behold the all permeating powers I draw from this gate!!",
+      "ENERGY!!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.97633,
+      "name": "gold coin",
+      "min": 1,
+      "max": 250
+    },
+    {
+      "id": 2152,
+      "probability": 0.78107,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 12
+    },
+    {
+      "id": 5911,
+      "probability": 0.30769,
+      "name": "red piece of cloth"
+    },
+    {
+      "id": 7591,
+      "probability": 0.27219,
+      "name": "great health potion",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 7590,
+      "probability": 0.23077,
+      "name": "great mana potion",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 2178,
+      "probability": 0.10651,
+      "name": "mind stone"
+    },
+    {
+      "id": 7443,
+      "probability": 0.06509,
+      "name": "bullseye potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 8871,
+      "probability": 0.04734,
+      "name": "focus cape"
+    },
+    {
+      "id": 2165,
+      "probability": 0.04734,
+      "name": "stealth ring"
+    },
+    {
+      "id": 12410,
+      "probability": 0.04142,
+      "name": "luminous orb"
+    },
+    {
+      "id": 2792,
+      "probability": 0.0355,
+      "name": "dark mushroom",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2124,
+      "probability": 0.02367,
+      "name": "crystal ring"
+    },
+    {
+      "id": 2146,
+      "probability": 0.02367,
+      "name": "small sapphire",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": 7368,
+      "probability": 0.02367,
+      "name": "assassin star",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2123,
+      "probability": 0.01775,
+      "name": "ring of the sky"
+    },
+    {
+      "id": 13940,
+      "probability": 0.01183,
+      "name": "elemental spikes"
+    },
+    {
+      "id": 2114,
+      "probability": 0.01183,
+      "name": "piggy bank"
+    },
+    {
+      "id": 9958,
+      "probability": 0.01183,
+      "name": "royal tapestry"
+    },
+    {
+      "id": 2195,
+      "probability": 0.00592,
+      "name": "boots of haste"
+    },
+    {
+      "id": 9980,
+      "probability": 0.00592,
+      "name": "crystal of power"
+    },
+    {
+      "id": 5741,
+      "probability": 0.00592,
+      "name": "skull helmet"
+    },
+    {
+      "id": 8902,
+      "probability": 0.00592,
+      "name": "spellbook of mind control"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

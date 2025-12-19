@@ -1,0 +1,79 @@
+{
+  "creatureStatistics": {
+    "name": "Ascending Ferumbras",
+    "health": 150000,
+    "maxHealth": 150000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 100,
+    "attack": 200,
+    "attackSpeed": 2000,
+    "defense": 0,
+    "outfit": {
+      "id": 844
+    }
+  },
+  "experience": 12000,
+  "corpse": 2813,
+  "fluidType": 3,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 200
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 425,
+      "max": 810,
+      "radius": 9,
+      "target": false,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.21,
+      "min": 400,
+      "max": 650,
+      "radius": 9,
+      "target": false,
+      "areaEffect": "energy"
+    }
+  ],
+  "immunities": {
+    "lifedrain": true,
+    "paralyze": true,
+    "outfit": true,
+    "drunk": true,
+    "invisible": true,
+    "physical": true,
+    "holy": true,
+    "fire": true,
+    "energy": true,
+    "earth": true,
+    "ice": true,
+    "death": true,
+    "drown": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

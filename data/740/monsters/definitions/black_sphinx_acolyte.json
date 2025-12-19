@@ -1,0 +1,136 @@
+{
+  "creatureStatistics": {
+    "name": "Black Sphinx Acolyte",
+    "health": 8100,
+    "maxHealth": 8100,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 310,
+    "attack": 400,
+    "attackSpeed": 2000,
+    "defense": 82,
+    "outfit": {
+      "id": 1200
+    },
+    "armor": 82
+  },
+  "experience": 7200,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 400
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 300,
+      "max": 400,
+      "radius": 3,
+      "areaEffect": "smallplants"
+    },
+    {
+      "name": "death",
+      "interval": 2000,
+      "chance": 0.13,
+      "min": 400,
+      "max": 450,
+      "range": 4,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "suddendeath",
+      "areaEffect": "mortarea"
+    }
+  ],
+  "elements": {
+    "earth": 90
+  },
+  "immunities": {
+    "death": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "Darkness is the mother of all knowledge!",
+      "Get thee gone, unworthy!",
+      "The Black Sphinx will prevail!"
+    ],
+    "slowness": 2,
+    "chance": 0.05
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 2182,
+      "probability": 0.07247,
+      "name": "snakebite rod"
+    },
+    {
+      "id": 8910,
+      "probability": 0.06649,
+      "name": "underworld rod"
+    },
+    {
+      "id": 18413,
+      "probability": 0.06449,
+      "name": "blue crystal shard"
+    },
+    {
+      "id": 24850,
+      "probability": 0.03291,
+      "name": "opal",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2153,
+      "probability": 0.03225,
+      "name": "violet gem"
+    },
+    {
+      "id": 8922,
+      "probability": 0.0246,
+      "name": "wand of voodoo"
+    },
+    {
+      "id": 33987,
+      "probability": 0.02261,
+      "name": "empty honey glass"
+    },
+    {
+      "id": 7761,
+      "probability": 0.02161,
+      "name": "small enchanted emerald",
+      "min": 1,
+      "max": 3
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

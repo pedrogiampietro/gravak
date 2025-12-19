@@ -1,0 +1,95 @@
+{
+  "creatureStatistics": {
+    "name": "Kraknaknork's Demon",
+    "health": 120,
+    "maxHealth": 120,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 400,
+    "attack": 499,
+    "attackSpeed": 2000,
+    "defense": 0,
+    "outfit": {
+      "id": 12
+    }
+  },
+  "experience": 0,
+  "corpse": 2916,
+  "fluidType": 0,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 499
+    },
+    {
+      "name": "fire",
+      "interval": 3000,
+      "chance": 0.2,
+      "min": 10,
+      "max": 40,
+      "radius": 4,
+      "target": true,
+      "areaEffect": "explosion"
+    }
+  ],
+  "elements": {
+    "ice": -15,
+    "energy": -5,
+    "earth": -8,
+    "fire": 25
+  },
+  "immunities": {
+    "death": true,
+    "paralyze": true,
+    "invisible": true
+  },
+  "sayings": {
+    "texts": [
+      "STEP A BIT CLOSER, RIGHT THERE, HAHAHA!",
+      "COME AND DIE!",
+      "ROOKIE FOR BREAKFAST"
+    ],
+    "slowness": 5,
+    "chance": 1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.48025,
+      "name": "gold coin",
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": 2148,
+      "probability": 0.48025,
+      "name": "gold coin",
+      "min": 1,
+      "max": 86
+    },
+    {
+      "id": 2148,
+      "probability": 0.244,
+      "name": "gold coin"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

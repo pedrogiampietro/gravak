@@ -1,0 +1,94 @@
+{
+  "creatureStatistics": {
+    "name": "Monstor",
+    "health": 960,
+    "maxHealth": 960,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 350,
+    "attack": 167,
+    "attackSpeed": 1200,
+    "defense": 15,
+    "outfit": {
+      "id": 244
+    },
+    "armor": 15
+  },
+  "experience": 575,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 90,
+      "max": 200,
+      "areaEffect": "fire"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 1200,
+      "chance": 1,
+      "min": 0,
+      "max": 167
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 66,
+      "max": 85,
+      "length": 6,
+      "spread": 0,
+      "areaEffect": "greenshimmer"
+    }
+  ],
+  "elements": {
+    "physical": 20,
+    "fire": 50,
+    "ice": 10,
+    "earth": 30,
+    "energy": -7,
+    "holy": -3
+  },
+  "immunities": {
+    "lifedrain": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Acid Blob",
+      "interval": 4000,
+      "chance": 0.4,
+      "maxSummons": 3
+    }
+  ],
+  "sayings": {
+    "texts": [
+      "NO ARMY ME STOPPING! GRARR!",
+      "ME DESTROY CITY! GROAR!",
+      "WHARR! MUST ... KIDNAP WOMEN!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "creatureStatistics": {
+    "name": "Mazzinor",
+    "health": 300000,
+    "maxHealth": 300000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 900,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 1062
+    },
+    "armor": 30
+  },
+  "experience": 100000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 900
+    },
+    {
+      "name": "holy",
+      "interval": 1000,
+      "chance": 0.15,
+      "min": 135,
+      "max": 700,
+      "range": 7,
+      "shootEffect": "holy",
+      "areaEffect": "holydamage"
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 90,
+      "max": 500,
+      "range": 7,
+      "shootEffect": "spear"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 135,
+      "max": 280,
+      "range": 7,
+      "radius": 5,
+      "target": true,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 210,
+      "max": 600,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "energyarea"
+    },
+    {
+      "name": "holy",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 210,
+      "max": 700,
+      "length": 8,
+      "spread": 3,
+      "areaEffect": "holyarea"
+    }
+  ],
+  "elements": {
+    "energy": 5
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2152,
+      "probability": 1,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 74
+    },
+    {
+      "id": 25172,
+      "probability": 1,
+      "name": "silver token",
+      "min": 1,
+      "max": 11
+    },
+    {
+      "id": 2197,
+      "probability": 1,
+      "name": "stone skin amulet"
+    },
+    {
+      "id": 2160,
+      "probability": 0.83333,
+      "name": "crystal coin",
+      "min": 1,
+      "max": 9
+    },
+    {
+      "id": 26031,
+      "probability": 0.83333,
+      "name": "supreme health potion",
+      "min": 1,
+      "max": 12
+    },
+    {
+      "id": 26029,
+      "probability": 0.83333,
+      "name": "ultimate mana potion",
+      "min": 1,
+      "max": 11
+    },
+    {
+      "id": 7443,
+      "probability": 0.66667,
+      "name": "bullseye potion"
+    },
+    {
+      "id": 7419,
+      "probability": 0.5,
+      "name": "dreaded cleaver"
+    },
+    {
+      "id": 5904,
+      "probability": 0.5,
+      "name": "magic sulphur"
+    },
+    {
+      "id": 24849,
+      "probability": 0.5,
+      "name": "onyx chip",
+      "min": 1,
+      "max": 14
+    },
+    {
+      "id": 2147,
+      "probability": 0.5,
+      "name": "small ruby",
+      "min": 1,
+      "max": 12
+    },
+    {
+      "id": 8920,
+      "probability": 0.5,
+      "name": "wand of starstorm"
+    },
+    {
+      "id": 2136,
+      "probability": 0.33333,
+      "name": "demonbone amulet"
+    },
+    {
+      "id": 32716,
+      "probability": 0.33333,
+      "name": "giant emerald"
+    },
+    {
+      "id": 7632,
+      "probability": 0.33333,
+      "name": "giant shimmering pearl"
+    },
+    {
+      "id": 7440,
+      "probability": 0.33333,
+      "name": "mastermind potion",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 9816,
+      "probability": 0.33333,
+      "name": "slightly rusted shield"
+    },
+    {
+      "id": 9970,
+      "probability": 0.33333,
+      "name": "small topaz",
+      "min": 1,
+      "max": 9
+    },
+    {
+      "id": 7439,
+      "probability": 0.16667,
+      "name": "berserk potion"
+    },
+    {
+      "id": 5954,
+      "probability": 0.16667,
+      "name": "demon horn"
+    },
+    {
+      "id": 6500,
+      "probability": 0.16667,
+      "name": "demonic essence"
+    },
+    {
+      "id": 25377,
+      "probability": 0.16667,
+      "name": "gold token"
+    },
+    {
+      "id": 2155,
+      "probability": 0.16667,
+      "name": "green gem"
+    },
+    {
+      "id": 7893,
+      "probability": 0.16667,
+      "name": "lightning boots"
+    },
+    {
+      "id": 7898,
+      "probability": 0.16667,
+      "name": "lightning robe"
+    },
+    {
+      "id": 2156,
+      "probability": 0.16667,
+      "name": "red gem"
+    },
+    {
+      "id": 9822,
+      "probability": 0.16667,
+      "name": "slightly rusted helmet"
+    },
+    {
+      "id": 26030,
+      "probability": 0.16667,
+      "name": "ultimate spirit potion"
+    },
+    {
+      "id": 2154,
+      "probability": 0.16667,
+      "name": "yellow gem"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

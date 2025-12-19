@@ -1,0 +1,45 @@
+{
+  "creatureStatistics": {
+    "name": "Pigeon",
+    "health": 30,
+    "maxHealth": 30,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 260,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 5,
+    "outfit": {
+      "id": 531
+    },
+    "armor": 5
+  },
+  "experience": 0,
+  "corpse": 2909,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 30,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "sayings": {
+    "texts": [
+      "Coooo! Cooo!",
+      "Coo! Coooo! Coo! Cooo!",
+      "Coo! Coo! Coooo!"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

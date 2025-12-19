@@ -1,0 +1,185 @@
+{
+  "creatureStatistics": {
+    "name": "Zulazza the Corruptor",
+    "health": 46500,
+    "maxHealth": 46500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 290,
+    "attack": 2100,
+    "attackSpeed": 2000,
+    "defense": 119,
+    "outfit": {
+      "id": 334
+    },
+    "armor": 96
+  },
+  "experience": 10000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 1500,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 2000,
+      "max": 3000,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 2100
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.4,
+      "min": 500,
+      "max": 800,
+      "length": 8,
+      "spread": 0,
+      "areaEffect": "mortarea"
+    },
+    {
+      "name": "earth",
+      "interval": 2000,
+      "chance": 0.3,
+      "min": 300,
+      "max": 800,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "poison"
+    },
+    {
+      "name": "manadrain",
+      "interval": 2000,
+      "chance": 0.25,
+      "min": 50,
+      "max": 130,
+      "range": 7,
+      "target": true,
+      "areaEffect": "greenshimmer"
+    },
+    {
+      "name": "speed",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "speedChange": -500,
+      "duration": 20000,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "ice": 20,
+    "holy": 20,
+    "death": 30,
+    "earth": 70
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "energy": true
+  },
+  "sayings": {
+    "texts": [
+      "I'm Zulazza, and you won't forget me that fazzt.",
+      "Oh, HE will take revenge on zzizz azzault when you zztep in front of HIZZ fazze!"
+    ],
+    "slowness": 2,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 98
+    },
+    {
+      "id": 2152,
+      "probability": 0.71429,
+      "name": "platinum coin",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 2155,
+      "probability": 0.42857,
+      "name": "green gem"
+    },
+    {
+      "id": 2154,
+      "probability": 0.42857,
+      "name": "yellow gem"
+    },
+    {
+      "id": 2127,
+      "probability": 0.28571,
+      "name": "emerald bangle"
+    },
+    {
+      "id": 7591,
+      "probability": 0.28571,
+      "name": "great health potion",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 8472,
+      "probability": 0.28571,
+      "name": "great spirit potion",
+      "min": 1,
+      "max": 7
+    },
+    {
+      "id": 2156,
+      "probability": 0.28571,
+      "name": "red gem"
+    },
+    {
+      "id": 5944,
+      "probability": 0.28571,
+      "name": "soul orb"
+    },
+    {
+      "id": 2158,
+      "probability": 0.14286,
+      "name": "blue gem"
+    },
+    {
+      "id": 9810,
+      "probability": 0.14286,
+      "name": "slightly rusted armor"
+    },
+    {
+      "id": 11118,
+      "probability": 0.005,
+      "name": "dragon scale boots"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

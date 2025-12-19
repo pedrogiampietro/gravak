@@ -1,0 +1,76 @@
+{
+  "creatureStatistics": {
+    "name": "Museum Stone Golem",
+    "health": 270,
+    "maxHealth": 270,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 180,
+    "attack": 100,
+    "attackSpeed": 2000,
+    "defense": 30,
+    "outfit": {
+      "id": 67
+    },
+    "armor": 30
+  },
+  "experience": 160,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 100
+    }
+  ],
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 1,
+      "name": "gold coin",
+      "min": 1,
+      "max": 35
+    },
+    {
+      "id": 5880,
+      "probability": 0.03571,
+      "name": "iron ore"
+    },
+    {
+      "id": 2166,
+      "probability": 0.03571,
+      "name": "power ring"
+    },
+    {
+      "id": 1294,
+      "probability": 0.03571,
+      "name": "small stone",
+      "min": 1,
+      "max": 2
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

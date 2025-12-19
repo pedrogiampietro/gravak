@@ -1,0 +1,117 @@
+{
+  "creatureStatistics": {
+    "name": "Countess Sorrow",
+    "health": 6500,
+    "maxHealth": 6500,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 360,
+    "attackSpeed": 2000,
+    "defense": 20,
+    "outfit": {
+      "id": 241
+    },
+    "armor": 25
+  },
+  "experience": 13000,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 1000,
+      "chance": 0.5,
+      "min": 409,
+      "max": 812,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 360
+    },
+    {
+      "name": "earth",
+      "interval": 1000,
+      "chance": 0.1,
+      "min": 150,
+      "max": 350,
+      "range": 7,
+      "radius": 4,
+      "target": true,
+      "shootEffect": "poison",
+      "areaEffect": "poison"
+    },
+    {
+      "name": "poisonfield",
+      "interval": 1000,
+      "chance": 0.17,
+      "min": 0,
+      "max": 0,
+      "range": 7,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "poison"
+    },
+    {
+      "name": "manadrain",
+      "interval": 1000,
+      "chance": 0.25,
+      "min": 100,
+      "max": 400,
+      "range": 7,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "energy": 10,
+    "ice": 50,
+    "fire": -10
+  },
+  "immunities": {
+    "physical": true,
+    "earth": true,
+    "death": true,
+    "lifedrain": true,
+    "paralyze": true,
+    "outfit": true,
+    "drunk": true,
+    "invisible": true
+  },
+  "summons": [
+    {
+      "name": "Phantasm",
+      "interval": 2000,
+      "chance": 0.2,
+      "maxSummons": 3
+    },
+    {
+      "name": "Phantasm Summon",
+      "interval": 2000,
+      "chance": 0.2,
+      "maxSummons": 3
+    }
+  ],
+  "loot": [],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "creatureStatistics": {
+    "name": "Mushroom Sniffer",
+    "health": 250,
+    "maxHealth": 250,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 120,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 0,
+    "outfit": {
+      "id": 60
+    }
+  },
+  "experience": 0,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 25,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "elements": {
+    "earth": 90,
+    "ice": 90,
+    "energy": 90,
+    "fire": 90,
+    "death": 90,
+    "holy": 90,
+    "physical": 90
+  },
+  "sayings": {
+    "texts": [
+      "Sniff",
+      "Oink",
+      "Oink oink"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "creatureStatistics": {
+    "name": "Undead Mine Worker",
+    "health": 65,
+    "maxHealth": 65,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 150,
+    "attack": 30,
+    "attackSpeed": 2000,
+    "defense": 15,
+    "outfit": {
+      "id": 33
+    },
+    "armor": 15
+  },
+  "experience": 45,
+  "corpse": 2813,
+  "fluidType": 2,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 30
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 7,
+      "max": 13,
+      "range": 1,
+      "areaEffect": "redshimmer"
+    }
+  ],
+  "elements": {
+    "holy": -5
+  },
+  "immunities": {
+    "death": true
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.73,
+      "name": "gold coin",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2230,
+      "probability": 0.42
+    },
+    {
+      "id": 2376,
+      "probability": 0.0385
+    },
+    {
+      "id": 2398,
+      "probability": 0.269,
+      "name": "mace"
+    },
+    {
+      "id": 2787,
+      "probability": 0.154,
+      "name": "white mushroom",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2789,
+      "probability": 0.0385,
+      "name": "brown mushroom"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

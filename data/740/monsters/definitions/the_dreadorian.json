@@ -1,0 +1,66 @@
+{
+  "creatureStatistics": {
+    "name": "The Dreadorian",
+    "health": 9000,
+    "maxHealth": 9000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 250,
+    "attack": 370,
+    "attackSpeed": 2000,
+    "defense": 35,
+    "outfit": {
+      "id": 234
+    },
+    "armor": 25
+  },
+  "experience": 4000,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.5,
+      "min": 100,
+      "max": 150,
+      "areaEffect": "blueshimmer"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 370
+    }
+  ],
+  "elements": {
+    "earth": 90,
+    "energy": 30,
+    "death": 10,
+    "ice": -10,
+    "holy": -10
+  },
+  "immunities": {
+    "invisible": true,
+    "fire": true
+  },
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "creatureStatistics": {
+    "name": "Energuardian Of Tales",
+    "health": 14000,
+    "maxHealth": 14000,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 420,
+    "attack": 0,
+    "attackSpeed": 2000,
+    "defense": 77,
+    "outfit": {
+      "id": 1063
+    },
+    "armor": 77
+  },
+  "experience": 11361,
+  "corpse": 2813,
+  "fluidType": 4,
+  "behaviour": {
+    "type": 0,
+    "fleeHealth": 0,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 1200,
+      "max": 1600,
+      "range": 3,
+      "radius": 1,
+      "target": true,
+      "shootEffect": "energy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 650,
+      "max": 800,
+      "radius": 3,
+      "target": false,
+      "areaEffect": "energyarea"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 550,
+      "max": 650,
+      "radius": 3,
+      "target": true,
+      "shootEffect": "energyball",
+      "areaEffect": "energyarea"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 650,
+      "max": 850,
+      "length": 6,
+      "spread": 0,
+      "areaEffect": "purpleenergy"
+    }
+  ],
+  "elements": {
+    "energy": 100,
+    "earth": -12
+  },
+  "immunities": {
+    "paralyze": true,
+    "invisible": true,
+    "drunk": true
+  },
+  "loot": [
+    {
+      "id": 31225,
+      "probability": 0.58678,
+      "name": "book page",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": 2150,
+      "probability": 0.55619,
+      "name": "small amethyst",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 31226,
+      "probability": 0.20288,
+      "name": "glowing rune",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 8473,
+      "probability": 0.13235,
+      "name": "ultimate health potion"
+    },
+    {
+      "id": 8901,
+      "probability": 0.09114,
+      "name": "spellbook of warding"
+    },
+    {
+      "id": 26029,
+      "probability": 0.09003,
+      "name": "ultimate mana potion"
+    },
+    {
+      "id": 7895,
+      "probability": 0.07703,
+      "name": "lightning legs"
+    },
+    {
+      "id": 7838,
+      "probability": 0.07497,
+      "name": "flash arrow",
+      "min": 1,
+      "max": 15
+    },
+    {
+      "id": 8920,
+      "probability": 0.07133,
+      "name": "wand of starstorm"
+    },
+    {
+      "id": 7889,
+      "probability": 0.04105,
+      "name": "lightning pendant",
+      "min": 1,
+      "max": 2
+    },
+    {
+      "id": 2164,
+      "probability": 0.02441,
+      "name": "might ring"
+    },
+    {
+      "id": 2171,
+      "probability": 0.02346,
+      "name": "platinum amulet"
+    },
+    {
+      "id": 18390,
+      "probability": 0.01268,
+      "name": "wand of defiance"
+    },
+    {
+      "id": 11355,
+      "probability": 0.00888,
+      "name": "spellweaver's robe"
+    },
+    {
+      "id": 10221,
+      "probability": 0.00697,
+      "name": "shockwave amulet"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": false,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": true,
+    "illusionable": false,
+    "targetDistance": true
+  }
+}

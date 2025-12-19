@@ -1,0 +1,127 @@
+{
+  "creatureStatistics": {
+    "name": "Dworc Fleshhunter",
+    "health": 85,
+    "maxHealth": 85,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 148,
+    "attack": 25,
+    "attackSpeed": 2000,
+    "defense": 3,
+    "outfit": {
+      "id": 215
+    },
+    "armor": 3
+  },
+  "experience": 40,
+  "corpse": 2820,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 8,
+    "openDoors": false,
+    "senseInvisible": false
+  },
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 25
+    },
+    {
+      "name": "physical",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 0,
+      "max": 15,
+      "range": 7,
+      "shootEffect": "throwingknife"
+    }
+  ],
+  "elements": {
+    "death": -13,
+    "fire": -8,
+    "ice": -10
+  },
+  "immunities": {
+    "earth": true
+  },
+  "sayings": {
+    "texts": [
+      "Grak brrretz!",
+      "Grow truk grrrrr.",
+      "Prek tars, dekklep zurk."
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.74874,
+      "name": "gold coin",
+      "min": 1,
+      "max": 13
+    },
+    {
+      "id": 2467,
+      "probability": 0.10817,
+      "name": "leather armor"
+    },
+    {
+      "id": 2568,
+      "probability": 0.08991,
+      "name": "cleaver"
+    },
+    {
+      "id": 2050,
+      "probability": 0.05553,
+      "name": "torch"
+    },
+    {
+      "id": 2229,
+      "probability": 0.03027,
+      "name": "skull (item)",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 2411,
+      "probability": 0.02061,
+      "name": "poison dagger"
+    },
+    {
+      "id": 3965,
+      "probability": 0.0195,
+      "name": "hunting spear"
+    },
+    {
+      "id": 2541,
+      "probability": 0.01035,
+      "name": "bone shield"
+    },
+    {
+      "id": 3967,
+      "probability": 0.0048,
+      "name": "tribal mask"
+    },
+    {
+      "id": 3964,
+      "probability": 0.00097,
+      "name": "ripper lance"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": true,
+    "canPushItems": false,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}

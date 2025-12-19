@@ -1,0 +1,208 @@
+{
+  "creatureStatistics": {
+    "name": "Wyrm",
+    "health": 1825,
+    "maxHealth": 1825,
+    "mana": 0,
+    "maxMana": 0,
+    "speed": 280,
+    "attack": 235,
+    "attackSpeed": 2000,
+    "defense": 34,
+    "outfit": {
+      "id": 291
+    },
+    "armor": 34
+  },
+  "experience": 1550,
+  "corpse": 2813,
+  "fluidType": 1,
+  "behaviour": {
+    "type": 2,
+    "fleeHealth": 150,
+    "openDoors": true,
+    "senseInvisible": false
+  },
+  "defenseSpells": [
+    {
+      "name": "healing",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 100,
+      "max": 150,
+      "areaEffect": "blueshimmer"
+    },
+    {
+      "name": "effect",
+      "interval": 2000,
+      "chance": 0.1,
+      "areaEffect": "yellownote"
+    }
+  ],
+  "attacks": [
+    {
+      "name": "melee",
+      "interval": 2000,
+      "chance": 1,
+      "min": 0,
+      "max": 235
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.15,
+      "min": 100,
+      "max": 220,
+      "radius": 3,
+      "areaEffect": "yellowenergy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 130,
+      "max": 200,
+      "length": 5,
+      "spread": 2,
+      "areaEffect": "purpleenergy"
+    },
+    {
+      "name": "energy",
+      "interval": 2000,
+      "chance": 0.2,
+      "min": 100,
+      "max": 125,
+      "range": 7,
+      "shootEffect": "energy",
+      "areaEffect": "energy"
+    },
+    {
+      "name": "lifedrain",
+      "interval": 2000,
+      "chance": 0.1,
+      "min": 98,
+      "max": 145,
+      "length": 4,
+      "spread": 0,
+      "areaEffect": "poff"
+    }
+  ],
+  "elements": {
+    "fire": 20,
+    "earth": 75,
+    "death": -5,
+    "ice": -5
+  },
+  "immunities": {
+    "energy": true,
+    "paralyze": true,
+    "invisible": true,
+    "lifedrain": true
+  },
+  "sayings": {
+    "texts": [
+      "GRRR",
+      "GRROARR"
+    ],
+    "slowness": 5,
+    "chance": 0.1
+  },
+  "loot": [
+    {
+      "id": 2148,
+      "probability": 0.96901,
+      "name": "gold coin",
+      "min": 1,
+      "max": 232
+    },
+    {
+      "id": 2672,
+      "probability": 0.34875,
+      "name": "dragon ham"
+    },
+    {
+      "id": 7588,
+      "probability": 0.20224,
+      "name": "strong health potion"
+    },
+    {
+      "id": 7589,
+      "probability": 0.15215,
+      "name": "strong mana potion"
+    },
+    {
+      "id": 10582,
+      "probability": 0.14967,
+      "name": "wyrm scale"
+    },
+    {
+      "id": 2546,
+      "probability": 0.07941,
+      "name": "burst arrow",
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": 2455,
+      "probability": 0.06047,
+      "name": "crossbow"
+    },
+    {
+      "id": 8871,
+      "probability": 0.0123,
+      "name": "focus cape"
+    },
+    {
+      "id": 8921,
+      "probability": 0.01009,
+      "name": "wand of draconia"
+    },
+    {
+      "id": 2145,
+      "probability": 0.00912,
+      "name": "small diamond",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": 7889,
+      "probability": 0.00754,
+      "name": "lightning pendant"
+    },
+    {
+      "id": 8920,
+      "probability": 0.00464,
+      "name": "wand of starstorm"
+    },
+    {
+      "id": 8873,
+      "probability": 0.0031,
+      "name": "hibiscus dress"
+    },
+    {
+      "id": 8855,
+      "probability": 0.00106,
+      "name": "composite hornbow"
+    },
+    {
+      "id": 7430,
+      "probability": 0.00096,
+      "name": "dragonbone staff"
+    },
+    {
+      "id": 10221,
+      "probability": 0.00085,
+      "name": "shockwave amulet"
+    }
+  ],
+  "flags": {
+    "summonable": false,
+    "attackable": true,
+    "convinceable": false,
+    "pushable": false,
+    "canPushItems": true,
+    "canPushCreatures": false,
+    "illusionable": true,
+    "targetDistance": true
+  }
+}
