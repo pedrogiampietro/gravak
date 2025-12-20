@@ -240,8 +240,15 @@ GameClient.prototype.handleAcceptLogin = function (packet) {
   // This triggers the start of the game loop
   this.gameLoop.init();
 
-  // Load the configuration
+  // Apply deferred settings now that gameClient is fully initialized
+  let fpsMode = document.getElementById("fps-mode").value;
+  this.gameLoop.setFPSMode(fpsMode);
 
+  if (this.interface.settings.__state["show-performance"]) {
+    this.renderer.debugger.__showStatistics = true;
+  }
+
+  // Load the configuration
 }
 
 GameClient.prototype.isConnected = function () {

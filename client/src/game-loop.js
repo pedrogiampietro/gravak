@@ -1,4 +1,4 @@
-const GameLoop = function(frameCallback) {
+const GameLoop = function (frameCallback) {
 
   /*
    * Class GameLoop
@@ -9,6 +9,7 @@ const GameLoop = function(frameCallback) {
    * GameLoop.isRunning() - returns true if the game loop is running
    * GameLoop.init() - initializes the game loop
    * GameLoop.abort() - aborts the game loop
+   * GameLoop.setFPSMode(mode) - sets the FPS mode (60, 120, or 0 for unlimited)
    *
    */
 
@@ -21,15 +22,20 @@ const GameLoop = function(frameCallback) {
   this.__aborted = false;
   this.__initialized = null;
 
+  // FPS control
+  this.__targetFPS = 60;
+  this.__lastFrameTime = 0;
+  this.__frameInterval = 1000 / 60; // ms per frame for 60fps
+
 }
 
-GameLoop.prototype.getCurrentFrame = function() {
+GameLoop.prototype.getCurrentFrame = function () {
 
   return this.__frame;
 
 }
 
-GameLoop.prototype.isRunning = function() {
+GameLoop.prototype.isRunning = function () {
 
   /*
    * Function GameLoop.isRunning
@@ -40,7 +46,35 @@ GameLoop.prototype.isRunning = function() {
 
 }
 
-GameLoop.prototype.init = function() {
+GameLoop.prototype.setFPSMode = function (targetFPS) {
+
+  /*
+   * Function GameLoop.setFPSMode
+   * Sets the target FPS mode (60, 120, or 0 for unlimited)
+   */
+
+  this.__targetFPS = parseInt(targetFPS);
+
+  if (this.__targetFPS > 0) {
+    this.__frameInterval = 1000 / this.__targetFPS;
+  } else {
+    this.__frameInterval = 0; // Unlimited
+  }
+
+}
+
+GameLoop.prototype.getFPSMode = function () {
+
+  /*
+   * Function GameLoop.getFPSMode
+   * Returns the current FPS mode
+   */
+
+  return this.__targetFPS;
+
+}
+
+GameLoop.prototype.init = function () {
 
   /*
    * Function GameLoop.init
@@ -48,11 +82,12 @@ GameLoop.prototype.init = function() {
    */
 
   // Already running
-  if(this.isRunning()) {
+  if (this.isRunning()) {
     return;
   }
 
   this.__initialized = performance.now();
+  this.__lastFrameTime = performance.now();
 
   // Set state and begin the loop
   this.__aborted = false;
@@ -62,7 +97,7 @@ GameLoop.prototype.init = function() {
 
 }
 
-GameLoop.prototype.abort = function() {
+GameLoop.prototype.abort = function () {
 
   /*
    * Function GameLoop.abort
@@ -74,24 +109,38 @@ GameLoop.prototype.abort = function() {
 
 }
 
-GameLoop.prototype.__loop = function() {
+GameLoop.prototype.__loop = function () {
 
   /*
    * Function GameClient.__loop
    * Main body of the internal game loop
    */
 
-  this.__frame++;
-
   // The internal loop was aborted: stop running
-  if(this.__aborted) {
+  if (this.__aborted) {
     return;
   }
 
-  // Execute the configured callback with delta since last frame and update the frame end
-  this.__frameCallback();
+  let now = performance.now();
+  let elapsed = now - this.__lastFrameTime;
 
-  // Schedule the next draw as soon as possible (targeted at 60 FPS)
-  requestAnimationFrame(this.__loop.bind(this));
+  // For V-Sync mode (60 FPS), use requestAnimationFrame
+  if (this.__targetFPS === 60) {
+    this.__frame++;
+    this.__lastFrameTime = now;
+    this.__frameCallback();
+    requestAnimationFrame(this.__loop.bind(this));
+    return;
+  }
+
+  // For unlimited or higher FPS modes
+  if (this.__targetFPS === 0 || elapsed >= this.__frameInterval) {
+    this.__frame++;
+    this.__lastFrameTime = now - (elapsed % this.__frameInterval);
+    this.__frameCallback();
+  }
+
+  // Use setTimeout for higher than 60fps or unlimited
+  setTimeout(this.__loop.bind(this), 0);
 
 }

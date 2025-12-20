@@ -1,4 +1,4 @@
-const Settings = function(element) {
+const Settings = function (element) {
 
   /*
    * Class Settings
@@ -24,6 +24,8 @@ const Settings = function(element) {
   document.getElementById("enable-resolution").addEventListener("change", Interface.prototype.handleResize.bind(Interface.prototype));
   document.getElementById("resolution").addEventListener("change", Interface.prototype.handleResize.bind(Interface.prototype));
   document.getElementById("anti-aliasing").addEventListener("change", this.__setAA);
+  document.getElementById("show-performance").addEventListener("change", this.__togglePerformance);
+  document.getElementById("fps-mode").addEventListener("change", this.__setFPSMode);
 
   this.__init();
 
@@ -32,9 +34,9 @@ const Settings = function(element) {
 
 }
 
-Settings.prototype.__setAA = function() {
+Settings.prototype.__setAA = function () {
 
-  if(this.checked) {
+  if (this.checked) {
     gameClient.renderer.screen.canvas.style.imageRendering = "auto";
   } else {
     gameClient.renderer.screen.canvas.style.imageRendering = "pixelated";
@@ -42,7 +44,30 @@ Settings.prototype.__setAA = function() {
 
 }
 
-Settings.prototype.setVolume = function() {
+Settings.prototype.__togglePerformance = function () {
+
+  /*
+   * Function Settings.__togglePerformance
+   * Toggles the performance statistics display
+   */
+
+  gameClient.renderer.debugger.toggleStatistics();
+
+}
+
+Settings.prototype.__setFPSMode = function () {
+
+  /*
+   * Function Settings.__setFPSMode
+   * Sets the FPS mode from the dropdown
+   */
+
+  let fpsMode = parseInt(this.value);
+  gameClient.gameLoop.setFPSMode(fpsMode);
+
+}
+
+Settings.prototype.setVolume = function () {
 
   /*
    * Function Settings.setVolume
@@ -55,7 +80,7 @@ Settings.prototype.setVolume = function() {
 
 }
 
-Settings.prototype.clear = function() {
+Settings.prototype.clear = function () {
 
   /*
    * Class Settings.clear
@@ -66,7 +91,7 @@ Settings.prototype.clear = function() {
 
 }
 
-Settings.prototype.isSoundEnabled = function() {
+Settings.prototype.isSoundEnabled = function () {
 
   /*
    * Class Settings.isSoundEnabled
@@ -77,7 +102,7 @@ Settings.prototype.isSoundEnabled = function() {
 
 }
 
-Settings.prototype.isWeatherEnabled = function() {
+Settings.prototype.isWeatherEnabled = function () {
 
   /*
    * Class Settings.isWeatherEnabled
@@ -88,7 +113,7 @@ Settings.prototype.isWeatherEnabled = function() {
 
 }
 
-Settings.prototype.isLightingEnabled = function() {
+Settings.prototype.isLightingEnabled = function () {
 
   /*
    * Function Settings.isLightingEnabled
@@ -99,7 +124,7 @@ Settings.prototype.isLightingEnabled = function() {
 
 }
 
-Settings.prototype.saveState = function() {
+Settings.prototype.saveState = function () {
 
   /*
    * Function Settings.saveState
@@ -110,7 +135,7 @@ Settings.prototype.saveState = function() {
 
 }
 
-Settings.prototype.__toggle = function(event) {
+Settings.prototype.__toggle = function (event) {
 
   /*
    * Function Settings.__toggle
@@ -118,12 +143,18 @@ Settings.prototype.__toggle = function(event) {
    */
 
   // Set state to DOM
-  switch(event.target.id) {
+  switch (event.target.id) {
     case "enable-lighting":
     case "enable-weather":
     case "enable-sound":
+    case "show-performance":
       this.__state[event.target.id] = event.target.checked;
-      gameClient.interface.soundManager.enableSound(event.target.checked);
+      if (event.target.id === "enable-sound") {
+        gameClient.interface.soundManager.enableSound(event.target.checked);
+      }
+      break;
+    case "fps-mode":
+      this.__state[event.target.id] = event.target.value;
       break;
     case "toggle-scale-gamewindow":
       this.__state[event.target.id] = event.target.checked;
@@ -137,7 +168,7 @@ Settings.prototype.__toggle = function(event) {
 
 }
 
-Settings.prototype.__init = function() {
+Settings.prototype.__init = function () {
 
   /*
    * Function Settings.__init
@@ -148,7 +179,7 @@ Settings.prototype.__init = function() {
   let state = localStorage.getItem("settings");
 
   // No settings stored in local storage
-  if(state === null) {
+  if (state === null) {
     return this.__state = this.__getCleanState();
   }
 
@@ -158,7 +189,7 @@ Settings.prototype.__init = function() {
 
 }
 
-Settings.prototype.__update = function() {
+Settings.prototype.__update = function () {
 
   /*
    * Function Settings.__update
@@ -168,22 +199,22 @@ Settings.prototype.__update = function() {
   let cleanState = this.__getCleanState();
 
   // Add new settings
-  Object.keys(cleanState).forEach(function(key) {
-    if(!this.__state.hasOwnProperty(key)) {
+  Object.keys(cleanState).forEach(function (key) {
+    if (!this.__state.hasOwnProperty(key)) {
       this.__state[key] = cleanState[key];
     }
   }, this);
 
   // Drop removed settings
-  Object.keys(this.__state).forEach(function(key) {
-    if(!cleanState.hasOwnProperty(key)) {
+  Object.keys(this.__state).forEach(function (key) {
+    if (!cleanState.hasOwnProperty(key)) {
       delete this.__state[key];
     }
   }, this);
 
 }
 
-Settings.prototype.__getCleanState = function() {
+Settings.prototype.__getCleanState = function () {
 
   /*
    * Function Settings.__getCleanState
@@ -193,12 +224,14 @@ Settings.prototype.__getCleanState = function() {
   return new Object({
     "enable-sound": document.getElementById("enable-sound").checked,
     "enable-lighting": document.getElementById("enable-lighting").checked,
-    "enable-weather": document.getElementById("enable-weather").checked
+    "enable-weather": document.getElementById("enable-weather").checked,
+    "show-performance": document.getElementById("show-performance").checked,
+    "fps-mode": document.getElementById("fps-mode").value
   });
 
 }
 
-Settings.prototype.__applyState = function(id) {
+Settings.prototype.__applyState = function (id) {
 
   /*
    * Function Settings.__applyState
@@ -210,11 +243,17 @@ Settings.prototype.__applyState = function(id) {
   element.addEventListener("change", this.__toggle.bind(this));
 
   // Set DOM to state
-  switch(id) {
+  switch (id) {
     case "enable-lighting":
     case "enable-weather":
     case "enable-sound":
+    case "show-performance":
       element.checked = this.__state[id];
+      // Note: debugger activation is deferred until gameClient exists
+      break;
+    case "fps-mode":
+      element.value = this.__state[id];
+      // Note: FPS mode is applied after gameClient is fully initialized
       break;
     default:
       return;

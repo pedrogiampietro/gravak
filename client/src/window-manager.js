@@ -112,7 +112,8 @@ WindowManager.prototype.getFreeStack = function (requiredHeight) {
 
   /*
    * Function WindowManager.getFreeStack
-   * Returns the best stack to open a window
+   * Returns the best stack to open a window, preferring right side.
+   * Falls back to left if right column doesn't have enough space.
    */
 
   let rightStack = this.getStack("right");
@@ -123,16 +124,9 @@ WindowManager.prototype.getFreeStack = function (requiredHeight) {
 
   // Calculate the actual height of VISIBLE children in the right stack
   let visibleHeight = 0;
-  let visibleChildren = [];
   Array.from(rightStack.children).forEach(function (child) {
-    let isVisible = child.style.display !== "none" && child.style.display !== "";
-    if (isVisible) {
+    if (child.style.display !== "none" && child.style.display !== "") {
       visibleHeight += child.offsetHeight;
-      visibleChildren.push({
-        id: child.id || child.className,
-        height: child.offsetHeight,
-        display: child.style.display
-      });
     }
   });
 
@@ -152,25 +146,6 @@ WindowManager.prototype.getFreeStack = function (requiredHeight) {
 
   // The actual available height for the column is parent height minus siblings
   let limit = parentHeight - siblingsHeight;
-
-  // Additional references for debugging
-  let gameWrapper = document.getElementById("game-wrapper");
-  let viewportHeight = window.visualViewport.height;
-
-  console.log("=== getFreeStack DEBUG ===");
-  console.log("Required height for new window:", requiredHeight);
-  console.log("Visible children:", visibleChildren);
-  console.log("Total visible height:", visibleHeight);
-  console.log("Parent (oogwrap) clientHeight:", parentHeight);
-  console.log("Siblings height (oogwrap2 etc.):", siblingsHeight);
-  console.log("ACTUAL AVAILABLE LIMIT (parent - siblings):", limit);
-  console.log("Right stack scrollHeight:", rightStack.scrollHeight);
-  console.log("Right stack clientHeight:", rightStack.clientHeight);
-  console.log("Space needed (visible + required):", visibleHeight + requiredHeight);
-  console.log("Space remaining:", limit - visibleHeight);
-  console.log("Will fit?:", (visibleHeight + requiredHeight) <= limit);
-  console.log("Decision:", (visibleHeight + requiredHeight > limit) ? "GO LEFT" : "GO RIGHT");
-  console.log("==========================");
 
   // Check if the right stack is full (visible content + new window exceeds available height)
   if (visibleHeight + requiredHeight > limit) {
