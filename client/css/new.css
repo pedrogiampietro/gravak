@@ -5,6 +5,7 @@ html {
 .oogwrap {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 body {
@@ -267,7 +268,8 @@ button.symbol-button {
   justify-content: flex-start;
   background-image: url("/png/bg2.png");
   max-height: 100%;
-  flex: 1 1 auto;
+  flex: 0 1 auto;
+  overflow: hidden;
 }
 
 #game-wrapper .main {

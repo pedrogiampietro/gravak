@@ -1,4 +1,4 @@
-const Container = function(properties) {
+const Container = function (properties) {
 
   /*
    * Class Container
@@ -20,7 +20,7 @@ const Container = function(properties) {
 Container.prototype = Object.create(Item.prototype);
 Container.prototype.constructor = Container;
 
-Container.prototype.createDOM = function(title, items) {
+Container.prototype.createDOM = function (title, items) {
 
   /*
    * Function Container.createDOM
@@ -30,8 +30,11 @@ Container.prototype.createDOM = function(title, items) {
   // Copy the prototype
   let element = this.createElement(this.__containerId);
 
+  // Calculate expected height: header(22) + footer(4) + padding(16) + body(rows * 34)
+  let expectedHeight = 42 + Math.ceil(this.size / 4) * 34;
+
   this.window = new InteractiveWindow(element);
-  this.window.addTo(document.getElementsByClassName("column")[0]);
+  this.window.addTo(gameClient.interface.windowManager.getFreeStack(expectedHeight));
 
   // Attach a listener to the window close event to inform the server of container close
   this.window.on("close", this.close.bind(this));
@@ -45,7 +48,7 @@ Container.prototype.createDOM = function(title, items) {
 
 }
 
-Container.prototype.createElement = function(index) {
+Container.prototype.createElement = function (index) {
 
   /*
    * Function Container.createElement
@@ -62,7 +65,7 @@ Container.prototype.createElement = function(index) {
 
 }
 
-Container.prototype.close = function() {
+Container.prototype.close = function () {
 
   /*
    * Function Container.close
@@ -74,19 +77,19 @@ Container.prototype.close = function() {
 
 }
 
-Container.prototype.peekItem = function(index) {
+Container.prototype.peekItem = function (index) {
 
   return this.getSlotItem(index);
 
 }
 
-Container.prototype.getSlot = function(index) {
+Container.prototype.getSlot = function (index) {
 
   return this.slots[index];
 
 }
 
-Container.prototype.getSlotItem = function(index) {
+Container.prototype.getSlotItem = function (index) {
 
   /*
    * Function Container.getSlot
@@ -94,7 +97,7 @@ Container.prototype.getSlotItem = function(index) {
    */
 
   // The slot does not exist
-  if(index < 0 || index >= this.slots.length) {
+  if (index < 0 || index >= this.slots.length) {
     return null;
   }
 
@@ -102,7 +105,7 @@ Container.prototype.getSlotItem = function(index) {
 
 }
 
-Container.prototype.createBodyContent = function(size) {
+Container.prototype.createBodyContent = function (size) {
 
   /*
    * Function createBodyDOM
@@ -118,21 +121,21 @@ Container.prototype.createBodyContent = function(size) {
   body.style.height = "100%";
 
   // Create the requested number of slots in the backpack
-  for(let i = 0; i < size; i++) {
+  for (let i = 0; i < size; i++) {
     let slot = new Slot();
     slot.createDOM(i);
-    if(this.__containerId === 2) slot.element.style.backgroundImage = "url(png/icon-key.png)";
+    if (this.__containerId === 2) slot.element.style.backgroundImage = "url(png/icon-key.png)";
     this.slots.push(slot);
   }
 
   // Add all the slots to the parent body
-  this.slots.forEach(function(slot) {
+  this.slots.forEach(function (slot) {
     body.appendChild(slot.element);
   });
 
 }
 
-Container.prototype.addItems = function(items) {
+Container.prototype.addItems = function (items) {
 
   /*
    * Function Container.addItems
@@ -143,7 +146,7 @@ Container.prototype.addItems = function(items) {
 
 }
 
-Container.prototype.addItem = function(item, slot) {
+Container.prototype.addItem = function (item, slot) {
 
   /*
    * Function Container.addItem
@@ -151,7 +154,7 @@ Container.prototype.addItem = function(item, slot) {
    */
 
   // Item is the nullptr: add nothing
-  if(item === null) {
+  if (item === null) {
     return;
   }
 
@@ -165,7 +168,7 @@ Container.prototype.addItem = function(item, slot) {
 
 }
 
-Container.prototype.__setItem = function(slot, item) {
+Container.prototype.__setItem = function (slot, item) {
 
   /*
    * Function Container.setItem
@@ -176,7 +179,7 @@ Container.prototype.__setItem = function(slot, item) {
 
 }
 
-Container.prototype.clearSlot = function(slot) {
+Container.prototype.clearSlot = function (slot) {
 
   /*
    * Function Container.clearSlot
@@ -189,7 +192,7 @@ Container.prototype.clearSlot = function(slot) {
 
 }
 
-Container.prototype.removeItem = function(slot, count) {
+Container.prototype.removeItem = function (slot, count) {
 
   /*
    * Function Container.removeItem
@@ -197,15 +200,15 @@ Container.prototype.removeItem = function(slot, count) {
    */
 
   // If the item is stackable we should account for the removed count
-  if(!this.slots[slot].item.isStackable() || count === 0) {
+  if (!this.slots[slot].item.isStackable() || count === 0) {
     return this.clearSlot(slot);
   }
 
   // Subtract the count
   this.slots[slot].item.count -= count;
-    
+
   // If the remaining count is zero the item has been fully depleted
-  if(this.slots[slot].item.count === 0) {
+  if (this.slots[slot].item.count === 0) {
     return this.clearSlot(slot);
   }
 
@@ -213,22 +216,22 @@ Container.prototype.removeItem = function(slot, count) {
 
 }
 
-Container.prototype.__renderAnimated = function() {
+Container.prototype.__renderAnimated = function () {
 
-  this.slots.forEach(function(slot) {
+  this.slots.forEach(function (slot) {
     slot.__renderAnimated();
   });
 
 }
 
-Container.prototype.__render = function() {
+Container.prototype.__render = function () {
 
   /*
    * Function Container.__render
    * Draws the container
    */
 
-  this.slots.forEach(function(slot) {
+  this.slots.forEach(function (slot) {
     slot.render();
   });
 

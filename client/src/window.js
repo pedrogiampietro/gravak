@@ -1,4 +1,4 @@
-const InteractiveWindow = function(element) {
+const InteractiveWindow = function (element) {
 
   /*
    * Class InteractiveWindow
@@ -19,7 +19,7 @@ const InteractiveWindow = function(element) {
   element.draggable = true;
 
   // Attach listeners to the header buttons
-  Array.from(this.getElement(".header").getElementsByTagName("button")).forEach(function(buttonElement) {
+  Array.from(this.getElement(".header").getElementsByTagName("button")).forEach(function (buttonElement) {
     buttonElement.addEventListener("click", this.handleButtonClick.bind(this));
   }, this);
 
@@ -36,7 +36,7 @@ InteractiveWindow.prototype.constructor = InteractiveWindow;
 InteractiveWindow.prototype.MINIMUM_HEIGHT = 76;
 InteractiveWindow.prototype.HIDDEN_HEIGHT = 20;
 
-InteractiveWindow.prototype.__setTitle = function(title) {
+InteractiveWindow.prototype.__setTitle = function (title) {
 
   /*
    * Function InteractiveWindow.setTitle
@@ -47,7 +47,7 @@ InteractiveWindow.prototype.__setTitle = function(title) {
 
 }
 
-InteractiveWindow.prototype.getBody = function() {
+InteractiveWindow.prototype.getBody = function () {
 
   /*
    * Function Window.getBody
@@ -58,7 +58,7 @@ InteractiveWindow.prototype.getBody = function() {
 
 }
 
-InteractiveWindow.prototype.isMinimized = function() {
+InteractiveWindow.prototype.isMinimized = function () {
 
   /*
    * Function Window.isMinimized
@@ -69,7 +69,7 @@ InteractiveWindow.prototype.isMinimized = function() {
 
 }
 
-InteractiveWindow.prototype.getElement = function(which) {
+InteractiveWindow.prototype.getElement = function (which) {
 
   /*
    * Function Window.isMinimized
@@ -80,7 +80,7 @@ InteractiveWindow.prototype.getElement = function(which) {
 
 }
 
-InteractiveWindow.prototype.handleButtonClick = function(event) {
+InteractiveWindow.prototype.handleButtonClick = function (event) {
 
   /*
    * Function InteractiveWindow.handleButtonClick
@@ -92,7 +92,7 @@ InteractiveWindow.prototype.handleButtonClick = function(event) {
   // Emit the event to any other attached listeners
   this.emit(action);
 
-  switch(action) {
+  switch (action) {
     case "minimize":
       return this.minimize(event.target);
     case "close":
@@ -101,14 +101,14 @@ InteractiveWindow.prototype.handleButtonClick = function(event) {
 
 }
 
-InteractiveWindow.prototype.minimize = function(buttonElement) {
+InteractiveWindow.prototype.minimize = function (buttonElement) {
 
   /*
    * Function Window.minimize
    * Minimizes a given box by hiding the body element
    */
 
-  if(this.isMinimized()) {
+  if (this.isMinimized()) {
     this.setElementVisible(buttonElement);
   } else {
     this.setElementHidden(buttonElement);
@@ -116,7 +116,7 @@ InteractiveWindow.prototype.minimize = function(buttonElement) {
 
 }
 
-InteractiveWindow.prototype.setElementVisible = function(buttonElement) {
+InteractiveWindow.prototype.setElementVisible = function (buttonElement) {
 
   /*
    * Function InteractiveWindow.setElementVisible
@@ -134,7 +134,7 @@ InteractiveWindow.prototype.setElementVisible = function(buttonElement) {
 
 }
 
-InteractiveWindow.prototype.setElementHidden = function(buttonElement) {
+InteractiveWindow.prototype.setElementHidden = function (buttonElement) {
 
   /*
    * Function Window.setElementHidden
@@ -153,18 +153,31 @@ InteractiveWindow.prototype.setElementHidden = function(buttonElement) {
 }
 
 
-InteractiveWindow.prototype.toggle = function() {
+InteractiveWindow.prototype.toggle = function () {
 
   /*
    * Function Window.toggle
    * Toggles the window open or closed
    */
 
-  this.__element.style.display = this.isHidden() ? "flex" : "none";
+  if (this.isHidden()) {
+    // Before showing, check if we need to move to a different stack
+    let currentStack = this.__element.parentElement;
+    let bestStack = gameClient.interface.windowManager.getFreeStack(this.__element.offsetHeight || 100);
+
+    // If the best stack is different from current, move the window
+    if (bestStack !== currentStack) {
+      bestStack.appendChild(this.__element);
+    }
+
+    this.__element.style.display = "flex";
+  } else {
+    this.__element.style.display = "none";
+  }
 
 }
 
-InteractiveWindow.prototype.close = function() {
+InteractiveWindow.prototype.close = function () {
 
   /*
    * Function Window.close
@@ -175,7 +188,7 @@ InteractiveWindow.prototype.close = function() {
 
 }
 
-InteractiveWindow.prototype.isHidden = function() {
+InteractiveWindow.prototype.isHidden = function () {
 
   /*
    * Function Window.isHidden
@@ -186,7 +199,7 @@ InteractiveWindow.prototype.isHidden = function() {
 
 }
 
-InteractiveWindow.prototype.open = function() {
+InteractiveWindow.prototype.open = function () {
 
   /*
    * Function Window.open
@@ -197,7 +210,7 @@ InteractiveWindow.prototype.open = function() {
 
 }
 
-InteractiveWindow.prototype.setContent = function(content) {
+InteractiveWindow.prototype.setContent = function (content) {
 
   /*
    * Function Window.setContent
@@ -209,18 +222,18 @@ InteractiveWindow.prototype.setContent = function(content) {
   // Reset content
   body.innerHTML = "";
 
-  if(content === null) {
+  if (content === null) {
     return;
   }
 
   // Add all the child nodes
-  content.filter(Boolean).forEach(function(node) {
+  content.filter(Boolean).forEach(function (node) {
     body.appendChild(node);
   });
 
 }
 
-InteractiveWindow.prototype.remove = function(event) {
+InteractiveWindow.prototype.remove = function (event) {
 
   /*
    * Function InteractiveWindow.remove
@@ -231,7 +244,7 @@ InteractiveWindow.prototype.remove = function(event) {
 
 }
 
-InteractiveWindow.prototype.addTo = function(stackElement) {
+InteractiveWindow.prototype.addTo = function (stackElement) {
 
   /*
    * Function InteractiveWindow.addTo
@@ -240,5 +253,5 @@ InteractiveWindow.prototype.addTo = function(stackElement) {
 
   // Add the new container to the stack
   stackElement.appendChild(this.__element);
-  
+
 }

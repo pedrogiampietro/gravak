@@ -1,4 +1,4 @@
-const WindowManager = function() {
+const WindowManager = function () {
 
   /*
    * Function WindowManager
@@ -21,16 +21,16 @@ const WindowManager = function() {
   this.stacks = document.getElementsByClassName("column");
   this.__attachStackEventListeners(this.stacks);
 
-  // Default add to left column
-  this.getWindow("battle-window").addTo(this.getStack("left"));
-  this.getWindow("skill-window").addTo(this.getStack("left"));
-  this.getWindow("friend-window").addTo(this.getStack("left"));
+  // Default add to right column
+  this.getWindow("battle-window").addTo(this.getStack("right"));
+  this.getWindow("skill-window").addTo(this.getStack("right"));
+  this.getWindow("friend-window").addTo(this.getStack("right"));
 
   // State object of the mouse
   this.state = new State();
   this.state.add("currentDragElement", null),
-  this.state.add("currentMouseElement", null),
-  this.state.add("mouseDownTarget", null);
+    this.state.add("currentMouseElement", null),
+    this.state.add("mouseDownTarget", null);
   this.state.add("currentDragElementOffset", null);
 
   // Callback one mouse move
@@ -42,13 +42,13 @@ const WindowManager = function() {
 
 }
 
-WindowManager.prototype.register = function(gameWindow) {
+WindowManager.prototype.register = function (gameWindow) {
 
   this.__addListeners(gameWindow);
 
 }
 
-WindowManager.prototype.getWindow = function(name) {
+WindowManager.prototype.getWindow = function (name) {
 
   /*
    * Function WindowManager.getWindow
@@ -56,7 +56,7 @@ WindowManager.prototype.getWindow = function(name) {
    */
 
   // Does not exist
-  if(!this.windows.hasOwnProperty(name)) {
+  if (!this.windows.hasOwnProperty(name)) {
     return null;
   }
 
@@ -64,7 +64,7 @@ WindowManager.prototype.getWindow = function(name) {
 
 }
 
-WindowManager.prototype.__addListeners = function(gameWindow) {
+WindowManager.prototype.__addListeners = function (gameWindow) {
 
   /*
    * Function WindowManager.addListeners
@@ -78,7 +78,7 @@ WindowManager.prototype.__addListeners = function(gameWindow) {
 
 }
 
-WindowManager.prototype.closeAll = function() {
+WindowManager.prototype.closeAll = function () {
 
   /*
    * Function WindowManager.closeAll
@@ -90,25 +90,98 @@ WindowManager.prototype.closeAll = function() {
 
 }
 
-WindowManager.prototype.getStack = function(stack) {
+WindowManager.prototype.getStack = function (stack) {
 
   /*
    * Function WindowManager.getStack
    * Returns the stack that belongs either left or right
    */
 
-   switch(stack) {
-     case "left":
-       return this.stacks[0];
-     case "right":
-       return this.stacks[1];
-     default:
-       return console.error("Unknown stack requested.");
-   }
+  switch (stack) {
+    case "left":
+      return this.stacks[0];
+    case "right":
+      return this.stacks[1];
+    default:
+      return console.error("Unknown stack requested.");
+  }
 
 }
 
-WindowManager.prototype.__attachStackEventListeners = function(stacks) {
+WindowManager.prototype.getFreeStack = function (requiredHeight) {
+
+  /*
+   * Function WindowManager.getFreeStack
+   * Returns the best stack to open a window
+   */
+
+  let rightStack = this.getStack("right");
+
+  if (requiredHeight === undefined) {
+    requiredHeight = 0;
+  }
+
+  // Calculate the actual height of VISIBLE children in the right stack
+  let visibleHeight = 0;
+  let visibleChildren = [];
+  Array.from(rightStack.children).forEach(function (child) {
+    let isVisible = child.style.display !== "none" && child.style.display !== "";
+    if (isVisible) {
+      visibleHeight += child.offsetHeight;
+      visibleChildren.push({
+        id: child.id || child.className,
+        height: child.offsetHeight,
+        display: child.style.display
+      });
+    }
+  });
+
+  // Get the parent container (oogwrap)
+  let oogwrap = rightStack.parentElement;
+  let parentHeight = oogwrap ? oogwrap.clientHeight : window.visualViewport.height;
+
+  // Calculate height taken by sibling elements (oogwrap2 - minimap, equipment, etc.)
+  let siblingsHeight = 0;
+  if (oogwrap) {
+    Array.from(oogwrap.children).forEach(function (sibling) {
+      if (sibling !== rightStack) {
+        siblingsHeight += sibling.offsetHeight;
+      }
+    });
+  }
+
+  // The actual available height for the column is parent height minus siblings
+  let limit = parentHeight - siblingsHeight;
+
+  // Additional references for debugging
+  let gameWrapper = document.getElementById("game-wrapper");
+  let viewportHeight = window.visualViewport.height;
+
+  console.log("=== getFreeStack DEBUG ===");
+  console.log("Required height for new window:", requiredHeight);
+  console.log("Visible children:", visibleChildren);
+  console.log("Total visible height:", visibleHeight);
+  console.log("Parent (oogwrap) clientHeight:", parentHeight);
+  console.log("Siblings height (oogwrap2 etc.):", siblingsHeight);
+  console.log("ACTUAL AVAILABLE LIMIT (parent - siblings):", limit);
+  console.log("Right stack scrollHeight:", rightStack.scrollHeight);
+  console.log("Right stack clientHeight:", rightStack.clientHeight);
+  console.log("Space needed (visible + required):", visibleHeight + requiredHeight);
+  console.log("Space remaining:", limit - visibleHeight);
+  console.log("Will fit?:", (visibleHeight + requiredHeight) <= limit);
+  console.log("Decision:", (visibleHeight + requiredHeight > limit) ? "GO LEFT" : "GO RIGHT");
+  console.log("==========================");
+
+  // Check if the right stack is full (visible content + new window exceeds available height)
+  if (visibleHeight + requiredHeight > limit) {
+    return this.getStack("left");
+  }
+
+  return rightStack;
+
+}
+
+WindowManager.prototype.__attachStackEventListeners = function (stacks) {
 
   /*
    * Function WindowManager.__attachStackEventListeners
@@ -120,7 +193,7 @@ WindowManager.prototype.__attachStackEventListeners = function(stacks) {
 
 }
 
-WindowManager.prototype.__handleMove = function(event) {
+WindowManager.prototype.__handleMove = function (event) {
 
   /*
    * Function WindowManager.__handleMove
@@ -128,7 +201,7 @@ WindowManager.prototype.__handleMove = function(event) {
    */
 
   // There is currently no element being dragged
-  if(this.state.currentMouseElement === null) {
+  if (this.state.currentMouseElement === null) {
     return;
   }
 
@@ -137,7 +210,7 @@ WindowManager.prototype.__handleMove = function(event) {
 
 }
 
-WindowManager.prototype.__handleWindowDrop = function(event) {
+WindowManager.prototype.__handleWindowDrop = function (event) {
 
   /*
    * Function WindowManager.__handleWindowDrop
@@ -147,27 +220,27 @@ WindowManager.prototype.__handleWindowDrop = function(event) {
   // Get the target of the element being dropped on
   let element = event.target;
 
-  if(this.state.currentDragElement === null) {
+  if (this.state.currentDragElement === null) {
     return;
   }
 
   // Dropped in the stack element itself: append the element
-  if(element.className === "column") {
+  if (element.className === "column") {
     return element.append(this.state.currentDragElement);
   }
 
   // Run up the dropped area to get the window being swapped
-  while(element.parentElement.className !== "column") {
+  while (element.parentElement.className !== "column") {
     element = element.parentElement;
   }
 
   // Nothign to do if the same element is being hovered on
-  if(element === this.state.currentDragElement) {
+  if (element === this.state.currentDragElement) {
     return;
   }
 
   // Commit to swapping the windows!
-  if(element.previousSibling === this.state.currentDragElement) {
+  if (element.previousSibling === this.state.currentDragElement) {
     element.parentNode.insertBefore(element, this.state.currentDragElement);
   } else {
     element.parentNode.insertBefore(this.state.currentDragElement, element);
@@ -175,7 +248,7 @@ WindowManager.prototype.__handleWindowDrop = function(event) {
 
 }
 
-WindowManager.prototype.__handleDragEnd = function(event) {
+WindowManager.prototype.__handleDragEnd = function (event) {
 
   /*
    * Function WindowManager.handleDragEnd
@@ -191,7 +264,7 @@ WindowManager.prototype.__handleDragEnd = function(event) {
 
 }
 
-WindowManager.prototype.__handleMouseDown = function(gameWindow, event) {
+WindowManager.prototype.__handleMouseDown = function (gameWindow, event) {
 
   /*
    * Function Window.__handleMouseDown
@@ -200,13 +273,13 @@ WindowManager.prototype.__handleMouseDown = function(gameWindow, event) {
 
   this.state.mouseDownTarget = event.target;
 
-  if(event.target.className === "footer") {
+  if (event.target.className === "footer") {
     this.state.currentMouseElement = gameWindow
   }
 
 }
 
-WindowManager.prototype.__handleDragStart = function(event) {
+WindowManager.prototype.__handleDragStart = function (event) {
 
   /*
    * Function Window.__handleDragStart
@@ -214,7 +287,7 @@ WindowManager.prototype.__handleDragStart = function(event) {
    */
 
   // Can only be dragged by the header of the window
-  if(this.state.mouseDownTarget.className !== "header") {
+  if (this.state.mouseDownTarget.className !== "header") {
     return event.preventDefault();
   }
 
@@ -227,7 +300,7 @@ WindowManager.prototype.__handleDragStart = function(event) {
 
 }
 
-WindowManager.prototype.__handleMouseUp = function(event) {
+WindowManager.prototype.__handleMouseUp = function (event) {
 
   /*
    * Function Window.__handleMouseUp
