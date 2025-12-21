@@ -155,7 +155,9 @@ MonsterBehaviour.prototype.handleActionAttack = function () {
   gameServer.world.combatHandler.handleCombat(this.monster);
 
   // And lock the attack action until next time
-  this.actions.lock(this.handleActionAttack, this.monster.getProperty(CONST.PROPERTIES.ATTACK_SPEED));
+  // Convert attackSpeed from milliseconds to frames
+  let attackSpeedFrames = Math.floor(this.monster.getProperty(CONST.PROPERTIES.ATTACK_SPEED) / CONFIG.SERVER.MS_TICK_INTERVAL);
+  this.actions.lock(this.handleActionAttack, attackSpeedFrames);
 
 }
 
