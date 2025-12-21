@@ -8,5 +8,15 @@
   "6": "life-drain.js",
   "7": "hearthstone.js",
   "8": "haste.js",
-  "9": "levitate.js"
+  "9": "levitate.js",
+  "10": "intense_healing.js",
+  "11": "ultimate_healing.js",
+  "12": "antidote.js",
+  "13": "energy_strike.js",
+  "14": "flame_strike.js",
+  "15": "fire_wave.js",
+  "16": "energy_beam.js",
+  "17": "strong_haste.js",
+  "18": "magic_shield.js",
+  "19": "great_light.js"
 }

@@ -462,7 +462,7 @@ Creature.prototype.moveTo = function (position, speed) {
   this.__position = position;
 
   // Play walking sound
-  if (gameClient.player.canSeeSmall(this) && position.z === gameClient.player.__position.z) {
+  if (gameClient.player && gameClient.player.canSeeSmall(this) && position.z === gameClient.player.__position.z) {
     gameClient.interface.soundManager.playWalkBit(position);
   }
 

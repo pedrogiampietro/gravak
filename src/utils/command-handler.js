@@ -211,7 +211,7 @@ CommandHandler.prototype.handle = function (player, message) {
     );
   }
 
-  if (message[0] === "/spawn") {
+  if (message[0] === "/m") {
     let id = Number(message[1]);
     return gameServer.world.creatureHandler.spawnCreature(
       id,
@@ -317,6 +317,17 @@ CommandHandler.prototype.handle = function (player, message) {
     } catch (error) {
       return player.sendCancelMessage("NPC error: " + error.message);
     }
+  }
+
+  // Learn all spells command: /learnall
+  if (message[0] === "/learnall") {
+    // Add all spell IDs (0-19) to player's spellbook
+    for (let sid = 0; sid <= 19; sid++) {
+      if (!player.spellbook.getAvailableSpells().has(sid)) {
+        player.spellbook.addAvailableSpell(sid);
+      }
+    }
+    return player.sendCancelMessage("You have learned all spells (0-19)!");
   }
 };
 
