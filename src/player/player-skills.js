@@ -2,7 +2,7 @@
 
 const Skill = requireModule("utils/skill");
 
-const PlayerSkills = function(player, points) {
+const PlayerSkills = function (player, points) {
 
   /*
    * Class PlayerSkills
@@ -37,7 +37,7 @@ const PlayerSkills = function(player, points) {
 
 }
 
-PlayerSkills.prototype.setSkillLevel = function(type, level) {
+PlayerSkills.prototype.setSkillLevel = function (type, level) {
 
   /*
    * Function PlayerSkills.setSkillLevel
@@ -45,8 +45,8 @@ PlayerSkills.prototype.setSkillLevel = function(type, level) {
    */
 
   let skill = this.getSkill(type);
-  
-  if(skill === null) {
+
+  if (skill === null) {
     return;
   }
 
@@ -57,12 +57,17 @@ PlayerSkills.prototype.setSkillLevel = function(type, level) {
 
 }
 
-PlayerSkills.prototype.toJSON = function() {
+PlayerSkills.prototype.toJSON = function () {
 
   /*
    * Function PlayerSkills.toJSON
    * Serialization of the skills for the players
    */
+
+  // Get the experience skill object to get both points and level
+  let expSkill = this.__player.getProperty(CONST.PROPERTIES.EXPERIENCE);
+  let experiencePoints = expSkill ? expSkill.get() : 0;
+  let level = expSkill ? expSkill.getSkillLevel(this.__player.getVocation()) : 1;
 
   return new Object({
     "magic": this.__player.getProperty(CONST.PROPERTIES.MAGIC),
@@ -73,12 +78,13 @@ PlayerSkills.prototype.toJSON = function() {
     "distance": this.__player.getProperty(CONST.PROPERTIES.DISTANCE),
     "shielding": this.__player.getProperty(CONST.PROPERTIES.SHIELDING),
     "fishing": this.__player.getProperty(CONST.PROPERTIES.FISHING),
-    "experience": this.__player.getProperty(CONST.PROPERTIES.EXPERIENCE)
+    "experience": experiencePoints,
+    "level": level
   });
 
 }
 
-PlayerSkills.prototype.hasSkill = function(type) {
+PlayerSkills.prototype.hasSkill = function (type) {
 
   /*
    * Function PlayerSkills.hasSkill
@@ -89,14 +95,14 @@ PlayerSkills.prototype.hasSkill = function(type) {
 
 }
 
-PlayerSkills.prototype.getSkill = function(type) {
+PlayerSkills.prototype.getSkill = function (type) {
 
   /*
    * Function PlayerSkills.getSkill
    * Returns the skill (if exists) of a particular type
    */
 
-  if(!this.hasSkill(type)) {
+  if (!this.hasSkill(type)) {
     return null;
   }
 
@@ -105,7 +111,7 @@ PlayerSkills.prototype.getSkill = function(type) {
 
 }
 
-PlayerSkills.prototype.getSkillPoints = function(type) {
+PlayerSkills.prototype.getSkillPoints = function (type) {
 
   /*
    * Function PlayerSkills.getSkillPoints
@@ -114,7 +120,7 @@ PlayerSkills.prototype.getSkillPoints = function(type) {
 
   let skill = this.getSkill(type);
 
-  if(skill === null) {
+  if (skill === null) {
     return null;
   }
 
@@ -122,7 +128,7 @@ PlayerSkills.prototype.getSkillPoints = function(type) {
 
 }
 
-PlayerSkills.prototype.getSkillLevel = function(type) {
+PlayerSkills.prototype.getSkillLevel = function (type) {
 
   /*
    * Function PlayerSkills.getSkillLevel
@@ -131,7 +137,7 @@ PlayerSkills.prototype.getSkillLevel = function(type) {
 
   let skill = this.getSkill(type);
 
-  if(skill === null) {
+  if (skill === null) {
     return null;
   }
 
@@ -139,7 +145,7 @@ PlayerSkills.prototype.getSkillLevel = function(type) {
 
 }
 
-PlayerSkills.prototype.setSkillValue = function(type, value) {
+PlayerSkills.prototype.setSkillValue = function (type, value) {
 
   /*
    * Function PlayerSkills.setSkillValue
@@ -147,8 +153,8 @@ PlayerSkills.prototype.setSkillValue = function(type, value) {
    */
 
   let skill = this.getSkill(type);
-  
-  if(skill === null) {
+
+  if (skill === null) {
     return;
   }
 
@@ -158,13 +164,13 @@ PlayerSkills.prototype.setSkillValue = function(type, value) {
   let now = this.getSkillLevel(type);
 
   // Emit if changed
-  if(current !== now) {
+  if (current !== now) {
     this.__player.emit("skill", type, current, now);
   }
 
 }
 
-PlayerSkills.prototype.increment = function(type, value) {
+PlayerSkills.prototype.increment = function (type, value) {
 
   /*
    * Function PlayerSkills.increment
@@ -172,8 +178,8 @@ PlayerSkills.prototype.increment = function(type, value) {
    */
 
   let skill = this.getSkill(type);
-  
-  if(skill === null) {
+
+  if (skill === null) {
     return;
   }
 
@@ -182,7 +188,7 @@ PlayerSkills.prototype.increment = function(type, value) {
 
 }
 
-PlayerSkills.prototype.__addSkill = function(type, points) {
+PlayerSkills.prototype.__addSkill = function (type, points) {
 
   /*
    * Function PlayerSkills.__addSkill

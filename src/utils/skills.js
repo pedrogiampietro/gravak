@@ -262,4 +262,23 @@ Skills.prototype.__addSkillProperty = function (type, points) {
   this.__player.properties.add(type, new Skill(type, points));
 };
 
+Skills.prototype.incrementSkill = function (type, value) {
+  /*
+   * Function Skills.incrementSkill
+   * Increments a skill by the given value
+   */
+
+  let skill = this.__getSkill(type);
+
+  if (skill === null) {
+    console.warn(`[SKILLS] Cannot increment skill of unknown type: ${type}`);
+    return;
+  }
+
+  // Use the skill's increment method
+  skill.increment(value);
+
+  console.log(`[SKILLS] Incremented skill ${type} by ${value}. New value: ${skill.get()}`);
+};
+
 module.exports = Skills;

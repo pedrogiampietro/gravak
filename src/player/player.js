@@ -18,7 +18,7 @@ const UseHandler = requireModule("player/player-use-handler");
 const Skills = requireModule("utils/skills");
 const Position = requireModule("utils/position");
 
-const { EmotePacket, CreatureStatePacket, ContainerOpenPacket, ContainerClosePacket, CancelMessagePacket, ServerMessagePacket, ChannelWritePacket } = requireModule("network/protocol");
+const { EmotePacket, CreatureStatePacket, ContainerOpenPacket, ContainerClosePacket, CancelMessagePacket, ServerMessagePacket, ChannelWritePacket, CreaturePropertyPacket } = requireModule("network/protocol");
 
 const Player = function (data) {
   /*
@@ -127,6 +127,49 @@ Player.prototype.setLevel = function (level) {
 
   // Set the level & experience
   this.characterStatistics.skills.setSkillLevel(CONST.SKILL.EXPERIENCE, level);
+};
+
+Player.prototype.onLevelUp = function (oldLevel, newLevel) {
+  /*
+   * Function Player.onLevelUp
+   * Called when player gains a level - updates stats and notifies client
+   */
+
+  console.log(`[LEVEL UP] ${this.getProperty(CONST.PROPERTIES.NAME)} advanced from level ${oldLevel} to ${newLevel}!`);
+
+  // Recalculate max health, mana, capacity based on new level
+  this.skills.setMaximumProperties();
+
+  // Send level update to client (using a custom property ID for level)
+  // We'll use property ID 30 for LEVEL
+  this.write(new CreaturePropertyPacket(this.getId(), 30, newLevel));
+
+  // Send experience update to client
+  let currentExp = this.skills.getSkillValue(CONST.PROPERTIES.EXPERIENCE);
+  this.write(new CreaturePropertyPacket(this.getId(), CONST.PROPERTIES.EXPERIENCE, currentExp));
+
+  // Send max health and max mana updates
+  let newMaxHealth = this.getProperty(CONST.PROPERTIES.HEALTH_MAX);
+  let newMaxMana = this.getProperty(CONST.PROPERTIES.MANA_MAX);
+  let newMaxCapacity = this.getProperty(CONST.PROPERTIES.CAPACITY_MAX);
+
+  console.log(`[LEVEL UP] New max stats - HP: ${newMaxHealth}, Mana: ${newMaxMana}, Cap: ${newMaxCapacity}`);
+
+  this.write(new CreaturePropertyPacket(this.getId(), CONST.PROPERTIES.HEALTH_MAX, newMaxHealth));
+  this.write(new CreaturePropertyPacket(this.getId(), CONST.PROPERTIES.MANA_MAX, newMaxMana));
+  this.write(new CreaturePropertyPacket(this.getId(), CONST.PROPERTIES.CAPACITY_MAX, newMaxCapacity));
+
+  // Send congratulations message
+  let message = `You advanced from Level ${oldLevel} to Level ${newLevel}. Congratulations!`;
+  this.write(new ServerMessagePacket(message));
+
+  // Also send to console
+  this.write(new ChannelWritePacket(
+    CONST.CHANNEL.DEFAULT,
+    "Server",
+    message,
+    CONST.COLOR.WHITE
+  ));
 };
 
 Player.prototype.getExperiencePoints = function () {

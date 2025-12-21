@@ -33,6 +33,46 @@ PacketHandler.prototype.handlePropertyChange = function (packet) {
         creature.state.capacity = packet.value;
       }
       return;
+    case 30: // LEVEL
+      console.log("=== CLIENT: Received LEVEL update ===");
+      console.log("New level:", packet.value);
+      if (creature === gameClient.player) {
+        // Store the level for experience percentage calculation
+        if (!creature.skills) creature.skills = {};
+        creature.skills.level = packet.value;
+
+        // Update the level in skills display
+        gameClient.interface.windowManager.getWindow("skill-window").setSkillValue("level", packet.value, 0);
+        // Update health and mana bars after level up
+        creature.setHealthStatus();
+        creature.setManaStatus();
+      }
+      return;
+    case CONST.PROPERTIES.EXPERIENCE:
+      console.log("=== CLIENT: Received EXPERIENCE update ===");
+      console.log("New experience:", packet.value);
+      if (creature === gameClient.player) {
+        // Calculate experience percentage to next level
+        let currentExp = packet.value;
+        let currentLevel = creature.skills ? creature.skills.level : 1;
+
+        // Experience table formula: 50/3 * (x³ - 6x² + 17x - 12)
+        let getExpForLevel = function (level) {
+          return Math.round((50 / 3) * (Math.pow(level, 3) - 6 * Math.pow(level, 2) + 17 * level - 12));
+        };
+
+        let currentLevelExp = getExpForLevel(currentLevel);
+        let nextLevelExp = getExpForLevel(currentLevel + 1);
+        let expDiff = nextLevelExp - currentLevelExp;
+        let expProgress = currentExp - currentLevelExp;
+        let percentage = expDiff > 0 ? (expProgress / expDiff) * 100 : 0;
+
+        console.log(`Level ${currentLevel}: ${currentLevelExp} exp, Next: ${nextLevelExp} exp, Progress: ${percentage.toFixed(1)}%`);
+
+        // Update the experience in skills display with calculated percentage
+        gameClient.interface.windowManager.getWindow("skill-window").setSkillValue("experience", currentExp, percentage);
+      }
+      return;
   }
 
 }

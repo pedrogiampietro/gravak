@@ -917,7 +917,8 @@ PacketReader.prototype.readSkills = function () {
     "distance": this.readUInt32(),
     "shielding": this.readUInt32(),
     "fishing": this.readUInt32(),
-    "experience": this.readUInt32()
+    "experience": this.readUInt32(),
+    "level": this.readUInt16()
   });
 
 }

@@ -1,0 +1,39 @@
+{
+    "enabled": true,
+    "stages": [
+        {
+            "minLevel": 1,
+            "maxLevel": 8,
+            "multiplier": 500
+        },
+        {
+            "minLevel": 9,
+            "maxLevel": 20,
+            "multiplier": 6
+        },
+        {
+            "minLevel": 21,
+            "maxLevel": 50,
+            "multiplier": 5
+        },
+        {
+            "minLevel": 51,
+            "maxLevel": 100,
+            "multiplier": 4
+        },
+        {
+            "minLevel": 101,
+            "maxLevel": 150,
+            "multiplier": 3
+        },
+        {
+            "minLevel": 151,
+            "maxLevel": 200,
+            "multiplier": 2
+        },
+        {
+            "minLevel": 201,
+            "multiplier": 1
+        }
+    ]
+}

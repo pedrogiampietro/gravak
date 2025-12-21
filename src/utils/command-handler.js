@@ -329,6 +329,38 @@ CommandHandler.prototype.handle = function (player, message) {
     }
     return player.sendCancelMessage("You have learned all spells (0-19)!");
   }
+
+  // Reset character command: /reset
+  if (message[0] === "/reset") {
+    // Reset to level 1 stats
+    player.skills.experience = 0;
+    player.skills.magic = 0;
+    player.skills.fist = 10;
+    player.skills.club = 10;
+    player.skills.sword = 10;
+    player.skills.axe = 10;
+    player.skills.distance = 10;
+    player.skills.shielding = 10;
+    player.skills.fishing = 10;
+
+    // Reset properties to level 1 values
+    player.setProperty(CONST.PROPERTIES.HEALTH, 150);
+    player.setProperty(CONST.PROPERTIES.MAX_HEALTH, 150);
+    player.setProperty(CONST.PROPERTIES.MANA, 35);
+    player.setProperty(CONST.PROPERTIES.MAX_MANA, 35);
+    player.setProperty(CONST.PROPERTIES.CAPACITY, 400);
+
+    // Also update properties object if it exists
+    if (player.properties) {
+      player.properties.health = 150;
+      player.properties.maxHealth = 150;
+      player.properties.mana = 35;
+      player.properties.maxMana = 35;
+      player.properties.capacity = 400;
+    }
+
+    return player.sendCancelMessage("Character reset to Level 1! Experience: 0, HP: 150, Mana: 35");
+  }
 };
 
 module.exports = CommandHandler;

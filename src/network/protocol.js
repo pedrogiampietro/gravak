@@ -876,6 +876,9 @@ const PlayerStatePacket = function (player) {
   this.writeUInt32(player.skills.getSkillValue(CONST.PROPERTIES.SHIELDING));
   this.writeUInt32(player.skills.getSkillValue(CONST.PROPERTIES.FISHING));
   this.writeUInt32(player.skills.getSkillValue(CONST.PROPERTIES.EXPERIENCE));
+  // Write level (calculated from experience)
+  this.writeUInt16(player.skills.getSkillLevel(CONST.PROPERTIES.EXPERIENCE) || 1);
+
 
   // State variables
   this.writeUInt16(player.getProperty(CONST.PROPERTIES.SPEED));

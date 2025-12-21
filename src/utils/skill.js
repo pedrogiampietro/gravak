@@ -1,6 +1,6 @@
 "use strict";
 
-const Skill = function(type, points) {
+const Skill = function (type, points) {
 
   /*
    * Class Skill
@@ -20,7 +20,7 @@ const Skill = function(type, points) {
 
 }
 
-Skill.prototype.__getVocationConstant = function(vocation) {
+Skill.prototype.__getVocationConstant = function (vocation) {
 
   /*
    * Function Skill.__getVocationConstant
@@ -28,8 +28,8 @@ Skill.prototype.__getVocationConstant = function(vocation) {
    * See https://tibia.fandom.com/wiki/Formulae#Skills
    */
 
-  if(vocation === CONST.VOCATION.NONE) {
-    switch(this.__type) {
+  if (vocation === CONST.VOCATION.NONE) {
+    switch (this.__type) {
       case CONST.PROPERTIES.MAGIC:
         return 3.0;
       case CONST.PROPERTIES.CLUB:
@@ -43,8 +43,8 @@ Skill.prototype.__getVocationConstant = function(vocation) {
       case CONST.PROPERTIES.FISHING:
         return 1.1;
     }
-  } else if(vocation === CONST.VOCATION.KNIGHT) {
-    switch(this.__type) {
+  } else if (vocation === CONST.VOCATION.KNIGHT) {
+    switch (this.__type) {
       case CONST.PROPERTIES.MAGIC:
         return 3.0;
       case CONST.PROPERTIES.CLUB:
@@ -57,9 +57,9 @@ Skill.prototype.__getVocationConstant = function(vocation) {
       case CONST.PROPERTIES.DISTANCE:
         return 1.4;
     }
-  } else if(vocation === CONST.VOCATION.PALADIN) {
-    switch(this.__type) {
-      case CONST.PROPERTIES.MAGIC:	
+  } else if (vocation === CONST.VOCATION.PALADIN) {
+    switch (this.__type) {
+      case CONST.PROPERTIES.MAGIC:
         return 1.4;
       case CONST.PROPERTIES.CLUB:
       case CONST.PROPERTIES.SWORD:
@@ -71,8 +71,8 @@ Skill.prototype.__getVocationConstant = function(vocation) {
       case CONST.PROPERTIES.FISHING:
         return 1.1;
     }
-  } else if(vocation === CONST.VOCATION.SORCERER) {
-    switch(this.__type) {
+  } else if (vocation === CONST.VOCATION.SORCERER) {
+    switch (this.__type) {
       case CONST.PROPERTIES.MAGIC:
         return 1.1;
       case CONST.PROPERTIES.CLUB:
@@ -85,9 +85,9 @@ Skill.prototype.__getVocationConstant = function(vocation) {
         return 1.5;
       case CONST.PROPERTIES.FISHING:
         return 1.1;
-    }   
-  } else if(vocation === CONST.VOCATION.DRUID) {
-    switch(this.__type) {
+    }
+  } else if (vocation === CONST.VOCATION.DRUID) {
+    switch (this.__type) {
       case CONST.PROPERTIES.MAGIC:
         return 1.1;
       case CONST.PROPERTIES.CLUB:
@@ -100,14 +100,14 @@ Skill.prototype.__getVocationConstant = function(vocation) {
         return 1.5;
       case CONST.PROPERTIES.FISHING:
         return 1.1;
-    }   
+    }
   }
 
   return NaN;
 
 }
 
-Skill.prototype.increment = function(value) {
+Skill.prototype.increment = function (value) {
 
   /*
    * Function Skill.increment
@@ -120,7 +120,7 @@ Skill.prototype.increment = function(value) {
 
 }
 
-Skill.prototype.get = function() {
+Skill.prototype.get = function () {
 
   /*
    * Function Skill.increment
@@ -132,7 +132,7 @@ Skill.prototype.get = function() {
 
 }
 
-Skill.prototype.set = function(points) {
+Skill.prototype.set = function (points) {
 
   /*
    * Function Skill.increment
@@ -145,14 +145,14 @@ Skill.prototype.set = function(points) {
 
 }
 
-Skill.prototype.__getSkillConstant = function() {
+Skill.prototype.__getSkillConstant = function () {
 
   /*
    * Function Skill.__getSkillConstant
    * Returns the constant for each skill
    */
 
-  switch(this.__type) {
+  switch (this.__type) {
     case CONST.PROPERTIES.MAGIC:
       return 1600;
     case CONST.PROPERTIES.FIST:
@@ -172,7 +172,7 @@ Skill.prototype.__getSkillConstant = function() {
 
 }
 
-Skill.prototype.getExperience = function(x) {
+Skill.prototype.getExperience = function (x) {
 
   /*
    * Function Skill.getExperience
@@ -183,14 +183,14 @@ Skill.prototype.getExperience = function(x) {
 
 }
 
-Skill.prototype.getRequiredSkillPoints = function(x, vocation) {
+Skill.prototype.getRequiredSkillPoints = function (x, vocation) {
 
   /*
    * Function Skill.getRequiredSkillPoints
    * Returns the number of required skill points
    */
 
-  if(this.__type === CONST.PROPERTIES.EXPERIENCE) {
+  if (this.__type === CONST.PROPERTIES.EXPERIENCE) {
     return this.getExperience(x);
   }
 
@@ -200,7 +200,7 @@ Skill.prototype.getRequiredSkillPoints = function(x, vocation) {
 
 }
 
-Skill.prototype.__getSkillConstants = function(vocation) {
+Skill.prototype.__getSkillConstants = function (vocation) {
 
   /*
    * Function Skill.__getSkillConstants
@@ -218,7 +218,7 @@ Skill.prototype.__getSkillConstants = function(vocation) {
 
 }
 
-Skill.prototype.getSkillLevel = function(vocation) {
+Skill.prototype.getSkillLevel = function (vocation) {
 
   /*
    * Function Skill.getSkillLevel
@@ -226,7 +226,11 @@ Skill.prototype.getSkillLevel = function(vocation) {
    */
 
   // Special handler for experience "skill" through binary search
-  if(this.__type === CONST.PROPERTIES.EXPERIENCE) {
+  if (this.__type === CONST.PROPERTIES.EXPERIENCE) {
+    // Handle null, undefined, or 0 experience - return level 1
+    if (this.__points === null || this.__points === undefined || this.__points <= 0) {
+      return 1;
+    }
     return this.EXPERIENCE_TABLE.getClosestDown(this.__points);
   }
 
@@ -237,7 +241,7 @@ Skill.prototype.getSkillLevel = function(vocation) {
 
 }
 
-Skill.prototype.toJSON = function() {
+Skill.prototype.toJSON = function () {
 
   /*
    * Function Skill.toJSON
@@ -249,6 +253,6 @@ Skill.prototype.toJSON = function() {
 }
 
 // Lookup table to determine level from given experience
-Skill.prototype.EXPERIENCE_TABLE = Array.from({"length": 1000}, (_, i) => i + 1).map(Skill.prototype.getExperience);
+Skill.prototype.EXPERIENCE_TABLE = Array.from({ "length": 1000 }, (_, i) => i + 1).map(Skill.prototype.getExperience);
 
 module.exports = Skill;

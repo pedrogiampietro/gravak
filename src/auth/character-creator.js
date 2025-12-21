@@ -26,7 +26,9 @@ const CharacterCreator = function () {
       "defense": 2,
       "direction": CONST.DIRECTION.NORTH,
       "health": 150,
+      "maxHealth": 150,
       "mana": 35,
+      "maxMana": 35,
       "outfit": new Outfit({
         "id": 0,
         "details": {
@@ -44,6 +46,7 @@ const CharacterCreator = function () {
     },
     "skills": {
       "experience": 0,
+      "level": 1,
       "magic": 0,
       "fist": 10,
       "club": 10,

@@ -196,6 +196,42 @@ WebsocketServer.prototype.__handleLoginRequest = function (
         character.properties.name = accountName;
       }
 
+      // Fallback: ensure maxHealth exists (for characters created before this field was added)
+      if (character.properties.maxHealth === undefined) {
+        character.properties.maxHealth = character.properties.health || 150;
+      }
+
+      // Fallback: ensure maxMana exists
+      if (character.properties.maxMana === undefined) {
+        character.properties.maxMana = character.properties.mana || 35;
+      }
+
+      // Fallback: ensure experience exists in skills (for characters with null experience)
+      if (character.skills && (character.skills.experience === null || character.skills.experience === undefined)) {
+        character.skills.experience = 0;
+      }
+
+      // Fallback: ensure level exists in skills (calculate from experience if missing)
+      if (character.skills && (character.skills.level === null || character.skills.level === undefined)) {
+        // Calculate level from experience using Tibia formula
+        let exp = character.skills.experience || 0;
+        if (exp <= 0) {
+          character.skills.level = 1;
+        } else {
+          // Binary search to find level
+          let level = 1;
+          for (let i = 1; i <= 1000; i++) {
+            let requiredExp = Math.round((50 / 3) * (Math.pow(i, 3) - 6 * Math.pow(i, 2) + 17 * i - 12));
+            if (exp >= requiredExp) {
+              level = i;
+            } else {
+              break;
+            }
+          }
+          character.skills.level = level;
+        }
+      }
+
       // Accept the gamesocket
       this.__acceptCharacterConnection(gameSocket, character);
     }.bind(this)
