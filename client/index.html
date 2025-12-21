@@ -14,6 +14,9 @@
 <!-- Style Icon -->
 <link rel="shortcut icon" type="image/png" href="/png/Gravak.png" />
 
+<!-- Google Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 <!-- Stylesheets -->
 <link rel="stylesheet" type="text/css" href="./css/hotbar.css">
 <link rel="stylesheet" type="text/css" href="./css/screen-element.css">
@@ -970,6 +973,8 @@
         </div>
       </div>
 
+      <div id="chat-resizer"></div>
+
       <!-- Container for the chatbox -->
       <div class="lower">
 
@@ -977,10 +982,15 @@
 
           <!-- Header for all channels -->
           <div class="wrapper-header">
-            <button id="left-channel" class="symbol-button-long">&#129092;</button>
+            <button id="chat-lock-resize" title="Lock/Unlock Chat Resize" class="symbol-button-long material-icons"
+              style="font-size: 16px;">lock_open</button>
+            <button id="left-channel" class="symbol-button-long material-icons"
+              style="font-size: 18px;">chevron_left</button>
             <div id="cheader" class="chat-header"></div>
-            <button id="right-channel" class="symbol-button-long">&#129094;</button>
-            <button id="open-chat-modal" title="Open a new chat window" class="symbol-button-long">&#128172;</button>
+            <button id="right-channel" class="symbol-button-long material-icons"
+              style="font-size: 18px;">chevron_right</button>
+            <button id="open-chat-modal" title="Open a new chat window" class="symbol-button-long material-icons"
+              style="font-size: 16px;">chat</button>
           </div>
 
           <!-- Chatbox area itself -->
@@ -1198,6 +1208,7 @@
   <script src="src/ui/window-friend.js"></script>
   <script src="src/ui/window-skill.js"></script>
   <script src="src/ui/window-battle.js"></script>
+  <script src="src/ui/chat-resizer.js"></script>
 
   <script src="src/rendering/debugger.js"></script>
 

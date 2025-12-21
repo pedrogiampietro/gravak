@@ -7,9 +7,12 @@ window.onload = function windowOnLoad() {
    * Function window.windowOnLoad
    * Callback fired when the full window is ready
    */
-  
+
   // Create the game client class and attach it to the window
   window.gameClient = new GameClient();
+
+  // Initialize chat resizer
+  new ChatResizer();
 
 }
 
