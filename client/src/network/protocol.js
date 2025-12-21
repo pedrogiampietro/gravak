@@ -1,4 +1,4 @@
-const OutfitChangePacket = function(outfit) {
+const OutfitChangePacket = function (outfit) {
 
   /*
    * Class OutfitChangePacket
@@ -29,7 +29,7 @@ const OutfitChangePacket = function(outfit) {
 OutfitChangePacket.prototype = Object.create(PacketWriter.prototype);
 OutfitChangePacket.prototype.constructor = OutfitChangePacket;
 
-const ContainerClosePacket = function(cid) {
+const ContainerClosePacket = function (cid) {
 
   /*
    * Class OutfitChangePacket
@@ -39,14 +39,14 @@ const ContainerClosePacket = function(cid) {
   PacketWriter.call(this, CONST.PROTOCOL.CLIENT.CONTAINER_CLOSE, 4);
 
   // Identifier
-  this.writeUInt32(id);
+  this.writeUInt32(cid);
 
 }
 
 ContainerClosePacket.prototype = Object.create(PacketWriter.prototype);
 ContainerClosePacket.prototype.constructor = ContainerClosePacket;
 
-const ChannelMessagePacket = function(id, loudness, string) {
+const ChannelMessagePacket = function (id, loudness, string) {
 
   /*
    * Class OutfitChangePacket
@@ -66,7 +66,7 @@ const ChannelMessagePacket = function(id, loudness, string) {
 ChannelMessagePacket.prototype = Object.create(PacketWriter.prototype);
 ChannelMessagePacket.prototype.constructor = ChannelMessagePacket;
 
-const ChannelJoinPacket = function(id) {
+const ChannelJoinPacket = function (id) {
 
   /*
    * Class OutfitChangePacket
@@ -82,7 +82,7 @@ const ChannelJoinPacket = function(id) {
 ChannelJoinPacket.prototype = Object.create(PacketWriter.prototype);
 ChannelJoinPacket.prototype.constructor = ChannelJoinPacket;
 
-const ChannelLeavePacket = function(id) { 
+const ChannelLeavePacket = function (id) {
 
   /*
    * Class OutfitChangePacket
@@ -98,7 +98,7 @@ const ChannelLeavePacket = function(id) {
 ChannelLeavePacket.prototype = Object.create(PacketWriter.prototype);
 ChannelLeavePacket.prototype.constructor = ChannelLeavePacket;
 
-const ChannelPrivatePacket = function(name, message) {
+const ChannelPrivatePacket = function (name, message) {
 
   /*
    * Class ChannelPrivatePacket
@@ -118,89 +118,89 @@ const ChannelPrivatePacket = function(name, message) {
 ChannelPrivatePacket.prototype = Object.create(PacketWriter.prototype);
 ChannelPrivatePacket.prototype.constructor = ChannelPrivatePacket;
 
-const MovementPacket = function(direction) {
+const MovementPacket = function (direction) {
 
   /*
    * Class OutfitChangePacket
    * WRapper for an outfit change packet
    */
 
-  PacketWriter.call(this, CONST.PROTOCOL.CLIENT.MOVE, 1); 
-  
+  PacketWriter.call(this, CONST.PROTOCOL.CLIENT.MOVE, 1);
+
   this.writeUInt8(direction);
 
-} 
-  
+}
+
 MovementPacket.prototype = Object.create(PacketWriter.prototype);
 MovementPacket.prototype.constructor = MovementPacket;
 
-const PlayerTurnPacket = function(direction) {
+const PlayerTurnPacket = function (direction) {
 
   /*
    * Class PlayerTurnPacket
    * WRapper for an outfit change packet
    */
 
-  PacketWriter.call(this, CONST.PROTOCOL.CLIENT.TURN, 1);          
-  
+  PacketWriter.call(this, CONST.PROTOCOL.CLIENT.TURN, 1);
+
   this.writeUInt8(direction);
 
-} 
-  
+}
+
 PlayerTurnPacket.prototype = Object.create(PacketWriter.prototype);
 PlayerTurnPacket.prototype.constructor = PlayerTurnPacket;
 
-const ItemMovePacket = function(fromThing, toThing, count) {
-  
+const ItemMovePacket = function (fromThing, toThing, count) {
+
   /*
    * Class PlayerTurnPacket
    * WRapper for an outfit change packet
    */
-  
+
   PacketWriter.call(this, CONST.PROTOCOL.CLIENT.THING_MOVE, 17);
-    
+
   this.__writeGenericMove(fromThing);
   this.__writeGenericMove(toThing);
   this.writeUInt8(count);
 
-} 
-  
+}
+
 ItemMovePacket.prototype = Object.create(PacketWriter.prototype);
 ItemMovePacket.prototype.constructor = ItemMovePacket;
 
-const ItemLookPacket = function(thing) {
-  
+const ItemLookPacket = function (thing) {
+
   /*
    * Class ItemLookPacket
    * WRapper for an outfit change packet
    */
-  
+
   PacketWriter.call(this, CONST.PROTOCOL.CLIENT.THING_LOOK, 8);
-    
+
   this.__writeGenericMove(thing);
-  
+
 }
- 
+
 ItemLookPacket.prototype = Object.create(PacketWriter.prototype);
 ItemLookPacket.prototype.constructor = ItemLookPacket;
 
-const ItemUsePacket = function(thing) {
- 
+const ItemUsePacket = function (thing) {
+
   /*
    * Class ItemLookPacket
    * WRapper for an outfit change packet
    */
- 
+
   PacketWriter.call(this, CONST.PROTOCOL.CLIENT.THING_USE, 8);
-   
+
   this.__writeGenericMove(thing);
- 
+
 }
 
 ItemUsePacket.prototype = Object.create(PacketWriter.prototype);
 ItemUsePacket.prototype.constructor = ItemUsePacket;
 
-const ItemUseWithPacket = function(fromThing, toThing) {
+const ItemUseWithPacket = function (fromThing, toThing) {
 
   /*
    * Class ItemUseWithPacket
@@ -208,7 +208,7 @@ const ItemUseWithPacket = function(fromThing, toThing) {
    */
 
   PacketWriter.call(this, CONST.PROTOCOL.CLIENT.THING_USE_WITH, 16);
-  
+
   this.__writeGenericMove(fromThing);
   this.__writeGenericMove(toThing);
 
@@ -217,7 +217,7 @@ const ItemUseWithPacket = function(fromThing, toThing) {
 ItemUseWithPacket.prototype = Object.create(PacketWriter.prototype);
 ItemUseWithPacket.prototype.constructor = ItemUseWithPacket;
 
-const TargetPacket = function(id) {
+const TargetPacket = function (id) {
 
   /*
    * Class ItemUseWithPacket
@@ -228,12 +228,12 @@ const TargetPacket = function(id) {
 
   this.writeUInt32(id);
 
-} 
-  
+}
+
 TargetPacket.prototype = Object.create(PacketWriter.prototype);
 TargetPacket.prototype.constructor = TargetPacket;
 
-const LogoutPacket = function() {
+const LogoutPacket = function () {
 
   /*
    * Class LogoutPacket
@@ -247,7 +247,7 @@ const LogoutPacket = function() {
 LogoutPacket.prototype = Object.create(PacketWriter.prototype);
 LogoutPacket.prototype.constructor = LogoutPacket;
 
-const KeyringOpenPacket = function() {
+const KeyringOpenPacket = function () {
 
   /*
    * Class LogoutPacket
@@ -261,7 +261,7 @@ const KeyringOpenPacket = function() {
 KeyringOpenPacket.prototype = Object.create(PacketWriter.prototype);
 KeyringOpenPacket.prototype.constructor = KeyringOpenPacket;
 
-const FriendRemovePacket = function(string) {
+const FriendRemovePacket = function (string) {
 
   /*
    * Class LogoutPacket
@@ -274,13 +274,13 @@ const FriendRemovePacket = function(string) {
 
   this.writeBuffer(stringEncoded);
 
-} 
-  
+}
+
 FriendRemovePacket.prototype = Object.create(PacketWriter.prototype);
 FriendRemovePacket.prototype.constructor = FriendRemovePacket;
 
-const FriendAddPacket = function(string) {
-  
+const FriendAddPacket = function (string) {
+
   /*
    * Class LogoutPacket
    * Wrapper for logout request for the player
@@ -293,11 +293,11 @@ const FriendAddPacket = function(string) {
   this.writeBuffer(stringEncoded);
 
 }
-  
+
 FriendAddPacket.prototype = Object.create(PacketWriter.prototype);
 FriendAddPacket.prototype.constructor = FriendAddPacket;
 
-const OfferBuyPacket = function(id, offer, count) {
+const OfferBuyPacket = function (id, offer, count) {
 
   /*
    * Class OfferBuyPacket
@@ -315,7 +315,7 @@ const OfferBuyPacket = function(id, offer, count) {
 OfferBuyPacket.prototype = Object.create(PacketWriter.prototype);
 OfferBuyPacket.prototype.constructor = OfferBuyPacket;
 
-const SpellCastPacket = function(id) {
+const SpellCastPacket = function (id) {
 
   /*
    * Class SpellCastPacket
@@ -331,13 +331,13 @@ const SpellCastPacket = function(id) {
 SpellCastPacket.prototype = Object.create(PacketWriter.prototype);
 SpellCastPacket.prototype.constructor = SpellCastPacket;
 
-const LatencyPacket = function() {
-  
+const LatencyPacket = function () {
+
   /*
    * Class LatencyPacket
    * Wrapper for logout request for the player
    */
-  
+
   PacketWriter.call(this, CONST.PROTOCOL.CLIENT.LATENCY, 0);
 
 }
