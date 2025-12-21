@@ -1,4 +1,4 @@
-const Minimap = function() {
+const Minimap = function () {
 
   /*
    * Class Minimap
@@ -20,17 +20,20 @@ const Minimap = function() {
   // Current center of the minimap relative to the player character
   this.center = new Position(0, 0, 0);
 
+  // Target position for visual marker (when autowalking)
+  this.__targetPosition = null;
+
   this.addEventListeners();
 
 }
 
-Minimap.prototype.openLargeMap = function() {
+Minimap.prototype.openLargeMap = function () {
 
   gameClient.interface.modalManager.open("map-modal");
 
 }
 
-Minimap.prototype.cache = function() {
+Minimap.prototype.cache = function () {
 
   /*
    * Function Minimap.cache
@@ -54,7 +57,7 @@ Minimap.prototype.cache = function() {
 
 }
 
-Minimap.prototype.chunkUpdate = function(chunks) {
+Minimap.prototype.chunkUpdate = function (chunks) {
 
   /*
    * Function Minimap.chunkUpdate
@@ -66,7 +69,7 @@ Minimap.prototype.chunkUpdate = function(chunks) {
 
 }
 
-Minimap.prototype.addEventListeners = function() {
+Minimap.prototype.addEventListeners = function () {
 
   /*
    * Function Minimap.addEventListeners
@@ -86,9 +89,12 @@ Minimap.prototype.addEventListeners = function() {
   this.minimap.canvas.addEventListener("wheel", this.scroll.bind(this));
   this.minimap.canvas.addEventListener("click", this.move.bind(this));
 
+  // Right-click for autowalk
+  this.minimap.canvas.addEventListener("contextmenu", this.walkTo.bind(this));
+
 }
 
-Minimap.prototype.setCenter = function() {
+Minimap.prototype.setCenter = function () {
 
   /*
    * Function Minimap.setCenter
@@ -101,7 +107,7 @@ Minimap.prototype.setCenter = function() {
 
 }
 
-Minimap.prototype.move = function(event) {
+Minimap.prototype.move = function (event) {
 
   /*
    * Function Minimap.move
@@ -115,7 +121,44 @@ Minimap.prototype.move = function(event) {
 
 }
 
-Minimap.prototype.scroll = function(event) {
+Minimap.prototype.walkTo = function (event) {
+
+  /*
+   * Function Minimap.walkTo
+   * Initiates autowalk to the clicked position on the minimap
+   */
+
+  // Prevent context menu from appearing
+  event.preventDefault();
+
+  // Get player's current position
+  let playerPos = gameClient.player.getPosition();
+
+  // Calculate the world position from minimap click
+  // Account for zoom level and center offset
+  let zoomScale = (2 * this.__zoomLevel) + 1;
+  let clickOffsetX = (event.layerX - 80) / zoomScale;
+  let clickOffsetY = (event.layerY - 80) / zoomScale;
+
+  // Calculate destination world position
+  let destX = Math.floor(playerPos.x + this.center.x + clickOffsetX);
+  let destY = Math.floor(playerPos.y + this.center.y + clickOffsetY);
+  let destZ = this.__renderLayer;
+
+  let destination = new Position(destX, destY, destZ);
+
+  // Store target position for visual marker
+  this.__targetPosition = destination;
+
+  // Initiate pathfinding to the destination
+  gameClient.world.pathfinder.findPath(playerPos, destination);
+
+  // Redraw to show marker
+  this.cache();
+
+}
+
+Minimap.prototype.scroll = function (event) {
 
   /*
    * Function Minimap.scroll
@@ -123,7 +166,7 @@ Minimap.prototype.scroll = function(event) {
    */
 
   // Check the direction of the scrollwheel
-  if(event.deltaY < 0) {
+  if (event.deltaY < 0) {
     this.changeZoomLevel(1);
   } else {
     this.changeZoomLevel(-1);
@@ -131,7 +174,7 @@ Minimap.prototype.scroll = function(event) {
 
 }
 
-Minimap.prototype.setRenderLayer = function(layer) {
+Minimap.prototype.setRenderLayer = function (layer) {
 
   /*
    * Function Renderer.setRenderLayer
@@ -148,7 +191,7 @@ Minimap.prototype.setRenderLayer = function(layer) {
 
 }
 
-Minimap.prototype.changeLevel = function(level) {
+Minimap.prototype.changeLevel = function (level) {
 
   /*
    * Function Renderer.changeLevel
@@ -160,14 +203,14 @@ Minimap.prototype.changeLevel = function(level) {
 
 }
 
-Minimap.prototype.getMinimapBuffer = function(position) {
+Minimap.prototype.getMinimapBuffer = function (position) {
 
   return gameClient.database.getChunk(gameClient.database.getChunkIdentifier(position));
 
 }
 
 
-Minimap.prototype.update = function(chunks) {
+Minimap.prototype.update = function (chunks) {
 
   /*
    * Function Renderer.updateMinimap
@@ -176,26 +219,26 @@ Minimap.prototype.update = function(chunks) {
 
 
   // Get the image data from the minimap buffer
-  gameClient.world.chunks.forEach(function(chunk) {
+  gameClient.world.chunks.forEach(function (chunk) {
 
     // Get the currently occupied layer
     let tiles = chunk.getFloorTiles(gameClient.player.getPosition().z);
-    
-    tiles.forEach(function(tile) {
-    
+
+    tiles.forEach(function (tile) {
+
       // Missing tile
-      if(tile === null) {
+      if (tile === null) {
         return;
       }
 
       // Cannot be viewed
-      if(!gameClient.player.canSee(tile)) {
+      if (!gameClient.player.canSee(tile)) {
         return;
       }
 
       let color = this.__getTileColor(tile);
 
-      if(color === null) {
+      if (color === null) {
         return;
       }
 
@@ -211,7 +254,7 @@ Minimap.prototype.update = function(chunks) {
 
 }
 
-Minimap.prototype.__getTileColor = function(tile) {
+Minimap.prototype.__getTileColor = function (tile) {
 
   /*
    * Function Minimap.__getTileColor
@@ -222,7 +265,7 @@ Minimap.prototype.__getTileColor = function(tile) {
   let itemColors = tile.items.map(item => item.getMinimapColor()).filter(x => x !== null);
 
   // Return the color of the last item
-  if(itemColors.length > 0) {
+  if (itemColors.length > 0) {
     return itemColors.last();
   }
 
@@ -231,7 +274,7 @@ Minimap.prototype.__getTileColor = function(tile) {
 
 }
 
-Minimap.prototype.changeZoomLevel = function(value) {
+Minimap.prototype.changeZoomLevel = function (value) {
 
   /*
    * Function Minimap.changeZoomLevel
@@ -245,13 +288,13 @@ Minimap.prototype.changeZoomLevel = function(value) {
 
 }
 
-Minimap.prototype.save = function() {
+Minimap.prototype.save = function () {
 
   gameClient.database.saveChunks();
 
 }
 
-Minimap.prototype.render = function(chunks) {
+Minimap.prototype.render = function (chunks) {
 
   /*
    * Function GameClient.renderMinimap
@@ -261,17 +304,17 @@ Minimap.prototype.render = function(chunks) {
   this.minimap.clear();
 
   // Go the active minimap chunks
-  Object.keys(chunks).forEach(function(id) {
+  Object.keys(chunks).forEach(function (id) {
 
     let chunk = chunks[id];
-    
-    if(chunk === null) {
+
+    if (chunk === null) {
       return;
     }
-    
+
     let [x, y, z] = id.split(".").map(Number);
 
-    if(z !== this.__renderLayer) {
+    if (z !== this.__renderLayer) {
       return;
     }
 
@@ -284,9 +327,77 @@ Minimap.prototype.render = function(chunks) {
   this.minimap.context.globalCompositeOperation = "copy";
 
   // Recursively scale the canvas to the appropriate zoom level
-  for(let i = 0; i < this.__zoomLevel; i++) {
+  for (let i = 0; i < this.__zoomLevel; i++) {
     this.minimap.context.drawImage(this.minimap.canvas, 0, 0, 160, 160, -80, -80, 320, 320);
   }
+
+  // Draw target marker if there's an active destination
+  this.__drawTargetMarker();
+
+}
+
+Minimap.prototype.__drawTargetMarker = function () {
+
+  /*
+   * Function Minimap.__drawTargetMarker
+   * Draws a marker at the target position showing where player is walking to
+   */
+
+  // Check if there's an active target (from pathfinder or local)
+  let targetPos = this.__targetPosition || gameClient.world.pathfinder.__finalDestination;
+
+  if (targetPos === null) {
+    return;
+  }
+
+  // Clear target if player reached destination
+  let playerPos = gameClient.player.getPosition();
+  if (playerPos.x === targetPos.x && playerPos.y === targetPos.y && playerPos.z === targetPos.z) {
+    this.__targetPosition = null;
+    return;
+  }
+
+  // Only draw if on same floor
+  if (targetPos.z !== this.__renderLayer) {
+    return;
+  }
+
+  let zoomScale = (2 * this.__zoomLevel) + 1;
+
+  // Calculate canvas positions (80 is center of 160px canvas)
+  let targetCanvasX = 80 + (targetPos.x - playerPos.x - this.center.x) * zoomScale;
+  let targetCanvasY = 80 + (targetPos.y - playerPos.y - this.center.y) * zoomScale;
+  let playerCanvasX = 80 - this.center.x * zoomScale;
+  let playerCanvasY = 80 - this.center.y * zoomScale;
+
+  let ctx = this.minimap.context;
+
+  // Reset composite operation for drawing on top
+  ctx.globalCompositeOperation = "source-over";
+
+  ctx.save();
+
+  // Draw dashed line from player to target
+  ctx.beginPath();
+  ctx.strokeStyle = "#00FF00";
+  ctx.lineWidth = 1;
+  ctx.setLineDash([3, 2]);
+  ctx.moveTo(playerCanvasX, playerCanvasY);
+  ctx.lineTo(targetCanvasX, targetCanvasY);
+  ctx.stroke();
+
+  // Draw target marker (red X)
+  ctx.strokeStyle = "#FF0000";
+  ctx.lineWidth = 2;
+  ctx.setLineDash([]);
+  ctx.beginPath();
+  ctx.moveTo(targetCanvasX - 4, targetCanvasY - 4);
+  ctx.lineTo(targetCanvasX + 4, targetCanvasY + 4);
+  ctx.moveTo(targetCanvasX + 4, targetCanvasY - 4);
+  ctx.lineTo(targetCanvasX - 4, targetCanvasY + 4);
+  ctx.stroke();
+
+  ctx.restore();
 
 }
 
