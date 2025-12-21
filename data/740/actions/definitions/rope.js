@@ -1,4 +1,4 @@
-const PacketHandler = requireModule("packet-handler");
+const PacketHandler = requireModule("network/packet-handler");
 
 function useOnHole(player, tile) {
 

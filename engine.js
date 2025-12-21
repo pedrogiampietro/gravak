@@ -2,7 +2,7 @@
 
 require("./require");
 
-const GameServer = requireModule("gameserver");
+const GameServer = requireModule("core/gameserver");
 
 if (require.main === module) {
 

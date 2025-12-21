@@ -1,4 +1,4 @@
-const Condition = requireModule("condition");
+const Condition = requireModule("combat/condition");
 
 // Add this to the item definitions?
 const lookup = new Object({

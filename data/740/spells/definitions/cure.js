@@ -1,4 +1,4 @@
-const Condition = requireModule("condition");
+const Condition = requireModule("combat/condition");
 
 module.exports = function cureBurning() {
 

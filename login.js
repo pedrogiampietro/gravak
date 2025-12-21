@@ -2,7 +2,7 @@
 
 require("./require");
 
-const LoginServer = requireModule("login-server");
+const LoginServer = requireModule("auth/login-server");
 
 if (require.main === module) {
 

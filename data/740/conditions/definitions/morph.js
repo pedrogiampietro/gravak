@@ -1,6 +1,6 @@
 "use strict";
 
-const Outfit = requireModule("outfit");
+const Outfit = requireModule("entities/outfit");
 
 function onStart(creature, properties) {
 

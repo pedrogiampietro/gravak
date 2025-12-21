@@ -1,8 +1,8 @@
 "use strict";
 
-const Condition = requireModule("condition");
-const Position = requireModule("position");
-const Monster = requireModule("monster");
+const Condition = requireModule("combat/condition");
+const Position = requireModule("utils/position");
+const Monster = requireModule("monster/monster");
 
 let monster;
 

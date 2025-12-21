@@ -1,4 +1,4 @@
-const Position = requireModule("position");
+const Position = requireModule("utils/position");
 
 module.exports = function statue(time) {
 

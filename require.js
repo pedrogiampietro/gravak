@@ -3,7 +3,7 @@ const path = require("path");
 global.CONFIG = require("./config");
 
 // Create some useful global functions
-global.getDataFile = function() {
+global.getDataFile = function () {
 
   /*
    * Function global.getDataFile
@@ -14,7 +14,7 @@ global.getDataFile = function() {
 
 }
 
-global.requireData = function() {
+global.requireData = function () {
 
   /*
    * Function global.requireData
@@ -25,7 +25,7 @@ global.requireData = function() {
 
 }
 
-global.requireModule = function() {
+global.requireModule = function () {
 
   /*
    * Function global.requireModule
@@ -37,16 +37,16 @@ global.requireModule = function() {
 }
 
 // Requires the prototype modifications
-requireModule("__proto__");
+requireModule("utils/__proto__");
 
 // Load constants
 global.CONST = require("./" + path.join("client", "data", CONFIG.SERVER.CLIENT_VERSION, "constants.json"))
 
 // Check the NodeJS version
-let [ major, minor, patch ] = process.versions.node.split(".");
+let [major, minor, patch] = process.versions.node.split(".");
 
 // Confirm major NodeJS version
-if(major < 16) {
+if (major < 16) {
   console.log("Could not launch gameserver: required version > 16.0.0 and current version: %s.".format(process.versions.node));
   return process.exit(1);
 }

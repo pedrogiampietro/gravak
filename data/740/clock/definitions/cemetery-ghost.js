@@ -1,4 +1,4 @@
-const Position = requireModule("position");
+const Position = requireModule("utils/position");
 //let ghost = process.gameServer.database.npcs["ghost"];
 
 module.exports = function cemeteryGhost(time) {
