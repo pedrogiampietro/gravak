@@ -1,4 +1,4 @@
-const Renderer = function() {
+const Renderer = function () {
 
   /*
    * Class Renderer
@@ -49,7 +49,7 @@ const Renderer = function() {
 
 }
 
-Renderer.prototype.render = function() {
+Renderer.prototype.render = function () {
 
   /*
    * Function Renderer.render
@@ -67,7 +67,7 @@ Renderer.prototype.render = function() {
 
 }
 
-Renderer.prototype.getTileCache = function() {
+Renderer.prototype.getTileCache = function () {
 
   /*
    * Function Renderer.getTileCache
@@ -78,7 +78,7 @@ Renderer.prototype.getTileCache = function() {
 
 }
 
-Renderer.prototype.updateTileCache = function() {
+Renderer.prototype.updateTileCache = function () {
 
   /*
    * Function Renderer.updateTileCache
@@ -93,7 +93,7 @@ Renderer.prototype.updateTileCache = function() {
   let max = gameClient.player.getMaxFloor();
 
   // Collect all tiles up until the maximum floor to render
-  for(let i = 0; i < max; i++) {
+  for (let i = 0; i < max; i++) {
 
     let tiles = this.__getFloorTilesTiles(i);
     this.__tileCache.push(tiles);
@@ -103,7 +103,7 @@ Renderer.prototype.updateTileCache = function() {
 
 }
 
-Renderer.prototype.takeScreenshot = function(event) {
+Renderer.prototype.takeScreenshot = function (event) {
 
   /*
    * Function Renderer.takeScreenshot
@@ -118,7 +118,7 @@ Renderer.prototype.takeScreenshot = function(event) {
   element.download = "screenshot-%s.png".format(new Date().toISOString());
 
   // Render the character plates
-  Object.values(gameClient.world.activeCreatures).forEach(function(activeCreature) {
+  Object.values(gameClient.world.activeCreatures).forEach(function (activeCreature) {
 
     let style = window.getComputedStyle(activeCreature.characterElement.element.querySelector("span"));
     let position = this.getCreatureScreenPosition(activeCreature);
@@ -134,7 +134,7 @@ Renderer.prototype.takeScreenshot = function(event) {
   }, this);
 
   // Render the text elements to the canvas
-  gameClient.interface.screenElementManager.activeTextElements.forEach(function(element) {
+  gameClient.interface.screenElementManager.activeTextElements.forEach(function (element) {
 
     let style = window.getComputedStyle(element.element.querySelector("span"));
     let position = this.getStaticScreenPosition(element.__position);
@@ -156,7 +156,7 @@ Renderer.prototype.takeScreenshot = function(event) {
 
 }
 
-Renderer.prototype.setAmbientColor = function(r, g, b, a) {
+Renderer.prototype.setAmbientColor = function (r, g, b, a) {
 
   /*
    * Function Renderer.setAmbientColor
@@ -167,7 +167,7 @@ Renderer.prototype.setAmbientColor = function(r, g, b, a) {
 
 }
 
-Renderer.prototype.setWeather = function(bool) {
+Renderer.prototype.setWeather = function (bool) {
 
   /*
    * Function Renderer.setWeather
@@ -178,7 +178,7 @@ Renderer.prototype.setWeather = function(bool) {
 
 }
 
-Renderer.prototype.addDistanceAnimation = function(packet) {
+Renderer.prototype.addDistanceAnimation = function (packet) {
 
   /*
    * Function Renderer.addDistanceAnimation
@@ -187,7 +187,7 @@ Renderer.prototype.addDistanceAnimation = function(packet) {
 
   let animationId = gameClient.dataObjects.getDistanceAnimationId(packet.type);
 
-  if(animationId === null) {
+  if (animationId === null) {
     return;
   }
 
@@ -197,7 +197,7 @@ Renderer.prototype.addDistanceAnimation = function(packet) {
 
 }
 
-Renderer.prototype.addPositionAnimation = function(packet) {
+Renderer.prototype.addPositionAnimation = function (packet) {
 
   /*
    * Function Renderer.addPositionAnimation
@@ -206,13 +206,13 @@ Renderer.prototype.addPositionAnimation = function(packet) {
 
   let tile = gameClient.world.getTileFromWorldPosition(packet.position);
 
-  if(tile === null) {
+  if (tile === null) {
     return;
   }
 
   let animationId = gameClient.dataObjects.getAnimationId(packet.type);
 
-  if(animationId === null) {
+  if (animationId === null) {
     return;
   }
 
@@ -220,7 +220,7 @@ Renderer.prototype.addPositionAnimation = function(packet) {
 
 }
 
-Renderer.prototype.getStaticScreenPosition = function(position) {
+Renderer.prototype.getStaticScreenPosition = function (position) {
 
   /*
    * Function Renderer.getStaticScreenPosition
@@ -240,7 +240,7 @@ Renderer.prototype.getStaticScreenPosition = function(position) {
 
 }
 
-Renderer.prototype.getCreatureScreenPosition = function(creature) {
+Renderer.prototype.getCreatureScreenPosition = function (creature) {
 
   /*
    * Function Renderer.getCreatureScreenPosition
@@ -259,7 +259,7 @@ Renderer.prototype.getCreatureScreenPosition = function(creature) {
 
 }
 
-Renderer.prototype.__increment = function() {
+Renderer.prototype.__increment = function () {
 
   /*
    * Function Renderer.__increment
@@ -273,46 +273,50 @@ Renderer.prototype.__increment = function() {
 
 }
 
-Renderer.prototype.__getFloorTilesTiles = function(floor) {
+Renderer.prototype.__getFloorTilesTiles = function (floor) {
 
   /*
    * Function Renderer.__getFloorTilesTiles
    * Returns the tiles in the viewport sorted by distinctive layers
+   * OPTIMIZED: Uses for loops instead of forEach for better performance
    */
 
-  let tiles = new Array();
+  let tiles = [];
+  let chunks = gameClient.world.chunks;
+  let player = gameClient.player;
 
-  // Go over all the loaded chunks
-  gameClient.world.chunks.forEach(function(chunk) {
+  // Go over all the loaded chunks using for loop
+  for (let i = 0; i < chunks.length; i++) {
+    let floorTiles = chunks[i].getFloorTiles(floor);
 
     // Aggregate all the visible tiles
-    chunk.getFloorTiles(floor).forEach(function(tile) {
+    for (let j = 0; j < floorTiles.length; j++) {
+      let tile = floorTiles[j];
 
       // Can be skipped because the tile cannot be seen
-      if(!gameClient.player.canSee(tile)) {
-        return;
+      if (!player.canSee(tile)) {
+        continue;
       }
 
-      if(tile.id === 0 && tile.items.length === 0 && tile.neighbours.length === 1) {
-        return;
+      if (tile.id === 0 && tile.items.length === 0 && tile.neighbours.length === 1) {
+        continue;
       }
 
       // Add the tile to the cache
       tiles.push(tile);
-
-    }, this);
-
-  }, this);
+    }
+  }
 
   return tiles;
 
 }
 
-Renderer.prototype.__renderWorld = function() {
+Renderer.prototype.__renderWorld = function () {
 
   /*
    * Function Renderer.__renderWorld
    * Renders the game world, tiles, and creatures per layer
+   * OPTIMIZED: Uses for loop, caches settings checks
    */
 
   let start = performance.now();
@@ -320,19 +324,27 @@ Renderer.prototype.__renderWorld = function() {
   // Clear the full game canvas
   this.screen.clear();
 
+  // Cache tile cache and settings
+  let tileCache = this.getTileCache();
+  let settings = gameClient.interface.settings;
+  let weatherEnabled = settings.isWeatherEnabled();
+  let lightingEnabled = settings.isLightingEnabled();
+
   // Render all of the cached tiles: only needs to be updated when the character moves
-  this.getTileCache().forEach(this.__renderFloor, this);
+  for (let i = 0; i < tileCache.length; i++) {
+    this.__renderFloor(tileCache[i], i);
+  }
 
   // If requested render the weather canvas
-  if(gameClient.interface.settings.isWeatherEnabled()) {
+  if (weatherEnabled) {
     this.weatherCanvas.drawWeather();
   }
 
   // Finally draw the lightscreen to the canvas and reset it
-  if(gameClient.interface.settings.isLightingEnabled()) {
+  if (lightingEnabled) {
 
     // Has lighting
-    if(gameClient.player.hasCondition(ConditionManager.prototype.LIGHT)) {
+    if (gameClient.player.hasCondition(ConditionManager.prototype.LIGHT)) {
       this.lightscreen.renderLightBubble(7, 5, 5, 23, true);
     } else {
       this.lightscreen.renderLightBubble(7, 5, 2, 23, true);
@@ -347,24 +359,28 @@ Renderer.prototype.__renderWorld = function() {
 
 }
 
-Renderer.prototype.__renderFloor = function(tiles, index) {
+Renderer.prototype.__renderFloor = function (tiles, index) {
 
   /*
    * Function Renderer.__renderFloor
    * Renders a single floor to the gamescreen
+   * OPTIMIZED: Uses for loops instead of forEach
    */
 
   // Render all the tiles on the floor
-  tiles.forEach(this.__renderFullTile, this);
+  for (let i = 0; i < tiles.length; i++) {
+    this.__renderFullTile(tiles[i]);
+  }
 
   // Render the animations on this layer
-  this.__animationLayers[index].forEach(function(animation) {
-    this.__renderDistanceAnimation(animation, this.__animationLayers[index]);
+  let animations = this.__animationLayers[index];
+  animations.forEach(function (animation) {
+    this.__renderDistanceAnimation(animation, animations);
   }, this);
 
 }
 
-Renderer.prototype.__renderFullTile = function(tile) {
+Renderer.prototype.__renderFullTile = function (tile) {
 
   /*
    * Function Renderer.__renderFullTile
@@ -378,7 +394,7 @@ Renderer.prototype.__renderFullTile = function(tile) {
 
 }
 
-Renderer.prototype.__renderDistanceAnimation = function(animation, thing) {
+Renderer.prototype.__renderDistanceAnimation = function (animation, thing) {
 
   /*
    * Function Renderer.__renderDistanceAnimation
@@ -386,7 +402,7 @@ Renderer.prototype.__renderDistanceAnimation = function(animation, thing) {
    */
 
   // If the animation has expirted
-  if(animation.expired()) {
+  if (animation.expired()) {
     thing.delete(animation);
   }
 
@@ -396,7 +412,7 @@ Renderer.prototype.__renderDistanceAnimation = function(animation, thing) {
 
 }
 
-Renderer.prototype.__renderAnimation = function(animation, thing) {
+Renderer.prototype.__renderAnimation = function (animation, thing) {
 
   /*
    * Function Renderer.__renderAnimation
@@ -404,24 +420,24 @@ Renderer.prototype.__renderAnimation = function(animation, thing) {
    */
 
   // If the animation has expirted
-  if(animation.expired()) {
+  if (animation.expired()) {
     thing.deleteAnimation(animation);
   }
 
   // There is a flag that identifies light coming from the tile
-  if(!(animation instanceof BoxAnimation)) { 
-    if(gameClient.interface.settings.isLightingEnabled() && animation.isLight()) {
+  if (!(animation instanceof BoxAnimation)) {
+    if (gameClient.interface.settings.isLightingEnabled() && animation.isLight()) {
       let position = this.getStaticScreenPosition(thing.getPosition());
       this.__renderLight(thing, position, animation, false);
     }
-  } 
+  }
 
   // Determine the rendering position
-  if(animation instanceof BoxAnimation) {
+  if (animation instanceof BoxAnimation) {
     this.screen.drawInnerCombatRect(animation, this.getCreatureScreenPosition(thing));
-  } else if(thing instanceof Tile) {
+  } else if (thing instanceof Tile) {
     this.screen.drawSprite(animation, this.getStaticScreenPosition(thing.getPosition()), 32);
-  } else if(thing instanceof Creature) {
+  } else if (thing instanceof Creature) {
     this.screen.drawSprite(animation, this.getCreatureScreenPosition(thing), 32);
   }
 
@@ -429,20 +445,20 @@ Renderer.prototype.__renderAnimation = function(animation, thing) {
 
 }
 
-Renderer.prototype.__renderTileAnimations = function(tile) {
+Renderer.prototype.__renderTileAnimations = function (tile) {
 
   /*
    * Function Renderer.__renderTileAnimations
    * Renders the animations that are present on the tile
    */
 
-  tile.__animations.forEach(function(animation) {
+  tile.__animations.forEach(function (animation) {
     this.__renderAnimation(animation, tile);
   }, this);
 
 }
 
-Renderer.prototype.__renderLightThing = function(position, thing, intensity) {
+Renderer.prototype.__renderLightThing = function (position, thing, intensity) {
 
   /*
    * Function Renderer.__renderLightThing
@@ -465,7 +481,7 @@ Renderer.prototype.__renderLightThing = function(position, thing, intensity) {
 
 }
 
-Renderer.prototype.__renderLight = function(tile, position, thing, intensity) {
+Renderer.prototype.__renderLight = function (tile, position, thing, intensity) {
 
   /*
    * Function Renderer.__renderLight
@@ -473,61 +489,65 @@ Renderer.prototype.__renderLight = function(tile, position, thing, intensity) {
    */
 
   let floor = gameClient.world.getChunkFromWorldPosition(tile.getPosition()).getFirstFloorFromBottomProjected(tile.getPosition());
- 
+
   // Confirm light is visible and should be rendered
-  if(floor === null || floor >= gameClient.player.getMaxFloor()) {
+  if (floor === null || floor >= gameClient.player.getMaxFloor()) {
     this.__renderLightThing(position, thing, intensity);
   }
 
 }
 
-Renderer.prototype.__renderTileObjects = function(tile) {
+Renderer.prototype.__renderTileObjects = function (tile) {
 
   /*
    * Function Renderer.__renderTileObjects
    * Renders all objects & creatures on a tile
+   * OPTIMIZED: Uses for loops, caches settings and positions
    */
 
   let position = this.getStaticScreenPosition(tile.getPosition());
-
-  // Reference the items to be rendered
   let items = tile.items;
+  let itemsLength = items.length;
+  let lightingEnabled = gameClient.interface.settings.isLightingEnabled();
+  let currentHoverTile = gameClient.mouse.getCurrentTileHover();
+  let elevation = tile.__renderElevation;
 
   // Render the items on the tile
-  items.forEach(function(item, i) {
+  for (let i = 0; i < itemsLength; i++) {
+    let item = items[i];
 
-    // Immediatelly skip objects with on-top property: these are rendered later
-    if(item.hasFlag(PropBitFlag.prototype.flags.DatFlagOnTop)) {
-      return;
+    // Immediately skip objects with on-top property: these are rendered later
+    if (item.hasFlag(PropBitFlag.prototype.flags.DatFlagOnTop)) {
+      continue;
     }
 
     // Should render item light?
-    if(gameClient.interface.settings.isLightingEnabled() && item.isLight()) {
+    if (lightingEnabled && item.isLight()) {
       this.__renderLight(tile, position, item);
     }
 
-    // Handle the current elevation of the tile
+    // Handle the current elevation of the tile (reuse object when possible)
     let renderPosition = new Position(
-      position.x - tile.__renderElevation,
-      position.y - tile.__renderElevation
+      position.x - elevation,
+      position.y - elevation
     );
 
     // Draw the sprite at the right position
     this.screen.drawSprite(item, renderPosition, 32);
 
-    if(item.isPickupable() && i === items.length - 1 && tile === gameClient.mouse.getCurrentTileHover()) {
+    if (item.isPickupable() && i === itemsLength - 1 && tile === currentHoverTile) {
       this.screen.drawSpriteOverlay(item, renderPosition, 32);
     }
 
     // Add the elevation of the item
-    if(item.isElevation()) {
+    if (item.isElevation()) {
       tile.addElevation(item.getDataObject().properties.elevation);
+      elevation = tile.__renderElevation;
     }
+  }
 
-  }, this);
-
-  // Render the entities on the tile
-  tile.monsters.forEach(function(creature) {
+  // Render the entities on the tile (monsters is a Set, so use forEach)
+  tile.monsters.forEach(function (creature) {
     this.__renderCreature(tile, creature, false);
   }, this);
 
@@ -539,36 +559,37 @@ Renderer.prototype.__renderTileObjects = function(tile) {
 
 }
 
-Renderer.prototype.__renderAlwaysOnTopItems = function(items, position) {
+Renderer.prototype.__renderAlwaysOnTopItems = function (items, position) {
 
   /*
    * Function Renderer.__renderAlwaysOnTopItems
    * Renders the items that are always on top of the other items
+   * OPTIMIZED: Uses for loop instead of forEach
    */
 
   // Render all top items on the tile
-  items.forEach(function(item) {
+  for (let i = 0; i < items.length; i++) {
+    let item = items[i];
 
     // This is the flag that we need to look at
-    if(!item.hasFlag(PropBitFlag.prototype.flags.DatFlagOnTop)) {
-      return;
+    if (!item.hasFlag(PropBitFlag.prototype.flags.DatFlagOnTop)) {
+      continue;
     }
 
     // Draw the sprite
     this.screen.drawSprite(item, position, 32);
-
-  }, this);
+  }
 
 }
 
-Renderer.prototype.__renderTile = function(tile) {
+Renderer.prototype.__renderTile = function (tile) {
 
   /*
    * Function Renderer.__renderTile
    * Rendering function for a particular tile
    */
 
-  if(tile.id === 0) {
+  if (tile.id === 0) {
     return;
   }
 
@@ -579,7 +600,7 @@ Renderer.prototype.__renderTile = function(tile) {
   let position = this.getStaticScreenPosition(tile.getPosition());
 
   // There is a flag that identifies light coming from the tile
-  if(gameClient.interface.settings.isLightingEnabled() && tile.isLight()) {
+  if (gameClient.interface.settings.isLightingEnabled() && tile.isLight()) {
     this.__renderLight(tile, position, tile);
   }
 
@@ -588,18 +609,18 @@ Renderer.prototype.__renderTile = function(tile) {
 
 }
 
-Renderer.prototype.__renderDeferred = function(tile) {
+Renderer.prototype.__renderDeferred = function (tile) {
 
   /*
    * Function Renderer.__renderDeferred
    * Renders the deferred entities on the tile
    */
 
-  if(tile.__deferredCreatures.size === 0) {
+  if (tile.__deferredCreatures.size === 0) {
     return;
   }
 
-  tile.__deferredCreatures.forEach(function(creature) {
+  tile.__deferredCreatures.forEach(function (creature) {
     let tile = gameClient.world.getTileFromWorldPosition(creature.__position);
     this.__renderCreature(tile, creature, true);
   }, this);
@@ -608,7 +629,7 @@ Renderer.prototype.__renderDeferred = function(tile) {
 
 }
 
-Renderer.prototype.__renderCreature = function(tile, creature, deferred) {
+Renderer.prototype.__renderCreature = function (tile, creature, deferred) {
 
   /*
    * Function Renderer.__renderCreature
@@ -616,7 +637,7 @@ Renderer.prototype.__renderCreature = function(tile, creature, deferred) {
    */
 
   // If the creature is not visible in the gamescreen: skip rendering
-  if(!gameClient.player.canSee(creature)) {
+  if (!gameClient.player.canSee(creature)) {
     return;
   }
 
@@ -629,7 +650,7 @@ Renderer.prototype.__renderCreature = function(tile, creature, deferred) {
   );
 
   // Should the rendering of the creature be deferred to another tile
-  if(this.__shouldDefer(tile, creature) && !deferred) {
+  if (this.__shouldDefer(tile, creature) && !deferred) {
     return this.__defer(tile, creature);
   }
 
@@ -637,11 +658,11 @@ Renderer.prototype.__renderCreature = function(tile, creature, deferred) {
   this.__renderCreatureAnimationsBelow(creature);
 
   // Render the target box around the creature
-  if(gameClient.player.isCreatureTarget(creature)) {
+  if (gameClient.player.isCreatureTarget(creature)) {
     this.screen.drawOuterCombatRect(this.getCreatureScreenPosition(creature), Interface.prototype.COLORS.RED);
   }
 
-  if(creature.hasCondition(ConditionManager.prototype.INVISIBLE)) {
+  if (creature.hasCondition(ConditionManager.prototype.INVISIBLE)) {
     this.__renderAnimation(LoopedAnimation.prototype.MAGIC_BLUE, creature);
   } else {
 
@@ -657,7 +678,7 @@ Renderer.prototype.__renderCreature = function(tile, creature, deferred) {
 
 }
 
-Renderer.prototype.__defer = function(tile, creature) {
+Renderer.prototype.__defer = function (tile, creature) {
 
   /*
    * Function Renderer.__defer
@@ -668,13 +689,13 @@ Renderer.prototype.__defer = function(tile, creature) {
   let deferTile = this.__getDeferTile(tile, creature);
 
   // Make sure the tile exists and is not itself
-  if(deferTile !== null) {
+  if (deferTile !== null) {
     deferTile.__deferredCreatures.add(creature);
   }
 
 }
 
-Renderer.prototype.__getDeferTile = function(tile, creature) {
+Renderer.prototype.__getDeferTile = function (tile, creature) {
 
   /*
    * Function Renderer.__getDeferTile
@@ -682,9 +703,9 @@ Renderer.prototype.__getDeferTile = function(tile, creature) {
    */
 
   // Depends on the moving position
-  if(creature.__lookDirection === CONST.DIRECTION.NORTH_EAST) {
+  if (creature.__lookDirection === CONST.DIRECTION.NORTH_EAST) {
     return gameClient.world.getTileFromWorldPosition(creature.getPosition().south());
-  } else if(creature.__lookDirection === CONST.DIRECTION.SOUTH_WEST) {
+  } else if (creature.__lookDirection === CONST.DIRECTION.SOUTH_WEST) {
     return gameClient.world.getTileFromWorldPosition(creature.getPosition().east());
   } else {
     return gameClient.world.getTileFromWorldPosition(creature.__previousPosition);
@@ -692,39 +713,39 @@ Renderer.prototype.__getDeferTile = function(tile, creature) {
 
 }
 
-Renderer.prototype.__shouldDefer = function(tile, creature) {
+Renderer.prototype.__shouldDefer = function (tile, creature) {
 
   /*
    * Function Renderer.__shouldDefer
    * Renders true if the drawing of a creature should be deferred to another tile
    */
 
-  if(creature.__teleported) {
+  if (creature.__teleported) {
     return false;
   }
 
-  if(!creature.isMoving()) {
+  if (!creature.isMoving()) {
     return false;
   }
 
-  if(creature.getPosition().z !== creature.__previousPosition.z) {
+  if (creature.getPosition().z !== creature.__previousPosition.z) {
     return false;
   }
 
-  if((creature.__lookDirection === CONST.DIRECTION.NORTH || creature.__lookDirection === CONST.DIRECTION.WEST || creature.__lookDirection === CONST.DIRECTION.NORTH_WEST)) {
-    if(!creature.__previousPosition.equals(tile.getPosition())) {
+  if ((creature.__lookDirection === CONST.DIRECTION.NORTH || creature.__lookDirection === CONST.DIRECTION.WEST || creature.__lookDirection === CONST.DIRECTION.NORTH_WEST)) {
+    if (!creature.__previousPosition.equals(tile.getPosition())) {
       return true;
     }
   }
 
-  if((creature.__lookDirection === CONST.DIRECTION.NORTH_EAST)) {
-    if(!creature.__previousPosition.equals(tile.getPosition().west())) {
+  if ((creature.__lookDirection === CONST.DIRECTION.NORTH_EAST)) {
+    if (!creature.__previousPosition.equals(tile.getPosition().west())) {
       return true;
     }
   }
 
-  if((creature.__lookDirection === CONST.DIRECTION.SOUTH_WEST)) {
-    if(!creature.__previousPosition.equals(tile.getPosition().north())) {
+  if ((creature.__lookDirection === CONST.DIRECTION.SOUTH_WEST)) {
+    if (!creature.__previousPosition.equals(tile.getPosition().north())) {
       return true;
     }
   }
@@ -733,37 +754,37 @@ Renderer.prototype.__shouldDefer = function(tile, creature) {
 
 }
 
-Renderer.prototype.__renderCreatureAnimationsAbove = function(creature) {
+Renderer.prototype.__renderCreatureAnimationsAbove = function (creature) {
 
   /*
    * Function Renderer.__renderCreatureAnimationsAbove
    * Renders animations above the creature
    */
 
-  creature.__animations.forEach(function(animation) {
-    if(animation.constructor.name !== "BoxAnimation") {
+  creature.__animations.forEach(function (animation) {
+    if (animation.constructor.name !== "BoxAnimation") {
       this.__renderAnimation(animation, creature);
     }
   }, this);
 
 }
 
-Renderer.prototype.__renderCreatureAnimationsBelow = function(creature) {
+Renderer.prototype.__renderCreatureAnimationsBelow = function (creature) {
 
   /*
    * Function Renderer.__renderCreatureAnimationsBelow
    * Renders animations below the creature
    */
 
-  creature.__animations.forEach(function(animation) {
-    if(animation.constructor.name === "BoxAnimation") {
+  creature.__animations.forEach(function (animation) {
+    if (animation.constructor.name === "BoxAnimation") {
       this.__renderAnimation(animation, creature);
     }
   }, this);
 
 }
 
-Renderer.prototype.__renderOther = function() {
+Renderer.prototype.__renderOther = function () {
 
   /*
    * Function GameClient.__renderOther
@@ -791,7 +812,7 @@ Renderer.prototype.__renderOther = function() {
 
 }
 
-Renderer.prototype.__renderContainers = function() {
+Renderer.prototype.__renderContainers = function () {
 
   /*
    * Function Renderer.__renderContainers
@@ -802,7 +823,7 @@ Renderer.prototype.__renderContainers = function() {
 
 }
 
-Renderer.prototype.__handleVisibiliyChange = function(event) {
+Renderer.prototype.__handleVisibiliyChange = function (event) {
 
   /*
    * Function Renderer.__handleVisibiliyChange
@@ -810,18 +831,18 @@ Renderer.prototype.__handleVisibiliyChange = function(event) {
    */
 
   // Only when tabbing out
-  if(!document.hidden) {
+  if (!document.hidden) {
     return;
   }
 
   // Set the movement events of all creatures to null
-  Object.values(gameClient.world.activeCreatures).forEach(function(creature) {
+  Object.values(gameClient.world.activeCreatures).forEach(function (creature) {
     creature.__movementEvent = null;
   });
 
 }
 
-Renderer.prototype.__drawCastbar = function(creature) {
+Renderer.prototype.__drawCastbar = function (creature) {
 
   /*
    * Function Canvas.__drawCastbar
@@ -834,11 +855,11 @@ Renderer.prototype.__drawCastbar = function(creature) {
   let fraction = creature.getCastFraction();
   let color = "white";
 
-  if(fraction === 1) {
+  if (fraction === 1) {
     creature.endCast();
   }
 
-  if(creature.__spell.channel !== null) {
+  if (creature.__spell.channel !== null) {
     fraction = 1 - fraction;
   }
 
@@ -847,7 +868,7 @@ Renderer.prototype.__drawCastbar = function(creature) {
 
 }
 
-Renderer.prototype.__createAnimationLayers = function() {
+Renderer.prototype.__createAnimationLayers = function () {
 
   /*
    * Function Renderer.createAnimationLayers
@@ -857,7 +878,7 @@ Renderer.prototype.__createAnimationLayers = function() {
   this.__animationLayers = new Array();
 
   // Add sets
-  for(let i = 0; i < 8; i++) {
+  for (let i = 0; i < 8; i++) {
     this.__animationLayers.push(new Set());
   }
 
