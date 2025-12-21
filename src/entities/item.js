@@ -4,7 +4,7 @@ const { OTBBitFlag } = requireModule("utils/bitflag");
 
 const Thing = requireModule("entities/thing");
 
-const Item = function(id) {
+const Item = function (id) {
 
   /*
    * Class Item
@@ -19,6 +19,8 @@ const Item = function(id) {
   // Inherit from a thing
   Thing.call(this, id);
 
+  // Default count is one
+  this.count = 1;
 }
 
 // Inherit from event emitter
@@ -27,7 +29,7 @@ Item.prototype.constructor = Item;
 
 Item.prototype.MAXIMUM_STACK_COUNT = 100;
 
-Item.prototype.setWeight = function(weight) {
+Item.prototype.setWeight = function (weight) {
 
   /*
    * Function Item.setWeight
@@ -38,7 +40,7 @@ Item.prototype.setWeight = function(weight) {
 
 }
 
-Item.prototype.setFluidType = function(count) {
+Item.prototype.setFluidType = function (count) {
 
   /*
    * Function Item.setFluidType
@@ -49,7 +51,7 @@ Item.prototype.setFluidType = function(count) {
 
 }
 
-Item.prototype.hasHeight = function() {
+Item.prototype.hasHeight = function () {
 
   /*
    * Function Item.hasHeight
@@ -60,7 +62,7 @@ Item.prototype.hasHeight = function() {
 
 }
 
-Item.prototype.isBlockSolid = function() {
+Item.prototype.isBlockSolid = function () {
 
   /*
    * Function Item.isBlockProjectile
@@ -71,7 +73,7 @@ Item.prototype.isBlockSolid = function() {
 
 }
 
-Item.prototype.isBlockProjectile = function() {
+Item.prototype.isBlockProjectile = function () {
 
   /*
    * Function Item.isBlockProjectile
@@ -82,7 +84,7 @@ Item.prototype.isBlockProjectile = function() {
 
 }
 
-Item.prototype.supportsHangable = function() {
+Item.prototype.supportsHangable = function () {
 
   /*
    * Function Item.supportsHangable
@@ -93,7 +95,7 @@ Item.prototype.supportsHangable = function() {
 
 }
 
-Item.prototype.isHorizontal = function() {
+Item.prototype.isHorizontal = function () {
 
   /*
    * Function Item.isHorizontal
@@ -104,7 +106,7 @@ Item.prototype.isHorizontal = function() {
 
 }
 
-Item.prototype.isVertical = function() {
+Item.prototype.isVertical = function () {
 
   /*
    * Function Item.isVertical
@@ -115,7 +117,7 @@ Item.prototype.isVertical = function() {
 
 }
 
-Item.prototype.isHangable = function() {
+Item.prototype.isHangable = function () {
 
   /*
    * Function Item.isHangable
@@ -126,7 +128,7 @@ Item.prototype.isHangable = function() {
 
 }
 
-Item.prototype.isPickupable = function() {
+Item.prototype.isPickupable = function () {
 
   /*
    * Function Item.isPickupable
@@ -137,7 +139,7 @@ Item.prototype.isPickupable = function() {
 
 }
 
-Item.prototype.isMoveable = function() {
+Item.prototype.isMoveable = function () {
 
   /*
    * Function Item.isMoveable
@@ -148,7 +150,7 @@ Item.prototype.isMoveable = function() {
 
 }
 
-Item.prototype.split = function(count) {
+Item.prototype.split = function (count) {
 
   /*
    * Public Function Thing.split
@@ -156,7 +158,7 @@ Item.prototype.split = function(count) {
    */
 
   // If not stackable return the thing itself
-  if(!this.isStackable()) {
+  if (!this.isStackable()) {
     return this;
   }
 
@@ -164,7 +166,7 @@ Item.prototype.split = function(count) {
   count = count.clamp(0, this.count);
 
   // Nothing to do
-  if(count === 0) {
+  if (count === 0) {
     return this;
   }
 
@@ -180,7 +182,7 @@ Item.prototype.split = function(count) {
 
 }
 
-Item.prototype.toJSON = function() {
+Item.prototype.toJSON = function () {
 
   /*
    * Function Item.toJSON
