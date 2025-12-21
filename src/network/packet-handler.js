@@ -297,13 +297,25 @@ PacketHandler.prototype.__moveItem = function (player, fromWhere, fromIndex, toW
     return;
   }
 
-  let existthing = null
+  let existthing = null;
   if (toWhere.constructor.name === "Tile") {
     existthing = toWhere.getTopItem();
   }
 
-  // Add the taken item to the new target location
-  toWhere.addThing(movedItem, toIndex);
+  // Use smart placement for containers (auto-stack and first empty slot)
+  if (toWhere.isContainer && toWhere.isContainer()) {
+    // Use addThingSmart which handles stacking and empty slot logic
+    let added = toWhere.addThingSmart(movedItem);
+    if (!added) {
+      // Failed to add - container might be full, return item to source
+      fromWhere.addThing(movedItem, fromIndex);
+      player.sendCancelMessage("There is not enough room.");
+      return;
+    }
+  } else {
+    // Add the taken item to the new target location (Tile, Equipment, etc.)
+    toWhere.addThing(movedItem, toIndex);
+  }
 
   if (toWhere.constructor.name === "Tile") {
     if (existthing === null) {

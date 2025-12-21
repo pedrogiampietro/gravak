@@ -72,6 +72,38 @@ Container.prototype.addFirstEmpty = function (thing) {
 
 }
 
+Container.prototype.addThingSmart = function (thing) {
+
+  /*
+   * Function Container.addThingSmart
+   * Adds an item intelligently by finding the best slot:
+   * - For stackables: tries to merge with existing stack first
+   * - Falls back to first empty slot
+   */
+
+  // The container is frozen and cannot be interacted with
+  if (this.frozen) {
+    return false;
+  }
+
+  // Guard
+  if (!thing.isPickupable()) {
+    return false;
+  }
+
+  // Delegate to base container's smart add
+  let result = this.container.addThingSmart(thing);
+
+  if (result) {
+    thing.setParent(this);
+    // Go up the parent chain to update weights
+    this.__updateParentWeightRecursion(thing.getWeight());
+  }
+
+  return result;
+
+}
+
 Container.prototype.hasIdentifier = function (cid) {
 
   /*

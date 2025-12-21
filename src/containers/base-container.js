@@ -4,7 +4,7 @@ const Item = requireModule("entities/item");
 
 const { ContainerAddPacket, ContainerRemovePacket } = requireModule("network/protocol");
 
-const BaseContainer = function(guid, size) {
+const BaseContainer = function (guid, size) {
 
   /*
    * Class BaseContainer
@@ -38,7 +38,7 @@ const BaseContainer = function(guid, size) {
 
 }
 
-BaseContainer.prototype.getPacketSize = function() {
+BaseContainer.prototype.getPacketSize = function () {
 
   /*
    * Function BaseContainer.getPacketSize
@@ -49,7 +49,7 @@ BaseContainer.prototype.getPacketSize = function() {
 
 }
 
-BaseContainer.prototype.addSpectator = function(player) {
+BaseContainer.prototype.addSpectator = function (player) {
 
   /*
    * Function BaseContainer.addSpectator
@@ -60,7 +60,7 @@ BaseContainer.prototype.addSpectator = function(player) {
 
 }
 
-BaseContainer.prototype.removeSpectator = function(player) {
+BaseContainer.prototype.removeSpectator = function (player) {
 
   /*
    * Function BaseContainer.removeSpectator
@@ -71,7 +71,7 @@ BaseContainer.prototype.removeSpectator = function(player) {
 
 }
 
-BaseContainer.prototype.isFull = function() {
+BaseContainer.prototype.isFull = function () {
 
   /*
    * Function BaseContainer.isFull
@@ -79,9 +79,9 @@ BaseContainer.prototype.isFull = function() {
    */
 
   // Go over all slots until we find an empty slot
-  for(let i = 0; i < this.__slots.length; i++) {
+  for (let i = 0; i < this.__slots.length; i++) {
 
-    if(this.__slots[i] === null) {
+    if (this.__slots[i] === null) {
       return false;
     }
 
@@ -91,16 +91,16 @@ BaseContainer.prototype.isFull = function() {
 
 }
 
-BaseContainer.prototype.copyContents = function(container) {
+BaseContainer.prototype.copyContents = function (container) {
 
   /*
    * Function BaseContainer.copyContents
    * Copies over the contents from one containers to another
    */
 
-  container.__slots.forEach(function(thing, index) {
+  container.__slots.forEach(function (thing, index) {
 
-    if(thing !== null) {
+    if (thing !== null) {
       this.__setItem(thing, index);
     }
 
@@ -108,7 +108,7 @@ BaseContainer.prototype.copyContents = function(container) {
 
 }
 
-BaseContainer.prototype.isValidIndex = function(index) {
+BaseContainer.prototype.isValidIndex = function (index) {
 
   /*
    * Function BaseContainer.isValidIndex
@@ -120,7 +120,7 @@ BaseContainer.prototype.isValidIndex = function(index) {
 
 }
 
-BaseContainer.prototype.getSlots = function() {
+BaseContainer.prototype.getSlots = function () {
 
   /*
    * Function BaseContainer.getSlots
@@ -131,7 +131,7 @@ BaseContainer.prototype.getSlots = function() {
 
 }
 
-BaseContainer.prototype.peekIndex = function(slotIndex) {
+BaseContainer.prototype.peekIndex = function (slotIndex) {
 
   /*
    * Function BaseContainer.peekIndex
@@ -139,7 +139,7 @@ BaseContainer.prototype.peekIndex = function(slotIndex) {
    */
 
   // Invalid index requested
-  if(!this.isValidIndex(slotIndex)) {
+  if (!this.isValidIndex(slotIndex)) {
     return null;
   }
 
@@ -147,7 +147,7 @@ BaseContainer.prototype.peekIndex = function(slotIndex) {
 
 }
 
-BaseContainer.prototype.addThing = function(thing, index) {
+BaseContainer.prototype.addThing = function (thing, index) {
 
   /*
    * Function BaseContainer.addThing
@@ -157,7 +157,7 @@ BaseContainer.prototype.addThing = function(thing, index) {
   let currentThing = this.peekIndex(index);
 
   // Reference the parent container to the item
-  if(currentThing !== null && thing.isStackable()) {
+  if (currentThing !== null && thing.isStackable()) {
     return this.__addStackable(index, currentThing, thing);
   }
 
@@ -169,7 +169,7 @@ BaseContainer.prototype.addThing = function(thing, index) {
 
 }
 
-BaseContainer.prototype.removeIndex = function(index, count) {
+BaseContainer.prototype.removeIndex = function (index, count) {
 
   /*
    * Function BaseContainer.removeIndex
@@ -180,12 +180,12 @@ BaseContainer.prototype.removeIndex = function(index, count) {
   let thing = this.peekIndex(index);
 
   // There is nothing to remove
-  if(thing === null) {
+  if (thing === null) {
     return null;
   }
 
   // The thing is not stackable: remove the currently peeked at thing but return a reference to the item
-  if(!thing.isStackable()) {
+  if (!thing.isStackable()) {
     this.__remove(index);
     return thing;
   }
@@ -195,7 +195,7 @@ BaseContainer.prototype.removeIndex = function(index, count) {
 
 }
 
-BaseContainer.prototype.deleteThing = function(thing) {
+BaseContainer.prototype.deleteThing = function (thing) {
 
   /*
    * Function BaseContainer.deleteThing
@@ -206,7 +206,7 @@ BaseContainer.prototype.deleteThing = function(thing) {
   let index = this.__slots.indexOf(thing);
 
   // The requested item does not exist in the container
-  if(index === -1) {
+  if (index === -1) {
     return -1;
   }
 
@@ -214,7 +214,7 @@ BaseContainer.prototype.deleteThing = function(thing) {
 
 }
 
-BaseContainer.prototype.addFirstEmpty = function(thing) {
+BaseContainer.prototype.addFirstEmpty = function (thing) {
 
   /*
    * Function BaseContainer.addFirstEmpty
@@ -222,10 +222,10 @@ BaseContainer.prototype.addFirstEmpty = function(thing) {
    */
 
   // Go over the items
-  for(let i = 0; i < this.__slots.length; i++) {
+  for (let i = 0; i < this.__slots.length; i++) {
 
     // The slot is empty: add the new thing
-    if(this.peekIndex(i) === null) {
+    if (this.peekIndex(i) === null) {
       return this.addThing(thing, i);
     }
 
@@ -233,7 +233,64 @@ BaseContainer.prototype.addFirstEmpty = function(thing) {
 
 }
 
-BaseContainer.prototype.__remove = function(index) {
+BaseContainer.prototype.findStackableSlot = function (thing) {
+
+  /*
+   * Function BaseContainer.findStackableSlot
+   * Finds the best slot for a stackable item:
+   * 1. First, looks for an existing stack of the same item type
+   * 2. If not found, returns the first empty slot
+   * Returns -1 if no suitable slot is found
+   */
+
+  let firstEmptySlot = -1;
+
+  for (let i = 0; i < this.__slots.length; i++) {
+    let currentItem = this.__slots[i];
+
+    // Track the first empty slot we find
+    if (currentItem === null) {
+      if (firstEmptySlot === -1) {
+        firstEmptySlot = i;
+      }
+      continue;
+    }
+
+    // If we find a matching stackable item, return this slot immediately
+    if (thing.isStackable() && currentItem.id === thing.id) {
+      // Only return if there's room to add more
+      if (currentItem.count < Item.prototype.MAXIMUM_STACK_COUNT) {
+        return i;
+      }
+    }
+  }
+
+  // No existing stack found, return first empty slot (or -1 if full)
+  return firstEmptySlot;
+
+}
+
+BaseContainer.prototype.addThingSmart = function (thing) {
+
+  /*
+   * Function BaseContainer.addThingSmart
+   * Adds an item intelligently:
+   * - For stackables: tries to merge with existing stack first
+   * - Falls back to first empty slot
+   */
+
+  let targetSlot = this.findStackableSlot(thing);
+
+  if (targetSlot === -1) {
+    return false; // Container is full
+  }
+
+  this.addThing(thing, targetSlot);
+  return true;
+
+}
+
+BaseContainer.prototype.__remove = function (index) {
 
   /*
    * Function BaseContainer.__remove
@@ -249,7 +306,7 @@ BaseContainer.prototype.__remove = function(index) {
 
 }
 
-BaseContainer.prototype.__overflowStack = function(index, currentItem, overflow) {
+BaseContainer.prototype.__overflowStack = function (index, currentItem, overflow) {
 
   /*
    * Function BaseContainer.__overflowStack
@@ -264,7 +321,7 @@ BaseContainer.prototype.__overflowStack = function(index, currentItem, overflow)
 
 }
 
-BaseContainer.prototype.__replaceFungibleItem = function(index, item, count) {
+BaseContainer.prototype.__replaceFungibleItem = function (index, item, count) {
 
   /*
    * Function BaseContainer.__replaceFungibleItem
@@ -278,7 +335,7 @@ BaseContainer.prototype.__replaceFungibleItem = function(index, item, count) {
 
 }
 
-BaseContainer.prototype.__addStackable = function(index, currentItem, item) {
+BaseContainer.prototype.__addStackable = function (index, currentItem, item) {
 
   /*
    * Function BaseContainer.__addStackable
@@ -289,7 +346,7 @@ BaseContainer.prototype.__addStackable = function(index, currentItem, item) {
   let overflow = (currentItem.count + item.count) - Item.prototype.MAXIMUM_STACK_COUNT;
 
   // Overflow? We have to split the stack into a bigger and smaller pile
-  if(overflow > 0) {
+  if (overflow > 0) {
     this.__overflowStack(index, currentItem, overflow);
   } else {
     this.__replaceFungibleItem(index, currentItem, currentItem.count + item.count);
@@ -297,7 +354,7 @@ BaseContainer.prototype.__addStackable = function(index, currentItem, item) {
 
 }
 
-BaseContainer.prototype.__removeStackableItem = function(index, currentItem, count) {
+BaseContainer.prototype.__removeStackableItem = function (index, currentItem, count) {
 
   /*
    * Function BaseContainer.__removeStackableItem
@@ -305,12 +362,12 @@ BaseContainer.prototype.__removeStackableItem = function(index, currentItem, cou
    */
 
   // More requested than available in the item
-  if(count > currentItem.count) {
+  if (count > currentItem.count) {
     return null;
   }
 
   // Exactly equal: still remove the item completely
-  if(count === currentItem.count) {
+  if (count === currentItem.count) {
     this.__remove(index);
     return currentItem;
   }
@@ -320,7 +377,7 @@ BaseContainer.prototype.__removeStackableItem = function(index, currentItem, cou
 
 }
 
-BaseContainer.prototype.__handleSplitStack = function(index, currentItem, count) {
+BaseContainer.prototype.__handleSplitStack = function (index, currentItem, count) {
 
   /*
    * Function BaseContainer.__handleSplitStack
@@ -335,7 +392,7 @@ BaseContainer.prototype.__handleSplitStack = function(index, currentItem, count)
 
 }
 
-BaseContainer.prototype.__informSpectators = function(packet) {
+BaseContainer.prototype.__informSpectators = function (packet) {
 
   /*
    * Function BaseContainer.__informSpectators
@@ -346,7 +403,7 @@ BaseContainer.prototype.__informSpectators = function(packet) {
 
 }
 
-BaseContainer.prototype.__setItem = function(thing, index) {
+BaseContainer.prototype.__setItem = function (thing, index) {
 
   /*
    * Function BaseContainer.__setItem
