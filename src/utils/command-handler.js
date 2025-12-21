@@ -146,23 +146,22 @@ CommandHandler.prototype.handleCommandAddSkill = function (
         player.properties = characterData.properties;
 
         const AccountDatabase = requireModule("auth/account-database");
-        const db = new AccountDatabase(CONFIG.DATABASE.FILEPATH);
+        const db = new AccountDatabase();
 
-        // Salvar diretamente no banco
-        db.db.run(
-          "UPDATE accounts SET character = ? WHERE account = ?",
-          [JSON.stringify(characterData), player.socketHandler.account],
-          function (error) {
-            if (error) {
-              console.error("[AddSkill] Error saving to database:", error);
-            } else {
-              console.log(
-                "[AddSkill] Character saved successfully to database"
-              );
-            }
-            db.close();
+        // Create a mock gameSocket object to use saveCharacter
+        const mockGameSocket = {
+          player: player,
+          account: player.socketHandler.account
+        };
+
+        // Use the saveCharacter method
+        db.saveCharacter(mockGameSocket, function (error) {
+          if (error) {
+            console.error("[AddSkill] Error saving to database:", error);
+          } else {
+            console.log("[AddSkill] Character saved successfully to database");
           }
-        );
+        });
       }
 
       // Notificar o cliente sobre as mudanças

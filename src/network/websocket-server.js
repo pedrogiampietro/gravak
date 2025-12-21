@@ -23,7 +23,7 @@ const WebsocketServer = function () {
   });
 
   // Reference the database
-  this.accountDatabase = new AccountDatabase(CONFIG.DATABASE.ACCOUNT_DATABASE);
+  this.accountDatabase = new AccountDatabase();
 
   // The handler for sockets
   this.socketHandler = new WebsocketSocketHandler();
@@ -173,7 +173,23 @@ WebsocketServer.prototype.__handleLoginRequest = function (
         return gameSocket.terminate();
       }
 
-      let character = JSON.parse(result.character);
+      // Parse the character data - handle double-escaped JSON
+      let character = result.character;
+
+      // If it's a string, parse it
+      if (typeof character === "string") {
+        character = JSON.parse(character);
+      }
+
+      // If it's still a string (double-escaped), parse again
+      if (typeof character === "string") {
+        character = JSON.parse(character);
+      }
+
+      // DEBUG: Log what was loaded from PostgreSQL
+      console.log("[DEBUG] Loaded character from PostgreSQL:", accountName);
+      console.log("[DEBUG] Health:", character.properties?.health);
+      console.log("[DEBUG] MaxHealth:", character.properties?.maxHealth);
 
       // Fallback: ensure name exists in properties (fixes corrupted data from previous saves)
       if (!character.properties.name) {

@@ -2,15 +2,16 @@
 
 const CharacterCreator = requireModule("auth/character-creator");
 const Enum = requireModule("utils/enum");
+const { getDatabase, closeDatabase, schema } = require("../db");
+const { accounts } = schema;
+const { eq, and } = require("drizzle-orm");
 
 const bcrypt = require("bcryptjs");
-const fs = require("fs");
-const sqlite3 = require("sqlite3");
 
-const AccountDatabase = function (filepath) {
+const AccountDatabase = function () {
   /*
    * Class AccountDatabase
-   * Wrapper for the account database
+   * Wrapper for the account database using PostgreSQL with Drizzle ORM
    *
    * API:
    *
@@ -19,13 +20,11 @@ const AccountDatabase = function (filepath) {
    *
    */
 
-  // Path of the sqlite account database
-  this.filepath = filepath;
   this.characterCreator = new CharacterCreator();
   this.__status = this.STATUS.OPENING;
 
-  // Open the database
-  this.__open(this.__handleOpen.bind(this));
+  // Initialize database connection
+  this.__open();
 };
 
 AccountDatabase.prototype.STATUS = new Enum(
@@ -35,79 +34,53 @@ AccountDatabase.prototype.STATUS = new Enum(
   "CLOSED"
 );
 
-AccountDatabase.prototype.__handleOpen = function (error) {
-  if (error) {
-    return console.error("Error opening the database %s".format(this.filepath));
-  }
-
-  this.__status = this.STATUS.OPEN;
-  console.log(
-    "The sqlite database connection to %s has been opened".format(this.filepath)
-  );
-};
-
-AccountDatabase.prototype.__open = function (callback) {
+AccountDatabase.prototype.__open = async function () {
   /*
    * AccountDatabase.__open
-   * Opens the sqlite3 database from file
+   * Opens the PostgreSQL database connection
    */
 
-  // The database file already exists
-  if (fs.existsSync(this.filepath)) {
-    return (this.db = new sqlite3.Database(
-      this.filepath,
-      sqlite3.OPEN_READWRITE,
-      callback
-    ));
+  try {
+    this.db = getDatabase();
+    this.__status = this.STATUS.OPEN;
+    console.log("The PostgreSQL database connection has been opened");
+
+    // Create default character if configured
+    if (CONFIG.DATABASE.DEFAULT_CHARACTER.ENABLED) {
+      await this.__createDefaultCharacter(CONFIG.DATABASE.DEFAULT_CHARACTER);
+    }
+  } catch (error) {
+    console.error("Error opening the database: %s".format(error.message));
   }
-
-  // Create a new database
-  return this.__createNewDatabase(callback);
 };
 
-AccountDatabase.prototype.__createNewDatabase = function (callback) {
-  /*
-   * Function AccountDatabase.__createNewDatabase
-   * Creates a brand new Sqlite3 database and inserts an optional default character
-   */
-
-  // Create a new database
-  this.db = new sqlite3.Database(
-    this.filepath,
-    sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE,
-    callback
-  );
-
-  // Serialize the control flow
-  this.db.serialize(
-    function () {
-      // Table that holds the accounts
-      this.__createAccountDatabase();
-
-      // Create a default character
-      if (CONFIG.DATABASE.DEFAULT_CHARACTER.ENABLED) {
-        this.__createDefaultCharacter(CONFIG.DATABASE.DEFAULT_CHARACTER);
-      }
-    }.bind(this)
-  );
-};
-
-AccountDatabase.prototype.__createDefaultCharacter = function (
+AccountDatabase.prototype.__createDefaultCharacter = async function (
   DEFAULT_CHARACTER
 ) {
   /*
    * Function AccountDatabase.__createDefaultCharacter
-   * Creates and writes the configured default character to the database
+   * Creates and writes the configured default character to the database if it doesn't exist
    */
 
-  let queryObject = new Object({
+  const queryObject = {
     account: DEFAULT_CHARACTER.ACCOUNT,
     password: DEFAULT_CHARACTER.PASSWORD,
     name: DEFAULT_CHARACTER.NAME,
     sex: DEFAULT_CHARACTER.SEX,
-  });
+  };
 
-  // Add a default account
+  // Check if default character already exists
+  const existing = await this.db
+    .select()
+    .from(accounts)
+    .where(eq(accounts.account, queryObject.account.toLowerCase()))
+    .limit(1);
+
+  if (existing.length > 0) {
+    console.log("Default character already exists, skipping creation");
+    return;
+  }
+
   this.createAccount(queryObject, function (error) {
     if (error !== null) {
       return console.error(
@@ -121,57 +94,27 @@ AccountDatabase.prototype.__createDefaultCharacter = function (
   });
 };
 
-AccountDatabase.prototype.__createAccountDatabase = function () {
-  /*
-   * AccountDatabase.__createAccountDatabase
-   * Inserts the table schema
-   */
-
-  let tableQuery = `
-    CREATE TABLE
-    IF NOT EXISTS
-    accounts(
-      'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-      'account' VARCHAR(32) NOT NULL,
-      'hash' BINARY(60) NOT NULL,
-      'name' VARCHAR(32) NOT NULL,
-      'character' JSON NOT NULL,
-      UNIQUE(account, name)
-    );`;
-
-  // Run the table creation query
-  this.db.run(tableQuery, function (error) {
-    if (error !== null) {
-      return console.error("Error creating account table");
-    }
-
-    console.log("Created account table");
-  });
-};
-
-AccountDatabase.prototype.close = function () {
+AccountDatabase.prototype.close = async function () {
   /*
    * Function AccountDatabase.close
-   * Closes the sqlite3 database
+   * Closes the PostgreSQL database connection
    */
 
   this.__status = this.STATUS.CLOSING;
-  this.db.close(this.__handleClose.bind(this));
-};
 
-AccountDatabase.prototype.__handleClose = function (error) {
-  if (error) {
-    return console.error(error.message);
+  try {
+    await closeDatabase();
+    this.__status = this.STATUS.CLOSED;
+    console.log("The database connection has been closed.");
+  } catch (error) {
+    console.error("Error closing database: %s".format(error.message));
   }
-
-  this.__status = this.STATUS.CLOSED;
-  console.log("The database connection has been closed.");
 };
 
 AccountDatabase.prototype.createAccount = function (queryObject, callback) {
   /*
    * Function AccountDatabase.createAccount
-   * Closes the sqlite3 database
+   * Creates a new account with hashed password
    */
 
   const SALT_ROUNDS = 12;
@@ -193,74 +136,111 @@ AccountDatabase.prototype.createAccount = function (queryObject, callback) {
       bcrypt.hash(
         queryObject.password,
         SALT_ROUNDS,
-        function (error, hash) {
+        async function (error, hash) {
           // Server error if something is wrong with bcrypt
           if (error) {
             return callback(500, null);
           }
 
-          // Creates a new character from a blueprint
-          let account = queryObject.account.toLowerCase();
-          let name = queryObject.name.capitalize();
-          let character = this.characterCreator.create(name, queryObject.sex);
-          let values = new Array(account, hash, name, character);
+          try {
+            // Creates a new character from a blueprint
+            const account = queryObject.account.toLowerCase();
+            const name = queryObject.name.capitalize();
+            const character = this.characterCreator.create(name, queryObject.sex);
 
-          // Insert in to the database (may conflict)
-          this.db.run(
-            "INSERT INTO accounts(account, hash, name, character) VALUES(?, ?, ?, ?)",
-            values,
-            callback
-          );
+            // Insert into the database
+            await this.db.insert(accounts).values({
+              account: account,
+              hash: hash,
+              name: name,
+              character: JSON.stringify(character),
+            });
+
+            callback(null, null);
+          } catch (insertError) {
+            // Handle unique constraint violation
+            if (insertError.code === "23505") {
+              return callback(409, null);
+            }
+            console.error("Error inserting account:", insertError);
+            callback(500, null);
+          }
         }.bind(this)
       );
     }.bind(this)
   );
 };
 
-AccountDatabase.prototype.saveCharacter = function (gameSocket, callback) {
+AccountDatabase.prototype.saveCharacter = async function (gameSocket, callback) {
   /*
    * Function AccountDatabase.saveCharacter
-   * Returns the character for a specific account
+   * Saves the character data to the database
    */
 
-  // Serialize the player character
-  let character = JSON.stringify(gameSocket.player);
+  try {
+    const character = JSON.stringify(gameSocket.player);
 
-  this.db.run(
-    "UPDATE accounts SET character = ? WHERE account = ?",
-    [character, gameSocket.account],
-    callback
-  );
+    await this.db
+      .update(accounts)
+      .set({
+        character: character,
+        updatedAt: new Date(),
+      })
+      .where(eq(accounts.account, gameSocket.account));
+
+    callback(null);
+  } catch (error) {
+    console.error("Error saving character:", error);
+    callback(error);
+  }
 };
 
-AccountDatabase.prototype.getCharacter = function (account, callback) {
+AccountDatabase.prototype.getCharacter = async function (account, callback) {
   /*
    * Function AccountDatabase.getCharacter
    * Returns the character for a specific account
    */
 
-  this.db.get(
-    "SELECT character FROM accounts WHERE account = ?",
-    [account],
-    callback
-  );
+  try {
+    const result = await this.db
+      .select({ character: accounts.character })
+      .from(accounts)
+      .where(eq(accounts.account, account))
+      .limit(1);
+
+    if (result.length === 0) {
+      return callback(null, undefined);
+    }
+
+    callback(null, result[0]);
+  } catch (error) {
+    console.error("Error getting character:", error);
+    callback(error, null);
+  }
 };
 
-AccountDatabase.prototype.getAccountCredentials = function (account, callback) {
+AccountDatabase.prototype.getAccountCredentials = async function (account, callback) {
   /*
    * Function AccountDatabase.getAccountCredentials
    * Returns the account credentials for a given account to verify the password
    */
 
-  this.db.get(
-    "SELECT hash FROM accounts WHERE account = ?",
-    [account],
-    callback
-  );
-};
+  try {
+    const result = await this.db
+      .select({ hash: accounts.hash })
+      .from(accounts)
+      .where(eq(accounts.account, account.toLowerCase()))
+      .limit(1);
 
-AccountDatabase.prototype.loadCharacter = function (name) {
-  // Este método provavelmente não existe, precisamos ver como o projeto carrega os dados
+    if (result.length === 0) {
+      return callback(null, undefined);
+    }
+
+    callback(null, result[0]);
+  } catch (error) {
+    console.error("Error getting account credentials:", error);
+    callback(error, null);
+  }
 };
 
 module.exports = AccountDatabase;

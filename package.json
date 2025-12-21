@@ -1,12 +1,28 @@
 {
+  "name": "t-engine",
+  "scripts": {
+    "setup": "docker compose up -d && npm run db:push",
+    "start": "node engine.js",
+    "start:login": "node login.js",
+    "dev": "npm run setup && npm run start",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "dotenv": "^17.2.3",
+    "drizzle-orm": "^0.45.1",
     "jsonschema": "^1.4.1",
-    "sqlite3": "^5.1.7",
+    "pg": "^8.16.3",
     "ws": "^8.14.2",
     "xml2js": "^0.4.23"
   },
   "optionalDependencies": {
     "bufferutil": "^4.0.8"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.8"
   }
 }

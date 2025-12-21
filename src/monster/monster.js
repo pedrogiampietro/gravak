@@ -310,6 +310,7 @@ Monster.prototype.handleSpecialAttacks = function () {
   /*
    * Function Monster.handleSpecialAttacks
    * Handles special attacks (fire, energy, lifedrain, etc) from the attacks array
+   * Supports both targeted attacks (with shootEffect) and wave attacks (with length+spread)
    */
 
   // Must have a target before casting any special attacks
@@ -318,6 +319,7 @@ Monster.prototype.handleSpecialAttacks = function () {
   }
 
   const target = this.behaviourHandler.getTarget();
+  const Geometry = requireModule("utils/geometry");
 
   // Check if target is within range for any special attack
   const distanceToTarget = this.position.manhattanDistance(target.position);
@@ -329,32 +331,62 @@ Monster.prototype.handleSpecialAttacks = function () {
       continue;
     }
 
+    // Calculate damage
+    const damage = Number.prototype.random(attack.min, attack.max);
+    const effectType = attack.areaEffect ? this.__getMagicEffect(attack.areaEffect) : null;
+
+    // Check if this is a wave attack (has length and spread, no target flag)
+    if (attack.length && attack.spread) {
+      // Wave attack - affects cone area in front of monster
+      const direction = this.getProperty(CONST.PROPERTIES.DIRECTION);
+      const wavePositions = Geometry.prototype.getWave(this.position, direction, attack.length, attack.spread);
+
+      // Show effects and apply damage to all tiles in wave
+      for (const pos of wavePositions) {
+        // Show area effect on each tile
+        if (effectType !== null) {
+          gameServer.world.sendMagicEffect(pos, effectType);
+        }
+
+        // Get tile and apply damage to creatures on it
+        const tile = gameServer.world.getTileFromWorldPosition(pos);
+        if (tile === null || !tile.creatures) {
+          continue;
+        }
+
+        // Damage all creatures on the tile (except self)
+        for (const creature of tile.creatures) {
+          if (creature !== this && damage > 0) {
+            gameServer.world.combatHandler.applyEnvironmentalDamage(creature, damage, CONST.COLOR.ORANGE);
+          }
+        }
+      }
+
+      // Only one special attack per think cycle
+      break;
+    }
+
+    // Regular targeted attack
     // Check range (default to 7 if not specified)
     const range = attack.range || 7;
     if (distanceToTarget > range) {
       continue;
     }
 
-    // Calculate damage
-    const damage = Number.prototype.random(attack.min, attack.max);
-
     // Send projectile effect if shootEffect is specified
     if (attack.shootEffect) {
-      const effectType = this.__getShootEffect(attack.shootEffect);
-      if (effectType !== null) {
-        gameServer.world.sendDistanceEffect(this.position, target.position, effectType);
+      const shootType = this.__getShootEffect(attack.shootEffect);
+      if (shootType !== null) {
+        gameServer.world.sendDistanceEffect(this.position, target.position, shootType);
       }
     }
 
-    // Send area effect if areaEffect is specified
-    if (attack.areaEffect) {
-      const effectType = this.__getMagicEffect(attack.areaEffect);
-      if (effectType !== null) {
-        gameServer.world.sendMagicEffect(target.position, effectType);
-      }
+    // Send area effect if areaEffect is specified (for targeted attacks)
+    if (effectType !== null) {
+      gameServer.world.sendMagicEffect(target.position, effectType);
     }
 
-    // Apply damage
+    // Apply damage to target
     if (damage > 0) {
       gameServer.world.combatHandler.applyEnvironmentalDamage(target, damage, CONST.COLOR.ORANGE);
     }

@@ -24,7 +24,7 @@ const LoginServer = function (host, port) {
   this.__port = CONFIG.LOGIN.PORT;
 
   // The character manager
-  this.accountDatabase = new AccountDatabase(CONFIG.DATABASE.ACCOUNT_DATABASE);
+  this.accountDatabase = new AccountDatabase();
 
   // Create the server and handler
   this.server = http.createServer(this.__handleRequest.bind(this));
