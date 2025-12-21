@@ -102,6 +102,11 @@ AccountDatabase.prototype.close = async function () {
 
   this.__status = this.STATUS.CLOSING;
 
+  // We do NOT close the global database connection here because it is a singleton shared
+  // between LoginServer and WebsocketServer. Closing it here would kill the pool for everyone.
+  // The database connection should be closed only when the application process terminates.
+
+  /*
   try {
     await closeDatabase();
     this.__status = this.STATUS.CLOSED;
@@ -109,6 +114,8 @@ AccountDatabase.prototype.close = async function () {
   } catch (error) {
     console.error("Error closing database: %s".format(error.message));
   }
+  */
+  this.__status = this.STATUS.CLOSED;
 };
 
 AccountDatabase.prototype.createAccount = function (queryObject, callback) {

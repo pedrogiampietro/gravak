@@ -7,7 +7,7 @@ const DamageMap = requireModule("combat/damage-map");
 const LootHandler = requireModule("monster/monster-loot-handler");
 const MonsterBehaviour = requireModule("monster/monster-behaviour");
 
-const { EmotePacket } = requireModule("network/protocol");
+const { EmotePacket, ServerMessagePacket, ChannelWritePacket } = requireModule("network/protocol");
 
 const Monster = function (cid, data) {
 
@@ -123,12 +123,48 @@ Monster.prototype.createCorpse = function () {
   // Create a new corpse based on the monster type
   let thing = gameServer.database.createThing(this.corpse);
 
+  // Get monster name before distributing experience
+  let monsterName = this.getProperty(CONST.PROPERTIES.NAME) || "creature";
+
   // Distribute the experience
   this.damageMap.distributeExperience();
 
   // Add loot to the corpse and schedule a decay event
   if (thing instanceof Corpse) {
     this.lootHandler.addLoot(thing);
+
+    // Build loot message and send to all attackers
+    let lootItems = thing.getSlots().filter(item => item !== null);
+    let lootText = "";
+
+    if (lootItems.length === 0) {
+      lootText = "nothing";
+    } else {
+      lootText = lootItems.map(item => {
+        if (item.isStackable() && item.getCount() > 1) {
+          return item.getCount() + " " + item.getName();
+        }
+        return item.getArticle() + " " + item.getName();
+      }).join(", ");
+    }
+
+    // Send loot message to all players who damaged the monster
+    this.damageMap.__map.forEach(function (entry, attacker) {
+      if (attacker.isPlayer && attacker.isPlayer() && attacker.isOnline()) {
+        let lootMessage = "Loot of " + monsterName.toLowerCase() + ": " + lootText;
+
+        // Send to screen (popup message)
+        attacker.write(new ServerMessagePacket(lootMessage));
+
+        // Also send to console/chat
+        attacker.write(new ChannelWritePacket(
+          CONST.CHANNEL.DEFAULT,
+          "",
+          lootMessage,
+          CONST.COLOR.LIGHTGREEN
+        ));
+      }
+    });
   }
 
   // Add the experience
@@ -286,6 +322,18 @@ Monster.prototype.decreaseHealth = function (source, amount) {
   // Inform behaviour handler of the damage event
   this.behaviourHandler.handleDamage(source);
   this.broadcast(new EmotePacket(this, String(amount), this.fluidType));
+
+  // Send combat message to attacker: "A [monster name] loses [amount] hitpoints due to your attack."
+  if (source && source.isPlayer && source.isPlayer() && amount > 0) {
+    let monsterName = this.getProperty(CONST.PROPERTIES.NAME) || "creature";
+    // Send to Default channel (console) - channel id 0, empty name for system message
+    source.write(new ChannelWritePacket(
+      CONST.CHANNEL.DEFAULT,
+      "",
+      "A " + monsterName.toLowerCase() + " loses " + amount + " hitpoints due to your attack.",
+      CONST.COLOR.WHITE
+    ));
+  }
 
   // When zero health is reached the creature is dead
   if (this.isZeroHealth()) {

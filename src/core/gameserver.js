@@ -6,7 +6,7 @@ const GameLoop = requireModule("core/gameloop");
 const HTTPServer = requireModule("network/http-server");
 const IPCSocket = requireModule("ipc/ipcsocket");
 
-const GameServer = function() {
+const GameServer = function () {
 
   /*
    * Class GameServer
@@ -56,7 +56,7 @@ GameServer.prototype.STATUS = new Enum(
   "CLOSED"
 );
 
-GameServer.prototype.isShutdown = function() {
+GameServer.prototype.isShutdown = function () {
 
   /*
    * Function GameServer.isShutdown
@@ -67,7 +67,7 @@ GameServer.prototype.isShutdown = function() {
 
 }
 
-GameServer.prototype.initialize = function() {
+GameServer.prototype.initialize = function () {
 
   /*
    * Function GameServer.initialize
@@ -91,7 +91,7 @@ GameServer.prototype.initialize = function() {
 
 }
 
-GameServer.prototype.setServerStatus = function(serverStatus) {
+GameServer.prototype.setServerStatus = function (serverStatus) {
 
   /*
    * Function GameServer.setServerStatus
@@ -102,7 +102,9 @@ GameServer.prototype.setServerStatus = function(serverStatus) {
 
 }
 
-GameServer.prototype.shutdown = function() {
+const { closeDatabase } = requireModule("db");
+
+GameServer.prototype.shutdown = async function () {
 
   /*
    * Function GameServer.shutdown
@@ -120,9 +122,16 @@ GameServer.prototype.shutdown = function() {
   // Close IPC socket
   this.IPCSocket.close();
 
+  // Wait for pending database operations (e.g. saving characters logic upon socket disconnect)
+  console.log("Waiting for pending database operations...");
+  await new Promise(resolve => setTimeout(resolve, 3000));
+
+  console.log("Server shutdown complete.");
+  process.exit(0);
+
 }
 
-GameServer.prototype.isFeatureEnabled = function() {
+GameServer.prototype.isFeatureEnabled = function () {
 
   /*
    * Function GameServer.isFeatureEnabled
@@ -133,7 +142,7 @@ GameServer.prototype.isFeatureEnabled = function() {
 
 }
 
-GameServer.prototype.scheduleShutdown = function(seconds) {
+GameServer.prototype.scheduleShutdown = function (seconds) {
 
   /*
    * Function GameServer.scheduleShutdown
@@ -141,7 +150,7 @@ GameServer.prototype.scheduleShutdown = function(seconds) {
    */
 
   // The server is already shutting down
-  if(this.__serverStatus === this.STATUS.CLOSING) {
+  if (this.__serverStatus === this.STATUS.CLOSING) {
     return console.log("Shutdown command refused because the server is already shutting down.");
   }
 
@@ -156,7 +165,7 @@ GameServer.prototype.scheduleShutdown = function(seconds) {
 
 }
 
-GameServer.prototype.__loop = function() {
+GameServer.prototype.__loop = function () {
 
   /*
    * Function GameServer.__loop
@@ -171,7 +180,7 @@ GameServer.prototype.__loop = function() {
 
 }
 
-GameServer.prototype.isClosed = function() {
+GameServer.prototype.isClosed = function () {
 
   /*
    * Function GameServer.isClosed
@@ -182,7 +191,7 @@ GameServer.prototype.isClosed = function() {
 
 }
 
-GameServer.prototype.__handleUncaughtException = function(error, origin) {
+GameServer.prototype.__handleUncaughtException = function (error, origin) {
 
   /*
    * Function GameServer.__handleUncaughtException

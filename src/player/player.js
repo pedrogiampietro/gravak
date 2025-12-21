@@ -18,13 +18,7 @@ const UseHandler = requireModule("player/player-use-handler");
 const Skills = requireModule("utils/skills");
 const Position = requireModule("utils/position");
 
-const {
-  EmotePacket,
-  ContainerClosePacket,
-  ContainerOpenPacket,
-  CancelMessagePacket,
-  CreatureStatePacket,
-} = requireModule("network/protocol");
+const { EmotePacket, CreatureStatePacket, ContainerOpenPacket, ContainerClosePacket, CancelMessagePacket, ServerMessagePacket, ChannelWritePacket } = requireModule("network/protocol");
 
 const Player = function (data) {
   /*
@@ -337,6 +331,26 @@ Player.prototype.decreaseHealth = function (source, amount) {
 
   // Send damage color to the player
   this.broadcast(new EmotePacket(this, String(amount), CONST.COLOR.RED));
+
+  // Send combat message to chat: "You lose X hitpoints due to an attack by [monster name]."
+  if (source && source.isPlayer && !source.isPlayer()) {
+    let sourceName = source.getProperty(CONST.PROPERTIES.NAME) || "creature";
+    // Send to Default channel (console) - channel id 0
+    this.write(new ChannelWritePacket(
+      CONST.CHANNEL.DEFAULT,
+      "",
+      "You lose " + amount + " hitpoints due to an attack by " + sourceName.toLowerCase() + ".",
+      CONST.COLOR.WHITE
+    ));
+  } else if (source === null) {
+    // Environmental damage
+    this.write(new ChannelWritePacket(
+      CONST.CHANNEL.DEFAULT,
+      "",
+      "You lose " + amount + " hitpoints.",
+      CONST.COLOR.WHITE
+    ));
+  }
 
   // Zero health means death
   if (this.isZeroHealth()) {
