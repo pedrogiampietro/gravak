@@ -274,19 +274,60 @@ BaseContainer.prototype.addThingSmart = function (thing) {
 
   /*
    * Function BaseContainer.addThingSmart
-   * Adds an item intelligently:
+   * Adds an item following Tibia behavior:
    * - For stackables: tries to merge with existing stack first
-   * - Falls back to first empty slot
+   * - For non-stackables: inserts at slot 0 and shifts other items down
    */
 
-  let targetSlot = this.findStackableSlot(thing);
-
-  if (targetSlot === -1) {
-    return false; // Container is full
+  // First, check if stackable item can merge with existing stack
+  if (thing.isStackable()) {
+    let stackSlot = this.findStackableSlot(thing);
+    // If found an existing stack to merge with (not just empty slot)
+    if (stackSlot !== -1 && this.__slots[stackSlot] !== null && this.__slots[stackSlot].id === thing.id) {
+      this.addThing(thing, stackSlot);
+      return true;
+    }
   }
 
-  this.addThing(thing, targetSlot);
+  // For non-stackables (or stackables with no existing stack), insert at front
+  // Check if container is full
+  if (this.isFull()) {
+    return false;
+  }
+
+  // Shift all items one position to the right (from back to front)
+  for (let i = this.__slots.length - 1; i > 0; i--) {
+    this.__slots[i] = this.__slots[i - 1];
+  }
+
+  // Clear slot 0 and add the new item there
+  this.__slots[0] = null;
+  this.addThing(thing, 0);
+
+  // Inform spectators about the shift (re-send container contents)
+  this.__informSpectatorsFull();
+
   return true;
+
+}
+
+BaseContainer.prototype.__informSpectatorsFull = function () {
+
+  /*
+   * Function BaseContainer.__informSpectatorsFull
+   * After shifting items, we need to re-send the entire container contents.
+   * The ContainerAddPacket already notified about slot 0 via addThing.
+   * For the shifted items, we send individual remove/add packets.
+   */
+
+  const { ContainerAddPacket } = requireModule("network/protocol");
+
+  // Send update packets for all non-null slots that were shifted (slots 1 onwards)
+  for (let i = 1; i < this.__slots.length; i++) {
+    if (this.__slots[i] !== null) {
+      this.__informSpectators(new ContainerAddPacket(this.guid, i, this.__slots[i]));
+    }
+  }
 
 }
 
