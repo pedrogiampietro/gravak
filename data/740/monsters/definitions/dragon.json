@@ -5,7 +5,7 @@
     "maxHealth": 1000,
     "mana": 0,
     "maxMana": 0,
-    "speed": 172,
+    "speed": 140,
     "attack": 120,
     "attackSpeed": 2000,
     "defense": 25,
@@ -106,11 +106,6 @@
       "name": "crossbow"
     },
     {
-      "id": 12413,
-      "probability": 0.09883,
-      "name": "dragon's tail"
-    },
-    {
       "id": 2546,
       "probability": 0.07976,
       "name": "burst arrow",
@@ -136,26 +131,6 @@
       "id": 2647,
       "probability": 0.01909,
       "name": "plate legs"
-    },
-    {
-      "id": 7588,
-      "probability": 0.01055,
-      "name": "strong health potion"
-    },
-    {
-      "id": 2187,
-      "probability": 0.01053,
-      "name": "wand of inferno"
-    },
-    {
-      "id": 5920,
-      "probability": 0.01038,
-      "name": "green dragon scale"
-    },
-    {
-      "id": 5877,
-      "probability": 0.01018,
-      "name": "green dragon leather"
     },
     {
       "id": 2387,

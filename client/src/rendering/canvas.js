@@ -1,4 +1,4 @@
-const Canvas = function(id, width, height) {
+const Canvas = function (id, width, height) {
 
   /*
    * Class Canvas
@@ -21,7 +21,7 @@ const Canvas = function(id, width, height) {
 
 }
 
-Canvas.prototype.setScale = function(scale) {
+Canvas.prototype.setScale = function (scale) {
 
   /*
    * Function Canvas.setScale
@@ -32,7 +32,7 @@ Canvas.prototype.setScale = function(scale) {
 
 }
 
-Canvas.prototype.renderText = function(text, x, y, color, font) {
+Canvas.prototype.renderText = function (text, x, y, color, font) {
 
   /*
    * Function Canvas.renderText
@@ -47,8 +47,8 @@ Canvas.prototype.renderText = function(text, x, y, color, font) {
 
   // Create an outline of the text by repeating
   this.context.fillStyle = "black";
-  for(let i = -1; i < 2; i++) {
-    for(let j = -1; j < 2; j++) {
+  for (let i = -1; i < 2; i++) {
+    for (let j = -1; j < 2; j++) {
       this.context.fillText(text, x + i - width, y + j);
     }
   }
@@ -59,7 +59,7 @@ Canvas.prototype.renderText = function(text, x, y, color, font) {
 
 }
 
-Canvas.prototype.getWorldCoordinates = function(event) {
+Canvas.prototype.getWorldCoordinates = function (event) {
 
   /*
    * Function Canvas.getWorldCoordinates
@@ -67,7 +67,7 @@ Canvas.prototype.getWorldCoordinates = function(event) {
    */
 
   // Where on the canvas the event happens
-  let { x, y } =  this.getCanvasCoordinates(event);
+  let { x, y } = this.getCanvasCoordinates(event);
 
   // The scaling that needs to be applied
   let scaling = gameClient.interface.getSpriteScaling();
@@ -84,7 +84,7 @@ Canvas.prototype.getWorldCoordinates = function(event) {
   let chunk = gameClient.world.getChunkFromWorldPosition(projectedViewPosition);
 
   // Somehow we did not recover a chunk
-  if(chunk === null) {
+  if (chunk === null) {
     return null;
   }
 
@@ -93,7 +93,7 @@ Canvas.prototype.getWorldCoordinates = function(event) {
 
 }
 
-Canvas.prototype.getCanvasCoordinates = function(event) {
+Canvas.prototype.getCanvasCoordinates = function (event) {
 
   /*
    * Function Canvas.getCanvasCoordinates
@@ -110,7 +110,7 @@ Canvas.prototype.getCanvasCoordinates = function(event) {
 
 }
 
-Canvas.prototype.black = function() {
+Canvas.prototype.black = function () {
 
   /*
    * Function Canvas.clear
@@ -128,7 +128,7 @@ Canvas.prototype.black = function() {
 
 }
 
-Canvas.prototype.clear = function() {
+Canvas.prototype.clear = function () {
 
   /*
    * Function Canvas.clear
@@ -144,7 +144,7 @@ Canvas.prototype.clear = function() {
 
 }
 
-Canvas.prototype.applyFilter = function(filter) {
+Canvas.prototype.applyFilter = function (filter) {
 
   /*
    * Function Canvas.applyFilter
@@ -158,7 +158,7 @@ Canvas.prototype.applyFilter = function(filter) {
 
 }
 
-Canvas.prototype.drawOuterCombatRect = function(position, color) {
+Canvas.prototype.drawOuterCombatRect = function (position, color) {
 
   /*
    * Function Canvas.drawOuterCombatRect
@@ -175,7 +175,7 @@ Canvas.prototype.drawOuterCombatRect = function(position, color) {
 
 }
 
-Canvas.prototype.drawInnerCombatRect = function(animation, position) {
+Canvas.prototype.drawInnerCombatRect = function (animation, position) {
 
   /*
    * Function Canvas.drawInnerCombatRect
@@ -191,7 +191,7 @@ Canvas.prototype.drawInnerCombatRect = function(animation, position) {
 
 }
 
-Canvas.prototype.drawRect = function(x, y, size, color) {
+Canvas.prototype.drawRect = function (x, y, size, color) {
 
   /*
    * Function Canvas.drawRect
@@ -207,7 +207,7 @@ Canvas.prototype.drawRect = function(x, y, size, color) {
 
 }
 
-Canvas.prototype.drawCharacter = function(creature, position, size, offset) {
+Canvas.prototype.drawCharacter = function (creature, position, size, offset) {
 
   /*
    * Function Canvas.drawCharacter
@@ -218,7 +218,7 @@ Canvas.prototype.drawCharacter = function(creature, position, size, offset) {
   let frames = creature.getCharacterFrames();
 
   // Somehow no frames could be found?
-  if(frames === null) {
+  if (frames === null) {
     return;
   }
 
@@ -242,11 +242,11 @@ Canvas.prototype.drawCharacter = function(creature, position, size, offset) {
     zPattern,
     size,
     offset
-   );
+  );
 
 }
 
-Canvas.prototype.drawDistanceAnimation = function(animation, position) {
+Canvas.prototype.drawDistanceAnimation = function (animation, position) {
 
   /*
    * Function Canvas.drawDitanceAnimation
@@ -263,7 +263,7 @@ Canvas.prototype.drawDistanceAnimation = function(animation, position) {
   )
 
   // Should render light coming from the distance animation
-  if(gameClient.interface.settings.isLightingEnabled() && animation.isLight()) {
+  if (gameClient.interface.settings.isLightingEnabled() && animation.isLight()) {
     gameClient.renderer.__renderLightThing(renderPosition, animation);
   }
 
@@ -272,7 +272,7 @@ Canvas.prototype.drawDistanceAnimation = function(animation, position) {
 
 }
 
-Canvas.prototype.drawSprite = function(thing, position, size) {
+Canvas.prototype.drawSprite = function (thing, position, size) {
 
   /*
    * Function Canvas.drawSprite
@@ -287,23 +287,23 @@ Canvas.prototype.drawSprite = function(thing, position, size) {
   let pattern = thing.getPattern();
 
   // Must handle big sprites: go over width and height
-  for(let x = 0; x < frameGroup.width; x++) {
-    for(let y = 0; y < frameGroup.height; y++) {
-      for(let l = 0; l < frameGroup.layers; l++) {
+  for (let x = 0; x < frameGroup.width; x++) {
+    for (let y = 0; y < frameGroup.height; y++) {
+      for (let l = 0; l < frameGroup.layers; l++) {
 
         // Calculate the sprite index
         let index = frameGroup.getSpriteIndex(frame, pattern.x, pattern.y, pattern.z, l, x, y);
-        
+
         // Draw the actual sprite
         this.__drawSprite(frameGroup.getSprite(index), position, x, y, size);
-  
+
       }
     }
   }
-  
+
 }
 
-Canvas.prototype.drawSpriteOverlay = function(thing, position, size) {
+Canvas.prototype.drawSpriteOverlay = function (thing, position, size) {
 
   /*
    * Function Canvas.drawSpriteOverlay
@@ -316,9 +316,9 @@ Canvas.prototype.drawSpriteOverlay = function(thing, position, size) {
   let pattern = thing.getPattern();
 
   // Must handle big sprites
-  for(let x = 0; x < frameGroup.width; x++) {
-    for(let y = 0; y < frameGroup.height; y++) {
-      for(let l = 0; l < frameGroup.layers; l++) {
+  for (let x = 0; x < frameGroup.width; x++) {
+    for (let y = 0; y < frameGroup.height; y++) {
+      for (let l = 0; l < frameGroup.layers; l++) {
 
         let index = frameGroup.getSpriteIndex(frame, pattern.x, pattern.y, pattern.z, l, x, y);
 
@@ -332,21 +332,21 @@ Canvas.prototype.drawSpriteOverlay = function(thing, position, size) {
           position.y * 32 - 1,
           33, 33
         );
-  
+
       }
     }
   }
-  
+
 }
 
-Canvas.prototype.__setFilter = function(filter) {
+Canvas.prototype.__setFilter = function (filter) {
 
   /*
    * Function Canvas.__setFilter
    * Sets an SVG filter for the canvas
    */
 
-  switch(filter) {
+  switch (filter) {
     case "matrix": return this.context.filter = "url(#matrix)";
     case "greyscale": return this.context.filter = "grayscale()";
     case "hue": return this.context.filter = "hue-rotate(" + (gameClient.getFrame() % 360) + "deg)";
@@ -359,7 +359,7 @@ Canvas.prototype.__setFilter = function(filter) {
 
 }
 
-Canvas.prototype.__drawSprite = function(sprite, position, x, y, size) {
+Canvas.prototype.__drawSprite = function (sprite, position, x, y, size) {
 
   /*
    * Function Canvas.__drawSprite
@@ -367,7 +367,7 @@ Canvas.prototype.__drawSprite = function(sprite, position, x, y, size) {
    */
 
   // Stop on remaining null pointers
-  if(sprite === null) {
+  if (sprite === null) {
     return;
   }
 
@@ -387,7 +387,7 @@ Canvas.prototype.__drawSprite = function(sprite, position, x, y, size) {
 
 }
 
-Canvas.prototype.__drawCharacter = function(spriteBuffer, spriteBufferMount, outfit, position, characterGroup, mountGroup, characterFrame, mountFrame, xPattern, zPattern, size, offset) {
+Canvas.prototype.__drawCharacter = function (spriteBuffer, spriteBufferMount, outfit, position, characterGroup, mountGroup, characterFrame, mountFrame, xPattern, zPattern, size, offset) {
 
   /*
    * Function Canvas.__drawCharacter
@@ -399,43 +399,45 @@ Canvas.prototype.__drawCharacter = function(spriteBuffer, spriteBufferMount, out
    */
 
   // We have to offset characters of size 64 by 16 pixels
-  position = new Position(position.x - offset, position.y - offset);
+  if (characterGroup.width > 1 || characterGroup.height > 1) {
+    position = new Position(position.x - offset, position.y - offset);
+  }
 
   // Go over the width and height of the sprite
-  for(let x = 0; x < characterGroup.width; x++) {
-    for(let y = 0; y < characterGroup.height; y++) {
+  for (let x = 0; x < characterGroup.width; x++) {
+    for (let y = 0; y < characterGroup.height; y++) {
 
       // Get the base identifier for the outfit (yPattern = 0)
       let baseIdentifier = characterGroup.getSpriteId(characterFrame, xPattern, 0, zPattern, 0, x, y);
 
       // No customizable outfit: just draw the outfit as is (i.e., normal monsters) and proceed
-      if(!outfit.hasLookDetails()) {
+      if (!outfit.hasLookDetails()) {
         this.__drawSprite(spriteBuffer.get(baseIdentifier), position, x, y, size);
         continue;
       }
 
       // Try to get an identifier that is not zero from all layers.. maybe try the addons?
       // The addons are stored in the yPattern parameter
-      if(baseIdentifier === 0 && outfit.addonOne) {
+      if (baseIdentifier === 0 && outfit.addonOne) {
         baseIdentifier = characterGroup.getSpriteId(characterFrame, xPattern, 1, zPattern, 0, x, y);
       }
 
-      if(baseIdentifier === 0 && outfit.addonTwo) {
+      if (baseIdentifier === 0 && outfit.addonTwo) {
         baseIdentifier = characterGroup.getSpriteId(characterFrame, xPattern, 2, zPattern, 0, x, y);
       }
 
       // Nothing found: stop trying here
-      if(baseIdentifier === 0) {
+      if (baseIdentifier === 0) {
         continue;
       }
 
       // If the sprite is not in the buffer lets compose and add it to the spritebuffer
-      if(!spriteBuffer.has(baseIdentifier)) {
+      if (!spriteBuffer.has(baseIdentifier)) {
         spriteBuffer.addComposedOutfit(baseIdentifier, outfit, characterGroup, characterFrame, xPattern, zPattern, x, y);
       }
 
       // The mount is enabled and available. Add the mount that is cached to a different canvas
-      if(zPattern === 1 && mountGroup) {
+      if (zPattern === 1 && mountGroup) {
         let mountSprite = mountGroup.getSpriteId(mountFrame, xPattern, 0, 0, 0, x, y);
         this.__drawSprite(spriteBufferMount.get(mountSprite), position, x, y, size);
       }
@@ -449,7 +451,7 @@ Canvas.prototype.__drawCharacter = function(spriteBuffer, spriteBufferMount, out
 
 }
 
-Canvas.prototype.__reference = function(id) {
+Canvas.prototype.__reference = function (id) {
 
   /*
    * Function Canvas.__reference
@@ -457,12 +459,12 @@ Canvas.prototype.__reference = function(id) {
    */
 
   // Create an offscreen canvas or find the one existing in the DOM from string, or use a passed canvas
-  if(id === null) {
+  if (id === null) {
     return document.createElement("canvas");
   }
 
   // If the passed identifier is a string: read it from the DOM
-  if(typeof id === "string") {
+  if (typeof id === "string") {
     return document.getElementById(id);
   }
 

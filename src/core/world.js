@@ -9,7 +9,7 @@ const WorldClock = requireModule("core/world-clock");
 
 const { PlayerLogoutPacket, ServerMessagePacket, EffectMagicPacket, EffectDistancePacket } = requireModule("network/protocol");
 
-const World = function(worldSize) {
+const World = function (worldSize) {
 
   /*
    * Class World
@@ -44,7 +44,7 @@ const World = function(worldSize) {
 
   // The handler for combat
   this.combatHandler = new CombatHandler();
-  
+
   // Delegate and expose these functions
   this.getSpectatingChunks = this.lattice.getSpectatingChunks.bind(this.lattice);
   this.findAvailableTile = this.lattice.findAvailableTile.bind(this.lattice);
@@ -55,7 +55,7 @@ const World = function(worldSize) {
 
 }
 
-World.prototype.tick = function() {
+World.prototype.tick = function () {
 
   /*
    * Function World.tick
@@ -73,7 +73,7 @@ World.prototype.tick = function() {
 
 }
 
-World.prototype.addTopThing = function(position, thing) {
+World.prototype.addTopThing = function (position, thing) {
 
   /*
    * Function World.addTopThing
@@ -82,7 +82,7 @@ World.prototype.addTopThing = function(position, thing) {
 
   let tile = this.getTileFromWorldPosition(position);
 
-  if(tile === null) {
+  if (tile === null) {
     return;
   }
 
@@ -90,7 +90,7 @@ World.prototype.addTopThing = function(position, thing) {
 
 }
 
-World.prototype.addThing = function(position, item, index) {
+World.prototype.addThing = function (position, item, index) {
 
   /*
    * Function World.addThing
@@ -100,7 +100,7 @@ World.prototype.addThing = function(position, item, index) {
   // Get the tile
   let tile = this.getTileFromWorldPosition(position);
 
-  if(tile === null) {
+  if (tile === null) {
     return;
   }
 
@@ -108,7 +108,7 @@ World.prototype.addThing = function(position, item, index) {
 
 }
 
-World.prototype.broadcastPosition = function(position, packet) {
+World.prototype.broadcastPosition = function (position, packet) {
 
   /*
    * Function World.broadcastPosition
@@ -117,7 +117,7 @@ World.prototype.broadcastPosition = function(position, packet) {
 
   let chunk = this.getChunkFromWorldPosition(position);
 
-  if(chunk === null) {
+  if (chunk === null) {
     return;
   }
 
@@ -125,7 +125,7 @@ World.prototype.broadcastPosition = function(position, packet) {
 
 }
 
-World.prototype.addSplash = function(id, position, type) {
+World.prototype.addSplash = function (id, position, type) {
 
   /*
    * Function World.addSplash
@@ -143,7 +143,7 @@ World.prototype.addSplash = function(id, position, type) {
 
 }
 
-World.prototype.sendDistanceEffect = function(from, to, type) {
+World.prototype.sendDistanceEffect = function (from, to, type) {
 
   /*
    * Function World.sendMagicEffect
@@ -151,12 +151,12 @@ World.prototype.sendDistanceEffect = function(from, to, type) {
    */
 
   // Invalid
-  if(!this.withinBounds(from) || !this.withinBounds(to)) {
+  if (!this.withinBounds(from) || !this.withinBounds(to)) {
     return;
   }
 
   // Cannot send from one floor to another
-  if(!from.isSameFloor(to)) {
+  if (!from.isSameFloor(to)) {
     return;
   }
 
@@ -168,7 +168,7 @@ World.prototype.sendDistanceEffect = function(from, to, type) {
 
 }
 
-World.prototype.sendMagicEffect = function(position, type) {
+World.prototype.sendMagicEffect = function (position, type) {
 
   /*
    * Function World.sendMagicEffect
@@ -176,7 +176,7 @@ World.prototype.sendMagicEffect = function(position, type) {
    */
 
   // Invalid
-  if(!this.withinBounds(position)) {
+  if (!this.withinBounds(position)) {
     return;
   }
 
@@ -184,18 +184,18 @@ World.prototype.sendMagicEffect = function(position, type) {
 
 }
 
-World.prototype.broadcastMessage = function(message) {
+World.prototype.broadcastMessage = function (message) {
 
   /*
    * Function World.broadcastMessage
    * Broadcasts a message to all the connected players
    */
 
-  this.broadcastPacket(new ServerMessagePacket(message)); 
+  this.broadcastPacket(new ServerMessagePacket(message));
 
 }
 
-World.prototype.broadcastPacket = function(packet) {
+World.prototype.broadcastPacket = function (packet) {
 
   /*
    * Function World.broadcastPacket
@@ -206,7 +206,7 @@ World.prototype.broadcastPacket = function(packet) {
 
 }
 
-World.prototype.writePlayerLogout = function(name) {
+World.prototype.writePlayerLogout = function (name) {
 
   /*
    * Function World.writePlayerLogout
@@ -217,7 +217,7 @@ World.prototype.writePlayerLogout = function(name) {
 
 }
 
-World.prototype.getDataDetails = function() {
+World.prototype.getDataDetails = function () {
 
   /*
    * Function World.getDataDetails
@@ -228,7 +228,7 @@ World.prototype.getDataDetails = function() {
     "activeMonsters": this.creatureHandler.__numberActiveMonsters,
     "time": this.clock.getTimeString()
   });
- 
+
 }
 
 module.exports = World;

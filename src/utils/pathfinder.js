@@ -118,7 +118,7 @@ Pathfinder.prototype.search = function (creature, from, to, mode) {
         }
 
         // Debugging
-        gameServer.world.sendMagicEffect(neighbourTile.getPosition(), CONST.EFFECT.MAGIC.SOUND_WHITE);
+        // gameServer.world.sendMagicEffect(neighbourTile.getPosition(), CONST.EFFECT.MAGIC.SOUND_WHITE);
 
         // Add the cost of the current node
         let gScore = currentNode.getCost() + neighbourTile.getWeight(currentTile);
@@ -205,7 +205,7 @@ Pathfinder.prototype.pathTo = function (tile) {
   // Go over the chain to reconstruct the path
   while (tile.pathfinderNode.getParent() !== null) {
     resolvedPath.push(tile);
-    gameServer.world.sendMagicEffect(tile.getPosition(), CONST.EFFECT.MAGIC.SOUND_BLUE);
+    // gameServer.world.sendMagicEffect(tile.getPosition(), CONST.EFFECT.MAGIC.SOUND_BLUE);
     tile = tile.pathfinderNode.getParent();
   }
 

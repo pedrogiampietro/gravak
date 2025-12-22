@@ -124,8 +124,11 @@ CharacterElement.prototype.setTextPosition = function () {
   );
   let fraction = gameClient.interface.getSpriteScaling();
 
+  // Center the nameplate horizontally
+  offset.left += fraction / 2;
+
   // Add an offset to make the nameplate hover above the player
-  offset.top -= fraction / 2;
+  offset.top -= fraction / 4;
 
   // Delegate to the generic move function
   this.__updateTextPosition(offset);
