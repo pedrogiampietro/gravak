@@ -335,13 +335,50 @@ BaseContainer.prototype.__remove = function (index) {
 
   /*
    * Function BaseContainer.__remove
-   * Internal function remove an item from the stack
+   * Internal function to remove an item from the container
+   * After removal, shifts all items to fill the gap (Tibia-like behavior)
    */
 
+  // Find the last occupied slot for reference
+  let lastOccupiedSlot = -1;
+  for (let i = this.__slots.length - 1; i >= 0; i--) {
+    if (this.__slots[i] !== null) {
+      lastOccupiedSlot = i;
+      break;
+    }
+  }
+
+  // First, clear the slot being removed
+  this.__setItem(null, index);
+
+  // Send remove packet for the removed slot
   this.__informSpectators(new ContainerRemovePacket(this.guid, index, 0));
 
-  // Clear the slot and return the index
-  this.__setItem(null, index);
+  // If there are items after this slot, we need to shift them
+  if (lastOccupiedSlot > index) {
+    // Send remove packets for all slots that will be affected by the shift
+    // This removes the visual items at their old positions
+    for (let i = index + 1; i <= lastOccupiedSlot; i++) {
+      if (this.__slots[i] !== null) {
+        this.__informSpectators(new ContainerRemovePacket(this.guid, i, 0));
+      }
+    }
+
+    // Now shift all items in memory
+    for (let i = index; i < this.__slots.length - 1; i++) {
+      this.__slots[i] = this.__slots[i + 1];
+    }
+    // Clear the last slot
+    this.__slots[this.__slots.length - 1] = null;
+
+    // Send add packets for items at their new positions
+    const { ContainerAddPacket } = requireModule("network/protocol");
+    for (let i = index; i < lastOccupiedSlot; i++) {
+      if (this.__slots[i] !== null) {
+        this.__informSpectators(new ContainerAddPacket(this.guid, i, this.__slots[i]));
+      }
+    }
+  }
 
   return index;
 
