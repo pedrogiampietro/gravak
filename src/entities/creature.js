@@ -179,13 +179,13 @@ Creature.prototype.hasCondition = function (id) {
   return this.conditions.has(id);
 };
 
-Creature.prototype.addCondition = function (id, ticks, value) {
+Creature.prototype.addCondition = function (id, ticks, value, properties) {
   /*
    * Function Creature.addCondition
    * Adds a condition to the creature
    */
 
-  return this.conditions.addCondition(id, ticks, value);
+  return this.conditions.addCondition(id, ticks, value, properties);
 };
 
 Creature.prototype.removeCondition = function (id) {

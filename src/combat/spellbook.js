@@ -85,7 +85,7 @@ Spellbook.prototype.addAvailableSpell = function (sid) {
 
 }
 
-Spellbook.prototype.handleSpell = function (sid) {
+Spellbook.prototype.handleSpell = function (sid, properties) {
 
   /*
    * Function Spellbook.handleSpell
@@ -117,8 +117,7 @@ Spellbook.prototype.handleSpell = function (sid) {
   }
 
   // Call with reference to player
-  console.log("Calling spell function...");
-  let cooldown = spell.call(this.player);
+  let cooldown = spell.call(this.player, properties);
   console.log("Spell returned cooldown:", cooldown);
 
   // Zero cooldown means that the cast was unsuccesful

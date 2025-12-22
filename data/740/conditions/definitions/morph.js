@@ -10,10 +10,10 @@ function onStart(creature, properties) {
    */
 
   // Save a reference to the default outfit
-  this.__defaultOutfit = creature.outfit;
+  this.__defaultOutfit = creature.getOutfit();
 
   process.gameServer.world.sendMagicEffect(creature.position, CONST.EFFECT.MAGIC.TELEPORT);
-  creature.changeOutfit(new Outfit({"id": properties.id}));
+  creature.changeOutfit(new Outfit({ "id": properties.id }));
 
 }
 

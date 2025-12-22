@@ -299,6 +299,24 @@ PacketHandler.prototype.handlePlayerSay = function (player, packet) {
   // Check if message is a spell
   let messageLower = packet.message.toLowerCase().trim();
 
+  // Special handling for Creature Illusion (utevo res ina "monster")
+  if (messageLower.startsWith("utevo res ina ")) {
+    let monsterName = messageLower.substring(14).replace(/"/g, "").trim(); // Remove prefix and quotes
+    let monster = gameServer.database.getMonsterByName(monsterName);
+
+    if (monster) {
+      // Cast Morph (ID 4) with the monster's look type
+      // Monster outfit is in monster.data.creatureStatistics.outfit
+      let look = (monster.data && monster.data.creatureStatistics) ? monster.data.creatureStatistics.outfit : null;
+      let lookId = look ? look.id : CONST.LOOKTYPES.OTHER.GAMEMASTER;
+
+      return player.spellbook.handleSpell(4, { id: lookId });
+    } else {
+      player.sendCancelMessage("A creature with that name does not exist.");
+      return;
+    }
+  }
+
   if (SPELL_WORDS.hasOwnProperty(messageLower)) {
     let spellId = SPELL_WORDS[messageLower];
     return player.spellbook.handleSpell(spellId);
