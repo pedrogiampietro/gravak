@@ -212,7 +212,18 @@ CommandHandler.prototype.handle = function (player, message) {
   }
 
   if (message[0] === "/m") {
-    let id = Number(message[1]);
+    let arg = message.slice(1).join(" ");
+    let id = Number(arg);
+
+    // If not a number, search by name
+    if (isNaN(id) || arg === "") {
+      let result = gameServer.database.getMonsterByName(arg);
+      if (result === null) {
+        return player.sendCancelMessage("Monster not found: " + arg);
+      }
+      id = result.id;
+    }
+
     return gameServer.world.creatureHandler.spawnCreature(
       id,
       player.getPosition()
@@ -269,20 +280,24 @@ CommandHandler.prototype.handle = function (player, message) {
 
     // Find the creature
     let target = null;
+    let targetName = "";
     let found = false;
 
     gameServer.world.creatureHandler.__creatureMap.forEach(function (creature) {
       if (found) return;
 
-      if (creature.name && creature.name.toLowerCase() === name) {
+      // Get creature name using getProperty for consistency
+      let creatureName = creature.getProperty(CONST.PROPERTIES.NAME);
+      if (creatureName && creatureName.toLowerCase() === name) {
         target = creature;
+        targetName = creatureName;
         found = true;
       }
     });
 
     if (target) {
       gameServer.world.creatureHandler.teleportCreature(player, target.getPosition());
-      return player.sendCancelMessage("Teleported to " + target.name + ".");
+      return player.sendCancelMessage("Teleported to " + targetName + ".");
     } else {
       return player.sendCancelMessage("Creature not found: " + name);
     }

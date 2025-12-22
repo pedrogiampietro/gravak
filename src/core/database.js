@@ -323,6 +323,27 @@ Database.prototype.getMonster = function (id) {
 
 }
 
+Database.prototype.getMonsterByName = function (name) {
+
+  /*
+   * Function Database.getMonsterByName
+   * Finds a monster by name (case-insensitive) and returns { id, data }
+   */
+
+  let searchName = name.toLowerCase();
+
+  for (let [id, data] of this.monsters) {
+    if (data.creatureStatistics && data.creatureStatistics.name) {
+      if (data.creatureStatistics.name.toLowerCase() === searchName) {
+        return { id: id, data: data };
+      }
+    }
+  }
+
+  return null;
+
+}
+
 Database.prototype.getRune = function (id) {
 
   /*
