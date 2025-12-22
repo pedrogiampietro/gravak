@@ -27,13 +27,12 @@ HotbarMenu.prototype.click = function (event) {
   let index = Array.from(this.downEvent.target.parentNode.children).indexOf(this.downEvent.target);
 
   // Take action depending on the button
-  console.log("[DEBUG HOTBAR] Click event action:", event.target.getAttribute("action"));
-  console.log("[DEBUG HOTBAR] Index:", index);
   switch (event.target.getAttribute("action")) {
     case "add":
-      console.log("[DEBUG HOTBAR] Opening spellbook-modal for index:", index);
-      let result = gameClient.interface.modalManager.open("spellbook-modal", index);
-      console.log("[DEBUG HOTBAR] Modal open result:", result);
+      gameClient.interface.modalManager.open("spellbook-modal", index);
+      break;
+    case "add-text":
+      gameClient.interface.modalManager.open("hotbar-text-modal", index);
       break;
     case "remove":
       gameClient.interface.hotbarManager.clearSlot(index);

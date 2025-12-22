@@ -1,4 +1,4 @@
-const MessageElement = function(entity, message, color) {
+const MessageElement = function (entity, message, color) {
 
   /*
    * Class MessageElement
@@ -30,7 +30,7 @@ const MessageElement = function(entity, message, color) {
 MessageElement.prototype = Object.create(ScreenElement.prototype);
 MessageElement.prototype.constructor = MessageElement;
 
-MessageElement.prototype.getDuration = function() {
+MessageElement.prototype.getDuration = function () {
 
   /*
    * Function ScreenElement.getDuration
@@ -41,41 +41,52 @@ MessageElement.prototype.getDuration = function() {
 
 }
 
-MessageElement.prototype.setMessage = function(message) {
+MessageElement.prototype.setMessage = function (message) {
 
   /*
    * Function ScreenElement.setMessage
    * Sets the message of the screen text element
    */
 
-  let [ nameElement, textElement ] = this.element.querySelectorAll("span");
+  let [nameElement, textElement] = this.element.querySelectorAll("span");
 
-  nameElement.innerHTML = "<u>" + this.__entity.name + "</u>";
+  // Removed underline as requested and added " says:"
+  nameElement.innerHTML = this.__entity.name + " says:";
   textElement.innerHTML = message;
 
 }
 
-MessageElement.prototype.setColor = function(color) {
+MessageElement.prototype.setColor = function (color) {
 
   /*
    * Function ScreenElement.setColor
    * Sets the color of the screen text element
    */
 
-  let [ nameElement, textElement ] = this.element.querySelectorAll("span");
+  let [nameElement, textElement] = this.element.querySelectorAll("span");
 
   textElement.style.color = Interface.prototype.getHexColor(color);
   nameElement.style.color = Interface.prototype.getHexColor(color);
 
 }
 
-MessageElement.prototype.setTextPosition = function() {
+MessageElement.prototype.setTextPosition = function () {
 
   /*
    * Function ScreenElement.setTextPosition
    * Requests the offset of the text element and updates the text position
    */
 
-  this.__updateTextPosition(this.__getAbsoluteOffset(gameClient.renderer.getStaticScreenPosition(this.__position)));
+  let offset = this.__getAbsoluteOffset(gameClient.renderer.getStaticScreenPosition(this.__position));
+  let fraction = gameClient.interface.getSpriteScaling();
+
+  // Center the text horizontally (match CharacterElement)
+  offset.left += fraction / 2;
+
+  // Offset vertically to appear below the character nameplate
+  // Nameplate is at -fraction/4. We place this slightly higher than before (was /4, now /6).
+  offset.top += fraction / 6;
+
+  this.__updateTextPosition(offset);
 
 }

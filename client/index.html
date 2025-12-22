@@ -107,10 +107,11 @@
     <button action="close">Close</button>
   </div>
 
-  <!-- Menu for chat entry -->
+  <!-- Menu for hotbar slot -->
   <div class="contextmenu modal" id="hotbar-menu">
     <div class="menu-header">Menu</div>
-    <button action="add">Add</button>
+    <button action="add">Add Spell</button>
+    <button action="add-text">Add Text</button>
     <button action="remove">Remove</button>
   </div>
 
@@ -655,6 +656,23 @@
                 <!-- Buttons aligned to the right -->
                 <div class="modal-footer">
                   <button action="cancel" value="Cancel">Close</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hotbar Text Modal -->
+            <div id="hotbar-text-modal" class="modal">
+              <button class="close-button-transparent symbol-button" action="cancel" value="Cancel">✕</button>
+              <div class="modal-header">Add Custom Text</div>
+              <div class="modal-body">
+                Enter the text to send when this hotkey is pressed:
+                <input id="hotbar-text-input" type="text" placeholder="e.g., exura, Hi!, etc."
+                  style="width: 100%; margin-top: 8px; padding: 8px; font-size: 14px;">
+                <hr>
+                <!-- Buttons aligned to the right -->
+                <div class="modal-footer">
+                  <button action="cancel" value="Cancel">Cancel</button>
+                  <button action="confirm-text" value="Ok">Confirm</button>
                 </div>
               </div>
             </div>
@@ -1300,6 +1318,7 @@
   <script src="src/ui/modals/modal.js"></script>
   <script src="src/ui/modals/modal-create-account.js"></script>
   <script src="src/ui/modals/modal-spellbook.js"></script>
+  <script src="src/ui/modals/modal-hotbar-text.js"></script>
   <script src="src/ui/modals/modal-confirm.js"></script>
   <script src="src/ui/modals/modal-death.js"></script>
   <script src="src/ui/modals/modal-enter-name.js"></script>

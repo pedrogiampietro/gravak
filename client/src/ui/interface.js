@@ -304,101 +304,121 @@ Interface.prototype.SPELLS.set(0, {
   name: "Cure Burning",
   description: "Cures Burning Condition",
   icon: { x: 0, y: 0 },
+  words: "exana pox",
 });
 Interface.prototype.SPELLS.set(1, {
   name: "Explosion",
   description: "Causes an Explosion",
   icon: { x: 0, y: 4 },
+  words: "exevo mas flam",
 });
 Interface.prototype.SPELLS.set(2, {
   name: "Healing",
   description: "Heal Damage",
   icon: { x: 2, y: 0 },
+  words: "exura",
 });
 Interface.prototype.SPELLS.set(3, {
   name: "Invisibilis",
   description: "Turn Invisible for 60s.",
   icon: { x: 10, y: 7 },
+  words: "utana vid",
 });
 Interface.prototype.SPELLS.set(4, {
   name: "Morph",
   description: "Morphs into a Creature",
   icon: { x: 9, y: 9 },
+  words: "utevo res ina",
 });
 Interface.prototype.SPELLS.set(5, {
   name: "Parva Lux",
   description: "Surround yourself by light",
   icon: { x: 8, y: 9 },
+  words: "utevo lux",
 });
 Interface.prototype.SPELLS.set(6, {
   name: "Life Drain",
   description: "Drains life from target",
   icon: { x: 1, y: 4 },
+  words: "exori mort",
 });
 Interface.prototype.SPELLS.set(7, {
   name: "Hearthstone",
   description: "Teleport yourself to the temple.",
   icon: { x: 3, y: 3 },
+  words: "exani tera",
 });
 Interface.prototype.SPELLS.set(8, {
   name: "Velocitas",
   description: "Increases your movement speed",
   icon: { x: 4, y: 8 },
+  words: "utani hur",
 });
 Interface.prototype.SPELLS.set(9, {
   name: "Levitate",
   description: "Move up or down a mountain",
   icon: { x: 4, y: 10 },
+  words: "exani hur",
 });
 Interface.prototype.SPELLS.set(10, {
   name: "Intense Healing",
   description: "Heals more damage",
   icon: { x: 2, y: 1 },
+  words: "exura gran",
 });
 Interface.prototype.SPELLS.set(11, {
   name: "Ultimate Healing",
   description: "Heals all damage",
   icon: { x: 2, y: 2 },
+  words: "exura vita",
 });
 Interface.prototype.SPELLS.set(12, {
   name: "Antidote",
   description: "Cures poison",
   icon: { x: 2, y: 7 },
+  words: "exana pox",
 });
 Interface.prototype.SPELLS.set(13, {
   name: "Energy Strike",
   description: "Strike with energy",
   icon: { x: 5, y: 3 },
+  words: "exori vis",
 });
 Interface.prototype.SPELLS.set(14, {
   name: "Flame Strike",
   description: "Strike with fire",
   icon: { x: 0, y: 3 },
+  words: "exori flam",
 });
 Interface.prototype.SPELLS.set(15, {
   name: "Fire Wave",
   description: "Wave of fire",
   icon: { x: 0, y: 5 },
+  words: "exevo flam hur",
 });
 Interface.prototype.SPELLS.set(16, {
   name: "Energy Beam",
   description: "Beam of energy",
   icon: { x: 5, y: 5 },
+  words: "exevo vis lux",
 });
 Interface.prototype.SPELLS.set(17, {
   name: "Strong Haste",
   description: "Run even faster",
   icon: { x: 4, y: 9 },
+  words: "utani gran hur",
 });
 Interface.prototype.SPELLS.set(18, {
   name: "Magic Shield",
   description: "Protect yourself with mana",
   icon: { x: 9, y: 8 },
+  words: "utamo vita",
 });
 Interface.prototype.SPELLS.set(19, {
   name: "Great Light",
   description: "Greatly illuminates the area",
   icon: { x: 8, y: 8 },
+  words: "utevo gran lux",
 });
 
 Interface.prototype.getSpell = function (id) {

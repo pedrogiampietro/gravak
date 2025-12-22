@@ -312,6 +312,12 @@ PacketHandler.prototype.handlePlayerSay = function (player, packet) {
 
   if (SPELL_WORDS.hasOwnProperty(messageLower)) {
     let spellId = SPELL_WORDS[messageLower];
+
+    // First, show the spell words as speech on screen and in chat (like real Tibia)
+    // We access the speech handler directly to force the orange color for spells
+    player.speechHandler.internalCreatureSay(packet.message, CONST.COLOR.ORANGE);
+
+    // Then execute the spell
     return player.spellbook.handleSpell(spellId);
   }
 

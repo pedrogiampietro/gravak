@@ -26,6 +26,7 @@ const ModalManager = function () {
   this.register(OfferModal, "offer-modal");
   this.register(MapModal, "map-modal");
   this.register(SpellbookModal, "spellbook-modal");
+  this.register(HotbarTextModal, "hotbar-text-modal");
   this.register(DeathModal, "death-modal");
 
   this.__addEventListeners();
