@@ -149,6 +149,17 @@ Creature.prototype.faceCreature = function (creature) {
   );
 };
 
+Creature.prototype.getFacePosition = function () {
+  /*
+   * Function Creature.getFacePosition
+   * Returns the position that the creature is facing
+   */
+
+  return this.getPosition().getPositionFromDirection(
+    this.getProperty(CONST.PROPERTIES.DIRECTION)
+  );
+};
+
 Creature.prototype.getStepDuration = function (friction) {
   /*
    * Function Creature.getStepDuration
