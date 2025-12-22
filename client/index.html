@@ -72,12 +72,16 @@
     <div class="battle-window-target-stats">
       <div class="battle-window-target-title"></div>
       <div class="battle-window-bar-wrapper">
-        <span style="color: rgb(0, 255, 0)">???</span>
-        <div class="battle-window-target-stats-bar health"></div>
+        <div class="bar-holder">
+          <div class="battle-window-target-stats-bar health"></div>
+          <span class="bar-text">???</span>
+        </div>
       </div>
       <div class="battle-window-bar-wrapper">
-        <div class="battle-window-target-stats-bar mana"></div>
-        <span style="color: rgb(0, 0, 255)">???</span>
+        <div class="bar-holder">
+          <div class="battle-window-target-stats-bar mana"></div>
+          <span class="bar-text">???</span>
+        </div>
       </div>
     </div>
     <div class="battle-window-target-canvas">
@@ -393,7 +397,7 @@
           <div class="modal-body" style="text-align: center; max-width: 500px;">
             <p> Tibia Game Client and Game Server written in NodeJS/JavaScript.
               <hr>
-              <img src="png/Gravak.png" style="width: 68px; heigiht: 68px;"></img>
+              <img src="png/Gravak.png" style="width: 68px; height: 68px;"></img>
               <hr>
               Load the required <b>Tibia.spr</b> and <b>Tibia.dat</b> files by clicking Load Assets. The asset versions
               must match the server version and both client/server support versions 7.4 and 10.98 but nothing in

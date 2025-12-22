@@ -14,6 +14,7 @@ const Creature = function (data) {
 
   this.state = new State();
   this.state.add("health", this.setHealthStatus.bind(this));
+  this.state.add("mana", this.setManaStatus.bind(this));
 
   // Save properties to the instance
   this.id = data.id;
@@ -113,6 +114,18 @@ Creature.prototype.blockHit = function () {
 Creature.prototype.setHealthStatus = function () {
 
   this.characterElement.setDefault();
+
+  if (gameClient.interface && gameClient.interface.windowManager) {
+    gameClient.interface.windowManager.getWindow("battle-window").updateCreature(this);
+  }
+
+}
+
+Creature.prototype.setManaStatus = function () {
+
+  if (gameClient.interface && gameClient.interface.windowManager) {
+    gameClient.interface.windowManager.getWindow("battle-window").updateCreature(this);
+  }
 
 }
 

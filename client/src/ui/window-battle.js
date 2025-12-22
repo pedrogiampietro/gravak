@@ -1,4 +1,4 @@
-const BattleWindow = function(element) {
+const BattleWindow = function (element) {
 
   /*
    * Class InteractiveWindow
@@ -16,11 +16,11 @@ const BattleWindow = function(element) {
 BattleWindow.prototype = Object.create(InteractiveWindow.prototype);
 BattleWindow.prototype.constructor = BattleWindow;
 
-BattleWindow.prototype.removeCreature = function(id) {
+BattleWindow.prototype.removeCreature = function (id) {
 
   let element = this.getBody().querySelector('[id="%s"]'.format(id));
 
-  if(element === null) {
+  if (element === null) {
     return;
   }
 
@@ -28,15 +28,15 @@ BattleWindow.prototype.removeCreature = function(id) {
 
 }
 
-BattleWindow.prototype.setTarget = function(creature) {
+BattleWindow.prototype.setTarget = function (creature) {
 
-  Array.from(this.getBody().children).forEach(function(x) {
+  Array.from(this.getBody().children).forEach(function (x) {
 
-    if(creature === null) {
+    if (creature === null) {
       return x.style.border = "1px solid black";
     }
 
-    if(Number(x.getAttribute('id')) === creature.id) {
+    if (Number(x.getAttribute('id')) === creature.id) {
       x.style.border = "1px solid red";
     } else {
       x.style.border = "1px solid black";
@@ -46,7 +46,41 @@ BattleWindow.prototype.setTarget = function(creature) {
 
 }
 
-BattleWindow.prototype.addCreature = function(creature) {
+BattleWindow.prototype.updateCreature = function (creature) {
+
+  /*
+   * Function BattleWindow.updateCreature
+   * Updates the DOM element of the creature with new stats
+   */
+
+  // Find the element for this creature
+  let element = this.getBody().querySelector('[id="%s"]'.format(creature.id));
+
+  if (!element) {
+    return;
+  }
+
+  let nodeList = element.querySelectorAll(".battle-window-bar-wrapper");
+
+  // Health Bar
+  let hpParams = [creature.state.health, creature.maxHealth];
+  nodeList[0].querySelector('.bar-text').innerHTML = "%s / %s".format(...hpParams);
+  let hpPercent = Math.min(100, Math.max(0, (creature.state.health / (creature.maxHealth || 1)) * 100));
+  nodeList[0].querySelector('.health').style.width = hpPercent + "%";
+
+  // Mana Bar
+  if (!creature.maxMana || creature.maxMana <= 0) {
+    nodeList[1].style.display = "none";
+  } else {
+    let manaParams = [creature.state.mana || 0, creature.maxMana || 0];
+    nodeList[1].querySelector('.bar-text').innerHTML = "%s / %s".format(...manaParams);
+    let manaPercent = Math.min(100, Math.max(0, ((creature.state.mana || 0) / (creature.maxMana || 1)) * 100));
+    nodeList[1].querySelector('.mana').style.width = manaPercent + "%";
+  }
+
+}
+
+BattleWindow.prototype.addCreature = function (creature) {
 
   /*
    * Function BattleWindow.addCreature
@@ -62,7 +96,7 @@ BattleWindow.prototype.addCreature = function(creature) {
   // Create a new canvas
   let canvas = new Canvas(node.lastElementChild.firstElementChild, 64, 64);
 
-  let frames =  creature.getCharacterFrames();
+  let frames = creature.getCharacterFrames();
   let zPattern = (frames.characterGroup.pattern.z > 1 && creature.isMounted()) ? 1 : 0;
 
   // Call to draw the character
@@ -81,17 +115,15 @@ BattleWindow.prototype.addCreature = function(creature) {
     0
   );
 
-  let nodeList = node.querySelectorAll(".battle-window-bar-wrapper");
-
-  nodeList[0].firstElementChild.innerHTML = "%s|%s".format(creature.state.health, creature.maxHealth);
-  nodeList[1].lastElementChild.innerHTML = "%s|%s".format(creature.state.mana || 0, creature.maxMana || 0);
-
   let nameSpan = node.firstElementChild.firstElementChild;
   nameSpan.innerHTML = creature.name;
 
   this.getBody().appendChild(node);
 
-  node.addEventListener("click", function() {
+  // Update the stats immediately
+  this.updateCreature(creature);
+
+  node.addEventListener("click", function () {
     let creature = gameClient.world.getCreature(this.id);
     gameClient.player.setTarget(creature);
     gameClient.send(new TargetPacket(this.id));

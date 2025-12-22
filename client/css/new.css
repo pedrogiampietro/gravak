@@ -26,34 +26,46 @@ body {
   align-items: center;
 }
 
-.battle-window-bar-wrapper span {
-  flex: 1 1 auto;
-  font-size: 10px;
-}
-
-.battle-window-target-stats-bar {
-  flex: 1 1 auto;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 2px;
-}
-
-.health {
-  background: rgb(0, 255, 0);
-  border: 1px solid black;
-}
-
+/* Battle Window Bars */
 .battle-window-bar-wrapper {
   display: flex;
   flex-direction: column;
 }
 
-.mana {
-  background: rgb(0, 0, 255);
+.bar-holder {
+  position: relative;
+  height: 14px;
+  background-color: #222;
   border: 1px solid black;
+  margin: 1px 0;
+}
+
+.battle-window-target-stats-bar {
+  height: 100%;
+  /* Width is set by JS */
+}
+
+.health {
+  background: rgb(0, 192, 0);
+  /* Slightly darker green for readability? Or keep bright? Stick to Tibia green: 0, 192, 0 usually or 0, 255, 0 */
+  background: #00C000;
+}
+
+.mana {
+  background: #0000C0;
+}
+
+.bar-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 10px;
+  color: white;
+  line-height: 13px;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+  pointer-events: none;
 }
 
 .battle-window-target-wrapper:hover {
@@ -77,7 +89,7 @@ body {
   flex: 0 1;
 }
 
-.battle-window-target-canvas > canvas {
+.battle-window-target-canvas>canvas {
   width: 64px;
   height: 64px;
 }
@@ -121,9 +133,9 @@ body {
 }
 
 #zone-message {
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
+  left: 0;
+  right: 0;
+  margin-left: auto;
   margin-right: auto;
   font-size: 36px;
   color: gold;
@@ -140,10 +152,10 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   padding: 4px;
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto; 
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 256px;
   top: 50%;
   text-align: center;
@@ -197,10 +209,10 @@ input {
 }
 
 hr {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), grey, rgba(0, 0, 0, 0));
-    margin: 8px;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), grey, rgba(0, 0, 0, 0));
+  margin: 8px;
 }
 
 /* Styling for buttons */
@@ -305,7 +317,7 @@ button.symbol-button {
 
 .main .lower {
   height: 100%;
-  background-image: url("/png/bg2.png"); 
+  background-image: url("/png/bg2.png");
   overflow-x: auto;
   max-height: 140px;
   flex: 1 1 auto;
