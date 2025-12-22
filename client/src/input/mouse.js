@@ -300,8 +300,27 @@ Mouse.prototype.__handleContextMenu = function (event) {
   // Delegate to the right handler
   if (event.target.id === "screen") {
 
-    let menu = gameClient.interface.menuManager.getMenu("screen-menu");
     let tile = this.getWorldObject(event);
+
+    // In Regular mode, right-click on creature attacks directly
+    // or right-click on container/corpse opens it directly
+    if (!gameClient.interface.settings.isClassicControlEnabled()) {
+      // Attack monsters
+      if (tile !== null && tile.which.monsters && tile.which.monsters.size > 0) {
+        return gameClient.world.targetMonster(tile.which.monsters);
+      }
+
+      // Open containers/corpses directly
+      if (tile !== null && tile.which.items.length > 0) {
+        let topItem = tile.which.peekItem(0xFF);
+        if (topItem.isContainer()) {
+          // Use the item directly (opens container)
+          return this.use(tile);
+        }
+      }
+    }
+
+    let menu = gameClient.interface.menuManager.getMenu("screen-menu");
     menu.element.querySelector("button[action=use]").innerHTML = "Use";
     if (tile !== null && tile.which.items.length > 0) {
       if (tile.which.peekItem(0xFF).isRotateable()) {
