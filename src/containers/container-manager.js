@@ -79,13 +79,17 @@ ContainerManager.prototype.toggleContainer = function (container) {
    * Toggles a container between open and closed
    */
 
-  // Either open or close it - use container.container.guid to match __openContainer
-  if (this.__openedContainers.has(container.container.guid)) {
-    return this.closeContainer(container);
+  // Handle depot items first - they don't have a .container property like regular containers
+  if (container.isDepot && container.isDepot()) {
+    if (this.__openedContainers.has(CONST.CONTAINER.DEPOT)) {
+      return this.closeContainer(this.depot);
+    }
+    return this.__openContainer(container);
   }
 
-  if (container.isDepot() && this.__openedContainers.has(CONST.CONTAINER.DEPOT)) {
-    return this.closeContainer(this.depot);
+  // For regular containers, check if already opened using container.container.guid
+  if (container.container && this.__openedContainers.has(container.container.guid)) {
+    return this.closeContainer(container);
   }
 
   return this.__openContainer(container);
@@ -212,31 +216,33 @@ ContainerManager.prototype.__openContainer = function (container) {
    * Writes packet to open a container
    */
 
-  // Is already opened - use container.container.guid as key (matches packet protocol)
-  if (this.__openedContainers.has(container.container.guid)) {
-    return;
-  }
-
   // A maximum of N containers can be referenced
   if (this.__openedContainers.size >= this.MAXIMUM_OPENED_CONTAINERS) {
     return this.__player.sendCancelMessage("You cannot open any more containers.");
   }
 
-  // Sanity check for opening two depots
-  if (container.isDepot() && !this.depot.isClosed()) {
-    return this.__player.sendCancelMessage("You already have another depot opened.");
+  // Handle depot items first - they don't have a .container property
+  if (container.isDepot && container.isDepot()) {
+    // Sanity check for opening two depots
+    if (!this.depot.isClosed()) {
+      return this.__player.sendCancelMessage("You already have another depot opened.");
+    }
+    // Open the depot at the position
+    this.__openedContainers.set(CONST.CONTAINER.DEPOT, this.depot);
+    this.depot.openAtPosition(container.getPosition());
+    return this.__player.openContainer(container.id, "Depot", this.depot.container);
   }
 
-  // Open the depot or a simple container - use container.container.guid as key
-  if (!container.isDepot()) {
+  // For regular containers, check if already opened using container.container.guid
+  if (container.container && this.__openedContainers.has(container.container.guid)) {
+    return;
+  }
+
+  // Open a regular container
+  if (container.container) {
     this.__openedContainers.set(container.container.guid, container);
     return this.__player.openContainer(container.id, container.getName(), container.container);
   }
-
-  // Open the depot at the position
-  this.__openedContainers.set(CONST.CONTAINER.DEPOT, this.depot);
-  this.depot.openAtPosition(container.getPosition());
-  this.__player.openContainer(container.id, "Depot", this.depot.container);
 
 }
 

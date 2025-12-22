@@ -3,7 +3,7 @@
 const Item = require("../entities/item");
 const BaseContainer = require("../containers/base-container");
 
-const DepotContainer = function(cid, things) {
+const DepotContainer = function (cid, things) {
 
   /*
    * Class DepotContainer
@@ -18,8 +18,12 @@ const DepotContainer = function(cid, things) {
    *
    */
 
+  // Depot always has a minimum size (like Tibia 7.4 = 20 slots)
+  const DEPOT_SIZE = 20;
+
   // Should include a base container to handle the items
-  this.container = new BaseContainer(cid, things.length);
+  // Use the maximum of depot size or existing items count
+  this.container = new BaseContainer(cid, Math.max(DEPOT_SIZE, things.length));
 
   // The parent of the depot container is updated based on what particular depot box is being opened
   this.position = null;
@@ -29,13 +33,13 @@ const DepotContainer = function(cid, things) {
 
 }
 
-DepotContainer.prototype.getTopParent = function() {
+DepotContainer.prototype.getTopParent = function () {
 
   return this;
 
 }
 
-DepotContainer.prototype.isClosed = function() {
+DepotContainer.prototype.isClosed = function () {
 
   /*
    * Function DepotContainer.isClosed
@@ -46,7 +50,7 @@ DepotContainer.prototype.isClosed = function() {
 
 }
 
-DepotContainer.prototype.toJSON = function() {
+DepotContainer.prototype.toJSON = function () {
 
   /*
    * Function DepotContainer.toJSON
@@ -57,7 +61,7 @@ DepotContainer.prototype.toJSON = function() {
 
 }
 
-DepotContainer.prototype.getPosition = function() {
+DepotContainer.prototype.getPosition = function () {
 
   /*
    * Function DepotContainer.getPosition
@@ -68,7 +72,7 @@ DepotContainer.prototype.getPosition = function() {
 
 }
 
-DepotContainer.prototype.openAtPosition = function(position) {
+DepotContainer.prototype.openAtPosition = function (position) {
 
   /*
    * Function DepotContainer.openAtPosition
@@ -79,7 +83,7 @@ DepotContainer.prototype.openAtPosition = function(position) {
 
 }
 
-DepotContainer.prototype.getMaximumAddCount = function(player, item, index) {
+DepotContainer.prototype.getMaximumAddCount = function (player, item, index) {
 
   /*
    * Function DepotContainer.getMaximumAddCount
@@ -87,7 +91,7 @@ DepotContainer.prototype.getMaximumAddCount = function(player, item, index) {
    */
 
   // This is not a valid index
-  if(!this.container.isValidIndex(index)) {
+  if (!this.container.isValidIndex(index)) {
     return 0;
   }
 
@@ -95,18 +99,18 @@ DepotContainer.prototype.getMaximumAddCount = function(player, item, index) {
   let thing = this.container.peekIndex(index);
 
   // If the slot is empty we can add the maximum stack count
-  if(thing === null) {
+  if (thing === null) {
     return Item.prototype.MAXIMUM_STACK_COUNT;
   }
 
   // Not empty but the identifiers match and the item is stackable
-  if(thing.id === item.id && thing.isStackable()) {
+  if (thing.id === item.id && thing.isStackable()) {
 
     // If all slots in the container are filled only allow up to the maximum determined by what is already there
-    if(this.container.isFull()) {
+    if (this.container.isFull()) {
       return Item.prototype.MAXIMUM_STACK_COUNT - thing.count;
     }
-    
+
     // Otherwise overflow: add to an open slot in the container
     return Item.prototype.MAXIMUM_STACK_COUNT;
 
@@ -117,7 +121,7 @@ DepotContainer.prototype.getMaximumAddCount = function(player, item, index) {
 
 }
 
-DepotContainer.prototype.peekIndex = function(index) {
+DepotContainer.prototype.peekIndex = function (index) {
 
   /*
    * Function DepotContainer.peekIndex
@@ -128,7 +132,7 @@ DepotContainer.prototype.peekIndex = function(index) {
 
 }
 
-DepotContainer.prototype.removeIndex = function(index, amount) {
+DepotContainer.prototype.removeIndex = function (index, amount) {
 
   /*
    * Function DepotContainer.removeIndex
@@ -142,7 +146,7 @@ DepotContainer.prototype.removeIndex = function(index, amount) {
 
 }
 
-DepotContainer.prototype.deleteThing = function(thing) {
+DepotContainer.prototype.deleteThing = function (thing) {
 
   /*
    * Function DepotContainer.deleteThing
@@ -151,7 +155,7 @@ DepotContainer.prototype.deleteThing = function(thing) {
 
   let index = this.container.deleteThing(thing);
 
-  if(index === -1) {
+  if (index === -1) {
     return -1;
   }
 
@@ -161,14 +165,14 @@ DepotContainer.prototype.deleteThing = function(thing) {
 
 }
 
-DepotContainer.prototype.addThing = function(thing, index) {
+DepotContainer.prototype.addThing = function (thing, index) {
 
   /*
    * Function DepotContainer.addThing
    * Function to add an item to the container
    */
 
-  if(!thing.isPickupable() && thing.id !== 2594 && thing.id !== 2593) {
+  if (!thing.isPickupable() && thing.id !== 2594 && thing.id !== 2593) {
     return false;
   }
 
@@ -180,7 +184,7 @@ DepotContainer.prototype.addThing = function(thing, index) {
 
 }
 
-DepotContainer.prototype.addFirstEmpty = function(thing) {
+DepotContainer.prototype.addFirstEmpty = function (thing) {
 
   /*
    * Function Container.canAddFirstEmpty
@@ -193,7 +197,7 @@ DepotContainer.prototype.addFirstEmpty = function(thing) {
 
 }
 
-DepotContainer.prototype.canAddFirstEmpty = function(thing) {
+DepotContainer.prototype.canAddFirstEmpty = function (thing) {
 
   /*
    * Function Container.canAddFirstEmpty
@@ -201,12 +205,12 @@ DepotContainer.prototype.canAddFirstEmpty = function(thing) {
    */
 
   // Guard against non-pickupable items
-  if(!thing.isPickupable()) {
+  if (!thing.isPickupable()) {
     return false;
   }
 
   // Can not add to a full container..
-  if(this.container.isFull()) {
+  if (this.container.isFull()) {
     return false;
   }
 
@@ -214,7 +218,7 @@ DepotContainer.prototype.canAddFirstEmpty = function(thing) {
 
 }
 
-DepotContainer.prototype.__addDepotItems = function(things) {
+DepotContainer.prototype.__addDepotItems = function (things) {
 
   /*
    * Function DepotContainer.__addDepotItems
@@ -222,9 +226,9 @@ DepotContainer.prototype.__addDepotItems = function(things) {
    */
 
   // Go over all the equipment slots from the database and add them
-  things.forEach(function(thing, index) {
+  things.forEach(function (thing, index) {
 
-    if(thing !== null) {
+    if (thing !== null) {
       return this.addThing(process.gameServer.database.parseThing(thing), index);
     }
 
