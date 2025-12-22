@@ -139,6 +139,13 @@
     <br><button action="hide-offline">Hide Offline</button>
   </div>
 
+  <!-- Menu for container slots -->
+  <div class="contextmenu modal" id="container-menu">
+    <div class="menu-header">Menu</div>
+    <button action="look">Look</button>
+    <br><button action="use">Use</button>
+  </div>
+
   <!-- The Slot Prototype -->
   <div style="display: none;">
     <div id="slot-prototype" class="slot">
@@ -576,6 +583,14 @@
                     <option value="60">60 FPS (V-Sync)</option>
                     <option value="120">120 FPS</option>
                     <option value="0">Unlimited</option>
+                  </select>
+                </div>
+                <hr>
+                Mouse Control Mode
+                <div class="checkboxes">
+                  <select id="mouse-control-mode" style="text-align: center; width: 100%;">
+                    <option value="regular">Regular Control</option>
+                    <option value="classic">Classic Control</option>
                   </select>
                 </div>
               </div>
@@ -1196,6 +1211,7 @@
   <script src="src/ui/menus/menu-friend-window.js"></script>
   <script src="src/ui/menus/menu-chat-header.js"></script>
   <script src="src/ui/menus/menu-chat-body.js"></script>
+  <script src="src/ui/menus/menu-container.js"></script>
   <script src="src/ui/menus/menu-manager.js"></script>
 
   <script src="src/rendering/renderer.js"></script>

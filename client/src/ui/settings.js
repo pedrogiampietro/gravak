@@ -102,6 +102,19 @@ Settings.prototype.isSoundEnabled = function () {
 
 }
 
+Settings.prototype.isClassicControlEnabled = function () {
+
+  /*
+   * Function Settings.isClassicControlEnabled
+   * Returns true if classic mouse control mode is enabled
+   * Classic: right-click directly opens/uses containers
+   * Regular: right-click opens context menu
+   */
+
+  return this.__state["mouse-control-mode"] === "classic";
+
+}
+
 Settings.prototype.isWeatherEnabled = function () {
 
   /*
@@ -154,6 +167,7 @@ Settings.prototype.__toggle = function (event) {
       }
       break;
     case "fps-mode":
+    case "mouse-control-mode":
       this.__state[event.target.id] = event.target.value;
       break;
     case "toggle-scale-gamewindow":
@@ -226,7 +240,8 @@ Settings.prototype.__getCleanState = function () {
     "enable-lighting": document.getElementById("enable-lighting").checked,
     "enable-weather": document.getElementById("enable-weather").checked,
     "show-performance": document.getElementById("show-performance").checked,
-    "fps-mode": document.getElementById("fps-mode").value
+    "fps-mode": document.getElementById("fps-mode").value,
+    "mouse-control-mode": document.getElementById("mouse-control-mode").value
   });
 
 }
@@ -252,6 +267,7 @@ Settings.prototype.__applyState = function (id) {
       // Note: debugger activation is deferred until gameClient exists
       break;
     case "fps-mode":
+    case "mouse-control-mode":
       element.value = this.__state[id];
       // Note: FPS mode is applied after gameClient is fully initialized
       break;

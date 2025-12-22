@@ -1,4 +1,4 @@
-const MenuManager = function() {
+const MenuManager = function () {
 
   /*
    * Class MenuManager
@@ -22,6 +22,7 @@ const MenuManager = function() {
     "friend-list-menu": new FriendListMenu("friend-list-menu"),
     "friend-window-menu": new FriendWindowMenu("friend-window-menu"),
     "hotbar-menu": new HotbarMenu("hotbar-menu"),
+    "container-menu": new ContainerMenu("container-menu"),
   });
 
   // Reference the currently active open menu
@@ -29,14 +30,14 @@ const MenuManager = function() {
 
 }
 
-MenuManager.prototype.getMenu = function(name) {
+MenuManager.prototype.getMenu = function (name) {
 
   /*
    * Function MenuManager.getMenu
    * Returns the menu if it exists otherwise return NULL
    */
 
-  if(!this.menus.hasOwnProperty(name)) {
+  if (!this.menus.hasOwnProperty(name)) {
     return null;
   }
 
@@ -44,7 +45,7 @@ MenuManager.prototype.getMenu = function(name) {
 
 }
 
-MenuManager.prototype.open = function(name, event) {
+MenuManager.prototype.open = function (name, event) {
 
   /*
    * Function MenuManager.open
@@ -54,12 +55,12 @@ MenuManager.prototype.open = function(name, event) {
   let menuElement = this.getMenu(name);
 
   // Has a menu with this name been registered
-  if(menuElement === null) {
+  if (menuElement === null) {
     return console.error("Cannot open menu %s because the menu has not been registered.".format(name));
   }
 
   // Already opened
-  if(this.isOpened()) {
+  if (this.isOpened()) {
     return console.error("Cannot open menu %s because another menu is already opened.".format(name));
   }
 
@@ -68,7 +69,7 @@ MenuManager.prototype.open = function(name, event) {
 
 }
 
-MenuManager.prototype.isOpened = function() {
+MenuManager.prototype.isOpened = function () {
 
   /*
    * Function MenuManager.isOpened
@@ -79,7 +80,7 @@ MenuManager.prototype.isOpened = function() {
 
 }
 
-MenuManager.prototype.close = function(event) {
+MenuManager.prototype.close = function (event) {
 
   /*
    * Function MenuManager.close
@@ -87,7 +88,7 @@ MenuManager.prototype.close = function(event) {
    */
 
   // No menu is opened: do nothing
-  if(!this.isOpened()) {
+  if (!this.isOpened()) {
     return;
   }
 
@@ -102,14 +103,14 @@ MenuManager.prototype.close = function(event) {
 
 }
 
-MenuManager.prototype.__defocus = function() {
+MenuManager.prototype.__defocus = function () {
 
   /*
    * Function MenuManager.defocus
    * Removes focus from the opened menu and returns it to the main body
    */
 
-  if(document.activeElement) {
+  if (document.activeElement) {
     document.activeElement.blur();
   }
 

@@ -475,7 +475,7 @@ Player.prototype.closeContainer = function (container) {
    * Closes the container and removes it from the graphical user interface
    */
 
-  gameClient.send(new ContainerClosePacket(container.____containerId));
+  gameClient.send(new ContainerClosePacket(container.__containerId));
 };
 
 Player.prototype.setTurnBuffer = function (direction) {

@@ -1,4 +1,4 @@
-const Thing = function(id) {
+const Thing = function (id) {
 
   /*
    * Class Thing
@@ -10,7 +10,7 @@ const Thing = function(id) {
   this.__parent = null;
 
   // Thing can be globally animated
-  if(this.id !== 0 && gameClient.hasExtendedAnimations() && this.isAnimated()) {
+  if (this.id !== 0 && gameClient.hasExtendedAnimations() && this.isAnimated()) {
     this.__generateExtendedDurations();
   }
 
@@ -18,7 +18,7 @@ const Thing = function(id) {
 
 Thing.prototype.DEFAULT_FRAME_LENGTH_MS = 500;
 
-Thing.prototype.setParent = function(parent) {
+Thing.prototype.setParent = function (parent) {
 
   /*
    * Function Thing.setParent
@@ -30,7 +30,7 @@ Thing.prototype.setParent = function(parent) {
 
 }
 
-Thing.prototype.isAnimated = function() {
+Thing.prototype.isAnimated = function () {
 
   /*
    * Function Thing.isAnimated
@@ -41,7 +41,7 @@ Thing.prototype.isAnimated = function() {
 
 }
 
-Thing.prototype.getFrame = function() {
+Thing.prototype.getFrame = function () {
 
   /*
    * Function Thing.getFrame
@@ -49,7 +49,7 @@ Thing.prototype.getFrame = function() {
    */
 
   // There are no animations for the thing: return the first frame
-  if(!this.isAnimated()) {
+  if (!this.isAnimated()) {
     return 0;
   }
 
@@ -58,7 +58,7 @@ Thing.prototype.getFrame = function() {
 
 }
 
-Thing.prototype.isMultiUse = function() {
+Thing.prototype.isMultiUse = function () {
 
   /*
    * Function Item.isMultiUse
@@ -69,7 +69,7 @@ Thing.prototype.isMultiUse = function() {
 
 }
 
-Thing.prototype.isElevation = function() {
+Thing.prototype.isElevation = function () {
 
   /*
    * Function Thing.isElevation
@@ -80,7 +80,7 @@ Thing.prototype.isElevation = function() {
 
 }
 
-Thing.prototype.isRotateable = function() {
+Thing.prototype.isRotateable = function () {
 
   /*
    * Function Thing.isRotateable
@@ -91,7 +91,7 @@ Thing.prototype.isRotateable = function() {
 
 }
 
-Thing.prototype.isPickupable = function() {
+Thing.prototype.isPickupable = function () {
 
   /*
    * Function Thing.isPickupable
@@ -102,7 +102,7 @@ Thing.prototype.isPickupable = function() {
 
 }
 
-Thing.prototype.isSplash = function() {
+Thing.prototype.isSplash = function () {
 
   /*
    * Function Thing.isSplash
@@ -113,7 +113,7 @@ Thing.prototype.isSplash = function() {
 
 }
 
-Thing.prototype.isStackable = function() {
+Thing.prototype.isStackable = function () {
 
   /*
    * Function Thing.isStackable
@@ -124,7 +124,7 @@ Thing.prototype.isStackable = function() {
 
 }
 
-Thing.prototype.isFluidContainer = function() {
+Thing.prototype.isFluidContainer = function () {
 
   /*
    * Function Thing.isFluidContainer
@@ -135,7 +135,18 @@ Thing.prototype.isFluidContainer = function() {
 
 }
 
-Thing.prototype.isLight = function() {
+Thing.prototype.isContainer = function () {
+
+  /*
+   * Function Thing.isContainer
+   * Returns true if the item is a container (backpack, bag, chest, etc.)
+   */
+
+  return this.hasFlag(PropBitFlag.prototype.flags.DatFlagContainer);
+
+}
+
+Thing.prototype.isLight = function () {
 
   /*
    * Function Thing.isLight
@@ -146,7 +157,7 @@ Thing.prototype.isLight = function() {
 
 }
 
-Thing.prototype.__getGlobalFrame = function() {
+Thing.prototype.__getGlobalFrame = function () {
 
   /*
    * Function Thing.__getGlobalFrame
@@ -156,7 +167,7 @@ Thing.prototype.__getGlobalFrame = function() {
   let frameGroup = this.getFrameGroup(FrameGroup.prototype.NONE);
 
   // Global animations for old versions
-  if(!gameClient.hasExtendedAnimations()) {
+  if (!gameClient.hasExtendedAnimations()) {
     return ((gameClient.renderer.__nMiliseconds / this.DEFAULT_FRAME_LENGTH_MS) % frameGroup.animationLength) | 0;
   }
 
@@ -164,8 +175,8 @@ Thing.prototype.__getGlobalFrame = function() {
   let delta = gameClient.renderer.__nMiliseconds % this.__durationsSum;
 
   // Compare it to the cumulative duration of all the frames
-  for(let i = 0; i < this.__durations.length; i++) {
-    if(this.__durations[i] >= delta) {
+  for (let i = 0; i < this.__durations.length; i++) {
+    if (this.__durations[i] >= delta) {
       return i;
     }
   }
@@ -174,19 +185,19 @@ Thing.prototype.__getGlobalFrame = function() {
 
 }
 
-Thing.prototype.getMinimapColor = function() {
+Thing.prototype.getMinimapColor = function () {
 
   /*
    * Function Thing.getMinimapColor
    * Returns the minimap color of a thing
    */
 
-  if(this.id === 0) {
+  if (this.id === 0) {
     return null;
   }
 
   // The flag is not set: return the nullptr
-  if(!this.hasFlag(PropBitFlag.prototype.flags.DatFlagMinimapColor)) {
+  if (!this.hasFlag(PropBitFlag.prototype.flags.DatFlagMinimapColor)) {
     return null;
   }
 
@@ -194,7 +205,7 @@ Thing.prototype.getMinimapColor = function() {
 
 }
 
-Thing.prototype.getSprite = function(group, index) {
+Thing.prototype.getSprite = function (group, index) {
 
   /*
    * Function Thing.getSprite
@@ -205,13 +216,13 @@ Thing.prototype.getSprite = function(group, index) {
 
 }
 
-Thing.prototype.getFrameGroup = function(group) {
+Thing.prototype.getFrameGroup = function (group) {
 
   return this.getDataObject().frameGroups[group];
 
 }
 
-Thing.prototype.getDataObject = function() {
+Thing.prototype.getDataObject = function () {
 
   /*
    * Function Thing.getDataObject
@@ -222,7 +233,7 @@ Thing.prototype.getDataObject = function() {
 
 }
 
-Thing.prototype.hasFlag = function(flag) {
+Thing.prototype.hasFlag = function (flag) {
 
   /*
    * Function Thing.hasFlag
@@ -233,7 +244,7 @@ Thing.prototype.hasFlag = function(flag) {
 
 }
 
-Thing.prototype.__generateExtendedDurations = function() {
+Thing.prototype.__generateExtendedDurations = function () {
 
   /*
    * Function Thing.__generateExtendedDurations
@@ -245,7 +256,7 @@ Thing.prototype.__generateExtendedDurations = function() {
   let sum = 0;
 
   // Cumulative sum between the random minimum and maximum of all the frames
-  this.__durations = durations.map(function(duration) {
+  this.__durations = durations.map(function (duration) {
     return sum += Number.prototype.random(duration.min, duration.max);
   });
 

@@ -79,8 +79,8 @@ ContainerManager.prototype.toggleContainer = function (container) {
    * Toggles a container between open and closed
    */
 
-  // Either open or close it
-  if (this.__openedContainers.has(container.id)) {
+  // Either open or close it - use container.container.guid to match __openContainer
+  if (this.__openedContainers.has(container.container.guid)) {
     return this.closeContainer(container);
   }
 

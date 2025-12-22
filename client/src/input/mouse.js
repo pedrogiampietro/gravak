@@ -29,6 +29,11 @@ const Mouse = function () {
   this.__currentMouseTile = null;
   this.__multiUseObject = null;
 
+  // Track button states for both-buttons look shortcut
+  this.__leftButtonDown = false;
+  this.__rightButtonDown = false;
+  this.__suppressNextContextMenu = false;
+
 }
 
 Mouse.prototype.getCurrentTileHover = function () {
@@ -258,8 +263,39 @@ Mouse.prototype.__handleContextMenu = function (event) {
   // Stop default propagation
   event.preventDefault();
 
+  // Track right button state
+  this.__rightButtonDown = true;
+
+  // Check if left button is already down - both buttons = Look
+  if (this.__leftButtonDown) {
+    // Close any open menu first
+    gameClient.interface.menuManager.close();
+
+    this.__setSelectedObject(event);
+    if (this.__mouseDownObject && this.__mouseDownObject.which) {
+      this.look(this.__mouseDownObject);
+    }
+    // Reset button states
+    this.__leftButtonDown = false;
+    this.__rightButtonDown = false;
+    // Suppress any further menu opening from this event chain
+    this.__suppressNextContextMenu = true;
+    return;
+  }
+
+  // Check if we should suppress this context menu (from Look action)
+  if (this.__suppressNextContextMenu) {
+    this.__suppressNextContextMenu = false;
+    return;
+  }
+
   // Close existing menu's
   gameClient.interface.menuManager.close();
+
+  // Check if clicking on a container slot
+  if (event.target.className.includes("slot") || event.target.className === "body") {
+    return this.__handleSlotContextMenu(event);
+  }
 
   // Delegate to the right handler
   if (event.target.id === "screen") {
@@ -306,6 +342,50 @@ Mouse.prototype.__handleContextMenu = function (event) {
   if (event.target.className.includes("chat-title")) {
     return gameClient.interface.menuManager.open("chat-header-menu", event);
   }
+
+}
+
+Mouse.prototype.__handleSlotContextMenu = function (event) {
+
+  /*
+   * Function Mouse.__handleSlotContextMenu
+   * Handles right-click on container slots based on mouse control mode
+   * Regular: right-click directly uses/opens containers (default Tibia behavior)
+   * Classic: right-click opens context menu
+   */
+
+  // Get the slot object
+  let slotObject = this.__getSlotObject(event);
+
+  // Verify the slot object exists
+  if (slotObject === null || slotObject.which === null) {
+    return;
+  }
+
+  // Regular Control: directly use the item (opens containers, uses items)
+  // This is the default Tibia behavior where right-click opens backpacks
+  if (!gameClient.interface.settings.isClassicControlEnabled()) {
+    return this.use(slotObject);
+  }
+
+  // Classic Control: open context menu
+  let menu = gameClient.interface.menuManager.getMenu("container-menu");
+
+  // Update button text based on item type
+  let item = slotObject.which.peekItem(slotObject.index);
+  if (item !== null) {
+    if (item.isContainer()) {
+      menu.element.querySelector("button[action=use]").innerHTML = "Open";
+    } else if (item.isMultiUse()) {
+      menu.element.querySelector("button[action=use]").innerHTML = "Use With";
+    } else {
+      menu.element.querySelector("button[action=use]").innerHTML = "Use";
+    }
+  }
+
+  // Open with the slot object reference
+  menu.open(event, slotObject);
+  gameClient.interface.menuManager.__activeMenu = menu;
 
 }
 
@@ -359,11 +439,6 @@ Mouse.prototype.__handleMouseDown = function (event) {
    * Handles the mouse down event
    */
 
-  // Block other mouse buttons except for left
-  if (event.buttons !== 1) {
-    return;
-  }
-
   // Must be connected to the gameserver
   if (!gameClient.networkManager.isConnected()) {
     return;
@@ -371,6 +446,32 @@ Mouse.prototype.__handleMouseDown = function (event) {
 
   // Block input when player is dead
   if (gameClient.player && gameClient.player.isDead) {
+    return;
+  }
+
+  // Track left button state
+  if (event.button === 0) {
+    this.__leftButtonDown = true;
+
+    // Check if right button is already down - both buttons = Look
+    if (this.__rightButtonDown) {
+      // Close any open menu first
+      gameClient.interface.menuManager.close();
+
+      this.__setSelectedObject(event);
+      if (this.__mouseDownObject && this.__mouseDownObject.which) {
+        this.look(this.__mouseDownObject);
+      }
+      // Reset button states and suppress any pending context menu
+      this.__leftButtonDown = false;
+      this.__rightButtonDown = false;
+      this.__suppressNextContextMenu = true;
+      return;
+    }
+  }
+
+  // Only process left button for normal operations
+  if (event.buttons !== 1) {
     return;
   }
 
@@ -471,6 +572,14 @@ Mouse.prototype.__handleMouseUp = function (event) {
    * Function Mouse.__handleMouseUp
    * Handles the mouse up event and delegates to the appropriate subroutine
    */
+
+  // Reset button tracking on mouseup
+  if (event.button === 0) {
+    this.__leftButtonDown = false;
+  }
+  if (event.button === 2) {
+    this.__rightButtonDown = false;
+  }
 
   // Must be connected to the gameserver
   if (!gameClient.networkManager.isConnected()) {
