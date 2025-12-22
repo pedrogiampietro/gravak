@@ -5,7 +5,7 @@
     "maxHealth": 240,
     "mana": 0,
     "maxMana": 0,
-    "speed": 240,
+    "speed": 100,
     "attack": 130,
     "attackSpeed": 2000,
     "defense": 30,
@@ -36,7 +36,7 @@
       "name": "speed",
       "interval": 2000,
       "chance": 0.15,
-      "speedChange": 300,
+      "speedChange": 22,
       "duration": 5000,
       "areaEffect": "redshimmer"
     }

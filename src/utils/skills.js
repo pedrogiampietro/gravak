@@ -265,20 +265,80 @@ Skills.prototype.__addSkillProperty = function (type, points) {
 Skills.prototype.incrementSkill = function (type, value) {
   /*
    * Function Skills.incrementSkill
-   * Increments a skill by the given value
+   * Increments a skill by the given value and checks for level advancement
    */
 
   let skill = this.__getSkill(type);
 
   if (skill === null) {
-    console.warn(`[SKILLS] Cannot increment skill of unknown type: ${type}`);
     return;
   }
+
+  // Get level BEFORE incrementing
+  let levelBefore = this.getSkillLevel(type);
 
   // Use the skill's increment method
   skill.increment(value);
 
-  console.log(`[SKILLS] Incremented skill ${type} by ${value}. New value: ${skill.get()}`);
+  // Get level AFTER incrementing
+  let levelAfter = this.getSkillLevel(type);
+
+  let newPoints = skill.get();
+
+  // ALWAYS send skill POINTS update to client for real-time percentage updates
+  const { CreaturePropertyPacket } = requireModule("network/protocol");
+  this.__player.write(new CreaturePropertyPacket(this.__player.getId(), type, newPoints));
+
+  // Check if level changed
+  if (levelAfter > levelBefore) {
+    this.__onSkillAdvance(type, levelBefore, levelAfter);
+  }
+};
+
+Skills.prototype.__onSkillAdvance = function (type, oldLevel, newLevel) {
+  /*
+   * Function Skills.__onSkillAdvance
+   * Called when a skill advances to a new level
+   */
+
+  const { CreaturePropertyPacket, ServerMessagePacket, ChannelWritePacket } = requireModule("network/protocol");
+
+  // Get skill name for the message
+  let skillName = this.__getSkillName(type);
+
+  // Send skill level update to client
+  this.__player.write(new CreaturePropertyPacket(this.__player.getId(), type, newLevel));
+
+  // Send congratulations message
+  let message = `You advanced to ${skillName} level ${newLevel}.`;
+  this.__player.write(new ServerMessagePacket(message));
+
+  // Also send to console channel
+  this.__player.write(new ChannelWritePacket(
+    CONST.CHANNEL.DEFAULT,
+    "Server",
+    message,
+    CONST.COLOR.WHITE
+  ));
+};
+
+Skills.prototype.__getSkillName = function (type) {
+  /*
+   * Function Skills.__getSkillName
+   * Returns the human-readable name for a skill type
+   */
+
+  switch (type) {
+    case CONST.PROPERTIES.MAGIC: return "Magic Level";
+    case CONST.PROPERTIES.FIST: return "Fist Fighting";
+    case CONST.PROPERTIES.CLUB: return "Club Fighting";
+    case CONST.PROPERTIES.SWORD: return "Sword Fighting";
+    case CONST.PROPERTIES.AXE: return "Axe Fighting";
+    case CONST.PROPERTIES.DISTANCE: return "Distance Fighting";
+    case CONST.PROPERTIES.SHIELDING: return "Shielding";
+    case CONST.PROPERTIES.FISHING: return "Fishing";
+    default: return "Unknown Skill";
+  }
 };
 
 module.exports = Skills;

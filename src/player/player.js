@@ -1052,4 +1052,30 @@ Player.prototype.setProperty = function (type, value) {
   return result;
 };
 
+Player.prototype.checkSkillAdvance = function (isBloodHit) {
+  /*
+   * Function Player.checkSkillAdvance
+   * Advances the skill of the player based on the weapon used
+   */
+
+  let weaponType = this.containerManager.equipment.getWeaponType();
+
+  // Bonus for blood hit: 2 tries. Blocked: 1 try.
+  let amount = isBloodHit ? 2 : 1;
+  this.skills.incrementSkill(weaponType, amount);
+
+};
+
+Player.prototype.checkDefensiveSkillAdvance = function () {
+  /*
+   * Function Player.checkDefensiveSkillAdvance
+   * Advances the shielding skill if a shield is used
+   */
+
+  if (this.containerManager.equipment.isShieldEquipped()) {
+    this.skills.incrementSkill(CONST.PROPERTIES.SHIELDING, 1);
+  }
+
+};
+
 module.exports = Player;

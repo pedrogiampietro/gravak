@@ -26,16 +26,11 @@ PacketHandler.prototype.handlePropertyChange = function (packet) {
     case CONST.PROPERTIES.MANA_MAX:
       return creature.state.maxMana = packet.value;
     case CONST.PROPERTIES.CAPACITY:
-      console.log("=== CLIENT: Received CAPACITY update ===");
-      console.log("Creature:", creature.constructor.name);
-      console.log("New value:", packet.value);
       if (creature === gameClient.player) {
         creature.state.capacity = packet.value;
       }
       return;
     case 30: // LEVEL
-      console.log("=== CLIENT: Received LEVEL update ===");
-      console.log("New level:", packet.value);
       if (creature === gameClient.player) {
         // Store the level for experience percentage calculation
         if (!creature.skills) creature.skills = {};
@@ -49,8 +44,6 @@ PacketHandler.prototype.handlePropertyChange = function (packet) {
       }
       return;
     case CONST.PROPERTIES.EXPERIENCE:
-      console.log("=== CLIENT: Received EXPERIENCE update ===");
-      console.log("New experience:", packet.value);
       if (creature === gameClient.player) {
         // Calculate experience percentage to next level
         let currentExp = packet.value;
@@ -67,14 +60,120 @@ PacketHandler.prototype.handlePropertyChange = function (packet) {
         let expProgress = currentExp - currentLevelExp;
         let percentage = expDiff > 0 ? (expProgress / expDiff) * 100 : 0;
 
-        console.log(`Level ${currentLevel}: ${currentLevelExp} exp, Next: ${nextLevelExp} exp, Progress: ${percentage.toFixed(1)}%`);
-
         // Update the experience in skills display with calculated percentage
         gameClient.interface.windowManager.getWindow("skill-window").setSkillValue("experience", currentExp, percentage);
       }
       return;
+    // Combat skills - real-time updates
+    case CONST.PROPERTIES.MAGIC:
+    case CONST.PROPERTIES.FIST:
+    case CONST.PROPERTIES.CLUB:
+    case CONST.PROPERTIES.SWORD:
+    case CONST.PROPERTIES.AXE:
+    case CONST.PROPERTIES.DISTANCE:
+    case CONST.PROPERTIES.SHIELDING:
+    case CONST.PROPERTIES.FISHING:
+      if (creature === gameClient.player) {
+        this.__handleSkillUpdate(packet.property, packet.value);
+      }
+      return;
   }
 
+}
+
+PacketHandler.prototype.__handleSkillUpdate = function (skillType, skillPoints) {
+  /*
+   * Function PacketHandler.__handleSkillUpdate
+   * Handles real-time skill point updates and calculates level/percentage
+   */
+
+  // Get skill name for the window
+  let skillName = this.__getSkillNameFromType(skillType);
+  if (skillName === null) return;
+
+  // Get vocation for calculation (default to NONE if not available)
+  let vocation = gameClient.player.vocation || 0;
+
+  // Calculate skill level and percentage from points
+  let { level, percentage } = this.__calculateSkillLevelAndPercentage(skillType, skillPoints, vocation);
+
+  // Update the skill window
+  gameClient.interface.windowManager.getWindow("skill-window").setSkillValue(skillName, level, percentage);
+}
+
+PacketHandler.prototype.__getSkillNameFromType = function (type) {
+  /*
+   * Returns the skill name used in the skill-window for a given skill type
+   */
+  switch (type) {
+    case CONST.PROPERTIES.MAGIC: return "magic";
+    case CONST.PROPERTIES.FIST: return "fist";
+    case CONST.PROPERTIES.CLUB: return "club";
+    case CONST.PROPERTIES.SWORD: return "sword";
+    case CONST.PROPERTIES.AXE: return "axe";
+    case CONST.PROPERTIES.DISTANCE: return "distance";
+    case CONST.PROPERTIES.SHIELDING: return "shielding";
+    case CONST.PROPERTIES.FISHING: return "fishing";
+    default: return null;
+  }
+}
+
+PacketHandler.prototype.__calculateSkillLevelAndPercentage = function (skillType, points, vocation) {
+  /*
+   * Calculates skill level and percentage from skill points
+   * Uses the Tibia formula: A * ((B^(level - offset) - 1) / (B - 1))
+   */
+
+  // Skill constants based on type
+  let A, B, skillOffset;
+
+  // Get A (skill constant)
+  switch (skillType) {
+    case CONST.PROPERTIES.MAGIC: A = 1600; break;
+    case CONST.PROPERTIES.FIST:
+    case CONST.PROPERTIES.CLUB:
+    case CONST.PROPERTIES.SWORD:
+    case CONST.PROPERTIES.AXE: A = 50; break;
+    case CONST.PROPERTIES.DISTANCE: A = 25; break;
+    case CONST.PROPERTIES.SHIELDING: A = 100; break;
+    case CONST.PROPERTIES.FISHING: A = 20; break;
+    default: A = 50;
+  }
+
+  // Get B (vocation constant) - simplified for NONE vocation
+  switch (skillType) {
+    case CONST.PROPERTIES.MAGIC: B = 3.0; break;
+    case CONST.PROPERTIES.CLUB:
+    case CONST.PROPERTIES.SWORD:
+    case CONST.PROPERTIES.AXE:
+    case CONST.PROPERTIES.DISTANCE: B = 2.0; break;
+    case CONST.PROPERTIES.FIST:
+    case CONST.PROPERTIES.SHIELDING: B = 1.5; break;
+    case CONST.PROPERTIES.FISHING: B = 1.1; break;
+    default: B = 2.0;
+  }
+
+  // Skill offset (magic starts at 0, others at 10)
+  skillOffset = skillType === CONST.PROPERTIES.MAGIC ? 0 : 10;
+
+  // Calculate level from points: level = offset + log(points * (B-1) / A + 1) / log(B)
+  let level = Math.floor(skillOffset + (Math.log(points * ((B - 1) / A) + 1) / Math.log(B)));
+
+  // Calculate points required for current level and next level
+  let getPointsForLevel = function (lvl) {
+    return A * ((Math.pow(B, lvl - skillOffset) - 1) / (B - 1));
+  };
+
+  let currentLevelPoints = getPointsForLevel(level);
+  let nextLevelPoints = getPointsForLevel(level + 1);
+  let pointsDiff = nextLevelPoints - currentLevelPoints;
+  let pointsProgress = points - currentLevelPoints;
+  let percentage = pointsDiff > 0 ? (pointsProgress / pointsDiff) * 100 : 0;
+
+  // Clamp percentage
+  percentage = Math.max(0, Math.min(percentage, 100));
+
+  return { level, percentage };
 }
 
 PacketHandler.prototype.handleWorldTime = function (time) {

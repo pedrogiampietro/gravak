@@ -1,0 +1,75 @@
+{
+    "creatureStatistics": {
+        "name": "Training Dummy",
+        "health": 99000,
+        "maxHealth": 99000,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 100,
+        "attack": 1,
+        "attackSpeed": 2000,
+        "defense": 0,
+        "outfit": {
+            "id": 57
+        },
+        "armor": 0
+    },
+    "experience": 0,
+    "corpse": 3128,
+    "fluidType": 0,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": false,
+        "senseInvisible": true
+    },
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 10000,
+            "chance": 1,
+            "min": 24000,
+            "max": 24000,
+            "areaEffect": "blueshimmer"
+        }
+    ],
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 1
+        }
+    ],
+    "elements": {
+        "holy": 0,
+        "death": 0,
+        "physical": 0,
+        "energy": 0,
+        "earth": 0,
+        "fire": 0,
+        "ice": 0
+    },
+    "immunities": {
+        "invisible": true,
+        "poison": true,
+        "bleeding": true,
+        "fire": true,
+        "energy": true,
+        "paralyze": true,
+        "drown": true,
+        "drunk": true
+    },
+    "loot": [],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": false,
+        "illusionable": false,
+        "targetDistance": true
+    }
+}

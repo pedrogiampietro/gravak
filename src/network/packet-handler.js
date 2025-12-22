@@ -85,15 +85,8 @@ PacketHandler.prototype.moveItem = function (player, packet) {
 
   let { fromWhere, fromIndex, toWhere, toIndex, count } = packet;
 
-  console.log("fromWhere:", fromWhere ? fromWhere.constructor.name : null);
-  console.log("fromIndex:", fromIndex);
-  console.log("toWhere:", toWhere ? toWhere.constructor.name : null);
-  console.log("toIndex:", toIndex);
-  console.log("count:", count);
-
   // Invalid source or target location
   if (fromWhere === null || toWhere === null) {
-    console.log("MOVEMENT REJECTED: fromWhere or toWhere is null");
     return;
   }
 

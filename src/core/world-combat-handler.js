@@ -30,6 +30,15 @@ CombatHandler.prototype.handleCombat = function (source) {
   // Get the unmitigated damage clamped
   let unmitigatedDamage = (damage - defense).clamp(0, target.getProperty(CONST.PROPERTIES.HEALTH));
 
+  // Handle skill advances
+  if (source.isPlayer()) {
+    source.checkSkillAdvance(unmitigatedDamage > 0);
+  }
+
+  if (target.isPlayer()) {
+    target.checkDefensiveSkillAdvance();
+  }
+
   // If the attacker has a distance weapon equipped
   if (source.isDistanceWeaponEquipped()) {
 

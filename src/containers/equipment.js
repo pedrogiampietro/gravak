@@ -101,8 +101,28 @@ Equipment.prototype.removeIndex = function (index, count) {
    * Implements the removeIndex API that handles removal of an item by the index and amount
    */
 
-  // Handle removal by index and count
-  let thing = this.container.removeIndex(index, count);
+  let thing = this.peekIndex(index);
+
+  if (thing === null) {
+    return null;
+  }
+
+  // If stackable and removing partial amount, BaseContainer logic is safe (it replaces in place)
+  if (thing.isStackable() && count < thing.count) {
+    return this.container.removeIndex(index, count);
+  }
+
+  // CRITICAL FIX: BaseContainer.removeIndex shifts items (like a backpack), which corrupts equipment slots.
+  // We must manually remove the item from the fixed slot without shifting.
+
+  // 1. Clear the slot
+  this.container.__slots[index] = null;
+
+  // 2. Notify spectators
+  const { ContainerRemovePacket } = requireModule("network/protocol");
+  this.container.__informSpectators(new ContainerRemovePacket(this.container.guid, index, 0));
+
+  // 3. Update player state (Weight, Parent, Conditions)
   this.__updateWeight(-thing.getWeight());
   thing.setParent(null);
 
@@ -172,7 +192,40 @@ Equipment.prototype.peekIndex = function (index) {
 };
 
 Equipment.prototype.getWeaponType = function () {
-  return CONST.PROPERTIES.CLUB;
+
+  /*
+   * Function Equipment.getWeaponType
+   * Returns the weapon type that is currently equipped
+   */
+
+  // Check both hands for a weapon
+  let slots = [CONST.EQUIPMENT.LEFT, CONST.EQUIPMENT.RIGHT];
+
+  for (let i = 0; i < slots.length; i++) {
+
+    let item = this.peekIndex(slots[i]);
+
+    if (item === null) {
+      continue;
+    }
+
+    // Map weapon type to property
+    switch (item.getPrototype().properties.weaponType) {
+      case "sword":
+        return CONST.PROPERTIES.SWORD;
+      case "club":
+        return CONST.PROPERTIES.CLUB;
+      case "axe":
+        return CONST.PROPERTIES.AXE;
+      case "distance":
+        return CONST.PROPERTIES.DISTANCE;
+    }
+
+  }
+
+  // Default fallback to fist fighting
+  return CONST.PROPERTIES.FIST;
+
 };
 
 Equipment.prototype.addThing = function (thing, index) {
@@ -289,6 +342,24 @@ Equipment.prototype.isDistanceWeaponEquipped = function () {
 
   // Check whether is thing is a distance weapon
   return thing.isDistanceWeapon();
+};
+
+Equipment.prototype.isShieldEquipped = function () {
+  /*
+   * Public Function Equipment.isShieldEquipped
+   * Returns true if shield equipped
+   */
+
+  let slots = [CONST.EQUIPMENT.LEFT, CONST.EQUIPMENT.RIGHT];
+
+  for (let i = 0; i < slots.length; i++) {
+    let item = this.peekIndex(slots[i]);
+    if (item && item.getPrototype().properties.weaponType === "shield") {
+      return true;
+    }
+  }
+
+  return false;
 };
 
 Equipment.prototype.hasSufficientResources = function (resource, amount) {
@@ -452,6 +523,9 @@ Equipment.prototype.__isRightType = function (item, slot) {
    * Returns true if the item matches the slot type
    */
 
+  // Ensure slot is a number
+  slot = Number(slot);
+
   // Get the prototype
   let proto = item.getPrototype();
 
@@ -464,21 +538,23 @@ Equipment.prototype.__isRightType = function (item, slot) {
       return proto.properties.slotType === "legs";
     case CONST.EQUIPMENT.BOOTS:
       return proto.properties.slotType === "feet";
-    case CONST.EQUIPMENT.HAND_RIGHT:
-      return proto.properties.weaponType === "shield";
-    case CONST.EQUIPMENT.HAND_LEFT:
+    case CONST.EQUIPMENT.RIGHT:
+    case CONST.EQUIPMENT.LEFT:
       return (
         proto.properties.weaponType === "sword" ||
-        proto.properties.weaponType === "distance"
+        proto.properties.weaponType === "club" ||
+        proto.properties.weaponType === "axe" ||
+        proto.properties.weaponType === "distance" ||
+        proto.properties.weaponType === "shield"
       );
     case CONST.EQUIPMENT.BACKPACK:
-      return proto.properties.slotType === "backpack";
+      return proto.properties.containerSize !== undefined;
     case CONST.EQUIPMENT.NECKLACE:
       return proto.properties.slotType === "necklace";
     case CONST.EQUIPMENT.RING:
       return proto.properties.slotType === "ring";
     case CONST.EQUIPMENT.QUIVER:
-      return proto.properties.weaponType === "ammunition";
+      return proto.properties.weaponType === "quiver";
     default:
       return false;
   }
