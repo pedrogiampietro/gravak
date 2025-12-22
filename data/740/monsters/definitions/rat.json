@@ -55,7 +55,8 @@
     },
     {
       "id": 2696,
-      "probability": 0.3941
+      "probability": 0.3941,
+      "name": "cheese"
     }
   ],
   "flags": {

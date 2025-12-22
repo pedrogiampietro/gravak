@@ -3,7 +3,7 @@
 const ThingEmitter = require("../entities/thing-emitter");
 const { OTBBitFlag } = require("../utils/bitflag");
 
-const Thing = function(id) {
+const Thing = function (id) {
 
   /*
    * Class Thing
@@ -26,7 +26,7 @@ const Thing = function(id) {
 Thing.prototype = Object.create(ThingEmitter.prototype);
 Thing.prototype.constructor = Thing;
 
-Thing.prototype.unfreeze = function() {
+Thing.prototype.unfreeze = function () {
 
   /*
    * Function Thing.unfreeze
@@ -37,7 +37,7 @@ Thing.prototype.unfreeze = function() {
 
 }
 
-Thing.prototype.freeze = function() {
+Thing.prototype.freeze = function () {
 
   /*
    * Function Thing.freeze
@@ -48,7 +48,7 @@ Thing.prototype.freeze = function() {
 
 }
 
-Thing.prototype.hasUniqueId = function() {
+Thing.prototype.hasUniqueId = function () {
 
   /*
    * Function Thing.hasUniqueId
@@ -59,7 +59,7 @@ Thing.prototype.hasUniqueId = function() {
 
 }
 
-Thing.prototype.isRightAmmunition = function(ammunition) {
+Thing.prototype.isRightAmmunition = function (ammunition) {
 
   /*
    * Function Thing.isRightAmmunition
@@ -70,7 +70,7 @@ Thing.prototype.isRightAmmunition = function(ammunition) {
 
 }
 
-Thing.prototype.getWeight = function() {
+Thing.prototype.getWeight = function () {
 
   /*
    * Function Thing.getWeight
@@ -78,12 +78,12 @@ Thing.prototype.getWeight = function() {
    */
 
   // Weight 0 means it cannot be picked up
-  if(!this.isPickupable()) {
+  if (!this.isPickupable()) {
     return 0;
   }
 
   // Multiple the count by the individual weight
-  if(this.isStackable()) {
+  if (this.isStackable()) {
     return this.weight * this.count;
   }
 
@@ -91,7 +91,7 @@ Thing.prototype.getWeight = function() {
 
 }
 
-Thing.prototype.scheduleDecay = function() {
+Thing.prototype.scheduleDecay = function () {
 
   /*
    * Function Thing.scheduleDecay
@@ -99,12 +99,12 @@ Thing.prototype.scheduleDecay = function() {
    */
 
   // Defensive
-  if(!this.isDecaying()) {
+  if (!this.isDecaying()) {
     return;
   }
 
   // If there is no duration: set the default decay duration
-  if(!this.duration) {
+  if (!this.duration) {
     this.setDuration(this.__getDecayProperties().duration);
   }
 
@@ -113,7 +113,7 @@ Thing.prototype.scheduleDecay = function() {
 
 }
 
-Thing.prototype.setActionId = function(actionId) {
+Thing.prototype.setActionId = function (actionId) {
 
   /*
    * Function Thing.setActionId
@@ -124,7 +124,7 @@ Thing.prototype.setActionId = function(actionId) {
 
 }
 
-Thing.prototype.setUniqueId = function(uid) {
+Thing.prototype.setUniqueId = function (uid) {
 
   /*
    * Function Thing.setUniqueId
@@ -137,7 +137,7 @@ Thing.prototype.setUniqueId = function(uid) {
   // No unique events assigned to this identifier
   let uniqueActions = gameServer.database.actionLoader.getUniqueActions(uid);
 
-  if(uniqueActions === null) {
+  if (uniqueActions === null) {
     return;
   }
 
@@ -146,7 +146,7 @@ Thing.prototype.setUniqueId = function(uid) {
 
 }
 
-Thing.prototype.setDuration = function(duration) {
+Thing.prototype.setDuration = function (duration) {
 
   /*
    * Function Thing.setDuration
@@ -157,7 +157,7 @@ Thing.prototype.setDuration = function(duration) {
 
 }
 
-Thing.prototype.setCount = function(count) {
+Thing.prototype.setCount = function (count) {
 
   /*
    * Function Thing.setCount
@@ -170,7 +170,7 @@ Thing.prototype.setCount = function(count) {
 
 }
 
-Thing.prototype.setParent = function(parent) {
+Thing.prototype.setParent = function (parent) {
 
   /*
    * Function Container.setParent
@@ -182,7 +182,7 @@ Thing.prototype.setParent = function(parent) {
 
 }
 
-Thing.prototype.setContent = function(content) {
+Thing.prototype.setContent = function (content) {
 
   /*
    * Function Thing.setContent
@@ -193,7 +193,7 @@ Thing.prototype.setContent = function(content) {
 
 }
 
-Thing.prototype.getShootType = function() {
+Thing.prototype.getShootType = function () {
 
   /*
    * Function Thing.getShootType
@@ -201,7 +201,7 @@ Thing.prototype.getShootType = function() {
    */
 
   // Map the shootType property to the correct projectile type
-  switch(this.getAttribute("shootType")) {
+  switch (this.getAttribute("shootType")) {
     case "spear": return CONST.EFFECT.PROJECTILE.SPEAR;
     case "bolt": return CONST.EFFECT.PROJECTILE.BOLT;
     case "arrow": return CONST.EFFECT.PROJECTILE.ARROW;
@@ -222,18 +222,20 @@ Thing.prototype.getShootType = function() {
 
 }
 
-Thing.prototype.getArticle = function() {
+Thing.prototype.getArticle = function () {
 
   /*
    * Function Thing.getArticle
    * Returns the thing article from the items.xml
+   * Falls back to 'a' if no article is defined
    */
 
-  return this.getAttribute("article");
+  let article = this.getAttribute("article");
+  return article !== null ? article : "a";
 
 }
 
-Thing.prototype.getPosition = function() {
+Thing.prototype.getPosition = function () {
 
   /*
    * Function Thing.getPosition
@@ -244,7 +246,7 @@ Thing.prototype.getPosition = function() {
 
 }
 
-Thing.prototype.getTopParent = function() {
+Thing.prototype.getTopParent = function () {
 
   /*
    * Function Container.getTopParent
@@ -254,10 +256,10 @@ Thing.prototype.getTopParent = function() {
   let current = this;
 
   // Confirm we are not placing a container in to itself
-  while(true) {
+  while (true) {
 
     // Stop when we reached the top level container
-    if(this.__isTopParent(current)) {
+    if (this.__isTopParent(current)) {
       return current;
     }
 
@@ -268,7 +270,7 @@ Thing.prototype.getTopParent = function() {
 
 }
 
-Thing.prototype.getAttribute = function(attribute) {
+Thing.prototype.getAttribute = function (attribute) {
 
   /*
    * Function Thing.getAttribute
@@ -277,12 +279,12 @@ Thing.prototype.getAttribute = function(attribute) {
 
   let properties = this.getPrototype().properties;
 
-  if(properties === null) {
+  if (properties === null) {
     return null;
   }
 
   // Does not exist
-  if(!properties.hasOwnProperty(attribute)) {
+  if (!properties.hasOwnProperty(attribute)) {
     return null;
   }
 
@@ -290,7 +292,7 @@ Thing.prototype.getAttribute = function(attribute) {
 
 }
 
-Thing.prototype.getPrototype = function() {
+Thing.prototype.getPrototype = function () {
 
   /*
    * Function Thing.getPrototype
@@ -301,14 +303,14 @@ Thing.prototype.getPrototype = function() {
 
 }
 
-Thing.prototype.getTrashEffect = function() {
+Thing.prototype.getTrashEffect = function () {
 
   /*
    * Function Thing.getTrashEffect
    * Returns the trash effect after trashing an item
    */
 
-  switch(this.getAttribute("effect")) {
+  switch (this.getAttribute("effect")) {
     case "fire": return CONST.EFFECT.MAGIC.HITBYFIRE;
     case "bluebubble": return CONST.EFFECT.MAGIC.LOSEENERGY;
     default: return CONST.EFFECT.MAGIC.POFF;
@@ -316,21 +318,23 @@ Thing.prototype.getTrashEffect = function() {
 
 }
 
-Thing.prototype.isMagicDoor = function() {
+Thing.prototype.isMagicDoor = function () {
 
   return this.isDoor() && (this.getAttribute("expertise") || this.getAttribute("unwanted"));
 
 }
 
-Thing.prototype.getName = function(player) {
+Thing.prototype.getName = function (player) {
 
   /*
    * Function Thing.getName
    * Returns the thing description from the items.xml
    */
 
+
+
   // Return the name and the key number
-  if(this.constructor.name === "Key" && this.hasOwnProperty("actionId")) {
+  if (this.constructor.name === "Key" && this.hasOwnProperty("actionId")) {
     return "%s (#%s)".format(this.getAttribute("name"), this.actionId);
   }
 
@@ -339,7 +343,7 @@ Thing.prototype.getName = function(player) {
 
 }
 
-Thing.prototype.getRemainingDuration = function() {
+Thing.prototype.getRemainingDuration = function () {
 
   /*
    * Function Thing.getRemainingDuration
@@ -347,7 +351,7 @@ Thing.prototype.getRemainingDuration = function() {
    */
 
   // Not decaying: just copy over
-  if(!this.isDecaying()) {
+  if (!this.isDecaying()) {
     return this.duration;
   }
 
@@ -356,7 +360,7 @@ Thing.prototype.getRemainingDuration = function() {
 
 }
 
-Thing.prototype.getDescription = function() {
+Thing.prototype.getDescription = function () {
 
   /*
    * Function Thing.getDescription
@@ -364,9 +368,9 @@ Thing.prototype.getDescription = function() {
    */
 
   // Has a duration
-  if(this.getAttribute("showduration")) {
+  if (this.getAttribute("showduration")) {
 
-    if(!this.duration) {
+    if (!this.duration) {
       return "It is brand-new.";
     } else {
       return this.getDurationString();
@@ -375,10 +379,10 @@ Thing.prototype.getDescription = function() {
   }
 
   // Special handling for expertise doors
-  if(this.isDoor()) {
-    if(this.isHouseDoor()) {
+  if (this.isDoor()) {
+    if (this.isHouseDoor()) {
       return "It belongs to %s and is owned by %s.".format(this.getHouseName(), this.getHouseOwner());
-    } else if(this.getAttribute("expertise")) {
+    } else if (this.getAttribute("expertise")) {
       return "Only adventurers of level %s may pass.".format(this.actionId - 100);
     }
   }
@@ -387,7 +391,7 @@ Thing.prototype.getDescription = function() {
 
 }
 
-Thing.prototype.getDurationString = function() {
+Thing.prototype.getDurationString = function () {
 
   /*
    * Function Thing.getDurationString
@@ -399,14 +403,14 @@ Thing.prototype.getDurationString = function() {
   let minutes = Math.ceil(remainingSeconds / 60);
 
   // Seconds or minutes
-  if(remainingSeconds > 60) {
-    if(this.isDecaying()) {
+  if (remainingSeconds > 60) {
+    if (this.isDecaying()) {
       return "It will decay in %s minutes and %s seconds.".format(minutes, (remainingSeconds % 60));
     } else {
       return "It has %s minutes and %s seconds remaining.".format(minutes, (remainingSeconds % 60));
     }
   } else {
-    if(this.isDecaying()) {
+    if (this.isDecaying()) {
       return "It will decay in %s seconds.".format(remainingSeconds);
     } else {
       return "It has %s seconds remaining.".format(remainingSeconds);
@@ -415,7 +419,7 @@ Thing.prototype.getDurationString = function() {
 
 }
 
-Thing.prototype.getCount = function() {
+Thing.prototype.getCount = function () {
 
   /*
    * Function Thing.getCount
@@ -423,7 +427,7 @@ Thing.prototype.getCount = function() {
    */
 
   // These items have a count: either stackable or it identifies something else (e.g., the fluid type)
-  if(this.isFluidContainer() || this.isStackable() || this.isSplash()) {
+  if (this.isFluidContainer() || this.isStackable() || this.isSplash()) {
     return this.count;
   }
 
@@ -431,7 +435,7 @@ Thing.prototype.getCount = function() {
 
 }
 
-Thing.prototype.hasActionId = function() {
+Thing.prototype.hasActionId = function () {
 
   /*
    * Function Thing.hasActionId
@@ -442,7 +446,7 @@ Thing.prototype.hasActionId = function() {
 
 }
 
-Thing.prototype.createFungibleThing = function(count) {
+Thing.prototype.createFungibleThing = function (count) {
 
   /*
    * Function Thing.createFungibleThing
@@ -453,7 +457,7 @@ Thing.prototype.createFungibleThing = function(count) {
 
 }
 
-Thing.prototype.delete = function() {
+Thing.prototype.delete = function () {
 
   // Remove the item
   this.remove();
@@ -463,7 +467,7 @@ Thing.prototype.delete = function() {
 
 }
 
-Thing.prototype.remove = function() {
+Thing.prototype.remove = function () {
 
   /*
    * Function Thing.remove
@@ -475,7 +479,7 @@ Thing.prototype.remove = function() {
 
 }
 
-Thing.prototype.copyProperties = function(thing) {
+Thing.prototype.copyProperties = function (thing) {
 
   /*
    * Function Thing.copyProperties
@@ -483,23 +487,23 @@ Thing.prototype.copyProperties = function(thing) {
    */
 
   // The thing does not have a duration yet: copy it over from the transformed item
-  if(!thing.duration) {
+  if (!thing.duration) {
     thing.setDuration(this.getRemainingDuration());
   }
 
-  if(this.uid) {
+  if (this.uid) {
     thing.setUniqueId(this.uid);
   }
 
   // Both are containers of the same size: carry over the items to the new container
   // This is required for e.g., corpses that decay but still contain items
-  if(this.isContainer() && thing.isContainer() && this.size === thing.size) {
+  if (this.isContainer() && thing.isContainer() && this.size === thing.size) {
     thing.container.copyContents(this.container);
   }
 
 }
 
-Thing.prototype.replace = function(thing) {
+Thing.prototype.replace = function (thing) {
 
   /*
    * Function Thing.replace
@@ -518,7 +522,7 @@ Thing.prototype.replace = function(thing) {
 
 }
 
-Thing.prototype.rotate = function() {
+Thing.prototype.rotate = function () {
 
   /*
    * Function Thing.rotate
@@ -526,7 +530,7 @@ Thing.prototype.rotate = function() {
    */
 
   // The thing cannot be rotated
-  if(!this.isRotateable()) {
+  if (!this.isRotateable()) {
     return;
   }
 
@@ -535,7 +539,7 @@ Thing.prototype.rotate = function() {
 
 }
 
-Thing.prototype.removeCount = function(count) {
+Thing.prototype.removeCount = function (count) {
 
   /*
    * Function Thing.removeCount
@@ -543,15 +547,15 @@ Thing.prototype.removeCount = function(count) {
    */
 
   // Not stackable: remove everything
-  if(!this.isStackable()) {
+  if (!this.isStackable()) {
     return this.remove();
   }
- 
+
   this.__parent.deleteThing(this, count);
 
 }
 
-Thing.prototype.isTrashholder = function() {
+Thing.prototype.isTrashholder = function () {
 
   /*
    * Function Thing.isTrashholder
@@ -562,7 +566,7 @@ Thing.prototype.isTrashholder = function() {
 
 }
 
-Thing.prototype.isDoor = function() {
+Thing.prototype.isDoor = function () {
 
   /*
    * Function Thing.isDoor
@@ -573,7 +577,7 @@ Thing.prototype.isDoor = function() {
 
 }
 
-Thing.prototype.isReadable = function() {
+Thing.prototype.isReadable = function () {
 
   /*
    * Function Thing.isReadable
@@ -584,7 +588,7 @@ Thing.prototype.isReadable = function() {
 
 }
 
-Thing.prototype.isDistanceWeapon = function() {
+Thing.prototype.isDistanceWeapon = function () {
 
   /*
    * Function Thing.isDistanceWeapon
@@ -595,7 +599,7 @@ Thing.prototype.isDistanceWeapon = function() {
 
 }
 
-Thing.prototype.isDepot = function() {
+Thing.prototype.isDepot = function () {
 
   /*
    * Function Thing.isDepot
@@ -606,7 +610,7 @@ Thing.prototype.isDepot = function() {
 
 }
 
-Thing.prototype.isContainer = function() {
+Thing.prototype.isContainer = function () {
 
   /*
    * Function Thing.isContainer
@@ -617,7 +621,7 @@ Thing.prototype.isContainer = function() {
 
 }
 
-Thing.prototype.isTeleporter = function() {
+Thing.prototype.isTeleporter = function () {
 
   /*
    * Function Thing.isTeleporter
@@ -628,14 +632,14 @@ Thing.prototype.isTeleporter = function() {
 
 }
 
-Thing.prototype.isMailbox = function() {
+Thing.prototype.isMailbox = function () {
 
   return this.getPrototype().isMailbox();
 
 }
 
 
-Thing.prototype.isPickupable = function() {
+Thing.prototype.isPickupable = function () {
 
   /*
    * Function Thing.isPickupable
@@ -646,19 +650,19 @@ Thing.prototype.isPickupable = function() {
 
 }
 
-Thing.prototype.getChangeOnUnequip = function() {
+Thing.prototype.getChangeOnUnequip = function () {
 
   return this.getAttribute("transformDeEquipTo");
 
 }
 
-Thing.prototype.getChangeOnEquip = function() {
+Thing.prototype.getChangeOnEquip = function () {
 
   return this.getAttribute("transformEquipTo");
 
 }
 
-Thing.prototype.isDecaying = function() {
+Thing.prototype.isDecaying = function () {
 
   /*
    * Function Thing.isDecaying
@@ -669,25 +673,25 @@ Thing.prototype.isDecaying = function() {
 
 }
 
-Thing.prototype.isHangable = function() {
+Thing.prototype.isHangable = function () {
 
   return this.hasFlag(OTBBitFlag.prototype.flags.FLAG_HANGABLE);
 
 }
 
-Thing.prototype.isHorizontal = function() {
+Thing.prototype.isHorizontal = function () {
 
   return this.isHangable() && this.hasFlag(OTBBitFlag.prototype.flags.FLAG_HORIZONTAL);
 
 }
 
-Thing.prototype.isVertical = function() {
+Thing.prototype.isVertical = function () {
 
   return this.isHangable() && this.hasFlag(OTBBitFlag.prototype.flags.FLAG_VERTICAL);
 
 }
 
-Thing.prototype.isBlockProjectile = function() {
+Thing.prototype.isBlockProjectile = function () {
 
   /*
    * Function Thing.isBlockProjectile
@@ -698,7 +702,7 @@ Thing.prototype.isBlockProjectile = function() {
 
 }
 
-Thing.prototype.isDistanceReadable = function() {
+Thing.prototype.isDistanceReadable = function () {
 
   /*
    * Function Thing.isDistanceReadable
@@ -709,7 +713,7 @@ Thing.prototype.isDistanceReadable = function() {
 
 }
 
-Thing.prototype.isBlockPathfind = function() {
+Thing.prototype.isBlockPathfind = function () {
 
   /*
    * Function Thing.isBlockPathfind
@@ -720,7 +724,7 @@ Thing.prototype.isBlockPathfind = function() {
 
 }
 
-Thing.prototype.isBlockSolid = function() {
+Thing.prototype.isBlockSolid = function () {
 
   /*
    * Function Thing.isBlockSolid
@@ -731,7 +735,7 @@ Thing.prototype.isBlockSolid = function() {
 
 }
 
-Thing.prototype.isStackable = function() {
+Thing.prototype.isStackable = function () {
 
   /*
    * Function Thing.isMoveable
@@ -742,7 +746,7 @@ Thing.prototype.isStackable = function() {
 
 }
 
-Thing.prototype.isMagicField = function() {
+Thing.prototype.isMagicField = function () {
 
   /*
    * Function Thing.isMagicField
@@ -753,7 +757,7 @@ Thing.prototype.isMagicField = function() {
 
 }
 
-Thing.prototype.isSplash = function() {
+Thing.prototype.isSplash = function () {
 
   /*
    * Function Thing.isSplash
@@ -765,7 +769,7 @@ Thing.prototype.isSplash = function() {
 }
 
 
-Thing.prototype.isFluidContainer = function() {
+Thing.prototype.isFluidContainer = function () {
 
   /*
    * Function Thing.isFluidContainer
@@ -776,7 +780,7 @@ Thing.prototype.isFluidContainer = function() {
 
 }
 
-Thing.prototype.isTrashholder = function() {
+Thing.prototype.isTrashholder = function () {
 
   /*
    * Function Thing.isTrashholder
@@ -787,7 +791,7 @@ Thing.prototype.isTrashholder = function() {
 
 }
 
-Thing.prototype.isRotateable = function() {
+Thing.prototype.isRotateable = function () {
 
   /*
    * Function Thing.isRotateable
@@ -798,7 +802,7 @@ Thing.prototype.isRotateable = function() {
 
 }
 
-Thing.prototype.hasFlag = function(flag) {
+Thing.prototype.hasFlag = function (flag) {
 
   /*
    * Function Thing.hasFlag
@@ -809,20 +813,20 @@ Thing.prototype.hasFlag = function(flag) {
 
 }
 
-Thing.prototype.cleanup = function() {
+Thing.prototype.cleanup = function () {
 
   /*
    * Function Thing.delete
    * Deletes a thing by cleaning up: other classes (e.g., containers may implement the "delete" method)
    */
 
-  if(this.__scheduledDecayEvent) {
+  if (this.__scheduledDecayEvent) {
     this.__scheduledDecayEvent.cancel();
   }
 
 }
 
-Thing.prototype.__scheduleDecay = function(duration) {
+Thing.prototype.__scheduleDecay = function (duration) {
 
   /*
    * Function Thing.__scheduleDecay
@@ -833,7 +837,7 @@ Thing.prototype.__scheduleDecay = function(duration) {
   let properties = this.__getDecayProperties();
 
   // Decay to zero means remove from game world
-  if(properties.decayTo === 0) {
+  if (properties.decayTo === 0) {
     return this.__scheduledDecayEvent = gameServer.world.eventQueue.addEventSeconds(
       this.remove.bind(this),
       duration
@@ -848,7 +852,7 @@ Thing.prototype.__scheduleDecay = function(duration) {
 
 }
 
-Thing.prototype.__decayCallback = function(id) {
+Thing.prototype.__decayCallback = function (id) {
 
   /*
    * Function Thing.__decayCallback
@@ -859,12 +863,12 @@ Thing.prototype.__decayCallback = function(id) {
   let thing = gameServer.database.createThing(id);
 
   // If this is a splash we should copy over the count which indicates the fluid type
-  if(this.isSplash()) {
+  if (this.isSplash()) {
     thing.setCount(this.count);
   }
 
   // Make sure to set the new decay duration (e.g., torch -> smaller torch -> smallest torch)
-  if(this.isDecaying()) {
+  if (this.isDecaying()) {
     thing.setDuration(this.__getDecayProperties().duration);
   }
 
@@ -873,7 +877,7 @@ Thing.prototype.__decayCallback = function(id) {
 
 }
 
-Thing.prototype.__isTopParent = function(thing) {
+Thing.prototype.__isTopParent = function (thing) {
 
   /*
    * Function Thing.__isTopParent
@@ -882,13 +886,13 @@ Thing.prototype.__isTopParent = function(thing) {
 
   // These are top levels
   return !thing ||
-         thing.constructor.name === "DepotContainer" ||
-         thing.constructor.name === "Tile" ||
-         thing.constructor.name === "Player";
+    thing.constructor.name === "DepotContainer" ||
+    thing.constructor.name === "Tile" ||
+    thing.constructor.name === "Player";
 
 }
 
-Thing.prototype.__getDecayProperties = function() {
+Thing.prototype.__getDecayProperties = function () {
 
   /*
    * Function Thing.__getDecayProperties
@@ -906,7 +910,7 @@ Thing.prototype.__getDecayProperties = function() {
 
 }
 
-Thing.prototype.getParent = function() {
+Thing.prototype.getParent = function () {
 
   /*
    * Function Thing.getParent
