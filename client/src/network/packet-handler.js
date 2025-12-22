@@ -531,15 +531,11 @@ PacketHandler.prototype.handleDeath = function () {
    * Handles the death packet
    */
 
-  console.log("=== DEATH PACKET RECEIVED ===");
-
   // Set the death state to block all input
   if (gameClient.player) {
     gameClient.player.isDead = true;
-    console.log("Player isDead set to true");
   }
 
-  console.log("Opening death modal...");
   gameClient.interface.modalManager.open("death-modal");
 
 }
