@@ -1,10 +1,17 @@
 .contextmenu {
-  position: absolute;
+  position: fixed;
   width: 80px;
   padding: 2px;
+  z-index: 99999;
 }
 
-.contextmenu > .menu-header {
+/* Override modal's display:none when contextmenu is shown via JS */
+.contextmenu.modal {
+  /* display is set by JS, z-index should be highest */
+  z-index: 99999;
+}
+
+.contextmenu>.menu-header {
   background-image: url("/png/bg2.png");
   cursor: auto;
   text-align: center;
@@ -18,4 +25,3 @@
   border-radius: 0px;
   margin: 0px;
 }
-

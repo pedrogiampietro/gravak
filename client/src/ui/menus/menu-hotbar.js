@@ -1,6 +1,6 @@
 "use strict";
 
-const HotbarMenu = function(id) {
+const HotbarMenu = function (id) {
 
   /*
    * Class HotbarMenu
@@ -17,7 +17,7 @@ const HotbarMenu = function(id) {
 HotbarMenu.prototype = Object.create(Menu.prototype);
 HotbarMenu.prototype.constructor = HotbarMenu;
 
-HotbarMenu.prototype.click = function(event) {
+HotbarMenu.prototype.click = function (event) {
 
   /*
    * Function HotbarMenu.click
@@ -27,9 +27,13 @@ HotbarMenu.prototype.click = function(event) {
   let index = Array.from(this.downEvent.target.parentNode.children).indexOf(this.downEvent.target);
 
   // Take action depending on the button
-  switch(event.target.getAttribute("action")) {
+  console.log("[DEBUG HOTBAR] Click event action:", event.target.getAttribute("action"));
+  console.log("[DEBUG HOTBAR] Index:", index);
+  switch (event.target.getAttribute("action")) {
     case "add":
-      gameClient.interface.modalManager.open("spellbook-modal", index);
+      console.log("[DEBUG HOTBAR] Opening spellbook-modal for index:", index);
+      let result = gameClient.interface.modalManager.open("spellbook-modal", index);
+      console.log("[DEBUG HOTBAR] Modal open result:", result);
       break;
     case "remove":
       gameClient.interface.hotbarManager.clearSlot(index);

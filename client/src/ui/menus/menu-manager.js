@@ -59,14 +59,15 @@ MenuManager.prototype.open = function (name, event) {
     return console.error("Cannot open menu %s because the menu has not been registered.".format(name));
   }
 
-  // Already opened
+  // If another menu is already opened, close it first
   if (this.isOpened()) {
-    return console.error("Cannot open menu %s because another menu is already opened.".format(name));
+    this.close();
   }
 
   // Set the currently active menu
   this.__activeMenu = menuElement.open(event);
 
+  return this.__activeMenu;
 }
 
 MenuManager.prototype.isOpened = function () {

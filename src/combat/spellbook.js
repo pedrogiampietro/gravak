@@ -17,8 +17,11 @@ const Spellbook = function (player, data) {
 
   this.__cooldowns = data.cooldowns;
 
-  // The set of available spell identifiers
-  this.__availableSpells = new Set(data.availableSpells);
+  // Initialize with ALL spells (0-19) available by default
+  this.__availableSpells = new Set();
+  for (let sid = 0; sid <= 19; sid++) {
+    this.__availableSpells.add(sid);
+  }
 
 }
 

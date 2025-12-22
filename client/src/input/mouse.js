@@ -334,7 +334,9 @@ Mouse.prototype.__handleContextMenu = function (event) {
 
   }
 
-  if (event.target.className === "hotbar-item") {
+  // Check if clicked on hotbar-item or any of its children
+  if (event.target.className === "hotbar-item" ||
+    (event.target.parentNode && event.target.parentNode.className === "hotbar-item")) {
     return gameClient.interface.menuManager.open("hotbar-menu", event);
   }
 

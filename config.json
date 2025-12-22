@@ -63,7 +63,7 @@
       "START": "08:00"
     },
     "SPAWNS": {
-      "ENABLED": true
+      "ENABLED": false
     },
     "NPCS": {
       "ENABLED": true

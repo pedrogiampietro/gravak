@@ -330,6 +330,11 @@ Interface.prototype.SPELLS.set(5, {
   description: "Surround yourself by light",
   icon: { x: 8, y: 9 },
 });
+Interface.prototype.SPELLS.set(6, {
+  name: "Life Drain",
+  description: "Drains life from target",
+  icon: { x: 1, y: 4 },
+});
 Interface.prototype.SPELLS.set(7, {
   name: "Hearthstone",
   description: "Teleport yourself to the temple.",
@@ -344,6 +349,56 @@ Interface.prototype.SPELLS.set(9, {
   name: "Levitate",
   description: "Move up or down a mountain",
   icon: { x: 4, y: 10 },
+});
+Interface.prototype.SPELLS.set(10, {
+  name: "Intense Healing",
+  description: "Heals more damage",
+  icon: { x: 2, y: 1 },
+});
+Interface.prototype.SPELLS.set(11, {
+  name: "Ultimate Healing",
+  description: "Heals all damage",
+  icon: { x: 2, y: 2 },
+});
+Interface.prototype.SPELLS.set(12, {
+  name: "Antidote",
+  description: "Cures poison",
+  icon: { x: 2, y: 7 },
+});
+Interface.prototype.SPELLS.set(13, {
+  name: "Energy Strike",
+  description: "Strike with energy",
+  icon: { x: 5, y: 3 },
+});
+Interface.prototype.SPELLS.set(14, {
+  name: "Flame Strike",
+  description: "Strike with fire",
+  icon: { x: 0, y: 3 },
+});
+Interface.prototype.SPELLS.set(15, {
+  name: "Fire Wave",
+  description: "Wave of fire",
+  icon: { x: 0, y: 5 },
+});
+Interface.prototype.SPELLS.set(16, {
+  name: "Energy Beam",
+  description: "Beam of energy",
+  icon: { x: 5, y: 5 },
+});
+Interface.prototype.SPELLS.set(17, {
+  name: "Strong Haste",
+  description: "Run even faster",
+  icon: { x: 4, y: 9 },
+});
+Interface.prototype.SPELLS.set(18, {
+  name: "Magic Shield",
+  description: "Protect yourself with mana",
+  icon: { x: 9, y: 8 },
+});
+Interface.prototype.SPELLS.set(19, {
+  name: "Great Light",
+  description: "Greatly illuminates the area",
+  icon: { x: 8, y: 8 },
 });
 
 Interface.prototype.getSpell = function (id) {

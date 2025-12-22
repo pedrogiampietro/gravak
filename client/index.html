@@ -724,6 +724,27 @@
               </div>
             </div>
 
+            <!-- Spellbook Modal -->
+            <div id="spellbook-modal" class="modal">
+              <button class="close-button-transparent symbol-button" action="cancel" value="Cancel">✕</button>
+              <div class="modal-header">Select Spell</div>
+              <div class="modal-body">
+                <div id="spellbook-list" style="max-height: 300px; overflow-y: auto;"></div>
+                <hr>
+                <!-- Buttons aligned to the right -->
+                <div class="modal-footer">
+                  <button action="cancel" value="Cancel">Cancel</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Spellbook Entry Prototype (hidden) -->
+            <div id="spellbook-wrapper-prototype" class="spellbook-entry"
+              style="display: none; align-items: center; padding: 5px; cursor: pointer; border-bottom: 1px solid #333;">
+              <canvas width="32" height="32" style="margin-right: 10px;"></canvas>
+              <div class="spell-info" style="flex: 1;"></div>
+            </div>
+
             <!-- Move Item Modal -->
             <div id="outfit-modal" class="modal">
               <button class="close-button-transparent symbol-button" action="cancel" value="Cancel">✕</button>
