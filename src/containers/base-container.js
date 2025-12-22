@@ -403,13 +403,44 @@ BaseContainer.prototype.__replaceFungibleItem = function (index, item, count) {
 
   /*
    * Function BaseContainer.__replaceFungibleItem
-   * Stackable items are fungible: meaning they can deleted and replaced by new items
+   * Stackable items are fungible: replace in-place without shifting
    */
 
-  // Remove the item and create a new one of the right size
-  this.deleteThing(item);
+  const { ContainerAddPacket } = requireModule("network/protocol");
 
-  this.addThing(item.createFungibleThing(count), index);
+  // Create the new item
+  let newItem = item.createFungibleThing(count);
+
+  // Set in slot directly
+  this.__setItem(newItem, index);
+
+  // Inform spectators: update this slot only.
+  this.__informSpectators(new ContainerAddPacket(this.guid, index, newItem));
+
+}
+
+BaseContainer.prototype.__insertThing = function (index, thing) {
+
+  /*
+   * Function BaseContainer.__insertThing
+   * Shifts items to make space and adds a thing at index
+   */
+
+  for (let i = this.__slots.length - 1; i > index; i--) {
+    this.__slots[i] = this.__slots[i - 1];
+  }
+
+  this.addThing(thing, index);
+
+  // Resend all shifted items to spectators to maintain sync
+  const { ContainerAddPacket, ContainerRemovePacket } = requireModule("network/protocol");
+  for (let i = index + 1; i < this.__slots.length; i++) {
+    if (this.__slots[i] !== null) {
+      this.__informSpectators(new ContainerAddPacket(this.guid, i, this.__slots[i]));
+    } else {
+      this.__informSpectators(new ContainerRemovePacket(this.guid, i, 0));
+    }
+  }
 
 }
 
