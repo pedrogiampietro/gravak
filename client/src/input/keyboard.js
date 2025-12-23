@@ -230,6 +230,68 @@ Keyboard.prototype.__handleCharacterMovementWrapper = function (
   gameClient.send(new MovementPacket(direction));
 };
 
+Keyboard.prototype.handleMoveKey = function (direction) {
+  /*
+   * Function Keyboard.handleMoveKey
+   * Handles movement by direction constant (used by touch controls)
+   */
+
+  // Block all input when player is dead
+  if (gameClient.player && gameClient.player.isDead) {
+    return;
+  }
+
+  // Must have confirmation from the server before moving
+  if (!gameClient.player.__serverWalkConfirmation) {
+    return;
+  }
+
+  // Block when the character is moving
+  if (gameClient.player.isMoving()) {
+    return;
+  }
+
+  // Get current position
+  let position = gameClient.player.getPosition();
+
+  // Determine next position based on direction
+  let nextPosition;
+  switch (direction) {
+    case CONST.DIRECTION.NORTH:
+      nextPosition = position.north();
+      break;
+    case CONST.DIRECTION.SOUTH:
+      nextPosition = position.south();
+      break;
+    case CONST.DIRECTION.EAST:
+      nextPosition = position.east();
+      break;
+    case CONST.DIRECTION.WEST:
+      nextPosition = position.west();
+      break;
+    case CONST.DIRECTION.NORTHEAST:
+      nextPosition = position.northeast();
+      break;
+    case CONST.DIRECTION.NORTHWEST:
+      nextPosition = position.northwest();
+      break;
+    case CONST.DIRECTION.SOUTHEAST:
+      nextPosition = position.southeast();
+      break;
+    case CONST.DIRECTION.SOUTHWEST:
+      nextPosition = position.southwest();
+      break;
+    default:
+      return;
+  }
+
+  // Cancel pathfinding
+  gameClient.world.pathfinder.setPathfindCache(null);
+
+  // Use the movement wrapper
+  this.__handleCharacterMovementWrapper(direction, nextPosition);
+};
+
 Keyboard.prototype.__handleReturnKey = function () {
   /*
    * Function Keyboard.__handleReturnKey

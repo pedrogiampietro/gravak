@@ -286,6 +286,9 @@ Player.prototype.setManaStatus = function () {
    */
 
   this.setBarStatus(document.getElementById("mana-bar"));
+
+  // Update mobile status bars
+  this.__updateMobileStatusBars();
 };
 
 Player.prototype.setHealthStatus = function () {
@@ -299,6 +302,25 @@ Player.prototype.setHealthStatus = function () {
 
   // Gamescreen
   this.characterElement.setDefault();
+
+  // Update mobile status bars
+  this.__updateMobileStatusBars();
+};
+
+Player.prototype.__updateMobileStatusBars = function () {
+  /*
+   * Function Player.__updateMobileStatusBars
+   * Updates mobile status bars via touch controller
+   */
+
+  if (gameClient.touch && gameClient.touch.isMobileMode) {
+    gameClient.touch.updateStatusBars(
+      this.state.health || 0,
+      this.state.maxHealth || 1,
+      this.state.mana || 0,
+      this.state.maxMana || 1
+    );
+  }
 };
 
 Player.prototype.setAmbientSound = function () {

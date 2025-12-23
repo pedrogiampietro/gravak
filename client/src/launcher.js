@@ -81,6 +81,7 @@
     "src/utils/message-character.js",
     "src/input/keyboard.js",
     "src/input/mouse.js",
+    "src/input/touch.js",
     "src/entities/slot.js",
     "src/entities/container.js",
     "src/entities/equipment.js",

@@ -807,6 +807,11 @@ Renderer.prototype.__renderOther = function () {
   // The hotbar
   gameClient.interface.hotbarManager.render();
 
+  // Sync mobile hotbar if in mobile mode
+  if (gameClient.touch && gameClient.touch.isMobileMode) {
+    gameClient.touch.syncMobileHotbar();
+  }
+
   // Update the statistics for the debugger
   this.debugger.renderStatistics();
 

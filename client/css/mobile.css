@@ -1,0 +1,692 @@
+/* Mobile Responsiveness CSS */
+/* Optimized for landscape mobile gaming */
+
+/* ======================================
+   CSS Variables
+   ====================================== */
+:root {
+    --mobile-action-btn-size: 48px;
+    --mobile-joystick-size: 90px;
+    --mobile-hotbar-height: 60px;
+    --mobile-header-height: 36px;
+    --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+    --safe-area-left: env(safe-area-inset-left, 0px);
+    --safe-area-right: env(safe-area-inset-right, 0px);
+}
+
+/* ======================================
+   Utility Classes
+   ====================================== */
+.desktop-only {
+    display: block;
+}
+
+.mobile-only {
+    display: none !important;
+}
+
+/* ======================================
+   Touch Device Detection
+   Use max-height for landscape detection
+   ====================================== */
+
+/* Landscape mobile: height <= 500px catches most phones in landscape */
+@media screen and (max-height: 500px),
+screen and (max-width: 768px) {
+
+    .desktop-only {
+        display: none !important;
+    }
+
+    .mobile-only {
+        display: flex !important;
+    }
+
+    /* Body - prevent scrolling and bouncing */
+    body {
+        overflow: hidden;
+        touch-action: none;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Game wrapper fills entire screen */
+    #game-wrapper {
+        display: flex !important;
+        flex-direction: row !important;
+        min-width: unset !important;
+        min-height: unset !important;
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh;
+        overflow: hidden;
+    }
+
+    /* Allow oogwrap to be visible for equipment but hide layout impact */
+    #game-wrapper .oogwrap {
+        display: block !important;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        overflow: visible;
+        pointer-events: none;
+        z-index: 9990;
+    }
+
+    /* Hide specific desktop elements inside oogwrap */
+    .oogwrap .minimap-container,
+    .oogwrap .character-status {
+        display: none !important;
+    }
+
+    /* Ensure equipment wrapper is visible */
+    .equipment-options-wrapper {
+        display: block !important;
+        pointer-events: auto;
+    }
+
+    /* Main game area - full width/height */
+    #game-wrapper .main {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* Hide middle section (desktop hotbar area) */
+    #game-wrapper .main .middle {
+        display: none !important;
+    }
+
+    /* Canvas takes full space */
+    #game-wrapper .main .upper {
+        flex: 1 1 auto;
+        min-height: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .canvas-wrapper {
+        width: 100% !important;
+        height: 100% !important;
+        position: relative;
+    }
+
+    #screen {
+        width: 100% !important;
+        height: 100% !important;
+        display: block;
+    }
+
+    /* Hide chat/lower section in landscape to maximize game view */
+    #game-wrapper .main .lower {
+        display: none !important;
+    }
+
+    /* Hide original hotbar */
+    .hotbar {
+        display: none !important;
+    }
+
+    /* Context menus - hide on mobile */
+    .contextmenu {
+        display: none !important;
+    }
+
+    /* Windows positioned on right side for mobile */
+    .window {
+        position: fixed !important;
+        top: 170px !important;
+        left: auto !important;
+        right: 5px !important;
+        transform: scale(0.85);
+        /* Slightly smaller to fit better */
+        transform-origin: top right;
+        width: 190px !important;
+        /* Visual width matches equipment */
+        max-width: 60vw;
+        max-height: 60vh;
+        z-index: 9995;
+        overflow: visible;
+        font-size: 11px;
+    }
+
+    .window .header {
+        height: 20px !important;
+        line-height: 20px !important;
+        font-size: 10px !important;
+    }
+
+    .window .body {
+        max-height: 40vh !important;
+        overflow-y: auto !important;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 2px !important;
+    }
+
+    .window .slot {
+        width: 32px !important;
+        height: 32px !important;
+        margin: 1px !important;
+        border: 1px solid #444;
+        /* Add border to see slots better */
+    }
+
+    /* Larger touch targets */
+    .slot {
+        width: 36px !important;
+        height: 36px !important;
+    }
+
+    .slot canvas {
+        width: 36px !important;
+        height: 36px !important;
+    }
+
+    /* Equipment panel - show in top right on mobile */
+    .equipment.wrapper {
+        position: fixed !important;
+        top: 50px !important;
+        right: 5px !important;
+        left: auto !important;
+        z-index: 9998;
+        background: rgba(30, 30, 30, 0.95);
+        border: 1px solid #555;
+        border-radius: 6px;
+        padding: 4px;
+        transform: scale(0.75);
+        transform-origin: top right;
+    }
+
+    .equipment-options-wrapper {
+        display: block !important;
+    }
+
+    .equipment-column {
+        gap: 2px !important;
+    }
+
+    .equipment.wrapper .slot {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .equipment.wrapper .slot canvas {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    #player-capacity {
+        font-size: 10px !important;
+        padding: 2px !important;
+    }
+
+    .equipment-buttons {
+        display: none !important;
+    }
+}
+
+/* ======================================
+   Mobile Status Bar (Top)
+   ====================================== */
+#mobile-status-bar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: var(--safe-area-left);
+    right: var(--safe-area-right);
+    height: var(--mobile-header-height);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.6));
+    border-bottom: 1px solid #444;
+    z-index: 10001;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 12px;
+    box-sizing: border-box;
+    gap: 12px;
+}
+
+@media screen and (max-height: 500px),
+screen and (max-width: 768px) {
+    #mobile-status-bar {
+        display: flex;
+    }
+}
+
+.mobile-bar-container {
+    flex: 1 1 auto;
+    max-width: 400px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+
+.mobile-bar {
+    flex: 1;
+    height: 18px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.mobile-bar-fill {
+    height: 100%;
+    transition: width 0.2s ease;
+}
+
+.mobile-bar-fill.health {
+    background: linear-gradient(to bottom, #22cc22, #118811);
+}
+
+.mobile-bar-fill.mana {
+    background: linear-gradient(to bottom, #3388ff, #2255aa);
+}
+
+.mobile-bar-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 11px;
+    line-height: 18px;
+    color: white;
+    text-shadow: 1px 1px 2px black, -1px -1px 2px black;
+    font-weight: bold;
+}
+
+#mobile-menu-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    font-size: 16px;
+    flex-shrink: 0;
+    min-height: 32px;
+    padding: 0;
+}
+
+/* ======================================
+   Mobile Action Bar (Bottom Overlay)
+   Overlay style - doesn't take space from game
+   ====================================== */
+#mobile-action-bar {
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    left: 10px;
+    right: 10px;
+    height: var(--mobile-hotbar-height);
+    background: transparent;
+    z-index: 10001;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    padding-left: var(--safe-area-left);
+    padding-right: var(--safe-area-right);
+    padding-bottom: var(--safe-area-bottom);
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+#mobile-action-bar>* {
+    pointer-events: auto;
+}
+
+@media screen and (max-height: 500px),
+screen and (max-width: 768px) {
+    #mobile-action-bar {
+        display: flex;
+    }
+}
+
+/* ======================================
+   Virtual Joystick (Left Side)
+   ====================================== */
+#mobile-joystick-zone {
+    width: var(--mobile-joystick-size);
+    height: var(--mobile-joystick-size);
+    position: relative;
+    flex-shrink: 0;
+}
+
+#virtual-joystick {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(40, 40, 40, 0.85) 0%, rgba(20, 20, 20, 0.7) 100%);
+    border: 3px solid rgba(100, 100, 100, 0.6);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+#joystick-knob {
+    position: absolute;
+    width: 45%;
+    height: 45%;
+    top: 27.5%;
+    left: 27.5%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #888 0%, #444 50%, #333 100%);
+    border: 2px solid #999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.05s ease-out;
+}
+
+/* ======================================
+   Mobile Hotbar (Center) - Skill slots
+   ====================================== */
+#mobile-hotbar {
+    display: flex;
+    flex: 0 1 auto;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 10px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    border: 1px solid #444;
+    max-width: 250px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+#mobile-hotbar::-webkit-scrollbar {
+    display: none;
+}
+
+.mobile-hotbar-slot {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+    border: 2px solid #555;
+    border-radius: 6px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: manipulation;
+}
+
+.mobile-hotbar-slot:active {
+    transform: scale(0.95);
+    border-color: #888;
+}
+
+.mobile-hotbar-slot canvas {
+    width: 32px;
+    height: 32px;
+}
+
+.mobile-slot-key {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    font-size: 10px;
+    color: #999;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+
+/* ======================================
+   Action Buttons (Right Side)
+   ====================================== */
+#mobile-actions {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+    align-items: flex-end;
+}
+
+.mobile-action-btn {
+    width: var(--mobile-action-btn-size);
+    height: var(--mobile-action-btn-size);
+    min-width: var(--mobile-action-btn-size);
+    min-height: var(--mobile-action-btn-size);
+    border-radius: 50%;
+    border: 3px solid;
+    color: white;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    padding: 0;
+}
+
+.mobile-action-btn:active {
+    transform: scale(0.9);
+    filter: brightness(1.2);
+}
+
+.mobile-action-btn.attack {
+    background: linear-gradient(145deg, #cc2222, #881111);
+    border-color: #ff5555;
+}
+
+.mobile-action-btn.use {
+    background: linear-gradient(145deg, #22aa22, #116611);
+    border-color: #55ff55;
+}
+
+.mobile-action-btn.look {
+    background: linear-gradient(145deg, #2255cc, #113388);
+    border-color: #5588ff;
+}
+
+.mobile-action-btn.inventory {
+    background: linear-gradient(145deg, #aa8833, #775522);
+    border-color: #ddaa44;
+}
+
+.mobile-action-btn.equipment {
+    background: linear-gradient(145deg, #8844aa, #553377);
+    border-color: #aa66dd;
+}
+
+.mobile-action-btn.chat {
+    background: linear-gradient(145deg, #22aaaa, #117777);
+    border-color: #44dddd;
+}
+
+/* ======================================
+   Mobile Chat Overlay
+   ====================================== */
+@media screen and (max-height: 500px),
+screen and (max-width: 768px) {
+
+    /* Chat is hidden by default on mobile */
+    #game-wrapper .main .lower {
+        display: none !important;
+    }
+
+    /* When chat is active (toggled via JS) */
+    #game-wrapper .main .lower.mobile-chat-active {
+        display: flex !important;
+        position: fixed !important;
+        bottom: 70px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 90vw !important;
+        max-width: 500px !important;
+        height: 35vh !important;
+        background: rgba(20, 20, 20, 0.95) !important;
+        border: 2px solid #44dddd !important;
+        border-radius: 8px !important;
+        z-index: 10000 !important;
+        flex-direction: column !important;
+        overflow: hidden !important;
+    }
+
+    .mobile-chat-active .chatbox-wrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .mobile-chat-active .wrapper-header {
+        padding: 4px;
+        background: rgba(40, 40, 40, 0.9);
+    }
+
+    .mobile-chat-active #chat-text {
+        flex: 1;
+        overflow-y: auto;
+    }
+
+    .mobile-chat-active .chat-footer {
+        padding: 4px;
+        display: flex;
+        gap: 4px;
+    }
+
+    .mobile-chat-active #chat-input {
+        flex: 1;
+        font-size: 14px;
+        padding: 8px;
+        border-radius: 4px;
+    }
+}
+
+/* Menu button in action bar */
+#mobile-menu-btn.mobile-action-btn {
+    background: linear-gradient(145deg, #555, #333);
+    border-color: #888;
+    font-size: 18px;
+}
+
+/* ======================================
+   Landscape Specific Optimizations
+   ====================================== */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+
+    :root {
+        --mobile-action-btn-size: 44px;
+        --mobile-joystick-size: 80px;
+        --mobile-hotbar-height: 50px;
+        --mobile-header-height: 32px;
+    }
+
+    /* Compact status bar */
+    #mobile-status-bar {
+        height: 28px;
+    }
+
+    .mobile-bar {
+        height: 16px;
+    }
+
+    .mobile-bar-text {
+        font-size: 10px;
+        line-height: 16px;
+    }
+
+    #mobile-menu-btn {
+        width: 28px;
+        height: 28px;
+        min-height: 28px;
+        font-size: 14px;
+    }
+
+    /* Joystick positioning - higher for landscape */
+    #mobile-action-bar {
+        bottom: 12px;
+        left: 8px;
+        right: 8px;
+    }
+
+    /* Smaller touch targets in compact landscape */
+    .mobile-action-btn {
+        font-size: 16px;
+    }
+
+    #mobile-hotbar .slot {
+        width: 32px !important;
+        height: 32px !important;
+    }
+}
+
+/* ======================================
+   Portrait Mode (Phone Upright)
+   ====================================== */
+@media screen and (max-width: 768px) and (orientation: portrait) {
+
+    :root {
+        --mobile-action-btn-size: 56px;
+        --mobile-joystick-size: 110px;
+    }
+
+    /* Show chat in portrait */
+    #game-wrapper .main .lower {
+        display: block !important;
+        max-height: 80px;
+        flex: 0 0 auto;
+    }
+
+    /* Bottom bar positions */
+    #mobile-action-bar {
+        bottom: 90px;
+    }
+}
+
+/* ======================================
+   iOS Safari / Notch Support
+   ====================================== */
+@supports (padding: env(safe-area-inset-top)) {
+    #mobile-status-bar {
+        padding-top: env(safe-area-inset-top);
+        height: calc(var(--mobile-header-height) + env(safe-area-inset-top));
+    }
+}
+
+/* Prevent iOS rubber banding */
+@supports (-webkit-touch-callout: none) {
+
+    html,
+    body {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    #game-wrapper {
+        height: -webkit-fill-available;
+    }
+}
+
+/* ======================================
+   Debug Statistics - Make Smaller on Mobile
+   ====================================== */
+@media screen and (max-height: 500px),
+screen and (max-width: 768px) {
+    #debug-statistics {
+        font-size: 8px !important;
+        top: 40px !important;
+        left: 4px !important;
+        max-width: 200px;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 4px;
+        border-radius: 4px;
+    }
+}

@@ -35,6 +35,7 @@
 <link rel="stylesheet" type="text/css" href="./css/change-outfit-modal.css">
 <link rel="stylesheet" type="text/css" href="./css/context-menu.css">
 <link rel="stylesheet" type="text/css" href="./css/achievement.css">
+<link rel="stylesheet" type="text/css" href="./css/mobile.css">
 
 <!-- Ambient Music -->
 <audio id="rain" src="sounds/rain.ogg" preload="auto" type="audio/ogg"></audio>
@@ -476,8 +477,51 @@
   <!-- The Game Interface -->
   <div id="game-wrapper">
 
-    <!-- Left Column -->
-    <div class="oogwrap">
+    <!-- Mobile Status Bar (Top) -->
+    <div id="mobile-status-bar" class="mobile-only">
+      <div class="mobile-bar-container">
+        <div class="mobile-bar">
+          <div id="mobile-health-bar" class="mobile-bar-fill health" style="width: 100%;"></div>
+          <span class="mobile-bar-text" id="mobile-health-text">??? / ???</span>
+        </div>
+        <div class="mobile-bar">
+          <div id="mobile-mana-bar" class="mobile-bar-fill mana" style="width: 100%;"></div>
+          <span class="mobile-bar-text" id="mobile-mana-text">??? / ???</span>
+        </div>
+      </div>
+      <button id="mobile-menu-btn" class="mobile-action-btn" title="Menu">☰</button>
+    </div>
+
+    <!-- Mobile Action Bar (Bottom) -->
+    <div id="mobile-action-bar" class="mobile-only">
+      <!-- Virtual Joystick Zone -->
+      <div id="mobile-joystick-zone">
+        <div id="virtual-joystick">
+          <div id="joystick-knob"></div>
+        </div>
+      </div>
+
+      <!-- Mobile Hotbar - 4 skill slots -->
+      <div id="mobile-hotbar">
+        <div class="mobile-hotbar-slot" data-slot="0"><canvas></canvas><span class="mobile-slot-key">1</span></div>
+        <div class="mobile-hotbar-slot" data-slot="1"><canvas></canvas><span class="mobile-slot-key">2</span></div>
+        <div class="mobile-hotbar-slot" data-slot="2"><canvas></canvas><span class="mobile-slot-key">3</span></div>
+        <div class="mobile-hotbar-slot" data-slot="3"><canvas></canvas><span class="mobile-slot-key">4</span></div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div id="mobile-actions">
+        <button id="mobile-equipment-btn" class="mobile-action-btn equipment" title="Equipment">🛡</button>
+        <button id="mobile-inventory-btn" class="mobile-action-btn inventory" title="Inventory">🎒</button>
+        <button id="mobile-look-btn" class="mobile-action-btn look" title="Look">👁</button>
+        <button id="mobile-use-btn" class="mobile-action-btn use" title="Use">✋</button>
+        <button id="mobile-attack-btn" class="mobile-action-btn attack" title="Attack">⚔</button>
+        <button id="mobile-chat-btn" class="mobile-action-btn chat" title="Chat">💬</button>
+      </div>
+    </div>
+
+    <!-- Left Column (Desktop) -->
+    <div class="oogwrap desktop-only">
       <div class="column"></div>
     </div>
 
@@ -1002,7 +1046,7 @@
         </div>
       </div>
 
-      <div class="middle">
+      <div class="middle desktop-only">
         <div class="hotbar">
           <div class="hotbar-item"><canvas></canvas><span class="hotbar-text"></span><span class="hotbar-key">F1</span>
           </div>

@@ -1,4 +1,4 @@
-const FloatingElement = function(message, position, color) {
+const FloatingElement = function (message, position, color) {
 
   /*
    * Class FloatingTextElement
@@ -20,7 +20,7 @@ const FloatingElement = function(message, position, color) {
 FloatingElement.prototype = Object.create(ScreenElement.prototype);
 FloatingElement.prototype.constructor = FloatingElement
 
-FloatingElement.prototype.getDuration = function() {
+FloatingElement.prototype.getDuration = function () {
 
   /*
    * Function FloatingElement.getDuration
@@ -31,7 +31,7 @@ FloatingElement.prototype.getDuration = function() {
 
 }
 
-FloatingElement.prototype.getAge = function() {
+FloatingElement.prototype.getAge = function () {
 
   /*
    * Function FloatingElement.getAge
@@ -42,7 +42,7 @@ FloatingElement.prototype.getAge = function() {
 
 }
 
-FloatingElement.prototype.setTextPosition = function() {
+FloatingElement.prototype.setTextPosition = function () {
 
   /*
    * Function FloatingElement.setTextPosition
@@ -51,12 +51,17 @@ FloatingElement.prototype.setTextPosition = function() {
 
   let offset = this.__getAbsoluteOffset(gameClient.renderer.getStaticScreenPosition(this.__position));
   let age = this.getAge();
+  let fraction = gameClient.interface.getSpriteScaling();
+
+  // Mobile needs larger offset due to CSS scaling
+  let isMobile = gameClient.touch && gameClient.touch.isMobileMode;
+  offset.top -= isMobile ? (fraction * 1.5) : 0;
 
   // Animate upwards
   offset.top -= Math.floor(0.05 * age);
 
   // Update the opacity of the element
-  if(age > 500) {
+  if (age > 500) {
     this.element.style.opacity = 1 - ((age - 500) / 250);
   }
 
@@ -64,7 +69,7 @@ FloatingElement.prototype.setTextPosition = function() {
 
 }
 
-FloatingElement.prototype.setMessage = function(message) {
+FloatingElement.prototype.setMessage = function (message) {
 
   /*
    * Function ScreenElement.setMessage
@@ -75,7 +80,7 @@ FloatingElement.prototype.setMessage = function(message) {
 
 }
 
-FloatingElement.prototype.setColor = function(color) {
+FloatingElement.prototype.setColor = function (color) {
 
   /*
    * Function ScreenElement.setColor

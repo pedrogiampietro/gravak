@@ -128,7 +128,9 @@ CharacterElement.prototype.setTextPosition = function () {
   offset.left += fraction / 2;
 
   // Add an offset to make the nameplate hover above the player
-  offset.top -= fraction / 4;
+  // Mobile needs larger offset due to CSS scaling, desktop uses original
+  let isMobile = gameClient.touch && gameClient.touch.isMobileMode;
+  offset.top -= isMobile ? (fraction * 2.2) : (fraction / 4);
 
   // Delegate to the generic move function
   this.__updateTextPosition(offset);

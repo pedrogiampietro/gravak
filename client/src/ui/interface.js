@@ -692,9 +692,22 @@ Interface.prototype.getSpriteScaling = function () {
   /*
    * Function Canvas.getSpriteScaling
    * Returns the sprite scaling: if the gamewindow is larger than default (480x352)
+   * Mobile uses actual displayed canvas size, desktop uses resolution scale
    */
 
-  // Scale default pixels by the scale
+  // Check if we're in mobile mode
+  let isMobile = gameClient.touch && gameClient.touch.isMobileMode;
+
+  if (isMobile) {
+    // Mobile: use actual displayed canvas size vs internal size
+    let canvas = gameClient.renderer.screen.canvas;
+    let displayedWidth = canvas.getBoundingClientRect().width;
+    let internalWidth = canvas.width;
+    let scale = displayedWidth / internalWidth;
+    return 32 * scale;
+  }
+
+  // Desktop: use the original resolution scale calculation
   return 32 * this.getResolutionScale();
 };
 

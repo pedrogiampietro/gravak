@@ -83,9 +83,9 @@ MessageElement.prototype.setTextPosition = function () {
   // Center the text horizontally (match CharacterElement)
   offset.left += fraction / 2;
 
-  // Offset vertically to appear below the character nameplate
-  // Nameplate is at -fraction/4. We place this slightly higher than before (was /4, now /6).
-  offset.top += fraction / 6;
+  // Offset vertically - mobile needs larger offset due to CSS scaling
+  let isMobile = gameClient.touch && gameClient.touch.isMobileMode;
+  offset.top -= isMobile ? (fraction * 1.8) : (-fraction / 6);
 
   this.__updateTextPosition(offset);
 
