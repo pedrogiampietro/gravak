@@ -123,10 +123,78 @@ BattleWindow.prototype.addCreature = function (creature) {
   // Update the stats immediately
   this.updateCreature(creature);
 
-  node.addEventListener("click", function () {
+  // BLOCK ALL MOUSE EVENTS IN MOBILE MODE
+  // This is critical because Mouse.js listens to mousedown/mouseup on document.body.
+  // Since we allow touchstart default (for scroll), the browser acts as a mouse.
+  // We must stop these events here so they don't reach the game map.
+
+  function blockMobileMouse(event) {
+    if (gameClient.touch && gameClient.touch.isMobileMode) {
+      // console.log("Blocking mobile mouse event:", event.type, this.id);
+      event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+    }
+  }
+
+  node.addEventListener("mousedown", blockMobileMouse);
+  node.addEventListener("mouseup", blockMobileMouse);
+
+  node.addEventListener("click", function (event) {
+    if (gameClient.touch && gameClient.touch.isMobileMode) {
+      event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+      return;
+    }
+
+    // Desktop behavior
     let creature = gameClient.world.getCreature(this.id);
     gameClient.player.setTarget(creature);
     gameClient.send(new TargetPacket(this.id));
+  });
+
+  // Mobile support: Custom Tap Handling
+  // We cannot just use touchstart with preventDefault because that breaks scrolling.
+  // We need to track the touch and fire only if it wasn't a scroll.
+  let touchStartX = 0;
+  let touchStartY = 0;
+
+  node.addEventListener("touchstart", function (event) {
+    if (gameClient.touch && gameClient.touch.isMobileMode) {
+      // Don't prevent default here, or we can't scroll!
+      // But we must stop propagation if this turns out to be a click later... 
+      // Actually, we can't fully stop propagation here if we want scrolling to bubble?
+      // No, scrolling happens on this element's container.
+
+      let touch = event.changedTouches[0];
+      touchStartX = touch.clientX;
+      touchStartY = touch.clientY;
+    }
+  }, { passive: true }); // Passive to allow scrolling
+
+  node.addEventListener("touchend", function (event) {
+    if (gameClient.touch && gameClient.touch.isMobileMode) {
+      let touch = event.changedTouches[0];
+      let dx = Math.abs(touch.clientX - touchStartX);
+      let dy = Math.abs(touch.clientY - touchStartY);
+
+      // If moved less than 10 pixels, consider it a tap
+      if (dx < 10 && dy < 10) {
+        // It's a tap!
+        event.preventDefault(); // Prevent mouse compatibility events
+        event.stopPropagation();
+        event.stopImmediatePropagation();
+
+        let id = Number(this.id);
+        let creature = gameClient.world.getCreature(id);
+
+        if (creature) {
+          gameClient.player.setTarget(creature);
+          gameClient.send(new TargetPacket(id));
+        }
+      }
+    }
   });
 
 }

@@ -324,7 +324,23 @@ Touch.prototype.__performLookAtTouch = function (touch) {
     let tileObject = gameClient.mouse.getWorldObject(fakeEvent);
 
     if (tileObject && tileObject.which) {
-        gameClient.mouse.look(tileObject);
+        // Check if we are interacting with a container (e.g., corpse)
+        // If so, we want to open it (use) instead of look
+        let topItem = null;
+
+        // Check if peekItem exists (it should for Tiles and Containers)
+        if (typeof tileObject.which.peekItem === 'function') {
+            topItem = tileObject.which.peekItem(0xFF);
+        }
+
+        if (topItem && topItem.isContainer()) {
+            // It's a container/corpse - open it
+            console.log("Can loot! Using: ", tileObject);
+            gameClient.mouse.use(tileObject);
+        } else {
+            // Default behavior - Look
+            gameClient.mouse.look(tileObject);
+        }
     }
 
     // Visual feedback - brief vibration if supported
@@ -574,8 +590,10 @@ Touch.prototype.__handleAttackButton = function (event) {
         // Already have a target - attack it
         gameClient.send(new TargetPacket(target.getId()));
     } else {
-        // No target - maybe show message
-        gameClient.interface.setCancelMessage("Select a target first.");
+        // No target - toggle battle window
+        if (gameClient.interface) {
+            gameClient.interface.toggleWindow("battle-window");
+        }
     }
 
     // Vibrate feedback

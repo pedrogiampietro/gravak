@@ -61,6 +61,20 @@ Container.prototype.createElement = function (index) {
   element.setAttribute("containerIndex", index);
   element.style.minHeight = 90;
 
+  // Mobile: Position containers on the LEFT side to avoid overlapping Battle Window
+  // Stack them vertically based on how many containers are already open
+  if (gameClient.touch && gameClient.touch.isMobileMode) {
+    // Count currently open container windows
+    let openContainers = document.querySelectorAll('.window[containerIndex]').length;
+    let verticalOffset = 50 + (openContainers * 150);
+
+    // Use setProperty with 'important' to override CSS !important rules
+    element.style.setProperty('left', '5px', 'important');
+    element.style.setProperty('right', 'auto', 'important');
+    element.style.setProperty('top', verticalOffset + 'px', 'important');
+    element.style.setProperty('transform-origin', 'top left', 'important');
+  }
+
   return element;
 
 }
