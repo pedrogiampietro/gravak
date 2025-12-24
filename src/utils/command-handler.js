@@ -376,6 +376,43 @@ CommandHandler.prototype.handle = function (player, message) {
 
     return player.sendCancelMessage("Character reset to Level 1! Experience: 0, HP: 150, Mana: 35");
   }
+
+  // Test magic effect command: /z [effect_id]
+  if (message[0] === "/z") {
+    let effectId = Number(message[1]);
+
+    if (isNaN(effectId) || effectId < 0) {
+      return player.sendCancelMessage("Usage: /z [effect_id] - Shows magic effect at your position.");
+    }
+
+    gameServer.world.sendMagicEffect(player.getPosition(), effectId);
+    return player.sendCancelMessage("Effect " + effectId + " displayed.");
+  }
+
+  // Test distance/missile effect command: /x [shoot_type_id]
+  if (message[0] === "/x") {
+    let shootType = Number(message[1]);
+
+    if (isNaN(shootType) || shootType < 0) {
+      return player.sendCancelMessage("Usage: /x [shoot_type_id] - Shoots missile from you.");
+    }
+
+    // Get target position (3 tiles in front of player based on direction)
+    let from = player.getPosition();
+    let direction = player.getProperty(CONST.PROPERTIES.DIRECTION) || 2; // Default south
+    let dx = 0, dy = 0;
+
+    switch (direction) {
+      case 0: dy = -3; break; // North
+      case 1: dx = 3; break;  // East
+      case 2: dy = 3; break;  // South
+      case 3: dx = -3; break; // West
+    }
+
+    let to = from.add(new Position(dx, dy, 0));
+    gameServer.world.sendDistanceEffect(from, to, shootType);
+    return player.sendCancelMessage("Missile " + shootType + " fired.");
+  }
 };
 
 module.exports = CommandHandler;
