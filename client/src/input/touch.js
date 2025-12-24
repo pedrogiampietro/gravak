@@ -117,6 +117,9 @@ Touch.prototype.__initialize = function () {
     // Bind global layout events (slots)
     this.__bindGlobalEvents();
 
+    // Bind double-tap handler for container slots (move to backpack)
+    this.__bindContainerSlotDoubleTap();
+
     // Initialize status bars with current player stats if available
     if (typeof gameClient !== 'undefined' && gameClient && gameClient.player) {
         let state = gameClient.player.state;
@@ -995,3 +998,161 @@ Touch.prototype.__getSlotObject = function (element) {
     });
 
 }
+
+Touch.prototype.__bindContainerSlotDoubleTap = function () {
+
+    /*
+     * Function Touch.__bindContainerSlotDoubleTap
+     * Binds a delegated event listener for double-tap on container slots.
+     * Double-tapping an item will move it to the first available backpack slot.
+     */
+
+    let self = this;
+    let lastSlotTapTime = 0;
+    let lastSlotTapElement = null;
+    const DOUBLE_TAP_THRESHOLD = 300; // ms
+
+    // Use delegated listener on document body to catch dynamically created slots
+    document.body.addEventListener('touchend', function (event) {
+        if (!self.isMobileMode) return;
+        if (!gameClient || !gameClient.player) return;
+
+        // Check if the tap target is a slot element
+        let target = event.target;
+        let slotElement = target.closest('.slot');
+
+        if (!slotElement) return;
+
+        // Ignore equipment slots (they have different parent structure)
+        let containerWindow = slotElement.closest('.window[containerIndex]');
+        if (!containerWindow) return;
+
+        let now = Date.now();
+
+        // Check for double tap on the same slot
+        if (lastSlotTapElement === slotElement && (now - lastSlotTapTime) < DOUBLE_TAP_THRESHOLD) {
+            // Double tap detected!
+            event.preventDefault();
+            event.stopPropagation();
+
+            self.__handleSlotDoubleTap(slotElement, containerWindow);
+
+            // Reset
+            lastSlotTapTime = 0;
+            lastSlotTapElement = null;
+        } else {
+            // First tap - record it
+            lastSlotTapTime = now;
+            lastSlotTapElement = slotElement;
+        }
+    }, { passive: false });
+
+}
+
+Touch.prototype.__handleSlotDoubleTap = function (slotElement, containerWindow) {
+
+    /*
+     * Function Touch.__handleSlotDoubleTap
+     * Handle double-tap on a container slot - move item to backpack
+     */
+
+    if (!slotElement) return;
+
+    // If containerWindow not passed, try to find it from slotElement
+    if (!containerWindow) {
+        containerWindow = slotElement.closest('.window[containerIndex]');
+    }
+
+    // Get source slot info
+    let slotIndex = Number(slotElement.getAttribute('slotIndex'));
+
+    // Handle case where containerWindow is still null (e.g., equipment slots)
+    if (!containerWindow) {
+        console.log("Double tap: Not a container slot, ignoring");
+        return;
+    }
+
+    let containerIndex = Number(containerWindow.getAttribute('containerIndex'));
+
+    if (isNaN(slotIndex) || isNaN(containerIndex)) {
+        console.log("Double tap: Invalid slot/container index");
+        return;
+    }
+
+    let sourceContainer = gameClient.player.getContainer(containerIndex);
+    if (!sourceContainer) {
+        console.log("Double tap: Source container not found");
+        return;
+    }
+
+    let item = sourceContainer.getSlotItem(slotIndex);
+    if (!item) {
+        console.log("Double tap: No item in slot");
+        return;
+    }
+
+    // Find the first open backpack (excluding Equipment which is usually container 0)
+    // Look for container with __containerId that's not the same as source
+    let targetContainer = null;
+    let containers = Array.from(gameClient.player.__openedContainers);
+
+    // Check if containers exists and is an array
+    if (!containers || containers.length === 0) {
+        console.log("Double tap: No open containers found");
+        return;
+    }
+
+    for (let i = 0; i < containers.length; i++) {
+        let container = containers[i];
+        if (container && container.__containerId !== containerIndex) {
+            // Found a different container - use it as target
+            targetContainer = container;
+            break;
+        }
+    }
+
+    if (!targetContainer) {
+        // No other container open - try to use the backpack (container 0)
+        targetContainer = gameClient.player.getContainer(0);
+    }
+
+    if (!targetContainer) {
+        console.log("Double tap: No destination container found");
+        gameClient.interface.setCancelMessage("No backpack open to receive items.");
+        return;
+    }
+
+    // Create source and target objects for sendItemMove
+    let fromObject = {
+        "which": sourceContainer,
+        "index": slotIndex
+    };
+
+    // Find first empty slot in target container, or use slot 0
+    let targetSlotIndex = 0;
+    for (let i = 0; i < targetContainer.slots.length; i++) {
+        if (targetContainer.slots[i].isEmpty()) {
+            targetSlotIndex = i;
+            break;
+        }
+    }
+
+    let toObject = {
+        "which": targetContainer,
+        "index": targetSlotIndex
+    };
+
+    // Get item count (for stackables)
+    let count = item.isStackable() ? item.count : 1;
+
+    console.log("Double tap: Moving item from container " + containerIndex + " slot " + slotIndex +
+        " to container " + targetContainer.__containerId + " slot " + targetSlotIndex);
+
+    // Send the move
+    gameClient.mouse.sendItemMove(fromObject, toObject, count);
+
+    // Vibrate feedback
+    if (navigator.vibrate) navigator.vibrate(30);
+
+}
+
