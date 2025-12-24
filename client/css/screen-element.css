@@ -4,6 +4,9 @@
   position: absolute;
   pointer-events: none;
   z-index: 10000;
+  /* Force GPU rendering for smoother transforms */
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 /* Prototypes are always hidden */
@@ -29,6 +32,9 @@
   position: absolute;
   font-size: 10px;
   text-align: center;
+  /* Force GPU rendering for smoother transforms */
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .character-element-bar {

@@ -1,4 +1,4 @@
-const ScreenElement = function(id) {
+const ScreenElement = function (id) {
 
   /*
    * Class ScreenElement
@@ -20,7 +20,7 @@ const ScreenElement = function(id) {
 
 }
 
-ScreenElement.prototype.remove = function() {
+ScreenElement.prototype.remove = function () {
 
   /*
    * Function ScreenElement.remove
@@ -31,7 +31,7 @@ ScreenElement.prototype.remove = function() {
 
 }
 
-ScreenElement.prototype.hide = function() {
+ScreenElement.prototype.hide = function () {
 
   /*
    * Function ScreenElement.hide
@@ -42,7 +42,7 @@ ScreenElement.prototype.hide = function() {
 
 }
 
-ScreenElement.prototype.show = function() {
+ScreenElement.prototype.show = function () {
 
   /*
    * Function ScreenElement.show
@@ -53,7 +53,7 @@ ScreenElement.prototype.show = function() {
 
 }
 
-ScreenElement.prototype.__updateTextPosition = function(offset) {
+ScreenElement.prototype.__updateTextPosition = function (offset) {
 
   /*
    * Function ScreenElement.__updateTextPosition
@@ -74,7 +74,7 @@ ScreenElement.prototype.__updateTextPosition = function(offset) {
 
 }
 
-ScreenElement.prototype.__getAbsoluteOffset = function(position) {
+ScreenElement.prototype.__getAbsoluteOffset = function (position) {
 
   /*
    * Function ScreenElement.__getAbsoluteOffset
@@ -82,13 +82,14 @@ ScreenElement.prototype.__getAbsoluteOffset = function(position) {
    */
 
   // Determine the fraction based on the size of the screen
-  let fraction = gameClient.interface.getSpriteScaling();
+  let scale = gameClient.interface.getSpriteScalingVector();
 
   // Calculate the text position in canvas coordinates and center them
-  let left = (fraction * position.x) - (0.5 * this.element.offsetWidth);
-  let top = (fraction * position.y) - (0.5 * this.element.offsetHeight);
+  // Use separate X and Y scales to handle non-uniform stretching on mobile
+  let left = (scale.x * position.x) - (0.5 * this.element.offsetWidth);
+  let top = (scale.y * position.y) - (0.5 * this.element.offsetHeight);
 
   // Return the new offsets
-  return { left, top } 
+  return { left, top }
 
 }

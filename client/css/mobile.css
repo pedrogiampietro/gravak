@@ -130,11 +130,6 @@ screen and (max-width: 768px) {
         display: block;
     }
 
-    /* Hide chat/lower section in landscape to maximize game view */
-    #game-wrapper .main .lower {
-        display: none !important;
-    }
-
     /* Hide original hotbar */
     .hotbar {
         display: none !important;
