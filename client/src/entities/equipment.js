@@ -1,4 +1,4 @@
-const Equipment = function(items) {
+const Equipment = function (items) {
 
   /*
    * Class Equipment
@@ -9,7 +9,7 @@ const Equipment = function(items) {
    */
 
   // Inherits from container
-  Container.call(this, {"id": 0, "cid": 0, "items": {"length": 10}});
+  Container.call(this, { "id": 0, "cid": 0, "items": { "length": 10 } });
 
   // The equipment has ten slots for items
   this.slots = Array(
@@ -41,24 +41,24 @@ Equipment.prototype.BACKGROUNDS = new Array(
   "./png/right.png",
   "./png/left.png",
   "./png/backpack.png",
-  "./png/item.png",
-  "./png/item.png",
-  "./png/item.png"
+  "./png/shoulder.png",
+  "./png/ring.png",
+  "./png/quiver.png"
 );
 
-Equipment.prototype.removeItem = function(slot, count) {
+Equipment.prototype.removeItem = function (slot, count) {
 
   // If the item is stackable we should account for the removed count
-  if(!this.slots[slot].item.isStackable() || count === 0) {
+  if (!this.slots[slot].item.isStackable() || count === 0) {
     this.slots[slot].element.style.backgroundImage = "url('" + this.BACKGROUNDS[slot] + "')";
     return this.clearSlot(slot);
   }
 
   // Subtract the count
   this.slots[slot].item.count -= count;
-    
+
   // If the remaining count is zero the item has been fully depleted
-  if(this.slots[slot].item.count === 0) {
+  if (this.slots[slot].item.count === 0) {
     this.slots[slot].element.style.backgroundImage = "url('" + this.BACKGROUNDS[slot] + "')";
     return this.clearSlot(slot);
   }
@@ -67,7 +67,7 @@ Equipment.prototype.removeItem = function(slot, count) {
 
 }
 
-Equipment.prototype.setItems = function(items) {
+Equipment.prototype.setItems = function (items) {
 
   /*
    * Function Equipment.setItems
@@ -75,14 +75,14 @@ Equipment.prototype.setItems = function(items) {
    */
 
   // Must be the same length
-  if(items.length !== this.slots.length) {
+  if (items.length !== this.slots.length) {
     return;
   }
 
-  items.forEach(function(item, index) {
+  items.forEach(function (item, index) {
 
     // Skip nulls
-    if(item !== null) {
+    if (item !== null) {
       this.addItem(item, index);
     }
 
@@ -90,7 +90,7 @@ Equipment.prototype.setItems = function(items) {
 
 }
 
-Equipment.prototype.referenceSlotDOM = function(index, id) {
+Equipment.prototype.referenceSlotDOM = function (index, id) {
 
   /*
    * Function Equipment.referenceSlotDOM
@@ -105,7 +105,7 @@ Equipment.prototype.referenceSlotDOM = function(index, id) {
 
 }
 
-Equipment.prototype.addItem = function(item, slot) {
+Equipment.prototype.addItem = function (item, slot) {
 
   /*
    * Function Equipment.equipItem
@@ -119,7 +119,7 @@ Equipment.prototype.addItem = function(item, slot) {
 
 }
 
-Equipment.prototype.equipSlot = function(slot, item) {
+Equipment.prototype.equipSlot = function (slot, item) {
 
   /*
    * Function Equipment.equipSlot
@@ -133,7 +133,7 @@ Equipment.prototype.equipSlot = function(slot, item) {
 
 }
 
-Equipment.prototype.render = function() {
+Equipment.prototype.render = function () {
 
   /*
    * Function Equipment.render

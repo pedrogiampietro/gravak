@@ -22,7 +22,7 @@
   margin: 8px;
 }
 
-.bar {	
+.bar {
   border: 1px solid black;
   margin: 2px;
   border-radius: 8px;
@@ -46,10 +46,10 @@
 .bar .percentage {
   position: absolute;
   font-size: 10px;
-  left:0;
-  right:0;
-  margin-left:auto;
-  margin-right:auto;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .character-health {
@@ -124,6 +124,14 @@
 
 #quiver-slot {
   background-image: url("/png/quiver.png");
+}
+
+#shoulder-slot {
+  background-image: url("/png/shoulder.png");
+}
+
+#ring-slot {
+  background-image: url("/png/ring.png");
 }
 
 .equipment-padding {
