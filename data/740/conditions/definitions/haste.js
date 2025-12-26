@@ -1,5 +1,7 @@
 "use strict";
 
+const { CreaturePropertyPacket } = requireModule("network/protocol");
+
 function onStart(creature) {
 
   /*
@@ -8,6 +10,19 @@ function onStart(creature) {
    */
 
   creature.sendCancelMessage("You feel fast.");
+
+  // Broadcast the new speed to all spectators
+  if (creature.isPlayer && creature.isPlayer()) {
+    let newSpeed = creature.getSpeed();
+
+    creature.broadcast(
+      new CreaturePropertyPacket(creature.getId(), CONST.PROPERTIES.SPEED, newSpeed)
+    );
+    // Also send to the player itself
+    creature.write(
+      new CreaturePropertyPacket(creature.getId(), CONST.PROPERTIES.SPEED, newSpeed)
+    );
+  }
 
 }
 
@@ -19,6 +34,19 @@ function onExpire(creature) {
    */
 
   creature.sendCancelMessage("Your speed returns to normal.");
+
+  // Broadcast the restored speed to all spectators
+  if (creature.isPlayer && creature.isPlayer()) {
+    let newSpeed = creature.getSpeed();
+
+    creature.broadcast(
+      new CreaturePropertyPacket(creature.getId(), CONST.PROPERTIES.SPEED, newSpeed)
+    );
+    // Also send to the player itself
+    creature.write(
+      new CreaturePropertyPacket(creature.getId(), CONST.PROPERTIES.SPEED, newSpeed)
+    );
+  }
 
 }
 

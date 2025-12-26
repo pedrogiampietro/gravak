@@ -42,7 +42,7 @@ const CharacterCreator = function () {
         "addonOne": false,
         "addonTwo": false
       }),
-      "speed": 1020
+      "speed": 110
     },
     "skills": {
       "experience": 0,

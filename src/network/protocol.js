@@ -380,7 +380,8 @@ const CreatureStatePacket = function (creature) {
   // Write healthinformation
   this.writeUInt32(creature.getProperty(CONST.PROPERTIES.HEALTH));
   this.writeUInt32(creature.getProperty(CONST.PROPERTIES.HEALTH_MAX));
-  this.writeUInt16(creature.getProperty(CONST.PROPERTIES.SPEED));
+  // Use getSpeed() for players (dynamic calculation) or getProperty for monsters
+  this.writeUInt16(creature.getSpeed ? creature.getSpeed() : creature.getProperty(CONST.PROPERTIES.SPEED));
 
   this.writeCreatureType(creature);
   this.writeBuffer(stringEncoded);
@@ -880,8 +881,8 @@ const PlayerStatePacket = function (player) {
   this.writeUInt16(player.skills.getSkillLevel(CONST.PROPERTIES.EXPERIENCE) || 1);
 
 
-  // State variables
-  this.writeUInt16(player.getProperty(CONST.PROPERTIES.SPEED));
+  // State variables - use getSpeed() for dynamic calculation based on level
+  this.writeUInt16(player.getSpeed());
   this.writeUInt8(player.getProperty(CONST.PROPERTIES.ATTACK));
   this.writeUInt8(player.getProperty(CONST.PROPERTIES.ATTACK_SPEED));
 

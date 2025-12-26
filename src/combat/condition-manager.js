@@ -141,10 +141,11 @@ ConditionManager.prototype.add = function (condition, properties) {
 
   let { onStart, onTick, onExpire } = conditionDef;
 
-  onStart.call(condition, this.__creature, properties);
-
-  // Reference
+  // IMPORTANT: Add condition to map BEFORE calling onStart
+  // so that getSpeed() and similar functions can detect the condition
   this.__conditions.set(condition.id, condition);
+
+  onStart.call(condition, this.__creature, properties);
 
   // Start the first tick of the condition
   if (condition.numberTicks !== -1) {
@@ -207,10 +208,11 @@ ConditionManager.prototype.__expireCondition = function (condition) {
 
   let { onStart, onTick, onExpire } = process.gameServer.database.getCondition(condition.id);
 
-  onExpire.call(condition, this.__creature);
-
-  // Delete from the map
+  // IMPORTANT: Delete from the map BEFORE calling onExpire
+  // so that getSpeed() and similar functions return the correct value without the condition
   this.__conditions.delete(condition.id);
+
+  onExpire.call(condition, this.__creature);
 
   // Players need to be informed
   if (this.__creature.isPlayer()) {

@@ -387,9 +387,15 @@ Thing.prototype.getDescription = function () {
     }
   }
 
+  // If the item has text content (signs, books, letters, etc), show it
+  if (this.content) {
+    return "It reads:\n" + this.content;
+  }
+
   return this.getAttribute("description");
 
 }
+
 
 Thing.prototype.getDurationString = function () {
 

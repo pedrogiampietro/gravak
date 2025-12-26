@@ -30,6 +30,19 @@ PacketHandler.prototype.handlePropertyChange = function (packet) {
         creature.state.capacity = packet.value;
       }
       return;
+    case CONST.PROPERTIES.SPEED:
+      // Update speed in real-time (for haste, boots of haste, etc.)
+      if (creature === gameClient.player) {
+        creature.state.speed = packet.value;
+        // Update the UI - skill window shows speed
+        let skillWindow = gameClient.interface.windowManager.getWindow("skill-window");
+        if (skillWindow) {
+          skillWindow.setSkillValue("speed", packet.value, 0);
+        }
+      }
+      // Also update the creature's speed for movement calculations
+      creature.speed = packet.value;
+      return;
     case 30: // LEVEL
       if (creature === gameClient.player) {
         // Store the level for experience percentage calculation

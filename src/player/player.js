@@ -677,16 +677,36 @@ Player.prototype.getSpeed = function () {
   /*
    * Function Player.getSpeed
    * Returns the speed of the player
+   * Tibia formula: Base Speed = 109 + Level
    */
 
-  // The base speed
-  let base = this.getProperty(CONST.PROPERTIES.SPEED);
+  // Get the player level
+  let level = this.skills.getSkillLevel(CONST.PROPERTIES.EXPERIENCE) || 1;
 
+  // Tibia speed formula: 109 + Level
+  let baseSpeed = 109 + level;
+
+  // Add speed bonuses from equipment (boots of haste, etc.)
+  // Guard: containerManager may not exist during player initialization
+  let equipmentSpeed = 0;
+  if (this.containerManager && this.containerManager.equipment) {
+    equipmentSpeed = this.getEquipmentAttribute("speed") || 0;
+  }
+  baseSpeed += equipmentSpeed;
+
+  // Apply haste condition multiplier
   if (this.hasCondition(Condition.prototype.HASTE)) {
-    base *= 1.3;
+    // Haste formula: speed * 1.3 - 24 (approximately)
+    baseSpeed = Math.floor(baseSpeed * 1.3 - 24);
   }
 
-  return base;
+  // Apply strong haste (if implemented)
+  if (this.hasCondition(Condition.prototype.STRONG_HASTE)) {
+    // Strong Haste formula: speed * 1.7 - 56
+    baseSpeed = Math.floor(baseSpeed * 1.7 - 56);
+  }
+
+  return Math.max(baseSpeed, 10); // Minimum speed of 10
 };
 
 Player.prototype.getBaseDamage = function () {

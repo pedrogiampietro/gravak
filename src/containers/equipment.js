@@ -139,6 +139,18 @@ Equipment.prototype.removeIndex = function (index, count) {
     this.__player.removeCondition(Condition.prototype.MAGIC_SHIELD);
   }
 
+  // Check if removed item had speed bonus - broadcast updated speed
+  if (thing.getAttribute("speed")) {
+    const { CreaturePropertyPacket } = requireModule("network/protocol");
+    let newSpeed = this.__player.getSpeed();
+    this.__player.broadcast(
+      new CreaturePropertyPacket(this.__player.getId(), CONST.PROPERTIES.SPEED, newSpeed)
+    );
+    this.__player.write(
+      new CreaturePropertyPacket(this.__player.getId(), CONST.PROPERTIES.SPEED, newSpeed)
+    );
+  }
+
   let change = thing.getChangeOnUnequip();
 
   // We have to change the item before returning it
@@ -177,6 +189,18 @@ Equipment.prototype.deleteThing = function (thing) {
 
   if (thing.getAttribute("manashield")) {
     this.__player.removeCondition(Condition.prototype.MAGIC_SHIELD);
+  }
+
+  // Check if removed item had speed bonus - broadcast updated speed
+  if (thing.getAttribute("speed")) {
+    const { CreaturePropertyPacket } = requireModule("network/protocol");
+    let newSpeed = this.__player.getSpeed();
+    this.__player.broadcast(
+      new CreaturePropertyPacket(this.__player.getId(), CONST.PROPERTIES.SPEED, newSpeed)
+    );
+    this.__player.write(
+      new CreaturePropertyPacket(this.__player.getId(), CONST.PROPERTIES.SPEED, newSpeed)
+    );
   }
 
   return index;
@@ -269,6 +293,19 @@ Equipment.prototype.addThing = function (thing, index) {
 
   // The things parent is of course the player
   thing.setParent(this);
+
+  // Check if item has speed bonus - broadcast updated speed
+  // Guard: only broadcast if player is fully initialized (has containerManager.equipment)
+  if (thing.getAttribute("speed") && this.__player.containerManager && this.__player.containerManager.equipment) {
+    const { CreaturePropertyPacket } = requireModule("network/protocol");
+    let newSpeed = this.__player.getSpeed();
+    this.__player.broadcast(
+      new CreaturePropertyPacket(this.__player.getId(), CONST.PROPERTIES.SPEED, newSpeed)
+    );
+    this.__player.write(
+      new CreaturePropertyPacket(this.__player.getId(), CONST.PROPERTIES.SPEED, newSpeed)
+    );
+  }
 
   // Decrement the capacity
   return this.__updateWeight(thing.getWeight());
