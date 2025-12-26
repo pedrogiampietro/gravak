@@ -310,11 +310,17 @@ Mouse.prototype.__handleContextMenu = function (event) {
         return gameClient.world.targetMonster(tile.which.monsters);
       }
 
-      // Open containers/corpses directly
+      // In Regular Controls: right-click uses items directly
+      // Open containers/corpses directly, use other items directly
+      // Only show menu for multi-use items (which need a target)
       if (tile !== null && tile.which.items.length > 0) {
         let topItem = tile.which.peekItem(0xFF);
-        if (topItem.isContainer()) {
-          // Use the item directly (opens container)
+
+        // Multi-use items need a target, so show the menu for them
+        if (topItem.isMultiUse()) {
+          // Fall through to show menu
+        } else {
+          // Use the item directly (containers, sewer grates, ladders, etc)
           return this.use(tile);
         }
       }
