@@ -223,7 +223,36 @@ Canvas.prototype.drawCharacter = function (creature, position, size, offset) {
   }
 
   // xPattern is set as the facing direction of the creature
-  let xPattern = creature.__lookDirection % 4;
+  // For diagonal directions, use the horizontal component (EAST/WEST) as the sprite direction
+  let direction = creature.__lookDirection;
+  let xPattern;
+
+  switch (direction) {
+    case CONST.DIRECTION.NORTH:
+      xPattern = 0;
+      break;
+    case CONST.DIRECTION.EAST:
+      xPattern = 1;
+      break;
+    case CONST.DIRECTION.SOUTH:
+      xPattern = 2;
+      break;
+    case CONST.DIRECTION.WEST:
+      xPattern = 3;
+      break;
+    case CONST.DIRECTION.SOUTH_EAST:
+    case CONST.DIRECTION.NORTH_EAST:
+      // Diagonals going EAST use EAST sprite
+      xPattern = 1;
+      break;
+    case CONST.DIRECTION.SOUTH_WEST:
+    case CONST.DIRECTION.NORTH_WEST:
+      // Diagonals going WEST use WEST sprite
+      xPattern = 3;
+      break;
+    default:
+      xPattern = direction % 4;
+  }
 
   // zPattern is the flag for mounted
   let zPattern = (frames.characterGroup.pattern.z > 1 && creature.isMounted()) ? 1 : 0;

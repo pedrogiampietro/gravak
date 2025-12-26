@@ -303,6 +303,13 @@ Skills.prototype.__onSkillAdvance = function (type, oldLevel, newLevel) {
 
   const { CreaturePropertyPacket, ServerMessagePacket, ChannelWritePacket } = requireModule("network/protocol");
 
+  // Skip message for EXPERIENCE - level ups are handled separately in player.js onLevelUp()
+  if (type === CONST.PROPERTIES.EXPERIENCE) {
+    // Call the dedicated level up handler
+    this.__player.onLevelUp(oldLevel, newLevel);
+    return;
+  }
+
   // Get skill name for the message
   let skillName = this.__getSkillName(type);
 
@@ -337,6 +344,7 @@ Skills.prototype.__getSkillName = function (type) {
     case CONST.PROPERTIES.DISTANCE: return "Distance Fighting";
     case CONST.PROPERTIES.SHIELDING: return "Shielding";
     case CONST.PROPERTIES.FISHING: return "Fishing";
+    case CONST.PROPERTIES.EXPERIENCE: return "Level";
     default: return "Unknown Skill";
   }
 };

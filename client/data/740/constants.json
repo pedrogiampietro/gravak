@@ -88,7 +88,11 @@
     "SOUTHEAST": 4,
     "SOUTHWEST": 5,
     "NORTHEAST": 6,
-    "NORTHWEST": 7
+    "NORTHWEST": 7,
+    "SOUTH_EAST": 4,
+    "SOUTH_WEST": 5,
+    "NORTH_EAST": 6,
+    "NORTH_WEST": 7
   },
   "TYPES": {
     "PLAYER": 0,
