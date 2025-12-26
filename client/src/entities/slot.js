@@ -1,4 +1,4 @@
-const Slot = function() {
+const Slot = function () {
 
   /*
    * Class Slot
@@ -10,7 +10,7 @@ const Slot = function() {
 
 }
 
-Slot.prototype.setElement = function(element) {
+Slot.prototype.setElement = function (element) {
 
   /*
    * Function Slot.setElement
@@ -22,7 +22,7 @@ Slot.prototype.setElement = function(element) {
 
 }
 
-Slot.prototype.createDOM = function(index) {
+Slot.prototype.createDOM = function (index) {
 
   /*
    * Function Slot.createDOM
@@ -37,7 +37,7 @@ Slot.prototype.createDOM = function(index) {
 
 }
 
-Slot.prototype.setItem = function(item) {
+Slot.prototype.setItem = function (item) {
 
   /*
    * Function Slot.setItem
@@ -51,25 +51,31 @@ Slot.prototype.setItem = function(item) {
 
 }
 
-Slot.prototype.getRarityColor = function(item) {
+Slot.prototype.getRarityColor = function (item) {
 
   /*
    * Function Slot.getRarityColor
    * Returns the rarity color of the slot
+   * TODO: Implement proper rarity system based on item properties
    */
 
-  // Random for now
-  switch((Math.random() * 5) | 0) {
-    case 0: return "uncommon";
-    case 1: return "rare";
-    case 2: return "epic";
-    case 3: return "legendary";
-    case 4: return "";
-  }
+  // Disabled - no rarity borders by default
+  return "";
+
+  // Uncomment below to enable rarity system based on item properties:
+  // if (!item) return "";
+  // let rarity = item.getDataObject()?.properties?.rarity;
+  // switch(rarity) {
+  //   case 1: return "uncommon";  // green
+  //   case 2: return "rare";      // blue
+  //   case 3: return "epic";      // purple
+  //   case 4: return "legendary"; // orange
+  //   default: return "";         // no border
+  // }
 
 }
 
-Slot.prototype.__renderAnimated = function() {
+Slot.prototype.__renderAnimated = function () {
 
   /*
    * Function Slot.__renderAnimated
@@ -77,7 +83,7 @@ Slot.prototype.__renderAnimated = function() {
    */
 
   // Skip when empty or not animated
-  if(this.isEmpty()) {
+  if (this.isEmpty()) {
     return;
   }
 
@@ -85,7 +91,7 @@ Slot.prototype.__renderAnimated = function() {
 
 }
 
-Slot.prototype.render = function() {
+Slot.prototype.render = function () {
 
   /*
    * Function Slot.render
@@ -95,23 +101,23 @@ Slot.prototype.render = function() {
   // Clear the slot
   this.canvas.clear();
   this.setCountString(null);
-  
+
   // Skip when empty
-  if(this.isEmpty()) {
+  if (this.isEmpty()) {
     return;
   }
-  
+
   // Draw the sprite to the slow canvas
   this.canvas.drawSprite(this.item, new Position(0, 0), 32);
-  
+
   // If the item is stackable we should update the count as well
-  if(this.item.isStackable()) {
+  if (this.item.isStackable()) {
     this.setCountString(this.item.getCount());
   }
 
 }
 
-Slot.prototype.setCountString = function(count) {
+Slot.prototype.setCountString = function (count) {
 
   /*
    * Function Slot.setCountString
@@ -122,7 +128,7 @@ Slot.prototype.setCountString = function(count) {
 
 }
 
-Slot.prototype.isEmpty = function() {
+Slot.prototype.isEmpty = function () {
 
   /*
    * Function Slot.isEmpty

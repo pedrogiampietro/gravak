@@ -1,22 +1,235 @@
 {
-  "0": "cure.js",
-  "1": "explosion.js",
-  "2": "exura.js",
-  "3": "invisible.js",
-  "4": "morph.js",
-  "5": "light.js",
-  "6": "life-drain.js",
-  "7": "hearthstone.js",
-  "8": "haste.js",
-  "9": "levitate.js",
-  "10": "intense_healing.js",
-  "11": "ultimate_healing.js",
-  "12": "antidote.js",
-  "13": "energy_strike.js",
-  "14": "flame_strike.js",
-  "15": "fire_wave.js",
-  "16": "energy_beam.js",
-  "17": "strong_haste.js",
-  "18": "magic_shield.js",
-  "19": "great_light.js"
+  "0": {
+    "script": "cure.js",
+    "name": "Cure Burning",
+    "words": "exana flam",
+    "mana": 30,
+    "level": 10,
+    "vocations": [
+      "sorcerer",
+      "druid",
+      "paladin",
+      "knight"
+    ]
+  },
+  "1": {
+    "script": "explosion.js",
+    "name": "Explosion",
+    "words": "exevo mas flam",
+    "mana": 160,
+    "level": 31,
+    "vocations": [
+      "sorcerer"
+    ]
+  },
+  "2": {
+    "script": "exura.js",
+    "name": "Light Healing",
+    "words": "exura",
+    "mana": 20,
+    "level": 8,
+    "vocations": [
+      "sorcerer",
+      "druid",
+      "paladin",
+      "knight"
+    ]
+  },
+  "3": {
+    "script": "invisible.js",
+    "name": "Invisible",
+    "words": "utana vid",
+    "mana": 440,
+    "level": 35,
+    "vocations": [
+      "sorcerer",
+      "druid"
+    ]
+  },
+  "4": {
+    "script": "morph.js",
+    "name": "Creature Illusion",
+    "words": "utevo res ina",
+    "mana": 100,
+    "level": 23,
+    "vocations": [
+      "sorcerer",
+      "druid"
+    ]
+  },
+  "5": {
+    "script": "light.js",
+    "name": "Light",
+    "words": "utevo lux",
+    "mana": 20,
+    "level": 8,
+    "vocations": [
+      "sorcerer",
+      "druid",
+      "paladin",
+      "knight"
+    ]
+  },
+  "6": {
+    "script": "life-drain.js",
+    "name": "Death Strike",
+    "words": "exori mort",
+    "mana": 20,
+    "level": 16,
+    "vocations": [
+      "sorcerer",
+      "druid"
+    ]
+  },
+  "7": {
+    "script": "hearthstone.js",
+    "name": "Temple Teleport",
+    "words": "exani tera",
+    "mana": 50,
+    "level": 8,
+    "vocations": [
+      "sorcerer",
+      "druid",
+      "paladin",
+      "knight"
+    ]
+  },
+  "8": {
+    "script": "haste.js",
+    "name": "Haste",
+    "words": "utani hur",
+    "mana": 60,
+    "level": 14,
+    "vocations": [
+      "sorcerer",
+      "druid",
+      "paladin",
+      "knight"
+    ]
+  },
+  "9": {
+    "script": "levitate.js",
+    "name": "Levitate",
+    "words": "exani hur",
+    "mana": 50,
+    "level": 12,
+    "vocations": [
+      "sorcerer",
+      "druid",
+      "paladin",
+      "knight"
+    ]
+  },
+  "10": {
+    "script": "intense_healing.js",
+    "name": "Intense Healing",
+    "words": "exura gran",
+    "mana": 70,
+    "level": 11,
+    "vocations": [
+      "sorcerer",
+      "druid",
+      "paladin",
+      "knight"
+    ]
+  },
+  "11": {
+    "script": "ultimate_healing.js",
+    "name": "Ultimate Healing",
+    "words": "exura vita",
+    "mana": 160,
+    "level": 20,
+    "vocations": [
+      "sorcerer",
+      "druid"
+    ]
+  },
+  "12": {
+    "script": "antidote.js",
+    "name": "Antidote",
+    "words": "exana pox",
+    "mana": 30,
+    "level": 10,
+    "vocations": [
+      "sorcerer",
+      "druid",
+      "paladin",
+      "knight"
+    ]
+  },
+  "13": {
+    "script": "energy_strike.js",
+    "name": "Energy Strike",
+    "words": "exori vis",
+    "mana": 20,
+    "level": 12,
+    "vocations": [
+      "sorcerer",
+      "druid"
+    ]
+  },
+  "14": {
+    "script": "flame_strike.js",
+    "name": "Flame Strike",
+    "words": "exori flam",
+    "mana": 20,
+    "level": 12,
+    "vocations": [
+      "sorcerer",
+      "druid"
+    ]
+  },
+  "15": {
+    "script": "fire_wave.js",
+    "name": "Fire Wave",
+    "words": "exevo flam hur",
+    "mana": 25,
+    "level": 18,
+    "vocations": [
+      "sorcerer"
+    ]
+  },
+  "16": {
+    "script": "energy_beam.js",
+    "name": "Energy Beam",
+    "words": "exevo vis lux",
+    "mana": 40,
+    "level": 23,
+    "vocations": [
+      "sorcerer"
+    ]
+  },
+  "17": {
+    "script": "strong_haste.js",
+    "name": "Strong Haste",
+    "words": "utani gran hur",
+    "mana": 100,
+    "level": 20,
+    "vocations": [
+      "sorcerer",
+      "druid"
+    ]
+  },
+  "18": {
+    "script": "magic_shield.js",
+    "name": "Magic Shield",
+    "words": "utamo vita",
+    "mana": 50,
+    "level": 14,
+    "vocations": [
+      "sorcerer",
+      "druid"
+    ]
+  },
+  "19": {
+    "script": "great_light.js",
+    "name": "Great Light",
+    "words": "utevo gran lux",
+    "mana": 60,
+    "level": 13,
+    "vocations": [
+      "sorcerer",
+      "druid"
+    ]
+  }
 }

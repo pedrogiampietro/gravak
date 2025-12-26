@@ -1098,4 +1098,40 @@ Player.prototype.checkDefensiveSkillAdvance = function () {
 
 };
 
+Player.prototype.isGM = function () {
+  return this.getProperty(CONST.PROPERTIES.ROLE) >= 3;
+};
+
+Player.prototype.getVocationName = function () {
+  /*
+   * Function Player.getVocationName
+   * Returns the string name of the vocation
+   */
+
+  let vocationId = this.getProperty(CONST.PROPERTIES.VOCATION);
+  switch (vocationId) {
+    case 1: return "sorcerer";
+    case 2: return "druid";
+    case 3: return "paladin";
+    case 4: return "knight";
+    default: return "none";
+  }
+};
+
+Player.prototype.decreaseMana = function (amount) {
+  /*
+   * Function Player.decreaseMana
+   * Decreases the mana of the player
+   */
+
+  let currentMana = this.getProperty(CONST.PROPERTIES.MANA);
+  let newMana = Math.max(0, currentMana - amount);
+
+  // Update property
+  this.setProperty(CONST.PROPERTIES.MANA, newMana);
+
+  // Send update packet to client
+  this.write(new CreaturePropertyPacket(this.getId(), CONST.PROPERTIES.MANA, newMana));
+};
+
 module.exports = Player;

@@ -844,17 +844,28 @@ PacketHandler.prototype.handleCharacterInformation = function (packet) {
    * Handles an incoming server packet with character information
    */
 
-  let gender = packet.gender === 0 ? "He" : "She";
+  let gender = packet.sex === 1 ? "He" : "She";
+
+  let vocationName = "nothing";
+  switch (packet.vocation) {
+    case 1: vocationName = "Sorcerer"; break;
+    case 2: vocationName = "Druid"; break;
+    case 3: vocationName = "Paladin"; break;
+    case 4: vocationName = "Knight"; break;
+  }
+
+  // Format: "You see Name (Level X). He is a Vocation."
+  let message = "You see %s (Level %s). %s is a %s.".format(packet.name, packet.level, gender, vocationName);
 
   // Show a server message
   gameClient.interface.notificationManager.setServerMessage(
-    "You see %s. %s is level %s.".format(packet.name, gender, packet.level),
+    message,
     Interface.prototype.COLORS.LIGHTGREEN
   );
 
   // Add to the console in lightgreen
   gameClient.interface.channelManager.addConsoleMessage(
-    "You see %s. %s is level %s.".format(packet.name, gender, packet.level),
+    message,
     Interface.prototype.COLORS.LIGHTGREEN
   );
 

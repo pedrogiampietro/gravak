@@ -340,9 +340,9 @@ Interface.prototype.SPELLS.set(5, {
   words: "utevo lux",
 });
 Interface.prototype.SPELLS.set(6, {
-  name: "Life Drain",
-  description: "Drains life from target",
-  icon: { x: 1, y: 4 },
+  name: "Death Strike",
+  description: "Strike with death",
+  icon: { x: 1, y: 3 },
   words: "exori mort",
 });
 Interface.prototype.SPELLS.set(7, {
@@ -378,7 +378,7 @@ Interface.prototype.SPELLS.set(11, {
 Interface.prototype.SPELLS.set(12, {
   name: "Antidote",
   description: "Cures poison",
-  icon: { x: 2, y: 7 },
+  icon: { x: 1, y: 0 },
   words: "exana pox",
 });
 Interface.prototype.SPELLS.set(13, {
@@ -390,37 +390,37 @@ Interface.prototype.SPELLS.set(13, {
 Interface.prototype.SPELLS.set(14, {
   name: "Flame Strike",
   description: "Strike with fire",
-  icon: { x: 0, y: 3 },
+  icon: { x: 1, y: 2 },
   words: "exori flam",
 });
 Interface.prototype.SPELLS.set(15, {
   name: "Fire Wave",
   description: "Wave of fire",
-  icon: { x: 0, y: 5 },
+  icon: { x: 2, y: 2 },
   words: "exevo flam hur",
 });
 Interface.prototype.SPELLS.set(16, {
   name: "Energy Beam",
   description: "Beam of energy",
-  icon: { x: 5, y: 5 },
+  icon: { x: 2, y: 4 },
   words: "exevo vis lux",
 });
 Interface.prototype.SPELLS.set(17, {
   name: "Strong Haste",
   description: "Run even faster",
-  icon: { x: 4, y: 9 },
+  icon: { x: 5, y: 8 },
   words: "utani gran hur",
 });
 Interface.prototype.SPELLS.set(18, {
   name: "Magic Shield",
   description: "Protect yourself with mana",
-  icon: { x: 9, y: 8 },
+  icon: { x: 3, y: 10 },
   words: "utamo vita",
 });
 Interface.prototype.SPELLS.set(19, {
   name: "Great Light",
   description: "Greatly illuminates the area",
-  icon: { x: 8, y: 8 },
+  icon: { x: 7, y: 9 },
   words: "utevo gran lux",
 });
 

@@ -116,14 +116,50 @@ Spellbook.prototype.handleSpell = function (sid, properties) {
     return;
   }
 
+  // Get spell metadata for requirements
+  let spellMeta = gameServer.database.getSpellMeta(sid);
+
+  // Check if player is GM (role >= 3) - GMs bypass all checks
+  let isGM = this.player.getProperty(CONST.PROPERTIES.ROLE) >= 3;
+
+  if (!isGM && spellMeta) {
+    // Check level requirement
+    let playerLevel = this.player.skills ? this.player.skills.getSkillLevel(CONST.PROPERTIES.EXPERIENCE) : 1;
+    if (playerLevel < spellMeta.level) {
+      this.player.sendCancelMessage("You need to be at least level " + spellMeta.level + " to cast this spell.");
+      return;
+    }
+
+    // Check mana requirement
+    let playerMana = this.player.getProperty(CONST.PROPERTIES.MANA);
+    if (playerMana < spellMeta.mana) {
+      this.player.sendCancelMessage("You do not have enough mana. You need " + spellMeta.mana + " mana.");
+      return;
+    }
+
+    // Check vocation requirement
+    let playerVocation = this.player.getVocationName ? this.player.getVocationName() : "knight";
+    if (spellMeta.vocations && spellMeta.vocations.length > 0) {
+      if (!spellMeta.vocations.includes(playerVocation.toLowerCase())) {
+        this.player.sendCancelMessage("Your vocation cannot cast this spell.");
+        return;
+      }
+    }
+  }
+
   // Call with reference to player
   let cooldown = spell.call(this.player, properties);
   console.log("Spell returned cooldown:", cooldown);
 
-  // Zero cooldown means that the cast was unsuccesful
+  // Zero cooldown means that the cast was unsuccessful
   if (cooldown === 0) {
     console.log("Cooldown is 0, cast failed");
     return;
+  }
+
+  // Consume mana (only for non-GMs)
+  if (!isGM && spellMeta && spellMeta.mana > 0) {
+    this.player.decreaseMana(spellMeta.mana);
   }
 
   // Write a packet to the player that the spell needs to be put on cooldown by a number of frames

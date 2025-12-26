@@ -534,4 +534,13 @@ Creature.prototype.increaseMana = function (amount) {
   );
 };
 
+Creature.prototype.sayEmote = function (message, color) {
+  /*
+   * Function Creature.sayEmote
+   * Makes the creature say an emote
+   */
+
+  this.speechHandler.emote(message, color);
+};
+
 module.exports = Creature;

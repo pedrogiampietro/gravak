@@ -128,7 +128,7 @@ Database.prototype.initialize = function () {
 
   // Load all other data files
   this.items = this.__loadItemDefinitions("items");
-  this.spells = this.__loadDefinitions("spells");
+  this.spells = this.__loadSpellDefinitions("spells");
   this.runes = this.__loadDefinitions("runes");
   this.doors = this.__loadDefinitions("doors");
 
@@ -391,6 +391,21 @@ Database.prototype.getSpell = function (sid) {
     return null;
   }
 
+  return this.spells.get(sid).script;
+
+}
+
+Database.prototype.getSpellMeta = function (sid) {
+
+  /*
+   * Function Database.getSpellMeta
+   * Returns the metadata (mana, level, vocations) for a spell
+   */
+
+  if (!this.spells.has(sid)) {
+    return null;
+  }
+
   return this.spells.get(sid);
 
 }
@@ -586,6 +601,36 @@ Database.prototype.__loadDefinitions = function (definition) {
 
   Object.entries(this.readDataDefinition(definition)).forEach(function ([key, value]) {
     reference.set(Number(key), require(getDataFile(definition, "definitions", value)));
+  });
+
+  console.log("Loaded [[ %s ]] %s definitions.".format(reference.size, definition));
+
+  return reference;
+
+}
+
+Database.prototype.__loadSpellDefinitions = function (definition) {
+
+  /*
+   * Function Database.__loadSpellDefinitions
+   * Loads spell definitions with metadata (mana, level, vocations)
+   */
+
+  let reference = new Map();
+
+  Object.entries(this.readDataDefinition(definition)).forEach(function ([key, spellData]) {
+    // Load the script
+    let script = require(getDataFile(definition, "definitions", spellData.script));
+
+    // Store both the script and metadata
+    reference.set(Number(key), {
+      script: script,
+      name: spellData.name || "Unknown",
+      words: spellData.words || "",
+      mana: spellData.mana || 0,
+      level: spellData.level || 1,
+      vocations: spellData.vocations || ["sorcerer", "druid", "paladin", "knight"]
+    });
   });
 
   console.log("Loaded [[ %s ]] %s definitions.".format(reference.size, definition));

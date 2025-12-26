@@ -59,7 +59,8 @@ PacketReader.prototype.readCharacterInformation = function () {
   return new Object({
     "name": this.readString(),
     "level": this.readUInt16(),
-    "gender": this.readUInt8()
+    "sex": this.readUInt8(),
+    "vocation": this.readUInt8()
   });
 
 }
