@@ -220,6 +220,13 @@ NetworkManager.prototype.readPacket = function (packet) {
       return this.packetHandler.handlePropertyChange(packet.readProperty());
     }
 
+    case CONST.PROTOCOL.SERVER.FOOD_TIMER: {
+      // Read remaining seconds and update skill window
+      let remainingSeconds = packet.readUInt32();
+      gameClient.interface.windowManager.getWindow("skill-window").setFoodTimer(remainingSeconds);
+      return;
+    }
+
     case CONST.PROTOCOL.SERVER.TRADE_OFFER: {
       return this.packetHandler.handleTradeOffer(packet.readTradeOffer());
     }

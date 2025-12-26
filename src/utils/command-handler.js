@@ -246,14 +246,38 @@ CommandHandler.prototype.handle = function (player, message) {
     return this.handleCommandAddSkill(player, message[1], message[2]);
   }
 
-  // Create item command: /i [item_id] [count]
+  // Create item command: /i [item_id_or_name] [count]
   if (message[0] === "/i") {
-    let itemId = Number(message[1]);
-    let count = Number(message[2]) || 1;
+    let itemArg = message[1];
+    let count = 1;
+    let itemId = null;
+
+    // Check if first argument is a number (ID)
+    if (!isNaN(Number(itemArg))) {
+      itemId = Number(itemArg);
+      count = Number(message[2]) || 1;
+    } else {
+      // Try to find by name - join remaining args (except last if it's a number for count)
+      let nameArgs = message.slice(1);
+
+      // Check if last arg is a number (count)
+      let lastArg = nameArgs[nameArgs.length - 1];
+      if (nameArgs.length > 1 && !isNaN(Number(lastArg))) {
+        count = Number(lastArg);
+        nameArgs = nameArgs.slice(0, -1);
+      }
+
+      let itemName = nameArgs.join(" ");
+      itemId = gameServer.database.getItemIdByName(itemName);
+
+      if (itemId === null) {
+        return player.sendCancelMessage("Item '" + itemName + "' not found. Usage: /i [id_or_name] [count]");
+      }
+    }
 
     // Validate item ID
     if (isNaN(itemId) || itemId <= 0) {
-      return player.sendCancelMessage("Invalid item ID. Usage: /i [item_id] [count]");
+      return player.sendCancelMessage("Invalid item. Usage: /i [item_id_or_name] [count]");
     }
 
     // Create the item
@@ -271,8 +295,9 @@ CommandHandler.prototype.handle = function (player, message) {
     // Add the item to the player's position
     gameServer.world.addTopThing(player.getPosition(), thing);
 
-    // Send success message
-    return player.sendCancelMessage("Created item " + itemId + (count > 1 ? " x" + count : ""));
+    // Send success message with item name if available
+    let itemName = thing.getPrototype().properties?.name || itemId;
+    return player.sendCancelMessage("Created " + itemName + (count > 1 ? " x" + count : ""));
   }
 
   if (message[0] === "/goto") {

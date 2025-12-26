@@ -1,6 +1,6 @@
 "use strict";
 
-const Database = function() {
+const Database = function () {
 
   /*
    * Class Database
@@ -18,7 +18,7 @@ const Database = function() {
 
 }
 
-Database.prototype.init = function() {
+Database.prototype.init = function () {
 
   /*
    * Function Database.init
@@ -30,7 +30,7 @@ Database.prototype.init = function() {
 
   // Open the database
   let openRequest = indexedDB.open("game", VERSION);
-  
+
   // Callbacks
   openRequest.onerror = this.__handleOpenError.bind(this);
   openRequest.onsuccess = this.__handleOpenSuccess.bind(this);
@@ -38,7 +38,7 @@ Database.prototype.init = function() {
 
 }
 
-Database.prototype.clear = function() {
+Database.prototype.clear = function () {
 
   /*
    * Function Database.clear
@@ -46,7 +46,7 @@ Database.prototype.clear = function() {
    */
 
   // Ask for confirmation
-  if(!confirm("Are you sure you want to reset the client?")) {
+  if (!confirm("Are you sure you want to reset the client?")) {
     return;
   }
 
@@ -56,10 +56,10 @@ Database.prototype.clear = function() {
 
   // Reload
   window.location.reload();
-  
+
 }
 
-Database.prototype.transaction = function(store, mode) {
+Database.prototype.transaction = function (store, mode) {
 
   /*
    * Function Database.transaction
@@ -70,7 +70,7 @@ Database.prototype.transaction = function(store, mode) {
 
 }
 
-Database.prototype.saveChunks = function() {
+Database.prototype.saveChunks = function () {
 
   /*
    * Function Database.saveChunks
@@ -78,13 +78,13 @@ Database.prototype.saveChunks = function() {
    */
 
   // Go over all chunks to be saved
-  Object.keys(this.__loadedMinimapChunks).forEach(function(id) {
+  Object.keys(this.__loadedMinimapChunks).forEach(function (id) {
     this.__saveChunk(id);
   }, this);
 
 }
 
-Database.prototype.preloadCallback = function(positions, callback) {
+Database.prototype.preloadCallback = function (positions, callback) {
 
   /*
    * Function Database.preloadCallback
@@ -96,22 +96,22 @@ Database.prototype.preloadCallback = function(positions, callback) {
 
   // Following code sort of implements Promise.all
   let count = 0;
-  
+
   // Collect all callbacks and when all have been completed
-  let finishCallback = function() {
-    if(++count === positions.length) {
+  let finishCallback = function () {
+    if (++count === positions.length) {
       return callback(this.getLoadedMinimapChunks());
     }
   }.bind(this);
 
   // Go over each position
-  positions.forEach(function(position) {    
+  positions.forEach(function (position) {
     this.loadChunk(this.getChunkIdentifier(position), finishCallback);
   }, this);
 
 }
 
-Database.prototype.isValidMinimapChunk = function(position) {
+Database.prototype.isValidMinimapChunk = function (position) {
 
   /*
    * Function Database.isValidMinimapChunk
@@ -122,7 +122,7 @@ Database.prototype.isValidMinimapChunk = function(position) {
 
 }
 
-Database.prototype.getChunkIdentifier = function(position) {
+Database.prototype.getChunkIdentifier = function (position) {
 
   /*
    * Function Database.getChunkIdentifier
@@ -135,10 +135,10 @@ Database.prototype.getChunkIdentifier = function(position) {
 
   // The z-coordinate is single
   return xChunk + "." + yChunk + "." + position.z;
-  
+
 }
 
-Database.prototype.getLoadedMinimapChunks = function() {
+Database.prototype.getLoadedMinimapChunks = function () {
 
   /*
    * Function Database.getLoadedMinimapChunks
@@ -149,7 +149,7 @@ Database.prototype.getLoadedMinimapChunks = function() {
 
 }
 
-Database.prototype.loadChunk = function(id, callback) {
+Database.prototype.loadChunk = function (id, callback) {
 
   /*
    * Function Database.loadChunk
@@ -157,14 +157,14 @@ Database.prototype.loadChunk = function(id, callback) {
    */
 
   // Already loaded: immediately return by calling the callback
-  if(this.__loadedMinimapChunks.hasOwnProperty(id)) {
+  if (this.__loadedMinimapChunks.hasOwnProperty(id)) {
     return callback();
   }
 
-  this.transaction("minimap", "readonly").get(id).onsuccess = function(event) {
+  this.transaction("minimap", "readonly").get(id).onsuccess = function (event) {
 
     // Does not have this chunk in the database yet: create a new one
-    if(event.target.result === undefined) {
+    if (event.target.result === undefined) {
       this.__loadedMinimapChunks[id] = this.__createView(this.__createChunk());
     } else {
       this.__loadedMinimapChunks[id] = this.__createView(event.target.result.data);
@@ -177,7 +177,7 @@ Database.prototype.loadChunk = function(id, callback) {
 
 }
 
-Database.prototype.storeFile = function(filename, data) {
+Database.prototype.storeFile = function (filename, data) {
 
   /*
    * Function Database.storeFile
@@ -195,33 +195,35 @@ Database.prototype.storeFile = function(filename, data) {
     "data": data
   });
 
-  request.onsuccess = function(event) {
+  request.onsuccess = function (event) {
     console.debug("Cached file " + filename + " to indexDB.");
   }
 
 }
 
-Database.prototype.loadConstants = async function() {
+Database.prototype.loadConstants = async function () {
 
-  let response = await fetch("/data/%s/constants.json".format(gameClient.SERVER_VERSION));
+  // Add cache-busting timestamp to prevent browser caching
+  let cacheBuster = Date.now();
+  let response = await fetch("/data/%s/constants.json?v=%s".format(gameClient.SERVER_VERSION, cacheBuster));
 
   return await response.json();
 
 }
 
-Database.prototype.loadGameAssets = function() {
+Database.prototype.loadGameAssets = function () {
 
   /*
    * Function Database.loadGameAssets
    * Wrapper around indexedDB for storing minimap information
    */
 
-  this.loadConstants().then(function(constant) {
+  this.loadConstants().then(function (constant) {
 
     window.CONST = constant;
 
     // Quickly check localstorage for state of assets
-    if(!localStorage.getItem("Tibia.spr") || !localStorage.getItem("Tibia.dat")) {
+    if (!localStorage.getItem("Tibia.spr") || !localStorage.getItem("Tibia.dat")) {
       return gameClient.networkManager.loadGameFilesServer();
     }
 
@@ -231,7 +233,7 @@ Database.prototype.loadGameAssets = function() {
 
 }
 
-Database.prototype.__handleUpgrade = function(event) {
+Database.prototype.__handleUpgrade = function (event) {
 
   /*
    * Function Database.handleUpgrade
@@ -243,16 +245,16 @@ Database.prototype.__handleUpgrade = function(event) {
   // Set the database
   this.__database = event.target.result;
 
-  let objectStore = this.__database.createObjectStore("minimap", {keyPath: "chunk"});
+  let objectStore = this.__database.createObjectStore("minimap", { keyPath: "chunk" });
   objectStore.createIndex("id", "chunk");
-  let fileStore = this.__database.createObjectStore("files", {keyPath: "filename"});
+  let fileStore = this.__database.createObjectStore("files", { keyPath: "filename" });
   fileStore.createIndex("id", "filename");
 
   fileStore.onsuccess = this.loadGameAssets.bind(this);
 
 }
 
-Database.prototype.__handleOpenError = function(event) {
+Database.prototype.__handleOpenError = function (event) {
 
   /*
    * Function Database.handleOpenError
@@ -263,7 +265,7 @@ Database.prototype.__handleOpenError = function(event) {
 
 }
 
-Database.prototype.__handleOpenSuccess = function(event) {
+Database.prototype.__handleOpenSuccess = function (event) {
 
   /*
    * Function Database.handleOpenSuccess
@@ -279,7 +281,7 @@ Database.prototype.__handleOpenSuccess = function(event) {
 
 }
 
-Database.prototype.__createView = function(chunk) {
+Database.prototype.__createView = function (chunk) {
 
   /*
    * Function Database.__createView
@@ -294,7 +296,7 @@ Database.prototype.__createView = function(chunk) {
 
 }
 
-Database.prototype.__createChunk = function() {
+Database.prototype.__createChunk = function () {
 
   /*
    * Function Database.__createChunk
@@ -308,7 +310,7 @@ Database.prototype.__createChunk = function() {
 
 }
 
-Database.prototype.__loadGameAssets = function() {
+Database.prototype.__loadGameAssets = function () {
 
   /*
    * Function Database.__loadGameAssets
@@ -317,22 +319,22 @@ Database.prototype.__loadGameAssets = function() {
 
   // Notify user we are currently loading assets..
   gameClient.setErrorModal("Welcome back! Loading game assets from local storage.");
- 
-  this.transaction("files", "readonly").getAll().onsuccess = function(event) {
+
+  this.transaction("files", "readonly").getAll().onsuccess = function (event) {
 
     // Close the modal manager if it is still opened
     gameClient.interface.modalManager.close();
 
     // Somehow no data was returned..
-    if(event.target.result.length === 0) {
+    if (event.target.result.length === 0) {
       return;
     }
 
     // Go over the returned sprite and data file from the database: parse them to use in game
-    event.target.result.forEach(function(file) {
-  
+    event.target.result.forEach(function (file) {
+
       // Delegate the data file to the appropriate handler
-      switch(file.filename) {
+      switch (file.filename) {
         case "Tibia.dat":
           return gameClient.dataObjects.__load(file.filename, file.data);
         case "Tibia.spr":
@@ -342,12 +344,12 @@ Database.prototype.__loadGameAssets = function() {
       }
 
     });
-  
+
   }
 
 }
 
-Database.prototype.dropWorldMapChunks = function(position) {
+Database.prototype.dropWorldMapChunks = function (position) {
 
   /*
    * Function Database.dropChunks
@@ -355,13 +357,13 @@ Database.prototype.dropWorldMapChunks = function(position) {
    */
 
   // Get the identifier
-  let [ rx, ry, rz ] = this.getChunkIdentifier(position).split(".").map(Number);
-  
-  Object.keys(this.__loadedMinimapChunks).forEach(function(id) {
+  let [rx, ry, rz] = this.getChunkIdentifier(position).split(".").map(Number);
 
-    let [ x, y, z ] = id.split(".").map(Number);
-   
-    if(Math.abs(rx - x) > 2 || Math.abs(ry - y) > 2 || rz !== z) {
+  Object.keys(this.__loadedMinimapChunks).forEach(function (id) {
+
+    let [x, y, z] = id.split(".").map(Number);
+
+    if (Math.abs(rx - x) > 2 || Math.abs(ry - y) > 2 || rz !== z) {
       delete this.__loadedMinimapChunks[id];
     }
 
@@ -369,23 +371,23 @@ Database.prototype.dropWorldMapChunks = function(position) {
 
 }
 
-Database.prototype.checkChunks = function(id) {
+Database.prototype.checkChunks = function (id) {
 
   /*
    * Function Database.checkChunks
    * Saves reference to all chunks that no longer need to be kept in memory
    */
 
-  Object.keys(this.__loadedMinimapChunks).forEach(function(id) {
+  Object.keys(this.__loadedMinimapChunks).forEach(function (id) {
     let [x, y, z] = id.split(".").map(Number);
-    if(gameClient.player.getPosition().z !== z) {
+    if (gameClient.player.getPosition().z !== z) {
       this.__saveChunk(id);
     }
   }, this);
 
 }
 
-Database.prototype.__saveChunk = function(id) {
+Database.prototype.__saveChunk = function (id) {
 
   /*
    * Function Database.__saveChunk
@@ -400,7 +402,7 @@ Database.prototype.__saveChunk = function(id) {
   });
 
   // When done remove reference from memory
-  request.onsuccess = function() {
+  request.onsuccess = function () {
     delete this.__loadedMinimapChunks[id];
   }.bind(this)
 

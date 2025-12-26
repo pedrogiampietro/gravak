@@ -208,7 +208,7 @@ Player.prototype.isSated = function (ticks) {
     this.hasCondition(Condition.prototype.SATED) &&
     ticks +
     this.conditions.__conditions.get(Condition.prototype.SATED).numberTicks >
-    100
+    1500
   );
 };
 

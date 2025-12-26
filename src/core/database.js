@@ -344,6 +344,27 @@ Database.prototype.getMonsterByName = function (name) {
 
 }
 
+Database.prototype.getItemIdByName = function (name) {
+
+  /*
+   * Function Database.getItemIdByName
+   * Finds an item by name (case-insensitive exact match) and returns the item ID
+   */
+
+  let searchName = name.toLowerCase();
+
+  for (let [id, proto] of Object.entries(this.items)) {
+    if (proto.properties && proto.properties.name) {
+      if (proto.properties.name.toLowerCase() === searchName) {
+        return Number(id);
+      }
+    }
+  }
+
+  return null;
+
+}
+
 Database.prototype.getRune = function (id) {
 
   /*

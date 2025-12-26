@@ -914,6 +914,21 @@ const PlayerStatePacket = function (player) {
 PlayerStatePacket.prototype = Object.create(PacketWriter.prototype);
 PlayerStatePacket.prototype.constructor = PlayerStatePacket;
 
+const FoodTimerPacket = function (remainingSeconds) {
+  /*
+   * Class FoodTimerPacket
+   * Wrapper for a packet that sends the remaining food timer to the client
+   */
+
+  // Inherits from packet writer
+  PacketWriter.call(this, 51, 4); // 51 = FOOD_TIMER
+
+  this.writeUInt32(remainingSeconds);
+};
+
+FoodTimerPacket.prototype = Object.create(PacketWriter.prototype);
+FoodTimerPacket.prototype.constructor = FoodTimerPacket;
+
 module.exports = {
   CancelMessagePacket,
   ChannelDefaultPacket,
@@ -957,4 +972,5 @@ module.exports = {
   TilePacket,
   ToggleConditionPacket,
   WorldTimePacket,
+  FoodTimerPacket,
 };

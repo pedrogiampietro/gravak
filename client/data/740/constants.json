@@ -76,7 +76,8 @@
       "SPELL_CAST": 32,
       "SPELL_REMOVE": 38,
       "CREATURE_PROPERTY": 37,
-      "CHANNEL_JOIN": 50
+      "CHANNEL_JOIN": 50,
+      "FOOD_TIMER": 51
     }
   },
   "DIRECTION": {

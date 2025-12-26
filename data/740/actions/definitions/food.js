@@ -1,4 +1,5 @@
 const Condition = requireModule("combat/condition");
+const { FoodTimerPacket } = requireModule("network/protocol");
 
 // Add this to the item definitions?
 const lookup = new Object({
@@ -64,6 +65,14 @@ module.exports = function playerEatFood(player, thing, index, item) {
 
   // Extend the sated condition
   player.extendCondition(Condition.prototype.SATED, ticks, 600, null);
+
+  // Send food timer update to client
+  // Get remaining ticks from SATED condition and convert to seconds (ticks * 600ms / 1000)
+  let satedCondition = player.conditions.__conditions.get(Condition.prototype.SATED);
+  if (satedCondition) {
+    let remainingSeconds = Math.floor((satedCondition.numberTicks * 600) / 1000);
+    player.write(new FoodTimerPacket(remainingSeconds));
+  }
 
   player.speechHandler.internalCreatureSay(sound, CONST.COLOR.ORANGE);
 
