@@ -70,13 +70,13 @@ Canvas.prototype.getWorldCoordinates = function (event) {
   let { x, y } = this.getCanvasCoordinates(event);
 
   // The scaling that needs to be applied
-  let scaling = gameClient.interface.getSpriteScaling();
+  let scaling = gameClient.interface.getSpriteScalingVector();
   let position = gameClient.player.getPosition();
 
   // The chunk can easily be determined
   let projectedViewPosition = new Position(
-    Math.floor(x / scaling) + position.x - 7,
-    Math.floor(y / scaling) + position.y - 5,
+    Math.floor(x / scaling.x) + position.x - 7,
+    Math.floor(y / scaling.y) + position.y - 5,
     position.z
   );
 

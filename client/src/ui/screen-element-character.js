@@ -118,19 +118,39 @@ CharacterElement.prototype.setTextPosition = function () {
    * Sets the text position of the character element
    */
 
-  // Get the offset for the character element
-  let offset = this.__getAbsoluteOffset(
-    gameClient.renderer.getCreatureScreenPosition(this.__creature)
-  );
-  let fraction = gameClient.interface.getSpriteScaling();
+  let isMobile = gameClient.touch && gameClient.touch.isMobileMode;
+  let isPlayer = this.__creature === gameClient.player;
+
+  // Use the same position calculation for both desktop and mobile
+  // This includes movement interpolation for smooth animation
+  let screenPosition = gameClient.renderer.getCreatureScreenPosition(this.__creature);
+
+  /*
+   * FIX: Snap to internal pixel grid to match renderer
+   * The renderer rounds coordinates to the nearest integer pixel (32x)
+   * The DOM uses floating point, causing sub-pixel jitter when scaled
+   * We must snap the DOM position to the same "virtual pixels" as the sprite
+   */
+  screenPosition.x = Math.round(screenPosition.x * 32) / 32;
+  screenPosition.y = Math.round(screenPosition.y * 32) / 32;
+
+  let offset = this.__getAbsoluteOffset(screenPosition);
+  let scale = gameClient.interface.getSpriteScalingVector();
 
   // Center the nameplate horizontally
-  offset.left += fraction / 2;
+  offset.left += scale.x / 2;
 
   // Add an offset to make the nameplate hover above the player
   // Mobile needs larger offset due to CSS scaling, desktop uses original
-  let isMobile = gameClient.touch && gameClient.touch.isMobileMode;
-  offset.top -= isMobile ? (fraction * 2.2) : (fraction / 4);
+  // Use scale.y for vertical offset to match height scaling
+  offset.top -= isMobile ? (scale.y * 0.7) : (scale.y / 4);
+
+  // Add smooth transition for mobile to reduce any visual jittering
+  if (isMobile) {
+    this.element.style.transition = "transform 0.05s linear";
+  } else {
+    this.element.style.transition = "";
+  }
 
   // Delegate to the generic move function
   this.__updateTextPosition(offset);

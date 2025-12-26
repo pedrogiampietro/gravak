@@ -61,6 +61,9 @@ CombatHandler.prototype.handleCombat = function (source) {
     return gameServer.world.sendMagicEffect(target.position, CONST.EFFECT.MAGIC.BLOCKHIT);
   }
 
+  // Blood effect when damage is dealt (effect ID 1)
+  gameServer.world.sendMagicEffect(target.position, 1);
+
   // Remove health from target using the actual calculated damage
   return target.decreaseHealth(source, unmitigatedDamage);
 

@@ -130,11 +130,6 @@ screen and (max-width: 768px) {
         display: block;
     }
 
-    /* Hide chat/lower section in landscape to maximize game view */
-    #game-wrapper .main .lower {
-        display: none !important;
-    }
-
     /* Hide original hotbar */
     .hotbar {
         display: none !important;
@@ -147,6 +142,7 @@ screen and (max-width: 768px) {
 
     /* Windows positioned on right side for mobile */
     .window {
+        pointer-events: auto !important;
         position: fixed !important;
         top: 170px !important;
         left: auto !important;
@@ -161,6 +157,23 @@ screen and (max-width: 768px) {
         z-index: 9995;
         overflow: visible;
         font-size: 11px;
+    }
+
+    /* Battle window stays on the right side */
+    #battle-window {
+        z-index: 9990 !important;
+        top: 170px !important;
+        right: 5px !important;
+        left: auto !important;
+    }
+
+    /* Container windows (backpack, loot, corpse) open on the LEFT side */
+    /* Target any window with containerIndex attribute (dynamically created) */
+    .window[containerIndex] {
+        left: 5px !important;
+        right: auto !important;
+        top: 50px !important;
+        transform-origin: top left;
     }
 
     .window .header {

@@ -56,6 +56,9 @@ const Interface = function () {
   document
     .getElementById("keyring")
     .addEventListener("click", this.__openKeyRing.bind(this));
+
+  // Cache for mobile scale to avoid layout thrashing
+  this.__cachedMobileScale = null;
 };
 
 Interface.prototype.SCREEN_WIDTH_MIN = 480;
@@ -699,16 +702,58 @@ Interface.prototype.getSpriteScaling = function () {
   let isMobile = gameClient.touch && gameClient.touch.isMobileMode;
 
   if (isMobile) {
+    // Return cached value if available
+    if (this.__cachedMobileScale !== null) {
+      return this.__cachedMobileScale;
+    }
+
     // Mobile: use actual displayed canvas size vs internal size
     let canvas = gameClient.renderer.screen.canvas;
     let displayedWidth = canvas.getBoundingClientRect().width;
     let internalWidth = canvas.width;
     let scale = displayedWidth / internalWidth;
-    return 32 * scale;
+
+    // Cache the result (32 * scale)
+    this.__cachedMobileScale = 32 * scale;
+    return this.__cachedMobileScale;
   }
 
   // Desktop: use the original resolution scale calculation
   return 32 * this.getResolutionScale();
+};
+
+Interface.prototype.getSpriteScalingVector = function () {
+  /*
+   * Function Interface.getSpriteScalingVector
+   * Returns the sprite scaling in X and Y directions
+   * Needed for mobile where the canvas might be stretched non-uniformly
+   */
+
+  // Check if we're in mobile mode
+  let isMobile = gameClient.touch && gameClient.touch.isMobileMode;
+
+  if (isMobile) {
+    let canvas = gameClient.renderer.screen.canvas;
+    let rect = canvas.getBoundingClientRect();
+
+    // Calculate separate scales for Width and Height
+    // Mobile CSS stretches to 100% width/height, potentially changing aspect ratio
+    let scaleX = rect.width / canvas.width;
+    let scaleY = rect.height / canvas.height;
+
+    // Cache the result for stability if needed, but for now return raw
+    // Note: If we need caching, we should cache both values
+    // For now reusing the existing cache variable for the scalar (width) scale
+
+    return {
+      x: 32 * scaleX,
+      y: 32 * scaleY
+    };
+  }
+
+  // Desktop: uniform scaling
+  let scale = 32 * this.getResolutionScale();
+  return { x: scale, y: scale };
 };
 
 Interface.prototype.addAvailableResolutions = function () {
@@ -795,6 +840,9 @@ Interface.prototype.handleResize = function (event) {
    * Function Interface.handleResize
    * Closes windows in the column if the window is resized
    */
+
+  // Invalidate mobile scale cache
+  this.__cachedMobileScale = null;
 
   // Get and set the resolution scale
   gameClient.renderer.screen.setScale(this.getResolutionScale());
