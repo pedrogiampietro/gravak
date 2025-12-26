@@ -6,6 +6,7 @@ html {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  height: 100%;
 }
 
 body {
@@ -280,6 +281,7 @@ button.symbol-button {
   justify-content: flex-start;
   background-image: url("/png/bg2.png");
   max-height: 100%;
+  min-height: 100%;
   flex: 0 1 auto;
   overflow: hidden;
 }

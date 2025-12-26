@@ -36,6 +36,9 @@ Container.prototype.createDOM = function (title, items) {
   this.window = new InteractiveWindow(element);
   this.window.addTo(gameClient.interface.windowManager.getFreeStack(expectedHeight));
 
+  // Register the window with the WindowManager to enable drag and drop
+  gameClient.interface.windowManager.register(this.window);
+
   // Attach a listener to the window close event to inform the server of container close
   this.window.on("close", this.close.bind(this));
   this.window.state.title = title.capitalize();

@@ -164,7 +164,9 @@ WindowManager.prototype.__attachStackEventListeners = function (stacks) {
    */
 
   // Attach a listener to both stacks for when windows are dropped
-  Array.from(stacks).forEach(element => element.addEventListener("dragover", this.__handleWindowDrop.bind(this)));
+  Array.from(stacks).forEach(function (element) {
+    element.addEventListener("dragover", this.__handleWindowDrop.bind(this));
+  }, this);
 
 }
 
@@ -205,11 +207,16 @@ WindowManager.prototype.__handleWindowDrop = function (event) {
   }
 
   // Run up the dropped area to get the window being swapped
-  while (element.parentElement.className !== "column") {
+  let iterations = 0;
+  while (element.parentElement && element.parentElement.className !== "column") {
     element = element.parentElement;
+    iterations++;
+    if (iterations > 20) {
+      break;
+    }
   }
 
-  // Nothign to do if the same element is being hovered on
+  // Nothing to do if the same element is being hovered on
   if (element === this.state.currentDragElement) {
     return;
   }
@@ -229,6 +236,12 @@ WindowManager.prototype.__handleDragEnd = function (event) {
    * Function WindowManager.handleDragEnd
    * Returns the window for a particular name
    */
+
+  // Check if there is a current drag element (drag may have been cancelled)
+  if (this.state.currentDragElement === null) {
+    event.target.style.opacity = 1;
+    return;
+  }
 
   // Reset the opacity and current element
   this.state.currentDragElement.children[1].scrollTop = this.state.currentDragElementOffset;

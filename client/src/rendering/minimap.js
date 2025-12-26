@@ -341,6 +341,7 @@ Minimap.prototype.__drawTargetMarker = function () {
   /*
    * Function Minimap.__drawTargetMarker
    * Draws a marker at the target position showing where player is walking to
+   * Uses A* pathfinding on minimap colors to draw actual path
    */
 
   // Check if there's an active target (from pathfinder or local)
@@ -375,16 +376,41 @@ Minimap.prototype.__drawTargetMarker = function () {
   // Reset composite operation for drawing on top
   ctx.globalCompositeOperation = "source-over";
 
+  // Get image data for pathfinding
+  let imageData = ctx.getImageData(0, 0, 160, 160);
+
+  // Calculate path using A* on minimap colors
+  let pathPoints = this.__calculateMinimapPath(
+    playerCanvasX, playerCanvasY,
+    targetCanvasX, targetCanvasY,
+    imageData,
+    zoomScale
+  );
+
   ctx.save();
 
-  // Draw dashed line from player to target
-  ctx.beginPath();
-  ctx.strokeStyle = "#00FF00";
-  ctx.lineWidth = 1;
-  ctx.setLineDash([3, 2]);
-  ctx.moveTo(playerCanvasX, playerCanvasY);
-  ctx.lineTo(targetCanvasX, targetCanvasY);
-  ctx.stroke();
+  // Draw path as connected segments if we have a path
+  if (pathPoints.length > 1) {
+    ctx.beginPath();
+    ctx.strokeStyle = "#00FF00";
+    ctx.lineWidth = 1;
+    ctx.setLineDash([3, 2]);
+    ctx.moveTo(pathPoints[0].x, pathPoints[0].y);
+
+    for (let i = 1; i < pathPoints.length; i++) {
+      ctx.lineTo(pathPoints[i].x, pathPoints[i].y);
+    }
+    ctx.stroke();
+  } else {
+    // Fallback: draw straight line
+    ctx.beginPath();
+    ctx.strokeStyle = "#FF6600"; // Orange to indicate potential obstacles
+    ctx.lineWidth = 1;
+    ctx.setLineDash([3, 2]);
+    ctx.moveTo(playerCanvasX, playerCanvasY);
+    ctx.lineTo(targetCanvasX, targetCanvasY);
+    ctx.stroke();
+  }
 
   // Draw target marker (red X)
   ctx.strokeStyle = "#FF0000";
@@ -400,6 +426,218 @@ Minimap.prototype.__drawTargetMarker = function () {
   ctx.restore();
 
 }
+
+Minimap.prototype.__calculateMinimapPath = function (startX, startY, endX, endY, imageData, zoomScale) {
+
+  /*
+   * Function Minimap.__calculateMinimapPath
+   * Calculates an A* path on the minimap using color data to determine walkability
+   */
+
+  // Step size based on zoom (larger steps for zoomed view)
+  let step = Math.max(2, Math.floor(zoomScale));
+
+  // Canvas dimensions
+  let canvasWidth = 160;
+  let canvasHeight = 160;
+
+  // Convert to grid coordinates
+  let gridStartX = Math.floor(startX / step);
+  let gridStartY = Math.floor(startY / step);
+  let gridEndX = Math.floor(endX / step);
+  let gridEndY = Math.floor(endY / step);
+
+  // Grid dimensions
+  let gridWidth = Math.ceil(canvasWidth / step);
+  let gridHeight = Math.ceil(canvasHeight / step);
+
+  // Check if point is within bounds
+  let isInBounds = function (x, y) {
+    return x >= 0 && x < gridWidth && y >= 0 && y < gridHeight;
+  };
+
+  // Check if a grid cell is walkable based on minimap color
+  let self = this;
+  let isWalkable = function (gx, gy) {
+    let canvasX = gx * step;
+    let canvasY = gy * step;
+
+    if (canvasX < 0 || canvasX >= canvasWidth || canvasY < 0 || canvasY >= canvasHeight) {
+      return false;
+    }
+
+    let index = (canvasY * canvasWidth + canvasX) * 4;
+    let r = imageData.data[index];
+    let g = imageData.data[index + 1];
+    let b = imageData.data[index + 2];
+    let a = imageData.data[index + 3];
+
+    return self.__isWalkableColor(r, g, b, a);
+  };
+
+  // Clamp to bounds
+  gridStartX = Math.max(0, Math.min(gridWidth - 1, gridStartX));
+  gridStartY = Math.max(0, Math.min(gridHeight - 1, gridStartY));
+  gridEndX = Math.max(0, Math.min(gridWidth - 1, gridEndX));
+  gridEndY = Math.max(0, Math.min(gridHeight - 1, gridEndY));
+
+  // A* implementation
+  let openSet = [];
+  let closedSet = new Set();
+  let cameFrom = new Map();
+  let gScore = new Map();
+  let fScore = new Map();
+
+  let key = function (x, y) { return x + "," + y; };
+
+  let heuristic = function (x1, y1, x2, y2) {
+    return Math.abs(x1 - x2) + Math.abs(y1 - y2);
+  };
+
+  let startKey = key(gridStartX, gridStartY);
+  gScore.set(startKey, 0);
+  fScore.set(startKey, heuristic(gridStartX, gridStartY, gridEndX, gridEndY));
+  openSet.push({ x: gridStartX, y: gridStartY, f: fScore.get(startKey) });
+
+  // Direction vectors (8 directions)
+  let directions = [
+    { dx: 0, dy: -1 },  // N
+    { dx: 1, dy: 0 },   // E
+    { dx: 0, dy: 1 },   // S
+    { dx: -1, dy: 0 },  // W
+    { dx: 1, dy: -1 },  // NE
+    { dx: 1, dy: 1 },   // SE
+    { dx: -1, dy: 1 },  // SW
+    { dx: -1, dy: -1 }  // NW
+  ];
+
+  let iterations = 0;
+  let maxIterations = 2000; // Smaller for minimap
+
+  while (openSet.length > 0 && iterations < maxIterations) {
+    iterations++;
+
+    // Get node with lowest fScore
+    openSet.sort(function (a, b) { return a.f - b.f; });
+    let current = openSet.shift();
+    let currentKey = key(current.x, current.y);
+
+    // Reached goal
+    if (current.x === gridEndX && current.y === gridEndY) {
+      // Reconstruct path
+      let path = [];
+      let pathKey = currentKey;
+
+      while (pathKey) {
+        let [px, py] = pathKey.split(",").map(Number);
+        path.unshift({ x: px * step + step / 2, y: py * step + step / 2 });
+        pathKey = cameFrom.get(pathKey);
+      }
+
+      return path;
+    }
+
+    closedSet.add(currentKey);
+
+    // Check neighbors
+    for (let i = 0; i < directions.length; i++) {
+      let nx = current.x + directions[i].dx;
+      let ny = current.y + directions[i].dy;
+      let neighborKey = key(nx, ny);
+
+      if (!isInBounds(nx, ny) || closedSet.has(neighborKey)) {
+        continue;
+      }
+
+      if (!isWalkable(nx, ny)) {
+        continue;
+      }
+
+      // Diagonal movement costs more
+      let moveCost = (directions[i].dx !== 0 && directions[i].dy !== 0) ? 1.414 : 1;
+      let tentativeG = gScore.get(currentKey) + moveCost;
+
+      if (!gScore.has(neighborKey) || tentativeG < gScore.get(neighborKey)) {
+        cameFrom.set(neighborKey, currentKey);
+        gScore.set(neighborKey, tentativeG);
+        let f = tentativeG + heuristic(nx, ny, gridEndX, gridEndY);
+        fScore.set(neighborKey, f);
+
+        // Check if already in openSet
+        let inOpen = openSet.some(function (n) { return n.x === nx && n.y === ny; });
+        if (!inOpen) {
+          openSet.push({ x: nx, y: ny, f: f });
+        }
+      }
+    }
+  }
+
+  // No path found - return empty array
+  return [];
+
+}
+
+Minimap.prototype.__isWalkableColor = function (r, g, b, a) {
+
+  /*
+   * Function Minimap.__isWalkableColor
+   * Determines if a minimap color represents a walkable tile
+   */
+
+  // Transparent or unexplored (black)
+  if (a < 128 || (r === 0 && g === 0 && b === 0)) {
+    return false;
+  }
+
+  let max = Math.max(r, g, b);
+  let min = Math.min(r, g, b);
+  let delta = max - min;
+
+  // Very dark colors are usually obstacles
+  if (max < 50) {
+    return false;
+  }
+
+  // Check for red/orange hues (obstacles like walls)
+  if (r > 150 && g < 100 && b < 100) {
+    return false;
+  }
+
+  // Orange has high R, medium G, low B
+  if (r > 180 && g > 50 && g < 150 && b < 80) {
+    return false;
+  }
+
+  // Pure red (saturated)
+  if (delta > 100 && r === max && r > 200 && g < 100) {
+    return false;
+  }
+
+  // Gray colors (low saturation) are usually floors - walkable
+  if (delta < 50 && max > 80) {
+    return true;
+  }
+
+  // Green colors (grass, nature) - walkable
+  if (g > r && g > b && g > 100) {
+    return true;
+  }
+
+  // Brown/tan colors (sand, dirt) - usually walkable
+  if (r > b && g > b && max > 100) {
+    return true;
+  }
+
+  // Blue colors could be water - not walkable
+  if (b > r && b > g && b > 150) {
+    return false;
+  }
+
+  // Default: if bright enough, consider walkable
+  return max > 100;
+
+}
+
 
 Minimap.prototype.colors = new Array(
   "0xFF000000", "0xFF330000", "0xFF660000", "0xFF990000",
