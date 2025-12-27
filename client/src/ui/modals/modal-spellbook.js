@@ -69,8 +69,17 @@ SpellbookModal.prototype.__createSpellNode = function (id) {
     32, 32
   );
 
-  // Set some more information
-  DOMElement.lastElementChild.innerHTML = "%s<br><small>%s</small>".format(spell.name, spell.description);
+  // Format vocations for display (capitalize first letter)
+  let vocationsText = "";
+  if (spell.vocations && spell.vocations.length > 0) {
+    let formattedVocations = spell.vocations.map(function (v) {
+      return v.charAt(0).toUpperCase() + v.slice(1);
+    });
+    vocationsText = "<br><span style='color: #00CCFF; font-size: 10px;'>" + formattedVocations.join(", ") + "</span>";
+  }
+
+  // Set some more information with vocations
+  DOMElement.lastElementChild.innerHTML = "%s<br><small>%s</small>%s".format(spell.name, spell.description, vocationsText);
   DOMElement.addEventListener("click", this.__handleClick.bind(this, id));
   DOMElement.title = spell.description;
   DOMElement.style.display = "flex";

@@ -1,4 +1,4 @@
-const OfferModal = function(element) {
+const OfferModal = function (element) {
 
   /*
    * Class OfferModal
@@ -23,7 +23,7 @@ const OfferModal = function(element) {
 OfferModal.prototype = Object.create(Modal.prototype);
 OfferModal.constructor = OfferModal;
 
-OfferModal.prototype.__handleChangeCount = function(event) {
+OfferModal.prototype.__handleChangeCount = function (event) {
 
   /*
    * Function OfferModal.__handleChangeCount
@@ -35,7 +35,7 @@ OfferModal.prototype.__handleChangeCount = function(event) {
 
 }
 
-OfferModal.prototype.handleChangeCount = function() {
+OfferModal.prototype.handleChangeCount = function () {
 
   /*
    * Function OfferModal.__handleChangeCount
@@ -46,7 +46,7 @@ OfferModal.prototype.handleChangeCount = function() {
 
   let count = Number(document.getElementById("buy-count").value);
 
-  if(document.getElementById("buy-count-wrapper").style.display === "none") {
+  if (document.getElementById("buy-count-wrapper").style.display === "none") {
     count = 1;
   }
 
@@ -55,7 +55,7 @@ OfferModal.prototype.handleChangeCount = function() {
 
 }
 
-OfferModal.prototype.setOfferType = function(which) {
+OfferModal.prototype.setOfferType = function (which) {
 
   /*
    * Function OfferModal.setOfferType
@@ -65,9 +65,9 @@ OfferModal.prototype.setOfferType = function(which) {
   document.getElementById("set-sell").className = "offer-tab";
   document.getElementById("set-buy").className = "offer-tab";
   document.getElementById("set-%s".format(which)).className += " selected";
-  
+
   // Block if already set
-  if(this.__offerType === which) {
+  if (this.__offerType === which) {
     return;
   }
 
@@ -77,7 +77,7 @@ OfferModal.prototype.setOfferType = function(which) {
 
 }
 
-OfferModal.prototype.setOffers = function() {
+OfferModal.prototype.setOffers = function () {
 
   /*
    * Function OfferModal.setOffers
@@ -91,18 +91,18 @@ OfferModal.prototype.setOffers = function() {
   // Reset the body
   offerDOM.innerHTML = "";
 
-  if(this.__offers.filter(this.matchOfferType, this).length === 0) {
+  if (this.__offers.filter(this.matchOfferType, this).length === 0) {
     return offerDOM.innerHTML = "No %s offers to display.".format(this.__offerType);
   }
 
   // Generate the required nodes and add them to the DOM
-  this.__offers.filter(this.matchOfferType, this).map(this.createOfferNode, this).forEach(function(node) {
+  this.__offers.filter(this.matchOfferType, this).map(this.createOfferNode, this).forEach(function (node) {
     offerDOM.appendChild(node);
   });
 
 }
 
-OfferModal.prototype.matchOfferType = function(offer) {
+OfferModal.prototype.matchOfferType = function (offer) {
 
   /*
    * Function OfferModal.matchOfferType
@@ -113,7 +113,7 @@ OfferModal.prototype.matchOfferType = function(offer) {
 
 }
 
-OfferModal.prototype.createOfferNode = function(offer, index) {
+OfferModal.prototype.createOfferNode = function (offer, index) {
 
   /*
    * Function OfferModal.createOfferNode
@@ -123,16 +123,28 @@ OfferModal.prototype.createOfferNode = function(offer, index) {
   // Create a canvas to show the item
   let canvas = new Canvas(null, 32, 32);
   canvas.canvas.className = "slot";
-  canvas.drawSprite(new Item(offer.id), Position.prototype.NULL, 32);
+
+  // Create the appropriate item type for proper rendering
+  // For fluid containers, we need to use FluidThing with the count (fluid type)
+  let thing = new Thing(offer.id, offer.count || 0);
+  let item;
+
+  if (thing.isFluidContainer() || thing.isSplash()) {
+    item = new FluidThing(offer.id, offer.count || 0);
+  } else {
+    item = new Item(offer.id, offer.count || 0);
+  }
+
+  canvas.drawSprite(item, Position.prototype.NULL, 32);
 
   // Can be selected
   canvas.canvas.addEventListener("click", this.handleSelectOffer.bind(this, canvas, offer, index));
-	
+
   return canvas.canvas;
 
 }
 
-OfferModal.prototype.clear = function(canvas, offer) {
+OfferModal.prototype.clear = function (canvas, offer) {
 
   /*
    * Function OfferModal.clear
@@ -145,7 +157,7 @@ OfferModal.prototype.clear = function(canvas, offer) {
 
 }
 
-OfferModal.prototype.handleSelectOffer = function(canvas, offer, index) {
+OfferModal.prototype.handleSelectOffer = function (canvas, offer, index) {
 
   /*
    * Function OfferModal.handleSelectOffer
@@ -153,7 +165,7 @@ OfferModal.prototype.handleSelectOffer = function(canvas, offer, index) {
    */
 
   // Reset the previous selected node
-  if(this.__selectedElement !== null) {
+  if (this.__selectedElement !== null) {
     this.__selectedElement.className = "slot";
   }
 
@@ -167,7 +179,7 @@ OfferModal.prototype.handleSelectOffer = function(canvas, offer, index) {
 
 }
 
-OfferModal.prototype.handleOpen = function(properties) {
+OfferModal.prototype.handleOpen = function (properties) {
 
   /*
    * Function OfferModal.handleOpen
@@ -186,20 +198,20 @@ OfferModal.prototype.handleOpen = function(properties) {
 
 }
 
-OfferModal.prototype.handleConfirm = function() {
+OfferModal.prototype.handleConfirm = function () {
 
   /*
    * Function OfferModal.handleConfirm
    * Handles confirming
    */
 
-  if(this.__selectedOffer === null) {
+  if (this.__selectedOffer === null) {
     return;
   }
 
   let count = Number(document.getElementById("buy-count").value);
 
-  if(document.getElementById("buy-count-wrapper").style.display === "none") {
+  if (document.getElementById("buy-count-wrapper").style.display === "none") {
     count = 1;
   }
 
@@ -209,20 +221,20 @@ OfferModal.prototype.handleConfirm = function() {
 
 }
 
-OfferModal.prototype.__setPriceInformation = function(offer) {
+OfferModal.prototype.__setPriceInformation = function (offer) {
 
 }
 
-OfferModal.prototype.__setOfferInformation = function(offer) {
+OfferModal.prototype.__setOfferInformation = function (offer) {
 
   /*
    * Function OfferModal.__setOfferInformation
    * Sets text span with the current offer information
    */
-  
+
   let thing = new Item(offer.id);
-  
-  if(thing.isStackable()) {
+
+  if (thing.isStackable()) {
     document.getElementById("buy-count-wrapper").style.display = "flex";
   } else {
     document.getElementById("buy-count-wrapper").style.display = "none";

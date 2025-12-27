@@ -3,7 +3,7 @@
 const Item = requireModule("entities/item");
 const Condition = requireModule("combat/condition");
 
-const FluidContainer = function(id) {
+const FluidContainer = function (id) {
 
   /*
    * Class FluidContainer
@@ -21,7 +21,7 @@ const FluidContainer = function(id) {
 FluidContainer.prototype = Object.create(Item.prototype);
 FluidContainer.prototype.constructor = FluidContainer;
 
-FluidContainer.prototype.handleUseWith = function(player, item, tile, index) {
+FluidContainer.prototype.handleUseWith = function (player, item, tile, index) {
 
   /*
    * Function FluidContainer.handleUseWith
@@ -29,28 +29,42 @@ FluidContainer.prototype.handleUseWith = function(player, item, tile, index) {
    */
 
   // The container is not filled
-  if(this.isEmpty()) {
+  if (this.isEmpty()) {
     return this.__handleFill(player, item, tile, index);
   }
 
   // Drinking?
-  if(tile.getCreature() === player) {
+  if (tile.getCreature() === player) {
 
     player.speechHandler.internalCreatureSay(this.__getDrinkText(), CONST.COLOR.YELLOW);
 
     // Add drunk condition to the player
-    if(this.isAlcohol()) {
+    if (this.isAlcohol()) {
       player.addCondition(Condition.prototype.DRUNK, 1, 500, null);
     }
 
     // Drinking slime is a bad idea..
-    if(this.isSlime()) {
+    if (this.isSlime()) {
       player.addCondition(Condition.prototype.POISONED, 10, 20, null);
     }
 
     // Drinking lava..? Why would you do that
-    if(this.isLava()) {
+    if (this.isLava()) {
       player.addCondition(Condition.prototype.BURNING, 5, 50, null);
+    }
+
+    // Life Fluid - heals health (50-100 HP)
+    if (this.isLifeFluid()) {
+      let healAmount = Math.floor(50 + Math.random() * 51); // 50-100
+      player.increaseHealth(healAmount);
+      player.sendCancelMessage("You feel healed.");
+    }
+
+    // Mana Fluid - restores mana (75-150 MP)
+    if (this.isManaFluid()) {
+      let manaAmount = Math.floor(75 + Math.random() * 76); // 75-150
+      player.increaseMana(manaAmount);
+      player.sendCancelMessage("You feel refreshed.");
     }
 
     return this.__empty();
@@ -58,14 +72,14 @@ FluidContainer.prototype.handleUseWith = function(player, item, tile, index) {
   }
 
   // Not besides?
-  if(!player.isBesidesThing(tile)) {
+  if (!player.isBesidesThing(tile)) {
     return player.sendCancelMessage("You have to move closer.");
   }
 
   let useWithItem = tile.peekIndex(0xFF);
 
-  if(useWithItem !== null && useWithItem instanceof FluidContainer) {
-    if(useWithItem.isEmpty()) {
+  if (useWithItem !== null && useWithItem instanceof FluidContainer) {
+    if (useWithItem.isEmpty()) {
       return this.__swapLiquid(useWithItem);
     } else {
       return player.sendCancelMessage("This container is already full.");
@@ -73,7 +87,7 @@ FluidContainer.prototype.handleUseWith = function(player, item, tile, index) {
   }
 
   // The tile is occupied and blocked by solid objects
-  if(tile.isOccupied()) {
+  if (tile.isOccupied()) {
     return player.sendCancelMessage("You cannot empty this fluid container here.");
   }
 
@@ -83,7 +97,7 @@ FluidContainer.prototype.handleUseWith = function(player, item, tile, index) {
 
 }
 
-FluidContainer.prototype.isOil = function() {
+FluidContainer.prototype.isOil = function () {
 
   /*
    * Function FluidContainer.isOil
@@ -94,7 +108,7 @@ FluidContainer.prototype.isOil = function() {
 
 }
 
-FluidContainer.prototype.isLava = function() {
+FluidContainer.prototype.isLava = function () {
 
   /*
    * Function FluidContainer.isOil
@@ -105,7 +119,7 @@ FluidContainer.prototype.isLava = function() {
 
 }
 
-FluidContainer.prototype.isSlime = function() {
+FluidContainer.prototype.isSlime = function () {
 
   /*
    * Function FluidContainer.isOil
@@ -116,7 +130,7 @@ FluidContainer.prototype.isSlime = function() {
 
 }
 
-FluidContainer.prototype.isAlcohol = function() {
+FluidContainer.prototype.isAlcohol = function () {
 
   /*
    * Function FluidContainer.isAlcohol
@@ -124,12 +138,34 @@ FluidContainer.prototype.isAlcohol = function() {
    */
 
   return this.count === CONST.FLUID.BEER ||
-         this.count === CONST.FLUID.WINE ||
-         this.count === CONST.FLUID.RUM;
+    this.count === CONST.FLUID.WINE ||
+    this.count === CONST.FLUID.RUM;
 
 }
 
-FluidContainer.prototype.__empty = function() {
+FluidContainer.prototype.isLifeFluid = function () {
+
+  /*
+   * Function FluidContainer.isLifeFluid
+   * Returns true if the fluid container has life fluid (health potion) in it
+   */
+
+  return this.count === CONST.FLUID.HEALTH;
+
+}
+
+FluidContainer.prototype.isManaFluid = function () {
+
+  /*
+   * Function FluidContainer.isManaFluid
+   * Returns true if the fluid container has mana fluid in it
+   */
+
+  return this.count === CONST.FLUID.MANA;
+
+}
+
+FluidContainer.prototype.__empty = function () {
 
   /*
    * Function FluidContainer.__empty
@@ -143,7 +179,7 @@ FluidContainer.prototype.__empty = function() {
 
 }
 
-FluidContainer.prototype.isEmpty = function() {
+FluidContainer.prototype.isEmpty = function () {
 
   /*
    * Function FluidContainer.isEmpty
@@ -154,7 +190,7 @@ FluidContainer.prototype.isEmpty = function() {
 
 }
 
-FluidContainer.prototype.__handleFill = function(player, item, tile, index) {
+FluidContainer.prototype.__handleFill = function (player, item, tile, index) {
 
   /*
    * Function FluidContainer.__handleFill
@@ -165,15 +201,15 @@ FluidContainer.prototype.__handleFill = function(player, item, tile, index) {
   let useWithItem = tile.getTopItem();
 
   // Nothing: cannot be used
-  if(useWithItem === null) {
-    if(!tile.getPrototype().properties.fluidSource) {
+  if (useWithItem === null) {
+    if (!tile.getPrototype().properties.fluidSource) {
       return player.sendCancelMessage("You cannot use this item here.");
-    } 
+    }
     useWithItem = tile;
   }
 
   // If the player is using it with another container that has liquid
-  if(useWithItem.constructor === FluidContainer && !useWithItem.isEmpty()) {
+  if (useWithItem.constructor === FluidContainer && !useWithItem.isEmpty()) {
     return useWithItem.__swapLiquid(this);
   }
 
@@ -181,7 +217,7 @@ FluidContainer.prototype.__handleFill = function(player, item, tile, index) {
   let fluidSource = useWithItem.getAttribute("fluidSource");
 
   // Fill the fluid container
-  if(fluidSource === null) {
+  if (fluidSource === null) {
     return;
   }
 
@@ -191,7 +227,7 @@ FluidContainer.prototype.__handleFill = function(player, item, tile, index) {
 
 }
 
-FluidContainer.prototype.__swapLiquid = function(item) {
+FluidContainer.prototype.__swapLiquid = function (item) {
 
   /*
    * Function FluidContainer.__swapLiquid
@@ -210,7 +246,7 @@ FluidContainer.prototype.__swapLiquid = function(item) {
 
 }
 
-FluidContainer.prototype.__createSplash = function(tile) {
+FluidContainer.prototype.__createSplash = function (tile) {
 
   /*
    * Function FluidContainer.__createSplash
@@ -226,32 +262,37 @@ FluidContainer.prototype.__createSplash = function(tile) {
 
 }
 
-FluidContainer.prototype.__mapString = function(string) {
+FluidContainer.prototype.__mapString = function (string) {
 
   /*
    * Function FluidContainer.__mapString
    * Maps item definition string to the proper fill type
    */
 
-  switch(string) {
+  switch (string) {
     case "blood": return CONST.FLUID.BLOOD;
     case "water": return CONST.FLUID.WATER;
     case "slime": return CONST.FLUID.SLIME;
+    case "mana": return CONST.FLUID.MANA;
+    case "health": return CONST.FLUID.HEALTH;
+    case "life": return CONST.FLUID.HEALTH;
     default: return CONST.FLUID.NONE;
   }
 
 }
 
-FluidContainer.prototype.__getDrinkText = function() {
+FluidContainer.prototype.__getDrinkText = function () {
 
   /*
    * Function FluidContainer.__getDrinkText
    * Returns the text when something is drank from the container
    */
 
-  switch(this.count) {
+  switch (this.count) {
     case CONST.FLUID.WATER: return "Gulp..";
     case CONST.FLUID.SLIME: return "Ugh!";
+    case CONST.FLUID.HEALTH: return "Aaaah...";
+    case CONST.FLUID.MANA: return "Aaaah...";
     default: return "Ahhh..";
   }
 

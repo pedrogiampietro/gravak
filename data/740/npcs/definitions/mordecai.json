@@ -1,0 +1,223 @@
+{
+    "creatureStatistics": {
+        "name": "Mordecai",
+        "health": 150,
+        "maxHealth": 150,
+        "mana": 500,
+        "maxMana": 500,
+        "attack": 1,
+        "attackSlowness": 40,
+        "defense": 10,
+        "speed": 30,
+        "outfit": {
+            "id": 133,
+            "details": {
+                "head": 114,
+                "body": 79,
+                "legs": 39,
+                "feet": 95
+            }
+        }
+    },
+    "behaviour": {
+        "wanderRange": 1,
+        "openDoors": true,
+        "ignoreCharacters": true
+    },
+    "conversation": {
+        "hearingRange": 5,
+        "keywords": {
+            "job": "I am the head alchemist of Carlin. I keep the secret recipes of our ancestors. Besides, I am selling {mana fluid}s, {life fluid}s, {spellbook}s, {wand}s, {rod}s and {rune}s.",
+            "name": "I am the illustrious Mordecai, of course.",
+            "wands": "I sell wands for sorcerers: {wand of vortex} (level 7), {wand of dragonbreath} (level 13), {wand of decay} (level 19), {wand of cosmic energy} (level 26), and {wand of inferno} (level 33).",
+            "rods": "I sell rods for druids: {snakebit rod} (level 7), {moonlight rod} (level 13), {necrotic rod} (level 19), {terra rod} (level 26), and {hailstorm rod} (level 33).",
+            "runes": "I sell various runes: {intense healing}, {ultimate healing}, {magic wall}, {heavy magic missile}, {great fireball}, {explosion}, {sudden death}, {paralyze}, and {blank rune}s.",
+            "fluids": "I have {life fluid} to restore health and {mana fluid} to restore mana. Both come in vials.",
+            "spells": "I am too busy to teach you, ask in your guild about that.",
+            "vocation": "Your vocation is your profession. There are four vocations in Tibia: Sorcerers, paladins, knights, and druids."
+        },
+        "trade": {
+            "items": [
+                {
+                    "name": "Life Fluid",
+                    "price": 60,
+                    "id": 2006,
+                    "count": 10,
+                    "type": "sell"
+                },
+                {
+                    "name": "Mana Fluid",
+                    "price": 100,
+                    "id": 2006,
+                    "count": 7,
+                    "type": "sell"
+                },
+                {
+                    "name": "Spellbook",
+                    "price": 150,
+                    "id": 2175,
+                    "type": "sell"
+                },
+                {
+                    "name": "Magic Light Wand",
+                    "price": 400,
+                    "id": 2163,
+                    "type": "sell"
+                },
+                {
+                    "name": "Wand of Vortex",
+                    "price": 500,
+                    "id": 2190,
+                    "type": "sell"
+                },
+                {
+                    "name": "Wand of Dragonbreath",
+                    "price": 1000,
+                    "id": 2191,
+                    "type": "sell"
+                },
+                {
+                    "name": "Wand of Decay",
+                    "price": 5000,
+                    "id": 2188,
+                    "type": "sell"
+                },
+                {
+                    "name": "Wand of Cosmic Energy",
+                    "price": 10000,
+                    "id": 2189,
+                    "type": "sell"
+                },
+                {
+                    "name": "Wand of Inferno",
+                    "price": 15000,
+                    "id": 2187,
+                    "type": "sell"
+                },
+                {
+                    "name": "Snakebite Rod",
+                    "price": 500,
+                    "id": 2182,
+                    "type": "sell"
+                },
+                {
+                    "name": "Moonlight Rod",
+                    "price": 1000,
+                    "id": 2186,
+                    "type": "sell"
+                },
+                {
+                    "name": "Necrotic Rod",
+                    "price": 5000,
+                    "id": 2185,
+                    "type": "sell"
+                },
+                {
+                    "name": "Terra Rod",
+                    "price": 10000,
+                    "id": 2181,
+                    "type": "sell"
+                },
+                {
+                    "name": "Hailstorm Rod",
+                    "price": 15000,
+                    "id": 2183,
+                    "type": "sell"
+                },
+                {
+                    "name": "Blank Rune",
+                    "price": 10,
+                    "id": 2260,
+                    "type": "sell"
+                },
+                {
+                    "name": "Intense Healing Rune",
+                    "price": 95,
+                    "id": 2265,
+                    "type": "sell"
+                },
+                {
+                    "name": "Ultimate Healing Rune",
+                    "price": 175,
+                    "id": 2273,
+                    "type": "sell"
+                },
+                {
+                    "name": "Heavy Magic Missile Rune",
+                    "price": 12,
+                    "id": 2311,
+                    "type": "sell"
+                },
+                {
+                    "name": "Great Fireball Rune",
+                    "price": 57,
+                    "id": 2304,
+                    "type": "sell"
+                },
+                {
+                    "name": "Explosion Rune",
+                    "price": 80,
+                    "id": 2313,
+                    "type": "sell"
+                },
+                {
+                    "name": "Sudden Death Rune",
+                    "price": 325,
+                    "id": 2268,
+                    "type": "sell"
+                },
+                {
+                    "name": "Paralyze Rune",
+                    "price": 700,
+                    "id": 2278,
+                    "type": "sell"
+                },
+                {
+                    "name": "Magic Wall Rune",
+                    "price": 116,
+                    "id": 2293,
+                    "type": "sell"
+                },
+                {
+                    "name": "Destroy Field Rune",
+                    "price": 45,
+                    "id": 2261,
+                    "type": "sell"
+                },
+                {
+                    "name": "Empty Vial",
+                    "price": 5,
+                    "id": 2006,
+                    "count": 0,
+                    "type": "buy"
+                },
+                {
+                    "name": "Talon",
+                    "price": 320,
+                    "id": 2151,
+                    "type": "buy"
+                }
+            ]
+        },
+        "farewells": [
+            "bye",
+            "goodbye",
+            "farewell"
+        ],
+        "greetings": [
+            "hello",
+            "hi",
+            "greetings"
+        ],
+        "sayings": {
+            "texts": [
+                "Need magical supplies? Come and see my wares!",
+                "Finest runes and fluids in all the land!",
+                "Wands for sorcerers, rods for druids - I have it all!"
+            ],
+            "rate": 250,
+            "chance": 0.5
+        },
+        "script": "mordecai.js"
+    }
+}

@@ -44,14 +44,25 @@
 
 .offers {
   display: flex;
-  padding: 16px;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  padding: 8px;
+  justify-content: flex-start;
+  align-items: flex-start;
   background-image: url("/png/bg3.png");
+  max-height: 150px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
 }
 
 .offers canvas {
   margin: 2px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.offers canvas:hover {
+  border: 1px solid gold;
 }
 
 .offer-tab.selected {
@@ -65,7 +76,8 @@
 }
 
 #offer-modal {
-  width: 350px;
+  width: 320px;
+  max-width: 90vw;
 }
 
 #offer-price {

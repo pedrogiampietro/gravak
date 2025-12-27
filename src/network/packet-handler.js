@@ -206,7 +206,9 @@ PacketHandler.prototype.handleItemLook = function (player, packet) {
     thing = packet.which;
   }
 
-  let includeDetails = !thing.hasUniqueId() && (packet.which.constructor.name !== "Tile" || player.isBesidesThing(packet.which));
+  // Check if thing has hasUniqueId method (Tiles don't have this method)
+  let hasUniqueId = thing.hasUniqueId ? thing.hasUniqueId() : false;
+  let includeDetails = !hasUniqueId && (packet.which.constructor.name !== "Tile" || player.isBesidesThing(packet.which));
 
   return player.write(new ItemInformationPacket(thing, includeDetails));
 

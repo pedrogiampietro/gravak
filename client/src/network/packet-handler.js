@@ -1073,7 +1073,17 @@ PacketHandler.prototype.handleContainerAddItem = function (packet) {
     return;
   }
 
-  container.addItem(new Item(packet.itemId, packet.count), packet.slot);
+  // Create the appropriate item type (same logic as readThing in packetreader.js)
+  let thing = new Thing(packet.itemId, packet.count);
+  let item;
+
+  if (thing.isFluidContainer() || thing.isSplash()) {
+    item = new FluidThing(packet.itemId, packet.count);
+  } else {
+    item = new Item(packet.itemId, packet.count);
+  }
+
+  container.addItem(item, packet.slot);
 
 }
 

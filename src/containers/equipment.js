@@ -411,48 +411,84 @@ Equipment.prototype.isShieldEquipped = function () {
   return false;
 };
 
+// Currency constants
+Equipment.prototype.CURRENCY = {
+  GOLD_COIN: 2148,       // 1 gold
+  PLATINUM_COIN: 2152,   // 100 gold
+  CRYSTAL_COIN: 2160     // 10000 gold
+};
+
+Equipment.prototype.getTotalGold = function () {
+  /*
+   * Function Equipment.getTotalGold
+   * Returns the total gold value from all coin types in the player's inventory
+   */
+
+  let backpack = this.peekIndex(CONST.EQUIPMENT.BACKPACK);
+
+  if (backpack === null) {
+    return 0;
+  }
+
+  let goldCoins = this.__countResourceRecursive(backpack, this.CURRENCY.GOLD_COIN);
+  let platinumCoins = this.__countResourceRecursive(backpack, this.CURRENCY.PLATINUM_COIN);
+  let crystalCoins = this.__countResourceRecursive(backpack, this.CURRENCY.CRYSTAL_COIN);
+
+  return goldCoins + (platinumCoins * 100) + (crystalCoins * 10000);
+};
+
 Equipment.prototype.hasSufficientResources = function (resource, amount) {
   /*
    * Function Equipment.hasSufficientResources
-   * Returns true if the player has a number of sufficient resources (e.g., gold)
+   * Returns true if the player has enough gold (counts all coin types)
    */
 
+  // If checking for gold coins, calculate total gold value from all coin types
+  if (resource === this.CURRENCY.GOLD_COIN) {
+    return this.getTotalGold() >= amount;
+  }
+
+  // For other resources, use the old recursive method
   let backpack = this.peekIndex(CONST.EQUIPMENT.BACKPACK);
 
   if (backpack === null) {
     return false;
   }
 
-  let remainingAmount = amount;
+  let totalFound = this.__countResourceRecursive(backpack, resource);
+  return totalFound >= amount;
+};
 
-  for (let i = 0; i < backpack.container.__slots.length; i++) {
-    let slot = backpack.container.__slots[i];
+Equipment.prototype.__countResourceRecursive = function (container, resource) {
+  /*
+   * Function Equipment.__countResourceRecursive
+   * Recursively counts resources in a container and all nested containers
+   */
+
+  let total = 0;
+
+  for (let i = 0; i < container.container.__slots.length; i++) {
+    let slot = container.container.__slots[i];
 
     if (slot === null) {
       continue;
     }
 
-    if (slot.id === resource) {
-      if (slot.count >= remainingAmount) {
-        return true;
-      }
-
-      remainingAmount = Math.max(0, remainingAmount - slot.count);
-    }
-
-    // The residual is zero: the player has sufficient resources
-    if (remainingAmount === 0) {
-      return true;
+    // Check if this slot is a container (has a container property)
+    if (slot.container && slot.container.__slots) {
+      total += this.__countResourceRecursive(slot, resource);
+    } else if (slot.id === resource) {
+      total += slot.count || 1;
     }
   }
 
-  return false;
+  return total;
 };
 
 Equipment.prototype.payWithResource = function (resource, amount) {
   /*
    * Function Equipment.payWithResource
-   * Pays with a number of resources from the player's equipped backpack
+   * Pays with gold and gives back proper change in the optimal coin denominations
    */
 
   let backpack = this.peekIndex(CONST.EQUIPMENT.BACKPACK);
@@ -466,28 +502,148 @@ Equipment.prototype.payWithResource = function (resource, amount) {
     return false;
   }
 
-  let remainingAmount = amount;
+  // If paying with gold coins, use the new currency system
+  if (resource === this.CURRENCY.GOLD_COIN) {
+    return this.__payWithGold(backpack, amount);
+  }
 
-  // Same algorithm as above but now subtract and remove the resources
-  for (let i = 0; i < backpack.container.__slots.length; i++) {
-    let slot = backpack.container.__slots[i];
+  // For other resources, use the old method
+  let remainingAmount = this.__removeResourceRecursive(backpack, resource, amount);
+  return remainingAmount === 0;
+};
+
+Equipment.prototype.__payWithGold = function (backpack, amount) {
+  /*
+   * Function Equipment.__payWithGold
+   * Removes coins to pay the amount and gives change in optimal denominations
+   */
+
+  let totalGold = this.getTotalGold();
+
+  if (totalGold < amount) {
+    return false;
+  }
+
+  // Calculate change to give back
+  let change = totalGold - amount;
+
+  // Remove ALL coins first
+  this.__removeAllCoins(backpack);
+
+  // Add back proper change in optimal denominations
+  this.__addChange(backpack, change);
+
+  return true;
+};
+
+Equipment.prototype.__removeAllCoins = function (container) {
+  /*
+   * Function Equipment.__removeAllCoins
+   * Removes all gold, platinum, and crystal coins from a container recursively
+   */
+
+  for (let i = container.container.__slots.length - 1; i >= 0; i--) {
+    let slot = container.container.__slots[i];
 
     if (slot === null) {
       continue;
     }
 
-    if (slot.id === resource) {
-      // More than enough: subtract
-      if (slot.count >= remainingAmount) {
-        backpack.removeIndex(i, remainingAmount);
-        return true;
-      }
-
-      // Remove the entire stack
-      backpack.removeIndex(i, slot.count);
-      remainingAmount = remainingAmount - slot.count;
+    // Check if this slot is a container (has a container property)
+    if (slot.container && slot.container.__slots) {
+      this.__removeAllCoins(slot);
+    } else if (slot.id === this.CURRENCY.GOLD_COIN ||
+      slot.id === this.CURRENCY.PLATINUM_COIN ||
+      slot.id === this.CURRENCY.CRYSTAL_COIN) {
+      // Remove entire coin stack
+      container.removeIndex(i, slot.count);
     }
   }
+};
+
+Equipment.prototype.__addChange = function (backpack, amount) {
+  /*
+   * Function Equipment.__addChange
+   * Adds coins in optimal denominations to the backpack
+   */
+
+  if (amount <= 0) {
+    return;
+  }
+
+  // Calculate optimal coin distribution (highest denominations first)
+  let crystalCoins = Math.floor(amount / 10000);
+  amount = amount % 10000;
+
+  let platinumCoins = Math.floor(amount / 100);
+  amount = amount % 100;
+
+  let goldCoins = amount;
+
+  // Add Crystal Coins (in stacks of max 100)
+  while (crystalCoins > 0) {
+    let stackSize = Math.min(crystalCoins, 100);
+    let thing = process.gameServer.database.createThing(this.CURRENCY.CRYSTAL_COIN);
+    thing.setCount(stackSize);
+    backpack.addFirstEmpty(thing);
+    crystalCoins -= stackSize;
+  }
+
+  // Add Platinum Coins (in stacks of max 100)
+  while (platinumCoins > 0) {
+    let stackSize = Math.min(platinumCoins, 100);
+    let thing = process.gameServer.database.createThing(this.CURRENCY.PLATINUM_COIN);
+    thing.setCount(stackSize);
+    backpack.addFirstEmpty(thing);
+    platinumCoins -= stackSize;
+  }
+
+  // Add Gold Coins (in stacks of max 100)
+  while (goldCoins > 0) {
+    let stackSize = Math.min(goldCoins, 100);
+    let thing = process.gameServer.database.createThing(this.CURRENCY.GOLD_COIN);
+    thing.setCount(stackSize);
+    backpack.addFirstEmpty(thing);
+    goldCoins -= stackSize;
+  }
+};
+
+Equipment.prototype.__removeResourceRecursive = function (container, resource, amountToRemove) {
+  /*
+   * Function Equipment.__removeResourceRecursive
+   * Recursively removes resources from a container and all nested containers
+   * Returns the remaining amount that still needs to be removed
+   */
+
+  let remaining = amountToRemove;
+
+  for (let i = 0; i < container.container.__slots.length && remaining > 0; i++) {
+    let slot = container.container.__slots[i];
+
+    if (slot === null) {
+      continue;
+    }
+
+    // Check if this slot is a container (has a container property)
+    if (slot.container && slot.container.__slots) {
+      remaining = this.__removeResourceRecursive(slot, resource, remaining);
+    } else if (slot.id === resource) {
+      if (slot.count >= remaining) {
+        // This stack has enough - remove what we need
+        container.removeIndex(i, remaining);
+        remaining = 0;
+      } else {
+        // Remove entire stack and continue
+        let removedCount = slot.count;
+        container.removeIndex(i, removedCount);
+        remaining -= removedCount;
+        // Decrement i because we removed an item and indices shifted
+        i--;
+      }
+    }
+  }
+
+  return remaining;
 };
 
 Equipment.prototype.canPushItem = function (thing) {

@@ -319,12 +319,12 @@ Skills.prototype.__onSkillAdvance = function (type, oldLevel, newLevel) {
   let message = `You advanced to ${skillName} level ${newLevel}.`;
   this.__player.write(new ServerMessagePacket(message));
 
-  // Also send to console channel
+  // Also send to console channel with green color
   this.__player.write(new ChannelWritePacket(
     CONST.CHANNEL.DEFAULT,
     "Server",
     message,
-    CONST.COLOR.WHITE
+    CONST.COLOR.LIGHTGREEN
   ));
 };
 

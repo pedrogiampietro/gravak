@@ -709,15 +709,18 @@ const ItemInformationPacket = function (thing, includeDetails) {
    * Wrapper for thing information sent to the player
    */
 
+  // Safely check if methods exist before calling them (Tiles don't have these methods)
+  let isDistanceReadable = thing.isDistanceReadable ? thing.isDistanceReadable() : false;
+  let distanceContent = isDistanceReadable && thing.getContent ? thing.getContent() : null;
+  let articleText = thing.getArticle ? thing.getArticle() : "";
+  let nameText = thing.getName ? thing.getName() : "unknown";
+  let descriptionText = includeDetails && thing.getDescription ? thing.getDescription() : null;
+
   // Encode all the strings
-  let distance = this.encodeString(
-    thing.isDistanceReadable() ? thing.getContent : null
-  );
-  let article = this.encodeString(thing.getArticle());
-  let name = this.encodeString(thing.getName());
-  let description = this.encodeString(
-    includeDetails ? thing.getDescription() : null
-  );
+  let distance = this.encodeString(distanceContent);
+  let article = this.encodeString(articleText);
+  let name = this.encodeString(nameText);
+  let description = this.encodeString(descriptionText);
 
   // Determine combined length of all the strings
   let length =
@@ -729,23 +732,19 @@ const ItemInformationPacket = function (thing, includeDetails) {
   PacketWriter.call(this, CONST.PROTOCOL.SERVER.ITEM_INFORMATION, length + 9);
 
   // Server and client identifier
-  this.writeUInt16(thing.id);
-  this.writeClientId(thing.id);
+  this.writeUInt16(thing.id || 0);
+  this.writeClientId(thing.id || 0);
 
-  // Weight
-  this.writeUInt16(
-    includeDetails && thing.isPickupable() ? thing.getWeight() : 0
-  );
-  this.writeUInt8(
-    includeDetails && thing.getAttribute("attack")
-      ? thing.getAttribute("attack")
-      : 0
-  );
-  this.writeUInt8(
-    includeDetails && thing.getAttribute("armor")
-      ? thing.getAttribute("armor")
-      : 0
-  );
+  // Weight - check if methods exist
+  let isPickupable = thing.isPickupable ? thing.isPickupable() : false;
+  let weight = includeDetails && isPickupable && thing.getWeight ? thing.getWeight() : 0;
+  this.writeUInt16(weight);
+
+  // Attack and Armor - check if getAttribute exists
+  let attack = includeDetails && thing.getAttribute ? thing.getAttribute("attack") : null;
+  let armor = includeDetails && thing.getAttribute ? thing.getAttribute("armor") : null;
+  this.writeUInt8(attack || 0);
+  this.writeUInt8(armor || 0);
 
   // Write the encoded strings
   this.writeBuffer(distance);
@@ -754,7 +753,7 @@ const ItemInformationPacket = function (thing, includeDetails) {
   this.writeBuffer(description);
 
   // Always include the count too
-  this.writeUInt8(thing.count);
+  this.writeUInt8(thing.count || 0);
 };
 
 ItemInformationPacket.prototype = Object.create(PacketWriter.prototype);

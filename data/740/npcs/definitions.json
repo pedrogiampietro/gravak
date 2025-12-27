@@ -16,5 +16,14 @@
     },
     "enabled": true,
     "definition": "obi.json"
+  },
+  "mordecai": {
+    "position": {
+      "x": 32095,
+      "y": 32203,
+      "z": 8
+    },
+    "enabled": true,
+    "definition": "mordecai.json"
   }
 }

@@ -1139,11 +1139,20 @@ Player.prototype.getVocationName = function () {
 
   let vocationId = this.getProperty(CONST.PROPERTIES.VOCATION);
   switch (vocationId) {
-    case 1: return "sorcerer";
-    case 2: return "druid";
-    case 3: return "paladin";
-    case 4: return "knight";
-    default: return "none";
+    case CONST.VOCATION.KNIGHT:
+    case CONST.VOCATION.ELITE_KNIGHT:
+      return "knight";
+    case CONST.VOCATION.PALADIN:
+    case CONST.VOCATION.ROYAL_PALADIN:
+      return "paladin";
+    case CONST.VOCATION.SORCERER:
+    case CONST.VOCATION.MASTER_SORCERER:
+      return "sorcerer";
+    case CONST.VOCATION.DRUID:
+    case CONST.VOCATION.ELDER_DRUID:
+      return "druid";
+    default:
+      return "none";
   }
 };
 
