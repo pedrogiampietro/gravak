@@ -217,6 +217,29 @@ World.prototype.writePlayerLogout = function (name) {
 
 }
 
+World.prototype.__damageEntity = function (source, target, amount, color) {
+
+  /*
+   * Function World.__damageEntity
+   * Applies damage from a source to a target entity (monster or player)
+   */
+
+  // Default color to red if not specified
+  color = color || CONST.COLOR.RED;
+
+  // Clamp the damage to the target's health
+  amount = amount.clamp(0, target.getProperty(CONST.PROPERTIES.HEALTH));
+
+  // No damage to apply
+  if (amount <= 0) {
+    return;
+  }
+
+  // Apply the damage to the target
+  target.decreaseHealth(source, amount);
+
+}
+
 World.prototype.getDataDetails = function () {
 
   /*

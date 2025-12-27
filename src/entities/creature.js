@@ -441,6 +441,24 @@ Creature.prototype.isPlayer = function () {
   return this.constructor.name === "Player";
 };
 
+Creature.prototype.isMonster = function () {
+  /*
+   * Function Creature.isMonster
+   * Returns true if the creature is a monster
+   */
+
+  return this.constructor.name === "Monster";
+};
+
+Creature.prototype.isNPC = function () {
+  /*
+   * Function Creature.isNPC
+   * Returns true if the creature is an NPC
+   */
+
+  return this.constructor.name === "NPC";
+};
+
 Creature.prototype.incrementProperty = function (type, amount) {
   /*
    * Function Creature.incrementProperty
@@ -541,6 +559,13 @@ Creature.prototype.sayEmote = function (message, color) {
    */
 
   this.speechHandler.emote(message, color);
+};
+
+Creature.prototype.decreaseHealth = function (source, amount) {
+  /*
+   * Function Creature.decreaseHealth
+   * Default implementation that does nothing. Overridden in Player and Monster.
+   */
 };
 
 module.exports = Creature;

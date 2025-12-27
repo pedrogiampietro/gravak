@@ -36,6 +36,40 @@ const Tile = function (id, position) {
 Tile.prototype = Object.create(Thing.prototype);
 Tile.prototype.constructor = Tile;
 
+// Getter for monsters on this tile
+Object.defineProperty(Tile.prototype, 'monsters', {
+  get: function () {
+    if (!this.hasOwnProperty("creatures")) {
+      return new Set();
+    }
+    // Filter creatures that are monsters
+    let monsters = new Set();
+    this.creatures.forEach(creature => {
+      if (creature.isMonster()) {
+        monsters.add(creature);
+      }
+    });
+    return monsters;
+  }
+});
+
+// Getter for players on this tile
+Object.defineProperty(Tile.prototype, 'players', {
+  get: function () {
+    if (!this.hasOwnProperty("creatures")) {
+      return new Set();
+    }
+    // Filter creatures that are players
+    let players = new Set();
+    this.creatures.forEach(creature => {
+      if (creature.isPlayer()) {
+        players.add(creature);
+      }
+    });
+    return players;
+  }
+});
+
 Tile.prototype.getFriction = function () {
 
   /*

@@ -218,6 +218,11 @@ NetworkManager.prototype.__readPacket = function (gameSocket, packet) {
       return gameSocket.player.movementHandler.handleMovement(packet.readUInt8());
     }
 
+    // Use item on creature (from battle list)
+    case CONST.PROTOCOL.CLIENT.THING_USE_ON_CREATURE: {
+      return gameSocket.player.useHandler.handleActionUseOnCreature(packet.readItemUseOnCreature(gameSocket.player));
+    }
+
     // Unknown opcode sent: close the socket immediately
     default: {
       return gameSocket.close();

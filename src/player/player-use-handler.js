@@ -67,6 +67,63 @@ UseHandler.prototype.handleActionUseWith = function (packet) {
 
 }
 
+UseHandler.prototype.handleActionUseOnCreature = function (packet) {
+
+  /*
+   * Function UseHandler.handleActionUseOnCreature
+   * Called when a client uses an item (like a rune) on a creature from the battle list
+   */
+
+  // This function is not available
+  if (this.__useWithLock.isLocked()) {
+    return this.__player.sendCancelMessage("You cannot use this object yet.");
+  }
+
+  // Must have a valid source
+  if (packet.fromWhere === null) {
+    return;
+  }
+
+  // Must be besides the from (using) item
+  if (!this.__player.isBesidesThing(packet.fromWhere)) {
+    return this.__player.sendCancelMessage("You have to move closer to use this item.");
+  }
+
+  // Fetch the item
+  let item = packet.fromWhere.peekIndex(packet.fromIndex);
+
+  // If there is no item there is nothing to do
+  if (item === null) {
+    return;
+  }
+
+  // Get the creature by ID
+  let creature = gameServer.world.creatureHandler.getCreatureFromId(packet.creatureId);
+
+  if (creature === null) {
+    return this.__player.sendCancelMessage("This creature does not exist.");
+  }
+
+  // Get the creature's tile
+  let tile = creature.getTile();
+
+  if (tile === null) {
+    return this.__player.sendCancelMessage("Cannot use on this creature.");
+  }
+
+  // Check line of sight
+  if (!this.__player.position.inLineOfSight(tile.position)) {
+    return this.__player.sendCancelMessage("Target is not in line of sight.");
+  }
+
+  // Emit the event for the prototype listeners (runas are handled via "useWith" event)
+  item.emit("useWith", this.__player, item, tile, 0);
+
+  // Lock the action for the coming global cooldown
+  this.__useWithLock.lock(UseHandler.prototype.GLOBAL_USE_COOLDOWN);
+
+}
+
 UseHandler.prototype.handleItemUse = function (packet) {
 
   /*

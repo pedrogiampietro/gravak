@@ -1,15 +1,19 @@
 const Position = requireModule("utils/position");
 
-module.exports = function greatFireball(source, target) {
+module.exports = function magicWall(source, target) {
 
   /*
-   * function suddenDeath
-   * Code that handles the sudden death rune
+   * function magicWall
+   * Code that handles the magic wall rune
    */
 
   // Get circle position for the GFB
   process.gameServer.world.sendDistanceEffect(source.position, target.position, CONST.EFFECT.PROJECTILE.ENERGY);
-  target.addItem(process.gameServer.database.createThing(1498));
+
+  let tile = process.gameServer.world.getTileFromWorldPosition(target.position);
+  if (tile) {
+    tile.addTopThing(process.gameServer.database.createThing(1498));
+  }
 
   return true;
 

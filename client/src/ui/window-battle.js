@@ -60,6 +60,25 @@ BattleWindow.prototype.updateCreature = function (creature) {
     return;
   }
 
+  // FOV Check: Only show creatures on the same floor and within 9 tiles
+  let player = gameClient.player;
+  if (player && !gameClient.isSelf(creature)) {
+    let playerPos = player.getPosition();
+    let creaturePos = creature.getPosition();
+    let dx = Math.abs(playerPos.x - creaturePos.x);
+    let dy = Math.abs(playerPos.y - creaturePos.y);
+
+    if (playerPos.z !== creaturePos.z || dx > 9 || dy > 9) {
+      element.style.display = "none";
+      return;
+    }
+  }
+
+  element.style.display = "flex";
+
+  let nameSpan = element.firstElementChild.firstElementChild;
+  nameSpan.innerHTML = creature.name;
+
   let nodeList = element.querySelectorAll(".battle-window-bar-wrapper");
 
   // Health Bar
@@ -87,6 +106,12 @@ BattleWindow.prototype.addCreature = function (creature) {
    * Updates the DOM with the targeted creature
    */
 
+  // Check if creature already exists in the list to avoid duplicates
+  let existing = this.getBody().querySelector('[id="%s"]'.format(creature.id));
+  if (existing) {
+    return this.updateCreature(creature);
+  }
+
   //if(creature.type !== 1) return;
   // Create the target node and add
   let node = document.getElementById("battle-window-target").cloneNode(true);
@@ -94,7 +119,7 @@ BattleWindow.prototype.addCreature = function (creature) {
   node.setAttribute("id", creature.id);
 
   // Create a new canvas
-  let canvas = new Canvas(node.lastElementChild.firstElementChild, 64, 64);
+  let canvas = new Canvas(node.lastElementChild.firstElementChild, 32, 32);
 
   let frames = creature.getCharacterFrames();
   let zPattern = (frames.characterGroup.pattern.z > 1 && creature.isMounted()) ? 1 : 0;
@@ -148,7 +173,19 @@ BattleWindow.prototype.addCreature = function (creature) {
       return;
     }
 
-    // Desktop behavior
+    // Check if we have a multi-use item active (crosshair mode for runes)
+    if (gameClient.mouse.__multiUseObject !== null) {
+      // Use the rune on this creature
+      let creatureId = Number(this.id);
+      gameClient.send(new ItemUseOnCreaturePacket(gameClient.mouse.__multiUseObject, creatureId));
+
+      // Reset the multi-use item and cursor
+      gameClient.mouse.__multiUseObject = null;
+      gameClient.mouse.setCursor("auto");
+      return;
+    }
+
+    // Desktop behavior - normal targeting
     let creature = gameClient.world.getCreature(this.id);
     gameClient.player.setTarget(creature);
     gameClient.send(new TargetPacket(this.id));

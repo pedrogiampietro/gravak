@@ -114,6 +114,21 @@ PacketReader.prototype.readItemUseWith = function (player) {
 
 }
 
+PacketReader.prototype.readItemUseOnCreature = function (player) {
+
+  /*
+   * Function PacketReader.readItemUseOnCreature
+   * Reads a packet for using an item on a creature (from battle list)
+   */
+
+  return new Object({
+    "fromWhere": this.readMoveEvent(player),
+    "fromIndex": this.readUInt8(),
+    "creatureId": this.readUInt32()
+  });
+
+}
+
 PacketReader.prototype.isReadable = function () {
 
   /*

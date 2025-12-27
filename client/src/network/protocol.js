@@ -217,6 +217,26 @@ const ItemUseWithPacket = function (fromThing, toThing) {
 ItemUseWithPacket.prototype = Object.create(PacketWriter.prototype);
 ItemUseWithPacket.prototype.constructor = ItemUseWithPacket;
 
+const ItemUseOnCreaturePacket = function (fromThing, creatureId) {
+
+  /*
+   * Class ItemUseOnCreaturePacket
+   * Wrapper packet for using an item (like a rune) on a creature from battle list
+   */
+
+  PacketWriter.call(this, CONST.PROTOCOL.CLIENT.THING_USE_ON_CREATURE, 12);
+
+  // Write the source item location
+  this.__writeGenericMove(fromThing);
+
+  // Write the target creature ID
+  this.writeUInt32(creatureId);
+
+}
+
+ItemUseOnCreaturePacket.prototype = Object.create(PacketWriter.prototype);
+ItemUseOnCreaturePacket.prototype.constructor = ItemUseOnCreaturePacket;
+
 const TargetPacket = function (id) {
 
   /*

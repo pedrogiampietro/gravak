@@ -1,4 +1,4 @@
-const World = function(width, height, depth) {
+const World = function (width, height, depth) {
 
   /*
    * Class World
@@ -30,7 +30,7 @@ const World = function(width, height, depth) {
 
 }
 
-World.prototype.handleSelfTeleport = function() {
+World.prototype.handleSelfTeleport = function () {
 
   /*
    * Function GameClient.handleSelfTeleport
@@ -45,13 +45,13 @@ World.prototype.handleSelfTeleport = function() {
   gameClient.renderer.updateTileCache();
   gameClient.renderer.minimap.setCenter();
 
-  if(gameClient.player.__movementEvent === null) {
+  if (gameClient.player.__movementEvent === null) {
     gameClient.player.__movementEvent = gameClient.eventQueue.addEvent(gameClient.player.unlockMovement.bind(gameClient.player), 10);
   }
 
 }
 
-World.prototype.handleTransformTile = function(packet) {
+World.prototype.handleTransformTile = function (packet) {
 
   /*
    * Function GameClient.handleTransformTile
@@ -60,7 +60,7 @@ World.prototype.handleTransformTile = function(packet) {
 
   let tile = this.getTileFromWorldPosition(packet.position);
 
-  if(tile === null) {
+  if (tile === null) {
     return;
   }
 
@@ -69,7 +69,7 @@ World.prototype.handleTransformTile = function(packet) {
 }
 
 
-World.prototype.addCreature = function(creature) {
+World.prototype.addCreature = function (creature) {
 
   /*
    * Function GameClient.addCreature
@@ -78,7 +78,7 @@ World.prototype.addCreature = function(creature) {
 
   let tile = this.getTileFromWorldPosition(creature.getPosition());
 
-  if(tile === null) {
+  if (tile === null) {
     return;
   }
 
@@ -86,7 +86,7 @@ World.prototype.addCreature = function(creature) {
 
 }
 
-World.prototype.checkEntityReferences = function() {
+World.prototype.checkEntityReferences = function () {
 
   /*
    * Function GameClient.checkEntityReferences
@@ -94,15 +94,15 @@ World.prototype.checkEntityReferences = function() {
    */
 
   // Player moves: drop references to entities not in sector
-  Object.values(this.activeCreatures).forEach(function(activeCreature) {
+  Object.values(this.activeCreatures).forEach(function (activeCreature) {
 
     // Never drop self
-    if(gameClient.isSelf(activeCreature)) {
+    if (gameClient.isSelf(activeCreature)) {
       return;
     }
 
     // Remove reference to the creature
-    if(!gameClient.player.getChunk().besides(activeCreature.getChunk())) {
+    if (!gameClient.player.getChunk().besides(activeCreature.getChunk())) {
       gameClient.networkManager.packetHandler.handleEntityRemove(activeCreature.id);
     }
 
@@ -110,7 +110,7 @@ World.prototype.checkEntityReferences = function() {
 
 }
 
-World.prototype.handleCreatureMove = function(id, position, speed) {
+World.prototype.handleCreatureMove = function (id, position, speed) {
 
   /*
    * Function World.handleCreatureMove
@@ -124,7 +124,7 @@ World.prototype.handleCreatureMove = function(id, position, speed) {
 
 }
 
-World.prototype.__handleCreatureMove = function(id, position, speed) {
+World.prototype.__handleCreatureMove = function (id, position, speed) {
 
   /*
    * Function World.handleCreatureMove
@@ -134,24 +134,24 @@ World.prototype.__handleCreatureMove = function(id, position, speed) {
   // Fetch the creature
   let creature = this.getCreature(id);
 
-  if(creature === null) {
+  if (creature === null) {
     return false;
   }
 
   // Do nothing if the creature is already on that position
-  if(position.equals(creature.getPosition())) {
+  if (position.equals(creature.getPosition())) {
     return false;
   }
 
   let fromTile = this.getTileFromWorldPosition(creature.getPosition());
 
-  if(fromTile !== null) {
+  if (fromTile !== null) {
     fromTile.removeCreature(creature);
   }
 
   let tile = this.getTileFromWorldPosition(position);
 
-  if(tile === null) {
+  if (tile === null) {
     return false;
   }
 
@@ -161,20 +161,30 @@ World.prototype.__handleCreatureMove = function(id, position, speed) {
   creature.moveTo(position, speed);
 
   // Check ambient sound
-  if(creature === this.player) {
-    this.player.setAmbientSound();
+  if (creature === gameClient.player) {
+    gameClient.player.setAmbientSound();
+    this.updateBattleListVisibility();
+  } else {
+    gameClient.interface.windowManager.getWindow("battle-window").updateCreature(creature);
   }
 
   return true;
 
 }
 
-World.prototype.createCreature = function(id, creature) {
+World.prototype.createCreature = function (id, creature) {
 
   /*
    * Function World.createCreature
    * Creates a creature by adding it to cache
    */
+
+  // Prevent duplication
+  if (this.activeCreatures.hasOwnProperty(id)) {
+    this.activeCreatures[id] = creature;
+    this.addCreature(creature);
+    return gameClient.interface.windowManager.getWindow("battle-window").addCreature(creature);
+  }
 
   // Set and add
   this.activeCreatures[id] = creature;
@@ -184,7 +194,25 @@ World.prototype.createCreature = function(id, creature) {
 
 }
 
-World.prototype.getCreature = function(id) {
+World.prototype.updateBattleListVisibility = function () {
+
+  /*
+   * Function World.updateBattleListVisibility
+   * Updates the visibility of all creatures in the battle list based on player position
+   */
+
+  let battleWindow = gameClient.interface.windowManager.getWindow("battle-window");
+  if (!battleWindow) {
+    return;
+  }
+
+  Object.values(this.activeCreatures).forEach(function (creature) {
+    battleWindow.updateCreature(creature);
+  });
+
+}
+
+World.prototype.getCreature = function (id) {
 
   /*
    * Function GameClient.getCreature
@@ -192,7 +220,7 @@ World.prototype.getCreature = function(id) {
    */
 
   // Unavailable
-  if(!this.activeCreatures.hasOwnProperty(id)) {
+  if (!this.activeCreatures.hasOwnProperty(id)) {
     return null;
   }
 
@@ -200,7 +228,7 @@ World.prototype.getCreature = function(id) {
 
 }
 
-World.prototype.checkChunks = function() {
+World.prototype.checkChunks = function () {
 
   /*
    * Function World.checkChunks
@@ -208,22 +236,22 @@ World.prototype.checkChunks = function() {
    */
 
   // Only keep adjacent chunks in memory
-  this.chunks = this.chunks.filter(function(chunk) {
+  this.chunks = this.chunks.filter(function (chunk) {
     return gameClient.player.getChunk().besides(chunk);
   });
 
 }
 
-World.prototype.referenceTileNeighbours = function() {
+World.prototype.referenceTileNeighbours = function () {
 
   /*
    * Function World.referenceTileNeighbours
    * Saves a reference to neighbouring tiles for client-side pathfinding
    */
 
-  this.chunks.forEach(function(chunk) {
+  this.chunks.forEach(function (chunk) {
 
-    chunk.tiles.forEach(function(tile) {
+    chunk.tiles.forEach(function (tile) {
 
       tile.neighbours = new Array();
 
@@ -237,11 +265,11 @@ World.prototype.referenceTileNeighbours = function() {
         tile.getPosition().northeast(),
         tile.getPosition().southeast()
       );
-      
-      // Add the neighbouring chunks
-      tiles.map(this.getTileFromWorldPosition, this).forEach(function(x) {
 
-        if(x === null || x.id === 0) {
+      // Add the neighbouring chunks
+      tiles.map(this.getTileFromWorldPosition, this).forEach(function (x) {
+
+        if (x === null || x.id === 0) {
           return;
         }
 
@@ -254,7 +282,7 @@ World.prototype.referenceTileNeighbours = function() {
 
 }
 
-World.prototype.isValidWorldPosition = function(worldPosition) {
+World.prototype.isValidWorldPosition = function (worldPosition) {
 
   /*
    * Function World.isValidWorldPosition
@@ -262,15 +290,15 @@ World.prototype.isValidWorldPosition = function(worldPosition) {
    */
 
   return worldPosition.x >= 0 &&
-         worldPosition.y >= 0 &&
-         worldPosition.z >= 0 &&
-         worldPosition.x < this.width &&
-         worldPosition.y < this.height &&
-         worldPosition.z < this.depth;
+    worldPosition.y >= 0 &&
+    worldPosition.z >= 0 &&
+    worldPosition.x < this.width &&
+    worldPosition.y < this.height &&
+    worldPosition.z < this.depth;
 
 }
 
-World.prototype.findChunk = function(position) {
+World.prototype.findChunk = function (position) {
 
   /*
    * Function World.findChunk
@@ -280,8 +308,8 @@ World.prototype.findChunk = function(position) {
   let index = this.getChunkIndex(this.getChunkPositionFromWorldPosition(position));
 
   // Linear search over all known chunks
-  for(let i = 0; i < this.chunks.length; i++) {
-    if(index === this.chunks[i].id) {
+  for (let i = 0; i < this.chunks.length; i++) {
+    if (index === this.chunks[i].id) {
       return this.chunks[i];
     }
   }
@@ -290,17 +318,17 @@ World.prototype.findChunk = function(position) {
 
 }
 
-World.prototype.getChunkFromWorldPosition = function(position) {
+World.prototype.getChunkFromWorldPosition = function (position) {
 
   /*
    * Function World.getChunkFromWorldPosition
    * Returns whether the given position is inside the world bounds
    */
 
-  if(position === null) return null;
+  if (position === null) return null;
 
   // Confirm the world position is valid
-  if(!this.isValidWorldPosition(position)) {
+  if (!this.isValidWorldPosition(position)) {
     return null;
   }
 
@@ -309,7 +337,7 @@ World.prototype.getChunkFromWorldPosition = function(position) {
 
 }
 
-World.prototype.getChunkPositionFromWorldPosition = function(worldPosition) {
+World.prototype.getChunkPositionFromWorldPosition = function (worldPosition) {
 
   /*
    * Function World.getChunkPositionFromWorldPosition
@@ -332,20 +360,20 @@ World.prototype.getChunkPositionFromWorldPosition = function(worldPosition) {
 
 }
 
-World.prototype.getChunkIndex = function(sectorPosition) {
+World.prototype.getChunkIndex = function (sectorPosition) {
 
   /*
    * Function World.getChunkIndex
    * Returns the sector index from a chunk position
    */
 
-  return sectorPosition.x + 
-         (sectorPosition.y * this.nSectorsWidth) +
-         (sectorPosition.z * this.nSectorsWidth * this.nSectorsHeight);
+  return sectorPosition.x +
+    (sectorPosition.y * this.nSectorsWidth) +
+    (sectorPosition.z * this.nSectorsWidth * this.nSectorsHeight);
 
 }
 
-World.prototype.isTopTile = function(position) {
+World.prototype.isTopTile = function (position) {
 
   /*
    * Function World.isTopTile
@@ -353,9 +381,9 @@ World.prototype.isTopTile = function(position) {
    */
 
   // Get the top tile at a position
-  for(let z = position.z + 1; z < position.z + 8; z++) {
+  for (let z = position.z + 1; z < position.z + 8; z++) {
     let tile = this.getTileFromWorldPosition(new Position(position.x, position.y, z));
-    if(tile === null || tile.id !== 0) {
+    if (tile === null || tile.id !== 0) {
       return false;
     }
   }
@@ -364,7 +392,7 @@ World.prototype.isTopTile = function(position) {
 
 }
 
-World.prototype.getTopTileFromWorldPosition = function(position) {
+World.prototype.getTopTileFromWorldPosition = function (position) {
 
   /*
    * Function World.getTopTileFromWorldPosition
@@ -374,7 +402,7 @@ World.prototype.getTopTileFromWorldPosition = function(position) {
   // The sector of the tile
   let chunk = this.getChunkFromWorldPosition(position);
 
-  if(chunk === null) {
+  if (chunk === null) {
     return null;
   }
 
@@ -383,7 +411,7 @@ World.prototype.getTopTileFromWorldPosition = function(position) {
 
 }
 
-World.prototype.targetMonster = function(monsters) {
+World.prototype.targetMonster = function (monsters) {
 
   /*
    * Function World.targetMonster
@@ -394,12 +422,12 @@ World.prototype.targetMonster = function(monsters) {
   let monster = monsters.values().next().value;
 
   // You cannot target yourself
-  if(monster === gameClient.player) {
+  if (monster === gameClient.player) {
     return;
   }
 
   // Only monsters can be attacked
-  if(monster.constructor.name !== "Creature") {
+  if (monster.constructor.name !== "Creature") {
     return gameClient.interface.notificationManager.setCancelMessage("You cannot attack this creature.");
   }
 
@@ -408,8 +436,8 @@ World.prototype.targetMonster = function(monsters) {
 
 }
 
-World.prototype.getTileFromWorldPosition = function(worldPosition) {
-  
+World.prototype.getTileFromWorldPosition = function (worldPosition) {
+
   /*
    * Function World.getTileFromWorldPosition
    * Returns tile based on a world position
@@ -418,7 +446,7 @@ World.prototype.getTileFromWorldPosition = function(worldPosition) {
   // First get the chunk
   let chunk = this.getChunkFromWorldPosition(worldPosition);
 
-  if(chunk === null) {
+  if (chunk === null) {
     return null;
   }
 
@@ -427,7 +455,7 @@ World.prototype.getTileFromWorldPosition = function(worldPosition) {
 
 }
 
-World.prototype.getItemFromPosition = function(position) {
+World.prototype.getItemFromPosition = function (position) {
 
   /*
    * Function World.getItemFromPosition
@@ -436,7 +464,7 @@ World.prototype.getItemFromPosition = function(position) {
 
   let tile = this.getTileFromWorldPosition(position);
 
-  if(tile === null) {
+  if (tile === null) {
     return null;
   }
 
@@ -444,7 +472,7 @@ World.prototype.getItemFromPosition = function(position) {
 
 }
 
-World.prototype.addItem = function(position, item, slot) {
+World.prototype.addItem = function (position, item, slot) {
 
   /*
    * Function World.addItem
@@ -453,7 +481,7 @@ World.prototype.addItem = function(position, item, slot) {
 
   let tile = this.getTileFromWorldPosition(position);
 
-  if(tile === null) {
+  if (tile === null) {
     return;
   }
 

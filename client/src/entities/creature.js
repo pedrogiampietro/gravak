@@ -276,6 +276,14 @@ Creature.prototype.setPosition = function (position) {
   this.__chunk = gameClient.world.getChunkFromWorldPosition(position);
   gameClient.world.getTileFromWorldPosition(position).addCreature(this);
 
+  if (gameClient.interface && gameClient.interface.windowManager) {
+    if (this === gameClient.player) {
+      gameClient.world.updateBattleListVisibility();
+    } else {
+      gameClient.interface.windowManager.getWindow("battle-window").updateCreature(this);
+    }
+  }
+
 }
 
 Creature.prototype.getHealthPercentage = function () {

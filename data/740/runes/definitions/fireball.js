@@ -1,36 +1,49 @@
-const Position = requireModule("utils/position");
-
 module.exports = function greatFireball(source, target) {
 
   /*
-   * function suddenDeath
-   * Code that handles the sudden death rune
+   * function greatFireball
+   * Code that handles the great fireball rune
+   * GFB rune deals fire damage in a circular area (37 sqms - radius 3)
    */
 
-  // Get circle position for the GFB
-  let circle = Position.prototype.getRadius(2);
-
+  // Send distance effect from source to target
   process.gameServer.world.sendDistanceEffect(source.position, target.position, CONST.EFFECT.PROJECTILE.FIRE);
 
-  circle.forEach(function(position) {
+  // Calculate random damage between 80-120 (typical GFB damage in Tibia 7.4)
+  let minDamage = 80;
+  let maxDamage = 120;
 
-    let relPosition = target.position.add(position);
-    let tile = process.gameServer.world.getTileFromWorldPosition(relPosition);
+  // Get circle positions around the target position (radius 3 for ~37 sqms)
+  let areaPositions = target.position.getRadius(3);
 
-    if(tile === null) {
+  areaPositions.forEach(function (position) {
+
+    let tile = process.gameServer.world.getTileFromWorldPosition(position);
+
+    if (tile === null) {
       return;
     }
 
-    // Tile is blocked
-    if(tile.isBlockSolid()) {
+    // Skip blocked tiles
+    if (tile.isBlockSolid()) {
       return;
     }
 
-    // Apply to the tile
-    process.gameServer.world.sendMagicEffect(relPosition, CONST.EFFECT.MAGIC.FIREAREA);
+    // Send fire magic effect on the tile
+    process.gameServer.world.sendMagicEffect(position, CONST.EFFECT.MAGIC.FIREAREA);
 
-    tile.monsters.forEach(function(monster) {
-      process.gameServer.world.__damageEntity(source, monster, 1000, CONST.COLOR.RED);
+    // Apply damage to all monsters on the tile
+    tile.monsters.forEach(function (monster) {
+      let damage = Number.prototype.random(minDamage, maxDamage);
+      process.gameServer.world.__damageEntity(source, monster, damage, CONST.COLOR.ORANGE);
+    });
+
+    // Apply damage to all players on the tile (except the source)
+    tile.players.forEach(function (player) {
+      if (player !== source) {
+        let damage = Number.prototype.random(minDamage, maxDamage);
+        process.gameServer.world.__damageEntity(source, player, damage, CONST.COLOR.ORANGE);
+      }
     });
 
   });
@@ -38,3 +51,4 @@ module.exports = function greatFireball(source, target) {
   return true;
 
 }
+
