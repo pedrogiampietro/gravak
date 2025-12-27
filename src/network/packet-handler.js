@@ -268,25 +268,29 @@ PacketHandler.prototype.handlePlayerSay = function (player, packet) {
   // Spell words mapping to spell IDs
   const SPELL_WORDS = {
     // Existing spells (IDs 0-9)
-    "exana pox": 0,          // Cure
-    "exura": 2,              // Light Healing
-    "utana vid": 3,          // Invisible
-    "utevo lux": 5,          // Light
-    "utani hur": 8,          // Haste
-    "exani hur": 9,          // Levitate
+    "exana flam": 0,           // Cure Burning
+    "exevo mas flam": 1,       // Explosion
+    "exura": 2,                // Light Healing
+    "utana vid": 3,            // Invisible
+    "utevo res ina": 4,        // Creature Illusion (handled separately below)
+    "utevo lux": 5,            // Light
+    "exori mort": 6,           // Death Strike
+    "exani tera": 7,           // Temple Teleport (Hearthstone)
+    "utani hur": 8,            // Haste
+    "exani hur": 9,            // Levitate
     // New healing spells
-    "exura gran": 10,        // Intense Healing
-    "exura vita": 11,        // Ultimate Healing
-    "exana pox": 12,         // Antidote (overrides 0 if you want new version)
+    "exura gran": 10,          // Intense Healing
+    "exura vita": 11,          // Ultimate Healing
+    "exana pox": 12,           // Antidote
     // New attack spells
-    "exori vis": 13,         // Energy Strike
-    "exori flam": 14,        // Flame Strike
-    "exevo flam hur": 15,    // Fire Wave
-    "exevo vis lux": 16,     // Energy Beam
+    "exori vis": 13,           // Energy Strike
+    "exori flam": 14,          // Flame Strike
+    "exevo flam hur": 15,      // Fire Wave
+    "exevo vis lux": 16,       // Energy Beam
     // New support spells
-    "utani gran hur": 17,    // Strong Haste
-    "utamo vita": 18,        // Magic Shield
-    "utevo gran lux": 19     // Great Light
+    "utani gran hur": 17,      // Strong Haste
+    "utamo vita": 18,          // Magic Shield
+    "utevo gran lux": 19       // Great Light
   };
 
   // Check if message is a spell

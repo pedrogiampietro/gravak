@@ -154,6 +154,7 @@ ConditionManager.prototype.add = function (condition, properties) {
 
   // Players need to be informed
   if (this.__creature.isPlayer()) {
+    this.__creature.write(new ToggleConditionPacket(true, this.__creature.getId(), condition.id));
     this.__creature.broadcast(new ToggleConditionPacket(true, this.__creature.getId(), condition.id));
   }
 
@@ -216,6 +217,7 @@ ConditionManager.prototype.__expireCondition = function (condition) {
 
   // Players need to be informed
   if (this.__creature.isPlayer()) {
+    this.__creature.write(new ToggleConditionPacket(false, this.__creature.getId(), condition.id));
     this.__creature.broadcast(new ToggleConditionPacket(false, this.__creature.getId(), condition.id));
   }
 

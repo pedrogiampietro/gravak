@@ -6100,15 +6100,15 @@
 	<spawn centerx="32047" centery="32204" centerz="7" radius="2">
 		<npc name="Willie" x="0" y="0" z="7" spawntime="60" />
 	</spawn>
-	<spawn centerx="32109" centery="32204" centerz="7" radius="1">
-		<npc name="Obi" x="0" y="0" z="7" spawntime="60" />
-	</spawn>
 	<spawn centerx="32948" centery="32204" centerz="7" radius="1">
 		<monster name="rabbit" x="0" y="0" z="7" spawntime="60" />
 		<monster name="rabbit" x="1" y="0" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="32037" centery="32205" centerz="7" radius="3">
 		<npc name="Billy" x="0" y="0" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="32109" centery="32205" centerz="7" radius="1">
+		<npc name="Obi" x="0" y="-1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="32874" centery="32207" centerz="7" radius="1">
 		<monster name="snake" x="0" y="0" z="7" spawntime="60" />

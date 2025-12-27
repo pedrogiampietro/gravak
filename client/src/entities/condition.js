@@ -1,4 +1,4 @@
-const ConditionManager = function(player, conditions) {
+const ConditionManager = function (player, conditions) {
 
   /*
    * Class ConditionManager
@@ -12,7 +12,7 @@ const ConditionManager = function(player, conditions) {
 
 }
 
-ConditionManager.prototype.has = function(cid) {
+ConditionManager.prototype.has = function (cid) {
 
   /*
    * Function ConditionManager.has
@@ -23,7 +23,7 @@ ConditionManager.prototype.has = function(cid) {
 
 }
 
-ConditionManager.prototype.add = function(cid) {
+ConditionManager.prototype.add = function (cid) {
 
   /*
    * Function ConditionManager.add
@@ -33,19 +33,19 @@ ConditionManager.prototype.add = function(cid) {
   this.__conditions.add(cid);
 
   // Update the status bar
-  if(this.__player === gameClient.player) {
+  if (this.__player === gameClient.player) {
     gameClient.interface.statusBar.update();
   }
 
-  if(this.__player.hasCondition(ConditionManager.prototype.DRUNK)) {
-    if(!this.__player.hasCondition(ConditionManager.prototype.SUPPRESS_DRUNK)) {
+  if (this.__player.hasCondition(ConditionManager.prototype.DRUNK)) {
+    if (!this.__player.hasCondition(ConditionManager.prototype.SUPPRESS_DRUNK)) {
       document.getElementById("screen").style.filter = "blur(2px)";
     }
   }
 
 }
 
-ConditionManager.prototype.remove = function(cid) {
+ConditionManager.prototype.remove = function (cid) {
 
   /*
    * Function ConditionManager.remove
@@ -56,29 +56,30 @@ ConditionManager.prototype.remove = function(cid) {
   this.__conditions.delete(cid);
 
   // Update the status bar
-  if(this.__player === gameClient.player) {
+  if (this.__player === gameClient.player) {
     gameClient.interface.statusBar.update();
   }
 
-  if(!this.__player.hasCondition(ConditionManager.prototype.DRUNK)) {
+  if (!this.__player.hasCondition(ConditionManager.prototype.DRUNK)) {
     document.getElementById("screen").style.filter = "";
   }
 
 }
 
-// Standards
+// Standards - must match client/data/740/constants.json
 ConditionManager.prototype.DRUNK = 0;
 ConditionManager.prototype.POISONED = 1;
 ConditionManager.prototype.BURNING = 2;
 ConditionManager.prototype.ELECTRIFIED = 3;
 ConditionManager.prototype.INVISIBLE = 4;
 ConditionManager.prototype.PROTECTION_ZONE = 5;
-ConditionManager.prototype.COMBAT_LOCK = 6;
-ConditionManager.prototype.SUPPRESS_DRUNK = 7;
-ConditionManager.prototype.LIGHT = 8;
-ConditionManager.prototype.HEALING = 9;
-ConditionManager.prototype.REGENERATION = 10;
-ConditionManager.prototype.MORPH = 11;
-ConditionManager.prototype.MAGIC_SHIELD = 12;
-ConditionManager.prototype.SATED = 14;
-ConditionManager.prototype.HASTE = 15;
+ConditionManager.prototype.SUPPRESS_DRUNK = 6;
+ConditionManager.prototype.LIGHT = 7;
+ConditionManager.prototype.HEALING = 8;
+ConditionManager.prototype.REGENERATION = 9;
+ConditionManager.prototype.MORPH = 10;
+ConditionManager.prototype.MAGIC_SHIELD = 11;
+ConditionManager.prototype.MAGIC_FLAME = 12;
+ConditionManager.prototype.SATED = 13;
+ConditionManager.prototype.HASTE = 14;
+ConditionManager.prototype.ARENA = 15;

@@ -126,6 +126,12 @@ Equipment.prototype.removeIndex = function (index, count) {
   this.__updateWeight(-thing.getWeight());
   thing.setParent(null);
 
+  // If removed item was a lit torch from quiver, remove the light condition
+  const LIT_TORCH_IDS = [2051, 2053, 2055, 2042, 2045, 2048, 2163]; // lit torches, candelabrum, lamp, candlestick, magic lightwand
+  if (index === CONST.EQUIPMENT.QUIVER && LIT_TORCH_IDS.includes(thing.id)) {
+    this.__player.removeCondition(Condition.prototype.LIGHT);
+  }
+
   // Removed thing has attribute invisible?
   if (thing.getAttribute("invisible")) {
     this.__player.removeCondition(Condition.prototype.INVISIBLE);
@@ -286,6 +292,12 @@ Equipment.prototype.addThing = function (thing, index) {
 
   if (thing.getAttribute("manashield")) {
     this.__player.addCondition(Condition.prototype.MAGIC_SHIELD, -1, -1, null);
+  }
+
+  // Check if it's a lit torch/light source in the quiver slot - add LIGHT condition
+  const LIT_TORCH_IDS = [2051, 2053, 2055, 2042, 2045, 2048, 2163]; // lit torches, candelabrum, lamp, candlestick, magic lightwand
+  if (index === CONST.EQUIPMENT.QUIVER && LIT_TORCH_IDS.includes(thing.id)) {
+    this.__player.addCondition(Condition.prototype.LIGHT, -1, -1, null);
   }
 
   // Now feel free to add it
@@ -591,7 +603,8 @@ Equipment.prototype.__isRightType = function (item, slot) {
     case CONST.EQUIPMENT.RING:
       return proto.properties.slotType === "ring";
     case CONST.EQUIPMENT.QUIVER:
-      return proto.properties.weaponType === "quiver";
+      // Accept quivers/ammunition AND light sources (torches, lamps, etc.)
+      return proto.properties.weaponType === "quiver" || proto.properties.stopduration === true;
     default:
       return false;
   }

@@ -7,5 +7,14 @@
     },
     "enabled": true,
     "definition": "cipfried.json"
+  },
+  "obi": {
+    "position": {
+      "x": 32109,
+      "y": 32204,
+      "z": 8
+    },
+    "enabled": true,
+    "definition": "obi.json"
   }
 }

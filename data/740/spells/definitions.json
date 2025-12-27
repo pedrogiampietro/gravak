@@ -71,7 +71,7 @@
     ]
   },
   "6": {
-    "script": "life-drain.js",
+    "script": "death_strike.js",
     "name": "Death Strike",
     "words": "exori mort",
     "mana": 20,
