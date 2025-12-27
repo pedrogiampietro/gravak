@@ -1,12 +1,14 @@
-const Skills = function (skills) {
+const Skills = function (skills, vocation) {
 
   this.__skills = skills;
 
   // Store level and vocation for external access
   this.level = skills.level || 1;
 
-  // Default vocation (0 = none, will be updated from player state)
-  this.vocation = 0;
+  // Store vocation from player data (0 = none, 1 = knight, 2 = paladin, 3 = sorcerer, 4 = druid)
+  this.vocation = vocation || 0;
+
+  console.log("Skills initialized with vocation:", this.vocation);
 
   // Experience table for calculating percentage to next level
   this.__experienceTable = Array.from({ length: 1000 }, (_, i) => {
@@ -69,20 +71,69 @@ Skills.prototype.__getSkillConstant = function (skillType) {
 }
 
 // Get the vocation constant B based on vocation and skill type
+// Matches server skill.js and packet-handler.js exactly
 Skills.prototype.__getVocationConstant = function (skillType) {
-  // For now, use default values (vocation 0 = no vocation)
-  // TODO: Get actual vocation from player state
-  switch (skillType) {
-    case "magic": return 3.0;
-    case "club":
-    case "sword":
-    case "axe":
-    case "distance": return 2.0;
-    case "fist":
-    case "shielding": return 1.5;
-    case "fishing": return 1.1;
-    default: return 2.0;
+  let vocation = this.vocation;
+
+  if (vocation === 0) { // NONE
+    switch (skillType) {
+      case "magic": return 3.0;
+      case "club":
+      case "sword":
+      case "axe":
+      case "distance": return 2.0;
+      case "fist":
+      case "shielding": return 1.5;
+      case "fishing": return 1.1;
+    }
+  } else if (vocation === 1) { // KNIGHT
+    switch (skillType) {
+      case "magic": return 3.0;
+      case "club":
+      case "sword":
+      case "axe":
+      case "fist":
+      case "shielding":
+      case "fishing": return 1.1;
+      case "distance": return 1.4;
+    }
+  } else if (vocation === 2) { // PALADIN
+    switch (skillType) {
+      case "magic": return 1.4;
+      case "club":
+      case "sword":
+      case "axe":
+      case "fist": return 1.2;
+      case "distance":
+      case "shielding":
+      case "fishing": return 1.1;
+    }
+  } else if (vocation === 3) { // SORCERER
+    switch (skillType) {
+      case "magic": return 1.1;
+      case "club":
+      case "sword":
+      case "axe":
+      case "distance": return 2.0;
+      case "fist":
+      case "shielding": return 1.5;
+      case "fishing": return 1.1;
+    }
+  } else if (vocation === 4) { // DRUID
+    switch (skillType) {
+      case "magic": return 1.1;
+      case "club":
+      case "sword":
+      case "axe":
+      case "distance": return 1.8;
+      case "fist":
+      case "shielding": return 1.5;
+      case "fishing": return 1.1;
+    }
   }
+
+  // Default fallback
+  return 2.0;
 }
 
 // Get the skill level based on accumulated points

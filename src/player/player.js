@@ -1076,26 +1076,55 @@ Player.prototype.checkSkillAdvance = function (isBloodHit) {
   /*
    * Function Player.checkSkillAdvance
    * Advances the skill of the player based on the weapon used
+   * Uses CONFIG.SKILLS for multipliers
    */
 
   let weaponType = this.containerManager.equipment.getWeaponType();
 
-  // Bonus for blood hit: 2 tries. Blocked: 1 try.
-  let amount = isBloodHit ? 2 : 1;
-  this.skills.incrementSkill(weaponType, amount);
+  // Determine if it's a distance or melee weapon
+  let isDistance = weaponType === CONST.PROPERTIES.DISTANCE;
+  let skillConfig = isDistance
+    ? (CONFIG.SKILLS && CONFIG.SKILLS.DISTANCE ? CONFIG.SKILLS.DISTANCE : {})
+    : (CONFIG.SKILLS && CONFIG.SKILLS.MELEE ? CONFIG.SKILLS.MELEE : {});
 
+  // Get config values with defaults
+  let basePoints = skillConfig.BASE_POINTS_PER_HIT || 1;
+  let bloodBonus = skillConfig.BLOOD_HIT_BONUS || 2;
+  let globalMultiplier = skillConfig.GLOBAL_MULTIPLIER || 1;
+  let vocationMultipliers = skillConfig.VOCATION_MULTIPLIERS || {};
+
+  // Get vocation multiplier
+  let vocationName = this.getVocationName().toUpperCase();
+  let vocationMultiplier = vocationMultipliers[vocationName] || vocationMultipliers.NONE || 1;
+
+  // Calculate final points: blood hit gets bonus, blocked gets base
+  let hitPoints = isBloodHit ? (basePoints * bloodBonus) : basePoints;
+  let totalPoints = hitPoints * vocationMultiplier * globalMultiplier;
+
+  this.skills.incrementSkill(weaponType, totalPoints);
 };
 
 Player.prototype.checkDefensiveSkillAdvance = function () {
   /*
    * Function Player.checkDefensiveSkillAdvance
    * Advances the shielding skill if a shield is used
+   * Uses CONFIG.SKILLS for multipliers
    */
 
   if (this.containerManager.equipment.isShieldEquipped()) {
-    this.skills.incrementSkill(CONST.PROPERTIES.SHIELDING, 1);
-  }
+    // Get config values with defaults
+    let skillConfig = CONFIG.SKILLS && CONFIG.SKILLS.SHIELDING ? CONFIG.SKILLS.SHIELDING : {};
+    let basePoints = skillConfig.BASE_POINTS_PER_BLOCK || 1;
+    let globalMultiplier = skillConfig.GLOBAL_MULTIPLIER || 1;
+    let vocationMultipliers = skillConfig.VOCATION_MULTIPLIERS || {};
 
+    // Get vocation multiplier
+    let vocationName = this.getVocationName().toUpperCase();
+    let vocationMultiplier = vocationMultipliers[vocationName] || vocationMultipliers.NONE || 1;
+
+    let totalPoints = basePoints * vocationMultiplier * globalMultiplier;
+    this.skills.incrementSkill(CONST.PROPERTIES.SHIELDING, totalPoints);
+  }
 };
 
 Player.prototype.isGM = function () {

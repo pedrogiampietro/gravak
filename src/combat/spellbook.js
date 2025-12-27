@@ -164,12 +164,12 @@ Spellbook.prototype.handleSpell = function (sid, properties) {
   if (spellMeta && spellMeta.mana > 0 && this.player.skills) {
     // Get config values with defaults
     let skillConfig = CONFIG.SKILLS && CONFIG.SKILLS.MAGIC ? CONFIG.SKILLS.MAGIC : {};
-    let basePointsPerMana = skillConfig.BASE_POINTS_PER_MANA || 1;
+    let basePointsPerCast = skillConfig.BASE_POINTS_PER_CAST || 1;
     let globalMultiplier = skillConfig.GLOBAL_MULTIPLIER || 1;
     let vocationMultipliers = skillConfig.VOCATION_MULTIPLIERS || {};
 
     // Calculate base skill points from mana used
-    let basePoints = Math.max(1, Math.floor(spellMeta.mana * basePointsPerMana));
+    let basePoints = Math.max(1, Math.floor(spellMeta.mana * basePointsPerCast));
 
     // Apply vocation multiplier (mages train magic faster)
     let vocation = this.player.getProperty(CONST.PROPERTIES.VOCATION);

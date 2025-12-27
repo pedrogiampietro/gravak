@@ -301,7 +301,7 @@ Skills.prototype.__onSkillAdvance = function (type, oldLevel, newLevel) {
    * Called when a skill advances to a new level
    */
 
-  const { CreaturePropertyPacket, ServerMessagePacket, ChannelWritePacket } = requireModule("network/protocol");
+  const { ServerMessagePacket, ChannelWritePacket } = requireModule("network/protocol");
 
   // Skip message for EXPERIENCE - level ups are handled separately in player.js onLevelUp()
   if (type === CONST.PROPERTIES.EXPERIENCE) {
@@ -313,8 +313,7 @@ Skills.prototype.__onSkillAdvance = function (type, oldLevel, newLevel) {
   // Get skill name for the message
   let skillName = this.__getSkillName(type);
 
-  // Send skill level update to client
-  this.__player.write(new CreaturePropertyPacket(this.__player.getId(), type, newLevel));
+  // Note: Skill points are already sent by incrementSkill() - client calculates level from points
 
   // Send congratulations message
   let message = `You advanced to ${skillName} level ${newLevel}.`;

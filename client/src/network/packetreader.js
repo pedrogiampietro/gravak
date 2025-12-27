@@ -925,36 +925,59 @@ PacketReader.prototype.readSkills = function () {
 }
 
 PacketReader.prototype.readPlayerInfo = function () {
+  console.log("CLIENT: Reading Player Info Packet...");
 
-  /*
-   * Function PacketReader.readPlayerInfo
-   * Reads and serializes the player information during login
-   */
+  let id = this.readUInt32();
+  let name = this.readString();
+  let position = this.readPosition();
+  let direction = this.readUInt8();
+  let skills = this.readSkills();
+  let speed = this.readUInt16();
+  let attack = this.readUInt8();
+  let attackSlowness = this.readUInt8();
+
+  let vocation = this.readUInt8();
+  console.log("CLIENT: Read Vocation:", vocation);
+
+  let equipment = this.readEquipment();
+  let mounts = this.readOutfits();
+  let outfits = this.readOutfits();
+  let spellbook = this.readArray();
+  let friendlist = this.readFriendlist();
+
+  let outfit = this.readOutfit();
+  let health = this.readUInt32();
+  let maxHealth = this.readUInt32();
+  let mana = this.readUInt32();
+  let manaMax = this.readUInt32();
+  let capacity = this.readUInt32();
+  let maxCapacity = this.readUInt32();
+  let conditions = this.readConditions();
 
   return new Object({
-    "id": this.readUInt32(),
-    "name": this.readString(),
-    "position": this.readPosition(),
-    "direction": this.readUInt8(),
-    "skills": this.readSkills(),
-    "speed": this.readUInt16(),
-    "attack": this.readUInt8(),
-    "attackSlowness": this.readUInt8(),
-    "equipment": this.readEquipment(),
-    "mounts": this.readOutfits(),
-    "outfits": this.readOutfits(),
-    "spellbook": this.readArray(),
-    "friendlist": this.readFriendlist(),
-    "outfit": this.readOutfit(),
-    "health": this.readUInt32(),
-    "maxHealth": this.readUInt32(),
-    "mana": this.readUInt32(),
-    "manaMax": this.readUInt32(),
-    "capacity": this.readUInt32(),
-    "maxCapacity": this.readUInt32(),
-    "conditions": this.readConditions()
+    "id": id,
+    "name": name,
+    "position": position,
+    "direction": direction,
+    "skills": skills,
+    "speed": speed,
+    "attack": attack,
+    "attackSlowness": attackSlowness,
+    "vocation": vocation,
+    "equipment": equipment,
+    "mounts": mounts,
+    "outfits": outfits,
+    "spellbook": spellbook,
+    "friendlist": friendlist,
+    "outfit": outfit,
+    "health": health,
+    "maxHealth": maxHealth,
+    "mana": mana,
+    "manaMax": manaMax,
+    "capacity": capacity,
+    "maxCapacity": maxCapacity,
+    "conditions": conditions
   });
-
 }
 
 PacketReader.prototype.readFriendlist = function () {

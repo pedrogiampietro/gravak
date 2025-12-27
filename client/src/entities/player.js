@@ -65,6 +65,7 @@ const Player = function (data) {
   Creature.call(this, data);
 
   this.type = 0;
+  this.vocation = data.vocation || 0;
   this.setState(data);
 
   // Players have equipment
@@ -183,7 +184,7 @@ Player.prototype.setState = function (data) {
   console.log("Speed from server:", data.speed);
 
   // Keep player state
-  this.skills = new Skills(data.skills);
+  this.skills = new Skills(data.skills, this.vocation);
   this.mounts = data.mounts || [];
   this.outfits = data.outfits || [];
 

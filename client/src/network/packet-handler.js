@@ -135,12 +135,23 @@ PacketHandler.prototype.__calculateSkillLevelAndPercentage = function (skillType
   /*
    * Calculates skill level and percentage from skill points
    * Uses the Tibia formula: A * ((B^(level - offset) - 1) / (B - 1))
+   * See https://tibia.fandom.com/wiki/Formulae#Skills
    */
 
   // Skill constants based on type
   let A, B, skillOffset;
 
-  // Get A (skill constant)
+  // DEBUG LOG
+  if (skillType === CONST.PROPERTIES.CLUB) {
+    console.log("Skill Calc Debug:", {
+      type: "CLUB",
+      points: points,
+      vocation: vocation,
+      B_Constant: this.__getVocationSkillConstant(skillType, vocation)
+    });
+  }
+
+  // Get A (skill constant) - same for all vocations
   switch (skillType) {
     case CONST.PROPERTIES.MAGIC: A = 1600; break;
     case CONST.PROPERTIES.FIST:
@@ -153,18 +164,8 @@ PacketHandler.prototype.__calculateSkillLevelAndPercentage = function (skillType
     default: A = 50;
   }
 
-  // Get B (vocation constant) - simplified for NONE vocation
-  switch (skillType) {
-    case CONST.PROPERTIES.MAGIC: B = 3.0; break;
-    case CONST.PROPERTIES.CLUB:
-    case CONST.PROPERTIES.SWORD:
-    case CONST.PROPERTIES.AXE:
-    case CONST.PROPERTIES.DISTANCE: B = 2.0; break;
-    case CONST.PROPERTIES.FIST:
-    case CONST.PROPERTIES.SHIELDING: B = 1.5; break;
-    case CONST.PROPERTIES.FISHING: B = 1.1; break;
-    default: B = 2.0;
-  }
+  // Get B (vocation constant) - matches server skill.js exactly
+  B = this.__getVocationSkillConstant(skillType, vocation);
 
   // Skill offset (magic starts at 0, others at 10)
   skillOffset = skillType === CONST.PROPERTIES.MAGIC ? 0 : 10;
@@ -187,6 +188,75 @@ PacketHandler.prototype.__calculateSkillLevelAndPercentage = function (skillType
   percentage = Math.max(0, Math.min(percentage, 100));
 
   return { level, percentage };
+}
+
+PacketHandler.prototype.__getVocationSkillConstant = function (skillType, vocation) {
+  /*
+   * Returns the vocation skill constant (B) for each skill
+   * Matches server skill.js __getVocationConstant exactly
+   */
+
+  // CONST.VOCATION values: NONE=0, KNIGHT=1, PALADIN=2, SORCERER=3, DRUID=4
+
+  if (vocation === 0) { // NONE
+    switch (skillType) {
+      case CONST.PROPERTIES.MAGIC: return 3.0;
+      case CONST.PROPERTIES.CLUB:
+      case CONST.PROPERTIES.SWORD:
+      case CONST.PROPERTIES.AXE:
+      case CONST.PROPERTIES.DISTANCE: return 2.0;
+      case CONST.PROPERTIES.FIST:
+      case CONST.PROPERTIES.SHIELDING: return 1.5;
+      case CONST.PROPERTIES.FISHING: return 1.1;
+    }
+  } else if (vocation === 1) { // KNIGHT
+    switch (skillType) {
+      case CONST.PROPERTIES.MAGIC: return 3.0;
+      case CONST.PROPERTIES.CLUB:
+      case CONST.PROPERTIES.SWORD:
+      case CONST.PROPERTIES.AXE:
+      case CONST.PROPERTIES.FIST:
+      case CONST.PROPERTIES.SHIELDING:
+      case CONST.PROPERTIES.FISHING: return 1.1;
+      case CONST.PROPERTIES.DISTANCE: return 1.4;
+    }
+  } else if (vocation === 2) { // PALADIN
+    switch (skillType) {
+      case CONST.PROPERTIES.MAGIC: return 1.4;
+      case CONST.PROPERTIES.CLUB:
+      case CONST.PROPERTIES.SWORD:
+      case CONST.PROPERTIES.AXE:
+      case CONST.PROPERTIES.FIST: return 1.2;
+      case CONST.PROPERTIES.DISTANCE:
+      case CONST.PROPERTIES.SHIELDING:
+      case CONST.PROPERTIES.FISHING: return 1.1;
+    }
+  } else if (vocation === 3) { // SORCERER
+    switch (skillType) {
+      case CONST.PROPERTIES.MAGIC: return 1.1;
+      case CONST.PROPERTIES.CLUB:
+      case CONST.PROPERTIES.SWORD:
+      case CONST.PROPERTIES.AXE:
+      case CONST.PROPERTIES.DISTANCE: return 2.0;
+      case CONST.PROPERTIES.FIST:
+      case CONST.PROPERTIES.SHIELDING: return 1.5;
+      case CONST.PROPERTIES.FISHING: return 1.1;
+    }
+  } else if (vocation === 4) { // DRUID
+    switch (skillType) {
+      case CONST.PROPERTIES.MAGIC: return 1.1;
+      case CONST.PROPERTIES.CLUB:
+      case CONST.PROPERTIES.SWORD:
+      case CONST.PROPERTIES.AXE:
+      case CONST.PROPERTIES.DISTANCE: return 1.8;
+      case CONST.PROPERTIES.FIST:
+      case CONST.PROPERTIES.SHIELDING: return 1.5;
+      case CONST.PROPERTIES.FISHING: return 1.1;
+    }
+  }
+
+  // Default fallback
+  return 2.0;
 }
 
 PacketHandler.prototype.handleWorldTime = function (time) {
@@ -848,10 +918,14 @@ PacketHandler.prototype.handleCharacterInformation = function (packet) {
 
   let vocationName = "nothing";
   switch (packet.vocation) {
-    case 1: vocationName = "Sorcerer"; break;
-    case 2: vocationName = "Druid"; break;
-    case 3: vocationName = "Paladin"; break;
-    case 4: vocationName = "Knight"; break;
+    case 1: vocationName = "Knight"; break;
+    case 2: vocationName = "Paladin"; break;
+    case 3: vocationName = "Sorcerer"; break;
+    case 4: vocationName = "Druid"; break;
+    case 5: vocationName = "Elite Knight"; break;
+    case 6: vocationName = "Royal Paladin"; break;
+    case 7: vocationName = "Master Sorcerer"; break;
+    case 8: vocationName = "Elder Druid"; break;
   }
 
   // Format: "You see Name (Level X). He is a Vocation."
