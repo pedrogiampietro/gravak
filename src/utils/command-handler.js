@@ -3,7 +3,7 @@
 const path = require("path");
 const Position = requireModule("utils/position");
 const NPC = requireModule("npc/npc");
-const { ServerMessagePacket } = requireModule("network/protocol");
+const { ServerMessagePacket, CreaturePropertyPacket } = requireModule("network/protocol");
 
 const CommandHandler = function () { };
 
@@ -145,6 +145,16 @@ CommandHandler.prototype.handleCommandAddSkill = function (
         player.skills = characterData.skills;
         player.properties = characterData.properties;
 
+        // Send packets to update client UI immediately
+        const newExp = currentExp + expRequired;
+        player.write(new CreaturePropertyPacket(player.getId(), CONST.PROPERTIES.EXPERIENCE, newExp));
+        player.write(new CreaturePropertyPacket(player.getId(), CONST.PROPERTIES.HEALTH_MAX, newHealth));
+        player.write(new CreaturePropertyPacket(player.getId(), CONST.PROPERTIES.HEALTH, newHealth));
+        player.write(new CreaturePropertyPacket(player.getId(), CONST.PROPERTIES.MANA_MAX, newMana));
+        player.write(new CreaturePropertyPacket(player.getId(), CONST.PROPERTIES.MANA, newMana));
+        player.write(new CreaturePropertyPacket(player.getId(), CONST.PROPERTIES.CAPACITY, newCap));
+        player.write(new CreaturePropertyPacket(player.getId(), CONST.PROPERTIES.CAPACITY_MAX, newCap));
+
         const AccountDatabase = requireModule("auth/account-database");
         const db = new AccountDatabase();
 
@@ -165,10 +175,8 @@ CommandHandler.prototype.handleCommandAddSkill = function (
       }
 
       // Notificar o cliente sobre as mudanças
-      return gameServer.world.broadcastPacket(
-        new ServerMessagePacket(
-          `Added ${expRequired} experience points (${amount} levels). New level: ${targetLevel}`
-        )
+      return player.sendCancelMessage(
+        `Added ${expRequired} exp (${amount} levels). New level: ${targetLevel}`
       );
     } catch (error) {
       console.error("[AddSkill] Error:", error);

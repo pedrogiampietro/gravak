@@ -149,11 +149,9 @@ Spellbook.prototype.handleSpell = function (sid, properties) {
 
   // Call with reference to player
   let cooldown = spell.call(this.player, properties);
-  console.log("Spell returned cooldown:", cooldown);
 
   // Zero cooldown means that the cast was unsuccessful
   if (cooldown === 0) {
-    console.log("Cooldown is 0, cast failed");
     return;
   }
 
@@ -162,14 +160,54 @@ Spellbook.prototype.handleSpell = function (sid, properties) {
     this.player.decreaseMana(spellMeta.mana);
   }
 
+  // Increment magic skill based on mana used (training)
+  if (spellMeta && spellMeta.mana > 0 && this.player.skills) {
+    // Get config values with defaults
+    let skillConfig = CONFIG.SKILLS && CONFIG.SKILLS.MAGIC ? CONFIG.SKILLS.MAGIC : {};
+    let basePointsPerMana = skillConfig.BASE_POINTS_PER_MANA || 1;
+    let globalMultiplier = skillConfig.GLOBAL_MULTIPLIER || 1;
+    let vocationMultipliers = skillConfig.VOCATION_MULTIPLIERS || {};
+
+    // Calculate base skill points from mana used
+    let basePoints = Math.max(1, Math.floor(spellMeta.mana * basePointsPerMana));
+
+    // Apply vocation multiplier (mages train magic faster)
+    let vocation = this.player.getProperty(CONST.PROPERTIES.VOCATION);
+    let vocationMultiplier = 1;
+
+    switch (vocation) {
+      case CONST.VOCATION.SORCERER:
+      case CONST.VOCATION.MASTER_SORCERER:
+        vocationMultiplier = vocationMultipliers.SORCERER || 3;
+        break;
+      case CONST.VOCATION.DRUID:
+      case CONST.VOCATION.ELDER_DRUID:
+        vocationMultiplier = vocationMultipliers.DRUID || 3;
+        break;
+      case CONST.VOCATION.PALADIN:
+      case CONST.VOCATION.ROYAL_PALADIN:
+        vocationMultiplier = vocationMultipliers.PALADIN || 2;
+        break;
+      case CONST.VOCATION.KNIGHT:
+      case CONST.VOCATION.ELITE_KNIGHT:
+        vocationMultiplier = vocationMultipliers.KNIGHT || 1;
+        break;
+      default:
+        vocationMultiplier = 1;
+    }
+
+    // Apply stages multiplier if available
+    let stageMultiplier = this.__getMagicStageMultiplier();
+
+    let skillPoints = basePoints * vocationMultiplier * globalMultiplier * stageMultiplier;
+    this.player.skills.incrementSkill(CONST.PROPERTIES.MAGIC, skillPoints);
+  }
+
   // Write a packet to the player that the spell needs to be put on cooldown by a number of frames
-  console.log("Sending SpellCastPacket...");
   this.player.write(new SpellCastPacket(sid, cooldown));
-  console.log("SpellCastPacket sent");
 
   // Lock it
   this.__lockSpell(sid, cooldown);
-  console.log("Spell locked, handleSpell complete");
 
 }
 
@@ -243,6 +281,38 @@ Spellbook.prototype.__unlockSpell = function (sid) {
    */
 
   this.__spellCooldowns.delete(sid);
+
+}
+
+Spellbook.prototype.__getMagicStageMultiplier = function () {
+
+  /*
+   * Function Spellbook.__getMagicStageMultiplier
+   * Returns the magic level stage multiplier based on current magic level
+   */
+
+  try {
+    const stages = require(gameServer.database.getDataPath("stages.json"));
+
+    if (!stages || !stages.enabled || !stages.stages) {
+      return 1;
+    }
+
+    let currentMagicLevel = this.player.skills ? this.player.skills.getSkillLevel(CONST.PROPERTIES.MAGIC) : 0;
+
+    for (let stage of stages.stages) {
+      let minLevel = stage.minLevel || 0;
+      let maxLevel = stage.maxLevel || Infinity;
+
+      if (currentMagicLevel >= minLevel && currentMagicLevel <= maxLevel) {
+        return stage.multiplier || 1;
+      }
+    }
+
+    return 1;
+  } catch (error) {
+    return 1;
+  }
 
 }
 

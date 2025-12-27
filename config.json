@@ -68,5 +68,17 @@
     "NPCS": {
       "ENABLED": true
     }
+  },
+  "SKILLS": {
+    "MAGIC": {
+      "BASE_POINTS_PER_MANA": 1,
+      "GLOBAL_MULTIPLIER": 10,
+      "VOCATION_MULTIPLIERS": {
+        "SORCERER": 3,
+        "DRUID": 3,
+        "PALADIN": 2,
+        "KNIGHT": 1
+      }
+    }
   }
 }

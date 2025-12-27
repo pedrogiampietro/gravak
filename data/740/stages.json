@@ -9,7 +9,7 @@
         {
             "minLevel": 9,
             "maxLevel": 20,
-            "multiplier": 6
+            "multiplier": 9999
         },
         {
             "minLevel": 21,
