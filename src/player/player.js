@@ -359,6 +359,7 @@ Player.prototype.decreaseHealth = function (source, amount) {
   /*
    * Function Player.decreaseHealth
    * Decreases the health of the player
+   * If Magic Shield (utamo vita) is active, damage goes to mana first
    */
 
   // Prevent damage if dead
@@ -369,7 +370,66 @@ Player.prototype.decreaseHealth = function (source, amount) {
   // Put the target player in combat
   this.combatLock.activate();
 
-  // Change the property
+  // Check if Magic Shield (utamo vita) is active
+  const Condition = requireModule("combat/condition");
+  if (this.hasCondition(Condition.prototype.MAGIC_SHIELD)) {
+    let currentMana = this.getProperty(CONST.PROPERTIES.MANA);
+
+    if (currentMana > 0) {
+      // Calculate how much damage goes to mana vs health
+      let manaAbsorbed = Math.min(amount, currentMana);
+      let remainingDamage = amount - manaAbsorbed;
+
+      // Decrease mana by the absorbed amount
+      this.incrementProperty(CONST.PROPERTIES.MANA, -manaAbsorbed);
+
+      // Send mana damage in blue color
+      this.broadcast(new EmotePacket(this, String(manaAbsorbed), CONST.COLOR.LIGHTBLUE));
+
+      // Send message about mana damage
+      this.write(new ChannelWritePacket(
+        CONST.CHANNEL.DEFAULT,
+        "",
+        "You lose " + manaAbsorbed + " mana" + (source && source.isPlayer && !source.isPlayer() ? " due to an attack by " + (source.getProperty(CONST.PROPERTIES.NAME) || "creature").toLowerCase() : "") + ".",
+        CONST.COLOR.WHITE
+      ));
+
+      // If mana runs out, remove the Magic Shield condition
+      if (this.getProperty(CONST.PROPERTIES.MANA) === 0) {
+        this.removeCondition(Condition.prototype.MAGIC_SHIELD);
+        this.sendCancelMessage("Your magic shield has been depleted.");
+      }
+
+      // If there's remaining damage after mana is depleted, apply it to health
+      if (remainingDamage > 0) {
+        this.incrementProperty(CONST.PROPERTIES.HEALTH, -remainingDamage);
+        this.broadcast(new EmotePacket(this, String(remainingDamage), CONST.COLOR.RED));
+
+        this.write(new ChannelWritePacket(
+          CONST.CHANNEL.DEFAULT,
+          "",
+          "You lose " + remainingDamage + " hitpoints.",
+          CONST.COLOR.WHITE
+        ));
+      }
+
+      // Check for death after remaining damage
+      if (this.isZeroHealth()) {
+        if (this.isDead) {
+          return;
+        }
+        return this.handleDeath();
+      }
+
+      return;
+    } else {
+      // No mana left, remove magic shield
+      this.removeCondition(Condition.prototype.MAGIC_SHIELD);
+      this.sendCancelMessage("Your magic shield has been depleted.");
+    }
+  }
+
+  // Normal damage to health (no magic shield or mana depleted)
   this.incrementProperty(CONST.PROPERTIES.HEALTH, -amount);
 
   // Send damage color to the player
