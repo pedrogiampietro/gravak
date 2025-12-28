@@ -43,5 +43,14 @@
     },
     "enabled": true,
     "definition": "ahmet.json"
+  },
+  "oracle": {
+    "position": {
+      "x": 32104,
+      "y": 32190,
+      "z": 9
+    },
+    "enabled": true,
+    "definition": "oracle.json"
   }
 }

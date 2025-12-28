@@ -1,0 +1,55 @@
+{
+    "creatureStatistics": {
+        "name": "The Oracle",
+        "health": 100,
+        "maxHealth": 100,
+        "mana": 0,
+        "maxMana": 0,
+        "attack": 0,
+        "attackSlowness": 0,
+        "defense": 0,
+        "speed": 0,
+        "outfit": {
+            "id": 57,
+            "details": {
+                "head": 0,
+                "body": 114,
+                "legs": 114,
+                "feet": 114
+            }
+        }
+    },
+    "behaviour": {
+        "wanderRange": 0,
+        "wandering": false,
+        "openDoors": false,
+        "ignoreCharacters": true
+    },
+    "conversation": {
+        "hearingRange": 5,
+        "keywords": {
+            "destiny": "Are you prepared to face your destiny? Say {yes} if you are ready!",
+            "vocation": "You can choose to be a {knight}, {paladin}, {sorcerer}, or {druid}.",
+            "town": "You can live in {venore}, {thais}, or {carlin}."
+        },
+        "trade": {
+            "item": []
+        },
+        "farewells": [
+            "bye",
+            "farewell"
+        ],
+        "greetings": [
+            "hello",
+            "hi"
+        ],
+        "sayings": {
+            "texts": [
+                "Face your destiny, young adventurer..."
+            ],
+            "rate": 600,
+            "chance": 0.5
+        },
+        "script": "oracle.js"
+    }
+}
