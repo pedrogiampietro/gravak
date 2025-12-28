@@ -1,315 +1,315 @@
 {
-  "creatureStatistics": {
-    "name": "Grimeleech",
-    "health": 9500,
-    "maxHealth": 9500,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 340,
-    "attack": 450,
-    "attackSpeed": 2000,
-    "defense": 65,
-    "outfit": {
-      "id": 855
+    "creatureStatistics": {
+        "name": "Grimeleech",
+        "health": 9500,
+        "maxHealth": 9500,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 170,
+        "attack": 450,
+        "attackSpeed": 2000,
+        "defense": 65,
+        "outfit": {
+            "id": 855
+        },
+        "armor": 65
     },
-    "armor": 65
-  },
-  "experience": 7216,
-  "corpse": 2813,
-  "fluidType": 2,
-  "behaviour": {
-    "type": 0,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 200,
-      "max": 300,
-      "areaEffect": "redshimmer"
+    "experience": 7216,
+    "corpse": 2813,
+    "fluidType": 2,
+    "behaviour": {
+        "type": 0,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "effect",
-      "interval": 2000,
-      "chance": 0.09,
-      "areaEffect": "greenshimmer"
-    },
-    {
-      "name": "effect",
-      "interval": 2000,
-      "chance": 0.1,
-      "areaEffect": "redspark"
-    },
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.12,
-      "speedChange": 532,
-      "duration": 4000,
-      "areaEffect": "redshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 450
-    },
-    {
-      "name": "physical",
-      "interval": 2000,
-      "chance": 0.14,
-      "min": 100,
-      "max": 565,
-      "range": 7,
-      "target": true,
-      "shootEffect": "death",
-      "areaEffect": "mortarea"
-    },
-    {
-      "name": "death",
-      "interval": 2000,
-      "chance": 0.12,
-      "min": 150,
-      "max": 220,
-      "length": 8,
-      "spread": 0,
-      "areaEffect": "redspark"
-    },
-    {
-      "name": "death",
-      "interval": 2000,
-      "chance": 0.13,
-      "min": 225,
-      "max": 375,
-      "radius": 4,
-      "target": false,
-      "areaEffect": "redspark"
-    },
-    {
-      "name": "physical",
-      "interval": 2000,
-      "chance": 0.09,
-      "min": 0,
-      "max": 300,
-      "length": 8,
-      "spread": 3,
-      "areaEffect": "explosionarea"
-    }
-  ],
-  "elements": {
-    "energy": -5,
-    "earth": 40,
-    "fire": 20,
-    "death": 60
-  },
-  "immunities": {
-    "drown": true,
-    "lifedrain": true,
-    "paralyze": true,
-    "invisible": true,
-    "drunk": true
-  },
-  "sayings": {
-    "texts": [
-      "Death... Taste!"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 200,
+            "max": 300,
+            "areaEffect": "redshimmer"
+        },
+        {
+            "name": "effect",
+            "interval": 2000,
+            "chance": 0.09,
+            "areaEffect": "greenshimmer"
+        },
+        {
+            "name": "effect",
+            "interval": 2000,
+            "chance": 0.1,
+            "areaEffect": "redspark"
+        },
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.12,
+            "speedChange": 532,
+            "duration": 4000,
+            "areaEffect": "redshimmer"
+        }
     ],
-    "slowness": 1,
-    "chance": 0.05
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.93518,
-      "name": "gold coin",
-      "min": 1,
-      "max": 199
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 450
+        },
+        {
+            "name": "physical",
+            "interval": 2000,
+            "chance": 0.14,
+            "min": 100,
+            "max": 565,
+            "range": 7,
+            "target": true,
+            "shootEffect": "death",
+            "areaEffect": "mortarea"
+        },
+        {
+            "name": "death",
+            "interval": 2000,
+            "chance": 0.12,
+            "min": 150,
+            "max": 220,
+            "length": 8,
+            "spread": 0,
+            "areaEffect": "redspark"
+        },
+        {
+            "name": "death",
+            "interval": 2000,
+            "chance": 0.13,
+            "min": 225,
+            "max": 375,
+            "radius": 4,
+            "target": false,
+            "areaEffect": "redspark"
+        },
+        {
+            "name": "physical",
+            "interval": 2000,
+            "chance": 0.09,
+            "min": 0,
+            "max": 300,
+            "length": 8,
+            "spread": 3,
+            "areaEffect": "explosionarea"
+        }
+    ],
+    "elements": {
+        "energy": -5,
+        "earth": 40,
+        "fire": 20,
+        "death": 60
     },
-    {
-      "id": 2152,
-      "probability": 0.90421,
-      "name": "platinum coin",
-      "min": 1,
-      "max": 8
+    "immunities": {
+        "drown": true,
+        "lifedrain": true,
+        "paralyze": true,
+        "invisible": true,
+        "drunk": true
     },
-    {
-      "id": 7591,
-      "probability": 0.25007,
-      "name": "great health potion",
-      "min": 1,
-      "max": 3
+    "sayings": {
+        "texts": [
+            "Death... Taste!"
+        ],
+        "slowness": 1,
+        "chance": 0.05
     },
-    {
-      "id": 8472,
-      "probability": 0.24503,
-      "name": "great spirit potion",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 7590,
-      "probability": 0.24431,
-      "name": "great mana potion",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 6558,
-      "probability": 0.18352,
-      "name": "flask of demonic blood"
-    },
-    {
-      "id": 6500,
-      "probability": 0.14808,
-      "name": "demonic essence"
-    },
-    {
-      "id": 25386,
-      "probability": 0.14059,
-      "name": "some grimeleech wings"
-    },
-    {
-      "id": 2795,
-      "probability": 0.11538,
-      "name": "fire mushroom",
-      "min": 1,
-      "max": 5
-    },
-    {
-      "id": 2796,
-      "probability": 0.1115,
-      "name": "green mushroom",
-      "min": 1,
-      "max": 5
-    },
-    {
-      "id": 2150,
-      "probability": 0.07995,
-      "name": "small amethyst",
-      "min": 1,
-      "max": 5
-    },
-    {
-      "id": 2147,
-      "probability": 0.0775,
-      "name": "small ruby",
-      "min": 1,
-      "max": 5
-    },
-    {
-      "id": 9970,
-      "probability": 0.07534,
-      "name": "small topaz",
-      "min": 1,
-      "max": 5
-    },
-    {
-      "id": 2145,
-      "probability": 0.07102,
-      "name": "small diamond",
-      "min": 1,
-      "max": 5
-    },
-    {
-      "id": 8910,
-      "probability": 0.05762,
-      "name": "underworld rod"
-    },
-    {
-      "id": 8922,
-      "probability": 0.03572,
-      "name": "wand of voodoo"
-    },
-    {
-      "id": 2154,
-      "probability": 0.02708,
-      "name": "yellow gem"
-    },
-    {
-      "id": 2156,
-      "probability": 0.02233,
-      "name": "red gem"
-    },
-    {
-      "id": 7894,
-      "probability": 0.0085,
-      "name": "magma legs"
-    },
-    {
-      "id": 2158,
-      "probability": 0.0072,
-      "name": "blue gem"
-    },
-    {
-      "id": 2520,
-      "probability": 0.00706,
-      "name": "demon shield"
-    },
-    {
-      "id": 2462,
-      "probability": 0.00576,
-      "name": "devil helmet"
-    },
-    {
-      "id": 25383,
-      "probability": 0.00547,
-      "name": "rift lance"
-    },
-    {
-      "id": 7418,
-      "probability": 0.00519,
-      "name": "nightmare blade"
-    },
-    {
-      "id": 25382,
-      "probability": 0.00346,
-      "name": "rift shield"
-    },
-    {
-      "id": 25522,
-      "probability": 0.00331,
-      "name": "rift bow"
-    },
-    {
-      "id": 25523,
-      "probability": 0.00317,
-      "name": "rift crossbow"
-    },
-    {
-      "id": 7414,
-      "probability": 0.00173,
-      "name": "abyss hammer"
-    },
-    {
-      "id": 2645,
-      "probability": 0.00173,
-      "name": "steel boots"
-    },
-    {
-      "id": 2472,
-      "probability": 0.00115,
-      "name": "magic plate armor"
-    },
-    {
-      "id": 7388,
-      "probability": 0.00101,
-      "name": "vile axe"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.93518,
+            "name": "gold coin",
+            "min": 1,
+            "max": 199
+        },
+        {
+            "id": 2152,
+            "probability": 0.90421,
+            "name": "platinum coin",
+            "min": 1,
+            "max": 8
+        },
+        {
+            "id": 7591,
+            "probability": 0.25007,
+            "name": "great health potion",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 8472,
+            "probability": 0.24503,
+            "name": "great spirit potion",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 7590,
+            "probability": 0.24431,
+            "name": "great mana potion",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 6558,
+            "probability": 0.18352,
+            "name": "flask of demonic blood"
+        },
+        {
+            "id": 6500,
+            "probability": 0.14808,
+            "name": "demonic essence"
+        },
+        {
+            "id": 25386,
+            "probability": 0.14059,
+            "name": "some grimeleech wings"
+        },
+        {
+            "id": 2795,
+            "probability": 0.11538,
+            "name": "fire mushroom",
+            "min": 1,
+            "max": 5
+        },
+        {
+            "id": 2796,
+            "probability": 0.1115,
+            "name": "green mushroom",
+            "min": 1,
+            "max": 5
+        },
+        {
+            "id": 2150,
+            "probability": 0.07995,
+            "name": "small amethyst",
+            "min": 1,
+            "max": 5
+        },
+        {
+            "id": 2147,
+            "probability": 0.0775,
+            "name": "small ruby",
+            "min": 1,
+            "max": 5
+        },
+        {
+            "id": 9970,
+            "probability": 0.07534,
+            "name": "small topaz",
+            "min": 1,
+            "max": 5
+        },
+        {
+            "id": 2145,
+            "probability": 0.07102,
+            "name": "small diamond",
+            "min": 1,
+            "max": 5
+        },
+        {
+            "id": 8910,
+            "probability": 0.05762,
+            "name": "underworld rod"
+        },
+        {
+            "id": 8922,
+            "probability": 0.03572,
+            "name": "wand of voodoo"
+        },
+        {
+            "id": 2154,
+            "probability": 0.02708,
+            "name": "yellow gem"
+        },
+        {
+            "id": 2156,
+            "probability": 0.02233,
+            "name": "red gem"
+        },
+        {
+            "id": 7894,
+            "probability": 0.0085,
+            "name": "magma legs"
+        },
+        {
+            "id": 2158,
+            "probability": 0.0072,
+            "name": "blue gem"
+        },
+        {
+            "id": 2520,
+            "probability": 0.00706,
+            "name": "demon shield"
+        },
+        {
+            "id": 2462,
+            "probability": 0.00576,
+            "name": "devil helmet"
+        },
+        {
+            "id": 25383,
+            "probability": 0.00547,
+            "name": "rift lance"
+        },
+        {
+            "id": 7418,
+            "probability": 0.00519,
+            "name": "nightmare blade"
+        },
+        {
+            "id": 25382,
+            "probability": 0.00346,
+            "name": "rift shield"
+        },
+        {
+            "id": 25522,
+            "probability": 0.00331,
+            "name": "rift bow"
+        },
+        {
+            "id": 25523,
+            "probability": 0.00317,
+            "name": "rift crossbow"
+        },
+        {
+            "id": 7414,
+            "probability": 0.00173,
+            "name": "abyss hammer"
+        },
+        {
+            "id": 2645,
+            "probability": 0.00173,
+            "name": "steel boots"
+        },
+        {
+            "id": 2472,
+            "probability": 0.00115,
+            "name": "magic plate armor"
+        },
+        {
+            "id": 7388,
+            "probability": 0.00101,
+            "name": "vile axe"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": false,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": false,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

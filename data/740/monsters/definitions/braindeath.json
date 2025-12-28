@@ -1,213 +1,213 @@
 {
-  "creatureStatistics": {
-    "name": "Braindeath",
-    "health": 1225,
-    "maxHealth": 1225,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 218,
-    "attack": 100,
-    "attackSpeed": 2000,
-    "defense": 12,
-    "outfit": {
-      "id": 256
+    "creatureStatistics": {
+        "name": "Braindeath",
+        "health": 1225,
+        "maxHealth": 1225,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 109,
+        "attack": 100,
+        "attackSpeed": 2000,
+        "defense": 12,
+        "outfit": {
+            "id": 256
+        },
+        "armor": 12
     },
-    "armor": 12
-  },
-  "experience": 985,
-  "corpse": 2813,
-  "fluidType": 3,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 150,
-      "max": 200,
-      "areaEffect": "blueshimmer"
+    "experience": 985,
+    "corpse": 2813,
+    "fluidType": 3,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.15,
-      "speedChange": 260,
-      "duration": 5000,
-      "areaEffect": "redshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 100
-    },
-    {
-      "name": "energy",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 93,
-      "max": 170,
-      "range": 7,
-      "shootEffect": "energy"
-    },
-    {
-      "name": "fire",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 75,
-      "max": 125,
-      "range": 7,
-      "shootEffect": "fire"
-    },
-    {
-      "name": "death",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 85,
-      "max": 170,
-      "range": 7,
-      "shootEffect": "suddendeath",
-      "areaEffect": "smallclouds"
-    },
-    {
-      "name": "earth",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 65,
-      "max": 125,
-      "range": 7,
-      "shootEffect": "poison"
-    },
-    {
-      "name": "lifedrain",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 75,
-      "max": 85,
-      "range": 7,
-      "areaEffect": "redshimmer"
-    },
-    {
-      "name": "manadrain",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 0,
-      "max": 155,
-      "range": 7
-    }
-  ],
-  "elements": {
-    "physical": 15,
-    "energy": 10,
-    "fire": -15,
-    "ice": 20,
-    "holy": -20
-  },
-  "immunities": {
-    "earth": true,
-    "death": true,
-    "invisible": true
-  },
-  "summons": [
-    {
-      "name": "Vampire",
-      "interval": 2000,
-      "chance": 0.1,
-      "maxSummons": 2
-    }
-  ],
-  "sayings": {
-    "texts": [
-      "You have disturbed my thoughts!",
-      "Let me turn you into something more useful!",
-      "Let me taste your brain!",
-      "You will be punished!"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 150,
+            "max": 200,
+            "areaEffect": "blueshimmer"
+        },
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.15,
+            "speedChange": 260,
+            "duration": 5000,
+            "areaEffect": "redshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.99448,
-      "name": "gold coin",
-      "min": 1,
-      "max": 90
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 100
+        },
+        {
+            "name": "energy",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 93,
+            "max": 170,
+            "range": 7,
+            "shootEffect": "energy"
+        },
+        {
+            "name": "fire",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 75,
+            "max": 125,
+            "range": 7,
+            "shootEffect": "fire"
+        },
+        {
+            "name": "death",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 85,
+            "max": 170,
+            "range": 7,
+            "shootEffect": "suddendeath",
+            "areaEffect": "smallclouds"
+        },
+        {
+            "name": "earth",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 65,
+            "max": 125,
+            "range": 7,
+            "shootEffect": "poison"
+        },
+        {
+            "name": "lifedrain",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 75,
+            "max": 85,
+            "range": 7,
+            "areaEffect": "redshimmer"
+        },
+        {
+            "name": "manadrain",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 0,
+            "max": 155,
+            "range": 7
+        }
+    ],
+    "elements": {
+        "physical": 15,
+        "energy": 10,
+        "fire": -15,
+        "ice": 20,
+        "holy": -20
     },
-    {
-      "id": 2450,
-      "probability": 0.14985,
-      "name": "bone sword"
+    "immunities": {
+        "earth": true,
+        "death": true,
+        "invisible": true
     },
-    {
-      "id": 7364,
-      "probability": 0.09593,
-      "name": "sniper arrow",
-      "min": 1,
-      "max": 4
+    "summons": [
+        {
+            "name": "Vampire",
+            "interval": 2000,
+            "chance": 0.1,
+            "maxSummons": 2
+        }
+    ],
+    "sayings": {
+        "texts": [
+            "You have disturbed my thoughts!",
+            "Let me turn you into something more useful!",
+            "Let me taste your brain!",
+            "You will be punished!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2509,
-      "probability": 0.05899,
-      "name": "steel shield"
-    },
-    {
-      "id": 10580,
-      "probability": 0.05041,
-      "name": "piece of dead brain"
-    },
-    {
-      "id": 5898,
-      "probability": 0.02967,
-      "name": "bonelord eye"
-    },
-    {
-      "id": 2423,
-      "probability": 0.01965,
-      "name": "clerical mace"
-    },
-    {
-      "id": 7407,
-      "probability": 0.01446,
-      "name": "haunted blade"
-    },
-    {
-      "id": 2175,
-      "probability": 0.00958,
-      "name": "spellbook"
-    },
-    {
-      "id": 7452,
-      "probability": 0.00178,
-      "name": "spiked squelcher"
-    },
-    {
-      "id": 2518,
-      "probability": 0.00102,
-      "name": "bonelord shield"
-    },
-    {
-      "id": 3972,
-      "probability": 0.00099,
-      "name": "bonelord helmet"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.99448,
+            "name": "gold coin",
+            "min": 1,
+            "max": 90
+        },
+        {
+            "id": 2450,
+            "probability": 0.14985,
+            "name": "bone sword"
+        },
+        {
+            "id": 7364,
+            "probability": 0.09593,
+            "name": "sniper arrow",
+            "min": 1,
+            "max": 4
+        },
+        {
+            "id": 2509,
+            "probability": 0.05899,
+            "name": "steel shield"
+        },
+        {
+            "id": 10580,
+            "probability": 0.05041,
+            "name": "piece of dead brain"
+        },
+        {
+            "id": 5898,
+            "probability": 0.02967,
+            "name": "bonelord eye"
+        },
+        {
+            "id": 2423,
+            "probability": 0.01965,
+            "name": "clerical mace"
+        },
+        {
+            "id": 7407,
+            "probability": 0.01446,
+            "name": "haunted blade"
+        },
+        {
+            "id": 2175,
+            "probability": 0.00958,
+            "name": "spellbook"
+        },
+        {
+            "id": 7452,
+            "probability": 0.00178,
+            "name": "spiked squelcher"
+        },
+        {
+            "id": 2518,
+            "probability": 0.00102,
+            "name": "bonelord shield"
+        },
+        {
+            "id": 3972,
+            "probability": 0.00099,
+            "name": "bonelord helmet"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": 4
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": 4
-  }
 }

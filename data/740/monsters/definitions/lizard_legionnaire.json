@@ -1,98 +1,98 @@
 {
-  "creatureStatistics": {
-    "name": "Lizard Legionnaire",
-    "health": 1400,
-    "maxHealth": 1400,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 230,
-    "attack": 180,
-    "attackSpeed": 2000,
-    "defense": 25,
-    "outfit": {
-      "id": 338
+    "creatureStatistics": {
+        "name": "Lizard Legionnaire",
+        "health": 1400,
+        "maxHealth": 1400,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 133,
+        "attack": 180,
+        "attackSpeed": 2000,
+        "defense": 25,
+        "outfit": {
+            "id": 338
+        },
+        "armor": 25
     },
-    "armor": 25
-  },
-  "experience": 1100,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 10,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 180
+    "experience": 1100,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 10,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "physical",
-      "interval": 2000,
-      "chance": 0.4,
-      "min": 0,
-      "max": 200,
-      "range": 7,
-      "target": true,
-      "shootEffect": "spear"
-    }
-  ],
-  "elements": {
-    "fire": 45,
-    "ice": -10
-  },
-  "immunities": {
-    "earth": true,
-    "invisible": true
-  },
-  "sayings": {
-    "texts": [
-      "Tssss!"
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 180
+        },
+        {
+            "name": "physical",
+            "interval": 2000,
+            "chance": 0.4,
+            "min": 0,
+            "max": 200,
+            "range": 7,
+            "target": true,
+            "shootEffect": "spear"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2145,
-      "probability": 0.01001,
-      "name": "small diamond",
-      "min": 1,
-      "max": 2
+    "elements": {
+        "fire": 45,
+        "ice": -10
     },
-    {
-      "id": 2148,
-      "probability": 0.44,
-      "name": "gold coin",
-      "min": 1,
-      "max": 100
+    "immunities": {
+        "earth": true,
+        "invisible": true
     },
-    {
-      "id": 2148,
-      "probability": 0.54,
-      "name": "gold coin",
-      "min": 1,
-      "max": 65
+    "sayings": {
+        "texts": [
+            "Tssss!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2271,
-      "probability": 0.0388,
-      "name": "strong health potion"
+    "loot": [
+        {
+            "id": 2145,
+            "probability": 0.01001,
+            "name": "small diamond",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 2148,
+            "probability": 0.44,
+            "name": "gold coin",
+            "min": 1,
+            "max": 100
+        },
+        {
+            "id": 2148,
+            "probability": 0.54,
+            "name": "gold coin",
+            "min": 1,
+            "max": 65
+        },
+        {
+            "id": 2271,
+            "probability": 0.0388,
+            "name": "strong health potion"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": 4
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": 4
-  }
 }

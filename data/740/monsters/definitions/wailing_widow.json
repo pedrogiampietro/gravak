@@ -1,155 +1,155 @@
 {
-  "creatureStatistics": {
-    "name": "Wailing Widow",
-    "health": 850,
-    "maxHealth": 850,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 254,
-    "attack": 120,
-    "attackSpeed": 2000,
-    "defense": 31,
-    "outfit": {
-      "id": 347
+    "creatureStatistics": {
+        "name": "Wailing Widow",
+        "health": 850,
+        "maxHealth": 850,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 127,
+        "attack": 120,
+        "attackSpeed": 2000,
+        "defense": 31,
+        "outfit": {
+            "id": 347
+        },
+        "armor": 31
     },
-    "armor": 31
-  },
-  "experience": 450,
-  "corpse": 2813,
-  "fluidType": 3,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.05,
-      "min": 70,
-      "max": 100,
-      "areaEffect": "whitenote"
+    "experience": 450,
+    "corpse": 2813,
+    "fluidType": 3,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.15,
-      "speedChange": 820,
-      "duration": 5000,
-      "areaEffect": "yellownote"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.05,
+            "min": 70,
+            "max": 100,
+            "areaEffect": "whitenote"
+        },
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.15,
+            "speedChange": 820,
+            "duration": 5000,
+            "areaEffect": "yellownote"
+        }
+    ],
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 120
+        },
+        {
+            "name": "drunk",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 0,
+            "max": 0,
+            "range": 7,
+            "radius": 4,
+            "target": false,
+            "duration": 4000,
+            "areaEffect": "rednote"
+        },
+        {
+            "name": "lifedrain",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 40,
+            "max": 70,
+            "radius": 3,
+            "target": false,
+            "areaEffect": "redshimmer"
+        },
+        {
+            "name": "earth",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 60,
+            "max": 110,
+            "range": 7,
+            "shootEffect": "poison"
+        }
+    ],
+    "elements": {
+        "fire": -5,
+        "holy": 5
+    },
+    "immunities": {
+        "paralyze": true,
+        "invisible": true,
+        "death": true,
+        "earth": true,
+        "lifedrain": true,
+        "drunk": true
+    },
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.96855,
+            "name": "gold coin",
+            "min": 1,
+            "max": 140
+        },
+        {
+            "id": 11328,
+            "probability": 0.19966,
+            "name": "widow's mandibles"
+        },
+        {
+            "id": 7620,
+            "probability": 0.05251,
+            "name": "mana potion"
+        },
+        {
+            "id": 7618,
+            "probability": 0.04942,
+            "name": "health potion"
+        },
+        {
+            "id": 2381,
+            "probability": 0.04708,
+            "name": "halberd"
+        },
+        {
+            "id": 2510,
+            "probability": 0.03173,
+            "name": "plate shield"
+        },
+        {
+            "id": 2796,
+            "probability": 0.02986,
+            "name": "green mushroom"
+        },
+        {
+            "id": 11323,
+            "probability": 0.02256,
+            "name": "zaoan halberd"
+        },
+        {
+            "id": 11329,
+            "probability": 0.00683,
+            "name": "wailing widow's necklace"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 120
-    },
-    {
-      "name": "drunk",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 0,
-      "max": 0,
-      "range": 7,
-      "radius": 4,
-      "target": false,
-      "duration": 4000,
-      "areaEffect": "rednote"
-    },
-    {
-      "name": "lifedrain",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 40,
-      "max": 70,
-      "radius": 3,
-      "target": false,
-      "areaEffect": "redshimmer"
-    },
-    {
-      "name": "earth",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 60,
-      "max": 110,
-      "range": 7,
-      "shootEffect": "poison"
-    }
-  ],
-  "elements": {
-    "fire": -5,
-    "holy": 5
-  },
-  "immunities": {
-    "paralyze": true,
-    "invisible": true,
-    "death": true,
-    "earth": true,
-    "lifedrain": true,
-    "drunk": true
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.96855,
-      "name": "gold coin",
-      "min": 1,
-      "max": 140
-    },
-    {
-      "id": 11328,
-      "probability": 0.19966,
-      "name": "widow's mandibles"
-    },
-    {
-      "id": 7620,
-      "probability": 0.05251,
-      "name": "mana potion"
-    },
-    {
-      "id": 7618,
-      "probability": 0.04942,
-      "name": "health potion"
-    },
-    {
-      "id": 2381,
-      "probability": 0.04708,
-      "name": "halberd"
-    },
-    {
-      "id": 2510,
-      "probability": 0.03173,
-      "name": "plate shield"
-    },
-    {
-      "id": 2796,
-      "probability": 0.02986,
-      "name": "green mushroom"
-    },
-    {
-      "id": 11323,
-      "probability": 0.02256,
-      "name": "zaoan halberd"
-    },
-    {
-      "id": 11329,
-      "probability": 0.00683,
-      "name": "wailing widow's necklace"
-    }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

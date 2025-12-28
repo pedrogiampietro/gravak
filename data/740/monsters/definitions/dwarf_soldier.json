@@ -1,136 +1,136 @@
 {
-  "creatureStatistics": {
-    "name": "Dwarf Soldier",
-    "health": 135,
-    "maxHealth": 135,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 176,
-    "attack": 70,
-    "attackSpeed": 2000,
-    "defense": 9,
-    "outfit": {
-      "id": 71
+    "creatureStatistics": {
+        "name": "Dwarf Soldier",
+        "health": 135,
+        "maxHealth": 135,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 88,
+        "attack": 70,
+        "attackSpeed": 2000,
+        "defense": 9,
+        "outfit": {
+            "id": 71
+        },
+        "armor": 9
     },
-    "armor": 9
-  },
-  "experience": 70,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 70
+    "experience": 70,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "physical",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 0,
-      "max": 60,
-      "range": 7,
-      "shootEffect": "bolt"
-    }
-  ],
-  "elements": {
-    "earth": 10,
-    "fire": -5,
-    "death": -5
-  },
-  "sayings": {
-    "texts": [
-      "Hail Durin!"
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 70
+        },
+        {
+            "name": "physical",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 0,
+            "max": 60,
+            "range": 7,
+            "shootEffect": "bolt"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2787,
-      "probability": 0.39924,
-      "name": "white mushroom",
-      "min": 1,
-      "max": 2
+    "elements": {
+        "earth": 10,
+        "fire": -5,
+        "death": -5
     },
-    {
-      "id": 2543,
-      "probability": 0.37815,
-      "name": "bolt",
-      "min": 1,
-      "max": 7
+    "sayings": {
+        "texts": [
+            "Hail Durin!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2148,
-      "probability": 0.28337,
-      "name": "gold coin",
-      "min": 1,
-      "max": 12
-    },
-    {
-      "id": 2481,
-      "probability": 0.1182,
-      "name": "soldier helmet"
-    },
-    {
-      "id": 2554,
-      "probability": 0.10026,
-      "name": "shovel"
-    },
-    {
-      "id": 2464,
-      "probability": 0.07525,
-      "name": "chain armor"
-    },
-    {
-      "id": 7363,
-      "probability": 0.03822,
-      "name": "piercing bolt",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 2525,
-      "probability": 0.03056,
-      "name": "dwarven shield"
-    },
-    {
-      "id": 2455,
-      "probability": 0.03023,
-      "name": "crossbow"
-    },
-    {
-      "id": 2378,
-      "probability": 0.02481,
-      "name": "battle axe"
-    },
-    {
-      "id": 5880,
-      "probability": 0.00303,
-      "name": "iron ore"
-    },
-    {
-      "id": 2208,
-      "probability": 0.00121,
-      "name": "axe ring"
+    "loot": [
+        {
+            "id": 2787,
+            "probability": 0.39924,
+            "name": "white mushroom",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 2543,
+            "probability": 0.37815,
+            "name": "bolt",
+            "min": 1,
+            "max": 7
+        },
+        {
+            "id": 2148,
+            "probability": 0.28337,
+            "name": "gold coin",
+            "min": 1,
+            "max": 12
+        },
+        {
+            "id": 2481,
+            "probability": 0.1182,
+            "name": "soldier helmet"
+        },
+        {
+            "id": 2554,
+            "probability": 0.10026,
+            "name": "shovel"
+        },
+        {
+            "id": 2464,
+            "probability": 0.07525,
+            "name": "chain armor"
+        },
+        {
+            "id": 7363,
+            "probability": 0.03822,
+            "name": "piercing bolt",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 2525,
+            "probability": 0.03056,
+            "name": "dwarven shield"
+        },
+        {
+            "id": 2455,
+            "probability": 0.03023,
+            "name": "crossbow"
+        },
+        {
+            "id": 2378,
+            "probability": 0.02481,
+            "name": "battle axe"
+        },
+        {
+            "id": 5880,
+            "probability": 0.00303,
+            "name": "iron ore"
+        },
+        {
+            "id": 2208,
+            "probability": 0.00121,
+            "name": "axe ring"
+        }
+    ],
+    "flags": {
+        "summonable": true,
+        "attackable": true,
+        "convinceable": true,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": true,
-    "attackable": true,
-    "convinceable": true,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

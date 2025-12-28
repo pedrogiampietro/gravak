@@ -1,199 +1,199 @@
 {
-  "creatureStatistics": {
-    "name": "Dipthrah",
-    "health": 4200,
-    "maxHealth": 4200,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 320,
-    "attack": 200,
-    "attackSpeed": 2000,
-    "defense": 25,
-    "outfit": {
-      "id": 87
+    "creatureStatistics": {
+        "name": "Dipthrah",
+        "health": 4200,
+        "maxHealth": 4200,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 240,
+        "attack": 200,
+        "attackSpeed": 2000,
+        "defense": 25,
+        "outfit": {
+            "id": 87
+        },
+        "armor": 25
     },
-    "armor": 25
-  },
-  "experience": 2900,
-  "corpse": 2813,
-  "fluidType": 2,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 1000,
-      "chance": 0.25,
-      "min": 100,
-      "max": 200,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 200
+    "experience": 2900,
+    "corpse": 2813,
+    "fluidType": 2,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "lifedrain",
-      "interval": 4000,
-      "chance": 0.2,
-      "min": 100,
-      "max": 800,
-      "range": 1
-    },
-    {
-      "name": "manadrain",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 100,
-      "max": 500,
-      "range": 7,
-      "areaEffect": "redshimmer"
-    },
-    {
-      "name": "speed",
-      "interval": 1000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 0,
-      "range": 7,
-      "speedChange": -650,
-      "duration": 50000,
-      "areaEffect": "redshimmer"
-    },
-    {
-      "name": "drunk",
-      "interval": 1000,
-      "chance": 0.12,
-      "min": 0,
-      "max": 0,
-      "radius": 7,
-      "target": false,
-      "areaEffect": "bluebubble"
-    },
-    {
-      "name": "melee",
-      "interval": 3000,
-      "chance": 0.34,
-      "min": 50,
-      "max": 600,
-      "radius": 3,
-      "target": false,
-      "areaEffect": "bluebubble"
-    },
-    {
-      "name": "dipthrah skill reducer",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 0,
-      "max": 0
-    }
-  ],
-  "elements": {
-    "holy": -10,
-    "energy": 20,
-    "earth": 20
-  },
-  "immunities": {
-    "physical": true,
-    "death": true,
-    "invisible": true
-  },
-  "summons": [
-    {
-      "name": "Priestess",
-      "interval": 2000,
-      "chance": 0.15,
-      "maxSummons": 4
-    }
-  ],
-  "sayings": {
-    "texts": [
-      "Come closer to learn the final lesson.",
-      "You can't escape death forever.",
-      "Undeath will shatter my shackles.",
-      "You don't need this magic anymore."
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 1000,
+            "chance": 0.25,
+            "min": 100,
+            "max": 200,
+            "areaEffect": "blueshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 3241,
-      "probability": 1,
-      "name": "ornamented ankh"
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 200
+        },
+        {
+            "name": "lifedrain",
+            "interval": 4000,
+            "chance": 0.2,
+            "min": 100,
+            "max": 800,
+            "range": 1
+        },
+        {
+            "name": "manadrain",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 100,
+            "max": 500,
+            "range": 7,
+            "areaEffect": "redshimmer"
+        },
+        {
+            "name": "speed",
+            "interval": 1000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 0,
+            "range": 7,
+            "speedChange": -650,
+            "duration": 50000,
+            "areaEffect": "redshimmer"
+        },
+        {
+            "name": "drunk",
+            "interval": 1000,
+            "chance": 0.12,
+            "min": 0,
+            "max": 0,
+            "radius": 7,
+            "target": false,
+            "areaEffect": "bluebubble"
+        },
+        {
+            "name": "melee",
+            "interval": 3000,
+            "chance": 0.34,
+            "min": 50,
+            "max": 600,
+            "radius": 3,
+            "target": false,
+            "areaEffect": "bluebubble"
+        },
+        {
+            "name": "dipthrah skill reducer",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 0,
+            "max": 0
+        }
+    ],
+    "elements": {
+        "holy": -10,
+        "energy": 20,
+        "earth": 20
     },
-    {
-      "id": 2148,
-      "probability": 0.90981,
-      "name": "gold coin",
-      "min": 1,
-      "max": 226
+    "immunities": {
+        "physical": true,
+        "death": true,
+        "invisible": true
     },
-    {
-      "id": 2146,
-      "probability": 0.09806,
-      "name": "small sapphire",
-      "min": 1,
-      "max": 3
+    "summons": [
+        {
+            "name": "Priestess",
+            "interval": 2000,
+            "chance": 0.15,
+            "maxSummons": 4
+        }
+    ],
+    "sayings": {
+        "texts": [
+            "Come closer to learn the final lesson.",
+            "You can't escape death forever.",
+            "Undeath will shatter my shackles.",
+            "You don't need this magic anymore."
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 7590,
-      "probability": 0.08927,
-      "name": "great mana potion"
-    },
-    {
-      "id": 2167,
-      "probability": 0.04857,
-      "name": "energy ring"
-    },
-    {
-      "id": 2178,
-      "probability": 0.00925,
-      "name": "mind stone"
-    },
-    {
-      "id": 2158,
-      "probability": 0.00833,
-      "name": "blue gem"
-    },
-    {
-      "id": 2193,
-      "probability": 0.00601,
-      "name": "ankh"
-    },
-    {
-      "id": 2436,
-      "probability": 0.00555,
-      "name": "skull staff"
-    },
-    {
-      "id": 11207,
-      "probability": 0.00093,
-      "name": "mini mummy"
-    },
-    {
-      "id": 2446,
-      "probability": 0.00093,
-      "name": "pharaoh sword"
+    "loot": [
+        {
+            "id": 3241,
+            "probability": 1,
+            "name": "ornamented ankh"
+        },
+        {
+            "id": 2148,
+            "probability": 0.90981,
+            "name": "gold coin",
+            "min": 1,
+            "max": 226
+        },
+        {
+            "id": 2146,
+            "probability": 0.09806,
+            "name": "small sapphire",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 7590,
+            "probability": 0.08927,
+            "name": "great mana potion"
+        },
+        {
+            "id": 2167,
+            "probability": 0.04857,
+            "name": "energy ring"
+        },
+        {
+            "id": 2178,
+            "probability": 0.00925,
+            "name": "mind stone"
+        },
+        {
+            "id": 2158,
+            "probability": 0.00833,
+            "name": "blue gem"
+        },
+        {
+            "id": 2193,
+            "probability": 0.00601,
+            "name": "ankh"
+        },
+        {
+            "id": 2436,
+            "probability": 0.00555,
+            "name": "skull staff"
+        },
+        {
+            "id": 11207,
+            "probability": 0.00093,
+            "name": "mini mummy"
+        },
+        {
+            "id": 2446,
+            "probability": 0.00093,
+            "name": "pharaoh sword"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

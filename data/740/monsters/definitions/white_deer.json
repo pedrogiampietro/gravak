@@ -1,45 +1,45 @@
 {
-  "creatureStatistics": {
-    "name": "White Deer",
-    "health": 195,
-    "maxHealth": 195,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 190,
-    "attack": 0,
-    "attackSpeed": 2000,
-    "defense": 0,
-    "outfit": {
-      "id": 400
+    "creatureStatistics": {
+        "name": "White Deer",
+        "health": 195,
+        "maxHealth": 195,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 104,
+        "attack": 0,
+        "attackSpeed": 2000,
+        "defense": 0,
+        "outfit": {
+            "id": 400
+        }
+    },
+    "experience": 0,
+    "corpse": 2835,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 0,
+        "fleeHealth": 195,
+        "openDoors": false,
+        "senseInvisible": false
+    },
+    "sayings": {
+        "texts": [
+            "*wheeze*",
+            "ROOOAAARR!!",
+            "*sniff*",
+            "*bell*"
+        ],
+        "slowness": 5,
+        "chance": 0.1
+    },
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": true,
+        "canPushItems": false,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": true
     }
-  },
-  "experience": 0,
-  "corpse": 2835,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 0,
-    "fleeHealth": 195,
-    "openDoors": false,
-    "senseInvisible": false
-  },
-  "sayings": {
-    "texts": [
-      "*wheeze*",
-      "ROOOAAARR!!",
-      "*sniff*",
-      "*bell*"
-    ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": true,
-    "canPushItems": false,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

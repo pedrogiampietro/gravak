@@ -1,51 +1,51 @@
 {
-  "creatureStatistics": {
-    "name": "Rabbit",
-    "health": 15,
-    "maxHealth": 15,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 180,
-    "attack": 0,
-    "attackSpeed": 2000,
-    "defense": 1,
-    "outfit": {
-      "id": 74
+    "creatureStatistics": {
+        "name": "Rabbit",
+        "health": 15,
+        "maxHealth": 15,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 90,
+        "attack": 0,
+        "attackSpeed": 2000,
+        "defense": 1,
+        "outfit": {
+            "id": 74
+        },
+        "armor": 1
     },
-    "armor": 1
-  },
-  "experience": 0,
-  "corpse": 3008,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 0,
-    "fleeHealth": 15,
-    "openDoors": false,
-    "senseInvisible": false
-  },
-  "loot": [
-    {
-      "id": 2666,
-      "probability": 0.82,
-      "name": "meat",
-      "min": 1,
-      "max": 2
+    "experience": 0,
+    "corpse": 3008,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 0,
+        "fleeHealth": 15,
+        "openDoors": false,
+        "senseInvisible": false
     },
-    {
-      "id": 2684,
-      "probability": 0.1,
-      "min": 1,
-      "max": 2
+    "loot": [
+        {
+            "id": 2666,
+            "probability": 0.82,
+            "name": "meat",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 2684,
+            "probability": 0.1,
+            "min": 1,
+            "max": 2
+        }
+    ],
+    "flags": {
+        "summonable": true,
+        "attackable": true,
+        "convinceable": true,
+        "pushable": true,
+        "canPushItems": false,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": true,
-    "attackable": true,
-    "convinceable": true,
-    "pushable": true,
-    "canPushItems": false,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

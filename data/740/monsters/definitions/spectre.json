@@ -1,193 +1,193 @@
 {
-  "creatureStatistics": {
-    "name": "Spectre",
-    "health": 1350,
-    "maxHealth": 1350,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 230,
-    "attack": 308,
-    "attackSpeed": 2000,
-    "defense": 35,
-    "outfit": {
-      "id": 235
+    "creatureStatistics": {
+        "name": "Spectre",
+        "health": 1350,
+        "maxHealth": 1350,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 140,
+        "attack": 308,
+        "attackSpeed": 2000,
+        "defense": 35,
+        "outfit": {
+            "id": 235
+        },
+        "armor": 35
     },
-    "armor": 35
-  },
-  "experience": 2100,
-  "corpse": 2813,
-  "fluidType": 2,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.25,
-      "min": 100,
-      "max": 250,
-      "areaEffect": "blueshimmer"
+    "experience": 2100,
+    "corpse": 2813,
+    "fluidType": 2,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 370,
-      "max": 700,
-      "areaEffect": "blueshimmer"
-    },
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.15,
-      "speedChange": 290,
-      "duration": 5000,
-      "areaEffect": "redshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 308
-    },
-    {
-      "name": "drunk",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 0,
-      "radius": 4,
-      "target": false,
-      "duration": 6000,
-      "areaEffect": "purplenote"
-    },
-    {
-      "name": "spectre drown",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 0
-    },
-    {
-      "name": "manadrain",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 100,
-      "max": 400,
-      "range": 7
-    },
-    {
-      "name": "lifedrain",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 300,
-      "max": 550,
-      "range": 7,
-      "areaEffect": "redshimmer"
-    }
-  ],
-  "elements": {
-    "physical": 90,
-    "ice": 1,
-    "fire": -8,
-    "energy": -8
-  },
-  "immunities": {
-    "paralyze": true,
-    "invisible": true,
-    "drown": true,
-    "lifedrain": true,
-    "earth": true,
-    "death": true,
-    "drunk": true
-  },
-  "sayings": {
-    "texts": [
-      "Revenge ... is so ... sweet!",
-      "Life...force! Feed me your... lifeforce!"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.25,
+            "min": 100,
+            "max": 250,
+            "areaEffect": "blueshimmer"
+        },
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 370,
+            "max": 700,
+            "areaEffect": "blueshimmer"
+        },
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.15,
+            "speedChange": 290,
+            "duration": 5000,
+            "areaEffect": "redshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2071,
-      "probability": 0.0962
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 308
+        },
+        {
+            "name": "drunk",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 0,
+            "radius": 4,
+            "target": false,
+            "duration": 6000,
+            "areaEffect": "purplenote"
+        },
+        {
+            "name": "spectre drown",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 0
+        },
+        {
+            "name": "manadrain",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 100,
+            "max": 400,
+            "range": 7
+        },
+        {
+            "name": "lifedrain",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 300,
+            "max": 550,
+            "range": 7,
+            "areaEffect": "redshimmer"
+        }
+    ],
+    "elements": {
+        "physical": 90,
+        "ice": 1,
+        "fire": -8,
+        "energy": -8
     },
-    {
-      "id": 2136,
-      "probability": 0.0011
+    "immunities": {
+        "paralyze": true,
+        "invisible": true,
+        "drown": true,
+        "lifedrain": true,
+        "earth": true,
+        "death": true,
+        "drunk": true
     },
-    {
-      "id": 2148,
-      "probability": 0.33,
-      "name": "gold coin",
-      "min": 1,
-      "max": 100
+    "sayings": {
+        "texts": [
+            "Revenge ... is so ... sweet!",
+            "Life...force! Feed me your... lifeforce!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2148,
-      "probability": 0.33,
-      "name": "gold coin",
-      "min": 1,
-      "max": 100
-    },
-    {
-      "id": 2148,
-      "probability": 0.33,
-      "name": "gold coin",
-      "min": 1,
-      "max": 97
-    },
-    {
-      "id": 2152,
-      "probability": 0.0385,
-      "name": "platinum coin",
-      "min": 1,
-      "max": 7
-    },
-    {
-      "id": 2165,
-      "probability": 0.0019,
-      "name": "stealth ring"
-    },
-    {
-      "id": 2189,
-      "probability": 0.098,
-      "name": "wand of cosmic energy"
-    },
-    {
-      "id": 2260,
-      "probability": 0.3031,
-      "name": "blank rune",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 6300,
-      "probability": 0.0028
-    },
-    {
-      "id": 2273,
-      "probability": 0.0092,
-      "name": "great mana potion"
+    "loot": [
+        {
+            "id": 2071,
+            "probability": 0.0962
+        },
+        {
+            "id": 2136,
+            "probability": 0.0011
+        },
+        {
+            "id": 2148,
+            "probability": 0.33,
+            "name": "gold coin",
+            "min": 1,
+            "max": 100
+        },
+        {
+            "id": 2148,
+            "probability": 0.33,
+            "name": "gold coin",
+            "min": 1,
+            "max": 100
+        },
+        {
+            "id": 2148,
+            "probability": 0.33,
+            "name": "gold coin",
+            "min": 1,
+            "max": 97
+        },
+        {
+            "id": 2152,
+            "probability": 0.0385,
+            "name": "platinum coin",
+            "min": 1,
+            "max": 7
+        },
+        {
+            "id": 2165,
+            "probability": 0.0019,
+            "name": "stealth ring"
+        },
+        {
+            "id": 2189,
+            "probability": 0.098,
+            "name": "wand of cosmic energy"
+        },
+        {
+            "id": 2260,
+            "probability": 0.3031,
+            "name": "blank rune",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 6300,
+            "probability": 0.0028
+        },
+        {
+            "id": 2273,
+            "probability": 0.0092,
+            "name": "great mana potion"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

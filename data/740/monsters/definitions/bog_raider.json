@@ -1,144 +1,144 @@
 {
-  "creatureStatistics": {
-    "name": "Bog Raider",
-    "health": 1300,
-    "maxHealth": 1300,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 250,
-    "attack": 180,
-    "attackSpeed": 2000,
-    "defense": 20,
-    "outfit": {
-      "id": 299
+    "creatureStatistics": {
+        "name": "Bog Raider",
+        "health": 1300,
+        "maxHealth": 1300,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 125,
+        "attack": 180,
+        "attackSpeed": 2000,
+        "defense": 20,
+        "outfit": {
+            "id": 299
+        },
+        "armor": 20
     },
-    "armor": 20
-  },
-  "experience": 800,
-  "corpse": 2813,
-  "fluidType": 3,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 65,
-      "max": 95,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 180
+    "experience": 800,
+    "corpse": 2813,
+    "fluidType": 3,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "lifedrain",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 90,
-      "max": 140,
-      "range": 7,
-      "target": true,
-      "areaEffect": "redshimmer"
-    },
-    {
-      "name": "earth",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 100,
-      "max": 175,
-      "radius": 3,
-      "target": false,
-      "areaEffect": "bubbles"
-    },
-    {
-      "name": "earth",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 96,
-      "max": 110,
-      "range": 7,
-      "target": true,
-      "shootEffect": "smallearth"
-    },
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 0,
-      "range": 7,
-      "target": true,
-      "speedChange": -600,
-      "duration": 15000,
-      "areaEffect": "smallplants"
-    }
-  ],
-  "elements": {
-    "energy": -10,
-    "earth": 30,
-    "ice": -5,
-    "physical": -5,
-    "holy": -5,
-    "death": 5,
-    "fire": 85
-  },
-  "immunities": {
-    "paralyze": true,
-    "invisible": true
-  },
-  "sayings": {
-    "texts": [
-      "Tchhh!",
-      "Slurp!"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 65,
+            "max": 95,
+            "areaEffect": "blueshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.5075,
-      "name": "gold coin",
-      "min": 1,
-      "max": 100
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 180
+        },
+        {
+            "name": "lifedrain",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 90,
+            "max": 140,
+            "range": 7,
+            "target": true,
+            "areaEffect": "redshimmer"
+        },
+        {
+            "name": "earth",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 100,
+            "max": 175,
+            "radius": 3,
+            "target": false,
+            "areaEffect": "bubbles"
+        },
+        {
+            "name": "earth",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 96,
+            "max": 110,
+            "range": 7,
+            "target": true,
+            "shootEffect": "smallearth"
+        },
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 0,
+            "range": 7,
+            "target": true,
+            "speedChange": -600,
+            "duration": 15000,
+            "areaEffect": "smallplants"
+        }
+    ],
+    "elements": {
+        "energy": -10,
+        "earth": 30,
+        "ice": -5,
+        "physical": -5,
+        "holy": -5,
+        "death": 5,
+        "fire": 85
     },
-    {
-      "id": 2148,
-      "probability": 0.5075,
-      "name": "gold coin",
-      "min": 1,
-      "max": 5
+    "immunities": {
+        "paralyze": true,
+        "invisible": true
     },
-    {
-      "id": 2274,
-      "probability": 0.0203,
-      "name": "great health potion"
+    "sayings": {
+        "texts": [
+            "Tchhh!",
+            "Slurp!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2647,
-      "probability": 0.0202,
-      "name": "plate legs"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.5075,
+            "name": "gold coin",
+            "min": 1,
+            "max": 100
+        },
+        {
+            "id": 2148,
+            "probability": 0.5075,
+            "name": "gold coin",
+            "min": 1,
+            "max": 5
+        },
+        {
+            "id": 2274,
+            "probability": 0.0203,
+            "name": "great health potion"
+        },
+        {
+            "id": 2647,
+            "probability": 0.0202,
+            "name": "plate legs"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": false,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": false,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

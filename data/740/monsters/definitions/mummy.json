@@ -1,120 +1,120 @@
 {
-  "creatureStatistics": {
-    "name": "Mummy",
-    "health": 240,
-    "maxHealth": 240,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 150,
-    "attack": 85,
-    "attackSpeed": 2000,
-    "defense": 15,
-    "outfit": {
-      "id": 65
+    "creatureStatistics": {
+        "name": "Mummy",
+        "health": 240,
+        "maxHealth": 240,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 75,
+        "attack": 85,
+        "attackSpeed": 2000,
+        "defense": 15,
+        "outfit": {
+            "id": 65
+        },
+        "armor": 15
     },
-    "armor": 15
-  },
-  "experience": 150,
-  "corpse": 2813,
-  "fluidType": 2,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 85
+    "experience": 150,
+    "corpse": 2813,
+    "fluidType": 2,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "death",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 30,
-      "max": 40,
-      "range": 1,
-      "target": true,
-      "areaEffect": "smallclouds"
-    },
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 0,
-      "range": 7,
-      "target": true,
-      "speedChange": -226,
-      "duration": 10000,
-      "areaEffect": "redshimmer"
-    }
-  ],
-  "elements": {
-    "ice": 20,
-    "holy": -25
-  },
-  "immunities": {
-    "death": true,
-    "earth": true,
-    "drown": true,
-    "lifedrain": true,
-    "paralyze": true,
-    "invisible": true
-  },
-  "sayings": {
-    "texts": [
-      "I will ssswallow your sssoul!",
-      "Mort ulhegh dakh visss.",
-      "Flesssh to dussst!",
-      "I will tassste life again!",
-      "Ahkahra exura belil mort!",
-      "Yohag Sssetham!"
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 85
+        },
+        {
+            "name": "death",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 30,
+            "max": 40,
+            "range": 1,
+            "target": true,
+            "areaEffect": "smallclouds"
+        },
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 0,
+            "range": 7,
+            "target": true,
+            "speedChange": -226,
+            "duration": 10000,
+            "areaEffect": "redshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2124,
-      "probability": 0.015
+    "elements": {
+        "ice": 20,
+        "holy": -25
     },
-    {
-      "id": 2148,
-      "probability": 0.38,
-      "name": "gold coin",
-      "min": 1,
-      "max": 80
+    "immunities": {
+        "death": true,
+        "earth": true,
+        "drown": true,
+        "lifedrain": true,
+        "paralyze": true,
+        "invisible": true
     },
-    {
-      "id": 2162,
-      "probability": 0.058
+    "sayings": {
+        "texts": [
+            "I will ssswallow your sssoul!",
+            "Mort ulhegh dakh visss.",
+            "Flesssh to dussst!",
+            "I will tassste life again!",
+            "Ahkahra exura belil mort!",
+            "Yohag Sssetham!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2170,
-      "probability": 0.001,
-      "name": "silver amulet"
-    },
-    {
-      "id": 2575,
-      "probability": 0.19,
-      "name": "worm",
-      "min": 1,
-      "max": 3
+    "loot": [
+        {
+            "id": 2124,
+            "probability": 0.015
+        },
+        {
+            "id": 2148,
+            "probability": 0.38,
+            "name": "gold coin",
+            "min": 1,
+            "max": 80
+        },
+        {
+            "id": 2162,
+            "probability": 0.058
+        },
+        {
+            "id": 2170,
+            "probability": 0.001,
+            "name": "silver amulet"
+        },
+        {
+            "id": 2575,
+            "probability": 0.19,
+            "name": "worm",
+            "min": 1,
+            "max": 3
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

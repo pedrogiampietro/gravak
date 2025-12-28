@@ -1,64 +1,64 @@
 {
-  "creatureStatistics": {
-    "name": "Sheep",
-    "health": 20,
-    "maxHealth": 20,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 116,
-    "attack": 1,
-    "attackSpeed": 2000,
-    "defense": 1,
-    "outfit": {
-      "id": 14
+    "creatureStatistics": {
+        "name": "Sheep",
+        "health": 20,
+        "maxHealth": 20,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 58,
+        "attack": 1,
+        "attackSpeed": 2000,
+        "defense": 1,
+        "outfit": {
+            "id": 14
+        },
+        "armor": 1
     },
-    "armor": 1
-  },
-  "experience": 0,
-  "corpse": 2905,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 0,
-    "fleeHealth": 20,
-    "openDoors": false,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 1
-    }
-  ],
-  "elements": {
-    "fire": -5
-  },
-  "sayings": {
-    "texts": [
-      "Maeh"
+    "experience": 0,
+    "corpse": 2905,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 0,
+        "fleeHealth": 20,
+        "openDoors": false,
+        "senseInvisible": false
+    },
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 1
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2666,
-      "probability": 0.7,
-      "name": "meat",
-      "min": 1,
-      "max": 4
+    "elements": {
+        "fire": -5
+    },
+    "sayings": {
+        "texts": [
+            "Maeh"
+        ],
+        "slowness": 5,
+        "chance": 0.1
+    },
+    "loot": [
+        {
+            "id": 2666,
+            "probability": 0.7,
+            "name": "meat",
+            "min": 1,
+            "max": 4
+        }
+    ],
+    "flags": {
+        "summonable": true,
+        "attackable": true,
+        "convinceable": true,
+        "pushable": true,
+        "canPushItems": false,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": true,
-    "attackable": true,
-    "convinceable": true,
-    "pushable": true,
-    "canPushItems": false,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

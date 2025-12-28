@@ -1,69 +1,69 @@
 {
-  "creatureStatistics": {
-    "name": "Cobra",
-    "health": 65,
-    "maxHealth": 65,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 120,
-    "attack": 0,
-    "attackSpeed": 2000,
-    "defense": 1,
-    "outfit": {
-      "id": 81
+    "creatureStatistics": {
+        "name": "Cobra",
+        "health": 65,
+        "maxHealth": 65,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 60,
+        "attack": 0,
+        "attackSpeed": 2000,
+        "defense": 1,
+        "outfit": {
+            "id": 81
+        },
+        "armor": 1
     },
-    "armor": 1
-  },
-  "experience": 30,
-  "corpse": 2817,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": false,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 0
+    "experience": 30,
+    "corpse": 2817,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": false,
+        "senseInvisible": false
     },
-    {
-      "name": "poisoncondition",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 20,
-      "max": 40,
-      "range": 7
-    }
-  ],
-  "elements": {
-    "fire": -10
-  },
-  "immunities": {
-    "drunk": true,
-    "earth": true
-  },
-  "sayings": {
-    "texts": [
-      "Zzzzzz",
-      "Fsssss"
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 0
+        },
+        {
+            "name": "poisoncondition",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 20,
+            "max": 40,
+            "range": 7
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [],
-  "flags": {
-    "summonable": true,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": true,
-    "canPushItems": false,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": true
-  }
+    "elements": {
+        "fire": -10
+    },
+    "immunities": {
+        "drunk": true,
+        "earth": true
+    },
+    "sayings": {
+        "texts": [
+            "Zzzzzz",
+            "Fsssss"
+        ],
+        "slowness": 5,
+        "chance": 0.1
+    },
+    "loot": [],
+    "flags": {
+        "summonable": true,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": true,
+        "canPushItems": false,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": true
+    }
 }

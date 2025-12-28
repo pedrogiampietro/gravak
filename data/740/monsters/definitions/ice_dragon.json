@@ -1,198 +1,198 @@
 {
-  "creatureStatistics": {
-    "name": "Ice Dragon",
-    "health": 2500,
-    "maxHealth": 2500,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 212,
-    "attack": 300,
-    "attackSpeed": 2000,
-    "defense": 41,
-    "outfit": {
-      "id": 947
+    "creatureStatistics": {
+        "name": "Ice Dragon",
+        "health": 2500,
+        "maxHealth": 2500,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 106,
+        "attack": 300,
+        "attackSpeed": 2000,
+        "defense": 41,
+        "outfit": {
+            "id": 947
+        },
+        "armor": 41
     },
-    "armor": 41
-  },
-  "experience": 2300,
-  "corpse": 2844,
-  "fluidType": 2,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 100,
-      "max": 200,
-      "areaEffect": "blueshimmer"
+    "experience": 2300,
+    "corpse": 2844,
+    "fluidType": 2,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
+    },
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 100,
+            "max": 200,
+            "areaEffect": "blueshimmer"
+        }
+    ],
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 300
+        },
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.18,
+            "min": 0,
+            "max": 400,
+            "range": 7,
+            "radius": 4,
+            "target": true,
+            "duration": 20000,
+            "areaEffect": "icetornado"
+        },
+        {
+            "name": "ice",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 50,
+            "max": 120,
+            "range": 7,
+            "radius": 3,
+            "target": false,
+            "areaEffect": "icetornado"
+        },
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.12,
+            "min": 0,
+            "max": 400,
+            "length": 7,
+            "spread": 3,
+            "duration": 20000,
+            "areaEffect": "iceattack"
+        },
+        {
+            "name": "lifedrain",
+            "interval": 2000,
+            "chance": 0.12,
+            "min": 150,
+            "max": 380,
+            "length": 8,
+            "spread": 3,
+            "areaEffect": "poff"
+        }
+    ],
+    "elements": {
+        "physical": -5,
+        "earth": 50,
+        "fire": -30
+    },
+    "immunities": {
+        "ice": true,
+        "lifedrain": true,
+        "paralyze": true,
+        "invisible": true
+    },
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.96552,
+            "name": "gold coin",
+            "min": 1,
+            "max": 219
+        },
+        {
+            "id": 2672,
+            "probability": 0.78796,
+            "name": "dragon ham"
+        },
+        {
+            "id": 27593,
+            "probability": 0.19506,
+            "name": "dragon blood"
+        },
+        {
+            "id": 27594,
+            "probability": 0.12043,
+            "name": "dragon tongue"
+        },
+        {
+            "id": 7839,
+            "probability": 0.07977,
+            "name": "shiver arrow",
+            "min": 1,
+            "max": 10
+        },
+        {
+            "id": 7441,
+            "probability": 0.04426,
+            "name": "ice cube"
+        },
+        {
+            "id": 2167,
+            "probability": 0.04117,
+            "name": "energy ring"
+        },
+        {
+            "id": 2146,
+            "probability": 0.03911,
+            "name": "small sapphire"
+        },
+        {
+            "id": 7590,
+            "probability": 0.035,
+            "name": "great mana potion",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 2033,
+            "probability": 0.02934,
+            "name": "golden mug"
+        },
+        {
+            "id": 2183,
+            "probability": 0.02213,
+            "name": "hailstorm rod"
+        },
+        {
+            "id": 7902,
+            "probability": 0.01081,
+            "name": "glacier mask"
+        },
+        {
+            "id": 7888,
+            "probability": 0.00978,
+            "name": "glacier amulet"
+        },
+        {
+            "id": 7290,
+            "probability": 0.00978,
+            "name": "shard"
+        },
+        {
+            "id": 2177,
+            "probability": 0.00669,
+            "name": "life crystal"
+        },
+        {
+            "id": 2492,
+            "probability": 0.00257,
+            "name": "dragon scale mail"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 300
-    },
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.18,
-      "min": 0,
-      "max": 400,
-      "range": 7,
-      "radius": 4,
-      "target": true,
-      "duration": 20000,
-      "areaEffect": "icetornado"
-    },
-    {
-      "name": "ice",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 50,
-      "max": 120,
-      "range": 7,
-      "radius": 3,
-      "target": false,
-      "areaEffect": "icetornado"
-    },
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.12,
-      "min": 0,
-      "max": 400,
-      "length": 7,
-      "spread": 3,
-      "duration": 20000,
-      "areaEffect": "iceattack"
-    },
-    {
-      "name": "lifedrain",
-      "interval": 2000,
-      "chance": 0.12,
-      "min": 150,
-      "max": 380,
-      "length": 8,
-      "spread": 3,
-      "areaEffect": "poff"
-    }
-  ],
-  "elements": {
-    "physical": -5,
-    "earth": 50,
-    "fire": -30
-  },
-  "immunities": {
-    "ice": true,
-    "lifedrain": true,
-    "paralyze": true,
-    "invisible": true
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.96552,
-      "name": "gold coin",
-      "min": 1,
-      "max": 219
-    },
-    {
-      "id": 2672,
-      "probability": 0.78796,
-      "name": "dragon ham"
-    },
-    {
-      "id": 27593,
-      "probability": 0.19506,
-      "name": "dragon blood"
-    },
-    {
-      "id": 27594,
-      "probability": 0.12043,
-      "name": "dragon tongue"
-    },
-    {
-      "id": 7839,
-      "probability": 0.07977,
-      "name": "shiver arrow",
-      "min": 1,
-      "max": 10
-    },
-    {
-      "id": 7441,
-      "probability": 0.04426,
-      "name": "ice cube"
-    },
-    {
-      "id": 2167,
-      "probability": 0.04117,
-      "name": "energy ring"
-    },
-    {
-      "id": 2146,
-      "probability": 0.03911,
-      "name": "small sapphire"
-    },
-    {
-      "id": 7590,
-      "probability": 0.035,
-      "name": "great mana potion",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 2033,
-      "probability": 0.02934,
-      "name": "golden mug"
-    },
-    {
-      "id": 2183,
-      "probability": 0.02213,
-      "name": "hailstorm rod"
-    },
-    {
-      "id": 7902,
-      "probability": 0.01081,
-      "name": "glacier mask"
-    },
-    {
-      "id": 7888,
-      "probability": 0.00978,
-      "name": "glacier amulet"
-    },
-    {
-      "id": 7290,
-      "probability": 0.00978,
-      "name": "shard"
-    },
-    {
-      "id": 2177,
-      "probability": 0.00669,
-      "name": "life crystal"
-    },
-    {
-      "id": 2492,
-      "probability": 0.00257,
-      "name": "dragon scale mail"
-    }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

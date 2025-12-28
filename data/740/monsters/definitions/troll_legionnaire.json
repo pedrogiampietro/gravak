@@ -1,111 +1,111 @@
 {
-  "creatureStatistics": {
-    "name": "Troll Legionnaire",
-    "health": 210,
-    "maxHealth": 210,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 190,
-    "attack": 35,
-    "attackSpeed": 2000,
-    "defense": 9,
-    "outfit": {
-      "id": 53
+    "creatureStatistics": {
+        "name": "Troll Legionnaire",
+        "health": 210,
+        "maxHealth": 210,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 100,
+        "attack": 35,
+        "attackSpeed": 2000,
+        "defense": 9,
+        "outfit": {
+            "id": 53
+        },
+        "armor": 7
     },
-    "armor": 7
-  },
-  "experience": 140,
-  "corpse": 2806,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 30,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "invisible",
-      "interval": 2000,
-      "chance": 0.18,
-      "duration": 20000,
-      "areaEffect": "blueshimmer"
+    "experience": 140,
+    "corpse": 2806,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 30,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.28,
-      "min": 17,
-      "max": 25,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 35
-    },
-    {
-      "name": "physical",
-      "interval": 2000,
-      "chance": 0.18,
-      "min": 0,
-      "max": 130,
-      "range": 6,
-      "target": true,
-      "shootEffect": "throwingstar"
-    }
-  ],
-  "immunities": {
-    "invisible": true
-  },
-  "sayings": {
-    "texts": [
-      "Attack!",
-      "Graaaaar!"
+    "defenseSpells": [
+        {
+            "name": "invisible",
+            "interval": 2000,
+            "chance": 0.18,
+            "duration": 20000,
+            "areaEffect": "blueshimmer"
+        },
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.28,
+            "min": 17,
+            "max": 25,
+            "areaEffect": "blueshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.09
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.46,
-      "name": "gold coin",
-      "min": 1,
-      "max": 100
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 35
+        },
+        {
+            "name": "physical",
+            "interval": 2000,
+            "chance": 0.18,
+            "min": 0,
+            "max": 130,
+            "range": 6,
+            "target": true,
+            "shootEffect": "throwingstar"
+        }
+    ],
+    "immunities": {
+        "invisible": true
     },
-    {
-      "id": 2148,
-      "probability": 0.46,
-      "name": "gold coin",
-      "min": 1,
-      "max": 55
+    "sayings": {
+        "texts": [
+            "Attack!",
+            "Graaaaar!"
+        ],
+        "slowness": 5,
+        "chance": 0.09
     },
-    {
-      "id": 2165,
-      "probability": 0.0056,
-      "name": "stealth ring"
-    },
-    {
-      "id": 2399,
-      "probability": 0.28,
-      "name": "throwing star",
-      "min": 1,
-      "max": 10
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.46,
+            "name": "gold coin",
+            "min": 1,
+            "max": 100
+        },
+        {
+            "id": 2148,
+            "probability": 0.46,
+            "name": "gold coin",
+            "min": 1,
+            "max": 55
+        },
+        {
+            "id": 2165,
+            "probability": 0.0056,
+            "name": "stealth ring"
+        },
+        {
+            "id": 2399,
+            "probability": 0.28,
+            "name": "throwing star",
+            "min": 1,
+            "max": 10
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": 4
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": 4
-  }
 }

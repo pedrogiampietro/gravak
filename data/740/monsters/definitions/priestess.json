@@ -1,203 +1,203 @@
 {
-  "creatureStatistics": {
-    "name": "Priestess",
-    "health": 390,
-    "maxHealth": 390,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 170,
-    "attack": 75,
-    "attackSpeed": 2000,
-    "defense": 30,
-    "outfit": {
-      "id": 58
+    "creatureStatistics": {
+        "name": "Priestess",
+        "health": 390,
+        "maxHealth": 390,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 85,
+        "attack": 75,
+        "attackSpeed": 2000,
+        "defense": 30,
+        "outfit": {
+            "id": 58
+        },
+        "armor": 30
     },
-    "armor": 30
-  },
-  "experience": 420,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 50,
-      "max": 80,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 75
+    "experience": 420,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "death",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 55,
-      "max": 120,
-      "range": 7,
-      "shootEffect": "suddendeath",
-      "areaEffect": "mortarea"
-    },
-    {
-      "name": "manadrain",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 2,
-      "max": 170,
-      "range": 7
-    },
-    {
-      "name": "poisoncondition",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 200,
-      "max": 0,
-      "range": 7,
-      "shootEffect": "poison"
-    }
-  ],
-  "elements": {
-    "fire": 40,
-    "earth": 70,
-    "death": 10,
-    "physical": -10,
-    "holy": -10
-  },
-  "immunities": {
-    "invisible": true
-  },
-  "summons": [
-    {
-      "name": "ghoul",
-      "interval": 2000,
-      "chance": 0.1,
-      "maxSummons": 2
-    }
-  ],
-  "sayings": {
-    "texts": [
-      "Your energy is mine.",
-      "Now your life is come to the end, hahahaha!",
-      "Throw the soul on the altar!"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 50,
+            "max": 80,
+            "areaEffect": "blueshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2802,
-      "probability": 0.13494,
-      "name": "sling herb"
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 75
+        },
+        {
+            "name": "death",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 55,
+            "max": 120,
+            "range": 7,
+            "shootEffect": "suddendeath",
+            "areaEffect": "mortarea"
+        },
+        {
+            "name": "manadrain",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 2,
+            "max": 170,
+            "range": 7
+        },
+        {
+            "name": "poisoncondition",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 200,
+            "max": 0,
+            "range": 7,
+            "shootEffect": "poison"
+        }
+    ],
+    "elements": {
+        "fire": 40,
+        "earth": 70,
+        "death": 10,
+        "physical": -10,
+        "holy": -10
     },
-    {
-      "id": 2760,
-      "probability": 0.12093,
-      "name": "goat grass"
+    "immunities": {
+        "invisible": true
     },
-    {
-      "id": 11220,
-      "probability": 0.09795,
-      "name": "dark rosary"
+    "summons": [
+        {
+            "name": "ghoul",
+            "interval": 2000,
+            "chance": 0.1,
+            "maxSummons": 2
+        }
+    ],
+    "sayings": {
+        "texts": [
+            "Your energy is mine.",
+            "Now your life is come to the end, hahahaha!",
+            "Throw the soul on the altar!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2674,
-      "probability": 0.07403,
-      "name": "red apple",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 2803,
-      "probability": 0.06183,
-      "name": "powder herb"
-    },
-    {
-      "id": 10562,
-      "probability": 0.05036,
-      "name": "black hood"
-    },
-    {
-      "id": 2791,
-      "probability": 0.03343,
-      "name": "wood mushroom"
-    },
-    {
-      "id": 10556,
-      "probability": 0.01796,
-      "name": "cultish robe"
-    },
-    {
-      "id": 2423,
-      "probability": 0.01484,
-      "name": "clerical mace"
-    },
-    {
-      "id": 2070,
-      "probability": 0.01425,
-      "name": "wooden flute"
-    },
-    {
-      "id": 2192,
-      "probability": 0.01132,
-      "name": "crystal ball"
-    },
-    {
-      "id": 2183,
-      "probability": 0.01069,
-      "name": "hailstorm rod"
-    },
-    {
-      "id": 1962,
-      "probability": 0.00932,
-      "name": "book (orange)"
-    },
-    {
-      "id": 7620,
-      "probability": 0.00932,
-      "name": "mana potion"
-    },
-    {
-      "id": 2151,
-      "probability": 0.00717,
-      "name": "talon"
-    },
-    {
-      "id": 2125,
-      "probability": 0.00615,
-      "name": "crystal necklace"
-    },
-    {
-      "id": 2529,
-      "probability": 0.0021,
-      "name": "black shield"
-    },
-    {
-      "id": 2114,
-      "probability": 0.00068,
-      "name": "piggy bank"
+    "loot": [
+        {
+            "id": 2802,
+            "probability": 0.13494,
+            "name": "sling herb"
+        },
+        {
+            "id": 2760,
+            "probability": 0.12093,
+            "name": "goat grass"
+        },
+        {
+            "id": 11220,
+            "probability": 0.09795,
+            "name": "dark rosary"
+        },
+        {
+            "id": 2674,
+            "probability": 0.07403,
+            "name": "red apple",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 2803,
+            "probability": 0.06183,
+            "name": "powder herb"
+        },
+        {
+            "id": 10562,
+            "probability": 0.05036,
+            "name": "black hood"
+        },
+        {
+            "id": 2791,
+            "probability": 0.03343,
+            "name": "wood mushroom"
+        },
+        {
+            "id": 10556,
+            "probability": 0.01796,
+            "name": "cultish robe"
+        },
+        {
+            "id": 2423,
+            "probability": 0.01484,
+            "name": "clerical mace"
+        },
+        {
+            "id": 2070,
+            "probability": 0.01425,
+            "name": "wooden flute"
+        },
+        {
+            "id": 2192,
+            "probability": 0.01132,
+            "name": "crystal ball"
+        },
+        {
+            "id": 2183,
+            "probability": 0.01069,
+            "name": "hailstorm rod"
+        },
+        {
+            "id": 1962,
+            "probability": 0.00932,
+            "name": "book (orange)"
+        },
+        {
+            "id": 7620,
+            "probability": 0.00932,
+            "name": "mana potion"
+        },
+        {
+            "id": 2151,
+            "probability": 0.00717,
+            "name": "talon"
+        },
+        {
+            "id": 2125,
+            "probability": 0.00615,
+            "name": "crystal necklace"
+        },
+        {
+            "id": 2529,
+            "probability": 0.0021,
+            "name": "black shield"
+        },
+        {
+            "id": 2114,
+            "probability": 0.00068,
+            "name": "piggy bank"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": true,
+        "targetDistance": 4
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": true,
-    "targetDistance": 4
-  }
 }

@@ -1,76 +1,76 @@
 {
-  "creatureStatistics": {
-    "name": "Crocodile",
-    "health": 105,
-    "maxHealth": 105,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 156,
-    "attack": 40,
-    "attackSpeed": 2000,
-    "defense": 13,
-    "outfit": {
-      "id": 119
+    "creatureStatistics": {
+        "name": "Crocodile",
+        "health": 105,
+        "maxHealth": 105,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 78,
+        "attack": 40,
+        "attackSpeed": 2000,
+        "defense": 13,
+        "outfit": {
+            "id": 119
+        },
+        "armor": 13
     },
-    "armor": 13
-  },
-  "experience": 40,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 10,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 40
+    "experience": 40,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 10,
+        "openDoors": true,
+        "senseInvisible": false
+    },
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 40
+        }
+    ],
+    "elements": {
+        "physical": -10,
+        "energy": -5,
+        "earth": 20,
+        "fire": -10,
+        "ice": 10
+    },
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.49805,
+            "name": "gold coin",
+            "min": 1,
+            "max": 10
+        },
+        {
+            "id": 2671,
+            "probability": 0.39795,
+            "name": "ham"
+        },
+        {
+            "id": 11196,
+            "probability": 0.20032,
+            "name": "piece of crocodile leather"
+        },
+        {
+            "id": 3982,
+            "probability": 0.00086,
+            "name": "crocodile boots"
+        }
+    ],
+    "flags": {
+        "summonable": true,
+        "attackable": true,
+        "convinceable": true,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "elements": {
-    "physical": -10,
-    "energy": -5,
-    "earth": 20,
-    "fire": -10,
-    "ice": 10
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.49805,
-      "name": "gold coin",
-      "min": 1,
-      "max": 10
-    },
-    {
-      "id": 2671,
-      "probability": 0.39795,
-      "name": "ham"
-    },
-    {
-      "id": 11196,
-      "probability": 0.20032,
-      "name": "piece of crocodile leather"
-    },
-    {
-      "id": 3982,
-      "probability": 0.00086,
-      "name": "crocodile boots"
-    }
-  ],
-  "flags": {
-    "summonable": true,
-    "attackable": true,
-    "convinceable": true,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

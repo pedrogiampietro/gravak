@@ -1,202 +1,202 @@
 {
-  "creatureStatistics": {
-    "name": "Dark Torturer",
-    "health": 7350,
-    "maxHealth": 7350,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 370,
-    "attack": 500,
-    "attackSpeed": 2000,
-    "defense": 45,
-    "outfit": {
-      "id": 234
+    "creatureStatistics": {
+        "name": "Dark Torturer",
+        "health": 7350,
+        "maxHealth": 7350,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 185,
+        "attack": 500,
+        "attackSpeed": 2000,
+        "defense": 45,
+        "outfit": {
+            "id": 234
+        },
+        "armor": 45
     },
-    "armor": 45
-  },
-  "experience": 4650,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 200,
-      "max": 250,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 500
+    "experience": 4650,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "physical",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 0,
-      "max": 781,
-      "range": 7,
-      "shootEffect": "throwingknife"
-    },
-    {
-      "name": "dark torturer skill reducer",
-      "interval": 2000,
-      "chance": 0.05,
-      "min": 0,
-      "max": 0
-    }
-  ],
-  "elements": {
-    "energy": 30,
-    "earth": 90,
-    "ice": -10,
-    "holy": -10,
-    "death": 10
-  },
-  "immunities": {
-    "fire": true,
-    "invisible": true
-  },
-  "sayings": {
-    "texts": [
-      "You like it, don't you?",
-      "IahaEhheAie!",
-      "It's party time!",
-      "Harrr, Harrr!",
-      "The torturer is in!"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 200,
+            "max": 250,
+            "areaEffect": "blueshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 1,
-      "name": "gold coin",
-      "min": 1,
-      "max": 199
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 500
+        },
+        {
+            "name": "physical",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 0,
+            "max": 781,
+            "range": 7,
+            "shootEffect": "throwingknife"
+        },
+        {
+            "name": "dark torturer skill reducer",
+            "interval": 2000,
+            "chance": 0.05,
+            "min": 0,
+            "max": 0
+        }
+    ],
+    "elements": {
+        "energy": 30,
+        "earth": 90,
+        "ice": -10,
+        "holy": -10,
+        "death": 10
     },
-    {
-      "id": 2671,
-      "probability": 0.65733,
-      "name": "ham"
+    "immunities": {
+        "fire": true,
+        "invisible": true
     },
-    {
-      "id": 2152,
-      "probability": 0.57202,
-      "name": "platinum coin",
-      "min": 1,
-      "max": 8
+    "sayings": {
+        "texts": [
+            "You like it, don't you?",
+            "IahaEhheAie!",
+            "It's party time!",
+            "Harrr, Harrr!",
+            "The torturer is in!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 6558,
-      "probability": 0.35009,
-      "name": "flask of demonic blood"
-    },
-    {
-      "id": 5944,
-      "probability": 0.24088,
-      "name": "soul orb"
-    },
-    {
-      "id": 7590,
-      "probability": 0.15083,
-      "name": "great mana potion",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 7591,
-      "probability": 0.09602,
-      "name": "great health potion",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 6500,
-      "probability": 0.0886,
-      "name": "demonic essence"
-    },
-    {
-      "id": 2558,
-      "probability": 0.05316,
-      "name": "saw"
-    },
-    {
-      "id": 2645,
-      "probability": 0.05007,
-      "name": "steel boots"
-    },
-    {
-      "id": 9971,
-      "probability": 0.03132,
-      "name": "gold ingot"
-    },
-    {
-      "id": 5022,
-      "probability": 0.02823,
-      "name": "orichalcum pearl",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 5480,
-      "probability": 0.02061,
-      "name": "cat's paw"
-    },
-    {
-      "id": 6300,
-      "probability": 0.01958,
-      "name": "death ring"
-    },
-    {
-      "id": 7368,
-      "probability": 0.01772,
-      "name": "assassin star",
-      "min": 1,
-      "max": 5
-    },
-    {
-      "id": 5801,
-      "probability": 0.00845,
-      "name": "jewelled backpack"
-    },
-    {
-      "id": 7412,
-      "probability": 0.00762,
-      "name": "butcher's axe"
-    },
-    {
-      "id": 7388,
-      "probability": 0.00536,
-      "name": "vile axe"
-    },
-    {
-      "id": 2470,
-      "probability": 0.00082,
-      "name": "golden legs"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 1,
+            "name": "gold coin",
+            "min": 1,
+            "max": 199
+        },
+        {
+            "id": 2671,
+            "probability": 0.65733,
+            "name": "ham"
+        },
+        {
+            "id": 2152,
+            "probability": 0.57202,
+            "name": "platinum coin",
+            "min": 1,
+            "max": 8
+        },
+        {
+            "id": 6558,
+            "probability": 0.35009,
+            "name": "flask of demonic blood"
+        },
+        {
+            "id": 5944,
+            "probability": 0.24088,
+            "name": "soul orb"
+        },
+        {
+            "id": 7590,
+            "probability": 0.15083,
+            "name": "great mana potion",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 7591,
+            "probability": 0.09602,
+            "name": "great health potion",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 6500,
+            "probability": 0.0886,
+            "name": "demonic essence"
+        },
+        {
+            "id": 2558,
+            "probability": 0.05316,
+            "name": "saw"
+        },
+        {
+            "id": 2645,
+            "probability": 0.05007,
+            "name": "steel boots"
+        },
+        {
+            "id": 9971,
+            "probability": 0.03132,
+            "name": "gold ingot"
+        },
+        {
+            "id": 5022,
+            "probability": 0.02823,
+            "name": "orichalcum pearl",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 5480,
+            "probability": 0.02061,
+            "name": "cat's paw"
+        },
+        {
+            "id": 6300,
+            "probability": 0.01958,
+            "name": "death ring"
+        },
+        {
+            "id": 7368,
+            "probability": 0.01772,
+            "name": "assassin star",
+            "min": 1,
+            "max": 5
+        },
+        {
+            "id": 5801,
+            "probability": 0.00845,
+            "name": "jewelled backpack"
+        },
+        {
+            "id": 7412,
+            "probability": 0.00762,
+            "name": "butcher's axe"
+        },
+        {
+            "id": 7388,
+            "probability": 0.00536,
+            "name": "vile axe"
+        },
+        {
+            "id": 2470,
+            "probability": 0.00082,
+            "name": "golden legs"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

@@ -1,457 +1,457 @@
 {
-  "creatureStatistics": {
-    "name": "Morgaroth",
-    "health": 55000,
-    "maxHealth": 55000,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 400,
-    "attack": 2000,
-    "attackSpeed": 2000,
-    "defense": 130,
-    "outfit": {
-      "id": 12
+    "creatureStatistics": {
+        "name": "Morgaroth",
+        "health": 55000,
+        "maxHealth": 55000,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 305,
+        "attack": 2000,
+        "attackSpeed": 2000,
+        "defense": 130,
+        "outfit": {
+            "id": 12
+        },
+        "armor": 130
     },
-    "armor": 130
-  },
-  "experience": 15000,
-  "corpse": 2813,
-  "fluidType": 0,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 3000,
-      "chance": 0.35,
-      "min": 300,
-      "max": 800,
-      "areaEffect": "blueshimmer"
+    "experience": 15000,
+    "corpse": 2813,
+    "fluidType": 0,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "speed",
-      "interval": 4000,
-      "chance": 0.8,
-      "speedChange": 440,
-      "duration": 6000,
-      "areaEffect": "redshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 2000
-    },
-    {
-      "name": "fire",
-      "interval": 3000,
-      "chance": 0.35,
-      "min": 700,
-      "max": 1200,
-      "range": 7,
-      "radius": 7,
-      "target": true,
-      "shootEffect": "fire",
-      "areaEffect": "firearea"
-    },
-    {
-      "name": "melee",
-      "interval": 1800,
-      "chance": 0.4,
-      "min": 250,
-      "max": 400,
-      "range": 7,
-      "radius": 5,
-      "target": false,
-      "areaEffect": "blackspark"
-    },
-    {
-      "name": "energy",
-      "interval": 3000,
-      "chance": 0.3,
-      "min": 300,
-      "max": 1000,
-      "length": 8,
-      "spread": 0,
-      "areaEffect": "energy"
-    },
-    {
-      "name": "physical",
-      "interval": 2500,
-      "chance": 0.2,
-      "min": 200,
-      "max": 480,
-      "range": 7,
-      "radius": 5,
-      "target": false,
-      "areaEffect": "greenshimmer"
-    },
-    {
-      "name": "physical",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 250,
-      "max": 500,
-      "range": 7,
-      "radius": 13,
-      "target": false,
-      "areaEffect": "rednote"
-    },
-    {
-      "name": "physical",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 200,
-      "max": 450,
-      "radius": 14,
-      "target": false,
-      "areaEffect": "bluebubble"
-    },
-    {
-      "name": "melee",
-      "interval": 3000,
-      "chance": 0.15,
-      "min": 100,
-      "max": 200,
-      "range": 7,
-      "radius": 3,
-      "target": false,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "elements": {
-    "physical": 50,
-    "energy": 80,
-    "ice": -5,
-    "holy": -5,
-    "death": 80
-  },
-  "immunities": {
-    "fire": true,
-    "earth": true,
-    "paralyze": true,
-    "invisible": true
-  },
-  "summons": [
-    {
-      "name": "Demon",
-      "interval": 4000,
-      "chance": 0.33,
-      "maxSummons": 6
-    }
-  ],
-  "sayings": {
-    "texts": [
-      "I AM MORGAROTH, LORD OF THE TRIANGLE... AND YOU ARE LOST!",
-      "MY SEED IS FEAR AND MY HARVEST ARE YOUR SOULS!",
-      "ZATHROTH! LOOK AT THE DESTRUCTION I AM CAUSING IN YOUR NAME!",
-      "THE TRIANGLE OF TERROR WILL RISE!"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 3000,
+            "chance": 0.35,
+            "min": 300,
+            "max": 800,
+            "areaEffect": "blueshimmer"
+        },
+        {
+            "name": "speed",
+            "interval": 4000,
+            "chance": 0.8,
+            "speedChange": 440,
+            "duration": 6000,
+            "areaEffect": "redshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.3
-  },
-  "loot": [
-    {
-      "id": 6500,
-      "probability": 0.95455,
-      "name": "demonic essence"
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 2000
+        },
+        {
+            "name": "fire",
+            "interval": 3000,
+            "chance": 0.35,
+            "min": 700,
+            "max": 1200,
+            "range": 7,
+            "radius": 7,
+            "target": true,
+            "shootEffect": "fire",
+            "areaEffect": "firearea"
+        },
+        {
+            "name": "melee",
+            "interval": 1800,
+            "chance": 0.4,
+            "min": 250,
+            "max": 400,
+            "range": 7,
+            "radius": 5,
+            "target": false,
+            "areaEffect": "blackspark"
+        },
+        {
+            "name": "energy",
+            "interval": 3000,
+            "chance": 0.3,
+            "min": 300,
+            "max": 1000,
+            "length": 8,
+            "spread": 0,
+            "areaEffect": "energy"
+        },
+        {
+            "name": "physical",
+            "interval": 2500,
+            "chance": 0.2,
+            "min": 200,
+            "max": 480,
+            "range": 7,
+            "radius": 5,
+            "target": false,
+            "areaEffect": "greenshimmer"
+        },
+        {
+            "name": "physical",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 250,
+            "max": 500,
+            "range": 7,
+            "radius": 13,
+            "target": false,
+            "areaEffect": "rednote"
+        },
+        {
+            "name": "physical",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 200,
+            "max": 450,
+            "radius": 14,
+            "target": false,
+            "areaEffect": "bluebubble"
+        },
+        {
+            "name": "melee",
+            "interval": 3000,
+            "chance": 0.15,
+            "min": 100,
+            "max": 200,
+            "range": 7,
+            "radius": 3,
+            "target": false,
+            "areaEffect": "blueshimmer"
+        }
+    ],
+    "elements": {
+        "physical": 50,
+        "energy": 80,
+        "ice": -5,
+        "holy": -5,
+        "death": 80
     },
-    {
-      "id": 2152,
-      "probability": 0.95455,
-      "name": "platinum coin",
-      "min": 1,
-      "max": 74
+    "immunities": {
+        "fire": true,
+        "earth": true,
+        "paralyze": true,
+        "invisible": true
     },
-    {
-      "id": 2155,
-      "probability": 0.5,
-      "name": "green gem"
+    "summons": [
+        {
+            "name": "Demon",
+            "interval": 4000,
+            "chance": 0.33,
+            "maxSummons": 6
+        }
+    ],
+    "sayings": {
+        "texts": [
+            "I AM MORGAROTH, LORD OF THE TRIANGLE... AND YOU ARE LOST!",
+            "MY SEED IS FEAR AND MY HARVEST ARE YOUR SOULS!",
+            "ZATHROTH! LOOK AT THE DESTRUCTION I AM CAUSING IN YOUR NAME!",
+            "THE TRIANGLE OF TERROR WILL RISE!"
+        ],
+        "slowness": 5,
+        "chance": 0.3
     },
-    {
-      "id": 7590,
-      "probability": 0.45455,
-      "name": "great mana potion"
-    },
-    {
-      "id": 2150,
-      "probability": 0.36364,
-      "name": "small amethyst",
-      "min": 1,
-      "max": 18
-    },
-    {
-      "id": 8852,
-      "probability": 0.36364,
-      "name": "the devileye"
-    },
-    {
-      "id": 1986,
-      "probability": 0.27273,
-      "name": "red tome"
-    },
-    {
-      "id": 2149,
-      "probability": 0.27273,
-      "name": "small emerald",
-      "min": 1,
-      "max": 6
-    },
-    {
-      "id": 2146,
-      "probability": 0.27273,
-      "name": "small sapphire",
-      "min": 1,
-      "max": 8
-    },
-    {
-      "id": 8473,
-      "probability": 0.27273,
-      "name": "ultimate health potion"
-    },
-    {
-      "id": 8850,
-      "probability": 0.22727,
-      "name": "chain bolter"
-    },
-    {
-      "id": 8865,
-      "probability": 0.22727,
-      "name": "dark lord's cape"
-    },
-    {
-      "id": 6300,
-      "probability": 0.22727,
-      "name": "death ring"
-    },
-    {
-      "id": 5954,
-      "probability": 0.22727,
-      "name": "demon horn",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 2214,
-      "probability": 0.22727,
-      "name": "ring of healing"
-    },
-    {
-      "id": 2151,
-      "probability": 0.22727,
-      "name": "talon",
-      "min": 1,
-      "max": 7
-    },
-    {
-      "id": 8853,
-      "probability": 0.22727,
-      "name": "the ironworker"
-    },
-    {
-      "id": 2387,
-      "probability": 0.18182,
-      "name": "double axe"
-    },
-    {
-      "id": 8881,
-      "probability": 0.18182,
-      "name": "fireborn giant armor"
-    },
-    {
-      "id": 8472,
-      "probability": 0.18182,
-      "name": "great spirit potion"
-    },
-    {
-      "id": 2472,
-      "probability": 0.18182,
-      "name": "magic plate armor"
-    },
-    {
-      "id": 2164,
-      "probability": 0.18182,
-      "name": "might ring"
-    },
-    {
-      "id": 2178,
-      "probability": 0.18182,
-      "name": "mind stone"
-    },
-    {
-      "id": 8851,
-      "probability": 0.18182,
-      "name": "royal crossbow"
-    },
-    {
-      "id": 2165,
-      "probability": 0.18182,
-      "name": "stealth ring"
-    },
-    {
-      "id": 2112,
-      "probability": 0.18182,
-      "name": "teddy bear"
-    },
-    {
-      "id": 7368,
-      "probability": 0.13636,
-      "name": "assassin star",
-      "min": 1,
-      "max": 28
-    },
-    {
-      "id": 2144,
-      "probability": 0.13636,
-      "name": "black pearl",
-      "min": 1,
-      "max": 15
-    },
-    {
-      "id": 7431,
-      "probability": 0.13636,
-      "name": "demonbone"
-    },
-    {
-      "id": 2033,
-      "probability": 0.13636,
-      "name": "golden mug"
-    },
-    {
-      "id": 5943,
-      "probability": 0.13636,
-      "name": "morgaroth's heart"
-    },
-    {
-      "id": 8928,
-      "probability": 0.13636,
-      "name": "obsidian truncheon"
-    },
-    {
-      "id": 8929,
-      "probability": 0.13636,
-      "name": "the stomper"
-    },
-    {
-      "id": 2143,
-      "probability": 0.13636,
-      "name": "white pearl",
-      "min": 1,
-      "max": 13
-    },
-    {
-      "id": 2158,
-      "probability": 0.09091,
-      "name": "blue gem"
-    },
-    {
-      "id": 2520,
-      "probability": 0.09091,
-      "name": "demon shield"
-    },
-    {
-      "id": 2167,
-      "probability": 0.09091,
-      "name": "energy ring"
-    },
-    {
-      "id": 2393,
-      "probability": 0.09091,
-      "name": "giant sword"
-    },
-    {
-      "id": 2179,
-      "probability": 0.09091,
-      "name": "gold ring"
-    },
-    {
-      "id": 2470,
-      "probability": 0.09091,
-      "name": "golden legs"
-    },
-    {
-      "id": 2177,
-      "probability": 0.09091,
-      "name": "life crystal"
-    },
-    {
-      "id": 2162,
-      "probability": 0.09091,
-      "name": "magic light wand"
-    },
-    {
-      "id": 2176,
-      "probability": 0.09091,
-      "name": "orb"
-    },
-    {
-      "id": 2645,
-      "probability": 0.09091,
-      "name": "steel boots"
-    },
-    {
-      "id": 2174,
-      "probability": 0.09091,
-      "name": "strange symbol"
-    },
-    {
-      "id": 2421,
-      "probability": 0.09091,
-      "name": "thunder hammer"
-    },
-    {
-      "id": 2124,
-      "probability": 0.04545,
-      "name": "crystal ring"
-    },
-    {
-      "id": 8867,
-      "probability": 0.04545,
-      "name": "dragon robe"
-    },
-    {
-      "id": 2432,
-      "probability": 0.04545,
-      "name": "fire axe"
-    },
-    {
-      "id": 7591,
-      "probability": 0.04545,
-      "name": "great health potion"
-    },
-    {
-      "id": 2514,
-      "probability": 0.04545,
-      "name": "mastermind shield"
-    },
-    {
-      "id": 8886,
-      "probability": 0.04545,
-      "name": "molten plate"
-    },
-    {
-      "id": 2145,
-      "probability": 0.04545,
-      "name": "small diamond",
-      "min": 1,
-      "max": 5
+    "loot": [
+        {
+            "id": 6500,
+            "probability": 0.95455,
+            "name": "demonic essence"
+        },
+        {
+            "id": 2152,
+            "probability": 0.95455,
+            "name": "platinum coin",
+            "min": 1,
+            "max": 74
+        },
+        {
+            "id": 2155,
+            "probability": 0.5,
+            "name": "green gem"
+        },
+        {
+            "id": 7590,
+            "probability": 0.45455,
+            "name": "great mana potion"
+        },
+        {
+            "id": 2150,
+            "probability": 0.36364,
+            "name": "small amethyst",
+            "min": 1,
+            "max": 18
+        },
+        {
+            "id": 8852,
+            "probability": 0.36364,
+            "name": "the devileye"
+        },
+        {
+            "id": 1986,
+            "probability": 0.27273,
+            "name": "red tome"
+        },
+        {
+            "id": 2149,
+            "probability": 0.27273,
+            "name": "small emerald",
+            "min": 1,
+            "max": 6
+        },
+        {
+            "id": 2146,
+            "probability": 0.27273,
+            "name": "small sapphire",
+            "min": 1,
+            "max": 8
+        },
+        {
+            "id": 8473,
+            "probability": 0.27273,
+            "name": "ultimate health potion"
+        },
+        {
+            "id": 8850,
+            "probability": 0.22727,
+            "name": "chain bolter"
+        },
+        {
+            "id": 8865,
+            "probability": 0.22727,
+            "name": "dark lord's cape"
+        },
+        {
+            "id": 6300,
+            "probability": 0.22727,
+            "name": "death ring"
+        },
+        {
+            "id": 5954,
+            "probability": 0.22727,
+            "name": "demon horn",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 2214,
+            "probability": 0.22727,
+            "name": "ring of healing"
+        },
+        {
+            "id": 2151,
+            "probability": 0.22727,
+            "name": "talon",
+            "min": 1,
+            "max": 7
+        },
+        {
+            "id": 8853,
+            "probability": 0.22727,
+            "name": "the ironworker"
+        },
+        {
+            "id": 2387,
+            "probability": 0.18182,
+            "name": "double axe"
+        },
+        {
+            "id": 8881,
+            "probability": 0.18182,
+            "name": "fireborn giant armor"
+        },
+        {
+            "id": 8472,
+            "probability": 0.18182,
+            "name": "great spirit potion"
+        },
+        {
+            "id": 2472,
+            "probability": 0.18182,
+            "name": "magic plate armor"
+        },
+        {
+            "id": 2164,
+            "probability": 0.18182,
+            "name": "might ring"
+        },
+        {
+            "id": 2178,
+            "probability": 0.18182,
+            "name": "mind stone"
+        },
+        {
+            "id": 8851,
+            "probability": 0.18182,
+            "name": "royal crossbow"
+        },
+        {
+            "id": 2165,
+            "probability": 0.18182,
+            "name": "stealth ring"
+        },
+        {
+            "id": 2112,
+            "probability": 0.18182,
+            "name": "teddy bear"
+        },
+        {
+            "id": 7368,
+            "probability": 0.13636,
+            "name": "assassin star",
+            "min": 1,
+            "max": 28
+        },
+        {
+            "id": 2144,
+            "probability": 0.13636,
+            "name": "black pearl",
+            "min": 1,
+            "max": 15
+        },
+        {
+            "id": 7431,
+            "probability": 0.13636,
+            "name": "demonbone"
+        },
+        {
+            "id": 2033,
+            "probability": 0.13636,
+            "name": "golden mug"
+        },
+        {
+            "id": 5943,
+            "probability": 0.13636,
+            "name": "morgaroth's heart"
+        },
+        {
+            "id": 8928,
+            "probability": 0.13636,
+            "name": "obsidian truncheon"
+        },
+        {
+            "id": 8929,
+            "probability": 0.13636,
+            "name": "the stomper"
+        },
+        {
+            "id": 2143,
+            "probability": 0.13636,
+            "name": "white pearl",
+            "min": 1,
+            "max": 13
+        },
+        {
+            "id": 2158,
+            "probability": 0.09091,
+            "name": "blue gem"
+        },
+        {
+            "id": 2520,
+            "probability": 0.09091,
+            "name": "demon shield"
+        },
+        {
+            "id": 2167,
+            "probability": 0.09091,
+            "name": "energy ring"
+        },
+        {
+            "id": 2393,
+            "probability": 0.09091,
+            "name": "giant sword"
+        },
+        {
+            "id": 2179,
+            "probability": 0.09091,
+            "name": "gold ring"
+        },
+        {
+            "id": 2470,
+            "probability": 0.09091,
+            "name": "golden legs"
+        },
+        {
+            "id": 2177,
+            "probability": 0.09091,
+            "name": "life crystal"
+        },
+        {
+            "id": 2162,
+            "probability": 0.09091,
+            "name": "magic light wand"
+        },
+        {
+            "id": 2176,
+            "probability": 0.09091,
+            "name": "orb"
+        },
+        {
+            "id": 2645,
+            "probability": 0.09091,
+            "name": "steel boots"
+        },
+        {
+            "id": 2174,
+            "probability": 0.09091,
+            "name": "strange symbol"
+        },
+        {
+            "id": 2421,
+            "probability": 0.09091,
+            "name": "thunder hammer"
+        },
+        {
+            "id": 2124,
+            "probability": 0.04545,
+            "name": "crystal ring"
+        },
+        {
+            "id": 8867,
+            "probability": 0.04545,
+            "name": "dragon robe"
+        },
+        {
+            "id": 2432,
+            "probability": 0.04545,
+            "name": "fire axe"
+        },
+        {
+            "id": 7591,
+            "probability": 0.04545,
+            "name": "great health potion"
+        },
+        {
+            "id": 2514,
+            "probability": 0.04545,
+            "name": "mastermind shield"
+        },
+        {
+            "id": 8886,
+            "probability": 0.04545,
+            "name": "molten plate"
+        },
+        {
+            "id": 2145,
+            "probability": 0.04545,
+            "name": "small diamond",
+            "min": 1,
+            "max": 5
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

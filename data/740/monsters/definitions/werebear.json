@@ -1,211 +1,211 @@
 {
-  "creatureStatistics": {
-    "name": "Werebear",
-    "health": 2400,
-    "maxHealth": 2400,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 220,
-    "attack": 400,
-    "attackSpeed": 2000,
-    "defense": 30,
-    "outfit": {
-      "id": 720
+    "creatureStatistics": {
+        "name": "Werebear",
+        "health": 2400,
+        "maxHealth": 2400,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 110,
+        "attack": 400,
+        "attackSpeed": 2000,
+        "defense": 30,
+        "outfit": {
+            "id": 720
+        },
+        "armor": 30
     },
-    "armor": 30
-  },
-  "experience": 2100,
-  "corpse": 2849,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.25,
-      "min": 50,
-      "max": 100,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 400
+    "experience": 2100,
+    "corpse": 2849,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "speed",
-      "interval": 4000,
-      "chance": 0.2,
-      "min": 0,
-      "max": 0,
-      "radius": 7,
-      "target": true,
-      "speedChange": -100,
-      "areaEffect": "poff"
-    },
-    {
-      "name": "lifedrain",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 65,
-      "max": 335,
-      "radius": 4,
-      "target": false,
-      "areaEffect": "greenshimmer"
-    }
-  ],
-  "elements": {
-    "physical": 5,
-    "energy": 15,
-    "earth": 50,
-    "fire": -5,
-    "ice": 10,
-    "holy": -5,
-    "death": 45
-  },
-  "immunities": {
-    "paralyze": true,
-    "invisible": true,
-    "drunk": true
-  },
-  "sayings": {
-    "texts": [
-      "GROOOWL",
-      "GRRR"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.25,
+            "min": 50,
+            "max": 100,
+            "areaEffect": "blueshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2152,
-      "probability": 1,
-      "name": "platinum coin",
-      "min": 1,
-      "max": 3
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 400
+        },
+        {
+            "name": "speed",
+            "interval": 4000,
+            "chance": 0.2,
+            "min": 0,
+            "max": 0,
+            "radius": 7,
+            "target": true,
+            "speedChange": -100,
+            "areaEffect": "poff"
+        },
+        {
+            "name": "lifedrain",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 65,
+            "max": 335,
+            "radius": 4,
+            "target": false,
+            "areaEffect": "greenshimmer"
+        }
+    ],
+    "elements": {
+        "physical": 5,
+        "energy": 15,
+        "earth": 50,
+        "fire": -5,
+        "ice": 10,
+        "holy": -5,
+        "death": 45
     },
-    {
-      "id": 2148,
-      "probability": 0.80752,
-      "name": "gold coin",
-      "min": 1,
-      "max": 100
+    "immunities": {
+        "paralyze": true,
+        "invisible": true,
+        "drunk": true
     },
-    {
-      "id": 24713,
-      "probability": 0.14678,
-      "name": "werebear fur"
+    "sayings": {
+        "texts": [
+            "GROOOWL",
+            "GRRR"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 24712,
-      "probability": 0.1417,
-      "name": "werebear skull"
-    },
-    {
-      "id": 2671,
-      "probability": 0.1207,
-      "name": "ham"
-    },
-    {
-      "id": 7591,
-      "probability": 0.05193,
-      "name": "great health potion"
-    },
-    {
-      "id": 5896,
-      "probability": 0.03323,
-      "name": "bear paw"
-    },
-    {
-      "id": 5902,
-      "probability": 0.027,
-      "name": "honeycomb"
-    },
-    {
-      "id": 8473,
-      "probability": 0.01892,
-      "name": "ultimate health potion"
-    },
-    {
-      "id": 7759,
-      "probability": 0.01431,
-      "name": "small enchanted sapphire",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 24716,
-      "probability": 0.01246,
-      "name": "werewolf amulet"
-    },
-    {
-      "id": 2197,
-      "probability": 0.01223,
-      "name": "stone skin amulet"
-    },
-    {
-      "id": 7432,
-      "probability": 0.01062,
-      "name": "furry club"
-    },
-    {
-      "id": 24739,
-      "probability": 0.00877,
-      "name": "moonlight crystals"
-    },
-    {
-      "id": 7439,
-      "probability": 0.00854,
-      "name": "berserk potion"
-    },
-    {
-      "id": 24741,
-      "probability": 0.00785,
-      "name": "fur armor"
-    },
-    {
-      "id": 7383,
-      "probability": 0.00715,
-      "name": "relic sword"
-    },
-    {
-      "id": 7452,
-      "probability": 0.006,
-      "name": "spiked squelcher"
-    },
-    {
-      "id": 2169,
-      "probability": 0.00531,
-      "name": "time ring"
-    },
-    {
-      "id": 24759,
-      "probability": 0.00162,
-      "name": "werebear trophy"
-    },
-    {
-      "id": 7419,
-      "probability": 0.00115,
-      "name": "dreaded cleaver"
+    "loot": [
+        {
+            "id": 2152,
+            "probability": 1,
+            "name": "platinum coin",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 2148,
+            "probability": 0.80752,
+            "name": "gold coin",
+            "min": 1,
+            "max": 100
+        },
+        {
+            "id": 24713,
+            "probability": 0.14678,
+            "name": "werebear fur"
+        },
+        {
+            "id": 24712,
+            "probability": 0.1417,
+            "name": "werebear skull"
+        },
+        {
+            "id": 2671,
+            "probability": 0.1207,
+            "name": "ham"
+        },
+        {
+            "id": 7591,
+            "probability": 0.05193,
+            "name": "great health potion"
+        },
+        {
+            "id": 5896,
+            "probability": 0.03323,
+            "name": "bear paw"
+        },
+        {
+            "id": 5902,
+            "probability": 0.027,
+            "name": "honeycomb"
+        },
+        {
+            "id": 8473,
+            "probability": 0.01892,
+            "name": "ultimate health potion"
+        },
+        {
+            "id": 7759,
+            "probability": 0.01431,
+            "name": "small enchanted sapphire",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 24716,
+            "probability": 0.01246,
+            "name": "werewolf amulet"
+        },
+        {
+            "id": 2197,
+            "probability": 0.01223,
+            "name": "stone skin amulet"
+        },
+        {
+            "id": 7432,
+            "probability": 0.01062,
+            "name": "furry club"
+        },
+        {
+            "id": 24739,
+            "probability": 0.00877,
+            "name": "moonlight crystals"
+        },
+        {
+            "id": 7439,
+            "probability": 0.00854,
+            "name": "berserk potion"
+        },
+        {
+            "id": 24741,
+            "probability": 0.00785,
+            "name": "fur armor"
+        },
+        {
+            "id": 7383,
+            "probability": 0.00715,
+            "name": "relic sword"
+        },
+        {
+            "id": 7452,
+            "probability": 0.006,
+            "name": "spiked squelcher"
+        },
+        {
+            "id": 2169,
+            "probability": 0.00531,
+            "name": "time ring"
+        },
+        {
+            "id": 24759,
+            "probability": 0.00162,
+            "name": "werebear trophy"
+        },
+        {
+            "id": 7419,
+            "probability": 0.00115,
+            "name": "dreaded cleaver"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

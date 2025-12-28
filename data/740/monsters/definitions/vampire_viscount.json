@@ -1,174 +1,174 @@
 {
-  "creatureStatistics": {
-    "name": "Vampire Viscount",
-    "health": 1200,
-    "maxHealth": 1200,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 220,
-    "attack": 150,
-    "attackSpeed": 2000,
-    "defense": 42,
-    "outfit": {
-      "id": 555
+    "creatureStatistics": {
+        "name": "Vampire Viscount",
+        "health": 1200,
+        "maxHealth": 1200,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 110,
+        "attack": 150,
+        "attackSpeed": 2000,
+        "defense": 42,
+        "outfit": {
+            "id": 555
+        },
+        "armor": 42
     },
-    "armor": 42
-  },
-  "experience": 800,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "outfit",
-      "interval": 2000,
-      "chance": 0.1,
-      "duration": 4000
+    "experience": 800,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.15,
-      "speedChange": 300,
-      "duration": 4000,
-      "areaEffect": "redshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 150
-    },
-    {
-      "name": "death",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 50,
-      "max": 100,
-      "range": 6,
-      "radius": 3,
-      "target": true,
-      "shootEffect": "death",
-      "areaEffect": "mortarea"
-    },
-    {
-      "name": "bleedcondition",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 320,
-      "max": 560,
-      "radius": 6,
-      "areaEffect": "bats"
-    }
-  ],
-  "elements": {
-    "holy": -5,
-    "fire": -5,
-    "physical": 5,
-    "ice": 5
-  },
-  "immunities": {
-    "invisible": true,
-    "paralyze": true,
-    "death": true,
-    "earth": true
-  },
-  "sayings": {
-    "texts": [
-      "Prepare to BLEED!",
-      "Don't struggle. We don't want to waste a drop of blood now, do we?",
-      "Ah, refreshments have arrived!"
+    "defenseSpells": [
+        {
+            "name": "outfit",
+            "interval": 2000,
+            "chance": 0.1,
+            "duration": 4000
+        },
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.15,
+            "speedChange": 300,
+            "duration": 4000,
+            "areaEffect": "redshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.84797,
-      "name": "gold coin",
-      "min": 1,
-      "max": 50
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 150
+        },
+        {
+            "name": "death",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 50,
+            "max": 100,
+            "range": 6,
+            "radius": 3,
+            "target": true,
+            "shootEffect": "death",
+            "areaEffect": "mortarea"
+        },
+        {
+            "name": "bleedcondition",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 320,
+            "max": 560,
+            "radius": 6,
+            "areaEffect": "bats"
+        }
+    ],
+    "elements": {
+        "holy": -5,
+        "fire": -5,
+        "physical": 5,
+        "ice": 5
     },
-    {
-      "id": 10602,
-      "probability": 0.07712,
-      "name": "vampire teeth"
+    "immunities": {
+        "invisible": true,
+        "paralyze": true,
+        "death": true,
+        "earth": true
     },
-    {
-      "id": 7589,
-      "probability": 0.07447,
-      "name": "strong mana potion"
+    "sayings": {
+        "texts": [
+            "Prepare to BLEED!",
+            "Don't struggle. We don't want to waste a drop of blood now, do we?",
+            "Ah, refreshments have arrived!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 7588,
-      "probability": 0.06103,
-      "name": "strong health potion"
-    },
-    {
-      "id": 21241,
-      "probability": 0.05321,
-      "name": "tooth file"
-    },
-    {
-      "id": 21244,
-      "probability": 0.03922,
-      "name": "vampire's cape chain"
-    },
-    {
-      "id": 2147,
-      "probability": 0.03338,
-      "name": "small ruby",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 12405,
-      "probability": 0.0293,
-      "name": "blood preservation"
-    },
-    {
-      "id": 2144,
-      "probability": 0.02666,
-      "name": "black pearl"
-    },
-    {
-      "id": 2396,
-      "probability": 0.00815,
-      "name": "ice rapier"
-    },
-    {
-      "id": 2156,
-      "probability": 0.00364,
-      "name": "red gem"
-    },
-    {
-      "id": 5911,
-      "probability": 0.00275,
-      "name": "red piece of cloth"
-    },
-    {
-      "id": 2534,
-      "probability": 0.00209,
-      "name": "vampire shield"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.84797,
+            "name": "gold coin",
+            "min": 1,
+            "max": 50
+        },
+        {
+            "id": 10602,
+            "probability": 0.07712,
+            "name": "vampire teeth"
+        },
+        {
+            "id": 7589,
+            "probability": 0.07447,
+            "name": "strong mana potion"
+        },
+        {
+            "id": 7588,
+            "probability": 0.06103,
+            "name": "strong health potion"
+        },
+        {
+            "id": 21241,
+            "probability": 0.05321,
+            "name": "tooth file"
+        },
+        {
+            "id": 21244,
+            "probability": 0.03922,
+            "name": "vampire's cape chain"
+        },
+        {
+            "id": 2147,
+            "probability": 0.03338,
+            "name": "small ruby",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 12405,
+            "probability": 0.0293,
+            "name": "blood preservation"
+        },
+        {
+            "id": 2144,
+            "probability": 0.02666,
+            "name": "black pearl"
+        },
+        {
+            "id": 2396,
+            "probability": 0.00815,
+            "name": "ice rapier"
+        },
+        {
+            "id": 2156,
+            "probability": 0.00364,
+            "name": "red gem"
+        },
+        {
+            "id": 5911,
+            "probability": 0.00275,
+            "name": "red piece of cloth"
+        },
+        {
+            "id": 2534,
+            "probability": 0.00209,
+            "name": "vampire shield"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

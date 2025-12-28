@@ -1,446 +1,446 @@
 {
-  "creatureStatistics": {
-    "name": "Orshabaal",
-    "health": 22500,
-    "maxHealth": 22500,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 380,
-    "attack": 1990,
-    "attackSpeed": 2000,
-    "defense": 90,
-    "outfit": {
-      "id": 201
+    "creatureStatistics": {
+        "name": "Orshabaal",
+        "health": 22500,
+        "maxHealth": 22500,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 270,
+        "attack": 1990,
+        "attackSpeed": 2000,
+        "defense": 90,
+        "outfit": {
+            "id": 201
+        },
+        "armor": 90
     },
-    "armor": 90
-  },
-  "experience": 10000,
-  "corpse": 2813,
-  "fluidType": 0,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 2500,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 1000,
-      "chance": 0.09,
-      "min": 1500,
-      "max": 2500,
-      "areaEffect": "blueshimmer"
+    "experience": 10000,
+    "corpse": 2813,
+    "fluidType": 0,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 2500,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "healing",
-      "interval": 1000,
-      "chance": 0.17,
-      "min": 600,
-      "max": 1000,
-      "areaEffect": "blueshimmer"
-    },
-    {
-      "name": "speed",
-      "interval": 1000,
-      "chance": 0.05,
-      "speedChange": 1140,
-      "duration": 7000,
-      "areaEffect": "redshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 1990
-    },
-    {
-      "name": "manadrain",
-      "interval": 1000,
-      "chance": 0.13,
-      "min": 300,
-      "max": 600,
-      "range": 7
-    },
-    {
-      "name": "manadrain",
-      "interval": 1000,
-      "chance": 0.06,
-      "min": 150,
-      "max": 350,
-      "radius": 5,
-      "target": false,
-      "areaEffect": "poison"
-    },
-    {
-      "name": "effect",
-      "interval": 1000,
-      "chance": 0.06,
-      "min": 0,
-      "max": 0,
-      "radius": 5,
-      "target": false,
-      "areaEffect": "blackspark"
-    },
-    {
-      "name": "fire",
-      "interval": 1000,
-      "chance": 0.34,
-      "min": 310,
-      "max": 600,
-      "range": 7,
-      "radius": 7,
-      "target": true,
-      "shootEffect": "fire",
-      "areaEffect": "firearea"
-    },
-    {
-      "name": "firefield",
-      "interval": 1000,
-      "chance": 0.1,
-      "min": 0,
-      "max": 0,
-      "range": 7,
-      "radius": 4,
-      "target": true,
-      "shootEffect": "fire"
-    },
-    {
-      "name": "energy",
-      "interval": 1000,
-      "chance": 0.15,
-      "min": 500,
-      "max": 850,
-      "length": 8,
-      "spread": 0,
-      "areaEffect": "energy"
-    }
-  ],
-  "elements": {
-    "physical": 20,
-    "energy": 80,
-    "ice": -1,
-    "holy": -1,
-    "death": 50
-  },
-  "immunities": {
-    "fire": true,
-    "earth": true,
-    "lifedrain": true,
-    "paralyze": true,
-    "invisible": true
-  },
-  "summons": [
-    {
-      "name": "demon",
-      "interval": 1000,
-      "chance": 0.1,
-      "maxSummons": 4
-    }
-  ],
-  "sayings": {
-    "texts": [
-      "PRAISED BE MY MASTERS, THE RUTHLESS SEVEN!",
-      "YOU ARE DOOMED!",
-      "ORSHABAAL IS BACK!",
-      "Be prepared for the day my masters will come for you!",
-      "SOULS FOR ORSHABAAL!"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 1000,
+            "chance": 0.09,
+            "min": 1500,
+            "max": 2500,
+            "areaEffect": "blueshimmer"
+        },
+        {
+            "name": "healing",
+            "interval": 1000,
+            "chance": 0.17,
+            "min": 600,
+            "max": 1000,
+            "areaEffect": "blueshimmer"
+        },
+        {
+            "name": "speed",
+            "interval": 1000,
+            "chance": 0.05,
+            "speedChange": 1140,
+            "duration": 7000,
+            "areaEffect": "redshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2152,
-      "probability": 1,
-      "name": "platinum coin",
-      "min": 1,
-      "max": 72
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 1990
+        },
+        {
+            "name": "manadrain",
+            "interval": 1000,
+            "chance": 0.13,
+            "min": 300,
+            "max": 600,
+            "range": 7
+        },
+        {
+            "name": "manadrain",
+            "interval": 1000,
+            "chance": 0.06,
+            "min": 150,
+            "max": 350,
+            "radius": 5,
+            "target": false,
+            "areaEffect": "poison"
+        },
+        {
+            "name": "effect",
+            "interval": 1000,
+            "chance": 0.06,
+            "min": 0,
+            "max": 0,
+            "radius": 5,
+            "target": false,
+            "areaEffect": "blackspark"
+        },
+        {
+            "name": "fire",
+            "interval": 1000,
+            "chance": 0.34,
+            "min": 310,
+            "max": 600,
+            "range": 7,
+            "radius": 7,
+            "target": true,
+            "shootEffect": "fire",
+            "areaEffect": "firearea"
+        },
+        {
+            "name": "firefield",
+            "interval": 1000,
+            "chance": 0.1,
+            "min": 0,
+            "max": 0,
+            "range": 7,
+            "radius": 4,
+            "target": true,
+            "shootEffect": "fire"
+        },
+        {
+            "name": "energy",
+            "interval": 1000,
+            "chance": 0.15,
+            "min": 500,
+            "max": 850,
+            "length": 8,
+            "spread": 0,
+            "areaEffect": "energy"
+        }
+    ],
+    "elements": {
+        "physical": 20,
+        "energy": 80,
+        "ice": -1,
+        "holy": -1,
+        "death": 50
     },
-    {
-      "id": 6500,
-      "probability": 0.94444,
-      "name": "demonic essence"
+    "immunities": {
+        "fire": true,
+        "earth": true,
+        "lifedrain": true,
+        "paralyze": true,
+        "invisible": true
     },
-    {
-      "id": 6300,
-      "probability": 0.55556,
-      "name": "death ring"
+    "summons": [
+        {
+            "name": "demon",
+            "interval": 1000,
+            "chance": 0.1,
+            "maxSummons": 4
+        }
+    ],
+    "sayings": {
+        "texts": [
+            "PRAISED BE MY MASTERS, THE RUTHLESS SEVEN!",
+            "YOU ARE DOOMED!",
+            "ORSHABAAL IS BACK!",
+            "Be prepared for the day my masters will come for you!",
+            "SOULS FOR ORSHABAAL!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 5954,
-      "probability": 0.5,
-      "name": "demon horn",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 7590,
-      "probability": 0.33333,
-      "name": "great mana potion"
-    },
-    {
-      "id": 2146,
-      "probability": 0.33333,
-      "name": "small sapphire",
-      "min": 1,
-      "max": 8
-    },
-    {
-      "id": 2143,
-      "probability": 0.33333,
-      "name": "white pearl",
-      "min": 1,
-      "max": 15
-    },
-    {
-      "id": 2144,
-      "probability": 0.27778,
-      "name": "black pearl",
-      "min": 1,
-      "max": 15
-    },
-    {
-      "id": 2462,
-      "probability": 0.27778,
-      "name": "devil helmet"
-    },
-    {
-      "id": 7591,
-      "probability": 0.27778,
-      "name": "great health potion",
-      "min": 1,
-      "max": 5
-    },
-    {
-      "id": 2214,
-      "probability": 0.27778,
-      "name": "ring of healing"
-    },
-    {
-      "id": 8473,
-      "probability": 0.27778,
-      "name": "ultimate health potion"
-    },
-    {
-      "id": 2158,
-      "probability": 0.22222,
-      "name": "blue gem"
-    },
-    {
-      "id": 2520,
-      "probability": 0.22222,
-      "name": "demon shield"
-    },
-    {
-      "id": 2393,
-      "probability": 0.22222,
-      "name": "giant sword"
-    },
-    {
-      "id": 2178,
-      "probability": 0.22222,
-      "name": "mind stone"
-    },
-    {
-      "id": 2145,
-      "probability": 0.22222,
-      "name": "small diamond",
-      "min": 1,
-      "max": 5
-    },
-    {
-      "id": 2149,
-      "probability": 0.22222,
-      "name": "small emerald",
-      "min": 1,
-      "max": 7
-    },
-    {
-      "id": 7368,
-      "probability": 0.16667,
-      "name": "assassin star",
-      "min": 1,
-      "max": 42
-    },
-    {
-      "id": 2195,
-      "probability": 0.16667,
-      "name": "boots of haste"
-    },
-    {
-      "id": 2125,
-      "probability": 0.16667,
-      "name": "crystal necklace"
-    },
-    {
-      "id": 2200,
-      "probability": 0.16667,
-      "name": "protection amulet"
-    },
-    {
-      "id": 1982,
-      "probability": 0.16667,
-      "name": "purple tome"
-    },
-    {
-      "id": 2170,
-      "probability": 0.16667,
-      "name": "silver amulet"
-    },
-    {
-      "id": 2150,
-      "probability": 0.16667,
-      "name": "small amethyst",
-      "min": 1,
-      "max": 17
-    },
-    {
-      "id": 2174,
-      "probability": 0.16667,
-      "name": "strange symbol"
-    },
-    {
-      "id": 2151,
-      "probability": 0.16667,
-      "name": "talon",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 2377,
-      "probability": 0.16667,
-      "name": "two handed sword"
-    },
-    {
-      "id": 2432,
-      "probability": 0.11111,
-      "name": "fire axe"
-    },
-    {
-      "id": 2470,
-      "probability": 0.11111,
-      "name": "golden legs"
-    },
-    {
-      "id": 2033,
-      "probability": 0.11111,
-      "name": "golden mug"
-    },
-    {
-      "id": 8472,
-      "probability": 0.11111,
-      "name": "great spirit potion"
-    },
-    {
-      "id": 2177,
-      "probability": 0.11111,
-      "name": "life crystal"
-    },
-    {
-      "id": 2514,
-      "probability": 0.11111,
-      "name": "mastermind shield"
-    },
-    {
-      "id": 2176,
-      "probability": 0.11111,
-      "name": "orb"
-    },
-    {
-      "id": 2171,
-      "probability": 0.11111,
-      "name": "platinum amulet"
-    },
-    {
-      "id": 2197,
-      "probability": 0.11111,
-      "name": "stone skin amulet"
-    },
-    {
-      "id": 2142,
-      "probability": 0.05556,
-      "name": "ancient amulet"
-    },
-    {
-      "id": 2434,
-      "probability": 0.05556,
-      "name": "dragon hammer"
-    },
-    {
-      "id": 9971,
-      "probability": 0.05556,
-      "name": "gold ingot"
-    },
-    {
-      "id": 2418,
-      "probability": 0.05556,
-      "name": "golden sickle"
-    },
-    {
-      "id": 2155,
-      "probability": 0.05556,
-      "name": "green gem"
-    },
-    {
-      "id": 2162,
-      "probability": 0.05556,
-      "name": "magic light wand"
-    },
-    {
-      "id": 2472,
-      "probability": 0.05556,
-      "name": "magic plate armor"
-    },
-    {
-      "id": 2164,
-      "probability": 0.05556,
-      "name": "might ring"
-    },
-    {
-      "id": 7365,
-      "probability": 0.05556,
-      "name": "onyx arrow",
-      "min": 1,
-      "max": 50
-    },
-    {
-      "id": 5808,
-      "probability": 0.05556,
-      "name": "orshabaal's brain"
-    },
-    {
-      "id": 2402,
-      "probability": 0.05556,
-      "name": "silver dagger"
-    },
-    {
-      "id": 2112,
-      "probability": 0.05556,
-      "name": "teddy bear"
-    },
-    {
-      "id": 2421,
-      "probability": 0.05556,
-      "name": "thunder hammer"
-    },
-    {
-      "id": 3955,
-      "probability": 0.05556,
-      "name": "voodoo doll"
+    "loot": [
+        {
+            "id": 2152,
+            "probability": 1,
+            "name": "platinum coin",
+            "min": 1,
+            "max": 72
+        },
+        {
+            "id": 6500,
+            "probability": 0.94444,
+            "name": "demonic essence"
+        },
+        {
+            "id": 6300,
+            "probability": 0.55556,
+            "name": "death ring"
+        },
+        {
+            "id": 5954,
+            "probability": 0.5,
+            "name": "demon horn",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 7590,
+            "probability": 0.33333,
+            "name": "great mana potion"
+        },
+        {
+            "id": 2146,
+            "probability": 0.33333,
+            "name": "small sapphire",
+            "min": 1,
+            "max": 8
+        },
+        {
+            "id": 2143,
+            "probability": 0.33333,
+            "name": "white pearl",
+            "min": 1,
+            "max": 15
+        },
+        {
+            "id": 2144,
+            "probability": 0.27778,
+            "name": "black pearl",
+            "min": 1,
+            "max": 15
+        },
+        {
+            "id": 2462,
+            "probability": 0.27778,
+            "name": "devil helmet"
+        },
+        {
+            "id": 7591,
+            "probability": 0.27778,
+            "name": "great health potion",
+            "min": 1,
+            "max": 5
+        },
+        {
+            "id": 2214,
+            "probability": 0.27778,
+            "name": "ring of healing"
+        },
+        {
+            "id": 8473,
+            "probability": 0.27778,
+            "name": "ultimate health potion"
+        },
+        {
+            "id": 2158,
+            "probability": 0.22222,
+            "name": "blue gem"
+        },
+        {
+            "id": 2520,
+            "probability": 0.22222,
+            "name": "demon shield"
+        },
+        {
+            "id": 2393,
+            "probability": 0.22222,
+            "name": "giant sword"
+        },
+        {
+            "id": 2178,
+            "probability": 0.22222,
+            "name": "mind stone"
+        },
+        {
+            "id": 2145,
+            "probability": 0.22222,
+            "name": "small diamond",
+            "min": 1,
+            "max": 5
+        },
+        {
+            "id": 2149,
+            "probability": 0.22222,
+            "name": "small emerald",
+            "min": 1,
+            "max": 7
+        },
+        {
+            "id": 7368,
+            "probability": 0.16667,
+            "name": "assassin star",
+            "min": 1,
+            "max": 42
+        },
+        {
+            "id": 2195,
+            "probability": 0.16667,
+            "name": "boots of haste"
+        },
+        {
+            "id": 2125,
+            "probability": 0.16667,
+            "name": "crystal necklace"
+        },
+        {
+            "id": 2200,
+            "probability": 0.16667,
+            "name": "protection amulet"
+        },
+        {
+            "id": 1982,
+            "probability": 0.16667,
+            "name": "purple tome"
+        },
+        {
+            "id": 2170,
+            "probability": 0.16667,
+            "name": "silver amulet"
+        },
+        {
+            "id": 2150,
+            "probability": 0.16667,
+            "name": "small amethyst",
+            "min": 1,
+            "max": 17
+        },
+        {
+            "id": 2174,
+            "probability": 0.16667,
+            "name": "strange symbol"
+        },
+        {
+            "id": 2151,
+            "probability": 0.16667,
+            "name": "talon",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 2377,
+            "probability": 0.16667,
+            "name": "two handed sword"
+        },
+        {
+            "id": 2432,
+            "probability": 0.11111,
+            "name": "fire axe"
+        },
+        {
+            "id": 2470,
+            "probability": 0.11111,
+            "name": "golden legs"
+        },
+        {
+            "id": 2033,
+            "probability": 0.11111,
+            "name": "golden mug"
+        },
+        {
+            "id": 8472,
+            "probability": 0.11111,
+            "name": "great spirit potion"
+        },
+        {
+            "id": 2177,
+            "probability": 0.11111,
+            "name": "life crystal"
+        },
+        {
+            "id": 2514,
+            "probability": 0.11111,
+            "name": "mastermind shield"
+        },
+        {
+            "id": 2176,
+            "probability": 0.11111,
+            "name": "orb"
+        },
+        {
+            "id": 2171,
+            "probability": 0.11111,
+            "name": "platinum amulet"
+        },
+        {
+            "id": 2197,
+            "probability": 0.11111,
+            "name": "stone skin amulet"
+        },
+        {
+            "id": 2142,
+            "probability": 0.05556,
+            "name": "ancient amulet"
+        },
+        {
+            "id": 2434,
+            "probability": 0.05556,
+            "name": "dragon hammer"
+        },
+        {
+            "id": 9971,
+            "probability": 0.05556,
+            "name": "gold ingot"
+        },
+        {
+            "id": 2418,
+            "probability": 0.05556,
+            "name": "golden sickle"
+        },
+        {
+            "id": 2155,
+            "probability": 0.05556,
+            "name": "green gem"
+        },
+        {
+            "id": 2162,
+            "probability": 0.05556,
+            "name": "magic light wand"
+        },
+        {
+            "id": 2472,
+            "probability": 0.05556,
+            "name": "magic plate armor"
+        },
+        {
+            "id": 2164,
+            "probability": 0.05556,
+            "name": "might ring"
+        },
+        {
+            "id": 7365,
+            "probability": 0.05556,
+            "name": "onyx arrow",
+            "min": 1,
+            "max": 50
+        },
+        {
+            "id": 5808,
+            "probability": 0.05556,
+            "name": "orshabaal's brain"
+        },
+        {
+            "id": 2402,
+            "probability": 0.05556,
+            "name": "silver dagger"
+        },
+        {
+            "id": 2112,
+            "probability": 0.05556,
+            "name": "teddy bear"
+        },
+        {
+            "id": 2421,
+            "probability": 0.05556,
+            "name": "thunder hammer"
+        },
+        {
+            "id": 3955,
+            "probability": 0.05556,
+            "name": "voodoo doll"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

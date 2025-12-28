@@ -1,185 +1,185 @@
 {
-  "creatureStatistics": {
-    "name": "Worker Golem",
-    "health": 1470,
-    "maxHealth": 1470,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 160,
-    "attack": 240,
-    "attackSpeed": 2000,
-    "defense": 35,
-    "outfit": {
-      "id": 304
+    "creatureStatistics": {
+        "name": "Worker Golem",
+        "health": 1470,
+        "maxHealth": 1470,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 80,
+        "attack": 240,
+        "attackSpeed": 2000,
+        "defense": 35,
+        "outfit": {
+            "id": 304
+        },
+        "armor": 35
     },
-    "armor": 35
-  },
-  "experience": 1250,
-  "corpse": 2813,
-  "fluidType": 4,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 200,
-      "max": 250,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 240
+    "experience": 1250,
+    "corpse": 2813,
+    "fluidType": 4,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "physical",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 125,
-      "range": 7,
-      "shootEffect": "smallstone"
-    }
-  ],
-  "elements": {
-    "earth": 50,
-    "holy": 50,
-    "energy": -5,
-    "physical": 10,
-    "ice": 10,
-    "death": 10
-  },
-  "immunities": {
-    "invisible": true,
-    "paralyze": true
-  },
-  "sayings": {
-    "texts": [
-      "INTRUDER ALARM!",
-      "klonk klonk klonk",
-      "Rrrtttarrrttarrrtta",
-      "Awaiting orders.",
-      "Secret objective complete."
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 200,
+            "max": 250,
+            "areaEffect": "blueshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.93817,
-      "name": "gold coin",
-      "min": 1,
-      "max": 139
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 240
+        },
+        {
+            "name": "physical",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 125,
+            "range": 7,
+            "shootEffect": "smallstone"
+        }
+    ],
+    "elements": {
+        "earth": 50,
+        "holy": 50,
+        "energy": -5,
+        "physical": 10,
+        "ice": 10,
+        "death": 10
     },
-    {
-      "id": 8309,
-      "probability": 0.04809,
-      "name": "nail",
-      "min": 1,
-      "max": 5
+    "immunities": {
+        "invisible": true,
+        "paralyze": true
     },
-    {
-      "id": 10572,
-      "probability": 0.02169,
-      "name": "gear crystal"
+    "sayings": {
+        "texts": [
+            "INTRUDER ALARM!",
+            "klonk klonk klonk",
+            "Rrrtttarrrttarrrtta",
+            "Awaiting orders.",
+            "Secret objective complete."
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 7591,
-      "probability": 0.01974,
-      "name": "great health potion"
-    },
-    {
-      "id": 7590,
-      "probability": 0.01574,
-      "name": "great mana potion"
-    },
-    {
-      "id": 9809,
-      "probability": 0.01559,
-      "name": "rusted armor"
-    },
-    {
-      "id": 9690,
-      "probability": 0.01066,
-      "name": "gear wheel"
-    },
-    {
-      "id": 2177,
-      "probability": 0.0101,
-      "name": "life crystal"
-    },
-    {
-      "id": 2391,
-      "probability": 0.0099,
-      "name": "war hammer"
-    },
-    {
-      "id": 2145,
-      "probability": 0.00974,
-      "name": "small diamond",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 9812,
-      "probability": 0.00928,
-      "name": "rusted legs"
-    },
-    {
-      "id": 7452,
-      "probability": 0.00913,
-      "name": "spiked squelcher"
-    },
-    {
-      "id": 5880,
-      "probability": 0.00872,
-      "name": "iron ore"
-    },
-    {
-      "id": 8472,
-      "probability": 0.0082,
-      "name": "great spirit potion"
-    },
-    {
-      "id": 7439,
-      "probability": 0.00784,
-      "name": "berserk potion"
-    },
-    {
-      "id": 2164,
-      "probability": 0.00502,
-      "name": "might ring"
-    },
-    {
-      "id": 9979,
-      "probability": 0.00159,
-      "name": "crystal pedestal"
-    },
-    {
-      "id": 7428,
-      "probability": 0.00113,
-      "name": "bonebreaker"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.93817,
+            "name": "gold coin",
+            "min": 1,
+            "max": 139
+        },
+        {
+            "id": 8309,
+            "probability": 0.04809,
+            "name": "nail",
+            "min": 1,
+            "max": 5
+        },
+        {
+            "id": 10572,
+            "probability": 0.02169,
+            "name": "gear crystal"
+        },
+        {
+            "id": 7591,
+            "probability": 0.01974,
+            "name": "great health potion"
+        },
+        {
+            "id": 7590,
+            "probability": 0.01574,
+            "name": "great mana potion"
+        },
+        {
+            "id": 9809,
+            "probability": 0.01559,
+            "name": "rusted armor"
+        },
+        {
+            "id": 9690,
+            "probability": 0.01066,
+            "name": "gear wheel"
+        },
+        {
+            "id": 2177,
+            "probability": 0.0101,
+            "name": "life crystal"
+        },
+        {
+            "id": 2391,
+            "probability": 0.0099,
+            "name": "war hammer"
+        },
+        {
+            "id": 2145,
+            "probability": 0.00974,
+            "name": "small diamond",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 9812,
+            "probability": 0.00928,
+            "name": "rusted legs"
+        },
+        {
+            "id": 7452,
+            "probability": 0.00913,
+            "name": "spiked squelcher"
+        },
+        {
+            "id": 5880,
+            "probability": 0.00872,
+            "name": "iron ore"
+        },
+        {
+            "id": 8472,
+            "probability": 0.0082,
+            "name": "great spirit potion"
+        },
+        {
+            "id": 7439,
+            "probability": 0.00784,
+            "name": "berserk potion"
+        },
+        {
+            "id": 2164,
+            "probability": 0.00502,
+            "name": "might ring"
+        },
+        {
+            "id": 9979,
+            "probability": 0.00159,
+            "name": "crystal pedestal"
+        },
+        {
+            "id": 7428,
+            "probability": 0.00113,
+            "name": "bonebreaker"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

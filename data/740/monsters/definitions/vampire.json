@@ -1,152 +1,152 @@
 {
-  "creatureStatistics": {
-    "name": "Vampire",
-    "health": 475,
-    "maxHealth": 475,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 238,
-    "attack": 150,
-    "attackSpeed": 2000,
-    "defense": 30,
-    "outfit": {
-      "id": 68
+    "creatureStatistics": {
+        "name": "Vampire",
+        "health": 475,
+        "maxHealth": 475,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 119,
+        "attack": 150,
+        "attackSpeed": 2000,
+        "defense": 30,
+        "outfit": {
+            "id": 68
+        },
+        "armor": 30
     },
-    "armor": 30
-  },
-  "experience": 305,
-  "corpse": 2813,
-  "fluidType": 2,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 30,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "outfit",
-      "interval": 4000,
-      "chance": 0.1,
-      "duration": 5000,
-      "areaEffect": "groundshaker"
+    "experience": 305,
+    "corpse": 2813,
+    "fluidType": 2,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 30,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.15,
-      "speedChange": 300,
-      "duration": 3000,
-      "areaEffect": "redshimmer"
-    },
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 15,
-      "max": 25
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 150
-    },
-    {
-      "name": "lifedrain",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 50,
-      "max": 200,
-      "range": 1,
-      "target": true,
-      "areaEffect": "smallclouds"
-    },
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 0,
-      "range": 1,
-      "target": true,
-      "speedChange": -400,
-      "duration": 60000,
-      "areaEffect": "redshimmer"
-    }
-  ],
-  "elements": {
-    "physical": 25,
-    "fire": -10,
-    "holy": -25
-  },
-  "immunities": {
-    "lifedrain": true,
-    "paralyze": true,
-    "invisible": true,
-    "earth": true,
-    "death": true,
-    "drown": true,
-    "drunk": true
-  },
-  "sayings": {
-    "texts": [
-      "BLOOD!",
-      "Let me kiss your neck",
-      "I smell warm blood!",
-      "I call you, my bats! Come!"
+    "defenseSpells": [
+        {
+            "name": "outfit",
+            "interval": 4000,
+            "chance": 0.1,
+            "duration": 5000,
+            "areaEffect": "groundshaker"
+        },
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.15,
+            "speedChange": 300,
+            "duration": 3000,
+            "areaEffect": "redshimmer"
+        },
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 15,
+            "max": 25
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.9023,
-      "name": "gold coin",
-      "min": 1,
-      "max": 60
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 150
+        },
+        {
+            "name": "lifedrain",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 50,
+            "max": 200,
+            "range": 1,
+            "target": true,
+            "areaEffect": "smallclouds"
+        },
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 0,
+            "range": 1,
+            "target": true,
+            "speedChange": -400,
+            "duration": 60000,
+            "areaEffect": "redshimmer"
+        }
+    ],
+    "elements": {
+        "physical": 25,
+        "fire": -10,
+        "holy": -25
     },
-    {
-      "id": 2747,
-      "probability": 0.0191
+    "immunities": {
+        "lifedrain": true,
+        "paralyze": true,
+        "invisible": true,
+        "earth": true,
+        "death": true,
+        "drown": true,
+        "drunk": true
     },
-    {
-      "id": 2271,
-      "probability": 0.015,
-      "name": "strong health potion"
+    "sayings": {
+        "texts": [
+            "BLOOD!",
+            "Let me kiss your neck",
+            "I smell warm blood!",
+            "I call you, my bats! Come!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2383,
-      "probability": 0.01,
-      "name": "spike sword"
-    },
-    {
-      "id": 2229,
-      "probability": 0.01
-    },
-    {
-      "id": 2396,
-      "probability": 0.0047,
-      "name": "ice rapier"
-    },
-    {
-      "id": 2534,
-      "probability": 0.002,
-      "name": "vampire shield"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.9023,
+            "name": "gold coin",
+            "min": 1,
+            "max": 60
+        },
+        {
+            "id": 2747,
+            "probability": 0.0191
+        },
+        {
+            "id": 2271,
+            "probability": 0.015,
+            "name": "strong health potion"
+        },
+        {
+            "id": 2383,
+            "probability": 0.01,
+            "name": "spike sword"
+        },
+        {
+            "id": 2229,
+            "probability": 0.01
+        },
+        {
+            "id": 2396,
+            "probability": 0.0047,
+            "name": "ice rapier"
+        },
+        {
+            "id": 2534,
+            "probability": 0.002,
+            "name": "vampire shield"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

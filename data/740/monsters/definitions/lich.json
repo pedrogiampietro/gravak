@@ -1,243 +1,243 @@
 {
-  "creatureStatistics": {
-    "name": "Lich",
-    "health": 880,
-    "maxHealth": 880,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 210,
-    "attack": 75,
-    "attackSpeed": 2000,
-    "defense": 50,
-    "outfit": {
-      "id": 99
+    "creatureStatistics": {
+        "name": "Lich",
+        "health": 880,
+        "maxHealth": 880,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 105,
+        "attack": 75,
+        "attackSpeed": 2000,
+        "defense": 50,
+        "outfit": {
+            "id": 99
+        },
+        "armor": 50
     },
-    "armor": 50
-  },
-  "experience": 900,
-  "corpse": 2813,
-  "fluidType": 2,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 80,
-      "max": 100,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 75
+    "experience": 900,
+    "corpse": 2813,
+    "fluidType": 2,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "lifedrain",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 140,
-      "max": 190,
-      "length": 7,
-      "spread": 0,
-      "areaEffect": "redshimmer"
-    },
-    {
-      "name": "poisoncondition",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 300,
-      "max": 400,
-      "length": 7,
-      "spread": 0,
-      "areaEffect": "greenspark"
-    },
-    {
-      "name": "lifedrain",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 200,
-      "max": 245,
-      "range": 1,
-      "target": true,
-      "areaEffect": "redshimmer"
-    },
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 0,
-      "range": 7,
-      "speedChange": -300,
-      "duration": 30000,
-      "areaEffect": "redshimmer"
-    },
-    {
-      "name": "lifedrain",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 130,
-      "max": 195,
-      "radius": 3,
-      "target": false,
-      "areaEffect": "redshimmer"
-    }
-  ],
-  "elements": {
-    "energy": 80,
-    "holy": -20
-  },
-  "immunities": {
-    "death": true,
-    "earth": true,
-    "lifedrain": true,
-    "paralyze": true,
-    "invisible": true
-  },
-  "summons": [
-    {
-      "name": "Bonebeast",
-      "interval": 2000,
-      "chance": 0.1,
-      "maxSummons": 4
-    }
-  ],
-  "sayings": {
-    "texts": [
-      "Doomed be the living!",
-      "Death awaits all!",
-      "Thy living flesh offends me!",
-      "Death and Decay!",
-      "You will endure agony beyond thy death!",
-      "Pain sweet pain!",
-      "Come to me my children!"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 80,
+            "max": 100,
+            "areaEffect": "blueshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 1,
-      "name": "gold coin",
-      "min": 1,
-      "max": 139
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 75
+        },
+        {
+            "name": "lifedrain",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 140,
+            "max": 190,
+            "length": 7,
+            "spread": 0,
+            "areaEffect": "redshimmer"
+        },
+        {
+            "name": "poisoncondition",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 300,
+            "max": 400,
+            "length": 7,
+            "spread": 0,
+            "areaEffect": "greenspark"
+        },
+        {
+            "name": "lifedrain",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 200,
+            "max": 245,
+            "range": 1,
+            "target": true,
+            "areaEffect": "redshimmer"
+        },
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 0,
+            "range": 7,
+            "speedChange": -300,
+            "duration": 30000,
+            "areaEffect": "redshimmer"
+        },
+        {
+            "name": "lifedrain",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 130,
+            "max": 195,
+            "radius": 3,
+            "target": false,
+            "areaEffect": "redshimmer"
+        }
+    ],
+    "elements": {
+        "energy": 80,
+        "holy": -20
     },
-    {
-      "id": 2152,
-      "probability": 0.19628,
-      "name": "platinum coin"
+    "immunities": {
+        "death": true,
+        "earth": true,
+        "lifedrain": true,
+        "paralyze": true,
+        "invisible": true
     },
-    {
-      "id": 2175,
-      "probability": 0.10351,
-      "name": "spellbook"
+    "summons": [
+        {
+            "name": "Bonebeast",
+            "interval": 2000,
+            "chance": 0.1,
+            "maxSummons": 4
+        }
+    ],
+    "sayings": {
+        "texts": [
+            "Doomed be the living!",
+            "Death awaits all!",
+            "Thy living flesh offends me!",
+            "Death and Decay!",
+            "You will endure agony beyond thy death!",
+            "Pain sweet pain!",
+            "Come to me my children!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 7589,
-      "probability": 0.0781,
-      "name": "strong mana potion"
-    },
-    {
-      "id": 2144,
-      "probability": 0.05252,
-      "name": "black pearl",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 2143,
-      "probability": 0.04886,
-      "name": "white pearl"
-    },
-    {
-      "id": 9970,
-      "probability": 0.02439,
-      "name": "small topaz",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 2149,
-      "probability": 0.0237,
-      "name": "small emerald",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 2532,
-      "probability": 0.02072,
-      "name": "ancient shield"
-    },
-    {
-      "id": 2214,
-      "probability": 0.01637,
-      "name": "ring of healing"
-    },
-    {
-      "id": 2154,
-      "probability": 0.00759,
-      "name": "yellow gem"
-    },
-    {
-      "id": 2479,
-      "probability": 0.00716,
-      "name": "strange helmet"
-    },
-    {
-      "id": 2178,
-      "probability": 0.00418,
-      "name": "mind stone"
-    },
-    {
-      "id": 2171,
-      "probability": 0.00401,
-      "name": "platinum amulet"
-    },
-    {
-      "id": 7893,
-      "probability": 0.00281,
-      "name": "lightning boots"
-    },
-    {
-      "id": 2436,
-      "probability": 0.00273,
-      "name": "skull staff"
-    },
-    {
-      "id": 2535,
-      "probability": 0.00264,
-      "name": "castle shield"
-    },
-    {
-      "id": 2656,
-      "probability": 0.00205,
-      "name": "blue robe"
-    },
-    {
-      "id": 13291,
-      "probability": 0.00043,
-      "name": "maxilla maximus"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 1,
+            "name": "gold coin",
+            "min": 1,
+            "max": 139
+        },
+        {
+            "id": 2152,
+            "probability": 0.19628,
+            "name": "platinum coin"
+        },
+        {
+            "id": 2175,
+            "probability": 0.10351,
+            "name": "spellbook"
+        },
+        {
+            "id": 7589,
+            "probability": 0.0781,
+            "name": "strong mana potion"
+        },
+        {
+            "id": 2144,
+            "probability": 0.05252,
+            "name": "black pearl",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 2143,
+            "probability": 0.04886,
+            "name": "white pearl"
+        },
+        {
+            "id": 9970,
+            "probability": 0.02439,
+            "name": "small topaz",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 2149,
+            "probability": 0.0237,
+            "name": "small emerald",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 2532,
+            "probability": 0.02072,
+            "name": "ancient shield"
+        },
+        {
+            "id": 2214,
+            "probability": 0.01637,
+            "name": "ring of healing"
+        },
+        {
+            "id": 2154,
+            "probability": 0.00759,
+            "name": "yellow gem"
+        },
+        {
+            "id": 2479,
+            "probability": 0.00716,
+            "name": "strange helmet"
+        },
+        {
+            "id": 2178,
+            "probability": 0.00418,
+            "name": "mind stone"
+        },
+        {
+            "id": 2171,
+            "probability": 0.00401,
+            "name": "platinum amulet"
+        },
+        {
+            "id": 7893,
+            "probability": 0.00281,
+            "name": "lightning boots"
+        },
+        {
+            "id": 2436,
+            "probability": 0.00273,
+            "name": "skull staff"
+        },
+        {
+            "id": 2535,
+            "probability": 0.00264,
+            "name": "castle shield"
+        },
+        {
+            "id": 2656,
+            "probability": 0.00205,
+            "name": "blue robe"
+        },
+        {
+            "id": 13291,
+            "probability": 0.00043,
+            "name": "maxilla maximus"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

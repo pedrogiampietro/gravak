@@ -1,161 +1,161 @@
 {
-  "creatureStatistics": {
-    "name": "Diremaw",
-    "health": 3600,
-    "maxHealth": 3600,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 300,
-    "attack": 0,
-    "attackSpeed": 2000,
-    "defense": 71,
-    "outfit": {
-      "id": 1034
+    "creatureStatistics": {
+        "name": "Diremaw",
+        "health": 3600,
+        "maxHealth": 3600,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 150,
+        "attack": 0,
+        "attackSpeed": 2000,
+        "defense": 71,
+        "outfit": {
+            "id": 1034
+        },
+        "armor": 71
     },
-    "armor": 71
-  },
-  "experience": 2500,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 0,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "earth",
-      "interval": 2000,
-      "chance": 0.25,
-      "min": 150,
-      "max": 200,
-      "range": 7,
-      "shootEffect": "poison",
-      "areaEffect": "poison"
+    "experience": 2500,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 0,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "earth",
-      "interval": 2000,
-      "chance": 0.25,
-      "min": 150,
-      "max": 250,
-      "range": 7,
-      "radius": 4,
-      "target": true,
-      "shootEffect": "poison",
-      "areaEffect": "poff"
+    "attacks": [
+        {
+            "name": "earth",
+            "interval": 2000,
+            "chance": 0.25,
+            "min": 150,
+            "max": 200,
+            "range": 7,
+            "shootEffect": "poison",
+            "areaEffect": "poison"
+        },
+        {
+            "name": "earth",
+            "interval": 2000,
+            "chance": 0.25,
+            "min": 150,
+            "max": 250,
+            "range": 7,
+            "radius": 4,
+            "target": true,
+            "shootEffect": "poison",
+            "areaEffect": "poff"
+        },
+        {
+            "name": "poisoncondition",
+            "interval": 2000,
+            "chance": 0.21,
+            "min": 200,
+            "max": 310,
+            "radius": 4,
+            "target": false,
+            "areaEffect": "greenbubble"
+        }
+    ],
+    "elements": {
+        "earth": 20,
+        "ice": -20
     },
-    {
-      "name": "poisoncondition",
-      "interval": 2000,
-      "chance": 0.21,
-      "min": 200,
-      "max": 310,
-      "radius": 4,
-      "target": false,
-      "areaEffect": "greenbubble"
+    "immunities": {
+        "invisible": true,
+        "drunk": true
+    },
+    "loot": [
+        {
+            "id": 2671,
+            "probability": 0.41109,
+            "name": "ham"
+        },
+        {
+            "id": 30253,
+            "probability": 0.24377,
+            "name": "diremaw brainpan"
+        },
+        {
+            "id": 10557,
+            "probability": 0.11455,
+            "name": "poisonous slime"
+        },
+        {
+            "id": 30254,
+            "probability": 0.09705,
+            "name": "diremaw legs"
+        },
+        {
+            "id": 18413,
+            "probability": 0.09409,
+            "name": "blue crystal shard"
+        },
+        {
+            "id": 24849,
+            "probability": 0.08346,
+            "name": "onyx chip",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 18414,
+            "probability": 0.08332,
+            "name": "violet crystal shard"
+        },
+        {
+            "id": 18415,
+            "probability": 0.08023,
+            "name": "green crystal shard"
+        },
+        {
+            "id": 2149,
+            "probability": 0.04671,
+            "name": "small emerald",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 7632,
+            "probability": 0.03096,
+            "name": "giant shimmering pearl (green)"
+        },
+        {
+            "id": 9971,
+            "probability": 0.03056,
+            "name": "gold ingot"
+        },
+        {
+            "id": 7761,
+            "probability": 0.03002,
+            "name": "small enchanted emerald",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 30309,
+            "probability": 0.01548,
+            "name": "suspicious device"
+        },
+        {
+            "id": 18454,
+            "probability": 0.00081,
+            "name": "mycological bow"
+        },
+        {
+            "id": 18393,
+            "probability": 0.00054,
+            "name": "mushroom backpack"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": false,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "elements": {
-    "earth": 20,
-    "ice": -20
-  },
-  "immunities": {
-    "invisible": true,
-    "drunk": true
-  },
-  "loot": [
-    {
-      "id": 2671,
-      "probability": 0.41109,
-      "name": "ham"
-    },
-    {
-      "id": 30253,
-      "probability": 0.24377,
-      "name": "diremaw brainpan"
-    },
-    {
-      "id": 10557,
-      "probability": 0.11455,
-      "name": "poisonous slime"
-    },
-    {
-      "id": 30254,
-      "probability": 0.09705,
-      "name": "diremaw legs"
-    },
-    {
-      "id": 18413,
-      "probability": 0.09409,
-      "name": "blue crystal shard"
-    },
-    {
-      "id": 24849,
-      "probability": 0.08346,
-      "name": "onyx chip",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 18414,
-      "probability": 0.08332,
-      "name": "violet crystal shard"
-    },
-    {
-      "id": 18415,
-      "probability": 0.08023,
-      "name": "green crystal shard"
-    },
-    {
-      "id": 2149,
-      "probability": 0.04671,
-      "name": "small emerald",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 7632,
-      "probability": 0.03096,
-      "name": "giant shimmering pearl (green)"
-    },
-    {
-      "id": 9971,
-      "probability": 0.03056,
-      "name": "gold ingot"
-    },
-    {
-      "id": 7761,
-      "probability": 0.03002,
-      "name": "small enchanted emerald",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 30309,
-      "probability": 0.01548,
-      "name": "suspicious device"
-    },
-    {
-      "id": 18454,
-      "probability": 0.00081,
-      "name": "mycological bow"
-    },
-    {
-      "id": 18393,
-      "probability": 0.00054,
-      "name": "mushroom backpack"
-    }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": false,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

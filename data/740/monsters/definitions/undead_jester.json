@@ -1,194 +1,194 @@
 {
-  "creatureStatistics": {
-    "name": "Undead Jester",
-    "health": 355,
-    "maxHealth": 355,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 224,
-    "attack": 3,
-    "attackSpeed": 2000,
-    "defense": 3,
-    "outfit": {
-      "id": 273
+    "creatureStatistics": {
+        "name": "Undead Jester",
+        "health": 355,
+        "maxHealth": 355,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 112,
+        "attack": 3,
+        "attackSpeed": 2000,
+        "defense": 3,
+        "outfit": {
+            "id": 273
+        },
+        "armor": 3
     },
-    "armor": 3
-  },
-  "experience": 5,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 0,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "invisible",
-      "interval": 4000,
-      "chance": 0.3,
-      "duration": 2000,
-      "areaEffect": "mortarea"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 3
+    "experience": 5,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 0,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "drunk",
-      "interval": 1000,
-      "chance": 0.2,
-      "min": 0,
-      "max": 0,
-      "range": 7,
-      "shootEffect": "energy"
-    }
-  ],
-  "elements": {
-    "energy": 10,
-    "earth": 100,
-    "fire": 20,
-    "lifedrain": 100,
-    "ice": 30,
-    "holy": -20,
-    "death": 100
-  },
-  "immunities": {
-    "paralyze": true,
-    "invisible": true,
-    "drunk": true
-  },
-  "summons": [
-    {
-      "name": "cave rat",
-      "interval": 2000,
-      "chance": 0.1,
-      "maxSummons": 4
-    }
-  ],
-  "sayings": {
-    "texts": [
-      "Who's bad?",
-      "I have a cunning plan!",
-      "Resistance is futile! You will be amused!",
-      "Pull my finger!",
-      "Why did the chicken cross the road? TO KILL YOU!!!",
-      "I will teach you all to mock me!",
-      "He who laughs last, Laughs best!",
-      "Th-Th-Th-That's all, folks!",
-      "A zathroth priest, a druid and a paladin walk into a bar ...",
-      "Ha Ha!",
-      "Doh!",
-      "Zathroth made me do it!",
-      "And now for something completely different!",
-      "You think this is funny now?",
-      "Are we having fun yet?",
-      "Did I do that?"
+    "defenseSpells": [
+        {
+            "name": "invisible",
+            "interval": 4000,
+            "chance": 0.3,
+            "duration": 2000,
+            "areaEffect": "mortarea"
+        }
     ],
-    "slowness": 1,
-    "chance": 0.05
-  },
-  "loot": [
-    {
-      "id": 2667,
-      "probability": 0.59315,
-      "name": "fish"
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 3
+        },
+        {
+            "name": "drunk",
+            "interval": 1000,
+            "chance": 0.2,
+            "min": 0,
+            "max": 0,
+            "range": 7,
+            "shootEffect": "energy"
+        }
+    ],
+    "elements": {
+        "energy": 10,
+        "earth": 100,
+        "fire": 20,
+        "lifedrain": 100,
+        "ice": 30,
+        "holy": -20,
+        "death": 100
     },
-    {
-      "id": 9108,
-      "probability": 0.40147,
-      "name": "suspicious surprise bag"
+    "immunities": {
+        "paralyze": true,
+        "invisible": true,
+        "drunk": true
     },
-    {
-      "id": 9696,
-      "probability": 0.03814,
-      "name": "part of a jester doll"
+    "summons": [
+        {
+            "name": "cave rat",
+            "interval": 2000,
+            "chance": 0.1,
+            "maxSummons": 4
+        }
+    ],
+    "sayings": {
+        "texts": [
+            "Who's bad?",
+            "I have a cunning plan!",
+            "Resistance is futile! You will be amused!",
+            "Pull my finger!",
+            "Why did the chicken cross the road? TO KILL YOU!!!",
+            "I will teach you all to mock me!",
+            "He who laughs last, Laughs best!",
+            "Th-Th-Th-That's all, folks!",
+            "A zathroth priest, a druid and a paladin walk into a bar ...",
+            "Ha Ha!",
+            "Doh!",
+            "Zathroth made me do it!",
+            "And now for something completely different!",
+            "You think this is funny now?",
+            "Are we having fun yet?",
+            "Did I do that?"
+        ],
+        "slowness": 1,
+        "chance": 0.05
     },
-    {
-      "id": 9697,
-      "probability": 0.03814,
-      "name": "part of a jester doll"
-    },
-    {
-      "id": 9698,
-      "probability": 0.03814,
-      "name": "part of a jester doll"
-    },
-    {
-      "id": 9699,
-      "probability": 0.03814,
-      "name": "part of a jester doll"
-    },
-    {
-      "id": 5909,
-      "probability": 0.0132,
-      "name": "white piece of cloth"
-    },
-    {
-      "id": 5913,
-      "probability": 0.01125,
-      "name": "brown piece of cloth"
-    },
-    {
-      "id": 5910,
-      "probability": 0.01027,
-      "name": "green piece of cloth"
-    },
-    {
-      "id": 7158,
-      "probability": 0.01027,
-      "name": "rainbow trout"
-    },
-    {
-      "id": 9695,
-      "probability": 0.00978,
-      "name": "the torso of a jester doll"
-    },
-    {
-      "id": 7159,
-      "probability": 0.0088,
-      "name": "green perch"
-    },
-    {
-      "id": 5912,
-      "probability": 0.00831,
-      "name": "blue piece of cloth"
-    },
-    {
-      "id": 5914,
-      "probability": 0.00782,
-      "name": "yellow piece of cloth"
-    },
-    {
-      "id": 5911,
-      "probability": 0.0044,
-      "name": "red piece of cloth"
-    },
-    {
-      "id": 9694,
-      "probability": 0.00342,
-      "name": "the head of a jester doll"
-    },
-    {
-      "id": 7963,
-      "probability": 0.00196,
-      "name": "marlin"
+    "loot": [
+        {
+            "id": 2667,
+            "probability": 0.59315,
+            "name": "fish"
+        },
+        {
+            "id": 9108,
+            "probability": 0.40147,
+            "name": "suspicious surprise bag"
+        },
+        {
+            "id": 9696,
+            "probability": 0.03814,
+            "name": "part of a jester doll"
+        },
+        {
+            "id": 9697,
+            "probability": 0.03814,
+            "name": "part of a jester doll"
+        },
+        {
+            "id": 9698,
+            "probability": 0.03814,
+            "name": "part of a jester doll"
+        },
+        {
+            "id": 9699,
+            "probability": 0.03814,
+            "name": "part of a jester doll"
+        },
+        {
+            "id": 5909,
+            "probability": 0.0132,
+            "name": "white piece of cloth"
+        },
+        {
+            "id": 5913,
+            "probability": 0.01125,
+            "name": "brown piece of cloth"
+        },
+        {
+            "id": 5910,
+            "probability": 0.01027,
+            "name": "green piece of cloth"
+        },
+        {
+            "id": 7158,
+            "probability": 0.01027,
+            "name": "rainbow trout"
+        },
+        {
+            "id": 9695,
+            "probability": 0.00978,
+            "name": "the torso of a jester doll"
+        },
+        {
+            "id": 7159,
+            "probability": 0.0088,
+            "name": "green perch"
+        },
+        {
+            "id": 5912,
+            "probability": 0.00831,
+            "name": "blue piece of cloth"
+        },
+        {
+            "id": 5914,
+            "probability": 0.00782,
+            "name": "yellow piece of cloth"
+        },
+        {
+            "id": 5911,
+            "probability": 0.0044,
+            "name": "red piece of cloth"
+        },
+        {
+            "id": 9694,
+            "probability": 0.00342,
+            "name": "the head of a jester doll"
+        },
+        {
+            "id": 7963,
+            "probability": 0.00196,
+            "name": "marlin"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": false,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": 4
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": false,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": 4
-  }
 }

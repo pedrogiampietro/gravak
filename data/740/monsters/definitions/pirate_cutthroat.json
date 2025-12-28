@@ -1,145 +1,145 @@
 {
-  "creatureStatistics": {
-    "name": "Pirate Cutthroat",
-    "health": 325,
-    "maxHealth": 325,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 214,
-    "attack": 170,
-    "attackSpeed": 2000,
-    "defense": 15,
-    "outfit": {
-      "id": 96
+    "creatureStatistics": {
+        "name": "Pirate Cutthroat",
+        "health": 325,
+        "maxHealth": 325,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 107,
+        "attack": 170,
+        "attackSpeed": 2000,
+        "defense": 15,
+        "outfit": {
+            "id": 96
+        },
+        "armor": 15
     },
-    "armor": 15
-  },
-  "experience": 175,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 170
+    "experience": 175,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "physical",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 0,
-      "max": 95,
-      "range": 7,
-      "radius": 1,
-      "target": true,
-      "shootEffect": "explosion",
-      "areaEffect": "explosionarea"
-    }
-  ],
-  "elements": {
-    "earth": 10,
-    "holy": 20,
-    "death": -5,
-    "fire": -10,
-    "ice": -5
-  },
-  "immunities": {
-    "invisible": true
-  },
-  "sayings": {
-    "texts": [
-      "Give up!",
-      "Hiyaa!",
-      "Plundeeeeer!"
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 170
+        },
+        {
+            "name": "physical",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 0,
+            "max": 95,
+            "range": 7,
+            "radius": 1,
+            "target": true,
+            "shootEffect": "explosion",
+            "areaEffect": "explosionarea"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.77548,
-      "name": "gold coin",
-      "min": 1,
-      "max": 50
+    "elements": {
+        "earth": 10,
+        "holy": 20,
+        "death": -5,
+        "fire": -10,
+        "ice": -5
     },
-    {
-      "id": 11219,
-      "probability": 0.10074,
-      "name": "compass"
+    "immunities": {
+        "invisible": true
     },
-    {
-      "id": 2483,
-      "probability": 0.0307,
-      "name": "scale armor"
+    "sayings": {
+        "texts": [
+            "Give up!",
+            "Hiyaa!",
+            "Plundeeeeer!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2509,
-      "probability": 0.02884,
-      "name": "steel shield"
-    },
-    {
-      "id": 5710,
-      "probability": 0.0196,
-      "name": "light shovel"
-    },
-    {
-      "id": 14337,
-      "probability": 0.01092,
-      "name": "treasure map (pirate)"
-    },
-    {
-      "id": 5918,
-      "probability": 0.01019,
-      "name": "pirate knee breeches"
-    },
-    {
-      "id": 5927,
-      "probability": 0.00987,
-      "name": "pirate bag"
-    },
-    {
-      "id": 6097,
-      "probability": 0.00534,
-      "name": "hook"
-    },
-    {
-      "id": 6126,
-      "probability": 0.00514,
-      "name": "peg leg"
-    },
-    {
-      "id": 6098,
-      "probability": 0.00468,
-      "name": "eye patch"
-    },
-    {
-      "id": 5792,
-      "probability": 0.00093,
-      "name": "die"
-    },
-    {
-      "id": 5553,
-      "probability": 0.00089,
-      "name": "rum flask"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.77548,
+            "name": "gold coin",
+            "min": 1,
+            "max": 50
+        },
+        {
+            "id": 11219,
+            "probability": 0.10074,
+            "name": "compass"
+        },
+        {
+            "id": 2483,
+            "probability": 0.0307,
+            "name": "scale armor"
+        },
+        {
+            "id": 2509,
+            "probability": 0.02884,
+            "name": "steel shield"
+        },
+        {
+            "id": 5710,
+            "probability": 0.0196,
+            "name": "light shovel"
+        },
+        {
+            "id": 14337,
+            "probability": 0.01092,
+            "name": "treasure map (pirate)"
+        },
+        {
+            "id": 5918,
+            "probability": 0.01019,
+            "name": "pirate knee breeches"
+        },
+        {
+            "id": 5927,
+            "probability": 0.00987,
+            "name": "pirate bag"
+        },
+        {
+            "id": 6097,
+            "probability": 0.00534,
+            "name": "hook"
+        },
+        {
+            "id": 6126,
+            "probability": 0.00514,
+            "name": "peg leg"
+        },
+        {
+            "id": 6098,
+            "probability": 0.00468,
+            "name": "eye patch"
+        },
+        {
+            "id": 5792,
+            "probability": 0.00093,
+            "name": "die"
+        },
+        {
+            "id": 5553,
+            "probability": 0.00089,
+            "name": "rum flask"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": true,
+        "pushable": true,
+        "canPushItems": true,
+        "canPushCreatures": false,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": true,
-    "pushable": true,
-    "canPushItems": true,
-    "canPushCreatures": false,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

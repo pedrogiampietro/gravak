@@ -1,62 +1,62 @@
 {
-  "creatureStatistics": {
-    "name": "Deer",
-    "health": 25,
-    "maxHealth": 25,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 196,
-    "attack": 1,
-    "attackSpeed": 2000,
-    "defense": 2,
-    "outfit": {
-      "id": 31
+    "creatureStatistics": {
+        "name": "Deer",
+        "health": 25,
+        "maxHealth": 25,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 98,
+        "attack": 1,
+        "attackSpeed": 2000,
+        "defense": 2,
+        "outfit": {
+            "id": 31
+        },
+        "armor": 2
     },
-    "armor": 2
-  },
-  "experience": 0,
-  "corpse": 2835,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 0,
-    "fleeHealth": 25,
-    "openDoors": false,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 1
+    "experience": 0,
+    "corpse": 2835,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 0,
+        "fleeHealth": 25,
+        "openDoors": false,
+        "senseInvisible": false
+    },
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 1
+        }
+    ],
+    "loot": [
+        {
+            "id": 2666,
+            "probability": 0.80405,
+            "name": "meat"
+        },
+        {
+            "id": 2671,
+            "probability": 0.5111,
+            "name": "ham"
+        },
+        {
+            "id": 11214,
+            "probability": 0.01063,
+            "name": "antlers"
+        }
+    ],
+    "flags": {
+        "summonable": true,
+        "attackable": true,
+        "convinceable": true,
+        "pushable": true,
+        "canPushItems": false,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "loot": [
-    {
-      "id": 2666,
-      "probability": 0.80405,
-      "name": "meat"
-    },
-    {
-      "id": 2671,
-      "probability": 0.5111,
-      "name": "ham"
-    },
-    {
-      "id": 11214,
-      "probability": 0.01063,
-      "name": "antlers"
-    }
-  ],
-  "flags": {
-    "summonable": true,
-    "attackable": true,
-    "convinceable": true,
-    "pushable": true,
-    "canPushItems": false,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

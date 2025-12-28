@@ -1,156 +1,156 @@
 {
-  "creatureStatistics": {
-    "name": "Massive Water Elemental",
-    "health": 1250,
-    "maxHealth": 1250,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 280,
-    "attack": 220,
-    "attackSpeed": 2000,
-    "defense": 25,
-    "outfit": {
-      "id": 11
+    "creatureStatistics": {
+        "name": "Massive Water Elemental",
+        "health": 1250,
+        "maxHealth": 1250,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 215,
+        "attack": 220,
+        "attackSpeed": 2000,
+        "defense": 25,
+        "outfit": {
+            "id": 11
+        },
+        "armor": 25
     },
-    "armor": 25
-  },
-  "experience": 1100,
-  "corpse": 2813,
-  "fluidType": 2,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.05,
-      "min": 120,
-      "max": 250,
-      "areaEffect": "blueshimmer"
+    "experience": 1100,
+    "corpse": 2813,
+    "fluidType": 2,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
+    },
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.05,
+            "min": 120,
+            "max": 250,
+            "areaEffect": "blueshimmer"
+        }
+    ],
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 220
+        },
+        {
+            "name": "drown",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 330,
+            "max": 450,
+            "range": 7,
+            "radius": 2,
+            "target": true,
+            "areaEffect": "bluebubble"
+        },
+        {
+            "name": "ice",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 170,
+            "max": 210,
+            "range": 7,
+            "shootEffect": "smallice"
+        },
+        {
+            "name": "poisoncondition",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 355,
+            "max": 420,
+            "radius": 5,
+            "target": false,
+            "areaEffect": "poison"
+        }
+    ],
+    "elements": {
+        "physical": 30,
+        "holy": 30,
+        "death": 50,
+        "energy": -25
+    },
+    "immunities": {
+        "paralyze": true,
+        "invisible": true,
+        "drown": true,
+        "fire": true,
+        "ice": true,
+        "earth": true,
+        "lifedrain": true
+    },
+    "loot": [
+        {
+            "id": 2145,
+            "probability": 0.019,
+            "name": "small diamond",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 2148,
+            "probability": 0.5,
+            "name": "gold coin",
+            "min": 1,
+            "max": 100
+        },
+        {
+            "id": 2149,
+            "probability": 0.01,
+            "name": "small emerald",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 2152,
+            "probability": 0.2,
+            "name": "platinum coin",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 2167,
+            "probability": 0.0091,
+            "name": "energy ring"
+        },
+        {
+            "id": 2168,
+            "probability": 0.01,
+            "name": "life ring"
+        },
+        {
+            "id": 2667,
+            "probability": 0.4,
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 2273,
+            "probability": 0.104,
+            "name": "great mana potion"
+        },
+        {
+            "id": 2274,
+            "probability": 0.1,
+            "name": "great health potion"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 220
-    },
-    {
-      "name": "drown",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 330,
-      "max": 450,
-      "range": 7,
-      "radius": 2,
-      "target": true,
-      "areaEffect": "bluebubble"
-    },
-    {
-      "name": "ice",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 170,
-      "max": 210,
-      "range": 7,
-      "shootEffect": "smallice"
-    },
-    {
-      "name": "poisoncondition",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 355,
-      "max": 420,
-      "radius": 5,
-      "target": false,
-      "areaEffect": "poison"
-    }
-  ],
-  "elements": {
-    "physical": 30,
-    "holy": 30,
-    "death": 50,
-    "energy": -25
-  },
-  "immunities": {
-    "paralyze": true,
-    "invisible": true,
-    "drown": true,
-    "fire": true,
-    "ice": true,
-    "earth": true,
-    "lifedrain": true
-  },
-  "loot": [
-    {
-      "id": 2145,
-      "probability": 0.019,
-      "name": "small diamond",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 2148,
-      "probability": 0.5,
-      "name": "gold coin",
-      "min": 1,
-      "max": 100
-    },
-    {
-      "id": 2149,
-      "probability": 0.01,
-      "name": "small emerald",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 2152,
-      "probability": 0.2,
-      "name": "platinum coin",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 2167,
-      "probability": 0.0091,
-      "name": "energy ring"
-    },
-    {
-      "id": 2168,
-      "probability": 0.01,
-      "name": "life ring"
-    },
-    {
-      "id": 2667,
-      "probability": 0.4,
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 2273,
-      "probability": 0.104,
-      "name": "great mana potion"
-    },
-    {
-      "id": 2274,
-      "probability": 0.1,
-      "name": "great health potion"
-    }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

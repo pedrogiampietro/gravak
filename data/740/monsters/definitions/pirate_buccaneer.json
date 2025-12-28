@@ -1,127 +1,127 @@
 {
-  "creatureStatistics": {
-    "name": "Pirate Buccaneer",
-    "health": 425,
-    "maxHealth": 425,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 220,
-    "attack": 160,
-    "attackSpeed": 2000,
-    "defense": 30,
-    "outfit": {
-      "id": 97
+    "creatureStatistics": {
+        "name": "Pirate Buccaneer",
+        "health": 425,
+        "maxHealth": 425,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 109,
+        "attack": 160,
+        "attackSpeed": 2000,
+        "defense": 30,
+        "outfit": {
+            "id": 97
+        },
+        "armor": 30
     },
-    "armor": 30
-  },
-  "experience": 250,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 50,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 160
+    "experience": 250,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 50,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "physical",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 0,
-      "max": 100,
-      "range": 4,
-      "shootEffect": "throwingknife"
-    }
-  ],
-  "elements": {
-    "earth": 10,
-    "holy": 10,
-    "death": -5,
-    "fire": -5,
-    "energy": -5,
-    "ice": -5,
-    "physical": -10
-  },
-  "immunities": {
-    "invisible": true
-  },
-  "sayings": {
-    "texts": [
-      "Give up!",
-      "Hiyaa",
-      "Plundeeeeer!"
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 160
+        },
+        {
+            "name": "physical",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 0,
+            "max": 100,
+            "range": 4,
+            "shootEffect": "throwingknife"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2050,
-      "probability": 0.1019
+    "elements": {
+        "earth": 10,
+        "holy": 10,
+        "death": -5,
+        "fire": -5,
+        "energy": -5,
+        "ice": -5,
+        "physical": -10
     },
-    {
-      "id": 2148,
-      "probability": 0.6774,
-      "name": "gold coin",
-      "min": 1,
-      "max": 59
+    "immunities": {
+        "invisible": true
     },
-    {
-      "id": 2238,
-      "probability": 0.099
+    "sayings": {
+        "texts": [
+            "Give up!",
+            "Hiyaa",
+            "Plundeeeeer!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2385,
-      "probability": 0.101,
-      "name": "sabre"
-    },
-    {
-      "id": 2410,
-      "probability": 0.09,
-      "name": "throwing knife",
-      "min": 1,
-      "max": 5
-    },
-    {
-      "id": 2463,
-      "probability": 0.0113,
-      "name": "plate armor"
-    },
-    {
-      "id": 2513,
-      "probability": 0.0385,
-      "name": "battle shield"
-    },
-    {
-      "id": 5091,
-      "probability": 0.01
-    },
-    {
-      "id": 5792,
-      "probability": 0.0004
-    },
-    {
-      "id": 2271,
-      "probability": 0.0067,
-      "name": "strong health potion"
+    "loot": [
+        {
+            "id": 2050,
+            "probability": 0.1019
+        },
+        {
+            "id": 2148,
+            "probability": 0.6774,
+            "name": "gold coin",
+            "min": 1,
+            "max": 59
+        },
+        {
+            "id": 2238,
+            "probability": 0.099
+        },
+        {
+            "id": 2385,
+            "probability": 0.101,
+            "name": "sabre"
+        },
+        {
+            "id": 2410,
+            "probability": 0.09,
+            "name": "throwing knife",
+            "min": 1,
+            "max": 5
+        },
+        {
+            "id": 2463,
+            "probability": 0.0113,
+            "name": "plate armor"
+        },
+        {
+            "id": 2513,
+            "probability": 0.0385,
+            "name": "battle shield"
+        },
+        {
+            "id": 5091,
+            "probability": 0.01
+        },
+        {
+            "id": 5792,
+            "probability": 0.0004
+        },
+        {
+            "id": 2271,
+            "probability": 0.0067,
+            "name": "strong health potion"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": true,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": true,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

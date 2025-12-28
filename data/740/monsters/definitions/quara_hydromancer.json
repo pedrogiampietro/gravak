@@ -1,191 +1,191 @@
 {
-  "creatureStatistics": {
-    "name": "Quara Hydromancer",
-    "health": 1100,
-    "maxHealth": 1100,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 490,
-    "attack": 80,
-    "attackSpeed": 2000,
-    "defense": 30,
-    "outfit": {
-      "id": 47
+    "creatureStatistics": {
+        "name": "Quara Hydromancer",
+        "health": 1100,
+        "maxHealth": 1100,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 245,
+        "attack": 80,
+        "attackSpeed": 2000,
+        "defense": 30,
+        "outfit": {
+            "id": 47
+        },
+        "armor": 30
     },
-    "armor": 30
-  },
-  "experience": 800,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 100,
-      "max": 120,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 80
+    "experience": 800,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "ice",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 100,
-      "max": 180,
-      "length": 8,
-      "spread": 0,
-      "areaEffect": "bubbles"
-    },
-    {
-      "name": "ice",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 90,
-      "max": 150,
-      "radius": 3,
-      "target": false,
-      "areaEffect": "bubbles"
-    },
-    {
-      "name": "lifedrain",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 170,
-      "max": 240,
-      "length": 8,
-      "spread": 0,
-      "areaEffect": "greenspark"
-    },
-    {
-      "name": "lifedrain",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 170,
-      "range": 7,
-      "target": true,
-      "areaEffect": "redshimmer"
-    },
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 0,
-      "range": 7,
-      "speedChange": -600,
-      "duration": 15000,
-      "areaEffect": "redshimmer"
-    }
-  ],
-  "elements": {
-    "earth": -10,
-    "energy": -25
-  },
-  "immunities": {
-    "lifedrain": true,
-    "paralyze": true,
-    "invisible": true,
-    "drown": true,
-    "fire": true,
-    "ice": true
-  },
-  "sayings": {
-    "texts": [
-      "Qua hah tsh!",
-      "Teech tsha tshul!",
-      "Quara tsha Fach!",
-      "Tssssha Quara!",
-      "Blubber.",
-      "Blup."
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 100,
+            "max": 120,
+            "areaEffect": "blueshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.90418,
-      "name": "gold coin",
-      "min": 1,
-      "max": 110
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 80
+        },
+        {
+            "name": "ice",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 100,
+            "max": 180,
+            "length": 8,
+            "spread": 0,
+            "areaEffect": "bubbles"
+        },
+        {
+            "name": "ice",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 90,
+            "max": 150,
+            "radius": 3,
+            "target": false,
+            "areaEffect": "bubbles"
+        },
+        {
+            "name": "lifedrain",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 170,
+            "max": 240,
+            "length": 8,
+            "spread": 0,
+            "areaEffect": "greenspark"
+        },
+        {
+            "name": "lifedrain",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 170,
+            "range": 7,
+            "target": true,
+            "areaEffect": "redshimmer"
+        },
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 0,
+            "range": 7,
+            "speedChange": -600,
+            "duration": 15000,
+            "areaEffect": "redshimmer"
+        }
+    ],
+    "elements": {
+        "earth": -10,
+        "energy": -25
     },
-    {
-      "id": 12444,
-      "probability": 0.15606,
-      "name": "quara eye"
+    "immunities": {
+        "lifedrain": true,
+        "paralyze": true,
+        "invisible": true,
+        "drown": true,
+        "fire": true,
+        "ice": true
     },
-    {
-      "id": 2143,
-      "probability": 0.05083,
-      "name": "white pearl"
+    "sayings": {
+        "texts": [
+            "Qua hah tsh!",
+            "Teech tsha tshul!",
+            "Quara tsha Fach!",
+            "Tssssha Quara!",
+            "Blubber.",
+            "Blup."
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2149,
-      "probability": 0.0496,
-      "name": "small emerald",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 2670,
-      "probability": 0.04716,
-      "name": "shrimp"
-    },
-    {
-      "id": 2144,
-      "probability": 0.03125,
-      "name": "black pearl"
-    },
-    {
-      "id": 7590,
-      "probability": 0.02861,
-      "name": "great mana potion"
-    },
-    {
-      "id": 5895,
-      "probability": 0.01459,
-      "name": "fish fin"
-    },
-    {
-      "id": 2214,
-      "probability": 0.01233,
-      "name": "ring of healing"
-    },
-    {
-      "id": 2189,
-      "probability": 0.00979,
-      "name": "wand of cosmic energy"
-    },
-    {
-      "id": 2476,
-      "probability": 0.00226,
-      "name": "knight armor"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.90418,
+            "name": "gold coin",
+            "min": 1,
+            "max": 110
+        },
+        {
+            "id": 12444,
+            "probability": 0.15606,
+            "name": "quara eye"
+        },
+        {
+            "id": 2143,
+            "probability": 0.05083,
+            "name": "white pearl"
+        },
+        {
+            "id": 2149,
+            "probability": 0.0496,
+            "name": "small emerald",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 2670,
+            "probability": 0.04716,
+            "name": "shrimp"
+        },
+        {
+            "id": 2144,
+            "probability": 0.03125,
+            "name": "black pearl"
+        },
+        {
+            "id": 7590,
+            "probability": 0.02861,
+            "name": "great mana potion"
+        },
+        {
+            "id": 5895,
+            "probability": 0.01459,
+            "name": "fish fin"
+        },
+        {
+            "id": 2214,
+            "probability": 0.01233,
+            "name": "ring of healing"
+        },
+        {
+            "id": 2189,
+            "probability": 0.00979,
+            "name": "wand of cosmic energy"
+        },
+        {
+            "id": 2476,
+            "probability": 0.00226,
+            "name": "knight armor"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

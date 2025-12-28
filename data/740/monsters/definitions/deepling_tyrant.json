@@ -1,127 +1,127 @@
 {
-  "creatureStatistics": {
-    "name": "Deepling Tyrant",
-    "health": 4900,
-    "maxHealth": 4900,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 260,
-    "attack": 501,
-    "attackSpeed": 2000,
-    "defense": 45,
-    "outfit": {
-      "id": 442
+    "creatureStatistics": {
+        "name": "Deepling Tyrant",
+        "health": 4900,
+        "maxHealth": 4900,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 155,
+        "attack": 501,
+        "attackSpeed": 2000,
+        "defense": 45,
+        "outfit": {
+            "id": 442
+        },
+        "armor": 45
     },
-    "armor": 45
-  },
-  "experience": 4200,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 20,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 200,
-      "max": 400,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 501
+    "experience": 4200,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 20,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "physical",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 0,
-      "max": 375,
-      "range": 7,
-      "target": true,
-      "shootEffect": "whirlwindsword"
-    },
-    {
-      "name": "drown",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 180,
-      "max": 215,
-      "range": 7,
-      "target": true,
-      "shootEffect": "spear",
-      "areaEffect": "bluebubble"
-    }
-  ],
-  "immunities": {
-    "invisible": true,
-    "ice": true,
-    "paralyze": true,
-    "drown": true,
-    "fire": true
-  },
-  "sayings": {
-    "texts": [
-      "QJELL NETA NA!!"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 200,
+            "max": 400,
+            "areaEffect": "blueshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 1,
-      "name": "gold coin",
-      "min": 1,
-      "max": 97
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 501
+        },
+        {
+            "name": "physical",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 0,
+            "max": 375,
+            "range": 7,
+            "target": true,
+            "shootEffect": "whirlwindsword"
+        },
+        {
+            "name": "drown",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 180,
+            "max": 215,
+            "range": 7,
+            "target": true,
+            "shootEffect": "spear",
+            "areaEffect": "bluebubble"
+        }
+    ],
+    "immunities": {
+        "invisible": true,
+        "ice": true,
+        "paralyze": true,
+        "drown": true,
+        "fire": true
     },
-    {
-      "id": 2148,
-      "probability": 1,
-      "name": "gold coin",
-      "min": 1,
-      "max": 97
+    "sayings": {
+        "texts": [
+            "QJELL NETA NA!!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2152,
-      "probability": 0.7,
-      "name": "platinum coin",
-      "min": 1,
-      "max": 4
-    },
-    {
-      "id": 2273,
-      "probability": 0.3264,
-      "name": "great mana potion",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 2274,
-      "probability": 0.3343,
-      "name": "great health potion",
-      "min": 1,
-      "max": 3
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 1,
+            "name": "gold coin",
+            "min": 1,
+            "max": 97
+        },
+        {
+            "id": 2148,
+            "probability": 1,
+            "name": "gold coin",
+            "min": 1,
+            "max": 97
+        },
+        {
+            "id": 2152,
+            "probability": 0.7,
+            "name": "platinum coin",
+            "min": 1,
+            "max": 4
+        },
+        {
+            "id": 2273,
+            "probability": 0.3264,
+            "name": "great mana potion",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 2274,
+            "probability": 0.3343,
+            "name": "great health potion",
+            "min": 1,
+            "max": 3
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": true,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": true,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

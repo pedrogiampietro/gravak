@@ -1,75 +1,75 @@
 {
-  "creatureStatistics": {
-    "name": "Polar Bear",
-    "health": 85,
-    "maxHealth": 85,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 156,
-    "attack": 30,
-    "attackSpeed": 2000,
-    "defense": 7,
-    "outfit": {
-      "id": 42
+    "creatureStatistics": {
+        "name": "Polar Bear",
+        "health": 85,
+        "maxHealth": 85,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 78,
+        "attack": 30,
+        "attackSpeed": 2000,
+        "defense": 7,
+        "outfit": {
+            "id": 42
+        },
+        "armor": 7
     },
-    "armor": 7
-  },
-  "experience": 28,
-  "corpse": 2849,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 5,
-    "openDoors": false,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 30
-    }
-  ],
-  "elements": {
-    "ice": 20,
-    "fire": 10,
-    "death": -10,
-    "energy": -5
-  },
-  "sayings": {
-    "texts": [
-      "GROARRR!"
+    "experience": 28,
+    "corpse": 2849,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 5,
+        "openDoors": false,
+        "senseInvisible": false
+    },
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 30
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2666,
-      "probability": 0.50363,
-      "name": "meat"
+    "elements": {
+        "ice": 20,
+        "fire": 10,
+        "death": -10,
+        "energy": -5
     },
-    {
-      "id": 2671,
-      "probability": 0.50166,
-      "name": "ham"
+    "sayings": {
+        "texts": [
+            "GROARRR!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 10567,
-      "probability": 0.01013,
-      "name": "polar bear paw"
+    "loot": [
+        {
+            "id": 2666,
+            "probability": 0.50363,
+            "name": "meat"
+        },
+        {
+            "id": 2671,
+            "probability": 0.50166,
+            "name": "ham"
+        },
+        {
+            "id": 10567,
+            "probability": 0.01013,
+            "name": "polar bear paw"
+        }
+    ],
+    "flags": {
+        "summonable": true,
+        "attackable": true,
+        "convinceable": true,
+        "pushable": false,
+        "canPushItems": false,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": true,
-    "attackable": true,
-    "convinceable": true,
-    "pushable": false,
-    "canPushItems": false,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

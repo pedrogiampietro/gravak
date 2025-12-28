@@ -1,159 +1,159 @@
 {
-  "creatureStatistics": {
-    "name": "Bonebeast",
-    "health": 515,
-    "maxHealth": 515,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 218,
-    "attack": 200,
-    "attackSpeed": 2000,
-    "defense": 40,
-    "outfit": {
-      "id": 101
+    "creatureStatistics": {
+        "name": "Bonebeast",
+        "health": 515,
+        "maxHealth": 515,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 109,
+        "attack": 200,
+        "attackSpeed": 2000,
+        "defense": 40,
+        "outfit": {
+            "id": 101
+        },
+        "armor": 40
     },
-    "armor": 40
-  },
-  "experience": 580,
-  "corpse": 2813,
-  "fluidType": 2,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 50,
-      "max": 60,
-      "areaEffect": "greenspark"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 200
+    "experience": 580,
+    "corpse": 2813,
+    "fluidType": 2,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "earth",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 50,
-      "max": 90,
-      "range": 7,
-      "shootEffect": "poison",
-      "areaEffect": "poison"
-    },
-    {
-      "name": "lifedrain",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 25,
-      "max": 47,
-      "radius": 3,
-      "target": false,
-      "areaEffect": "redshimmer"
-    },
-    {
-      "name": "poisoncondition",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 50,
-      "max": 60,
-      "radius": 3,
-      "target": false,
-      "areaEffect": "poison"
-    },
-    {
-      "name": "poisoncondition",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 70,
-      "max": 80,
-      "length": 6,
-      "spread": 0,
-      "target": false,
-      "areaEffect": "poison"
-    },
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 0,
-      "target": true,
-      "speedChange": -600,
-      "duration": 13000
-    }
-  ],
-  "elements": {
-    "fire": -10,
-    "holy": -25
-  },
-  "immunities": {
-    "death": true,
-    "earth": true,
-    "drown": true,
-    "lifedrain": true,
-    "paralyze": true,
-    "invisible": true,
-    "drunk": true
-  },
-  "sayings": {
-    "texts": [
-      "Cccchhhhhhhhh!",
-      "Knooorrrrr!"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 50,
+            "max": 60,
+            "areaEffect": "greenspark"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2230,
-      "probability": 0.4975
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 200
+        },
+        {
+            "name": "earth",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 50,
+            "max": 90,
+            "range": 7,
+            "shootEffect": "poison",
+            "areaEffect": "poison"
+        },
+        {
+            "name": "lifedrain",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 25,
+            "max": 47,
+            "radius": 3,
+            "target": false,
+            "areaEffect": "redshimmer"
+        },
+        {
+            "name": "poisoncondition",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 50,
+            "max": 60,
+            "radius": 3,
+            "target": false,
+            "areaEffect": "poison"
+        },
+        {
+            "name": "poisoncondition",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 70,
+            "max": 80,
+            "length": 6,
+            "spread": 0,
+            "target": false,
+            "areaEffect": "poison"
+        },
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 0,
+            "target": true,
+            "speedChange": -600,
+            "duration": 13000
+        }
+    ],
+    "elements": {
+        "fire": -10,
+        "holy": -25
     },
-    {
-      "id": 2148,
-      "probability": 0.3,
-      "name": "gold coin",
-      "min": 1,
-      "max": 90
+    "immunities": {
+        "death": true,
+        "earth": true,
+        "drown": true,
+        "lifedrain": true,
+        "paralyze": true,
+        "invisible": true,
+        "drunk": true
     },
-    {
-      "id": 2229,
-      "probability": 0.2
+    "sayings": {
+        "texts": [
+            "Cccchhhhhhhhh!",
+            "Knooorrrrr!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2463,
-      "probability": 0.08,
-      "name": "plate armor"
-    },
-    {
-      "id": 2221,
-      "probability": 0.01,
-      "name": "hardened bone"
-    },
-    {
-      "id": 2269,
-      "probability": 0.0054,
-      "name": "health potion"
+    "loot": [
+        {
+            "id": 2230,
+            "probability": 0.4975
+        },
+        {
+            "id": 2148,
+            "probability": 0.3,
+            "name": "gold coin",
+            "min": 1,
+            "max": 90
+        },
+        {
+            "id": 2229,
+            "probability": 0.2
+        },
+        {
+            "id": 2463,
+            "probability": 0.08,
+            "name": "plate armor"
+        },
+        {
+            "id": 2221,
+            "probability": 0.01,
+            "name": "hardened bone"
+        },
+        {
+            "id": 2269,
+            "probability": 0.0054,
+            "name": "health potion"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

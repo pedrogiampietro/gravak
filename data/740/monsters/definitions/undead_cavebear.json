@@ -1,63 +1,63 @@
 {
-  "creatureStatistics": {
-    "name": "Undead Cavebear",
-    "health": 450,
-    "maxHealth": 450,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 250,
-    "attack": 400,
-    "attackSpeed": 2000,
-    "defense": 27,
-    "outfit": {
-      "id": 384
+    "creatureStatistics": {
+        "name": "Undead Cavebear",
+        "health": 450,
+        "maxHealth": 450,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 109,
+        "attack": 400,
+        "attackSpeed": 2000,
+        "defense": 27,
+        "outfit": {
+            "id": 384
+        },
+        "armor": 23
     },
-    "armor": 23
-  },
-  "experience": 600,
-  "corpse": 2849,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 400
+    "experience": 600,
+    "corpse": 2849,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
+    },
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 400
+        }
+    ],
+    "elements": {
+        "holy": -15
+    },
+    "immunities": {
+        "death": true,
+        "earth": true,
+        "paralyze": true,
+        "invisible": true
+    },
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.0975,
+            "name": "gold coin",
+            "min": 1,
+            "max": 80
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "elements": {
-    "holy": -15
-  },
-  "immunities": {
-    "death": true,
-    "earth": true,
-    "paralyze": true,
-    "invisible": true
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.0975,
-      "name": "gold coin",
-      "min": 1,
-      "max": 80
-    }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

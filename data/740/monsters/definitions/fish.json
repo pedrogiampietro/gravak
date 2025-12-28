@@ -1,50 +1,50 @@
 {
-  "creatureStatistics": {
-    "name": "Fish",
-    "health": 25,
-    "maxHealth": 25,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 180,
-    "attack": 0,
-    "attackSpeed": 2000,
-    "defense": 5,
-    "outfit": {
-      "id": 455
+    "creatureStatistics": {
+        "name": "Fish",
+        "health": 25,
+        "maxHealth": 25,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 70,
+        "attack": 0,
+        "attackSpeed": 2000,
+        "defense": 5,
+        "outfit": {
+            "id": 455
+        },
+        "armor": 5
     },
-    "armor": 5
-  },
-  "experience": 0,
-  "corpse": 2813,
-  "fluidType": 2,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 25,
-    "openDoors": false,
-    "senseInvisible": true
-  },
-  "immunities": {
-    "fire": true,
-    "earth": true,
-    "invisible": true,
-    "drown": true
-  },
-  "sayings": {
-    "texts": [
-      "Blib!",
-      "Blub!"
-    ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": true,
-    "canPushItems": false,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
+    "experience": 0,
+    "corpse": 2813,
+    "fluidType": 2,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 25,
+        "openDoors": false,
+        "senseInvisible": true
+    },
+    "immunities": {
+        "fire": true,
+        "earth": true,
+        "invisible": true,
+        "drown": true
+    },
+    "sayings": {
+        "texts": [
+            "Blib!",
+            "Blub!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
+    },
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": true,
+        "canPushItems": false,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
+    }
 }

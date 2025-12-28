@@ -1,168 +1,168 @@
 {
-  "creatureStatistics": {
-    "name": "Giant Spider",
-    "health": 1300,
-    "maxHealth": 1300,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 230,
-    "attack": 300,
-    "attackSpeed": 2000,
-    "defense": 30,
-    "outfit": {
-      "id": 38
+    "creatureStatistics": {
+        "name": "Giant Spider",
+        "health": 1300,
+        "maxHealth": 1300,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 120,
+        "attack": 300,
+        "attackSpeed": 2000,
+        "defense": 30,
+        "outfit": {
+            "id": 38
+        },
+        "armor": 30
     },
-    "armor": 30
-  },
-  "experience": 900,
-  "corpse": 2857,
-  "fluidType": 3,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.15,
-      "speedChange": 390,
-      "duration": 5000,
-      "areaEffect": "redshimmer"
+    "experience": 900,
+    "corpse": 2857,
+    "fluidType": 3,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
+    },
+    "defenseSpells": [
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.15,
+            "speedChange": 390,
+            "duration": 5000,
+            "areaEffect": "redshimmer"
+        }
+    ],
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 300
+        },
+        {
+            "name": "poisonfield",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 0,
+            "max": 0,
+            "range": 7,
+            "radius": 1,
+            "target": true,
+            "shootEffect": "poison"
+        },
+        {
+            "name": "earth",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 40,
+            "max": 70,
+            "range": 7,
+            "radius": 1,
+            "target": true,
+            "shootEffect": "poison"
+        }
+    ],
+    "elements": {
+        "energy": 20,
+        "ice": 20,
+        "fire": -10
+    },
+    "immunities": {
+        "outfit": true,
+        "drunk": true,
+        "invisible": true,
+        "earth": true
+    },
+    "summons": [
+        {
+            "name": "Poison Spider",
+            "interval": 2000,
+            "chance": 0.1,
+            "maxSummons": 2
+        }
+    ],
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.5,
+            "name": "gold coin",
+            "min": 1,
+            "max": 100
+        },
+        {
+            "id": 2148,
+            "probability": 0.5,
+            "name": "gold coin",
+            "min": 1,
+            "max": 95
+        },
+        {
+            "id": 2545,
+            "probability": 0.125,
+            "name": "poison arrow",
+            "min": 1,
+            "max": 12
+        },
+        {
+            "id": 2463,
+            "probability": 0.1,
+            "name": "plate armor"
+        },
+        {
+            "id": 2647,
+            "probability": 0.08,
+            "name": "plate legs"
+        },
+        {
+            "id": 2377,
+            "probability": 0.05,
+            "name": "two handed sword"
+        },
+        {
+            "id": 2457,
+            "probability": 0.05,
+            "name": "steel helmet"
+        },
+        {
+            "id": 2271,
+            "probability": 0.03571,
+            "name": "strong health potion"
+        },
+        {
+            "id": 2219,
+            "probability": 0.02,
+            "name": "spider silk"
+        },
+        {
+            "id": 2477,
+            "probability": 0.0087,
+            "name": "knight legs"
+        },
+        {
+            "id": 2169,
+            "probability": 0.0071
+        },
+        {
+            "id": 2476,
+            "probability": 0.005,
+            "name": "knight armor"
+        },
+        {
+            "id": 2171,
+            "probability": 0.0028,
+            "name": "platinum amulet"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 300
-    },
-    {
-      "name": "poisonfield",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 0,
-      "max": 0,
-      "range": 7,
-      "radius": 1,
-      "target": true,
-      "shootEffect": "poison"
-    },
-    {
-      "name": "earth",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 40,
-      "max": 70,
-      "range": 7,
-      "radius": 1,
-      "target": true,
-      "shootEffect": "poison"
-    }
-  ],
-  "elements": {
-    "energy": 20,
-    "ice": 20,
-    "fire": -10
-  },
-  "immunities": {
-    "outfit": true,
-    "drunk": true,
-    "invisible": true,
-    "earth": true
-  },
-  "summons": [
-    {
-      "name": "Poison Spider",
-      "interval": 2000,
-      "chance": 0.1,
-      "maxSummons": 2
-    }
-  ],
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.5,
-      "name": "gold coin",
-      "min": 1,
-      "max": 100
-    },
-    {
-      "id": 2148,
-      "probability": 0.5,
-      "name": "gold coin",
-      "min": 1,
-      "max": 95
-    },
-    {
-      "id": 2545,
-      "probability": 0.125,
-      "name": "poison arrow",
-      "min": 1,
-      "max": 12
-    },
-    {
-      "id": 2463,
-      "probability": 0.1,
-      "name": "plate armor"
-    },
-    {
-      "id": 2647,
-      "probability": 0.08,
-      "name": "plate legs"
-    },
-    {
-      "id": 2377,
-      "probability": 0.05,
-      "name": "two handed sword"
-    },
-    {
-      "id": 2457,
-      "probability": 0.05,
-      "name": "steel helmet"
-    },
-    {
-      "id": 2271,
-      "probability": 0.03571,
-      "name": "strong health potion"
-    },
-    {
-      "id": 2219,
-      "probability": 0.02,
-      "name": "spider silk"
-    },
-    {
-      "id": 2477,
-      "probability": 0.0087,
-      "name": "knight legs"
-    },
-    {
-      "id": 2169,
-      "probability": 0.0071
-    },
-    {
-      "id": 2476,
-      "probability": 0.005,
-      "name": "knight armor"
-    },
-    {
-      "id": 2171,
-      "probability": 0.0028,
-      "name": "platinum amulet"
-    }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

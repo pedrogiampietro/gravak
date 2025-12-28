@@ -1,131 +1,131 @@
 {
-  "creatureStatistics": {
-    "name": "Assassin",
-    "health": 175,
-    "maxHealth": 175,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 224,
-    "attack": 120,
-    "attackSpeed": 2000,
-    "defense": 17,
-    "outfit": {
-      "id": 152
+    "creatureStatistics": {
+        "name": "Assassin",
+        "health": 175,
+        "maxHealth": 175,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 112,
+        "attack": 120,
+        "attackSpeed": 2000,
+        "defense": 17,
+        "outfit": {
+            "id": 152
+        },
+        "armor": 17
     },
-    "armor": 17
-  },
-  "experience": 105,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "invisible",
-      "interval": 2000,
-      "chance": 0.1,
-      "duration": 2000,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 120
+    "experience": 105,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "physical",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 40,
-      "range": 7,
-      "shootEffect": "throwingstar"
-    },
-    {
-      "name": "poisoncondition",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 120,
-      "max": 160,
-      "range": 7,
-      "shootEffect": "poison",
-      "areaEffect": "poison"
-    }
-  ],
-  "elements": {
-    "physical": -10,
-    "death": -5
-  },
-  "immunities": {
-    "invisible": true
-  },
-  "sayings": {
-    "texts": [
-      "Die!",
-      "Feel the hand of death!",
-      "You are on my deathlist!"
+    "defenseSpells": [
+        {
+            "name": "invisible",
+            "interval": 2000,
+            "chance": 0.1,
+            "duration": 2000,
+            "areaEffect": "blueshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.83,
-      "name": "gold coin",
-      "min": 1,
-      "max": 50
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 120
+        },
+        {
+            "name": "physical",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 40,
+            "range": 7,
+            "shootEffect": "throwingstar"
+        },
+        {
+            "name": "poisoncondition",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 120,
+            "max": 160,
+            "range": 7,
+            "shootEffect": "poison",
+            "areaEffect": "poison"
+        }
+    ],
+    "elements": {
+        "physical": -10,
+        "death": -5
     },
-    {
-      "id": 2050,
-      "probability": 0.3,
-      "min": 1,
-      "max": 2
+    "immunities": {
+        "invisible": true
     },
-    {
-      "id": 2399,
-      "probability": 0.07,
-      "name": "Throwing Star",
-      "min": 1,
-      "max": 14
+    "sayings": {
+        "texts": [
+            "Die!",
+            "Feel the hand of death!",
+            "You are on my deathlist!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2457,
-      "probability": 0.0323,
-      "name": "steel helmet"
-    },
-    {
-      "id": 2510,
-      "probability": 0.019,
-      "name": "plate shield"
-    },
-    {
-      "id": 2513,
-      "probability": 0.016,
-      "name": "battle shield"
-    },
-    {
-      "id": 2145,
-      "probability": 0.0022,
-      "name": "small diamond"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.83,
+            "name": "gold coin",
+            "min": 1,
+            "max": 50
+        },
+        {
+            "id": 2050,
+            "probability": 0.3,
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 2399,
+            "probability": 0.07,
+            "name": "Throwing Star",
+            "min": 1,
+            "max": 14
+        },
+        {
+            "id": 2457,
+            "probability": 0.0323,
+            "name": "steel helmet"
+        },
+        {
+            "id": 2510,
+            "probability": 0.019,
+            "name": "plate shield"
+        },
+        {
+            "id": 2513,
+            "probability": 0.016,
+            "name": "battle shield"
+        },
+        {
+            "id": 2145,
+            "probability": 0.0022,
+            "name": "small diamond"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": true,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": true,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

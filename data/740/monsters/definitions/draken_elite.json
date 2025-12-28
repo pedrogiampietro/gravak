@@ -1,163 +1,163 @@
 {
-  "creatureStatistics": {
-    "name": "Draken Elite",
-    "health": 5550,
-    "maxHealth": 5550,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 250,
-    "attack": 354,
-    "attackSpeed": 2000,
-    "defense": 45,
-    "outfit": {
-      "id": 362
+    "creatureStatistics": {
+        "name": "Draken Elite",
+        "health": 5550,
+        "maxHealth": 5550,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 166,
+        "attack": 354,
+        "attackSpeed": 2000,
+        "defense": 45,
+        "outfit": {
+            "id": 362
+        },
+        "armor": 45
     },
-    "armor": 45
-  },
-  "experience": 4200,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 510,
-      "max": 600,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 354
+    "experience": 4200,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "fire",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 240,
-      "max": 550,
-      "length": 4,
-      "spread": 3,
-      "areaEffect": "explosion"
-    },
-    {
-      "name": "fire",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 200,
-      "max": 300,
-      "range": 7,
-      "target": true,
-      "shootEffect": "fire",
-      "areaEffect": "firearea"
-    },
-    {
-      "name": "earth",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 280,
-      "max": 410,
-      "radius": 4,
-      "target": true,
-      "areaEffect": "poff"
-    },
-    {
-      "name": "monster soulfire",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 0,
-      "max": 0
-    },
-    {
-      "name": "poisoncondition",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 250,
-      "max": 320,
-      "range": 7,
-      "target": true,
-      "shootEffect": "poison"
-    }
-  ],
-  "elements": {
-    "holy": 30,
-    "death": 30,
-    "energy": 40
-  },
-  "immunities": {
-    "fire": true,
-    "earth": true,
-    "invisible": true
-  },
-  "sayings": {
-    "texts": [
-      "For ze emperor!",
-      "You will die zhouzandz deazhz!"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 510,
+            "max": 600,
+            "areaEffect": "blueshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2145,
-      "probability": 0.0244,
-      "name": "small diamond",
-      "min": 1,
-      "max": 4
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 354
+        },
+        {
+            "name": "fire",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 240,
+            "max": 550,
+            "length": 4,
+            "spread": 3,
+            "areaEffect": "explosion"
+        },
+        {
+            "name": "fire",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 200,
+            "max": 300,
+            "range": 7,
+            "target": true,
+            "shootEffect": "fire",
+            "areaEffect": "firearea"
+        },
+        {
+            "name": "earth",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 280,
+            "max": 410,
+            "radius": 4,
+            "target": true,
+            "areaEffect": "poff"
+        },
+        {
+            "name": "monster soulfire",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 0,
+            "max": 0
+        },
+        {
+            "name": "poisoncondition",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 250,
+            "max": 320,
+            "range": 7,
+            "target": true,
+            "shootEffect": "poison"
+        }
+    ],
+    "elements": {
+        "holy": 30,
+        "death": 30,
+        "energy": 40
     },
-    {
-      "id": 2148,
-      "probability": 0.5,
-      "name": "gold coin",
-      "min": 1,
-      "max": 100
+    "immunities": {
+        "fire": true,
+        "earth": true,
+        "invisible": true
     },
-    {
-      "id": 2148,
-      "probability": 0.47,
-      "name": "gold coin",
-      "min": 1,
-      "max": 100
+    "sayings": {
+        "texts": [
+            "For ze emperor!",
+            "You will die zhouzandz deazhz!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2152,
-      "probability": 0.5036,
-      "name": "platinum coin",
-      "min": 1,
-      "max": 8
-    },
-    {
-      "id": 2666,
-      "probability": 0.30175,
-      "name": "meat"
-    },
-    {
-      "id": 2273,
-      "probability": 0.0934,
-      "name": "great mana potion",
-      "min": 1,
-      "max": 3
+    "loot": [
+        {
+            "id": 2145,
+            "probability": 0.0244,
+            "name": "small diamond",
+            "min": 1,
+            "max": 4
+        },
+        {
+            "id": 2148,
+            "probability": 0.5,
+            "name": "gold coin",
+            "min": 1,
+            "max": 100
+        },
+        {
+            "id": 2148,
+            "probability": 0.47,
+            "name": "gold coin",
+            "min": 1,
+            "max": 100
+        },
+        {
+            "id": 2152,
+            "probability": 0.5036,
+            "name": "platinum coin",
+            "min": 1,
+            "max": 8
+        },
+        {
+            "id": 2666,
+            "probability": 0.30175,
+            "name": "meat"
+        },
+        {
+            "id": 2273,
+            "probability": 0.0934,
+            "name": "great mana potion",
+            "min": 1,
+            "max": 3
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

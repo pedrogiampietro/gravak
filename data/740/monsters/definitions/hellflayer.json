@@ -1,336 +1,336 @@
 {
-  "creatureStatistics": {
-    "name": "Hellflayer",
-    "health": 14000,
-    "maxHealth": 14000,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 330,
-    "attack": 1000,
-    "attackSpeed": 2000,
-    "defense": 55,
-    "outfit": {
-      "id": 856
+    "creatureStatistics": {
+        "name": "Hellflayer",
+        "health": 14000,
+        "maxHealth": 14000,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 165,
+        "attack": 1000,
+        "attackSpeed": 2000,
+        "defense": 55,
+        "outfit": {
+            "id": 856
+        },
+        "armor": 55
     },
-    "armor": 55
-  },
-  "experience": 11000,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 0,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 80,
-      "max": 95,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 1000
+    "experience": 11000,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 0,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "fire",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 170,
-      "max": 300,
-      "range": 7,
-      "shootEffect": "poison"
-    },
-    {
-      "name": "physical explosion",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 0,
-      "max": 0
-    },
-    {
-      "name": "choking fear drown",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 0,
-      "max": 0
-    },
-    {
-      "name": "death",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 250,
-      "max": 500,
-      "radius": 4,
-      "target": true,
-      "shootEffect": "suddendeath",
-      "areaEffect": "mortarea"
-    },
-    {
-      "name": "lifedrain",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 50,
-      "max": 200,
-      "length": 8,
-      "spread": 0,
-      "areaEffect": "purpleenergy"
-    },
-    {
-      "name": "fire",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 300,
-      "max": 550,
-      "radius": 1,
-      "target": true,
-      "shootEffect": "fire",
-      "areaEffect": "fireattack"
-    },
-    {
-      "name": "warlock skill reducer",
-      "interval": 2000,
-      "chance": 0.05,
-      "min": 0,
-      "max": 0,
-      "range": 5
-    },
-    {
-      "name": "physical",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 300,
-      "max": 500,
-      "radius": 1,
-      "target": true,
-      "shootEffect": "explosion",
-      "areaEffect": "sleep"
-    }
-  ],
-  "elements": {
-    "energy": -5,
-    "earth": 20,
-    "fire": 70,
-    "ice": 5,
-    "holy": -5,
-    "death": 25
-  },
-  "immunities": {
-    "drown": true,
-    "lifedrain": true,
-    "paralyze": true,
-    "invisible": true,
-    "drunk": true
-  },
-  "sayings": {
-    "texts": [
-      "Your tainted soul belongs to us anyway!",
-      "You should consider bargaining for your life!"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 80,
+            "max": 95,
+            "areaEffect": "blueshimmer"
+        }
     ],
-    "slowness": 1,
-    "chance": 0.05
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.905,
-      "name": "gold coin",
-      "min": 1,
-      "max": 198
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 1000
+        },
+        {
+            "name": "fire",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 170,
+            "max": 300,
+            "range": 7,
+            "shootEffect": "poison"
+        },
+        {
+            "name": "physical explosion",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 0,
+            "max": 0
+        },
+        {
+            "name": "choking fear drown",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 0,
+            "max": 0
+        },
+        {
+            "name": "death",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 250,
+            "max": 500,
+            "radius": 4,
+            "target": true,
+            "shootEffect": "suddendeath",
+            "areaEffect": "mortarea"
+        },
+        {
+            "name": "lifedrain",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 50,
+            "max": 200,
+            "length": 8,
+            "spread": 0,
+            "areaEffect": "purpleenergy"
+        },
+        {
+            "name": "fire",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 300,
+            "max": 550,
+            "radius": 1,
+            "target": true,
+            "shootEffect": "fire",
+            "areaEffect": "fireattack"
+        },
+        {
+            "name": "warlock skill reducer",
+            "interval": 2000,
+            "chance": 0.05,
+            "min": 0,
+            "max": 0,
+            "range": 5
+        },
+        {
+            "name": "physical",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 300,
+            "max": 500,
+            "radius": 1,
+            "target": true,
+            "shootEffect": "explosion",
+            "areaEffect": "sleep"
+        }
+    ],
+    "elements": {
+        "energy": -5,
+        "earth": 20,
+        "fire": 70,
+        "ice": 5,
+        "holy": -5,
+        "death": 25
     },
-    {
-      "id": 2152,
-      "probability": 0.8917,
-      "name": "platinum coin",
-      "min": 1,
-      "max": 12
+    "immunities": {
+        "drown": true,
+        "lifedrain": true,
+        "paralyze": true,
+        "invisible": true,
+        "drunk": true
     },
-    {
-      "id": 6558,
-      "probability": 0.21195,
-      "name": "flask of demonic blood"
+    "sayings": {
+        "texts": [
+            "Your tainted soul belongs to us anyway!",
+            "You should consider bargaining for your life!"
+        ],
+        "slowness": 1,
+        "chance": 0.05
     },
-    {
-      "id": 6500,
-      "probability": 0.17627,
-      "name": "demonic essence"
-    },
-    {
-      "id": 7590,
-      "probability": 0.14798,
-      "name": "great mana potion",
-      "min": 1,
-      "max": 5
-    },
-    {
-      "id": 25385,
-      "probability": 0.14207,
-      "name": "pair of hellflayer horns"
-    },
-    {
-      "id": 8472,
-      "probability": 0.13215,
-      "name": "great spirit potion",
-      "min": 1,
-      "max": 5
-    },
-    {
-      "id": 8473,
-      "probability": 0.12413,
-      "name": "ultimate health potion",
-      "min": 1,
-      "max": 5
-    },
-    {
-      "id": 2147,
-      "probability": 0.07431,
-      "name": "small ruby",
-      "min": 1,
-      "max": 5
-    },
-    {
-      "id": 9970,
-      "probability": 0.07304,
-      "name": "small topaz",
-      "min": 1,
-      "max": 5
-    },
-    {
-      "id": 2145,
-      "probability": 0.07051,
-      "name": "small diamond",
-      "min": 1,
-      "max": 5
-    },
-    {
-      "id": 2149,
-      "probability": 0.06819,
-      "name": "small emerald",
-      "min": 1,
-      "max": 5
-    },
-    {
-      "id": 2150,
-      "probability": 0.06713,
-      "name": "small amethyst",
-      "min": 1,
-      "max": 5
-    },
-    {
-      "id": 9971,
-      "probability": 0.0589,
-      "name": "gold ingot",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 7632,
-      "probability": 0.03779,
-      "name": "giant shimmering pearl (green)"
-    },
-    {
-      "id": 2156,
-      "probability": 0.02111,
-      "name": "red gem"
-    },
-    {
-      "id": 2153,
-      "probability": 0.01182,
-      "name": "violet gem"
-    },
-    {
-      "id": 25383,
-      "probability": 0.00908,
-      "name": "rift lance"
-    },
-    {
-      "id": 7891,
-      "probability": 0.00887,
-      "name": "magma boots"
-    },
-    {
-      "id": 2155,
-      "probability": 0.00866,
-      "name": "green gem"
-    },
-    {
-      "id": 7894,
-      "probability": 0.00844,
-      "name": "magma legs"
-    },
-    {
-      "id": 7413,
-      "probability": 0.00718,
-      "name": "titan axe"
-    },
-    {
-      "id": 2466,
-      "probability": 0.00486,
-      "name": "golden armor"
-    },
-    {
-      "id": 25522,
-      "probability": 0.00464,
-      "name": "rift bow"
-    },
-    {
-      "id": 25523,
-      "probability": 0.00443,
-      "name": "rift crossbow"
-    },
-    {
-      "id": 2514,
-      "probability": 0.00422,
-      "name": "mastermind shield"
-    },
-    {
-      "id": 25382,
-      "probability": 0.00253,
-      "name": "rift shield"
-    },
-    {
-      "id": 5741,
-      "probability": 0.00253,
-      "name": "skull helmet"
-    },
-    {
-      "id": 2472,
-      "probability": 0.00232,
-      "name": "magic plate armor"
-    },
-    {
-      "id": 2136,
-      "probability": 0.00169,
-      "name": "demonbone amulet"
-    },
-    {
-      "id": 8902,
-      "probability": 0.00084,
-      "name": "spellbook of mind control"
-    },
-    {
-      "id": 2452,
-      "probability": 0.00042,
-      "name": "heavy mace"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.905,
+            "name": "gold coin",
+            "min": 1,
+            "max": 198
+        },
+        {
+            "id": 2152,
+            "probability": 0.8917,
+            "name": "platinum coin",
+            "min": 1,
+            "max": 12
+        },
+        {
+            "id": 6558,
+            "probability": 0.21195,
+            "name": "flask of demonic blood"
+        },
+        {
+            "id": 6500,
+            "probability": 0.17627,
+            "name": "demonic essence"
+        },
+        {
+            "id": 7590,
+            "probability": 0.14798,
+            "name": "great mana potion",
+            "min": 1,
+            "max": 5
+        },
+        {
+            "id": 25385,
+            "probability": 0.14207,
+            "name": "pair of hellflayer horns"
+        },
+        {
+            "id": 8472,
+            "probability": 0.13215,
+            "name": "great spirit potion",
+            "min": 1,
+            "max": 5
+        },
+        {
+            "id": 8473,
+            "probability": 0.12413,
+            "name": "ultimate health potion",
+            "min": 1,
+            "max": 5
+        },
+        {
+            "id": 2147,
+            "probability": 0.07431,
+            "name": "small ruby",
+            "min": 1,
+            "max": 5
+        },
+        {
+            "id": 9970,
+            "probability": 0.07304,
+            "name": "small topaz",
+            "min": 1,
+            "max": 5
+        },
+        {
+            "id": 2145,
+            "probability": 0.07051,
+            "name": "small diamond",
+            "min": 1,
+            "max": 5
+        },
+        {
+            "id": 2149,
+            "probability": 0.06819,
+            "name": "small emerald",
+            "min": 1,
+            "max": 5
+        },
+        {
+            "id": 2150,
+            "probability": 0.06713,
+            "name": "small amethyst",
+            "min": 1,
+            "max": 5
+        },
+        {
+            "id": 9971,
+            "probability": 0.0589,
+            "name": "gold ingot",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 7632,
+            "probability": 0.03779,
+            "name": "giant shimmering pearl (green)"
+        },
+        {
+            "id": 2156,
+            "probability": 0.02111,
+            "name": "red gem"
+        },
+        {
+            "id": 2153,
+            "probability": 0.01182,
+            "name": "violet gem"
+        },
+        {
+            "id": 25383,
+            "probability": 0.00908,
+            "name": "rift lance"
+        },
+        {
+            "id": 7891,
+            "probability": 0.00887,
+            "name": "magma boots"
+        },
+        {
+            "id": 2155,
+            "probability": 0.00866,
+            "name": "green gem"
+        },
+        {
+            "id": 7894,
+            "probability": 0.00844,
+            "name": "magma legs"
+        },
+        {
+            "id": 7413,
+            "probability": 0.00718,
+            "name": "titan axe"
+        },
+        {
+            "id": 2466,
+            "probability": 0.00486,
+            "name": "golden armor"
+        },
+        {
+            "id": 25522,
+            "probability": 0.00464,
+            "name": "rift bow"
+        },
+        {
+            "id": 25523,
+            "probability": 0.00443,
+            "name": "rift crossbow"
+        },
+        {
+            "id": 2514,
+            "probability": 0.00422,
+            "name": "mastermind shield"
+        },
+        {
+            "id": 25382,
+            "probability": 0.00253,
+            "name": "rift shield"
+        },
+        {
+            "id": 5741,
+            "probability": 0.00253,
+            "name": "skull helmet"
+        },
+        {
+            "id": 2472,
+            "probability": 0.00232,
+            "name": "magic plate armor"
+        },
+        {
+            "id": 2136,
+            "probability": 0.00169,
+            "name": "demonbone amulet"
+        },
+        {
+            "id": 8902,
+            "probability": 0.00084,
+            "name": "spellbook of mind control"
+        },
+        {
+            "id": 2452,
+            "probability": 0.00042,
+            "name": "heavy mace"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": false,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": false,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

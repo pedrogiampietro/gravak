@@ -1,238 +1,238 @@
 {
-  "creatureStatistics": {
-    "name": "Phantasm",
-    "health": 3950,
-    "maxHealth": 3950,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 340,
-    "attack": 475,
-    "attackSpeed": 2000,
-    "defense": 80,
-    "outfit": {
-      "id": 241
+    "creatureStatistics": {
+        "name": "Phantasm",
+        "health": 3950,
+        "maxHealth": 3950,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 170,
+        "attack": 475,
+        "attackSpeed": 2000,
+        "defense": 80,
+        "outfit": {
+            "id": 241
+        },
+        "armor": 80
     },
-    "armor": 80
-  },
-  "experience": 4400,
-  "corpse": 2813,
-  "fluidType": 2,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 350,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.3,
-      "min": 228,
-      "max": 449,
-      "areaEffect": "blueshimmer"
+    "experience": 4400,
+    "corpse": 2813,
+    "fluidType": 2,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 350,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.1,
-      "speedChange": 500,
-      "duration": 6000,
-      "areaEffect": "redshimmer"
-    },
-    {
-      "name": "invisible",
-      "interval": 2000,
-      "chance": 0.25,
-      "duration": 8000,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 475
-    },
-    {
-      "name": "death",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 250,
-      "max": 610,
-      "range": 7,
-      "shootEffect": "suddendeath",
-      "areaEffect": "smallclouds"
-    },
-    {
-      "name": "manadrain",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 5,
-      "max": 80,
-      "radius": 3,
-      "target": false,
-      "areaEffect": "yellowbubble"
-    },
-    {
-      "name": "phantasm drown",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 0
-    },
-    {
-      "name": "drunk",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 0,
-      "radius": 5,
-      "target": false,
-      "duration": 6000,
-      "areaEffect": "redshimmer"
-    }
-  ],
-  "elements": {
-    "earth": 20,
-    "ice": 20,
-    "holy": -10,
-    "fire": -10,
-    "energy": -10
-  },
-  "immunities": {
-    "paralyze": true,
-    "invisible": true,
-    "death": true,
-    "lifedrain": true,
-    "physical": true
-  },
-  "summons": [
-    {
-      "name": "Phantasm Summon",
-      "interval": 2000,
-      "chance": 0.2,
-      "maxSummons": 4
-    }
-  ],
-  "sayings": {
-    "texts": [
-      "Oh my, you forgot to put your pants on!",
-      "Weeheeheeheehee!",
-      "Its nothing but a dream!",
-      "Give in!"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.3,
+            "min": 228,
+            "max": 449,
+            "areaEffect": "blueshimmer"
+        },
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.1,
+            "speedChange": 500,
+            "duration": 6000,
+            "areaEffect": "redshimmer"
+        },
+        {
+            "name": "invisible",
+            "interval": 2000,
+            "chance": 0.25,
+            "duration": 8000,
+            "areaEffect": "blueshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.87839,
-      "name": "gold coin",
-      "min": 1,
-      "max": 238
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 475
+        },
+        {
+            "name": "death",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 250,
+            "max": 610,
+            "range": 7,
+            "shootEffect": "suddendeath",
+            "areaEffect": "smallclouds"
+        },
+        {
+            "name": "manadrain",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 5,
+            "max": 80,
+            "radius": 3,
+            "target": false,
+            "areaEffect": "yellowbubble"
+        },
+        {
+            "name": "phantasm drown",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 0
+        },
+        {
+            "name": "drunk",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 0,
+            "radius": 5,
+            "target": false,
+            "duration": 6000,
+            "areaEffect": "redshimmer"
+        }
+    ],
+    "elements": {
+        "earth": 20,
+        "ice": 20,
+        "holy": -10,
+        "fire": -10,
+        "energy": -10
     },
-    {
-      "id": 2152,
-      "probability": 0.87839,
-      "name": "platinum coin",
-      "min": 1,
-      "max": 4
+    "immunities": {
+        "paralyze": true,
+        "invisible": true,
+        "death": true,
+        "lifedrain": true,
+        "physical": true
     },
-    {
-      "id": 7590,
-      "probability": 0.30634,
-      "name": "great mana potion",
-      "min": 1,
-      "max": 2
+    "summons": [
+        {
+            "name": "Phantasm Summon",
+            "interval": 2000,
+            "chance": 0.2,
+            "maxSummons": 4
+        }
+    ],
+    "sayings": {
+        "texts": [
+            "Oh my, you forgot to put your pants on!",
+            "Weeheeheeheehee!",
+            "Its nothing but a dream!",
+            "Give in!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2804,
-      "probability": 0.25739,
-      "name": "shadow herb"
-    },
-    {
-      "id": 2260,
-      "probability": 0.21552,
-      "name": "blank rune",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 8473,
-      "probability": 0.17518,
-      "name": "ultimate health potion"
-    },
-    {
-      "id": 6500,
-      "probability": 0.16964,
-      "name": "demonic essence"
-    },
-    {
-      "id": 2150,
-      "probability": 0.14286,
-      "name": "small amethyst",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 9970,
-      "probability": 0.13147,
-      "name": "small topaz",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 2147,
-      "probability": 0.11576,
-      "name": "small ruby",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 2149,
-      "probability": 0.11115,
-      "name": "small emerald",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 7451,
-      "probability": 0.00862,
-      "name": "shadow sceptre"
-    },
-    {
-      "id": 2165,
-      "probability": 0.008,
-      "name": "stealth ring"
-    },
-    {
-      "id": 2487,
-      "probability": 0.00708,
-      "name": "crown armor"
-    },
-    {
-      "id": 7414,
-      "probability": 0.00493,
-      "name": "abyss hammer"
-    },
-    {
-      "id": 6300,
-      "probability": 0.00369,
-      "name": "death ring"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.87839,
+            "name": "gold coin",
+            "min": 1,
+            "max": 238
+        },
+        {
+            "id": 2152,
+            "probability": 0.87839,
+            "name": "platinum coin",
+            "min": 1,
+            "max": 4
+        },
+        {
+            "id": 7590,
+            "probability": 0.30634,
+            "name": "great mana potion",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 2804,
+            "probability": 0.25739,
+            "name": "shadow herb"
+        },
+        {
+            "id": 2260,
+            "probability": 0.21552,
+            "name": "blank rune",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 8473,
+            "probability": 0.17518,
+            "name": "ultimate health potion"
+        },
+        {
+            "id": 6500,
+            "probability": 0.16964,
+            "name": "demonic essence"
+        },
+        {
+            "id": 2150,
+            "probability": 0.14286,
+            "name": "small amethyst",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 9970,
+            "probability": 0.13147,
+            "name": "small topaz",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 2147,
+            "probability": 0.11576,
+            "name": "small ruby",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 2149,
+            "probability": 0.11115,
+            "name": "small emerald",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 7451,
+            "probability": 0.00862,
+            "name": "shadow sceptre"
+        },
+        {
+            "id": 2165,
+            "probability": 0.008,
+            "name": "stealth ring"
+        },
+        {
+            "id": 2487,
+            "probability": 0.00708,
+            "name": "crown armor"
+        },
+        {
+            "id": 7414,
+            "probability": 0.00493,
+            "name": "abyss hammer"
+        },
+        {
+            "id": 6300,
+            "probability": 0.00369,
+            "name": "death ring"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

@@ -1,115 +1,115 @@
 {
-  "creatureStatistics": {
-    "name": "Yeti",
-    "health": 950,
-    "maxHealth": 950,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 250,
-    "attack": 200,
-    "attackSpeed": 2000,
-    "defense": 28,
-    "outfit": {
-      "id": 110
+    "creatureStatistics": {
+        "name": "Yeti",
+        "health": 950,
+        "maxHealth": 950,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 125,
+        "attack": 200,
+        "attackSpeed": 2000,
+        "defense": 28,
+        "outfit": {
+            "id": 110
+        },
+        "armor": 28
     },
-    "armor": 28
-  },
-  "experience": 460,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 200
+    "experience": 460,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "physical",
-      "interval": 1000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 180,
-      "range": 7,
-      "shootEffect": "snowball",
-      "areaEffect": "poff"
-    },
-    {
-      "name": "energy",
-      "interval": 1000,
-      "chance": 0.12,
-      "min": 0,
-      "max": 175,
-      "length": 3,
-      "spread": 3,
-      "areaEffect": "poff"
-    }
-  ],
-  "elements": {
-    "ice": -1
-  },
-  "immunities": {
-    "invisible": true
-  },
-  "sayings": {
-    "texts": [
-      "Yooodelaaahooohooo!",
-      "Yooodelaaaheeeheee!"
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 200
+        },
+        {
+            "name": "physical",
+            "interval": 1000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 180,
+            "range": 7,
+            "shootEffect": "snowball",
+            "areaEffect": "poff"
+        },
+        {
+            "name": "energy",
+            "interval": 1000,
+            "chance": 0.12,
+            "min": 0,
+            "max": 175,
+            "length": 3,
+            "spread": 3,
+            "areaEffect": "poff"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.7931,
-      "name": "gold coin",
-      "min": 1,
-      "max": 27
+    "elements": {
+        "ice": -1
     },
-    {
-      "id": 2666,
-      "probability": 0.71264,
-      "name": "meat"
+    "immunities": {
+        "invisible": true
     },
-    {
-      "id": 2111,
-      "probability": 0.52874,
-      "name": "snowball",
-      "min": 1,
-      "max": 22
+    "sayings": {
+        "texts": [
+            "Yooodelaaahooohooo!",
+            "Yooodelaaaheeeheee!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2671,
-      "probability": 0.3908,
-      "name": "ham"
-    },
-    {
-      "id": 2644,
-      "probability": 0.01149,
-      "name": "bunnyslippers"
-    },
-    {
-      "id": 2129,
-      "probability": 0.01149,
-      "name": "wolf tooth chain"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.7931,
+            "name": "gold coin",
+            "min": 1,
+            "max": 27
+        },
+        {
+            "id": 2666,
+            "probability": 0.71264,
+            "name": "meat"
+        },
+        {
+            "id": 2111,
+            "probability": 0.52874,
+            "name": "snowball",
+            "min": 1,
+            "max": 22
+        },
+        {
+            "id": 2671,
+            "probability": 0.3908,
+            "name": "ham"
+        },
+        {
+            "id": 2644,
+            "probability": 0.01149,
+            "name": "bunnyslippers"
+        },
+        {
+            "id": 2129,
+            "probability": 0.01149,
+            "name": "wolf tooth chain"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

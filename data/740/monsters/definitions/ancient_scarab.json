@@ -1,154 +1,154 @@
 {
-  "creatureStatistics": {
-    "name": "Ancient Scarab",
-    "health": 1000,
-    "maxHealth": 1000,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 218,
-    "attack": 210,
-    "attackSpeed": 2000,
-    "defense": 36,
-    "outfit": {
-      "id": 79
+    "creatureStatistics": {
+        "name": "Ancient Scarab",
+        "health": 1000,
+        "maxHealth": 1000,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 109,
+        "attack": 210,
+        "attackSpeed": 2000,
+        "defense": 36,
+        "outfit": {
+            "id": 79
+        },
+        "armor": 36
     },
-    "armor": 36
-  },
-  "experience": 720,
-  "corpse": 2813,
-  "fluidType": 3,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.15,
-      "speedChange": 260,
-      "duration": 5000,
-      "areaEffect": "redshimmer"
+    "experience": 720,
+    "corpse": 2813,
+    "fluidType": 3,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
+    },
+    "defenseSpells": [
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.15,
+            "speedChange": 260,
+            "duration": 5000,
+            "areaEffect": "redshimmer"
+        }
+    ],
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 210
+        },
+        {
+            "name": "earth",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 15,
+            "max": 145,
+            "range": 7,
+            "shootEffect": "poison",
+            "areaEffect": "poison"
+        },
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 0,
+            "range": 7,
+            "speedChange": -700,
+            "duration": 25000,
+            "shootEffect": "poison",
+            "areaEffect": "poison"
+        },
+        {
+            "name": "poisoncondition",
+            "interval": 2000,
+            "chance": 0.3,
+            "min": 440,
+            "max": 520,
+            "radius": 5,
+            "target": false,
+            "areaEffect": "poison"
+        }
+    ],
+    "elements": {
+        "energy": 20,
+        "physical": 10,
+        "fire": -20,
+        "ice": -5
+    },
+    "immunities": {
+        "earth": true,
+        "paralyze": true,
+        "invisible": true
+    },
+    "summons": [
+        {
+            "name": "Larva",
+            "interval": 2000,
+            "chance": 0.1,
+            "maxSummons": 3
+        }
+    ],
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.5,
+            "name": "gold coin",
+            "min": 1,
+            "max": 100
+        },
+        {
+            "id": 2148,
+            "probability": 0.5,
+            "name": "gold coin",
+            "min": 1,
+            "max": 87
+        },
+        {
+            "id": 2162,
+            "probability": 0.103
+        },
+        {
+            "id": 2149,
+            "probability": 0.06,
+            "name": "small emerald",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 2150,
+            "probability": 0.06,
+            "name": "small amethyst",
+            "min": 1,
+            "max": 4
+        },
+        {
+            "id": 2463,
+            "probability": 0.05,
+            "name": "plate armor"
+        },
+        {
+            "id": 2142,
+            "probability": 0.0267
+        },
+        {
+            "id": 2271,
+            "probability": 0.0166,
+            "name": "strong health potion"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 210
-    },
-    {
-      "name": "earth",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 15,
-      "max": 145,
-      "range": 7,
-      "shootEffect": "poison",
-      "areaEffect": "poison"
-    },
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 0,
-      "range": 7,
-      "speedChange": -700,
-      "duration": 25000,
-      "shootEffect": "poison",
-      "areaEffect": "poison"
-    },
-    {
-      "name": "poisoncondition",
-      "interval": 2000,
-      "chance": 0.3,
-      "min": 440,
-      "max": 520,
-      "radius": 5,
-      "target": false,
-      "areaEffect": "poison"
-    }
-  ],
-  "elements": {
-    "energy": 20,
-    "physical": 10,
-    "fire": -20,
-    "ice": -5
-  },
-  "immunities": {
-    "earth": true,
-    "paralyze": true,
-    "invisible": true
-  },
-  "summons": [
-    {
-      "name": "Larva",
-      "interval": 2000,
-      "chance": 0.1,
-      "maxSummons": 3
-    }
-  ],
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.5,
-      "name": "gold coin",
-      "min": 1,
-      "max": 100
-    },
-    {
-      "id": 2148,
-      "probability": 0.5,
-      "name": "gold coin",
-      "min": 1,
-      "max": 87
-    },
-    {
-      "id": 2162,
-      "probability": 0.103
-    },
-    {
-      "id": 2149,
-      "probability": 0.06,
-      "name": "small emerald",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 2150,
-      "probability": 0.06,
-      "name": "small amethyst",
-      "min": 1,
-      "max": 4
-    },
-    {
-      "id": 2463,
-      "probability": 0.05,
-      "name": "plate armor"
-    },
-    {
-      "id": 2142,
-      "probability": 0.0267
-    },
-    {
-      "id": 2271,
-      "probability": 0.0166,
-      "name": "strong health potion"
-    }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

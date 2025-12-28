@@ -1,129 +1,129 @@
 {
-  "creatureStatistics": {
-    "name": "Walker",
-    "health": 3000,
-    "maxHealth": 3000,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 300,
-    "attack": 175,
-    "attackSpeed": 2000,
-    "defense": 47,
-    "outfit": {
-      "id": 605
+    "creatureStatistics": {
+        "name": "Walker",
+        "health": 3000,
+        "maxHealth": 3000,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 150,
+        "attack": 175,
+        "attackSpeed": 2000,
+        "defense": 47,
+        "outfit": {
+            "id": 605
+        },
+        "armor": 47
     },
-    "armor": 47
-  },
-  "experience": 2200,
-  "corpse": 2813,
-  "fluidType": 3,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 175
+    "experience": 2200,
+    "corpse": 2813,
+    "fluidType": 3,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "fire",
-      "interval": 2000,
-      "chance": 0.17,
-      "min": 125,
-      "max": 245,
-      "length": 8,
-      "spread": 0,
-      "areaEffect": "explosion"
-    }
-  ],
-  "elements": {
-    "fire": 35,
-    "physical": 5,
-    "death": 15,
-    "ice": 5,
-    "earth": 50,
-    "holy": 40
-  },
-  "immunities": {
-    "invisible": true,
-    "paralyze": true,
-    "lifedrain": true
-  },
-  "sayings": {
-    "texts": [
-      "?"
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 175
+        },
+        {
+            "name": "fire",
+            "interval": 2000,
+            "chance": 0.17,
+            "min": 125,
+            "max": 245,
+            "length": 8,
+            "spread": 0,
+            "areaEffect": "explosion"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.5,
-      "name": "gold coin",
-      "min": 1,
-      "max": 100
+    "elements": {
+        "fire": 35,
+        "physical": 5,
+        "death": 15,
+        "ice": 5,
+        "earth": 50,
+        "holy": 40
     },
-    {
-      "id": 2148,
-      "probability": 0.5,
-      "name": "gold coin",
-      "min": 1,
-      "max": 99
+    "immunities": {
+        "invisible": true,
+        "paralyze": true,
+        "lifedrain": true
     },
-    {
-      "id": 2152,
-      "probability": 0.52,
-      "name": "platinum coin",
-      "min": 1,
-      "max": 3
+    "sayings": {
+        "texts": [
+            "?"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2144,
-      "probability": 0.1,
-      "name": "small topaz",
-      "min": 1,
-      "max": 6
-    },
-    {
-      "id": 2274,
-      "probability": 0.08,
-      "name": "great health potion"
-    },
-    {
-      "id": 2150,
-      "probability": 0.045,
-      "name": "small amethyst",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 2149,
-      "probability": 0.045,
-      "name": "small emerald",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 2645,
-      "probability": 0.0052,
-      "name": "steel boots"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.5,
+            "name": "gold coin",
+            "min": 1,
+            "max": 100
+        },
+        {
+            "id": 2148,
+            "probability": 0.5,
+            "name": "gold coin",
+            "min": 1,
+            "max": 99
+        },
+        {
+            "id": 2152,
+            "probability": 0.52,
+            "name": "platinum coin",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 2144,
+            "probability": 0.1,
+            "name": "small topaz",
+            "min": 1,
+            "max": 6
+        },
+        {
+            "id": 2274,
+            "probability": 0.08,
+            "name": "great health potion"
+        },
+        {
+            "id": 2150,
+            "probability": 0.045,
+            "name": "small amethyst",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 2149,
+            "probability": 0.045,
+            "name": "small emerald",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 2645,
+            "probability": 0.0052,
+            "name": "steel boots"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

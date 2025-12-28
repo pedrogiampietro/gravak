@@ -1,227 +1,227 @@
 {
-  "creatureStatistics": {
-    "name": "Werebadger",
-    "health": 1700,
-    "maxHealth": 1700,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 260,
-    "attack": 170,
-    "attackSpeed": 2000,
-    "defense": 31,
-    "outfit": {
-      "id": 729
+    "creatureStatistics": {
+        "name": "Werebadger",
+        "health": 1700,
+        "maxHealth": 1700,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 130,
+        "attack": 170,
+        "attackSpeed": 2000,
+        "defense": 31,
+        "outfit": {
+            "id": 729
+        },
+        "armor": 31
     },
-    "armor": 31
-  },
-  "experience": 1600,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.25,
-      "min": 50,
-      "max": 100,
-      "areaEffect": "blueshimmer"
+    "experience": 1600,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "invisible",
-      "interval": 2000,
-      "chance": 0.2,
-      "duration": 2000,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 170
-    },
-    {
-      "name": "lifedrain",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 21,
-      "max": 150,
-      "range": 7,
-      "target": true,
-      "shootEffect": "earth",
-      "areaEffect": "carniphila"
-    },
-    {
-      "name": "earth",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 10,
-      "max": 100,
-      "length": 8,
-      "spread": 3,
-      "areaEffect": "carniphila"
-    },
-    {
-      "name": "speed",
-      "interval": 4000,
-      "chance": 0.2,
-      "min": 0,
-      "max": 0,
-      "radius": 7,
-      "target": true,
-      "speedChange": -100,
-      "areaEffect": "poff"
-    }
-  ],
-  "elements": {
-    "physical": 5,
-    "energy": 10,
-    "earth": 50,
-    "fire": -5,
-    "ice": -5,
-    "holy": -5,
-    "death": 40
-  },
-  "immunities": {
-    "paralyze": true,
-    "invisible": true,
-    "drunk": true
-  },
-  "summons": [
-    {
-      "name": "Badger",
-      "interval": 2000,
-      "chance": 0.25,
-      "maxSummons": 2
-    }
-  ],
-  "sayings": {
-    "texts": [
-      "SNUFFLE",
-      "Sniff Sniff"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.25,
+            "min": 50,
+            "max": 100,
+            "areaEffect": "blueshimmer"
+        },
+        {
+            "name": "invisible",
+            "interval": 2000,
+            "chance": 0.2,
+            "duration": 2000,
+            "areaEffect": "blueshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2152,
-      "probability": 1,
-      "name": "platinum coin",
-      "min": 1,
-      "max": 3
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 170
+        },
+        {
+            "name": "lifedrain",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 21,
+            "max": 150,
+            "range": 7,
+            "target": true,
+            "shootEffect": "earth",
+            "areaEffect": "carniphila"
+        },
+        {
+            "name": "earth",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 10,
+            "max": 100,
+            "length": 8,
+            "spread": 3,
+            "areaEffect": "carniphila"
+        },
+        {
+            "name": "speed",
+            "interval": 4000,
+            "chance": 0.2,
+            "min": 0,
+            "max": 0,
+            "radius": 7,
+            "target": true,
+            "speedChange": -100,
+            "areaEffect": "poff"
+        }
+    ],
+    "elements": {
+        "physical": 5,
+        "energy": 10,
+        "earth": 50,
+        "fire": -5,
+        "ice": -5,
+        "holy": -5,
+        "death": 40
     },
-    {
-      "id": 2148,
-      "probability": 0.80742,
-      "name": "gold coin",
-      "min": 1,
-      "max": 75
+    "immunities": {
+        "paralyze": true,
+        "invisible": true,
+        "drunk": true
     },
-    {
-      "id": 8845,
-      "probability": 0.25432,
-      "name": "beetroot"
+    "summons": [
+        {
+            "name": "Badger",
+            "interval": 2000,
+            "chance": 0.25,
+            "maxSummons": 2
+        }
+    ],
+    "sayings": {
+        "texts": [
+            "SNUFFLE",
+            "Sniff Sniff"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 24707,
-      "probability": 0.15068,
-      "name": "werebadger claws"
-    },
-    {
-      "id": 24711,
-      "probability": 0.14125,
-      "name": "werebadger skull"
-    },
-    {
-      "id": 2789,
-      "probability": 0.07473,
-      "name": "brown mushroom"
-    },
-    {
-      "id": 7620,
-      "probability": 0.05231,
-      "name": "mana potion"
-    },
-    {
-      "id": 2805,
-      "probability": 0.05096,
-      "name": "troll green"
-    },
-    {
-      "id": 7589,
-      "probability": 0.03822,
-      "name": "strong mana potion"
-    },
-    {
-      "id": 7590,
-      "probability": 0.02034,
-      "name": "great mana potion"
-    },
-    {
-      "id": 24739,
-      "probability": 0.01985,
-      "name": "moonlight crystals"
-    },
-    {
-      "id": 7762,
-      "probability": 0.01642,
-      "name": "small enchanted amethyst",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 2214,
-      "probability": 0.00956,
-      "name": "ring of healing"
-    },
-    {
-      "id": 24742,
-      "probability": 0.00882,
-      "name": "badger boots"
-    },
-    {
-      "id": 24716,
-      "probability": 0.00625,
-      "name": "werewolf amulet"
-    },
-    {
-      "id": 2171,
-      "probability": 0.00551,
-      "name": "platinum amulet"
-    },
-    {
-      "id": 8910,
-      "probability": 0.00392,
-      "name": "underworld rod"
-    },
-    {
-      "id": 8922,
-      "probability": 0.0038,
-      "name": "wand of voodoo"
-    },
-    {
-      "id": 24757,
-      "probability": 0.00306,
-      "name": "werebadger trophy"
+    "loot": [
+        {
+            "id": 2152,
+            "probability": 1,
+            "name": "platinum coin",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 2148,
+            "probability": 0.80742,
+            "name": "gold coin",
+            "min": 1,
+            "max": 75
+        },
+        {
+            "id": 8845,
+            "probability": 0.25432,
+            "name": "beetroot"
+        },
+        {
+            "id": 24707,
+            "probability": 0.15068,
+            "name": "werebadger claws"
+        },
+        {
+            "id": 24711,
+            "probability": 0.14125,
+            "name": "werebadger skull"
+        },
+        {
+            "id": 2789,
+            "probability": 0.07473,
+            "name": "brown mushroom"
+        },
+        {
+            "id": 7620,
+            "probability": 0.05231,
+            "name": "mana potion"
+        },
+        {
+            "id": 2805,
+            "probability": 0.05096,
+            "name": "troll green"
+        },
+        {
+            "id": 7589,
+            "probability": 0.03822,
+            "name": "strong mana potion"
+        },
+        {
+            "id": 7590,
+            "probability": 0.02034,
+            "name": "great mana potion"
+        },
+        {
+            "id": 24739,
+            "probability": 0.01985,
+            "name": "moonlight crystals"
+        },
+        {
+            "id": 7762,
+            "probability": 0.01642,
+            "name": "small enchanted amethyst",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 2214,
+            "probability": 0.00956,
+            "name": "ring of healing"
+        },
+        {
+            "id": 24742,
+            "probability": 0.00882,
+            "name": "badger boots"
+        },
+        {
+            "id": 24716,
+            "probability": 0.00625,
+            "name": "werewolf amulet"
+        },
+        {
+            "id": 2171,
+            "probability": 0.00551,
+            "name": "platinum amulet"
+        },
+        {
+            "id": 8910,
+            "probability": 0.00392,
+            "name": "underworld rod"
+        },
+        {
+            "id": 8922,
+            "probability": 0.0038,
+            "name": "wand of voodoo"
+        },
+        {
+            "id": 24757,
+            "probability": 0.00306,
+            "name": "werebadger trophy"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

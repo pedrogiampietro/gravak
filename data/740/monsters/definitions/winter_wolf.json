@@ -1,68 +1,68 @@
 {
-  "creatureStatistics": {
-    "name": "Winter Wolf",
-    "health": 30,
-    "maxHealth": 30,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 170,
-    "attack": 20,
-    "attackSpeed": 2000,
-    "defense": 2,
-    "outfit": {
-      "id": 52
+    "creatureStatistics": {
+        "name": "Winter Wolf",
+        "health": 30,
+        "maxHealth": 30,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 85,
+        "attack": 20,
+        "attackSpeed": 2000,
+        "defense": 2,
+        "outfit": {
+            "id": 52
+        },
+        "armor": 2
     },
-    "armor": 2
-  },
-  "experience": 20,
-  "corpse": 2826,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": false,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 20
-    }
-  ],
-  "elements": {
-    "ice": 20,
-    "fire": 10,
-    "holy": 10,
-    "energy": -5,
-    "death": -10
-  },
-  "sayings": {
-    "texts": [
-      "Yoooohhuuuu!"
+    "experience": 20,
+    "corpse": 2826,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": false,
+        "senseInvisible": false
+    },
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 20
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2666,
-      "probability": 0.3,
-      "name": "meat",
-      "min": 1,
-      "max": 2
+    "elements": {
+        "ice": 20,
+        "fire": 10,
+        "holy": 10,
+        "energy": -5,
+        "death": -10
+    },
+    "sayings": {
+        "texts": [
+            "Yoooohhuuuu!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
+    },
+    "loot": [
+        {
+            "id": 2666,
+            "probability": 0.3,
+            "name": "meat",
+            "min": 1,
+            "max": 2
+        }
+    ],
+    "flags": {
+        "summonable": true,
+        "attackable": true,
+        "convinceable": true,
+        "pushable": true,
+        "canPushItems": false,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": true,
-    "attackable": true,
-    "convinceable": true,
-    "pushable": true,
-    "canPushItems": false,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

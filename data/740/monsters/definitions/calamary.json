@@ -1,54 +1,54 @@
 {
-  "creatureStatistics": {
-    "name": "Calamary",
-    "health": 75,
-    "maxHealth": 75,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 160,
-    "attack": 0,
-    "attackSpeed": 2000,
-    "defense": 0,
-    "outfit": {
-      "id": 451
+    "creatureStatistics": {
+        "name": "Calamary",
+        "health": 75,
+        "maxHealth": 75,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 100,
+        "attack": 0,
+        "attackSpeed": 2000,
+        "defense": 0,
+        "outfit": {
+            "id": 451
+        }
+    },
+    "experience": 0,
+    "corpse": 2813,
+    "fluidType": 2,
+    "behaviour": {
+        "type": 0,
+        "fleeHealth": 75,
+        "openDoors": true,
+        "senseInvisible": true
+    },
+    "elements": {
+        "energy": -5,
+        "physical": -5
+    },
+    "immunities": {
+        "ice": true,
+        "paralyze": true,
+        "drown": true,
+        "fire": true
+    },
+    "sayings": {
+        "texts": [
+            "Bubble!",
+            "Bobble!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
+    },
+    "loot": [],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": true,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  },
-  "experience": 0,
-  "corpse": 2813,
-  "fluidType": 2,
-  "behaviour": {
-    "type": 0,
-    "fleeHealth": 75,
-    "openDoors": true,
-    "senseInvisible": true
-  },
-  "elements": {
-    "energy": -5,
-    "physical": -5
-  },
-  "immunities": {
-    "ice": true,
-    "paralyze": true,
-    "drown": true,
-    "fire": true
-  },
-  "sayings": {
-    "texts": [
-      "Bubble!",
-      "Bobble!"
-    ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": true,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

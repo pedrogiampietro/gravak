@@ -1,65 +1,65 @@
 {
-  "creatureStatistics": {
-    "name": "Troll Guard",
-    "health": 60,
-    "maxHealth": 60,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 180,
-    "attack": 15,
-    "attackSpeed": 2000,
-    "defense": 2,
-    "outfit": {
-      "id": 281
+    "creatureStatistics": {
+        "name": "Troll Guard",
+        "health": 60,
+        "maxHealth": 60,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 63,
+        "attack": 15,
+        "attackSpeed": 2000,
+        "defense": 2,
+        "outfit": {
+            "id": 281
+        },
+        "armor": 1
     },
-    "armor": 1
-  },
-  "experience": 25,
-  "corpse": 2806,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 17,
-    "openDoors": false,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 15
+    "experience": 25,
+    "corpse": 2806,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 17,
+        "openDoors": false,
+        "senseInvisible": false
+    },
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 15
+        }
+    ],
+    "loot": [
+        {
+            "id": 2120,
+            "probability": 0.1
+        },
+        {
+            "id": 2148,
+            "probability": 0.58,
+            "name": "gold coin",
+            "min": 1,
+            "max": 12
+        },
+        {
+            "id": 2666,
+            "probability": 0.14,
+            "name": "meat",
+            "min": 1,
+            "max": 2
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": true,
+        "canPushItems": false,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "loot": [
-    {
-      "id": 2120,
-      "probability": 0.1
-    },
-    {
-      "id": 2148,
-      "probability": 0.58,
-      "name": "gold coin",
-      "min": 1,
-      "max": 12
-    },
-    {
-      "id": 2666,
-      "probability": 0.14,
-      "name": "meat",
-      "min": 1,
-      "max": 2
-    }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": true,
-    "canPushItems": false,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

@@ -1,120 +1,120 @@
 {
-  "creatureStatistics": {
-    "name": "Minotaur Guard",
-    "health": 185,
-    "maxHealth": 185,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 190,
-    "attack": 100,
-    "attackSpeed": 2000,
-    "defense": 15,
-    "outfit": {
-      "id": 29
+    "creatureStatistics": {
+        "name": "Minotaur Guard",
+        "health": 185,
+        "maxHealth": 185,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 95,
+        "attack": 100,
+        "attackSpeed": 2000,
+        "defense": 15,
+        "outfit": {
+            "id": 29
+        },
+        "armor": 15
     },
-    "armor": 15
-  },
-  "experience": 160,
-  "corpse": 2866,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 100
-    }
-  ],
-  "elements": {
-    "fire": 20,
-    "holy": 10,
-    "ice": -10,
-    "death": -10
-  },
-  "sayings": {
-    "texts": [
-      "Kirrl Karrrl!",
-      "Kaplar"
+    "experience": 160,
+    "corpse": 2866,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
+    },
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 100
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.59686,
-      "name": "gold coin",
-      "min": 1,
-      "max": 20
+    "elements": {
+        "fire": 20,
+        "holy": 10,
+        "ice": -10,
+        "death": -10
     },
-    {
-      "id": 12428,
-      "probability": 0.08195,
-      "name": "minotaur horn",
-      "min": 1,
-      "max": 2
+    "sayings": {
+        "texts": [
+            "Kirrl Karrrl!",
+            "Kaplar"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 12438,
-      "probability": 0.0498,
-      "name": "piece of warrior armor"
-    },
-    {
-      "id": 2465,
-      "probability": 0.04125,
-      "name": "brass armor"
-    },
-    {
-      "id": 2464,
-      "probability": 0.02983,
-      "name": "chain armor"
-    },
-    {
-      "id": 2513,
-      "probability": 0.02093,
-      "name": "battle shield"
-    },
-    {
-      "id": 5878,
-      "probability": 0.00945,
-      "name": "minotaur leather"
-    },
-    {
-      "id": 2580,
-      "probability": 0.00481,
-      "name": "fishing rod"
-    },
-    {
-      "id": 2387,
-      "probability": 0.00434,
-      "name": "double axe"
-    },
-    {
-      "id": 7618,
-      "probability": 0.00413,
-      "name": "health potion"
-    },
-    {
-      "id": 7401,
-      "probability": 0.00094,
-      "name": "minotaur trophy"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.59686,
+            "name": "gold coin",
+            "min": 1,
+            "max": 20
+        },
+        {
+            "id": 12428,
+            "probability": 0.08195,
+            "name": "minotaur horn",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 12438,
+            "probability": 0.0498,
+            "name": "piece of warrior armor"
+        },
+        {
+            "id": 2465,
+            "probability": 0.04125,
+            "name": "brass armor"
+        },
+        {
+            "id": 2464,
+            "probability": 0.02983,
+            "name": "chain armor"
+        },
+        {
+            "id": 2513,
+            "probability": 0.02093,
+            "name": "battle shield"
+        },
+        {
+            "id": 5878,
+            "probability": 0.00945,
+            "name": "minotaur leather"
+        },
+        {
+            "id": 2580,
+            "probability": 0.00481,
+            "name": "fishing rod"
+        },
+        {
+            "id": 2387,
+            "probability": 0.00434,
+            "name": "double axe"
+        },
+        {
+            "id": 7618,
+            "probability": 0.00413,
+            "name": "health potion"
+        },
+        {
+            "id": 7401,
+            "probability": 0.00094,
+            "name": "minotaur trophy"
+        }
+    ],
+    "flags": {
+        "summonable": true,
+        "attackable": true,
+        "convinceable": true,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": true,
-    "attackable": true,
-    "convinceable": true,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

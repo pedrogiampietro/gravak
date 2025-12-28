@@ -1,230 +1,230 @@
 {
-  "creatureStatistics": {
-    "name": "Weakened Frazzlemaw",
-    "health": 1200,
-    "maxHealth": 1200,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 300,
-    "attack": 400,
-    "attackSpeed": 2000,
-    "defense": 45,
-    "outfit": {
-      "id": 594
+    "creatureStatistics": {
+        "name": "Weakened Frazzlemaw",
+        "health": 1200,
+        "maxHealth": 1200,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 150,
+        "attack": 400,
+        "attackSpeed": 2000,
+        "defense": 45,
+        "outfit": {
+            "id": 594
+        },
+        "armor": 45
     },
-    "armor": 45
-  },
-  "experience": 1000,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 0,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 0,
-      "max": 50
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 400
+    "experience": 1000,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 0,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "physical",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 0,
-      "radius": 2,
-      "target": true,
-      "shootEffect": "largerock",
-      "areaEffect": "stones"
-    },
-    {
-      "name": "physical",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 0,
-      "areaEffect": "redshimmer"
-    },
-    {
-      "name": "physical",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 500,
-      "length": 5,
-      "spread": 0,
-      "areaEffect": "explosionarea"
-    },
-    {
-      "name": "physical",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 300,
-      "radius": 3,
-      "target": false,
-      "areaEffect": "redspark"
-    },
-    {
-      "name": "physical",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 0,
-      "areaEffect": "greenspark"
-    }
-  ],
-  "elements": {
-    "physical": 5,
-    "energy": 15,
-    "earth": 20,
-    "fire": 10,
-    "ice": 5,
-    "holy": -5,
-    "death": 10
-  },
-  "immunities": {
-    "paralyze": true,
-    "invisible": true,
-    "drunk": true
-  },
-  "sayings": {
-    "texts": [
-      "Mwaaahgod! Overmwaaaaah! *gurgle*",
-      "Mwaaaahnducate youuuuuu *gurgle*, mwaaah!",
-      "MMMWAHMWAHMWAHMWAAAAH!",
-      "Mmmwhamwhamwhah, mwaaah!"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 0,
+            "max": 50
+        }
     ],
-    "slowness": 1,
-    "chance": 0.05
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 1,
-      "name": "gold coin",
-      "min": 1,
-      "max": 100
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 400
+        },
+        {
+            "name": "physical",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 0,
+            "radius": 2,
+            "target": true,
+            "shootEffect": "largerock",
+            "areaEffect": "stones"
+        },
+        {
+            "name": "physical",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 0,
+            "areaEffect": "redshimmer"
+        },
+        {
+            "name": "physical",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 500,
+            "length": 5,
+            "spread": 0,
+            "areaEffect": "explosionarea"
+        },
+        {
+            "name": "physical",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 300,
+            "radius": 3,
+            "target": false,
+            "areaEffect": "redspark"
+        },
+        {
+            "name": "physical",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 0,
+            "areaEffect": "greenspark"
+        }
+    ],
+    "elements": {
+        "physical": 5,
+        "energy": 15,
+        "earth": 20,
+        "fire": 10,
+        "ice": 5,
+        "holy": -5,
+        "death": 10
     },
-    {
-      "id": 2152,
-      "probability": 0.60501,
-      "name": "platinum coin"
+    "immunities": {
+        "paralyze": true,
+        "invisible": true,
+        "drunk": true
     },
-    {
-      "id": 28350,
-      "probability": 0.15066,
-      "name": "fairy wings"
+    "sayings": {
+        "texts": [
+            "Mwaaahgod! Overmwaaaaah! *gurgle*",
+            "Mwaaaahnducate youuuuuu *gurgle*, mwaaah!",
+            "MMMWAHMWAHMWAHMWAAAAH!",
+            "Mmmwhamwhamwhah, mwaaah!"
+        ],
+        "slowness": 1,
+        "chance": 0.05
     },
-    {
-      "id": 2229,
-      "probability": 0.12013,
-      "name": "skull (item)"
-    },
-    {
-      "id": 22532,
-      "probability": 0.11712,
-      "name": "frazzle tongue"
-    },
-    {
-      "id": 22533,
-      "probability": 0.1022,
-      "name": "frazzle skin"
-    },
-    {
-      "id": 2230,
-      "probability": 0.09994,
-      "name": "bone"
-    },
-    {
-      "id": 7590,
-      "probability": 0.09899,
-      "name": "great mana potion",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 7591,
-      "probability": 0.09876,
-      "name": "great health potion",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 2240,
-      "probability": 0.0983,
-      "name": "remains of a fish"
-    },
-    {
-      "id": 2667,
-      "probability": 0.06483,
-      "name": "fish",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 2671,
-      "probability": 0.0609,
-      "name": "ham"
-    },
-    {
-      "id": 2231,
-      "probability": 0.05301,
-      "name": "big bone"
-    },
-    {
-      "id": 5895,
-      "probability": 0.0504,
-      "name": "fish fin"
-    },
-    {
-      "id": 2225,
-      "probability": 0.04902,
-      "name": "piece of iron"
-    },
-    {
-      "id": 5880,
-      "probability": 0.02746,
-      "name": "iron ore"
-    },
-    {
-      "id": 7418,
-      "probability": 0.00347,
-      "name": "nightmare blade"
-    },
-    {
-      "id": 11306,
-      "probability": 0.00298,
-      "name": "sai"
-    },
-    {
-      "id": 22396,
-      "probability": 0.0019,
-      "name": "cluster of solace"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 1,
+            "name": "gold coin",
+            "min": 1,
+            "max": 100
+        },
+        {
+            "id": 2152,
+            "probability": 0.60501,
+            "name": "platinum coin"
+        },
+        {
+            "id": 28350,
+            "probability": 0.15066,
+            "name": "fairy wings"
+        },
+        {
+            "id": 2229,
+            "probability": 0.12013,
+            "name": "skull (item)"
+        },
+        {
+            "id": 22532,
+            "probability": 0.11712,
+            "name": "frazzle tongue"
+        },
+        {
+            "id": 22533,
+            "probability": 0.1022,
+            "name": "frazzle skin"
+        },
+        {
+            "id": 2230,
+            "probability": 0.09994,
+            "name": "bone"
+        },
+        {
+            "id": 7590,
+            "probability": 0.09899,
+            "name": "great mana potion",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 7591,
+            "probability": 0.09876,
+            "name": "great health potion",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 2240,
+            "probability": 0.0983,
+            "name": "remains of a fish"
+        },
+        {
+            "id": 2667,
+            "probability": 0.06483,
+            "name": "fish",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 2671,
+            "probability": 0.0609,
+            "name": "ham"
+        },
+        {
+            "id": 2231,
+            "probability": 0.05301,
+            "name": "big bone"
+        },
+        {
+            "id": 5895,
+            "probability": 0.0504,
+            "name": "fish fin"
+        },
+        {
+            "id": 2225,
+            "probability": 0.04902,
+            "name": "piece of iron"
+        },
+        {
+            "id": 5880,
+            "probability": 0.02746,
+            "name": "iron ore"
+        },
+        {
+            "id": 7418,
+            "probability": 0.00347,
+            "name": "nightmare blade"
+        },
+        {
+            "id": 11306,
+            "probability": 0.00298,
+            "name": "sai"
+        },
+        {
+            "id": 22396,
+            "probability": 0.0019,
+            "name": "cluster of solace"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": false,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": false,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

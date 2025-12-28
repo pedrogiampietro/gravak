@@ -1,209 +1,209 @@
 {
-  "creatureStatistics": {
-    "name": "Hellspawn",
-    "health": 3500,
-    "maxHealth": 3500,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 344,
-    "attack": 350,
-    "attackSpeed": 2000,
-    "defense": 44,
-    "outfit": {
-      "id": 322
+    "creatureStatistics": {
+        "name": "Hellspawn",
+        "health": 3500,
+        "maxHealth": 3500,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 172,
+        "attack": 350,
+        "attackSpeed": 2000,
+        "defense": 44,
+        "outfit": {
+            "id": 322
+        },
+        "armor": 44
     },
-    "armor": 44
-  },
-  "experience": 2550,
-  "corpse": 2813,
-  "fluidType": 0,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 120,
-      "max": 230,
-      "areaEffect": "blueshimmer"
+    "experience": 2550,
+    "corpse": 2813,
+    "fluidType": 0,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.15,
-      "speedChange": 270,
-      "duration": 5000,
-      "areaEffect": "redshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 350
-    },
-    {
-      "name": "fire",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 150,
-      "max": 175,
-      "shootEffect": "fire",
-      "areaEffect": "fireattack"
-    },
-    {
-      "name": "hellspawn soulfire",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 0,
-      "max": 0,
-      "range": 5
-    }
-  ],
-  "elements": {
-    "physical": 10,
-    "energy": 10,
-    "earth": 80,
-    "fire": 40,
-    "ice": -10,
-    "holy": 30,
-    "death": -5
-  },
-  "immunities": {
-    "paralyze": true,
-    "invisible": true
-  },
-  "sayings": {
-    "texts": [
-      "Your fragile bones are like toothpicks to me.",
-      "You little weasel will not live to see another day.",
-      "I'm just a messenger of what's yet to come.",
-      "HRAAAAAAAAAAAAAAAARRRR",
-      "I'm taking you down with me!"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 120,
+            "max": 230,
+            "areaEffect": "blueshimmer"
+        },
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.15,
+            "speedChange": 270,
+            "duration": 5000,
+            "areaEffect": "redshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.92683,
-      "name": "gold coin",
-      "min": 1,
-      "max": 236
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 350
+        },
+        {
+            "name": "fire",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 150,
+            "max": 175,
+            "shootEffect": "fire",
+            "areaEffect": "fireattack"
+        },
+        {
+            "name": "hellspawn soulfire",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 0,
+            "max": 0,
+            "range": 5
+        }
+    ],
+    "elements": {
+        "physical": 10,
+        "energy": 10,
+        "earth": 80,
+        "fire": 40,
+        "ice": -10,
+        "holy": 30,
+        "death": -5
     },
-    {
-      "id": 7591,
-      "probability": 0.30215,
-      "name": "great health potion"
+    "immunities": {
+        "paralyze": true,
+        "invisible": true
     },
-    {
-      "id": 11221,
-      "probability": 0.14587,
-      "name": "hellspawn tail"
+    "sayings": {
+        "texts": [
+            "Your fragile bones are like toothpicks to me.",
+            "You little weasel will not live to see another day.",
+            "I'm just a messenger of what's yet to come.",
+            "HRAAAAAAAAAAAAAAAARRRR",
+            "I'm taking you down with me!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2394,
-      "probability": 0.0772,
-      "name": "morning star"
-    },
-    {
-      "id": 6500,
-      "probability": 0.07483,
-      "name": "demonic essence"
-    },
-    {
-      "id": 8473,
-      "probability": 0.07317,
-      "name": "ultimate health potion"
-    },
-    {
-      "id": 7368,
-      "probability": 0.07151,
-      "name": "assassin star",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 2513,
-      "probability": 0.06938,
-      "name": "battle shield"
-    },
-    {
-      "id": 2788,
-      "probability": 0.06299,
-      "name": "red mushroom",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 9970,
-      "probability": 0.04736,
-      "name": "small topaz",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 9809,
-      "probability": 0.02226,
-      "name": "rusted armor"
-    },
-    {
-      "id": 2477,
-      "probability": 0.02202,
-      "name": "knight legs"
-    },
-    {
-      "id": 2475,
-      "probability": 0.01397,
-      "name": "warrior helmet"
-    },
-    {
-      "id": 7452,
-      "probability": 0.00521,
-      "name": "spiked squelcher"
-    },
-    {
-      "id": 7439,
-      "probability": 0.00497,
-      "name": "berserk potion"
-    },
-    {
-      "id": 9969,
-      "probability": 0.00213,
-      "name": "black skull (item)"
-    },
-    {
-      "id": 9810,
-      "probability": 0.00189,
-      "name": "slightly rusted armor"
-    },
-    {
-      "id": 9948,
-      "probability": 0.00071,
-      "name": "dracoyle statue"
-    },
-    {
-      "id": 7421,
-      "probability": 0.00024,
-      "name": "onyx flail"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.92683,
+            "name": "gold coin",
+            "min": 1,
+            "max": 236
+        },
+        {
+            "id": 7591,
+            "probability": 0.30215,
+            "name": "great health potion"
+        },
+        {
+            "id": 11221,
+            "probability": 0.14587,
+            "name": "hellspawn tail"
+        },
+        {
+            "id": 2394,
+            "probability": 0.0772,
+            "name": "morning star"
+        },
+        {
+            "id": 6500,
+            "probability": 0.07483,
+            "name": "demonic essence"
+        },
+        {
+            "id": 8473,
+            "probability": 0.07317,
+            "name": "ultimate health potion"
+        },
+        {
+            "id": 7368,
+            "probability": 0.07151,
+            "name": "assassin star",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 2513,
+            "probability": 0.06938,
+            "name": "battle shield"
+        },
+        {
+            "id": 2788,
+            "probability": 0.06299,
+            "name": "red mushroom",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 9970,
+            "probability": 0.04736,
+            "name": "small topaz",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 9809,
+            "probability": 0.02226,
+            "name": "rusted armor"
+        },
+        {
+            "id": 2477,
+            "probability": 0.02202,
+            "name": "knight legs"
+        },
+        {
+            "id": 2475,
+            "probability": 0.01397,
+            "name": "warrior helmet"
+        },
+        {
+            "id": 7452,
+            "probability": 0.00521,
+            "name": "spiked squelcher"
+        },
+        {
+            "id": 7439,
+            "probability": 0.00497,
+            "name": "berserk potion"
+        },
+        {
+            "id": 9969,
+            "probability": 0.00213,
+            "name": "black skull (item)"
+        },
+        {
+            "id": 9810,
+            "probability": 0.00189,
+            "name": "slightly rusted armor"
+        },
+        {
+            "id": 9948,
+            "probability": 0.00071,
+            "name": "dracoyle statue"
+        },
+        {
+            "id": 7421,
+            "probability": 0.00024,
+            "name": "onyx flail"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

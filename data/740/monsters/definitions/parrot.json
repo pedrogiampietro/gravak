@@ -1,64 +1,64 @@
 {
-  "creatureStatistics": {
-    "name": "Parrot",
-    "health": 25,
-    "maxHealth": 25,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 320,
-    "attack": 5,
-    "attackSpeed": 2000,
-    "defense": 2,
-    "outfit": {
-      "id": 217
+    "creatureStatistics": {
+        "name": "Parrot",
+        "health": 25,
+        "maxHealth": 25,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 160,
+        "attack": 5,
+        "attackSpeed": 2000,
+        "defense": 2,
+        "outfit": {
+            "id": 217
+        },
+        "armor": 2
     },
-    "armor": 2
-  },
-  "experience": 0,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 0,
-    "fleeHealth": 25,
-    "openDoors": false,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 5
-    }
-  ],
-  "sayings": {
-    "texts": [
-      "You advanshed, you advanshed!",
-      "Neeewbiiieee!",
-      "Screeech!",
-      "Hunterrr ish PK!",
-      "BR? PL? SWE?",
-      "Hope you die and loooosh it!",
-      "You powerrrrrrabuserrrrr!",
-      "You are corrrrupt! Corrrrupt!",
-      "Tarrrrp?",
-      "Blesshhh my stake! Screeech!",
-      "Leeave orrr hunted!!",
-      "Shhtop whining! Rraaah!",
-      "I'm heeerrre! Screeeech!"
+    "experience": 0,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 0,
+        "fleeHealth": 25,
+        "openDoors": false,
+        "senseInvisible": false
+    },
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 5
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "flags": {
-    "summonable": true,
-    "attackable": true,
-    "convinceable": true,
-    "pushable": true,
-    "canPushItems": false,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": true
-  }
+    "sayings": {
+        "texts": [
+            "You advanshed, you advanshed!",
+            "Neeewbiiieee!",
+            "Screeech!",
+            "Hunterrr ish PK!",
+            "BR? PL? SWE?",
+            "Hope you die and loooosh it!",
+            "You powerrrrrrabuserrrrr!",
+            "You are corrrrupt! Corrrrupt!",
+            "Tarrrrp?",
+            "Blesshhh my stake! Screeech!",
+            "Leeave orrr hunted!!",
+            "Shhtop whining! Rraaah!",
+            "I'm heeerrre! Screeeech!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
+    },
+    "flags": {
+        "summonable": true,
+        "attackable": true,
+        "convinceable": true,
+        "pushable": true,
+        "canPushItems": false,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": true
+    }
 }

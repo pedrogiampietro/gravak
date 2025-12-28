@@ -1,72 +1,72 @@
 {
-  "creatureStatistics": {
-    "name": "Wolf",
-    "health": 25,
-    "maxHealth": 25,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 164,
-    "attack": 17,
-    "attackSpeed": 2000,
-    "defense": 1,
-    "outfit": {
-      "id": 27
+    "creatureStatistics": {
+        "name": "Wolf",
+        "health": 25,
+        "maxHealth": 25,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 82,
+        "attack": 17,
+        "attackSpeed": 2000,
+        "defense": 1,
+        "outfit": {
+            "id": 27
+        },
+        "armor": 1
     },
-    "armor": 1
-  },
-  "experience": 18,
-  "corpse": 2826,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 8,
-    "openDoors": false,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 17
-    }
-  ],
-  "elements": {
-    "holy": 30,
-    "ice": -10,
-    "death": -5
-  },
-  "sayings": {
-    "texts": [
-      "Yoooohhuuuu!",
-      "Grrrrrrr"
+    "experience": 18,
+    "corpse": 2826,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 8,
+        "openDoors": false,
+        "senseInvisible": false
+    },
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 17
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2666,
-      "probability": 0.7,
-      "name": "meat",
-      "min": 1,
-      "max": 2
+    "elements": {
+        "holy": 30,
+        "ice": -10,
+        "death": -5
     },
-    {
-      "id": 2413,
-      "probability": 0.01,
-      "name": "wolf paw"
+    "sayings": {
+        "texts": [
+            "Yoooohhuuuu!",
+            "Grrrrrrr"
+        ],
+        "slowness": 5,
+        "chance": 0.1
+    },
+    "loot": [
+        {
+            "id": 2666,
+            "probability": 0.7,
+            "name": "meat",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 2413,
+            "probability": 0.01,
+            "name": "wolf paw"
+        }
+    ],
+    "flags": {
+        "summonable": true,
+        "attackable": true,
+        "convinceable": true,
+        "pushable": true,
+        "canPushItems": false,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": true,
-    "attackable": true,
-    "convinceable": true,
-    "pushable": true,
-    "canPushItems": false,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

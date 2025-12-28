@@ -1,212 +1,212 @@
 {
-  "creatureStatistics": {
-    "name": "Defiler",
-    "health": 3650,
-    "maxHealth": 3650,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 160,
-    "attack": 240,
-    "attackSpeed": 2000,
-    "defense": 20,
-    "outfit": {
-      "id": 238
+    "creatureStatistics": {
+        "name": "Defiler",
+        "health": 3650,
+        "maxHealth": 3650,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 80,
+        "attack": 240,
+        "attackSpeed": 2000,
+        "defense": 20,
+        "outfit": {
+            "id": 238
+        },
+        "armor": 20
     },
-    "armor": 20
-  },
-  "experience": 3700,
-  "corpse": 2813,
-  "fluidType": 3,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 85,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 280,
-      "max": 350,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 240
+    "experience": 3700,
+    "corpse": 2813,
+    "fluidType": 3,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 85,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "earth",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 160,
-      "max": 270,
-      "range": 7,
-      "shootEffect": "poison"
-    },
-    {
-      "name": "poisoncondition",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 400,
-      "max": 640,
-      "range": 7,
-      "radius": 7,
-      "target": false,
-      "areaEffect": "greenspark"
-    },
-    {
-      "name": "earth",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 120,
-      "max": 170,
-      "radius": 3,
-      "target": false,
-      "areaEffect": "poison"
-    },
-    {
-      "name": "poisoncondition",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 500,
-      "max": 1000,
-      "length": 8,
-      "spread": 3,
-      "areaEffect": "smallplants"
-    },
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 0,
-      "length": 8,
-      "spread": 3,
-      "speedChange": -700,
-      "duration": 15000,
-      "areaEffect": "smallclouds"
-    }
-  ],
-  "elements": {
-    "energy": 10,
-    "ice": 20,
-    "fire": -25
-  },
-  "immunities": {
-    "earth": true,
-    "paralyze": true,
-    "invisible": true
-  },
-  "sayings": {
-    "texts": [
-      "Blubb",
-      "Blubb Blubb"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 280,
+            "max": 350,
+            "areaEffect": "blueshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 1,
-      "name": "gold coin",
-      "min": 1,
-      "max": 272
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 240
+        },
+        {
+            "name": "earth",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 160,
+            "max": 270,
+            "range": 7,
+            "shootEffect": "poison"
+        },
+        {
+            "name": "poisoncondition",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 400,
+            "max": 640,
+            "range": 7,
+            "radius": 7,
+            "target": false,
+            "areaEffect": "greenspark"
+        },
+        {
+            "name": "earth",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 120,
+            "max": 170,
+            "radius": 3,
+            "target": false,
+            "areaEffect": "poison"
+        },
+        {
+            "name": "poisoncondition",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 500,
+            "max": 1000,
+            "length": 8,
+            "spread": 3,
+            "areaEffect": "smallplants"
+        },
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 0,
+            "length": 8,
+            "spread": 3,
+            "speedChange": -700,
+            "duration": 15000,
+            "areaEffect": "smallclouds"
+        }
+    ],
+    "elements": {
+        "energy": 10,
+        "ice": 20,
+        "fire": -25
     },
-    {
-      "id": 2152,
-      "probability": 0.96687,
-      "name": "platinum coin",
-      "min": 1,
-      "max": 6
+    "immunities": {
+        "earth": true,
+        "paralyze": true,
+        "invisible": true
     },
-    {
-      "id": 5944,
-      "probability": 0.19478,
-      "name": "soul orb"
+    "sayings": {
+        "texts": [
+            "Blubb",
+            "Blubb Blubb"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 6500,
-      "probability": 0.19157,
-      "name": "demonic essence"
-    },
-    {
-      "id": 9967,
-      "probability": 0.11586,
-      "name": "glob of acid slime"
-    },
-    {
-      "id": 9968,
-      "probability": 0.11245,
-      "name": "glob of tar"
-    },
-    {
-      "id": 2149,
-      "probability": 0.05723,
-      "name": "small emerald",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 2151,
-      "probability": 0.04357,
-      "name": "talon"
-    },
-    {
-      "id": 2147,
-      "probability": 0.03695,
-      "name": "small ruby",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 6300,
-      "probability": 0.02831,
-      "name": "death ring"
-    },
-    {
-      "id": 2145,
-      "probability": 0.0249,
-      "name": "small diamond",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 2154,
-      "probability": 0.01787,
-      "name": "yellow gem"
-    },
-    {
-      "id": 2156,
-      "probability": 0.01165,
-      "name": "red gem"
-    },
-    {
-      "id": 2158,
-      "probability": 0.00843,
-      "name": "blue gem"
-    },
-    {
-      "id": 2155,
-      "probability": 0.00723,
-      "name": "green gem"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 1,
+            "name": "gold coin",
+            "min": 1,
+            "max": 272
+        },
+        {
+            "id": 2152,
+            "probability": 0.96687,
+            "name": "platinum coin",
+            "min": 1,
+            "max": 6
+        },
+        {
+            "id": 5944,
+            "probability": 0.19478,
+            "name": "soul orb"
+        },
+        {
+            "id": 6500,
+            "probability": 0.19157,
+            "name": "demonic essence"
+        },
+        {
+            "id": 9967,
+            "probability": 0.11586,
+            "name": "glob of acid slime"
+        },
+        {
+            "id": 9968,
+            "probability": 0.11245,
+            "name": "glob of tar"
+        },
+        {
+            "id": 2149,
+            "probability": 0.05723,
+            "name": "small emerald",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 2151,
+            "probability": 0.04357,
+            "name": "talon"
+        },
+        {
+            "id": 2147,
+            "probability": 0.03695,
+            "name": "small ruby",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 6300,
+            "probability": 0.02831,
+            "name": "death ring"
+        },
+        {
+            "id": 2145,
+            "probability": 0.0249,
+            "name": "small diamond",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 2154,
+            "probability": 0.01787,
+            "name": "yellow gem"
+        },
+        {
+            "id": 2156,
+            "probability": 0.01165,
+            "name": "red gem"
+        },
+        {
+            "id": 2158,
+            "probability": 0.00843,
+            "name": "blue gem"
+        },
+        {
+            "id": 2155,
+            "probability": 0.00723,
+            "name": "green gem"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

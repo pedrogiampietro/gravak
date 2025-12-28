@@ -1,53 +1,53 @@
 {
-  "creatureStatistics": {
-    "name": "Green Frog",
-    "health": 25,
-    "maxHealth": 25,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 200,
-    "attack": 25,
-    "attackSpeed": 2000,
-    "defense": 5,
-    "outfit": {
-      "id": 224
+    "creatureStatistics": {
+        "name": "Green Frog",
+        "health": 25,
+        "maxHealth": 25,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 160,
+        "attack": 25,
+        "attackSpeed": 2000,
+        "defense": 5,
+        "outfit": {
+            "id": 224
+        },
+        "armor": 5
     },
-    "armor": 5
-  },
-  "experience": 0,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": false,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 25
-    }
-  ],
-  "sayings": {
-    "texts": [
-      "Ribbit!",
-      "Ribbit! Ribbit!"
+    "experience": 0,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": false,
+        "senseInvisible": false
+    },
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 25
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "flags": {
-    "summonable": true,
-    "attackable": true,
-    "convinceable": true,
-    "pushable": true,
-    "canPushItems": false,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": 6
-  }
+    "sayings": {
+        "texts": [
+            "Ribbit!",
+            "Ribbit! Ribbit!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
+    },
+    "flags": {
+        "summonable": true,
+        "attackable": true,
+        "convinceable": true,
+        "pushable": true,
+        "canPushItems": false,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": 6
+    }
 }

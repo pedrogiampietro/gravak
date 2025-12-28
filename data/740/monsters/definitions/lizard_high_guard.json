@@ -1,161 +1,161 @@
 {
-  "creatureStatistics": {
-    "name": "Lizard High Guard",
-    "health": 1800,
-    "maxHealth": 1800,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 238,
-    "attack": 306,
-    "attackSpeed": 2000,
-    "defense": 40,
-    "outfit": {
-      "id": 337
+    "creatureStatistics": {
+        "name": "Lizard High Guard",
+        "health": 1800,
+        "maxHealth": 1800,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 119,
+        "attack": 306,
+        "attackSpeed": 2000,
+        "defense": 40,
+        "outfit": {
+            "id": 337
+        },
+        "armor": 40
     },
-    "armor": 40
-  },
-  "experience": 1450,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 25,
-      "max": 75,
-      "areaEffect": "greenshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 306
-    }
-  ],
-  "elements": {
-    "ice": -10,
-    "physical": 5,
-    "fire": 45
-  },
-  "immunities": {
-    "earth": true,
-    "invisible": true
-  },
-  "sayings": {
-    "texts": [
-      "Hizzzzzzz!",
-      "To armzzzz!",
-      "Engage zze aggrezzor!"
+    "experience": 1450,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
+    },
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 25,
+            "max": 75,
+            "areaEffect": "greenshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.96078,
-      "name": "gold coin",
-      "min": 1,
-      "max": 281
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 306
+        }
+    ],
+    "elements": {
+        "ice": -10,
+        "physical": 5,
+        "fire": 45
     },
-    {
-      "id": 7588,
-      "probability": 0.11938,
-      "name": "strong health potion"
+    "immunities": {
+        "earth": true,
+        "invisible": true
     },
-    {
-      "id": 11333,
-      "probability": 0.08091,
-      "name": "high guard shoulderplates"
+    "sayings": {
+        "texts": [
+            "Hizzzzzzz!",
+            "To armzzzz!",
+            "Engage zze aggrezzor!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 7591,
-      "probability": 0.07075,
-      "name": "great health potion"
-    },
-    {
-      "id": 11325,
-      "probability": 0.0697,
-      "name": "spiked iron ball"
-    },
-    {
-      "id": 11245,
-      "probability": 0.04932,
-      "name": "bunch of ripe rice"
-    },
-    {
-      "id": 2152,
-      "probability": 0.0491,
-      "name": "platinum coin",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 11332,
-      "probability": 0.03006,
-      "name": "high guard flag"
-    },
-    {
-      "id": 2149,
-      "probability": 0.02487,
-      "name": "small emerald",
-      "min": 1,
-      "max": 4
-    },
-    {
-      "id": 11206,
-      "probability": 0.01209,
-      "name": "red lantern"
-    },
-    {
-      "id": 2528,
-      "probability": 0.01032,
-      "name": "tower shield"
-    },
-    {
-      "id": 5876,
-      "probability": 0.00997,
-      "name": "lizard leather"
-    },
-    {
-      "id": 5881,
-      "probability": 0.00957,
-      "name": "lizard scale"
-    },
-    {
-      "id": 11304,
-      "probability": 0.00734,
-      "name": "zaoan legs"
-    },
-    {
-      "id": 11303,
-      "probability": 0.00688,
-      "name": "zaoan shoes"
-    },
-    {
-      "id": 11301,
-      "probability": 0.00076,
-      "name": "zaoan armor"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.96078,
+            "name": "gold coin",
+            "min": 1,
+            "max": 281
+        },
+        {
+            "id": 7588,
+            "probability": 0.11938,
+            "name": "strong health potion"
+        },
+        {
+            "id": 11333,
+            "probability": 0.08091,
+            "name": "high guard shoulderplates"
+        },
+        {
+            "id": 7591,
+            "probability": 0.07075,
+            "name": "great health potion"
+        },
+        {
+            "id": 11325,
+            "probability": 0.0697,
+            "name": "spiked iron ball"
+        },
+        {
+            "id": 11245,
+            "probability": 0.04932,
+            "name": "bunch of ripe rice"
+        },
+        {
+            "id": 2152,
+            "probability": 0.0491,
+            "name": "platinum coin",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 11332,
+            "probability": 0.03006,
+            "name": "high guard flag"
+        },
+        {
+            "id": 2149,
+            "probability": 0.02487,
+            "name": "small emerald",
+            "min": 1,
+            "max": 4
+        },
+        {
+            "id": 11206,
+            "probability": 0.01209,
+            "name": "red lantern"
+        },
+        {
+            "id": 2528,
+            "probability": 0.01032,
+            "name": "tower shield"
+        },
+        {
+            "id": 5876,
+            "probability": 0.00997,
+            "name": "lizard leather"
+        },
+        {
+            "id": 5881,
+            "probability": 0.00957,
+            "name": "lizard scale"
+        },
+        {
+            "id": 11304,
+            "probability": 0.00734,
+            "name": "zaoan legs"
+        },
+        {
+            "id": 11303,
+            "probability": 0.00688,
+            "name": "zaoan shoes"
+        },
+        {
+            "id": 11301,
+            "probability": 0.00076,
+            "name": "zaoan armor"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

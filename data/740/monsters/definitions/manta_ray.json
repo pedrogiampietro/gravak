@@ -1,93 +1,93 @@
 {
-  "creatureStatistics": {
-    "name": "Manta Ray",
-    "health": 680,
-    "maxHealth": 680,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 200,
-    "attack": 99,
-    "attackSpeed": 2000,
-    "defense": 15,
-    "outfit": {
-      "id": 449
+    "creatureStatistics": {
+        "name": "Manta Ray",
+        "health": 680,
+        "maxHealth": 680,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 84,
+        "attack": 99,
+        "attackSpeed": 2000,
+        "defense": 15,
+        "outfit": {
+            "id": 449
+        },
+        "armor": 15
     },
-    "armor": 15
-  },
-  "experience": 125,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": false,
-    "senseInvisible": true
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 99
+    "experience": 125,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": false,
+        "senseInvisible": true
     },
-    {
-      "name": "energy",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 15,
-      "max": 75,
-      "range": 7,
-      "shootEffect": "energy",
-      "areaEffect": "energy"
-    },
-    {
-      "name": "energy",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 0,
-      "max": 0,
-      "length": 4,
-      "spread": 0,
-      "target": false,
-      "areaEffect": "energy"
-    }
-  ],
-  "elements": {
-    "ice": -1,
-    "physical": -1,
-    "energy": 1
-  },
-  "immunities": {
-    "earth": true,
-    "fire": true,
-    "invisible": true,
-    "drown": true
-  },
-  "sayings": {
-    "texts": [
-      "Flap flap flap!"
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 99
+        },
+        {
+            "name": "energy",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 15,
+            "max": 75,
+            "range": 7,
+            "shootEffect": "energy",
+            "areaEffect": "energy"
+        },
+        {
+            "name": "energy",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 0,
+            "max": 0,
+            "length": 4,
+            "spread": 0,
+            "target": false,
+            "areaEffect": "energy"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.5,
-      "name": "gold coin",
-      "min": 1,
-      "max": 38
+    "elements": {
+        "ice": -1,
+        "physical": -1,
+        "energy": 1
+    },
+    "immunities": {
+        "earth": true,
+        "fire": true,
+        "invisible": true,
+        "drown": true
+    },
+    "sayings": {
+        "texts": [
+            "Flap flap flap!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
+    },
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.5,
+            "name": "gold coin",
+            "min": 1,
+            "max": 38
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": true,
+        "canPushItems": false,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": true,
-    "canPushItems": false,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

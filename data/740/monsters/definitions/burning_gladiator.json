@@ -1,185 +1,185 @@
 {
-  "creatureStatistics": {
-    "name": "Burning Gladiator",
-    "health": 10000,
-    "maxHealth": 10000,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 290,
-    "attack": 550,
-    "attackSpeed": 2000,
-    "defense": 89,
-    "outfit": {
-      "id": 541
+    "creatureStatistics": {
+        "name": "Burning Gladiator",
+        "health": 10000,
+        "maxHealth": 10000,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 145,
+        "attack": 550,
+        "attackSpeed": 2000,
+        "defense": 89,
+        "outfit": {
+            "id": 541
+        },
+        "armor": 89
     },
-    "armor": 89
-  },
-  "experience": 7350,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 550
+    "experience": 7350,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "fire",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 300,
-      "max": 500,
-      "target": false,
-      "areaEffect": "fireattack"
-    },
-    {
-      "name": "fire",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 300,
-      "max": 500,
-      "target": false,
-      "areaEffect": "fireattack"
-    },
-    {
-      "name": "fire",
-      "interval": 2000,
-      "chance": 0.17,
-      "min": 300,
-      "max": 500,
-      "radius": 2,
-      "areaEffect": "fireattack"
-    },
-    {
-      "name": "energy",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 300,
-      "max": 500,
-      "length": 3,
-      "spread": 0,
-      "areaEffect": "energy"
-    }
-  ],
-  "elements": {
-    "physical": 80,
-    "fire": 70,
-    "energy": 80,
-    "ice": -20
-  },
-  "immunities": {
-    "paralyze": true,
-    "invisible": true
-  },
-  "sayings": {
-    "texts": [
-      "Burn, infidel!",
-      "Only the Wild Sun shall shine down on this world!",
-      "Praised be Fafnar, the Smiter!"
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 550
+        },
+        {
+            "name": "fire",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 300,
+            "max": 500,
+            "target": false,
+            "areaEffect": "fireattack"
+        },
+        {
+            "name": "fire",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 300,
+            "max": 500,
+            "target": false,
+            "areaEffect": "fireattack"
+        },
+        {
+            "name": "fire",
+            "interval": 2000,
+            "chance": 0.17,
+            "min": 300,
+            "max": 500,
+            "radius": 2,
+            "areaEffect": "fireattack"
+        },
+        {
+            "name": "energy",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 300,
+            "max": 500,
+            "length": 3,
+            "spread": 0,
+            "areaEffect": "energy"
+        }
     ],
-    "slowness": 2,
-    "chance": 0.05
-  },
-  "loot": [
-    {
-      "id": 2152,
-      "probability": 1,
-      "name": "platinum coin",
-      "min": 1,
-      "max": 4
+    "elements": {
+        "physical": 80,
+        "fire": 70,
+        "energy": 80,
+        "ice": -20
     },
-    {
-      "id": 34099,
-      "probability": 0.10157,
-      "name": "fafnar symbol"
+    "immunities": {
+        "paralyze": true,
+        "invisible": true
     },
-    {
-      "id": 34089,
-      "probability": 0.07419,
-      "name": "secret instruction"
+    "sayings": {
+        "texts": [
+            "Burn, infidel!",
+            "Only the Wild Sun shall shine down on this world!",
+            "Praised be Fafnar, the Smiter!"
+        ],
+        "slowness": 2,
+        "chance": 0.05
     },
-    {
-      "id": 2201,
-      "probability": 0.05951,
-      "name": "dragon necklace"
-    },
-    {
-      "id": 2161,
-      "probability": 0.04979,
-      "name": "strange talisman"
-    },
-    {
-      "id": 7889,
-      "probability": 0.04602,
-      "name": "lightning pendant"
-    },
-    {
-      "id": 7890,
-      "probability": 0.04463,
-      "name": "magma amulet"
-    },
-    {
-      "id": 7901,
-      "probability": 0.04305,
-      "name": "lightning headband"
-    },
-    {
-      "id": 7891,
-      "probability": 0.04225,
-      "name": "magma boots"
-    },
-    {
-      "id": 7895,
-      "probability": 0.03967,
-      "name": "lightning legs"
-    },
-    {
-      "id": 33987,
-      "probability": 0.02579,
-      "name": "empty honey glass"
-    },
-    {
-      "id": 2198,
-      "probability": 0.02559,
-      "name": "elven amulet"
-    },
-    {
-      "id": 7893,
-      "probability": 0.01627,
-      "name": "lightning boots"
-    },
-    {
-      "id": 11355,
-      "probability": 0.01111,
-      "name": "spellweaver's robe"
-    },
-    {
-      "id": 33980,
-      "probability": 0.00893,
-      "name": "golden mask"
-    },
-    {
-      "id": 33979,
-      "probability": 0.00575,
-      "name": "sea horse figurine"
+    "loot": [
+        {
+            "id": 2152,
+            "probability": 1,
+            "name": "platinum coin",
+            "min": 1,
+            "max": 4
+        },
+        {
+            "id": 34099,
+            "probability": 0.10157,
+            "name": "fafnar symbol"
+        },
+        {
+            "id": 34089,
+            "probability": 0.07419,
+            "name": "secret instruction"
+        },
+        {
+            "id": 2201,
+            "probability": 0.05951,
+            "name": "dragon necklace"
+        },
+        {
+            "id": 2161,
+            "probability": 0.04979,
+            "name": "strange talisman"
+        },
+        {
+            "id": 7889,
+            "probability": 0.04602,
+            "name": "lightning pendant"
+        },
+        {
+            "id": 7890,
+            "probability": 0.04463,
+            "name": "magma amulet"
+        },
+        {
+            "id": 7901,
+            "probability": 0.04305,
+            "name": "lightning headband"
+        },
+        {
+            "id": 7891,
+            "probability": 0.04225,
+            "name": "magma boots"
+        },
+        {
+            "id": 7895,
+            "probability": 0.03967,
+            "name": "lightning legs"
+        },
+        {
+            "id": 33987,
+            "probability": 0.02579,
+            "name": "empty honey glass"
+        },
+        {
+            "id": 2198,
+            "probability": 0.02559,
+            "name": "elven amulet"
+        },
+        {
+            "id": 7893,
+            "probability": 0.01627,
+            "name": "lightning boots"
+        },
+        {
+            "id": 11355,
+            "probability": 0.01111,
+            "name": "spellweaver's robe"
+        },
+        {
+            "id": 33980,
+            "probability": 0.00893,
+            "name": "golden mask"
+        },
+        {
+            "id": 33979,
+            "probability": 0.00575,
+            "name": "sea horse figurine"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": 4
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": 4
-  }
 }

@@ -1,150 +1,150 @@
 {
-  "creatureStatistics": {
-    "name": "Frost Giantess",
-    "health": 275,
-    "maxHealth": 275,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 194,
-    "attack": 60,
-    "attackSpeed": 2000,
-    "defense": 20,
-    "outfit": {
-      "id": 265
+    "creatureStatistics": {
+        "name": "Frost Giantess",
+        "health": 275,
+        "maxHealth": 275,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 97,
+        "attack": 60,
+        "attackSpeed": 2000,
+        "defense": 20,
+        "outfit": {
+            "id": 265
+        },
+        "armor": 20
     },
-    "armor": 20
-  },
-  "experience": 150,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.15,
-      "speedChange": 300,
-      "duration": 5000,
-      "areaEffect": "redshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 60
+    "experience": 150,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "physical",
-      "interval": 2000,
-      "chance": 0.3,
-      "min": 0,
-      "max": 90,
-      "range": 7,
-      "shootEffect": "largerock"
-    }
-  ],
-  "elements": {
-    "fire": 20,
-    "holy": 10,
-    "energy": -10,
-    "death": -3
-  },
-  "immunities": {
-    "ice": true
-  },
-  "sayings": {
-    "texts": [
-      "Ymirs Mjalle!",
-      "No run so much, must stay fat!",
-      "Hörre Sjan Flan!",
-      "Damned fast food.",
-      "Come kiss the cook!"
+    "defenseSpells": [
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.15,
+            "speedChange": 300,
+            "duration": 5000,
+            "areaEffect": "redshimmer"
+        }
     ],
-    "slowness": 1,
-    "chance": 0.05
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.82053,
-      "name": "gold coin",
-      "min": 1,
-      "max": 40
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 60
+        },
+        {
+            "name": "physical",
+            "interval": 2000,
+            "chance": 0.3,
+            "min": 0,
+            "max": 90,
+            "range": 7,
+            "shootEffect": "largerock"
+        }
+    ],
+    "elements": {
+        "fire": 20,
+        "holy": 10,
+        "energy": -10,
+        "death": -3
     },
-    {
-      "id": 2671,
-      "probability": 0.20794,
-      "name": "ham"
+    "immunities": {
+        "ice": true
     },
-    {
-      "id": 1294,
-      "probability": 0.10397,
-      "name": "small stone",
-      "min": 1,
-      "max": 3
+    "sayings": {
+        "texts": [
+            "Ymirs Mjalle!",
+            "No run so much, must stay fat!",
+            "Hörre Sjan Flan!",
+            "Damned fast food.",
+            "Come kiss the cook!"
+        ],
+        "slowness": 1,
+        "chance": 0.05
     },
-    {
-      "id": 2406,
-      "probability": 0.07946,
-      "name": "short sword"
-    },
-    {
-      "id": 10575,
-      "probability": 0.04953,
-      "name": "frost giant pelt"
-    },
-    {
-      "id": 7441,
-      "probability": 0.02093,
-      "name": "ice cube"
-    },
-    {
-      "id": 2513,
-      "probability": 0.01532,
-      "name": "battle shield"
-    },
-    {
-      "id": 7620,
-      "probability": 0.00945,
-      "name": "mana potion"
-    },
-    {
-      "id": 7460,
-      "probability": 0.00287,
-      "name": "norse shield"
-    },
-    {
-      "id": 2490,
-      "probability": 0.00172,
-      "name": "dark helmet"
-    },
-    {
-      "id": 7290,
-      "probability": 0.00102,
-      "name": "shard"
-    },
-    {
-      "id": 2209,
-      "probability": 0.0007,
-      "name": "club ring"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.82053,
+            "name": "gold coin",
+            "min": 1,
+            "max": 40
+        },
+        {
+            "id": 2671,
+            "probability": 0.20794,
+            "name": "ham"
+        },
+        {
+            "id": 1294,
+            "probability": 0.10397,
+            "name": "small stone",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 2406,
+            "probability": 0.07946,
+            "name": "short sword"
+        },
+        {
+            "id": 10575,
+            "probability": 0.04953,
+            "name": "frost giant pelt"
+        },
+        {
+            "id": 7441,
+            "probability": 0.02093,
+            "name": "ice cube"
+        },
+        {
+            "id": 2513,
+            "probability": 0.01532,
+            "name": "battle shield"
+        },
+        {
+            "id": 7620,
+            "probability": 0.00945,
+            "name": "mana potion"
+        },
+        {
+            "id": 7460,
+            "probability": 0.00287,
+            "name": "norse shield"
+        },
+        {
+            "id": 2490,
+            "probability": 0.00172,
+            "name": "dark helmet"
+        },
+        {
+            "id": 7290,
+            "probability": 0.00102,
+            "name": "shard"
+        },
+        {
+            "id": 2209,
+            "probability": 0.0007,
+            "name": "club ring"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": true,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": 4
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": true,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": 4
-  }
 }

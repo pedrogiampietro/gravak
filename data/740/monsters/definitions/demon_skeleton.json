@@ -1,146 +1,146 @@
 {
-  "creatureStatistics": {
-    "name": "Demon Skeleton",
-    "health": 400,
-    "maxHealth": 400,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 180,
-    "attack": 185,
-    "attackSpeed": 2000,
-    "defense": 25,
-    "outfit": {
-      "id": 37
+    "creatureStatistics": {
+        "name": "Demon Skeleton",
+        "health": 400,
+        "maxHealth": 400,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 90,
+        "attack": 185,
+        "attackSpeed": 2000,
+        "defense": 25,
+        "outfit": {
+            "id": 37
+        },
+        "armor": 25
     },
-    "armor": 25
-  },
-  "experience": 240,
-  "corpse": 2843,
-  "fluidType": 2,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 185
+    "experience": 240,
+    "corpse": 2843,
+    "fluidType": 2,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "death",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 30,
-      "max": 50,
-      "range": 1,
-      "radius": 1,
-      "target": true,
-      "areaEffect": "smallclouds"
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 185
+        },
+        {
+            "name": "death",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 30,
+            "max": 50,
+            "range": 1,
+            "radius": 1,
+            "target": true,
+            "areaEffect": "smallclouds"
+        }
+    ],
+    "elements": {
+        "holy": -25
+    },
+    "immunities": {
+        "paralyze": true,
+        "death": true,
+        "fire": true,
+        "earth": true,
+        "drown": true,
+        "lifedrain": true,
+        "drunk": true
+    },
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.97515,
+            "name": "gold coin",
+            "min": 1,
+            "max": 75
+        },
+        {
+            "id": 10564,
+            "probability": 0.11978,
+            "name": "demonic skeletal hand"
+        },
+        {
+            "id": 2399,
+            "probability": 0.09982,
+            "name": "throwing star",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 7618,
+            "probability": 0.09693,
+            "name": "health potion",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 7620,
+            "probability": 0.0505,
+            "name": "mana potion"
+        },
+        {
+            "id": 2513,
+            "probability": 0.0496,
+            "name": "battle shield"
+        },
+        {
+            "id": 2050,
+            "probability": 0.04861,
+            "name": "torch"
+        },
+        {
+            "id": 2417,
+            "probability": 0.04061,
+            "name": "battle hammer"
+        },
+        {
+            "id": 2459,
+            "probability": 0.03377,
+            "name": "iron helmet"
+        },
+        {
+            "id": 2144,
+            "probability": 0.02976,
+            "name": "black pearl"
+        },
+        {
+            "id": 2147,
+            "probability": 0.01531,
+            "name": "small ruby"
+        },
+        {
+            "id": 2194,
+            "probability": 0.00535,
+            "name": "mysterious fetish"
+        },
+        {
+            "id": 2178,
+            "probability": 0.00469,
+            "name": "mind stone"
+        },
+        {
+            "id": 2515,
+            "probability": 0.00113,
+            "name": "guardian shield"
+        }
+    ],
+    "flags": {
+        "summonable": true,
+        "attackable": true,
+        "convinceable": true,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "elements": {
-    "holy": -25
-  },
-  "immunities": {
-    "paralyze": true,
-    "death": true,
-    "fire": true,
-    "earth": true,
-    "drown": true,
-    "lifedrain": true,
-    "drunk": true
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.97515,
-      "name": "gold coin",
-      "min": 1,
-      "max": 75
-    },
-    {
-      "id": 10564,
-      "probability": 0.11978,
-      "name": "demonic skeletal hand"
-    },
-    {
-      "id": 2399,
-      "probability": 0.09982,
-      "name": "throwing star",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 7618,
-      "probability": 0.09693,
-      "name": "health potion",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 7620,
-      "probability": 0.0505,
-      "name": "mana potion"
-    },
-    {
-      "id": 2513,
-      "probability": 0.0496,
-      "name": "battle shield"
-    },
-    {
-      "id": 2050,
-      "probability": 0.04861,
-      "name": "torch"
-    },
-    {
-      "id": 2417,
-      "probability": 0.04061,
-      "name": "battle hammer"
-    },
-    {
-      "id": 2459,
-      "probability": 0.03377,
-      "name": "iron helmet"
-    },
-    {
-      "id": 2144,
-      "probability": 0.02976,
-      "name": "black pearl"
-    },
-    {
-      "id": 2147,
-      "probability": 0.01531,
-      "name": "small ruby"
-    },
-    {
-      "id": 2194,
-      "probability": 0.00535,
-      "name": "mysterious fetish"
-    },
-    {
-      "id": 2178,
-      "probability": 0.00469,
-      "name": "mind stone"
-    },
-    {
-      "id": 2515,
-      "probability": 0.00113,
-      "name": "guardian shield"
-    }
-  ],
-  "flags": {
-    "summonable": true,
-    "attackable": true,
-    "convinceable": true,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

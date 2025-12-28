@@ -1,136 +1,136 @@
 {
-  "creatureStatistics": {
-    "name": "Massive Energy Elemental",
-    "health": 1100,
-    "maxHealth": 1100,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 210,
-    "attack": 175,
-    "attackSpeed": 2000,
-    "defense": 20,
-    "outfit": {
-      "id": 290
+    "creatureStatistics": {
+        "name": "Massive Energy Elemental",
+        "health": 1100,
+        "maxHealth": 1100,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 215,
+        "attack": 175,
+        "attackSpeed": 2000,
+        "defense": 20,
+        "outfit": {
+            "id": 290
+        },
+        "armor": 20
     },
-    "armor": 20
-  },
-  "experience": 950,
-  "corpse": 2813,
-  "fluidType": 4,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.05,
-      "min": 190,
-      "max": 250,
-      "areaEffect": "blueshimmer"
+    "experience": 950,
+    "corpse": 2813,
+    "fluidType": 4,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
+    },
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.05,
+            "min": 190,
+            "max": 250,
+            "areaEffect": "blueshimmer"
+        }
+    ],
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 175
+        },
+        {
+            "name": "energy",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 270,
+            "max": 615,
+            "range": 7,
+            "radius": 2,
+            "target": true,
+            "shootEffect": "energy",
+            "areaEffect": "energy"
+        },
+        {
+            "name": "energy",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 175,
+            "max": 205,
+            "range": 7,
+            "target": true,
+            "shootEffect": "energyball",
+            "areaEffect": "energy"
+        },
+        {
+            "name": "massive energy elemental electrify",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 0,
+            "max": 0,
+            "areaEffect": "yellowspark"
+        }
+    ],
+    "elements": {
+        "physical": 70,
+        "holy": 25,
+        "death": 1,
+        "earth": -5
+    },
+    "immunities": {
+        "ice": true,
+        "energy": true,
+        "fire": true,
+        "invisible": true,
+        "paralyze": true
+    },
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.5,
+            "name": "gold coin",
+            "min": 1,
+            "max": 100
+        },
+        {
+            "id": 2148,
+            "probability": 0.5,
+            "name": "gold coin",
+            "min": 1,
+            "max": 91
+        },
+        {
+            "id": 2150,
+            "probability": 0.0327,
+            "name": "small amethyst",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 2270,
+            "probability": 0.1745,
+            "name": "strong mana potion"
+        },
+        {
+            "id": 2273,
+            "probability": 0.0545,
+            "name": "great mana potion"
+        },
+        {
+            "id": 9809,
+            "probability": 0.0073
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": false,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 175
-    },
-    {
-      "name": "energy",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 270,
-      "max": 615,
-      "range": 7,
-      "radius": 2,
-      "target": true,
-      "shootEffect": "energy",
-      "areaEffect": "energy"
-    },
-    {
-      "name": "energy",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 175,
-      "max": 205,
-      "range": 7,
-      "target": true,
-      "shootEffect": "energyball",
-      "areaEffect": "energy"
-    },
-    {
-      "name": "massive energy elemental electrify",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 0,
-      "max": 0,
-      "areaEffect": "yellowspark"
-    }
-  ],
-  "elements": {
-    "physical": 70,
-    "holy": 25,
-    "death": 1,
-    "earth": -5
-  },
-  "immunities": {
-    "ice": true,
-    "energy": true,
-    "fire": true,
-    "invisible": true,
-    "paralyze": true
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.5,
-      "name": "gold coin",
-      "min": 1,
-      "max": 100
-    },
-    {
-      "id": 2148,
-      "probability": 0.5,
-      "name": "gold coin",
-      "min": 1,
-      "max": 91
-    },
-    {
-      "id": 2150,
-      "probability": 0.0327,
-      "name": "small amethyst",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 2270,
-      "probability": 0.1745,
-      "name": "strong mana potion"
-    },
-    {
-      "id": 2273,
-      "probability": 0.0545,
-      "name": "great mana potion"
-    },
-    {
-      "id": 9809,
-      "probability": 0.0073
-    }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": false,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

@@ -1,165 +1,165 @@
 {
-  "creatureStatistics": {
-    "name": "Merlkin",
-    "health": 235,
-    "maxHealth": 235,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 194,
-    "attack": 30,
-    "attackSpeed": 2000,
-    "defense": 16,
-    "outfit": {
-      "id": 117
+    "creatureStatistics": {
+        "name": "Merlkin",
+        "health": 235,
+        "maxHealth": 235,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 97,
+        "attack": 30,
+        "attackSpeed": 2000,
+        "defense": 16,
+        "outfit": {
+            "id": 117
+        },
+        "armor": 16
     },
-    "armor": 16
-  },
-  "experience": 145,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.25,
-      "min": 30,
-      "max": 40,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 30
+    "experience": 145,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "fire",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 60,
-      "max": 90,
-      "range": 7,
-      "shootEffect": "fire",
-      "areaEffect": "fire"
-    },
-    {
-      "name": "energy",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 15,
-      "max": 45,
-      "range": 7,
-      "shootEffect": "energy",
-      "areaEffect": "energy"
-    },
-    {
-      "name": "poisonfield",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 0,
-      "range": 7,
-      "radius": 1,
-      "target": true,
-      "shootEffect": "poison"
-    }
-  ],
-  "elements": {
-    "energy": 10,
-    "fire": 20,
-    "ice": -15,
-    "holy": 10,
-    "death": -5
-  },
-  "immunities": {
-    "outfit": true,
-    "drunk": true,
-    "invisible": true
-  },
-  "sayings": {
-    "texts": [
-      "Ugh! Ugh! Ugh!",
-      "Holy banana!",
-      "Chakka! Chakka!"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.25,
+            "min": 30,
+            "max": 40,
+            "areaEffect": "blueshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.82947,
-      "name": "gold coin",
-      "min": 1,
-      "max": 45
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 30
+        },
+        {
+            "name": "fire",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 60,
+            "max": 90,
+            "range": 7,
+            "shootEffect": "fire",
+            "areaEffect": "fire"
+        },
+        {
+            "name": "energy",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 15,
+            "max": 45,
+            "range": 7,
+            "shootEffect": "energy",
+            "areaEffect": "energy"
+        },
+        {
+            "name": "poisonfield",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 0,
+            "range": 7,
+            "radius": 1,
+            "target": true,
+            "shootEffect": "poison"
+        }
+    ],
+    "elements": {
+        "energy": 10,
+        "fire": 20,
+        "ice": -15,
+        "holy": 10,
+        "death": -5
     },
-    {
-      "id": 2676,
-      "probability": 0.3043,
-      "name": "banana",
-      "min": 1,
-      "max": 12
+    "immunities": {
+        "outfit": true,
+        "drunk": true,
+        "invisible": true
     },
-    {
-      "id": 2162,
-      "probability": 0.0302,
-      "name": "magic light wand"
+    "sayings": {
+        "texts": [
+            "Ugh! Ugh! Ugh!",
+            "Holy banana!",
+            "Chakka! Chakka!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 12467,
-      "probability": 0.01918,
-      "name": "banana sash"
-    },
-    {
-      "id": 5883,
-      "probability": 0.01014,
-      "name": "ape fur"
-    },
-    {
-      "id": 2675,
-      "probability": 0.0101,
-      "name": "orange",
-      "min": 1,
-      "max": 5
-    },
-    {
-      "id": 2188,
-      "probability": 0.0098,
-      "name": "wand of decay"
-    },
-    {
-      "id": 7620,
-      "probability": 0.00693,
-      "name": "mana potion"
-    },
-    {
-      "id": 2150,
-      "probability": 0.0031,
-      "name": "small amethyst"
-    },
-    {
-      "id": 3966,
-      "probability": 0.00102,
-      "name": "banana staff"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.82947,
+            "name": "gold coin",
+            "min": 1,
+            "max": 45
+        },
+        {
+            "id": 2676,
+            "probability": 0.3043,
+            "name": "banana",
+            "min": 1,
+            "max": 12
+        },
+        {
+            "id": 2162,
+            "probability": 0.0302,
+            "name": "magic light wand"
+        },
+        {
+            "id": 12467,
+            "probability": 0.01918,
+            "name": "banana sash"
+        },
+        {
+            "id": 5883,
+            "probability": 0.01014,
+            "name": "ape fur"
+        },
+        {
+            "id": 2675,
+            "probability": 0.0101,
+            "name": "orange",
+            "min": 1,
+            "max": 5
+        },
+        {
+            "id": 2188,
+            "probability": 0.0098,
+            "name": "wand of decay"
+        },
+        {
+            "id": 7620,
+            "probability": 0.00693,
+            "name": "mana potion"
+        },
+        {
+            "id": 2150,
+            "probability": 0.0031,
+            "name": "small amethyst"
+        },
+        {
+            "id": 3966,
+            "probability": 0.00102,
+            "name": "banana staff"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": 4
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": 4
-  }
 }

@@ -1,158 +1,158 @@
 {
-  "creatureStatistics": {
-    "name": "Blue Djinn",
-    "health": 330,
-    "maxHealth": 330,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 220,
-    "attack": 110,
-    "attackSpeed": 2000,
-    "defense": 20,
-    "outfit": {
-      "id": 80
+    "creatureStatistics": {
+        "name": "Blue Djinn",
+        "health": 330,
+        "maxHealth": 330,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 110,
+        "attack": 110,
+        "attackSpeed": 2000,
+        "defense": 20,
+        "outfit": {
+            "id": 80
+        },
+        "armor": 20
     },
-    "armor": 20
-  },
-  "experience": 215,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 110
+    "experience": 215,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "fire",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 45,
-      "max": 80,
-      "range": 7,
-      "shootEffect": "fire"
-    },
-    {
-      "name": "death",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 60,
-      "max": 105,
-      "range": 7,
-      "radius": 1,
-      "target": true,
-      "shootEffect": "suddendeath",
-      "areaEffect": "smallclouds"
-    },
-    {
-      "name": "drunk",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 0,
-      "max": 0,
-      "range": 7,
-      "duration": 5000,
-      "shootEffect": "energy"
-    },
-    {
-      "name": "outfit",
-      "interval": 2000,
-      "chance": 0.01,
-      "min": 0,
-      "max": 0,
-      "range": 7,
-      "duration": 4000,
-      "areaEffect": "blueshimmer"
-    },
-    {
-      "name": "djinn electrify",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 0,
-      "range": 5
-    },
-    {
-      "name": "djinn cancel invisibility",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 0,
-      "max": 0
-    }
-  ],
-  "elements": {
-    "fire": 80,
-    "energy": 50,
-    "holy": 20,
-    "ice": -10,
-    "death": -13
-  },
-  "immunities": {
-    "paralyze": true,
-    "invisible": true
-  },
-  "sayings": {
-    "texts": [
-      "Simsalabim",
-      "Feel the power of my magic, tiny mortal!",
-      "Be careful what you wish for.",
-      "Wishes can come true."
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 110
+        },
+        {
+            "name": "fire",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 45,
+            "max": 80,
+            "range": 7,
+            "shootEffect": "fire"
+        },
+        {
+            "name": "death",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 60,
+            "max": 105,
+            "range": 7,
+            "radius": 1,
+            "target": true,
+            "shootEffect": "suddendeath",
+            "areaEffect": "smallclouds"
+        },
+        {
+            "name": "drunk",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 0,
+            "max": 0,
+            "range": 7,
+            "duration": 5000,
+            "shootEffect": "energy"
+        },
+        {
+            "name": "outfit",
+            "interval": 2000,
+            "chance": 0.01,
+            "min": 0,
+            "max": 0,
+            "range": 7,
+            "duration": 4000,
+            "areaEffect": "blueshimmer"
+        },
+        {
+            "name": "djinn electrify",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 0,
+            "range": 5
+        },
+        {
+            "name": "djinn cancel invisibility",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 0,
+            "max": 0
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.43,
-      "name": "gold coin",
-      "min": 1,
-      "max": 100
+    "elements": {
+        "fire": 80,
+        "energy": 50,
+        "holy": 20,
+        "ice": -10,
+        "death": -13
     },
-    {
-      "id": 2148,
-      "probability": 0.43,
-      "name": "gold coin",
-      "min": 1,
-      "max": 15
+    "immunities": {
+        "paralyze": true,
+        "invisible": true
     },
-    {
-      "id": 2684,
-      "probability": 0.2348
+    "sayings": {
+        "texts": [
+            "Simsalabim",
+            "Feel the power of my magic, tiny mortal!",
+            "Be careful what you wish for.",
+            "Wishes can come true."
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2146,
-      "probability": 0.0256,
-      "name": "small sapphire",
-      "min": 1,
-      "max": 4
-    },
-    {
-      "id": 1963,
-      "probability": 0.0245
-    },
-    {
-      "id": 2268,
-      "probability": 0.0086,
-      "name": "mana potion"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.43,
+            "name": "gold coin",
+            "min": 1,
+            "max": 100
+        },
+        {
+            "id": 2148,
+            "probability": 0.43,
+            "name": "gold coin",
+            "min": 1,
+            "max": 15
+        },
+        {
+            "id": 2684,
+            "probability": 0.2348
+        },
+        {
+            "id": 2146,
+            "probability": 0.0256,
+            "name": "small sapphire",
+            "min": 1,
+            "max": 4
+        },
+        {
+            "id": 1963,
+            "probability": 0.0245
+        },
+        {
+            "id": 2268,
+            "probability": 0.0086,
+            "name": "mana potion"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": false,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": false,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

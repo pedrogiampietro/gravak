@@ -1,86 +1,86 @@
 {
-  "creatureStatistics": {
-    "name": "Thornback Tortoise",
-    "health": 300,
-    "maxHealth": 300,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 200,
-    "attack": 110,
-    "attackSpeed": 2000,
-    "defense": 40,
-    "outfit": {
-      "id": 198
+    "creatureStatistics": {
+        "name": "Thornback Tortoise",
+        "health": 300,
+        "maxHealth": 300,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 75,
+        "attack": 110,
+        "attackSpeed": 2000,
+        "defense": 40,
+        "outfit": {
+            "id": 198
+        },
+        "armor": 40
     },
-    "armor": 40
-  },
-  "experience": 150,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 110
+    "experience": 150,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
+    },
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 110
+        }
+    ],
+    "elements": {
+        "physical": 45,
+        "earth": 20,
+        "ice": 20,
+        "fire": -10
+    },
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.895,
+            "name": "gold coin",
+            "min": 1,
+            "max": 48
+        },
+        {
+            "id": 2391,
+            "probability": 0.0026,
+            "name": "war hammer"
+        },
+        {
+            "id": 2667,
+            "probability": 0.108,
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 2787,
+            "probability": 0.012,
+            "name": "white mushroom"
+        },
+        {
+            "id": 2789,
+            "probability": 0.007,
+            "name": "brown mushroom"
+        },
+        {
+            "id": 2269,
+            "probability": 0.016,
+            "name": "health potion"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": true,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "elements": {
-    "physical": 45,
-    "earth": 20,
-    "ice": 20,
-    "fire": -10
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.895,
-      "name": "gold coin",
-      "min": 1,
-      "max": 48
-    },
-    {
-      "id": 2391,
-      "probability": 0.0026,
-      "name": "war hammer"
-    },
-    {
-      "id": 2667,
-      "probability": 0.108,
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 2787,
-      "probability": 0.012,
-      "name": "white mushroom"
-    },
-    {
-      "id": 2789,
-      "probability": 0.007,
-      "name": "brown mushroom"
-    },
-    {
-      "id": 2269,
-      "probability": 0.016,
-      "name": "health potion"
-    }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": true,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

@@ -1,81 +1,81 @@
 {
-  "creatureStatistics": {
-    "name": "Cave Rat",
-    "health": 30,
-    "maxHealth": 30,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 150,
-    "attack": 10,
-    "attackSpeed": 2000,
-    "defense": 1,
-    "outfit": {
-      "id": 56
+    "creatureStatistics": {
+        "name": "Cave Rat",
+        "health": 30,
+        "maxHealth": 30,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 75,
+        "attack": 10,
+        "attackSpeed": 2000,
+        "defense": 1,
+        "outfit": {
+            "id": 56
+        },
+        "armor": 1
     },
-    "armor": 1
-  },
-  "experience": 10,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 3,
-    "openDoors": false,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 10
-    }
-  ],
-  "elements": {
-    "fire": -10
-  },
-  "sayings": {
-    "texts": [
-      "Meeeeep!",
-      "Meep!"
+    "experience": 10,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 3,
+        "openDoors": false,
+        "senseInvisible": false
+    },
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 10
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.85,
-      "name": "gold coin",
-      "min": 1,
-      "max": 2
+    "elements": {
+        "fire": -10
     },
-    {
-      "id": 2696,
-      "probability": 0.3
+    "sayings": {
+        "texts": [
+            "Meeeeep!",
+            "Meep!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2575,
-      "probability": 0.1,
-      "name": "worm",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 2687,
-      "probability": 0.0094,
-      "name": "cookie"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.85,
+            "name": "gold coin",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 2696,
+            "probability": 0.3
+        },
+        {
+            "id": 2575,
+            "probability": 0.1,
+            "name": "worm",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 2687,
+            "probability": 0.0094,
+            "name": "cookie"
+        }
+    ],
+    "flags": {
+        "summonable": true,
+        "attackable": true,
+        "convinceable": true,
+        "pushable": true,
+        "canPushItems": false,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": true,
-    "attackable": true,
-    "convinceable": true,
-    "pushable": true,
-    "canPushItems": false,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

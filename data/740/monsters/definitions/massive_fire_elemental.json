@@ -1,148 +1,148 @@
 {
-  "creatureStatistics": {
-    "name": "Massive Fire Elemental",
-    "health": 1200,
-    "maxHealth": 1200,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 210,
-    "attack": 300,
-    "attackSpeed": 2000,
-    "defense": 30,
-    "outfit": {
-      "id": 242
+    "creatureStatistics": {
+        "name": "Massive Fire Elemental",
+        "health": 1200,
+        "maxHealth": 1200,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 119,
+        "attack": 300,
+        "attackSpeed": 2000,
+        "defense": 30,
+        "outfit": {
+            "id": 242
+        },
+        "armor": 30
     },
-    "armor": 30
-  },
-  "experience": 1400,
-  "corpse": 2813,
-  "fluidType": 0,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 300
+    "experience": 1400,
+    "corpse": 2813,
+    "fluidType": 0,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "firefield",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 0,
-      "max": 0,
-      "range": 7,
-      "radius": 3,
-      "target": false,
-      "shootEffect": "fire"
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 300
+        },
+        {
+            "name": "firefield",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 0,
+            "max": 0,
+            "range": 7,
+            "radius": 3,
+            "target": false,
+            "shootEffect": "fire"
+        },
+        {
+            "name": "firefield",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 0,
+            "max": 0,
+            "range": 7,
+            "radius": 3,
+            "target": true,
+            "shootEffect": "fire"
+        },
+        {
+            "name": "fire",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 200,
+            "max": 700,
+            "length": 7,
+            "spread": 0
+        },
+        {
+            "name": "fire",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 60,
+            "max": 250,
+            "radius": 3,
+            "target": false,
+            "areaEffect": "explosion"
+        },
+        {
+            "name": "massive fire elemental soulfire",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 0
+        }
+    ],
+    "elements": {
+        "ice": -15,
+        "physical": 40,
+        "death": 20,
+        "energy": 30
     },
-    {
-      "name": "firefield",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 0,
-      "max": 0,
-      "range": 7,
-      "radius": 3,
-      "target": true,
-      "shootEffect": "fire"
+    "immunities": {
+        "fire": true,
+        "paralyze": true,
+        "invisible": true
     },
-    {
-      "name": "fire",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 200,
-      "max": 700,
-      "length": 7,
-      "spread": 0
-    },
-    {
-      "name": "fire",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 60,
-      "max": 250,
-      "radius": 3,
-      "target": false,
-      "areaEffect": "explosion"
-    },
-    {
-      "name": "massive fire elemental soulfire",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 0
+    "loot": [
+        {
+            "id": 2147,
+            "probability": 0.061,
+            "name": "small ruby",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 2148,
+            "probability": 0.5,
+            "name": "gold coin",
+            "min": 1,
+            "max": 100
+        },
+        {
+            "id": 2148,
+            "probability": 0.25,
+            "name": "gold coin",
+            "min": 1,
+            "max": 100
+        },
+        {
+            "id": 2148,
+            "probability": 0.25,
+            "name": "gold coin",
+            "min": 1,
+            "max": 12
+        },
+        {
+            "id": 2187,
+            "probability": 0.0224,
+            "name": "wand of inferno"
+        },
+        {
+            "id": 2392,
+            "probability": 0.0053,
+            "name": "fire sword"
+        },
+        {
+            "id": 9809,
+            "probability": 0.0133
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "elements": {
-    "ice": -15,
-    "physical": 40,
-    "death": 20,
-    "energy": 30
-  },
-  "immunities": {
-    "fire": true,
-    "paralyze": true,
-    "invisible": true
-  },
-  "loot": [
-    {
-      "id": 2147,
-      "probability": 0.061,
-      "name": "small ruby",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 2148,
-      "probability": 0.5,
-      "name": "gold coin",
-      "min": 1,
-      "max": 100
-    },
-    {
-      "id": 2148,
-      "probability": 0.25,
-      "name": "gold coin",
-      "min": 1,
-      "max": 100
-    },
-    {
-      "id": 2148,
-      "probability": 0.25,
-      "name": "gold coin",
-      "min": 1,
-      "max": 12
-    },
-    {
-      "id": 2187,
-      "probability": 0.0224,
-      "name": "wand of inferno"
-    },
-    {
-      "id": 2392,
-      "probability": 0.0053,
-      "name": "fire sword"
-    },
-    {
-      "id": 9809,
-      "probability": 0.0133
-    }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

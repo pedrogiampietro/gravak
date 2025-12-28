@@ -1,80 +1,80 @@
 {
-  "creatureStatistics": {
-    "name": "Bear",
-    "health": 80,
-    "maxHealth": 80,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 156,
-    "attack": 25,
-    "attackSpeed": 2000,
-    "defense": 6,
-    "outfit": {
-      "id": 16
+    "creatureStatistics": {
+        "name": "Bear",
+        "health": 80,
+        "maxHealth": 80,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 78,
+        "attack": 25,
+        "attackSpeed": 2000,
+        "defense": 6,
+        "outfit": {
+            "id": 16
+        },
+        "armor": 6
     },
-    "armor": 6
-  },
-  "experience": 23,
-  "corpse": 2849,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 15,
-    "openDoors": false,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 25
-    }
-  ],
-  "elements": {
-    "ice": -10,
-    "holy": 10,
-    "death": -5
-  },
-  "sayings": {
-    "texts": [
-      "Grrrr",
-      "Groar"
+    "experience": 23,
+    "corpse": 2849,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 15,
+        "openDoors": false,
+        "senseInvisible": false
+    },
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 25
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2666,
-      "probability": 0.39964,
-      "name": "meat"
+    "elements": {
+        "ice": -10,
+        "holy": 10,
+        "death": -5
     },
-    {
-      "id": 2671,
-      "probability": 0.19987,
-      "name": "ham"
+    "sayings": {
+        "texts": [
+            "Grrrr",
+            "Groar"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 5896,
-      "probability": 0.01973,
-      "name": "bear paw"
-    },
-    {
-      "id": 5902,
-      "probability": 0.0048,
-      "name": "honeycomb"
+    "loot": [
+        {
+            "id": 2666,
+            "probability": 0.39964,
+            "name": "meat"
+        },
+        {
+            "id": 2671,
+            "probability": 0.19987,
+            "name": "ham"
+        },
+        {
+            "id": 5896,
+            "probability": 0.01973,
+            "name": "bear paw"
+        },
+        {
+            "id": 5902,
+            "probability": 0.0048,
+            "name": "honeycomb"
+        }
+    ],
+    "flags": {
+        "summonable": true,
+        "attackable": true,
+        "convinceable": true,
+        "pushable": false,
+        "canPushItems": false,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": true,
-    "attackable": true,
-    "convinceable": true,
-    "pushable": false,
-    "canPushItems": false,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

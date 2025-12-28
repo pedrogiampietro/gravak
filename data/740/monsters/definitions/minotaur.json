@@ -5,7 +5,7 @@
     "maxHealth": 100,
     "mana": 0,
     "maxMana": 0,
-    "speed": 168,
+    "speed": 84,
     "attack": 45,
     "attackSpeed": 2000,
     "defense": 11,

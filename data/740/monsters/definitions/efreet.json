@@ -1,191 +1,191 @@
 {
-  "creatureStatistics": {
-    "name": "Efreet",
-    "health": 550,
-    "maxHealth": 550,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 234,
-    "attack": 110,
-    "attackSpeed": 2000,
-    "defense": 24,
-    "outfit": {
-      "id": 103
+    "creatureStatistics": {
+        "name": "Efreet",
+        "health": 550,
+        "maxHealth": 550,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 117,
+        "attack": 110,
+        "attackSpeed": 2000,
+        "defense": 24,
+        "outfit": {
+            "id": 103
+        },
+        "armor": 24
     },
-    "armor": 24
-  },
-  "experience": 410,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 50,
-      "max": 80,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 110
+    "experience": 410,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "fire",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 40,
-      "max": 110,
-      "range": 7,
-      "shootEffect": "fire"
-    },
-    {
-      "name": "energy",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 30,
-      "max": 90,
-      "radius": 3,
-      "target": false,
-      "areaEffect": "energy"
-    },
-    {
-      "name": "energy",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 65,
-      "max": 120,
-      "range": 7,
-      "shootEffect": "energy",
-      "areaEffect": "energy"
-    },
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 0,
-      "range": 7,
-      "speedChange": -650,
-      "duration": 15000,
-      "areaEffect": "redshimmer"
-    },
-    {
-      "name": "drunk",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 0,
-      "max": 0,
-      "range": 7,
-      "duration": 6000,
-      "shootEffect": "energy"
-    },
-    {
-      "name": "outfit",
-      "interval": 2000,
-      "chance": 0.01,
-      "min": 0,
-      "max": 0,
-      "range": 7,
-      "duration": 4000,
-      "areaEffect": "blueshimmer"
-    },
-    {
-      "name": "djinn electrify",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 0,
-      "range": 5
-    }
-  ],
-  "elements": {
-    "fire": 90,
-    "energy": 60,
-    "earth": 10,
-    "death": 20,
-    "ice": -5,
-    "holy": -8
-  },
-  "immunities": {
-    "paralyze": true,
-    "invisible": true
-  },
-  "summons": [
-    {
-      "name": "green djinn",
-      "interval": 2000,
-      "chance": 0.1,
-      "maxSummons": 2
-    }
-  ],
-  "sayings": {
-    "texts": [
-      "I grant you a deathwish!",
-      "Good wishes are for fairytales"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 50,
+            "max": 80,
+            "areaEffect": "blueshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.47,
-      "name": "gold coin",
-      "min": 1,
-      "max": 100
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 110
+        },
+        {
+            "name": "fire",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 40,
+            "max": 110,
+            "range": 7,
+            "shootEffect": "fire"
+        },
+        {
+            "name": "energy",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 30,
+            "max": 90,
+            "radius": 3,
+            "target": false,
+            "areaEffect": "energy"
+        },
+        {
+            "name": "energy",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 65,
+            "max": 120,
+            "range": 7,
+            "shootEffect": "energy",
+            "areaEffect": "energy"
+        },
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 0,
+            "range": 7,
+            "speedChange": -650,
+            "duration": 15000,
+            "areaEffect": "redshimmer"
+        },
+        {
+            "name": "drunk",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 0,
+            "max": 0,
+            "range": 7,
+            "duration": 6000,
+            "shootEffect": "energy"
+        },
+        {
+            "name": "outfit",
+            "interval": 2000,
+            "chance": 0.01,
+            "min": 0,
+            "max": 0,
+            "range": 7,
+            "duration": 4000,
+            "areaEffect": "blueshimmer"
+        },
+        {
+            "name": "djinn electrify",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 0,
+            "range": 5
+        }
+    ],
+    "elements": {
+        "fire": 90,
+        "energy": 60,
+        "earth": 10,
+        "death": 20,
+        "ice": -5,
+        "holy": -8
     },
-    {
-      "id": 2148,
-      "probability": 0.47,
-      "name": "gold coin",
-      "min": 1,
-      "max": 30
+    "immunities": {
+        "paralyze": true,
+        "invisible": true
     },
-    {
-      "id": 2270,
-      "probability": 0.105,
-      "name": "strong mana potion"
+    "summons": [
+        {
+            "name": "green djinn",
+            "interval": 2000,
+            "chance": 0.1,
+            "maxSummons": 2
+        }
+    ],
+    "sayings": {
+        "texts": [
+            "I grant you a deathwish!",
+            "Good wishes are for fairytales"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2149,
-      "probability": 0.072,
-      "name": "small emerald"
-    },
-    {
-      "id": 1860,
-      "probability": 0.022
-    },
-    {
-      "id": 2187,
-      "probability": 0.0039,
-      "name": "wand of inferno"
-    },
-    {
-      "id": 2153,
-      "probability": 0.0015,
-      "name": "green gem"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.47,
+            "name": "gold coin",
+            "min": 1,
+            "max": 100
+        },
+        {
+            "id": 2148,
+            "probability": 0.47,
+            "name": "gold coin",
+            "min": 1,
+            "max": 30
+        },
+        {
+            "id": 2270,
+            "probability": 0.105,
+            "name": "strong mana potion"
+        },
+        {
+            "id": 2149,
+            "probability": 0.072,
+            "name": "small emerald"
+        },
+        {
+            "id": 1860,
+            "probability": 0.022
+        },
+        {
+            "id": 2187,
+            "probability": 0.0039,
+            "name": "wand of inferno"
+        },
+        {
+            "id": 2153,
+            "probability": 0.0015,
+            "name": "green gem"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": false,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": false,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

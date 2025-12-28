@@ -1,43 +1,43 @@
 {
-  "creatureStatistics": {
-    "name": "Dog",
-    "health": 20,
-    "maxHealth": 20,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 124,
-    "attack": 0,
-    "attackSpeed": 2000,
-    "defense": 1,
-    "outfit": {
-      "id": 32
+    "creatureStatistics": {
+        "name": "Dog",
+        "health": 20,
+        "maxHealth": 20,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 62,
+        "attack": 0,
+        "attackSpeed": 2000,
+        "defense": 1,
+        "outfit": {
+            "id": 32
+        },
+        "armor": 1
     },
-    "armor": 1
-  },
-  "experience": 0,
-  "corpse": 2839,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 0,
-    "fleeHealth": 8,
-    "openDoors": false,
-    "senseInvisible": false
-  },
-  "sayings": {
-    "texts": [
-      "Wuff wuff"
-    ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "flags": {
-    "summonable": true,
-    "attackable": true,
-    "convinceable": true,
-    "pushable": true,
-    "canPushItems": false,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": true
-  }
+    "experience": 0,
+    "corpse": 2839,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 0,
+        "fleeHealth": 8,
+        "openDoors": false,
+        "senseInvisible": false
+    },
+    "sayings": {
+        "texts": [
+            "Wuff wuff"
+        ],
+        "slowness": 5,
+        "chance": 0.1
+    },
+    "flags": {
+        "summonable": true,
+        "attackable": true,
+        "convinceable": true,
+        "pushable": true,
+        "canPushItems": false,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": true
+    }
 }

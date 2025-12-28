@@ -1,142 +1,142 @@
 {
-  "creatureStatistics": {
-    "name": "Ungreez",
-    "health": 8200,
-    "maxHealth": 8200,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 330,
-    "attack": 480,
-    "attackSpeed": 2000,
-    "defense": 55,
-    "outfit": {
-      "id": 35
+    "creatureStatistics": {
+        "name": "Ungreez",
+        "health": 8200,
+        "maxHealth": 8200,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 120,
+        "attack": 480,
+        "attackSpeed": 2000,
+        "defense": 55,
+        "outfit": {
+            "id": 35
+        },
+        "armor": 55
     },
-    "armor": 55
-  },
-  "experience": 500,
-  "corpse": 2813,
-  "fluidType": 0,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 90,
-      "max": 150,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 480
+    "experience": 500,
+    "corpse": 2813,
+    "fluidType": 0,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "manadrain",
-      "interval": 2000,
-      "chance": 0.13,
-      "min": 0,
-      "max": 110,
-      "range": 7,
-      "shootEffect": "suddendeath"
-    },
-    {
-      "name": "fire",
-      "interval": 1000,
-      "chance": 0.14,
-      "min": 150,
-      "max": 250,
-      "range": 7,
-      "radius": 7,
-      "target": true,
-      "shootEffect": "fire",
-      "areaEffect": "firearea"
-    },
-    {
-      "name": "energy",
-      "interval": 2000,
-      "chance": 0.18,
-      "min": 200,
-      "max": 400,
-      "shootEffect": "energy",
-      "areaEffect": "purpleenergy"
-    },
-    {
-      "name": "energy",
-      "interval": 1000,
-      "chance": 0.12,
-      "min": 300,
-      "max": 380,
-      "length": 8,
-      "spread": 0,
-      "areaEffect": "purpleenergy"
-    }
-  ],
-  "elements": {
-    "physical": 25,
-    "ice": -15
-  },
-  "immunities": {
-    "energy": true,
-    "fire": true,
-    "lifedrain": true,
-    "paralyze": true,
-    "outfit": true,
-    "drunk": true,
-    "invisible": true
-  },
-  "sayings": {
-    "texts": [
-      "I'll teach you that even heros can die",
-      "You wil die Begging like the others did"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 90,
+            "max": 150,
+            "areaEffect": "blueshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.21,
-      "name": "gold coin",
-      "min": 1,
-      "max": 90
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 480
+        },
+        {
+            "name": "manadrain",
+            "interval": 2000,
+            "chance": 0.13,
+            "min": 0,
+            "max": 110,
+            "range": 7,
+            "shootEffect": "suddendeath"
+        },
+        {
+            "name": "fire",
+            "interval": 1000,
+            "chance": 0.14,
+            "min": 150,
+            "max": 250,
+            "range": 7,
+            "radius": 7,
+            "target": true,
+            "shootEffect": "fire",
+            "areaEffect": "firearea"
+        },
+        {
+            "name": "energy",
+            "interval": 2000,
+            "chance": 0.18,
+            "min": 200,
+            "max": 400,
+            "shootEffect": "energy",
+            "areaEffect": "purpleenergy"
+        },
+        {
+            "name": "energy",
+            "interval": 1000,
+            "chance": 0.12,
+            "min": 300,
+            "max": 380,
+            "length": 8,
+            "spread": 0,
+            "areaEffect": "purpleenergy"
+        }
+    ],
+    "elements": {
+        "physical": 25,
+        "ice": -15
     },
-    {
-      "id": 2795,
-      "probability": 0.1,
-      "name": "fire mushroom",
-      "min": 1,
-      "max": 6
+    "immunities": {
+        "energy": true,
+        "fire": true,
+        "lifedrain": true,
+        "paralyze": true,
+        "outfit": true,
+        "drunk": true,
+        "invisible": true
     },
-    {
-      "id": 2273,
-      "probability": 0.2,
-      "name": "great mana potion"
+    "sayings": {
+        "texts": [
+            "I'll teach you that even heros can die",
+            "You wil die Begging like the others did"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2274,
-      "probability": 0.2,
-      "name": "great health potion"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.21,
+            "name": "gold coin",
+            "min": 1,
+            "max": 90
+        },
+        {
+            "id": 2795,
+            "probability": 0.1,
+            "name": "fire mushroom",
+            "min": 1,
+            "max": 6
+        },
+        {
+            "id": 2273,
+            "probability": 0.2,
+            "name": "great mana potion"
+        },
+        {
+            "id": 2274,
+            "probability": 0.2,
+            "name": "great health potion"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

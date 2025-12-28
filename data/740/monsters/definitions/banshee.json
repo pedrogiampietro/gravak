@@ -1,148 +1,148 @@
 {
-  "creatureStatistics": {
-    "name": "Banshee",
-    "health": 1000,
-    "maxHealth": 1000,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 220,
-    "attack": 100,
-    "attackSpeed": 2000,
-    "defense": 25,
-    "outfit": {
-      "id": 78
+    "creatureStatistics": {
+        "name": "Banshee",
+        "health": 1000,
+        "maxHealth": 1000,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 110,
+        "attack": 100,
+        "attackSpeed": 2000,
+        "defense": 25,
+        "outfit": {
+            "id": 78
+        },
+        "armor": 25
     },
-    "armor": 25
-  },
-  "experience": 900,
-  "corpse": 2813,
-  "fluidType": 2,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 599,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 120,
-      "max": 190,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 100
+    "experience": 900,
+    "corpse": 2813,
+    "fluidType": 2,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 599,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "lifedrain",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 100,
-      "max": 200,
-      "radius": 4,
-      "target": false,
-      "areaEffect": "rednote"
-    },
-    {
-      "name": "death",
-      "interval": 2000,
-      "chance": 0.05,
-      "min": 55,
-      "max": 350,
-      "range": 1,
-      "radius": 1,
-      "target": true,
-      "areaEffect": "smallclouds"
-    },
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 0,
-      "max": 0,
-      "range": 7,
-      "speedChange": -300,
-      "duration": 15000,
-      "areaEffect": "redshimmer"
-    }
-  ],
-  "elements": {
-    "holy": -25
-  },
-  "immunities": {
-    "death": true,
-    "fire": true,
-    "earth": true,
-    "drown": true,
-    "lifedrain": true,
-    "paralyze": true,
-    "invisible": true
-  },
-  "sayings": {
-    "texts": [
-      "Dance for me your dance of death!",
-      "Let the music play!",
-      "I will mourn your death!",
-      "Are you ready to rock?",
-      "Feel my gentle kiss of death.",
-      "That's what I call easy listening!",
-      "IIIIEEEeeeeeehhhHHHH!"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 120,
+            "max": 190,
+            "areaEffect": "blueshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.3,
-      "name": "gold coin",
-      "min": 1,
-      "max": 80
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 100
+        },
+        {
+            "name": "lifedrain",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 100,
+            "max": 200,
+            "radius": 4,
+            "target": false,
+            "areaEffect": "rednote"
+        },
+        {
+            "name": "death",
+            "interval": 2000,
+            "chance": 0.05,
+            "min": 55,
+            "max": 350,
+            "range": 1,
+            "radius": 1,
+            "target": true,
+            "areaEffect": "smallclouds"
+        },
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 0,
+            "max": 0,
+            "range": 7,
+            "speedChange": -300,
+            "duration": 15000,
+            "areaEffect": "redshimmer"
+        }
+    ],
+    "elements": {
+        "holy": -25
     },
-    {
-      "id": 2170,
-      "probability": 0.094,
-      "name": "silver amulet"
+    "immunities": {
+        "death": true,
+        "fire": true,
+        "earth": true,
+        "drown": true,
+        "lifedrain": true,
+        "paralyze": true,
+        "invisible": true
     },
-    {
-      "id": 2372,
-      "probability": 0.0097
+    "sayings": {
+        "texts": [
+            "Dance for me your dance of death!",
+            "Let the music play!",
+            "I will mourn your death!",
+            "Are you ready to rock?",
+            "Feel my gentle kiss of death.",
+            "That's what I call easy listening!",
+            "IIIIEEEeeeeeehhhHHHH!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2270,
-      "probability": 0.0077,
-      "name": "strong mana potion"
-    },
-    {
-      "id": 2214,
-      "probability": 0.0075,
-      "name": "ring of healing"
-    },
-    {
-      "id": 2175,
-      "probability": 0.0052
-    },
-    {
-      "id": 2124,
-      "probability": 0.0018
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.3,
+            "name": "gold coin",
+            "min": 1,
+            "max": 80
+        },
+        {
+            "id": 2170,
+            "probability": 0.094,
+            "name": "silver amulet"
+        },
+        {
+            "id": 2372,
+            "probability": 0.0097
+        },
+        {
+            "id": 2270,
+            "probability": 0.0077,
+            "name": "strong mana potion"
+        },
+        {
+            "id": 2214,
+            "probability": 0.0075,
+            "name": "ring of healing"
+        },
+        {
+            "id": 2175,
+            "probability": 0.0052
+        },
+        {
+            "id": 2124,
+            "probability": 0.0018
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

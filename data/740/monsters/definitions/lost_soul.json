@@ -1,206 +1,206 @@
 {
-  "creatureStatistics": {
-    "name": "Lost Soul",
-    "health": 5800,
-    "maxHealth": 5800,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 380,
-    "attack": 420,
-    "attackSpeed": 2000,
-    "defense": 30,
-    "outfit": {
-      "id": 232
+    "creatureStatistics": {
+        "name": "Lost Soul",
+        "health": 5800,
+        "maxHealth": 5800,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 190,
+        "attack": 420,
+        "attackSpeed": 2000,
+        "defense": 30,
+        "outfit": {
+            "id": 232
+        },
+        "armor": 30
     },
-    "armor": 30
-  },
-  "experience": 4000,
-  "corpse": 2813,
-  "fluidType": 2,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 450,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 420
+    "experience": 4000,
+    "corpse": 2813,
+    "fluidType": 2,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 450,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "death",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 40,
-      "max": 210,
-      "length": 3,
-      "spread": 0,
-      "target": false,
-      "areaEffect": "redshimmer"
-    },
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 0,
-      "max": 0,
-      "radius": 6,
-      "target": false,
-      "speedChange": -800,
-      "duration": 4000,
-      "areaEffect": "smallclouds"
-    }
-  ],
-  "elements": {
-    "ice": 50,
-    "energy": 10,
-    "holy": -25
-  },
-  "immunities": {
-    "fire": true,
-    "earth": true,
-    "death": true,
-    "lifedrain": true,
-    "paralyze": true,
-    "invisible": true
-  },
-  "sayings": {
-    "texts": [
-      "Forgive Meeeee!",
-      "Mouuuurn meeee!",
-      "Help meeee!"
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 420
+        },
+        {
+            "name": "death",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 40,
+            "max": 210,
+            "length": 3,
+            "spread": 0,
+            "target": false,
+            "areaEffect": "redshimmer"
+        },
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 0,
+            "max": 0,
+            "radius": 6,
+            "target": false,
+            "speedChange": -800,
+            "duration": 4000,
+            "areaEffect": "smallclouds"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 1,
-      "name": "gold coin",
-      "min": 1,
-      "max": 196
+    "elements": {
+        "ice": 50,
+        "energy": 10,
+        "holy": -25
     },
-    {
-      "id": 2152,
-      "probability": 1,
-      "name": "platinum coin",
-      "min": 1,
-      "max": 7
+    "immunities": {
+        "fire": true,
+        "earth": true,
+        "death": true,
+        "lifedrain": true,
+        "paralyze": true,
+        "invisible": true
     },
-    {
-      "id": 2260,
-      "probability": 0.36842,
-      "name": "blank rune",
-      "min": 1,
-      "max": 3
+    "sayings": {
+        "texts": [
+            "Forgive Meeeee!",
+            "Mouuuurn meeee!",
+            "Help meeee!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 11233,
-      "probability": 0.33684,
-      "name": "unholy bone"
-    },
-    {
-      "id": 7590,
-      "probability": 0.17193,
-      "name": "great mana potion",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 2144,
-      "probability": 0.15439,
-      "name": "black pearl",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 5944,
-      "probability": 0.15439,
-      "name": "soul orb"
-    },
-    {
-      "id": 2143,
-      "probability": 0.14035,
-      "name": "white pearl",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 7591,
-      "probability": 0.08421,
-      "name": "great health potion",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 6500,
-      "probability": 0.05614,
-      "name": "demonic essence"
-    },
-    {
-      "id": 5806,
-      "probability": 0.0386,
-      "name": "silver goblet"
-    },
-    {
-      "id": 9810,
-      "probability": 0.03158,
-      "name": "slightly rusted armor"
-    },
-    {
-      "id": 2197,
-      "probability": 0.02807,
-      "name": "stone skin amulet"
-    },
-    {
-      "id": 6300,
-      "probability": 0.02456,
-      "name": "death ring"
-    },
-    {
-      "id": 2133,
-      "probability": 0.01404,
-      "name": "ruby necklace"
-    },
-    {
-      "id": 6526,
-      "probability": 0.01404,
-      "name": "skeleton decoration"
-    },
-    {
-      "id": 2156,
-      "probability": 0.01053,
-      "name": "red gem"
-    },
-    {
-      "id": 7407,
-      "probability": 0.00702,
-      "name": "haunted blade"
-    },
-    {
-      "id": 2436,
-      "probability": 0.00702,
-      "name": "skull staff"
-    },
-    {
-      "id": 7413,
-      "probability": 0.00351,
-      "name": "titan axe"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 1,
+            "name": "gold coin",
+            "min": 1,
+            "max": 196
+        },
+        {
+            "id": 2152,
+            "probability": 1,
+            "name": "platinum coin",
+            "min": 1,
+            "max": 7
+        },
+        {
+            "id": 2260,
+            "probability": 0.36842,
+            "name": "blank rune",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 11233,
+            "probability": 0.33684,
+            "name": "unholy bone"
+        },
+        {
+            "id": 7590,
+            "probability": 0.17193,
+            "name": "great mana potion",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 2144,
+            "probability": 0.15439,
+            "name": "black pearl",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 5944,
+            "probability": 0.15439,
+            "name": "soul orb"
+        },
+        {
+            "id": 2143,
+            "probability": 0.14035,
+            "name": "white pearl",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 7591,
+            "probability": 0.08421,
+            "name": "great health potion",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 6500,
+            "probability": 0.05614,
+            "name": "demonic essence"
+        },
+        {
+            "id": 5806,
+            "probability": 0.0386,
+            "name": "silver goblet"
+        },
+        {
+            "id": 9810,
+            "probability": 0.03158,
+            "name": "slightly rusted armor"
+        },
+        {
+            "id": 2197,
+            "probability": 0.02807,
+            "name": "stone skin amulet"
+        },
+        {
+            "id": 6300,
+            "probability": 0.02456,
+            "name": "death ring"
+        },
+        {
+            "id": 2133,
+            "probability": 0.01404,
+            "name": "ruby necklace"
+        },
+        {
+            "id": 6526,
+            "probability": 0.01404,
+            "name": "skeleton decoration"
+        },
+        {
+            "id": 2156,
+            "probability": 0.01053,
+            "name": "red gem"
+        },
+        {
+            "id": 7407,
+            "probability": 0.00702,
+            "name": "haunted blade"
+        },
+        {
+            "id": 2436,
+            "probability": 0.00702,
+            "name": "skull staff"
+        },
+        {
+            "id": 7413,
+            "probability": 0.00351,
+            "name": "titan axe"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

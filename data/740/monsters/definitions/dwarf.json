@@ -1,116 +1,116 @@
 {
-  "creatureStatistics": {
-    "name": "Dwarf",
-    "health": 90,
-    "maxHealth": 90,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 170,
-    "attack": 30,
-    "attackSpeed": 2000,
-    "defense": 8,
-    "outfit": {
-      "id": 69
+    "creatureStatistics": {
+        "name": "Dwarf",
+        "health": 90,
+        "maxHealth": 90,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 85,
+        "attack": 30,
+        "attackSpeed": 2000,
+        "defense": 8,
+        "outfit": {
+            "id": 69
+        },
+        "armor": 8
     },
-    "armor": 8
-  },
-  "experience": 45,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": false,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 30
-    }
-  ],
-  "elements": {
-    "earth": 10,
-    "fire": -5,
-    "death": -5
-  },
-  "sayings": {
-    "texts": [
-      "Hail Durin!"
+    "experience": 45,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": false,
+        "senseInvisible": false
+    },
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 30
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2787,
-      "probability": 0.5014,
-      "name": "white mushroom"
+    "elements": {
+        "earth": 10,
+        "fire": -5,
+        "death": -5
     },
-    {
-      "id": 2148,
-      "probability": 0.35361,
-      "name": "gold coin",
-      "min": 1,
-      "max": 8
+    "sayings": {
+        "texts": [
+            "Hail Durin!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2388,
-      "probability": 0.24739,
-      "name": "hatchet"
-    },
-    {
-      "id": 2386,
-      "probability": 0.14596,
-      "name": "axe"
-    },
-    {
-      "id": 3456,
-      "probability": 0.10143,
-      "name": "pick"
-    },
-    {
-      "id": 2530,
-      "probability": 0.10098,
-      "name": "copper shield"
-    },
-    {
-      "id": 2649,
-      "probability": 0.09682,
-      "name": "leather legs"
-    },
-    {
-      "id": 2484,
-      "probability": 0.08017,
-      "name": "studded armor"
-    },
-    {
-      "id": 2597,
-      "probability": 0.07929,
-      "name": "letter"
-    },
-    {
-      "id": 2213,
-      "probability": 0.00095,
-      "name": "dwarven ring"
-    },
-    {
-      "id": 5880,
-      "probability": 0.00083,
-      "name": "iron ore"
+    "loot": [
+        {
+            "id": 2787,
+            "probability": 0.5014,
+            "name": "white mushroom"
+        },
+        {
+            "id": 2148,
+            "probability": 0.35361,
+            "name": "gold coin",
+            "min": 1,
+            "max": 8
+        },
+        {
+            "id": 2388,
+            "probability": 0.24739,
+            "name": "hatchet"
+        },
+        {
+            "id": 2386,
+            "probability": 0.14596,
+            "name": "axe"
+        },
+        {
+            "id": 3456,
+            "probability": 0.10143,
+            "name": "pick"
+        },
+        {
+            "id": 2530,
+            "probability": 0.10098,
+            "name": "copper shield"
+        },
+        {
+            "id": 2649,
+            "probability": 0.09682,
+            "name": "leather legs"
+        },
+        {
+            "id": 2484,
+            "probability": 0.08017,
+            "name": "studded armor"
+        },
+        {
+            "id": 2597,
+            "probability": 0.07929,
+            "name": "letter"
+        },
+        {
+            "id": 2213,
+            "probability": 0.00095,
+            "name": "dwarven ring"
+        },
+        {
+            "id": 5880,
+            "probability": 0.00083,
+            "name": "iron ore"
+        }
+    ],
+    "flags": {
+        "summonable": true,
+        "attackable": true,
+        "convinceable": true,
+        "pushable": true,
+        "canPushItems": false,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": true,
-    "attackable": true,
-    "convinceable": true,
-    "pushable": true,
-    "canPushItems": false,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

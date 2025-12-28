@@ -1,118 +1,118 @@
 {
-  "creatureStatistics": {
-    "name": "Stalker",
-    "health": 120,
-    "maxHealth": 120,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 260,
-    "attack": 70,
-    "attackSpeed": 2000,
-    "defense": 14,
-    "outfit": {
-      "id": 128
+    "creatureStatistics": {
+        "name": "Stalker",
+        "health": 120,
+        "maxHealth": 120,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 130,
+        "attack": 70,
+        "attackSpeed": 2000,
+        "defense": 14,
+        "outfit": {
+            "id": 128
+        },
+        "armor": 14
     },
-    "armor": 14
-  },
-  "experience": 90,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "invisible",
-      "interval": 2000,
-      "chance": 0.3,
-      "duration": 15000,
-      "areaEffect": "blueshimmer"
+    "experience": 90,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
+    },
+    "defenseSpells": [
+        {
+            "name": "invisible",
+            "interval": 2000,
+            "chance": 0.3,
+            "duration": 15000,
+            "areaEffect": "blueshimmer"
+        }
+    ],
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 70
+        },
+        {
+            "name": "lifedrain",
+            "interval": 1000,
+            "chance": 0.15,
+            "min": 20,
+            "max": 30,
+            "range": 1,
+            "areaEffect": "redshimmer"
+        }
+    ],
+    "elements": {
+        "death": 5,
+        "physical": -20,
+        "holy": -5
+    },
+    "immunities": {
+        "invisible": true,
+        "lifedrain": true
+    },
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.13123,
+            "name": "gold coin",
+            "min": 1,
+            "max": 8
+        },
+        {
+            "id": 2410,
+            "probability": 0.11116,
+            "name": "throwing knife",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 2260,
+            "probability": 0.08811,
+            "name": "blank rune"
+        },
+        {
+            "id": 2511,
+            "probability": 0.05617,
+            "name": "brass shield"
+        },
+        {
+            "id": 2478,
+            "probability": 0.03531,
+            "name": "brass legs"
+        },
+        {
+            "id": 12430,
+            "probability": 0.01543,
+            "name": "miraculum"
+        },
+        {
+            "id": 2425,
+            "probability": 0.01198,
+            "name": "obsidian lance"
+        },
+        {
+            "id": 2412,
+            "probability": 0.00519,
+            "name": "katana"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": false,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 70
-    },
-    {
-      "name": "lifedrain",
-      "interval": 1000,
-      "chance": 0.15,
-      "min": 20,
-      "max": 30,
-      "range": 1,
-      "areaEffect": "redshimmer"
-    }
-  ],
-  "elements": {
-    "death": 5,
-    "physical": -20,
-    "holy": -5
-  },
-  "immunities": {
-    "invisible": true,
-    "lifedrain": true
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.13123,
-      "name": "gold coin",
-      "min": 1,
-      "max": 8
-    },
-    {
-      "id": 2410,
-      "probability": 0.11116,
-      "name": "throwing knife",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 2260,
-      "probability": 0.08811,
-      "name": "blank rune"
-    },
-    {
-      "id": 2511,
-      "probability": 0.05617,
-      "name": "brass shield"
-    },
-    {
-      "id": 2478,
-      "probability": 0.03531,
-      "name": "brass legs"
-    },
-    {
-      "id": 12430,
-      "probability": 0.01543,
-      "name": "miraculum"
-    },
-    {
-      "id": 2425,
-      "probability": 0.01198,
-      "name": "obsidian lance"
-    },
-    {
-      "id": 2412,
-      "probability": 0.00519,
-      "name": "katana"
-    }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": false,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

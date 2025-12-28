@@ -1,124 +1,124 @@
 {
-  "creatureStatistics": {
-    "name": "Wild Warrior",
-    "health": 135,
-    "maxHealth": 135,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 190,
-    "attack": 70,
-    "attackSpeed": 2000,
-    "defense": 8,
-    "outfit": {
-      "id": 131
+    "creatureStatistics": {
+        "name": "Wild Warrior",
+        "health": 135,
+        "maxHealth": 135,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 95,
+        "attack": 70,
+        "attackSpeed": 2000,
+        "defense": 8,
+        "outfit": {
+            "id": 131
+        },
+        "armor": 8
     },
-    "armor": 8
-  },
-  "experience": 60,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 10,
-    "openDoors": false,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.15,
-      "speedChange": 200,
-      "duration": 5000,
-      "areaEffect": "redshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 70
-    }
-  ],
-  "elements": {
-    "holy": 10,
-    "physical": -5,
-    "death": -5
-  },
-  "sayings": {
-    "texts": [
-      "An enemy!",
-      "Gimme your money!"
+    "experience": 60,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 10,
+        "openDoors": false,
+        "senseInvisible": false
+    },
+    "defenseSpells": [
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.15,
+            "speedChange": 200,
+            "duration": 5000,
+            "areaEffect": "redshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.65608,
-      "name": "gold coin",
-      "min": 1,
-      "max": 30
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 70
+        }
+    ],
+    "elements": {
+        "holy": 10,
+        "physical": -5,
+        "death": -5
     },
-    {
-      "id": 2386,
-      "probability": 0.2094,
-      "name": "axe"
+    "sayings": {
+        "texts": [
+            "An enemy!",
+            "Gimme your money!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2511,
-      "probability": 0.17483,
-      "name": "brass shield"
-    },
-    {
-      "id": 2398,
-      "probability": 0.13081,
-      "name": "mace"
-    },
-    {
-      "id": 3606,
-      "probability": 0.12596,
-      "name": "egg",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 2458,
-      "probability": 0.05204,
-      "name": "chain helmet"
-    },
-    {
-      "id": 2465,
-      "probability": 0.02779,
-      "name": "brass armor"
-    },
-    {
-      "id": 2509,
-      "probability": 0.01314,
-      "name": "steel shield"
-    },
-    {
-      "id": 2459,
-      "probability": 0.01032,
-      "name": "iron helmet"
-    },
-    {
-      "id": 2110,
-      "probability": 0.00529,
-      "name": "doll"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.65608,
+            "name": "gold coin",
+            "min": 1,
+            "max": 30
+        },
+        {
+            "id": 2386,
+            "probability": 0.2094,
+            "name": "axe"
+        },
+        {
+            "id": 2511,
+            "probability": 0.17483,
+            "name": "brass shield"
+        },
+        {
+            "id": 2398,
+            "probability": 0.13081,
+            "name": "mace"
+        },
+        {
+            "id": 3606,
+            "probability": 0.12596,
+            "name": "egg",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 2458,
+            "probability": 0.05204,
+            "name": "chain helmet"
+        },
+        {
+            "id": 2465,
+            "probability": 0.02779,
+            "name": "brass armor"
+        },
+        {
+            "id": 2509,
+            "probability": 0.01314,
+            "name": "steel shield"
+        },
+        {
+            "id": 2459,
+            "probability": 0.01032,
+            "name": "iron helmet"
+        },
+        {
+            "id": 2110,
+            "probability": 0.00529,
+            "name": "doll"
+        }
+    ],
+    "flags": {
+        "summonable": true,
+        "attackable": true,
+        "convinceable": true,
+        "pushable": true,
+        "canPushItems": false,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": true,
-    "attackable": true,
-    "convinceable": true,
-    "pushable": true,
-    "canPushItems": false,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

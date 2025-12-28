@@ -1,196 +1,196 @@
 {
-  "creatureStatistics": {
-    "name": "Destroyer",
-    "health": 3700,
-    "maxHealth": 3700,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 300,
-    "attack": 500,
-    "attackSpeed": 2000,
-    "defense": 30,
-    "outfit": {
-      "id": 236
+    "creatureStatistics": {
+        "name": "Destroyer",
+        "health": 3700,
+        "maxHealth": 3700,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 150,
+        "attack": 500,
+        "attackSpeed": 2000,
+        "defense": 30,
+        "outfit": {
+            "id": 236
+        },
+        "armor": 30
     },
-    "armor": 30
-  },
-  "experience": 2500,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.15,
-      "speedChange": 420,
-      "duration": 5000,
-      "areaEffect": "redshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 500
+    "experience": 2500,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "physical",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 200,
-      "range": 7,
-      "shootEffect": "largerock"
-    }
-  ],
-  "elements": {
-    "physical": 20,
-    "earth": 20,
-    "fire": 30,
-    "ice": -15,
-    "holy": -3,
-    "death": 20
-  },
-  "immunities": {
-    "energy": true,
-    "paralyze": true,
-    "invisible": true
-  },
-  "sayings": {
-    "texts": [
-      "COME HERE AND DIE!",
-      "Destructiooooon!",
-      "It's a good day to destroy!"
+    "defenseSpells": [
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.15,
+            "speedChange": 420,
+            "duration": 5000,
+            "areaEffect": "redshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.92584,
-      "name": "gold coin",
-      "min": 1,
-      "max": 282
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 500
+        },
+        {
+            "name": "physical",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 200,
+            "range": 7,
+            "shootEffect": "largerock"
+        }
+    ],
+    "elements": {
+        "physical": 20,
+        "earth": 20,
+        "fire": 30,
+        "ice": -15,
+        "holy": -3,
+        "death": 20
     },
-    {
-      "id": 2666,
-      "probability": 0.3928,
-      "name": "meat"
+    "immunities": {
+        "energy": true,
+        "paralyze": true,
+        "invisible": true
     },
-    {
-      "id": 6500,
-      "probability": 0.13803,
-      "name": "demonic essence"
+    "sayings": {
+        "texts": [
+            "COME HERE AND DIE!",
+            "Destructiooooon!",
+            "It's a good day to destroy!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2416,
-      "probability": 0.10573,
-      "name": "crowbar"
-    },
-    {
-      "id": 2546,
-      "probability": 0.0859,
-      "name": "burst arrow",
-      "min": 1,
-      "max": 12
-    },
-    {
-      "id": 2489,
-      "probability": 0.05947,
-      "name": "dark armor"
-    },
-    {
-      "id": 2150,
-      "probability": 0.05947,
-      "name": "small amethyst",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 5944,
-      "probability": 0.05433,
-      "name": "soul orb"
-    },
-    {
-      "id": 3456,
-      "probability": 0.04699,
-      "name": "pick"
-    },
-    {
-      "id": 11215,
-      "probability": 0.04552,
-      "name": "metal spike"
-    },
-    {
-      "id": 2463,
-      "probability": 0.03304,
-      "name": "plate armor"
-    },
-    {
-      "id": 2152,
-      "probability": 0.02203,
-      "name": "platinum coin",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 2393,
-      "probability": 0.01248,
-      "name": "giant sword"
-    },
-    {
-      "id": 7591,
-      "probability": 0.01101,
-      "name": "great health potion"
-    },
-    {
-      "id": 7427,
-      "probability": 0.00808,
-      "name": "chaos mace"
-    },
-    {
-      "id": 2125,
-      "probability": 0.00514,
-      "name": "crystal necklace"
-    },
-    {
-      "id": 7419,
-      "probability": 0.00294,
-      "name": "dreaded cleaver"
-    },
-    {
-      "id": 2645,
-      "probability": 0.00294,
-      "name": "steel boots"
-    },
-    {
-      "id": 6300,
-      "probability": 0.0022,
-      "name": "death ring"
-    },
-    {
-      "id": 2178,
-      "probability": 0.00073,
-      "name": "mind stone"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.92584,
+            "name": "gold coin",
+            "min": 1,
+            "max": 282
+        },
+        {
+            "id": 2666,
+            "probability": 0.3928,
+            "name": "meat"
+        },
+        {
+            "id": 6500,
+            "probability": 0.13803,
+            "name": "demonic essence"
+        },
+        {
+            "id": 2416,
+            "probability": 0.10573,
+            "name": "crowbar"
+        },
+        {
+            "id": 2546,
+            "probability": 0.0859,
+            "name": "burst arrow",
+            "min": 1,
+            "max": 12
+        },
+        {
+            "id": 2489,
+            "probability": 0.05947,
+            "name": "dark armor"
+        },
+        {
+            "id": 2150,
+            "probability": 0.05947,
+            "name": "small amethyst",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 5944,
+            "probability": 0.05433,
+            "name": "soul orb"
+        },
+        {
+            "id": 3456,
+            "probability": 0.04699,
+            "name": "pick"
+        },
+        {
+            "id": 11215,
+            "probability": 0.04552,
+            "name": "metal spike"
+        },
+        {
+            "id": 2463,
+            "probability": 0.03304,
+            "name": "plate armor"
+        },
+        {
+            "id": 2152,
+            "probability": 0.02203,
+            "name": "platinum coin",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 2393,
+            "probability": 0.01248,
+            "name": "giant sword"
+        },
+        {
+            "id": 7591,
+            "probability": 0.01101,
+            "name": "great health potion"
+        },
+        {
+            "id": 7427,
+            "probability": 0.00808,
+            "name": "chaos mace"
+        },
+        {
+            "id": 2125,
+            "probability": 0.00514,
+            "name": "crystal necklace"
+        },
+        {
+            "id": 7419,
+            "probability": 0.00294,
+            "name": "dreaded cleaver"
+        },
+        {
+            "id": 2645,
+            "probability": 0.00294,
+            "name": "steel boots"
+        },
+        {
+            "id": 6300,
+            "probability": 0.0022,
+            "name": "death ring"
+        },
+        {
+            "id": 2178,
+            "probability": 0.00073,
+            "name": "mind stone"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

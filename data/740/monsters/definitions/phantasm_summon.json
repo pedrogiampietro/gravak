@@ -1,132 +1,132 @@
 {
-  "creatureStatistics": {
-    "name": "Phantasm",
-    "health": 65,
-    "maxHealth": 65,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 340,
-    "attack": 15,
-    "attackSpeed": 2000,
-    "defense": 10,
-    "outfit": {
-      "id": 241
+    "creatureStatistics": {
+        "name": "Phantasm",
+        "health": 65,
+        "maxHealth": 65,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 170,
+        "attack": 15,
+        "attackSpeed": 2000,
+        "defense": 10,
+        "outfit": {
+            "id": 241
+        },
+        "armor": 10
     },
-    "armor": 10
-  },
-  "experience": 1,
-  "corpse": 2813,
-  "fluidType": 2,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.3,
-      "min": 40,
-      "max": 65,
-      "areaEffect": "blueshimmer"
+    "experience": 1,
+    "corpse": 2813,
+    "fluidType": 2,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.1,
-      "speedChange": 500,
-      "duration": 6000,
-      "areaEffect": "redshimmer"
-    },
-    {
-      "name": "invisible",
-      "interval": 2000,
-      "chance": 0.25,
-      "duration": 8000,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 15
-    },
-    {
-      "name": "death",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 34,
-      "max": 59,
-      "range": 7,
-      "shootEffect": "suddendeath",
-      "areaEffect": "mortarea"
-    },
-    {
-      "name": "manadrain",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 5,
-      "max": 7,
-      "radius": 3,
-      "target": false,
-      "areaEffect": "yellowbubble"
-    },
-    {
-      "name": "phantasm drown",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 0,
-      "max": 0
-    },
-    {
-      "name": "drunk",
-      "interval": 2000,
-      "chance": 0.05,
-      "min": 0,
-      "max": 0,
-      "radius": 5,
-      "target": false,
-      "duration": 6000,
-      "areaEffect": "redshimmer"
-    }
-  ],
-  "elements": {
-    "earth": 20,
-    "ice": 20,
-    "holy": -10,
-    "fire": -10,
-    "energy": -10
-  },
-  "immunities": {
-    "paralyze": true,
-    "invisible": true,
-    "death": true,
-    "lifedrain": true,
-    "physical": true
-  },
-  "sayings": {
-    "texts": [
-      "Oh my, you forgot to put your pants on!",
-      "Weeheeheeheehee!",
-      "Its nothing but a dream!",
-      "Give in!"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.3,
+            "min": 40,
+            "max": 65,
+            "areaEffect": "blueshimmer"
+        },
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.1,
+            "speedChange": 500,
+            "duration": 6000,
+            "areaEffect": "redshimmer"
+        },
+        {
+            "name": "invisible",
+            "interval": 2000,
+            "chance": 0.25,
+            "duration": 8000,
+            "areaEffect": "blueshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 15
+        },
+        {
+            "name": "death",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 34,
+            "max": 59,
+            "range": 7,
+            "shootEffect": "suddendeath",
+            "areaEffect": "mortarea"
+        },
+        {
+            "name": "manadrain",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 5,
+            "max": 7,
+            "radius": 3,
+            "target": false,
+            "areaEffect": "yellowbubble"
+        },
+        {
+            "name": "phantasm drown",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 0,
+            "max": 0
+        },
+        {
+            "name": "drunk",
+            "interval": 2000,
+            "chance": 0.05,
+            "min": 0,
+            "max": 0,
+            "radius": 5,
+            "target": false,
+            "duration": 6000,
+            "areaEffect": "redshimmer"
+        }
+    ],
+    "elements": {
+        "earth": 20,
+        "ice": 20,
+        "holy": -10,
+        "fire": -10,
+        "energy": -10
+    },
+    "immunities": {
+        "paralyze": true,
+        "invisible": true,
+        "death": true,
+        "lifedrain": true,
+        "physical": true
+    },
+    "sayings": {
+        "texts": [
+            "Oh my, you forgot to put your pants on!",
+            "Weeheeheeheehee!",
+            "Its nothing but a dream!",
+            "Give in!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
+    },
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
+    }
 }

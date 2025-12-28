@@ -1,78 +1,78 @@
 {
-  "creatureStatistics": {
-    "name": "Fire Elemental",
-    "health": 280,
-    "maxHealth": 280,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 190,
-    "attack": 100,
-    "attackSpeed": 2000,
-    "defense": 18,
-    "outfit": {
-      "id": 49
+    "creatureStatistics": {
+        "name": "Fire Elemental",
+        "health": 280,
+        "maxHealth": 280,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 95,
+        "attack": 100,
+        "attackSpeed": 2000,
+        "defense": 18,
+        "outfit": {
+            "id": 49
+        },
+        "armor": 18
     },
-    "armor": 18
-  },
-  "experience": 220,
-  "corpse": 2813,
-  "fluidType": 0,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 100
+    "experience": 220,
+    "corpse": 2813,
+    "fluidType": 0,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "fire",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 45,
-      "max": 160,
-      "range": 7,
-      "radius": 2,
-      "target": true,
-      "shootEffect": "fire",
-      "areaEffect": "firearea"
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 100
+        },
+        {
+            "name": "fire",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 45,
+            "max": 160,
+            "range": 7,
+            "radius": 2,
+            "target": true,
+            "shootEffect": "fire",
+            "areaEffect": "firearea"
+        },
+        {
+            "name": "firefield",
+            "interval": 2000,
+            "chance": 0.25,
+            "min": 0,
+            "max": 0,
+            "range": 7,
+            "radius": 1,
+            "target": true,
+            "shootEffect": "fire"
+        }
+    ],
+    "elements": {
+        "ice": -25
     },
-    {
-      "name": "firefield",
-      "interval": 2000,
-      "chance": 0.25,
-      "min": 0,
-      "max": 0,
-      "range": 7,
-      "radius": 1,
-      "target": true,
-      "shootEffect": "fire"
+    "immunities": {
+        "death": true,
+        "fire": true,
+        "lifedrain": true,
+        "paralyze": true,
+        "invisible": true
+    },
+    "flags": {
+        "summonable": true,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "elements": {
-    "ice": -25
-  },
-  "immunities": {
-    "death": true,
-    "fire": true,
-    "lifedrain": true,
-    "paralyze": true,
-    "invisible": true
-  },
-  "flags": {
-    "summonable": true,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

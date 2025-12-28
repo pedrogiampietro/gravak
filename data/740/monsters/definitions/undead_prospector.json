@@ -1,131 +1,131 @@
 {
-  "creatureStatistics": {
-    "name": "Undead Prospector",
-    "health": 100,
-    "maxHealth": 100,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 170,
-    "attack": 50,
-    "attackSpeed": 2000,
-    "defense": 15,
-    "outfit": {
-      "id": 18
+    "creatureStatistics": {
+        "name": "Undead Prospector",
+        "health": 100,
+        "maxHealth": 100,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 72,
+        "attack": 50,
+        "attackSpeed": 2000,
+        "defense": 15,
+        "outfit": {
+            "id": 18
+        },
+        "armor": 15
     },
-    "armor": 15
-  },
-  "experience": 85,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 5,
-      "max": 15,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 50
-    }
-  ],
-  "elements": {
-    "energy": 30,
-    "earth": 20,
-    "ice": 10,
-    "holy": -25
-  },
-  "immunities": {
-    "lifedrain": true,
-    "death": true,
-    "drown": true
-  },
-  "sayings": {
-    "texts": [
-      "Our mine... leave us alone.",
-      "Turn back...",
-      "These mine is ours... you shall not pass."
+    "experience": 85,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
+    },
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 5,
+            "max": 15,
+            "areaEffect": "blueshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 3976,
-      "probability": 0.80636,
-      "name": "worm",
-      "min": 1,
-      "max": 6
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 50
+        }
+    ],
+    "elements": {
+        "energy": 30,
+        "earth": 20,
+        "ice": 10,
+        "holy": -25
     },
-    {
-      "id": 2148,
-      "probability": 0.71225,
-      "name": "gold coin",
-      "min": 1,
-      "max": 30
+    "immunities": {
+        "lifedrain": true,
+        "death": true,
+        "drown": true
     },
-    {
-      "id": 2050,
-      "probability": 0.6107,
-      "name": "torch"
+    "sayings": {
+        "texts": [
+            "Our mine... leave us alone.",
+            "Turn back...",
+            "These mine is ours... you shall not pass."
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2460,
-      "probability": 0.18551,
-      "name": "brass helmet"
-    },
-    {
-      "id": 2403,
-      "probability": 0.1476,
-      "name": "knife"
-    },
-    {
-      "id": 2473,
-      "probability": 0.05349,
-      "name": "viking helmet"
-    },
-    {
-      "id": 2483,
-      "probability": 0.03588,
-      "name": "scale armor"
-    },
-    {
-      "id": 2229,
-      "probability": 0.02708,
-      "name": "skull (item)"
-    },
-    {
-      "id": 5913,
-      "probability": 0.00948,
-      "name": "brown piece of cloth"
-    },
-    {
-      "id": 2168,
-      "probability": 0.00135,
-      "name": "life ring"
+    "loot": [
+        {
+            "id": 3976,
+            "probability": 0.80636,
+            "name": "worm",
+            "min": 1,
+            "max": 6
+        },
+        {
+            "id": 2148,
+            "probability": 0.71225,
+            "name": "gold coin",
+            "min": 1,
+            "max": 30
+        },
+        {
+            "id": 2050,
+            "probability": 0.6107,
+            "name": "torch"
+        },
+        {
+            "id": 2460,
+            "probability": 0.18551,
+            "name": "brass helmet"
+        },
+        {
+            "id": 2403,
+            "probability": 0.1476,
+            "name": "knife"
+        },
+        {
+            "id": 2473,
+            "probability": 0.05349,
+            "name": "viking helmet"
+        },
+        {
+            "id": 2483,
+            "probability": 0.03588,
+            "name": "scale armor"
+        },
+        {
+            "id": 2229,
+            "probability": 0.02708,
+            "name": "skull (item)"
+        },
+        {
+            "id": 5913,
+            "probability": 0.00948,
+            "name": "brown piece of cloth"
+        },
+        {
+            "id": 2168,
+            "probability": 0.00135,
+            "name": "life ring"
+        }
+    ],
+    "flags": {
+        "summonable": true,
+        "attackable": true,
+        "convinceable": true,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": true,
-    "attackable": true,
-    "convinceable": true,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

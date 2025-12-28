@@ -1,116 +1,116 @@
 {
-  "creatureStatistics": {
-    "name": "Tarantula",
-    "health": 225,
-    "maxHealth": 225,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 214,
-    "attack": 90,
-    "attackSpeed": 2000,
-    "defense": 20,
-    "outfit": {
-      "id": 219
+    "creatureStatistics": {
+        "name": "Tarantula",
+        "health": 225,
+        "maxHealth": 225,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 107,
+        "attack": 90,
+        "attackSpeed": 2000,
+        "defense": 20,
+        "outfit": {
+            "id": 219
+        },
+        "armor": 20
     },
-    "armor": 20
-  },
-  "experience": 120,
-  "corpse": 2857,
-  "fluidType": 3,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.15,
-      "speedChange": 220,
-      "duration": 5000,
-      "areaEffect": "redshimmer"
+    "experience": 120,
+    "corpse": 2857,
+    "fluidType": 3,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
+    },
+    "defenseSpells": [
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.15,
+            "speedChange": 220,
+            "duration": 5000,
+            "areaEffect": "redshimmer"
+        }
+    ],
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 90
+        },
+        {
+            "name": "earth",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 0,
+            "max": 0,
+            "range": 1,
+            "radius": 1,
+            "target": true,
+            "shootEffect": "poison",
+            "areaEffect": "carniphila"
+        }
+    ],
+    "elements": {
+        "energy": 10,
+        "fire": -15,
+        "ice": -10
+    },
+    "immunities": {
+        "earth": true,
+        "outfit": true,
+        "drunk": true
+    },
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.79114,
+            "name": "gold coin",
+            "min": 1,
+            "max": 40
+        },
+        {
+            "id": 11198,
+            "probability": 0.0996,
+            "name": "tarantula egg"
+        },
+        {
+            "id": 8859,
+            "probability": 0.04844,
+            "name": "spider fangs"
+        },
+        {
+            "id": 2478,
+            "probability": 0.03021,
+            "name": "brass legs"
+        },
+        {
+            "id": 2510,
+            "probability": 0.01966,
+            "name": "plate shield"
+        },
+        {
+            "id": 3351,
+            "probability": 0.00925,
+            "name": "steel helmet"
+        },
+        {
+            "id": 2169,
+            "probability": 0.00112,
+            "name": "time ring"
+        }
+    ],
+    "flags": {
+        "summonable": true,
+        "attackable": true,
+        "convinceable": true,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 90
-    },
-    {
-      "name": "earth",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 0,
-      "max": 0,
-      "range": 1,
-      "radius": 1,
-      "target": true,
-      "shootEffect": "poison",
-      "areaEffect": "carniphila"
-    }
-  ],
-  "elements": {
-    "energy": 10,
-    "fire": -15,
-    "ice": -10
-  },
-  "immunities": {
-    "earth": true,
-    "outfit": true,
-    "drunk": true
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.79114,
-      "name": "gold coin",
-      "min": 1,
-      "max": 40
-    },
-    {
-      "id": 11198,
-      "probability": 0.0996,
-      "name": "tarantula egg"
-    },
-    {
-      "id": 8859,
-      "probability": 0.04844,
-      "name": "spider fangs"
-    },
-    {
-      "id": 2478,
-      "probability": 0.03021,
-      "name": "brass legs"
-    },
-    {
-      "id": 2510,
-      "probability": 0.01966,
-      "name": "plate shield"
-    },
-    {
-      "id": 3351,
-      "probability": 0.00925,
-      "name": "steel helmet"
-    },
-    {
-      "id": 2169,
-      "probability": 0.00112,
-      "name": "time ring"
-    }
-  ],
-  "flags": {
-    "summonable": true,
-    "attackable": true,
-    "convinceable": true,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

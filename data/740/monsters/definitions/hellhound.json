@@ -1,350 +1,350 @@
 {
-  "creatureStatistics": {
-    "name": "Hellhound",
-    "health": 7500,
-    "maxHealth": 7500,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 360,
-    "attack": 520,
-    "attackSpeed": 2000,
-    "defense": 60,
-    "outfit": {
-      "id": 240
+    "creatureStatistics": {
+        "name": "Hellhound",
+        "health": 7500,
+        "maxHealth": 7500,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 180,
+        "attack": 520,
+        "attackSpeed": 2000,
+        "defense": 60,
+        "outfit": {
+            "id": 240
+        },
+        "armor": 60
     },
-    "armor": 60
-  },
-  "experience": 5440,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.15,
-      "speedChange": 320,
-      "duration": 5000,
-      "areaEffect": "redshimmer"
+    "experience": 5440,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 220,
-      "max": 425,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 520
-    },
-    {
-      "name": "earth",
-      "interval": 2000,
-      "chance": 0.05,
-      "min": 300,
-      "max": 700,
-      "length": 8,
-      "spread": 3,
-      "areaEffect": "carniphila"
-    },
-    {
-      "name": "death",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 395,
-      "max": 498,
-      "range": 7,
-      "shootEffect": "suddendeath",
-      "areaEffect": "smallclouds"
-    },
-    {
-      "name": "fire",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 350,
-      "max": 660,
-      "length": 8,
-      "spread": 3,
-      "areaEffect": "firearea"
-    },
-    {
-      "name": "lifedrain",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 350,
-      "max": 976,
-      "length": 8,
-      "spread": 3,
-      "areaEffect": "redshimmer"
-    },
-    {
-      "name": "fire",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 200,
-      "max": 403,
-      "radius": 1,
-      "target": true,
-      "areaEffect": "fire"
-    },
-    {
-      "name": "earth",
-      "interval": 2000,
-      "chance": 0.05,
-      "min": 300,
-      "max": 549,
-      "range": 7,
-      "shootEffect": "poison",
-      "areaEffect": "poison"
-    }
-  ],
-  "elements": {
-    "energy": 10,
-    "earth": 20,
-    "ice": -5,
-    "holy": -5
-  },
-  "immunities": {
-    "paralyze": true,
-    "outfit": true,
-    "drunk": true,
-    "invisible": true,
-    "fire": true
-  },
-  "sayings": {
-    "texts": [
-      "GROOOWL!",
-      "GRRRRR!"
+    "defenseSpells": [
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.15,
+            "speedChange": 320,
+            "duration": 5000,
+            "areaEffect": "redshimmer"
+        },
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 220,
+            "max": 425,
+            "areaEffect": "blueshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2152,
-      "probability": 1,
-      "name": "platinum coin",
-      "min": 1,
-      "max": 7
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 520
+        },
+        {
+            "name": "earth",
+            "interval": 2000,
+            "chance": 0.05,
+            "min": 300,
+            "max": 700,
+            "length": 8,
+            "spread": 3,
+            "areaEffect": "carniphila"
+        },
+        {
+            "name": "death",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 395,
+            "max": 498,
+            "range": 7,
+            "shootEffect": "suddendeath",
+            "areaEffect": "smallclouds"
+        },
+        {
+            "name": "fire",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 350,
+            "max": 660,
+            "length": 8,
+            "spread": 3,
+            "areaEffect": "firearea"
+        },
+        {
+            "name": "lifedrain",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 350,
+            "max": 976,
+            "length": 8,
+            "spread": 3,
+            "areaEffect": "redshimmer"
+        },
+        {
+            "name": "fire",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 200,
+            "max": 403,
+            "radius": 1,
+            "target": true,
+            "areaEffect": "fire"
+        },
+        {
+            "name": "earth",
+            "interval": 2000,
+            "chance": 0.05,
+            "min": 300,
+            "max": 549,
+            "range": 7,
+            "shootEffect": "poison",
+            "areaEffect": "poison"
+        }
+    ],
+    "elements": {
+        "energy": 10,
+        "earth": 20,
+        "ice": -5,
+        "holy": -5
     },
-    {
-      "id": 2671,
-      "probability": 0.30654,
-      "name": "ham"
+    "immunities": {
+        "paralyze": true,
+        "outfit": true,
+        "drunk": true,
+        "invisible": true,
+        "fire": true
     },
-    {
-      "id": 7590,
-      "probability": 0.29039,
-      "name": "great mana potion",
-      "min": 1,
-      "max": 3
+    "sayings": {
+        "texts": [
+            "GROOOWL!",
+            "GRRRRR!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 7368,
-      "probability": 0.24901,
-      "name": "assassin star",
-      "min": 1,
-      "max": 10
-    },
-    {
-      "id": 6500,
-      "probability": 0.21552,
-      "name": "demonic essence"
-    },
-    {
-      "id": 10554,
-      "probability": 0.20449,
-      "name": "hellhound slobber"
-    },
-    {
-      "id": 6558,
-      "probability": 0.20331,
-      "name": "flask of demonic blood"
-    },
-    {
-      "id": 8472,
-      "probability": 0.19819,
-      "name": "great spirit potion"
-    },
-    {
-      "id": 5944,
-      "probability": 0.19622,
-      "name": "soul orb"
-    },
-    {
-      "id": 8473,
-      "probability": 0.15288,
-      "name": "ultimate health potion"
-    },
-    {
-      "id": 18425,
-      "probability": 0.13396,
-      "name": "blazing bone"
-    },
-    {
-      "id": 2149,
-      "probability": 0.11072,
-      "name": "small emerald",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 5925,
-      "probability": 0.10914,
-      "name": "hardened bone"
-    },
-    {
-      "id": 9970,
-      "probability": 0.10402,
-      "name": "small topaz",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 10553,
-      "probability": 0.0989,
-      "name": "fiery heart"
-    },
-    {
-      "id": 2147,
-      "probability": 0.09614,
-      "name": "small ruby",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": 2144,
-      "probability": 0.09456,
-      "name": "black pearl",
-      "min": 1,
-      "max": 4
-    },
-    {
-      "id": 2187,
-      "probability": 0.08353,
-      "name": "wand of inferno"
-    },
-    {
-      "id": 2430,
-      "probability": 0.07486,
-      "name": "knight axe"
-    },
-    {
-      "id": 2392,
-      "probability": 0.06422,
-      "name": "fire sword"
-    },
-    {
-      "id": 5914,
-      "probability": 0.05792,
-      "name": "yellow piece of cloth"
-    },
-    {
-      "id": 5910,
-      "probability": 0.0528,
-      "name": "green piece of cloth"
-    },
-    {
-      "id": 2156,
-      "probability": 0.0461,
-      "name": "red gem"
-    },
-    {
-      "id": 2154,
-      "probability": 0.04452,
-      "name": "yellow gem"
-    },
-    {
-      "id": 5911,
-      "probability": 0.03034,
-      "name": "red piece of cloth"
-    },
-    {
-      "id": 9971,
-      "probability": 0.02955,
-      "name": "gold ingot"
-    },
-    {
-      "id": 7890,
-      "probability": 0.02561,
-      "name": "magma amulet"
-    },
-    {
-      "id": 7426,
-      "probability": 0.02049,
-      "name": "amber staff"
-    },
-    {
-      "id": 7894,
-      "probability": 0.01458,
-      "name": "magma legs"
-    },
-    {
-      "id": 7891,
-      "probability": 0.0134,
-      "name": "magma boots"
-    },
-    {
-      "id": 2231,
-      "probability": 0.00985,
-      "name": "big bone"
-    },
-    {
-      "id": 2155,
-      "probability": 0.00985,
-      "name": "green gem"
-    },
-    {
-      "id": 7899,
-      "probability": 0.00985,
-      "name": "magma coat"
-    },
-    {
-      "id": 7900,
-      "probability": 0.00985,
-      "name": "magma monocle"
-    },
-    {
-      "id": 7421,
-      "probability": 0.00867,
-      "name": "onyx flail"
-    },
-    {
-      "id": 2393,
-      "probability": 0.00827,
-      "name": "giant sword"
-    },
-    {
-      "id": 6553,
-      "probability": 0.00788,
-      "name": "ruthless axe"
-    },
-    {
-      "id": 4873,
-      "probability": 0.00276,
-      "name": "explorer brooch"
+    "loot": [
+        {
+            "id": 2152,
+            "probability": 1,
+            "name": "platinum coin",
+            "min": 1,
+            "max": 7
+        },
+        {
+            "id": 2671,
+            "probability": 0.30654,
+            "name": "ham"
+        },
+        {
+            "id": 7590,
+            "probability": 0.29039,
+            "name": "great mana potion",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 7368,
+            "probability": 0.24901,
+            "name": "assassin star",
+            "min": 1,
+            "max": 10
+        },
+        {
+            "id": 6500,
+            "probability": 0.21552,
+            "name": "demonic essence"
+        },
+        {
+            "id": 10554,
+            "probability": 0.20449,
+            "name": "hellhound slobber"
+        },
+        {
+            "id": 6558,
+            "probability": 0.20331,
+            "name": "flask of demonic blood"
+        },
+        {
+            "id": 8472,
+            "probability": 0.19819,
+            "name": "great spirit potion"
+        },
+        {
+            "id": 5944,
+            "probability": 0.19622,
+            "name": "soul orb"
+        },
+        {
+            "id": 8473,
+            "probability": 0.15288,
+            "name": "ultimate health potion"
+        },
+        {
+            "id": 18425,
+            "probability": 0.13396,
+            "name": "blazing bone"
+        },
+        {
+            "id": 2149,
+            "probability": 0.11072,
+            "name": "small emerald",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 5925,
+            "probability": 0.10914,
+            "name": "hardened bone"
+        },
+        {
+            "id": 9970,
+            "probability": 0.10402,
+            "name": "small topaz",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 10553,
+            "probability": 0.0989,
+            "name": "fiery heart"
+        },
+        {
+            "id": 2147,
+            "probability": 0.09614,
+            "name": "small ruby",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 2144,
+            "probability": 0.09456,
+            "name": "black pearl",
+            "min": 1,
+            "max": 4
+        },
+        {
+            "id": 2187,
+            "probability": 0.08353,
+            "name": "wand of inferno"
+        },
+        {
+            "id": 2430,
+            "probability": 0.07486,
+            "name": "knight axe"
+        },
+        {
+            "id": 2392,
+            "probability": 0.06422,
+            "name": "fire sword"
+        },
+        {
+            "id": 5914,
+            "probability": 0.05792,
+            "name": "yellow piece of cloth"
+        },
+        {
+            "id": 5910,
+            "probability": 0.0528,
+            "name": "green piece of cloth"
+        },
+        {
+            "id": 2156,
+            "probability": 0.0461,
+            "name": "red gem"
+        },
+        {
+            "id": 2154,
+            "probability": 0.04452,
+            "name": "yellow gem"
+        },
+        {
+            "id": 5911,
+            "probability": 0.03034,
+            "name": "red piece of cloth"
+        },
+        {
+            "id": 9971,
+            "probability": 0.02955,
+            "name": "gold ingot"
+        },
+        {
+            "id": 7890,
+            "probability": 0.02561,
+            "name": "magma amulet"
+        },
+        {
+            "id": 7426,
+            "probability": 0.02049,
+            "name": "amber staff"
+        },
+        {
+            "id": 7894,
+            "probability": 0.01458,
+            "name": "magma legs"
+        },
+        {
+            "id": 7891,
+            "probability": 0.0134,
+            "name": "magma boots"
+        },
+        {
+            "id": 2231,
+            "probability": 0.00985,
+            "name": "big bone"
+        },
+        {
+            "id": 2155,
+            "probability": 0.00985,
+            "name": "green gem"
+        },
+        {
+            "id": 7899,
+            "probability": 0.00985,
+            "name": "magma coat"
+        },
+        {
+            "id": 7900,
+            "probability": 0.00985,
+            "name": "magma monocle"
+        },
+        {
+            "id": 7421,
+            "probability": 0.00867,
+            "name": "onyx flail"
+        },
+        {
+            "id": 2393,
+            "probability": 0.00827,
+            "name": "giant sword"
+        },
+        {
+            "id": 6553,
+            "probability": 0.00788,
+            "name": "ruthless axe"
+        },
+        {
+            "id": 4873,
+            "probability": 0.00276,
+            "name": "explorer brooch"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

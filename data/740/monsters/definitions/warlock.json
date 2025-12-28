@@ -1,288 +1,288 @@
 {
-  "creatureStatistics": {
-    "name": "Warlock",
-    "health": 3500,
-    "maxHealth": 3500,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 230,
-    "attack": 130,
-    "attackSpeed": 2000,
-    "defense": 33,
-    "outfit": {
-      "id": 130
+    "creatureStatistics": {
+        "name": "Warlock",
+        "health": 3500,
+        "maxHealth": 3500,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 115,
+        "attack": 130,
+        "attackSpeed": 2000,
+        "defense": 33,
+        "outfit": {
+            "id": 130
+        },
+        "armor": 33
     },
-    "armor": 33
-  },
-  "experience": 4000,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 900,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 100,
-      "max": 225,
-      "areaEffect": "blueshimmer"
+    "experience": 4000,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 900,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "invisible",
-      "interval": 2000,
-      "chance": 0.2,
-      "duration": 10000,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 130
-    },
-    {
-      "name": "energy",
-      "interval": 2000,
-      "chance": 0.25,
-      "min": 90,
-      "max": 180,
-      "range": 7,
-      "shootEffect": "energy"
-    },
-    {
-      "name": "warlock skill reducer",
-      "interval": 2000,
-      "chance": 0.05,
-      "min": 0,
-      "max": 0,
-      "range": 5
-    },
-    {
-      "name": "manadrain",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 0,
-      "max": 120,
-      "range": 7
-    },
-    {
-      "name": "fire",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 50,
-      "max": 180,
-      "range": 7,
-      "radius": 3,
-      "target": true,
-      "shootEffect": "fire",
-      "areaEffect": "firearea"
-    },
-    {
-      "name": "firefield",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 0,
-      "max": 0,
-      "range": 7,
-      "radius": 2,
-      "target": true,
-      "shootEffect": "fire"
-    },
-    {
-      "name": "energy",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 150,
-      "max": 230,
-      "length": 8,
-      "spread": 0,
-      "areaEffect": "bigclouds"
-    },
-    {
-      "name": "speed",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 0,
-      "max": 0,
-      "range": 7,
-      "speedChange": -600,
-      "duration": 20000,
-      "areaEffect": "redshimmer"
-    }
-  ],
-  "elements": {
-    "earth": 95,
-    "holy": -8,
-    "physical": -5
-  },
-  "immunities": {
-    "fire": true,
-    "energy": true,
-    "ice": true,
-    "paralyze": true,
-    "invisible": true
-  },
-  "summons": [
-    {
-      "name": "stone golem",
-      "interval": 2000,
-      "chance": 0.1,
-      "maxSummons": 1
-    }
-  ],
-  "sayings": {
-    "texts": [
-      "Learn the secret of our magic! YOUR death!",
-      "Even a rat is a better mage than you.",
-      "We don't like intruders!"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 100,
+            "max": 225,
+            "areaEffect": "blueshimmer"
+        },
+        {
+            "name": "invisible",
+            "interval": 2000,
+            "chance": 0.2,
+            "duration": 10000,
+            "areaEffect": "blueshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.30006,
-      "name": "gold coin",
-      "min": 1,
-      "max": 80
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 130
+        },
+        {
+            "name": "energy",
+            "interval": 2000,
+            "chance": 0.25,
+            "min": 90,
+            "max": 180,
+            "range": 7,
+            "shootEffect": "energy"
+        },
+        {
+            "name": "warlock skill reducer",
+            "interval": 2000,
+            "chance": 0.05,
+            "min": 0,
+            "max": 0,
+            "range": 5
+        },
+        {
+            "name": "manadrain",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 0,
+            "max": 120,
+            "range": 7
+        },
+        {
+            "name": "fire",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 50,
+            "max": 180,
+            "range": 7,
+            "radius": 3,
+            "target": true,
+            "shootEffect": "fire",
+            "areaEffect": "firearea"
+        },
+        {
+            "name": "firefield",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 0,
+            "max": 0,
+            "range": 7,
+            "radius": 2,
+            "target": true,
+            "shootEffect": "fire"
+        },
+        {
+            "name": "energy",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 150,
+            "max": 230,
+            "length": 8,
+            "spread": 0,
+            "areaEffect": "bigclouds"
+        },
+        {
+            "name": "speed",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 0,
+            "max": 0,
+            "range": 7,
+            "speedChange": -600,
+            "duration": 20000,
+            "areaEffect": "redshimmer"
+        }
+    ],
+    "elements": {
+        "earth": 95,
+        "holy": -8,
+        "physical": -5
     },
-    {
-      "id": 2679,
-      "probability": 0.1963,
-      "name": "cherry",
-      "min": 1,
-      "max": 4
+    "immunities": {
+        "fire": true,
+        "energy": true,
+        "ice": true,
+        "paralyze": true,
+        "invisible": true
     },
-    {
-      "id": 2689,
-      "probability": 0.08925,
-      "name": "bread"
+    "summons": [
+        {
+            "name": "stone golem",
+            "interval": 2000,
+            "chance": 0.1,
+            "maxSummons": 1
+        }
+    ],
+    "sayings": {
+        "texts": [
+            "Learn the secret of our magic! YOUR death!",
+            "Even a rat is a better mage than you.",
+            "We don't like intruders!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2411,
-      "probability": 0.07693,
-      "name": "poison dagger"
-    },
-    {
-      "id": 2436,
-      "probability": 0.06088,
-      "name": "skull staff"
-    },
-    {
-      "id": 7591,
-      "probability": 0.05094,
-      "name": "great health potion"
-    },
-    {
-      "id": 7590,
-      "probability": 0.05017,
-      "name": "great mana potion"
-    },
-    {
-      "id": 7368,
-      "probability": 0.03289,
-      "name": "assassin star",
-      "min": 1,
-      "max": 4
-    },
-    {
-      "id": 2792,
-      "probability": 0.02934,
-      "name": "dark mushroom"
-    },
-    {
-      "id": 2178,
-      "probability": 0.02128,
-      "name": "mind stone"
-    },
-    {
-      "id": 2167,
-      "probability": 0.01967,
-      "name": "energy ring"
-    },
-    {
-      "id": 2047,
-      "probability": 0.01573,
-      "name": "candlestick"
-    },
-    {
-      "id": 2656,
-      "probability": 0.01561,
-      "name": "blue robe"
-    },
-    {
-      "id": 2146,
-      "probability": 0.01283,
-      "name": "small sapphire"
-    },
-    {
-      "id": 2151,
-      "probability": 0.01051,
-      "name": "talon"
-    },
-    {
-      "id": 7898,
-      "probability": 0.01006,
-      "name": "lightning robe"
-    },
-    {
-      "id": 2600,
-      "probability": 0.00935,
-      "name": "inkwell"
-    },
-    {
-      "id": 2124,
-      "probability": 0.00742,
-      "name": "crystal ring"
-    },
-    {
-      "id": 12410,
-      "probability": 0.00477,
-      "name": "luminous orb"
-    },
-    {
-      "id": 2123,
-      "probability": 0.00406,
-      "name": "ring of the sky"
-    },
-    {
-      "id": 2197,
-      "probability": 0.00355,
-      "name": "stone skin amulet"
-    },
-    {
-      "id": 1986,
-      "probability": 0.00239,
-      "name": "red tome"
-    },
-    {
-      "id": 2466,
-      "probability": 0.00206,
-      "name": "golden armor"
-    },
-    {
-      "id": 2114,
-      "probability": 0.00077,
-      "name": "piggy bank"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.30006,
+            "name": "gold coin",
+            "min": 1,
+            "max": 80
+        },
+        {
+            "id": 2679,
+            "probability": 0.1963,
+            "name": "cherry",
+            "min": 1,
+            "max": 4
+        },
+        {
+            "id": 2689,
+            "probability": 0.08925,
+            "name": "bread"
+        },
+        {
+            "id": 2411,
+            "probability": 0.07693,
+            "name": "poison dagger"
+        },
+        {
+            "id": 2436,
+            "probability": 0.06088,
+            "name": "skull staff"
+        },
+        {
+            "id": 7591,
+            "probability": 0.05094,
+            "name": "great health potion"
+        },
+        {
+            "id": 7590,
+            "probability": 0.05017,
+            "name": "great mana potion"
+        },
+        {
+            "id": 7368,
+            "probability": 0.03289,
+            "name": "assassin star",
+            "min": 1,
+            "max": 4
+        },
+        {
+            "id": 2792,
+            "probability": 0.02934,
+            "name": "dark mushroom"
+        },
+        {
+            "id": 2178,
+            "probability": 0.02128,
+            "name": "mind stone"
+        },
+        {
+            "id": 2167,
+            "probability": 0.01967,
+            "name": "energy ring"
+        },
+        {
+            "id": 2047,
+            "probability": 0.01573,
+            "name": "candlestick"
+        },
+        {
+            "id": 2656,
+            "probability": 0.01561,
+            "name": "blue robe"
+        },
+        {
+            "id": 2146,
+            "probability": 0.01283,
+            "name": "small sapphire"
+        },
+        {
+            "id": 2151,
+            "probability": 0.01051,
+            "name": "talon"
+        },
+        {
+            "id": 7898,
+            "probability": 0.01006,
+            "name": "lightning robe"
+        },
+        {
+            "id": 2600,
+            "probability": 0.00935,
+            "name": "inkwell"
+        },
+        {
+            "id": 2124,
+            "probability": 0.00742,
+            "name": "crystal ring"
+        },
+        {
+            "id": 12410,
+            "probability": 0.00477,
+            "name": "luminous orb"
+        },
+        {
+            "id": 2123,
+            "probability": 0.00406,
+            "name": "ring of the sky"
+        },
+        {
+            "id": 2197,
+            "probability": 0.00355,
+            "name": "stone skin amulet"
+        },
+        {
+            "id": 1986,
+            "probability": 0.00239,
+            "name": "red tome"
+        },
+        {
+            "id": 2466,
+            "probability": 0.00206,
+            "name": "golden armor"
+        },
+        {
+            "id": 2114,
+            "probability": 0.00077,
+            "name": "piggy bank"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": 4
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": 4
-  }
 }

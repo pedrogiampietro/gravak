@@ -1,62 +1,62 @@
 {
-  "creatureStatistics": {
-    "name": "Centipede",
-    "health": 70,
-    "maxHealth": 70,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 166,
-    "attack": 45,
-    "attackSpeed": 2000,
-    "defense": 8,
-    "outfit": {
-      "id": 124
+    "creatureStatistics": {
+        "name": "Centipede",
+        "health": 70,
+        "maxHealth": 70,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 83,
+        "attack": 45,
+        "attackSpeed": 2000,
+        "defense": 8,
+        "outfit": {
+            "id": 124
+        },
+        "armor": 8
     },
-    "armor": 8
-  },
-  "experience": 34,
-  "corpse": 2813,
-  "fluidType": 3,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 45
+    "experience": 34,
+    "corpse": 2813,
+    "fluidType": 3,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
+    },
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 45
+        }
+    ],
+    "elements": {
+        "ice": 20,
+        "energy": 10,
+        "fire": -15
+    },
+    "immunities": {
+        "earth": true
+    },
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.8,
+            "name": "gold coin",
+            "min": 1,
+            "max": 15
+        }
+    ],
+    "flags": {
+        "summonable": true,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": true,
+        "canPushItems": true,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "elements": {
-    "ice": 20,
-    "energy": 10,
-    "fire": -15
-  },
-  "immunities": {
-    "earth": true
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.8,
-      "name": "gold coin",
-      "min": 1,
-      "max": 15
-    }
-  ],
-  "flags": {
-    "summonable": true,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": true,
-    "canPushItems": true,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

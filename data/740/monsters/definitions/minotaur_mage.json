@@ -1,159 +1,159 @@
 {
-  "creatureStatistics": {
-    "name": "Minotaur Mage",
-    "health": 155,
-    "maxHealth": 155,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 170,
-    "attack": 20,
-    "attackSpeed": 2000,
-    "defense": 18,
-    "outfit": {
-      "id": 23
+    "creatureStatistics": {
+        "name": "Minotaur Mage",
+        "health": 155,
+        "maxHealth": 155,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 85,
+        "attack": 20,
+        "attackSpeed": 2000,
+        "defense": 18,
+        "outfit": {
+            "id": 23
+        },
+        "armor": 18
     },
-    "armor": 18
-  },
-  "experience": 150,
-  "corpse": 2871,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 20
+    "experience": 150,
+    "corpse": 2871,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "energy",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 20,
-      "max": 58,
-      "range": 7,
-      "shootEffect": "energy",
-      "areaEffect": "energy"
-    },
-    {
-      "name": "fire",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 50,
-      "max": 105,
-      "range": 7,
-      "radius": 1,
-      "target": true,
-      "shootEffect": "fire",
-      "areaEffect": "firearea"
-    },
-    {
-      "name": "energyfield",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 0,
-      "max": 0,
-      "range": 7,
-      "radius": 1,
-      "target": true,
-      "shootEffect": "energyball"
-    }
-  ],
-  "elements": {
-    "energy": 20,
-    "earth": 20,
-    "holy": 10,
-    "ice": -10,
-    "death": -5
-  },
-  "immunities": {
-    "invisible": true
-  },
-  "sayings": {
-    "texts": [
-      "Learrn tha secrret uf deathhh!",
-      "Kaplar!"
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 20
+        },
+        {
+            "name": "energy",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 20,
+            "max": 58,
+            "range": 7,
+            "shootEffect": "energy",
+            "areaEffect": "energy"
+        },
+        {
+            "name": "fire",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 50,
+            "max": 105,
+            "range": 7,
+            "radius": 1,
+            "target": true,
+            "shootEffect": "fire",
+            "areaEffect": "firearea"
+        },
+        {
+            "name": "energyfield",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 0,
+            "max": 0,
+            "range": 7,
+            "radius": 1,
+            "target": true,
+            "shootEffect": "energyball"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.85291,
-      "name": "gold coin",
-      "min": 1,
-      "max": 35
+    "elements": {
+        "energy": 20,
+        "earth": 20,
+        "holy": 10,
+        "ice": -10,
+        "death": -5
     },
-    {
-      "id": 2684,
-      "probability": 0.1469,
-      "name": "carrot",
-      "min": 1,
-      "max": 8
+    "immunities": {
+        "invisible": true
     },
-    {
-      "id": 12429,
-      "probability": 0.06068,
-      "name": "purple robe"
+    "sayings": {
+        "texts": [
+            "Learrn tha secrret uf deathhh!",
+            "Kaplar!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2050,
-      "probability": 0.05008,
-      "name": "torch"
-    },
-    {
-      "id": 2649,
-      "probability": 0.04908,
-      "name": "leather legs"
-    },
-    {
-      "id": 2461,
-      "probability": 0.03197,
-      "name": "leather helmet"
-    },
-    {
-      "id": 12428,
-      "probability": 0.03096,
-      "name": "minotaur horn",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 5878,
-      "probability": 0.0209,
-      "name": "minotaur leather"
-    },
-    {
-      "id": 7425,
-      "probability": 0.00959,
-      "name": "taurus mace"
-    },
-    {
-      "id": 2189,
-      "probability": 0.00556,
-      "name": "wand of cosmic energy"
-    },
-    {
-      "id": 7620,
-      "probability": 0.0047,
-      "name": "mana potion"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.85291,
+            "name": "gold coin",
+            "min": 1,
+            "max": 35
+        },
+        {
+            "id": 2684,
+            "probability": 0.1469,
+            "name": "carrot",
+            "min": 1,
+            "max": 8
+        },
+        {
+            "id": 12429,
+            "probability": 0.06068,
+            "name": "purple robe"
+        },
+        {
+            "id": 2050,
+            "probability": 0.05008,
+            "name": "torch"
+        },
+        {
+            "id": 2649,
+            "probability": 0.04908,
+            "name": "leather legs"
+        },
+        {
+            "id": 2461,
+            "probability": 0.03197,
+            "name": "leather helmet"
+        },
+        {
+            "id": 12428,
+            "probability": 0.03096,
+            "name": "minotaur horn",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 5878,
+            "probability": 0.0209,
+            "name": "minotaur leather"
+        },
+        {
+            "id": 7425,
+            "probability": 0.00959,
+            "name": "taurus mace"
+        },
+        {
+            "id": 2189,
+            "probability": 0.00556,
+            "name": "wand of cosmic energy"
+        },
+        {
+            "id": 7620,
+            "probability": 0.0047,
+            "name": "mana potion"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": 4
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": 4
-  }
 }

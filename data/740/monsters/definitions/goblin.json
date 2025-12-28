@@ -1,135 +1,135 @@
 {
-  "creatureStatistics": {
-    "name": "Goblin",
-    "health": 50,
-    "maxHealth": 50,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 120,
-    "attack": 10,
-    "attackSpeed": 2000,
-    "defense": 6,
-    "outfit": {
-      "id": 61
+    "creatureStatistics": {
+        "name": "Goblin",
+        "health": 50,
+        "maxHealth": 50,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 60,
+        "attack": 10,
+        "attackSpeed": 2000,
+        "defense": 6,
+        "outfit": {
+            "id": 61
+        },
+        "armor": 6
     },
-    "armor": 6
-  },
-  "experience": 25,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 35,
-    "openDoors": false,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 10
+    "experience": 25,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 35,
+        "openDoors": false,
+        "senseInvisible": false
     },
-    {
-      "name": "physical",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 0,
-      "max": 25,
-      "range": 7,
-      "shootEffect": "smallstone"
-    }
-  ],
-  "elements": {
-    "energy": 20,
-    "holy": 20,
-    "earth": -10,
-    "death": -10
-  },
-  "sayings": {
-    "texts": [
-      "Me have him!",
-      "Zig Zag! Gobo attack!",
-      "Help! Goblinkiller!",
-      "Bugga! Bugga!",
-      "Me green, me mean!"
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 10
+        },
+        {
+            "name": "physical",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 0,
+            "max": 25,
+            "range": 7,
+            "shootEffect": "smallstone"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.5025,
-      "name": "gold coin",
-      "min": 1,
-      "max": 9
+    "elements": {
+        "energy": 20,
+        "holy": 20,
+        "earth": -10,
+        "death": -10
     },
-    {
-      "id": 1294,
-      "probability": 0.15265,
-      "name": "small stone"
+    "sayings": {
+        "texts": [
+            "Me have him!",
+            "Zig Zag! Gobo attack!",
+            "Help! Goblinkiller!",
+            "Bugga! Bugga!",
+            "Me green, me mean!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2667,
-      "probability": 0.13004,
-      "name": "fish"
-    },
-    {
-      "id": 2559,
-      "probability": 0.09863,
-      "name": "small axe"
-    },
-    {
-      "id": 2406,
-      "probability": 0.08832,
-      "name": "short sword"
-    },
-    {
-      "id": 2449,
-      "probability": 0.04934,
-      "name": "bone club"
-    },
-    {
-      "id": 2467,
-      "probability": 0.02514,
-      "name": "leather armor"
-    },
-    {
-      "id": 2461,
-      "probability": 0.01947,
-      "name": "leather helmet"
-    },
-    {
-      "id": 2379,
-      "probability": 0.01795,
-      "name": "dagger"
-    },
-    {
-      "id": 2230,
-      "probability": 0.01065,
-      "name": "bone"
-    },
-    {
-      "id": 2235,
-      "probability": 0.00999,
-      "name": "mouldy cheese"
-    },
-    {
-      "id": 12495,
-      "probability": 0.00951,
-      "name": "goblin ear"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.5025,
+            "name": "gold coin",
+            "min": 1,
+            "max": 9
+        },
+        {
+            "id": 1294,
+            "probability": 0.15265,
+            "name": "small stone"
+        },
+        {
+            "id": 2667,
+            "probability": 0.13004,
+            "name": "fish"
+        },
+        {
+            "id": 2559,
+            "probability": 0.09863,
+            "name": "small axe"
+        },
+        {
+            "id": 2406,
+            "probability": 0.08832,
+            "name": "short sword"
+        },
+        {
+            "id": 2449,
+            "probability": 0.04934,
+            "name": "bone club"
+        },
+        {
+            "id": 2467,
+            "probability": 0.02514,
+            "name": "leather armor"
+        },
+        {
+            "id": 2461,
+            "probability": 0.01947,
+            "name": "leather helmet"
+        },
+        {
+            "id": 2379,
+            "probability": 0.01795,
+            "name": "dagger"
+        },
+        {
+            "id": 2230,
+            "probability": 0.01065,
+            "name": "bone"
+        },
+        {
+            "id": 2235,
+            "probability": 0.00999,
+            "name": "mouldy cheese"
+        },
+        {
+            "id": 12495,
+            "probability": 0.00951,
+            "name": "goblin ear"
+        }
+    ],
+    "flags": {
+        "summonable": true,
+        "attackable": true,
+        "convinceable": true,
+        "pushable": true,
+        "canPushItems": false,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": true,
-    "attackable": true,
-    "convinceable": true,
-    "pushable": true,
-    "canPushItems": false,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

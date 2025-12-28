@@ -1,67 +1,67 @@
 {
-  "creatureStatistics": {
-    "name": "Jellyfish",
-    "health": 55,
-    "maxHealth": 55,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 170,
-    "attack": 10,
-    "attackSpeed": 2000,
-    "defense": 10,
-    "outfit": {
-      "id": 452
+    "creatureStatistics": {
+        "name": "Jellyfish",
+        "health": 55,
+        "maxHealth": 55,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 84,
+        "attack": 10,
+        "attackSpeed": 2000,
+        "defense": 10,
+        "outfit": {
+            "id": 452
+        },
+        "armor": 10
     },
-    "armor": 10
-  },
-  "experience": 0,
-  "corpse": 2813,
-  "fluidType": 2,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "invisible",
-      "interval": 2000,
-      "chance": 0.15,
-      "duration": 3000
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 10
-    }
-  ],
-  "immunities": {
-    "fire": true,
-    "earth": true,
-    "invisible": true,
-    "drown": true
-  },
-  "sayings": {
-    "texts": [
-      "Luuurrrp"
+    "experience": 0,
+    "corpse": 2813,
+    "fluidType": 2,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
+    },
+    "defenseSpells": [
+        {
+            "name": "invisible",
+            "interval": 2000,
+            "chance": 0.15,
+            "duration": 3000
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": true,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 10
+        }
+    ],
+    "immunities": {
+        "fire": true,
+        "earth": true,
+        "invisible": true,
+        "drown": true
+    },
+    "sayings": {
+        "texts": [
+            "Luuurrrp"
+        ],
+        "slowness": 5,
+        "chance": 0.1
+    },
+    "loot": [],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": true,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
+    }
 }

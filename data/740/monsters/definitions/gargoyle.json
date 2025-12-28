@@ -1,104 +1,104 @@
 {
-  "creatureStatistics": {
-    "name": "Gargoyle",
-    "health": 250,
-    "maxHealth": 250,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 200,
-    "attack": 65,
-    "attackSpeed": 2000,
-    "defense": 26,
-    "outfit": {
-      "id": 95
+    "creatureStatistics": {
+        "name": "Gargoyle",
+        "health": 250,
+        "maxHealth": 250,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 100,
+        "attack": 65,
+        "attackSpeed": 2000,
+        "defense": 26,
+        "outfit": {
+            "id": 95
+        },
+        "armor": 26
     },
-    "armor": 26
-  },
-  "experience": 150,
-  "corpse": 2813,
-  "fluidType": 2,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 30,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.2,
-      "min": 5,
-      "max": 15,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 65
-    }
-  ],
-  "elements": {
-    "physical": 20,
-    "death": 40,
-    "fire": -10
-  },
-  "immunities": {
-    "lifedrain": true,
-    "earth": true
-  },
-  "sayings": {
-    "texts": [
-      "Harrrr Harrrr!",
-      "Stone sweet stone.",
-      "Feel my claws, softskin.",
-      "Chhhhhrrrrk!",
-      "There is a stone in your shoe!"
+    "experience": 150,
+    "corpse": 2813,
+    "fluidType": 2,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 30,
+        "openDoors": true,
+        "senseInvisible": false
+    },
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.2,
+            "min": 5,
+            "max": 15,
+            "areaEffect": "blueshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.88,
-      "name": "gold coin",
-      "min": 1,
-      "max": 30
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 65
+        }
+    ],
+    "elements": {
+        "physical": 20,
+        "death": 40,
+        "fire": -10
     },
-    {
-      "id": 2394,
-      "probability": 0.015,
-      "name": "morning star"
+    "immunities": {
+        "lifedrain": true,
+        "earth": true
     },
-    {
-      "id": 2513,
-      "probability": 0.013,
-      "name": "battle shield"
+    "sayings": {
+        "texts": [
+            "Harrrr Harrrr!",
+            "Stone sweet stone.",
+            "Feel my claws, softskin.",
+            "Chhhhhrrrrk!",
+            "There is a stone in your shoe!"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2457,
-      "probability": 0.0085,
-      "name": "steel helmet"
-    },
-    {
-      "id": 2209,
-      "probability": 0.0026,
-      "name": "club ring"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.88,
+            "name": "gold coin",
+            "min": 1,
+            "max": 30
+        },
+        {
+            "id": 2394,
+            "probability": 0.015,
+            "name": "morning star"
+        },
+        {
+            "id": 2513,
+            "probability": 0.013,
+            "name": "battle shield"
+        },
+        {
+            "id": 2457,
+            "probability": 0.0085,
+            "name": "steel helmet"
+        },
+        {
+            "id": 2209,
+            "probability": 0.0026,
+            "name": "club ring"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

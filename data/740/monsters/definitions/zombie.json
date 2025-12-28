@@ -1,151 +1,151 @@
 {
-  "creatureStatistics": {
-    "name": "Zombie",
-    "health": 500,
-    "maxHealth": 500,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 180,
-    "attack": 130,
-    "attackSpeed": 2000,
-    "defense": 15,
-    "outfit": {
-      "id": 311
+    "creatureStatistics": {
+        "name": "Zombie",
+        "health": 500,
+        "maxHealth": 500,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 90,
+        "attack": 130,
+        "attackSpeed": 2000,
+        "defense": 15,
+        "outfit": {
+            "id": 311
+        },
+        "armor": 15
     },
-    "armor": 15
-  },
-  "experience": 280,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 0,
-    "openDoors": true,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 130
+    "experience": 280,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 0,
+        "openDoors": true,
+        "senseInvisible": false
     },
-    {
-      "name": "manadrain",
-      "interval": 2000,
-      "chance": 0.1,
-      "min": 14,
-      "max": 23,
-      "range": 1,
-      "target": true
-    },
-    {
-      "name": "lifedrain",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 15,
-      "max": 24,
-      "range": 7,
-      "target": true,
-      "areaEffect": "redshimmer"
-    },
-    {
-      "name": "death",
-      "interval": 2000,
-      "chance": 0.15,
-      "min": 30,
-      "max": 49,
-      "range": 1,
-      "target": true,
-      "areaEffect": "smallclouds"
-    }
-  ],
-  "elements": {
-    "fire": 50
-  },
-  "immunities": {
-    "death": true,
-    "energy": true,
-    "ice": true,
-    "earth": true,
-    "drown": true,
-    "drunk": true,
-    "lifedrain": true,
-    "paralyze": true
-  },
-  "sayings": {
-    "texts": [
-      "Mst.... klll....",
-      "Whrrrr... ssss.... mmm.... grrrrl",
-      "Dnnnt... cmmm... clsrrr....",
-      "Httt.... hmnnsss..."
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 130
+        },
+        {
+            "name": "manadrain",
+            "interval": 2000,
+            "chance": 0.1,
+            "min": 14,
+            "max": 23,
+            "range": 1,
+            "target": true
+        },
+        {
+            "name": "lifedrain",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 15,
+            "max": 24,
+            "range": 7,
+            "target": true,
+            "areaEffect": "redshimmer"
+        },
+        {
+            "name": "death",
+            "interval": 2000,
+            "chance": 0.15,
+            "min": 30,
+            "max": 49,
+            "range": 1,
+            "target": true,
+            "areaEffect": "smallclouds"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2148,
-      "probability": 0.82036,
-      "name": "gold coin",
-      "min": 1,
-      "max": 65
+    "elements": {
+        "fire": 50
     },
-    {
-      "id": 2460,
-      "probability": 0.09793,
-      "name": "brass helmet"
+    "immunities": {
+        "death": true,
+        "energy": true,
+        "ice": true,
+        "earth": true,
+        "drown": true,
+        "drunk": true,
+        "lifedrain": true,
+        "paralyze": true
     },
-    {
-      "id": 2398,
-      "probability": 0.07847,
-      "name": "mace"
+    "sayings": {
+        "texts": [
+            "Mst.... klll....",
+            "Whrrrr... ssss.... mmm.... grrrrl",
+            "Dnnnt... cmmm... clsrrr....",
+            "Httt.... hmnnsss..."
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 2417,
-      "probability": 0.06856,
-      "name": "battle hammer"
-    },
-    {
-      "id": 9808,
-      "probability": 0.0579,
-      "name": "heavily rusted armor"
-    },
-    {
-      "id": 3351,
-      "probability": 0.04799,
-      "name": "steel helmet"
-    },
-    {
-      "id": 2381,
-      "probability": 0.03802,
-      "name": "halberd"
-    },
-    {
-      "id": 2168,
-      "probability": 0.0096,
-      "name": "life ring"
-    },
-    {
-      "id": 7620,
-      "probability": 0.00748,
-      "name": "mana potion"
-    },
-    {
-      "id": 2657,
-      "probability": 0.0053,
-      "name": "simple dress"
+    "loot": [
+        {
+            "id": 2148,
+            "probability": 0.82036,
+            "name": "gold coin",
+            "min": 1,
+            "max": 65
+        },
+        {
+            "id": 2460,
+            "probability": 0.09793,
+            "name": "brass helmet"
+        },
+        {
+            "id": 2398,
+            "probability": 0.07847,
+            "name": "mace"
+        },
+        {
+            "id": 2417,
+            "probability": 0.06856,
+            "name": "battle hammer"
+        },
+        {
+            "id": 9808,
+            "probability": 0.0579,
+            "name": "heavily rusted armor"
+        },
+        {
+            "id": 3351,
+            "probability": 0.04799,
+            "name": "steel helmet"
+        },
+        {
+            "id": 2381,
+            "probability": 0.03802,
+            "name": "halberd"
+        },
+        {
+            "id": 2168,
+            "probability": 0.0096,
+            "name": "life ring"
+        },
+        {
+            "id": 7620,
+            "probability": 0.00748,
+            "name": "mana potion"
+        },
+        {
+            "id": 2657,
+            "probability": 0.0053,
+            "name": "simple dress"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": true,
+        "canPushCreatures": true,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": true,
-    "canPushCreatures": true,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

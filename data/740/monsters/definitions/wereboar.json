@@ -1,188 +1,188 @@
 {
-  "creatureStatistics": {
-    "name": "Wereboar",
-    "health": 2200,
-    "maxHealth": 2200,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 300,
-    "attack": 300,
-    "attackSpeed": 2000,
-    "defense": 32,
-    "outfit": {
-      "id": 721
+    "creatureStatistics": {
+        "name": "Wereboar",
+        "health": 2200,
+        "maxHealth": 2200,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 150,
+        "attack": 300,
+        "attackSpeed": 2000,
+        "defense": 32,
+        "outfit": {
+            "id": 721
+        },
+        "armor": 32
     },
-    "armor": 32
-  },
-  "experience": 2000,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 300,
-    "openDoors": false,
-    "senseInvisible": false
-  },
-  "defenseSpells": [
-    {
-      "name": "healing",
-      "interval": 2000,
-      "chance": 0.25,
-      "min": 50,
-      "max": 100,
-      "areaEffect": "blueshimmer"
+    "experience": 2000,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 300,
+        "openDoors": false,
+        "senseInvisible": false
     },
-    {
-      "name": "invisible",
-      "interval": 2000,
-      "chance": 0.2,
-      "duration": 2000,
-      "areaEffect": "blueshimmer"
-    }
-  ],
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 300
-    },
-    {
-      "name": "speed",
-      "interval": 4000,
-      "chance": 0.2,
-      "min": 0,
-      "max": 0,
-      "radius": 7,
-      "target": true,
-      "speedChange": -100,
-      "areaEffect": "poff"
-    }
-  ],
-  "elements": {
-    "energy": 15,
-    "earth": 50,
-    "fire": -5,
-    "ice": 5,
-    "holy": -5,
-    "death": 50
-  },
-  "immunities": {
-    "paralyze": true,
-    "invisible": true,
-    "drunk": true
-  },
-  "sayings": {
-    "texts": [
-      "GRUNT"
+    "defenseSpells": [
+        {
+            "name": "healing",
+            "interval": 2000,
+            "chance": 0.25,
+            "min": 50,
+            "max": 100,
+            "areaEffect": "blueshimmer"
+        },
+        {
+            "name": "invisible",
+            "interval": 2000,
+            "chance": 0.2,
+            "duration": 2000,
+            "areaEffect": "blueshimmer"
+        }
     ],
-    "slowness": 5,
-    "chance": 0.1
-  },
-  "loot": [
-    {
-      "id": 2152,
-      "probability": 1,
-      "name": "platinum coin",
-      "min": 1,
-      "max": 3
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 300
+        },
+        {
+            "name": "speed",
+            "interval": 4000,
+            "chance": 0.2,
+            "min": 0,
+            "max": 0,
+            "radius": 7,
+            "target": true,
+            "speedChange": -100,
+            "areaEffect": "poff"
+        }
+    ],
+    "elements": {
+        "energy": 15,
+        "earth": 50,
+        "fire": -5,
+        "ice": 5,
+        "holy": -5,
+        "death": 50
     },
-    {
-      "id": 2148,
-      "probability": 0.79553,
-      "name": "gold coin",
-      "min": 1,
-      "max": 75
+    "immunities": {
+        "paralyze": true,
+        "invisible": true,
+        "drunk": true
     },
-    {
-      "id": 24710,
-      "probability": 0.15649,
-      "name": "wereboar tusks"
+    "sayings": {
+        "texts": [
+            "GRUNT"
+        ],
+        "slowness": 5,
+        "chance": 0.1
     },
-    {
-      "id": 24709,
-      "probability": 0.15408,
-      "name": "wereboar hooves"
-    },
-    {
-      "id": 2789,
-      "probability": 0.0736,
-      "name": "brown mushroom",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 7588,
-      "probability": 0.05004,
-      "name": "strong health potion"
-    },
-    {
-      "id": 8473,
-      "probability": 0.02064,
-      "name": "ultimate health potion"
-    },
-    {
-      "id": 24739,
-      "probability": 0.01788,
-      "name": "moonlight crystals"
-    },
-    {
-      "id": 24743,
-      "probability": 0.01651,
-      "name": "wereboar loincloth"
-    },
-    {
-      "id": 7760,
-      "probability": 0.01307,
-      "name": "small enchanted ruby",
-      "min": 1,
-      "max": 2
-    },
-    {
-      "id": 2197,
-      "probability": 0.01169,
-      "name": "stone skin amulet"
-    },
-    {
-      "id": 7439,
-      "probability": 0.0098,
-      "name": "berserk potion"
-    },
-    {
-      "id": 7432,
-      "probability": 0.00722,
-      "name": "furry club"
-    },
-    {
-      "id": 24716,
-      "probability": 0.00688,
-      "name": "werewolf amulet"
-    },
-    {
-      "id": 24741,
-      "probability": 0.00447,
-      "name": "fur armor"
-    },
-    {
-      "id": 24758,
-      "probability": 0.00155,
-      "name": "wereboar trophy"
-    },
-    {
-      "id": 7419,
-      "probability": 0.00069,
-      "name": "dreaded cleaver"
+    "loot": [
+        {
+            "id": 2152,
+            "probability": 1,
+            "name": "platinum coin",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "id": 2148,
+            "probability": 0.79553,
+            "name": "gold coin",
+            "min": 1,
+            "max": 75
+        },
+        {
+            "id": 24710,
+            "probability": 0.15649,
+            "name": "wereboar tusks"
+        },
+        {
+            "id": 24709,
+            "probability": 0.15408,
+            "name": "wereboar hooves"
+        },
+        {
+            "id": 2789,
+            "probability": 0.0736,
+            "name": "brown mushroom",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 7588,
+            "probability": 0.05004,
+            "name": "strong health potion"
+        },
+        {
+            "id": 8473,
+            "probability": 0.02064,
+            "name": "ultimate health potion"
+        },
+        {
+            "id": 24739,
+            "probability": 0.01788,
+            "name": "moonlight crystals"
+        },
+        {
+            "id": 24743,
+            "probability": 0.01651,
+            "name": "wereboar loincloth"
+        },
+        {
+            "id": 7760,
+            "probability": 0.01307,
+            "name": "small enchanted ruby",
+            "min": 1,
+            "max": 2
+        },
+        {
+            "id": 2197,
+            "probability": 0.01169,
+            "name": "stone skin amulet"
+        },
+        {
+            "id": 7439,
+            "probability": 0.0098,
+            "name": "berserk potion"
+        },
+        {
+            "id": 7432,
+            "probability": 0.00722,
+            "name": "furry club"
+        },
+        {
+            "id": 24716,
+            "probability": 0.00688,
+            "name": "werewolf amulet"
+        },
+        {
+            "id": 24741,
+            "probability": 0.00447,
+            "name": "fur armor"
+        },
+        {
+            "id": 24758,
+            "probability": 0.00155,
+            "name": "wereboar trophy"
+        },
+        {
+            "id": 7419,
+            "probability": 0.00069,
+            "name": "dreaded cleaver"
+        }
+    ],
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": false,
+        "canPushCreatures": false,
+        "illusionable": false,
+        "targetDistance": true
     }
-  ],
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": false,
-    "canPushCreatures": false,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }

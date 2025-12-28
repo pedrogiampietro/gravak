@@ -1,51 +1,51 @@
 {
-  "creatureStatistics": {
-    "name": "Badger",
-    "health": 23,
-    "maxHealth": 23,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 140,
-    "attack": 12,
-    "attackSpeed": 2000,
-    "defense": 1,
-    "outfit": {
-      "id": 105
+    "creatureStatistics": {
+        "name": "Badger",
+        "health": 23,
+        "maxHealth": 23,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 70,
+        "attack": 12,
+        "attackSpeed": 2000,
+        "defense": 1,
+        "outfit": {
+            "id": 105
+        },
+        "armor": 1
     },
-    "armor": 1
-  },
-  "experience": 5,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 10,
-    "openDoors": false,
-    "senseInvisible": false
-  },
-  "attacks": [
-    {
-      "name": "melee",
-      "interval": 2000,
-      "chance": 1,
-      "min": 0,
-      "max": 12
+    "experience": 5,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 10,
+        "openDoors": false,
+        "senseInvisible": false
+    },
+    "attacks": [
+        {
+            "name": "melee",
+            "interval": 2000,
+            "chance": 1,
+            "min": 0,
+            "max": 12
+        }
+    ],
+    "loot": [
+        {
+            "id": 11216,
+            "probability": 0.1023
+        }
+    ],
+    "flags": {
+        "summonable": true,
+        "attackable": true,
+        "convinceable": true,
+        "pushable": true,
+        "canPushItems": false,
+        "canPushCreatures": false,
+        "illusionable": true,
+        "targetDistance": true
     }
-  ],
-  "loot": [
-    {
-      "id": 11216,
-      "probability": 0.1023
-    }
-  ],
-  "flags": {
-    "summonable": true,
-    "attackable": true,
-    "convinceable": true,
-    "pushable": true,
-    "canPushItems": false,
-    "canPushCreatures": false,
-    "illusionable": true,
-    "targetDistance": true
-  }
 }

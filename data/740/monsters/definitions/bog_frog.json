@@ -1,35 +1,35 @@
 {
-  "creatureStatistics": {
-    "name": "Bog Frog",
-    "health": 25,
-    "maxHealth": 25,
-    "mana": 0,
-    "maxMana": 0,
-    "speed": 200,
-    "attack": 0,
-    "attackSpeed": 2000,
-    "defense": 0,
-    "outfit": {
-      "id": 412
+    "creatureStatistics": {
+        "name": "Bog Frog",
+        "health": 25,
+        "maxHealth": 25,
+        "mana": 0,
+        "maxMana": 0,
+        "speed": 160,
+        "attack": 0,
+        "attackSpeed": 2000,
+        "defense": 0,
+        "outfit": {
+            "id": 412
+        }
+    },
+    "experience": 0,
+    "corpse": 2813,
+    "fluidType": 1,
+    "behaviour": {
+        "type": 2,
+        "fleeHealth": 25,
+        "openDoors": false,
+        "senseInvisible": false
+    },
+    "flags": {
+        "summonable": false,
+        "attackable": true,
+        "convinceable": false,
+        "pushable": false,
+        "canPushItems": false,
+        "canPushCreatures": false,
+        "illusionable": false,
+        "targetDistance": true
     }
-  },
-  "experience": 0,
-  "corpse": 2813,
-  "fluidType": 1,
-  "behaviour": {
-    "type": 2,
-    "fleeHealth": 25,
-    "openDoors": false,
-    "senseInvisible": false
-  },
-  "flags": {
-    "summonable": false,
-    "attackable": true,
-    "convinceable": false,
-    "pushable": false,
-    "canPushItems": false,
-    "canPushCreatures": false,
-    "illusionable": false,
-    "targetDistance": true
-  }
 }
