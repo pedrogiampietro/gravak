@@ -10,7 +10,7 @@ if __name__ == "__main__":
   """
 
   # Address where the resources are hosted
-  ADDRESS = ("127.0.0.1", 8000)
+  ADDRESS = ("0.0.0.0", 8000)
 
   # Parse input
   if len(sys.argv) == 1:

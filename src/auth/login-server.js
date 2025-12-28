@@ -153,6 +153,8 @@ LoginServer.prototype.__handleRequest = function (request, response) {
    * Handles incoming HTTP requests
    */
 
+  console.log("Received request: %s %s".format(request.method, request.url));
+
   // Enabled CORS to allow requests from JavaScript
   response.setHeader("Access-Control-Allow-Origin", "*");
   response.setHeader("Access-Control-Allow-Methods", "OPTIONS, GET, POST");

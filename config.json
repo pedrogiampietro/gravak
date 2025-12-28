@@ -4,12 +4,12 @@
   },
   "LOGIN": {
     "PORT": 1337,
-    "HOST": "127.0.0.1",
+    "HOST": "0.0.0.0",
     "TOKEN_VALID_MS": 3000
   },
   "IPC": {
     "RECONNECT_MS": 1000,
-    "HOST": "127.0.0.1",
+    "HOST": "0.0.0.0",
     "PORT": 2000,
     "SOCKET": "game.sock"
   },
@@ -35,12 +35,12 @@
       "LEVEL": 1
     },
     "ON_ALREADY_ONLINE": "replace",
-    "EXTERNAL_HOST": "ws://127.0.0.1:2222",
+    "EXTERNAL_HOST": "ws://localhost/gameworld",
     "VERSION": "0.0.0",
     "CLIENT_VERSION": "740",
     "DATE": "2022-03-24",
     "PORT": 2222,
-    "HOST": "127.0.0.1",
+    "HOST": "0.0.0.0",
     "ALLOW_MAXIMUM_CONNECTIONS": 50,
     "MS_TICK_INTERVAL": 50,
     "MS_SHUTDOWN_SCHEDULE": 1000,

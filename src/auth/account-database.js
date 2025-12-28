@@ -50,7 +50,7 @@ AccountDatabase.prototype.__open = async function () {
       await this.__createDefaultCharacter(CONFIG.DATABASE.DEFAULT_CHARACTER);
     }
   } catch (error) {
-    console.error("Error opening the database: %s".format(error.message));
+    console.error("Error opening the database:", error);
   }
 };
 

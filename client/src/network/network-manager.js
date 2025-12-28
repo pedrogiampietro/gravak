@@ -308,9 +308,7 @@ NetworkManager.prototype.createAccount = function (options) {
    * Connects to the server websocket at the remote host and port
    */
 
-  let host = this.getConnectionSettings();
-
-  let url = "%s//%s/?account=%s&password=%s&name=%s&sex=%s".format(location.protocol, host, options.account, options.password, options.name, options.sex);
+  let url = "/api/login?account=%s&password=%s&name=%s&sex=%s".format(options.account, options.password, options.name, options.sex);
 
   // Make a post request
   fetch(url, { "method": "POST" }).then(function (response) {
@@ -381,11 +379,10 @@ NetworkManager.prototype.connect = function () {
    * Connects to the server websocket at the remote host and port
    */
 
-  let host = this.getConnectionSettings();
   let { account, password } = gameClient.interface.getAccountDetails();
 
   // Contact the login server
-  fetch("%s//%s/?account=%s&password=%s".format(location.protocol, host, account, password)).then(function (response) {
+  fetch("/api/login?account=%s&password=%s".format(account, password)).then(function (response) {
 
     switch (response.status) {
       case 200: break;
