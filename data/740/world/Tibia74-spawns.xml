@@ -2078,12 +2078,12 @@
 		<monster name="elf Scout" x="0" y="0" z="6" spawntime="60" />
 		<monster name="elf Scout" x="1" y="0" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="32104" centery="32190" centerz="6" radius="3">
-		<npc name="The Oracle" x="0" y="0" z="6" spawntime="60" />
-	</spawn>
 	<spawn centerx="32855" centery="32190" centerz="6" radius="1">
 		<monster name="wolf" x="0" y="0" z="6" spawntime="60" />
 		<monster name="wolf" x="1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="32104" centery="32191" centerz="6" radius="3">
+		<npc name="The Oracle" x="0" y="-1" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="33053" centery="32191" centerz="6" radius="1">
 		<monster name="elf Scout" x="0" y="0" z="6" spawntime="60" />
