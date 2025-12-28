@@ -91,12 +91,22 @@ OfferModal.prototype.setOffers = function () {
   // Reset the body
   offerDOM.innerHTML = "";
 
-  if (this.__offers.filter(this.matchOfferType, this).length === 0) {
+  // Filter offers but keep track of original indices
+  let filteredOffers = [];
+  this.__offers.forEach(function (offer, originalIndex) {
+    if (offer.type === this.__offerType) {
+      filteredOffers.push({ offer: offer, originalIndex: originalIndex });
+    }
+  }, this);
+
+  if (filteredOffers.length === 0) {
     return offerDOM.innerHTML = "No %s offers to display.".format(this.__offerType);
   }
 
   // Generate the required nodes and add them to the DOM
-  this.__offers.filter(this.matchOfferType, this).map(this.createOfferNode, this).forEach(function (node) {
+  filteredOffers.map(function (item) {
+    return this.createOfferNode(item.offer, item.originalIndex);
+  }, this).forEach(function (node) {
     offerDOM.appendChild(node);
   });
 

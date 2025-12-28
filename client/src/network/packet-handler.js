@@ -887,10 +887,15 @@ PacketHandler.prototype.getItemDescription = function (packet) {
    * Returns the item information from a thing
    */
 
-  let thing = new Item(packet.cid);
-
-  if (thing.isFluidContainer() || thing.isSplash()) {
-    return this.handleLiquidMessage(packet);
+  // Try to check if this is a fluid container/splash. Wrap in try-catch as some items may not exist in client data
+  try {
+    let thing = new Thing(packet.cid);
+    let dataObj = thing.getDataObject();
+    if (dataObj !== null && dataObj !== undefined && (thing.isFluidContainer() || thing.isSplash())) {
+      return this.handleLiquidMessage(packet);
+    }
+  } catch (e) {
+    // Item not in client data, continue with default description
   }
 
   // Single

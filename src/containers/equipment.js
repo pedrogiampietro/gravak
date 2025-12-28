@@ -668,15 +668,52 @@ Equipment.prototype.canPushItem = function (thing) {
     return false;
   }
 
-  // Full or no capacity
-  if (
-    backpack.container.isFull() ||
-    !this.__player.hasSufficientCapacity(thing)
-  ) {
+  // Check capacity
+  if (!this.__player.hasSufficientCapacity(thing)) {
+    return false;
+  }
+
+  // Check if there's space in the backpack or any nested containers
+  if (!this.__hasSpaceRecursive(backpack, thing)) {
     return false;
   }
 
   return true;
+};
+
+Equipment.prototype.__hasSpaceRecursive = function (containerItem, thing) {
+  /*
+   * Function Equipment.__hasSpaceRecursive
+   * Recursively checks if a container or any nested container has space for the thing
+   */
+
+  // Get the actual BaseContainer - Container objects have a .container property
+  let baseContainer = containerItem.container || containerItem;
+
+  // If stackable, check if we can merge with existing stack
+  if (thing.isStackable()) {
+    let stackSlot = baseContainer.findStackableSlot(thing);
+    if (stackSlot !== -1 && baseContainer.__slots[stackSlot] !== null && baseContainer.__slots[stackSlot].id === thing.id) {
+      return true;
+    }
+  }
+
+  // Check if this container has empty space
+  if (!baseContainer.isFull()) {
+    return true;
+  }
+
+  // Recursively check nested containers
+  for (let i = 0; i < baseContainer.__slots.length; i++) {
+    let item = baseContainer.__slots[i];
+    if (item !== null && item.isContainer && item.isContainer()) {
+      if (this.__hasSpaceRecursive(item, thing)) {
+        return true;
+      }
+    }
+  }
+
+  return false;
 };
 
 Equipment.prototype.pushItem = function (thing) {
@@ -692,7 +729,8 @@ Equipment.prototype.pushItem = function (thing) {
     return;
   }
 
-  backpack.addFirstEmpty(thing);
+  // Use addThingSmart to properly stack stackable items
+  backpack.addThingSmart(thing);
 };
 
 Equipment.prototype.getAttributeState = function (attribute) {

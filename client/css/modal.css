@@ -76,12 +76,12 @@
 }
 
 #offer-modal {
-  width: 320px;
+  width: 360px;
   max-width: 90vw;
 }
 
 #offer-price {
-  width: 32px;
+  width: 64px;
   display: inline-block;
 }
 
@@ -106,8 +106,10 @@
 }
 
 #offer-info {
-  height: 16px;
+  min-height: 40px;
   display: flex;
+  flex-direction: column;
+  gap: 4px;
   border: 1px solid black;
   padding: 4px;
   background-image: url("/png/bg2.png");
@@ -173,6 +175,7 @@
   background-image: url("/png/bg.png");
   width: 400px;
 }
+
 .spellbook-wrapper {
   width: 45%;
   border: 1px solid black;

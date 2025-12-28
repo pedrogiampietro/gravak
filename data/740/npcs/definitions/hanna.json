@@ -1,0 +1,196 @@
+{
+    "creatureStatistics": {
+        "name": "Hanna",
+        "health": 100,
+        "maxHealth": 100,
+        "mana": 0,
+        "maxMana": 0,
+        "attack": 1,
+        "attackSlowness": 40,
+        "defense": 5,
+        "speed": 30,
+        "outfit": {
+            "id": 136,
+            "details": {
+                "head": 96,
+                "body": 65,
+                "legs": 0,
+                "feet": 96
+            }
+        }
+    },
+    "behaviour": {
+        "wanderRange": 2,
+        "openDoors": true,
+        "ignoreCharacters": true
+    },
+    "conversation": {
+        "hearingRange": 5,
+        "keywords": {
+            "gems": "I buy and sell all kinds of gems and jewellery. Just say {trade} to see what I can offer!",
+            "jewellery": "I deal in precious stones and gems. Say {trade} to do business!"
+        },
+        "trade": {
+            "items": [
+                {
+                    "name": "White Pearl",
+                    "price": 320,
+                    "id": 2143,
+                    "type": "sell"
+                },
+                {
+                    "name": "Black Pearl",
+                    "price": 560,
+                    "id": 2144,
+                    "type": "sell"
+                },
+                {
+                    "name": "Small Diamond",
+                    "price": 600,
+                    "id": 2145,
+                    "type": "sell"
+                },
+                {
+                    "name": "Small Sapphire",
+                    "price": 500,
+                    "id": 2146,
+                    "type": "sell"
+                },
+                {
+                    "name": "Small Ruby",
+                    "price": 500,
+                    "id": 2147,
+                    "type": "sell"
+                },
+                {
+                    "name": "Small Emerald",
+                    "price": 500,
+                    "id": 2149,
+                    "type": "sell"
+                },
+                {
+                    "name": "Small Amethyst",
+                    "price": 400,
+                    "id": 2150,
+                    "type": "sell"
+                },
+                {
+                    "name": "Wedding Ring",
+                    "price": 990,
+                    "id": 2121,
+                    "type": "sell"
+                },
+                {
+                    "name": "White Pearl",
+                    "price": 160,
+                    "id": 2143,
+                    "type": "buy"
+                },
+                {
+                    "name": "Black Pearl",
+                    "price": 280,
+                    "id": 2144,
+                    "type": "buy"
+                },
+                {
+                    "name": "Small Diamond",
+                    "price": 300,
+                    "id": 2145,
+                    "type": "buy"
+                },
+                {
+                    "name": "Small Sapphire",
+                    "price": 250,
+                    "id": 2146,
+                    "type": "buy"
+                },
+                {
+                    "name": "Small Ruby",
+                    "price": 250,
+                    "id": 2147,
+                    "type": "buy"
+                },
+                {
+                    "name": "Small Emerald",
+                    "price": 250,
+                    "id": 2149,
+                    "type": "buy"
+                },
+                {
+                    "name": "Small Amethyst",
+                    "price": 200,
+                    "id": 2150,
+                    "type": "buy"
+                },
+                {
+                    "name": "Talon",
+                    "price": 320,
+                    "id": 2151,
+                    "type": "buy"
+                },
+                {
+                    "name": "Gold Nugget",
+                    "price": 850,
+                    "id": 2157,
+                    "type": "buy"
+                },
+                {
+                    "name": "Wedding Ring",
+                    "price": 100,
+                    "id": 2121,
+                    "type": "buy"
+                },
+                {
+                    "name": "Violet Gem",
+                    "price": 10000,
+                    "id": 2153,
+                    "type": "buy"
+                },
+                {
+                    "name": "Yellow Gem",
+                    "price": 1000,
+                    "id": 2154,
+                    "type": "buy"
+                },
+                {
+                    "name": "Green Gem",
+                    "price": 5000,
+                    "id": 2155,
+                    "type": "buy"
+                },
+                {
+                    "name": "Red Gem",
+                    "price": 1000,
+                    "id": 2156,
+                    "type": "buy"
+                },
+                {
+                    "name": "Blue Gem",
+                    "price": 5000,
+                    "id": 2158,
+                    "type": "buy"
+                }
+            ]
+        },
+        "farewells": [
+            "bye",
+            "goodbye",
+            "farewell"
+        ],
+        "greetings": [
+            "hello",
+            "hi",
+            "greetings"
+        ],
+        "sayings": {
+            "texts": [
+                "Gems and jewellery! Best prices in town!",
+                "Selling gems? Come to Hanna!",
+                "I pay good gold for your precious stones!"
+            ],
+            "rate": 250,
+            "chance": 0.5
+        },
+        "script": "hanna.js"
+    }
+}

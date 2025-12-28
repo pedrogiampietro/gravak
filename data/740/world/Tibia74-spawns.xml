@@ -6213,9 +6213,6 @@
 	<spawn centerx="32350" centery="32219" centerz="7" radius="1">
 		<npc name="Benjamin" x="0" y="0" z="7" spawntime="60" />
 	</spawn>
-	<spawn centerx="32407" centery="32219" centerz="7" radius="2">
-		<npc name="Hanna" x="0" y="0" z="7" spawntime="60" />
-	</spawn>
 	<spawn centerx="32594" centery="32219" centerz="7" radius="1">
 		<monster name="bear" x="0" y="0" z="7" spawntime="60" />
 		<monster name="bear" x="1" y="0" z="7" spawntime="60" />
@@ -6241,6 +6238,7 @@
 	<spawn centerx="32390" centery="32220" centerz="7" radius="1">
 		<npc name="Quero" x="0" y="0" z="7" spawntime="60" />
 	</spawn>
+	<spawn centerx="32407" centery="32220" centerz="7" radius="2" />
 	<spawn centerx="32900" centery="32220" centerz="7" radius="1">
 		<monster name="snake" x="0" y="0" z="7" spawntime="60" />
 		<monster name="snake" x="1" y="0" z="7" spawntime="60" />
@@ -6254,9 +6252,7 @@
 		<monster name="snake" x="0" y="0" z="7" spawntime="60" />
 		<monster name="snake" x="1" y="0" z="7" spawntime="60" />
 	</spawn>
-	<spawn centerx="32399" centery="32222" centerz="7" radius="1">
-		<npc name="Xodet" x="0" y="0" z="7" spawntime="60" />
-	</spawn>
+	<spawn centerx="32399" centery="32222" centerz="7" radius="1" />
 	<spawn centerx="32765" centery="32222" centerz="7" radius="1">
 		<monster name="poison spider" x="0" y="0" z="7" spawntime="60" />
 		<monster name="poison spider" x="1" y="0" z="7" spawntime="60" />

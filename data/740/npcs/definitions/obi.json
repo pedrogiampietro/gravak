@@ -113,6 +113,6 @@
             "rate": 250,
             "chance": 0.6
         },
-        "script": "aldee.js"
+        "script": "obi.js"
     }
 }

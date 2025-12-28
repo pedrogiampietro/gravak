@@ -1,0 +1,256 @@
+{
+    "creatureStatistics": {
+        "name": "Ahmet",
+        "health": 100,
+        "maxHealth": 100,
+        "mana": 0,
+        "maxMana": 0,
+        "attack": 1,
+        "attackSlowness": 40,
+        "defense": 5,
+        "speed": 30,
+        "outfit": {
+            "id": 128,
+            "details": {
+                "head": 78,
+                "body": 69,
+                "legs": 58,
+                "feet": 76
+            }
+        }
+    },
+    "behaviour": {
+        "wanderRange": 2,
+        "openDoors": true,
+        "ignoreCharacters": true
+    },
+    "conversation": {
+        "hearingRange": 5,
+        "keywords": {
+            "tools": "I sell all kinds of tools and supplies. Just say {trade} to see my offers!",
+            "supplies": "I have everything an adventurer needs. Say {trade} to browse my wares!"
+        },
+        "trade": {
+            "items": [
+                {
+                    "name": "Basket",
+                    "price": 6,
+                    "id": 1989,
+                    "type": "sell"
+                },
+                {
+                    "name": "Bucket",
+                    "price": 4,
+                    "id": 2005,
+                    "type": "sell"
+                },
+                {
+                    "name": "Candelabrum",
+                    "price": 8,
+                    "id": 2041,
+                    "type": "sell"
+                },
+                {
+                    "name": "Candlestick",
+                    "price": 2,
+                    "id": 2047,
+                    "type": "sell"
+                },
+                {
+                    "name": "Closed Trap",
+                    "price": 280,
+                    "id": 2578,
+                    "type": "sell"
+                },
+                {
+                    "name": "Crowbar",
+                    "price": 260,
+                    "id": 2416,
+                    "type": "sell"
+                },
+                {
+                    "name": "Cup",
+                    "price": 2,
+                    "id": 2013,
+                    "type": "sell"
+                },
+                {
+                    "name": "Document",
+                    "price": 12,
+                    "id": 1952,
+                    "type": "sell"
+                },
+                {
+                    "name": "Fishing Rod",
+                    "price": 150,
+                    "id": 2580,
+                    "type": "sell"
+                },
+                {
+                    "name": "Golden Backpack",
+                    "price": 10,
+                    "id": 2004,
+                    "type": "sell"
+                },
+                {
+                    "name": "Golden Bag",
+                    "price": 4,
+                    "id": 1997,
+                    "type": "sell"
+                },
+                {
+                    "name": "Machete",
+                    "price": 35,
+                    "id": 2420,
+                    "type": "sell"
+                },
+                {
+                    "name": "Pick",
+                    "price": 50,
+                    "id": 2553,
+                    "type": "sell"
+                },
+                {
+                    "name": "Plate",
+                    "price": 6,
+                    "id": 2035,
+                    "type": "sell"
+                },
+                {
+                    "name": "Present",
+                    "price": 10,
+                    "id": 1990,
+                    "type": "sell"
+                },
+                {
+                    "name": "Rope",
+                    "price": 50,
+                    "id": 2120,
+                    "type": "sell"
+                },
+                {
+                    "name": "Scroll",
+                    "price": 5,
+                    "id": 1949,
+                    "type": "sell"
+                },
+                {
+                    "name": "Scythe",
+                    "price": 50,
+                    "id": 2550,
+                    "type": "sell"
+                },
+                {
+                    "name": "Shovel",
+                    "price": 50,
+                    "id": 2554,
+                    "type": "sell"
+                },
+                {
+                    "name": "Torch",
+                    "price": 2,
+                    "id": 2050,
+                    "type": "sell"
+                },
+                {
+                    "name": "Watch",
+                    "price": 20,
+                    "id": 2036,
+                    "type": "sell"
+                },
+                {
+                    "name": "Backpack",
+                    "price": 10,
+                    "id": 1988,
+                    "type": "sell"
+                },
+                {
+                    "name": "Bag",
+                    "price": 4,
+                    "id": 1987,
+                    "type": "sell"
+                },
+                {
+                    "name": "Closed Trap",
+                    "price": 75,
+                    "id": 2578,
+                    "type": "buy"
+                },
+                {
+                    "name": "Crowbar",
+                    "price": 50,
+                    "id": 2416,
+                    "type": "buy"
+                },
+                {
+                    "name": "Fishing Rod",
+                    "price": 40,
+                    "id": 2580,
+                    "type": "buy"
+                },
+                {
+                    "name": "Machete",
+                    "price": 6,
+                    "id": 2420,
+                    "type": "buy"
+                },
+                {
+                    "name": "Pick",
+                    "price": 15,
+                    "id": 2553,
+                    "type": "buy"
+                },
+                {
+                    "name": "Rope",
+                    "price": 15,
+                    "id": 2120,
+                    "type": "buy"
+                },
+                {
+                    "name": "Scythe",
+                    "price": 10,
+                    "id": 2550,
+                    "type": "buy"
+                },
+                {
+                    "name": "Shovel",
+                    "price": 8,
+                    "id": 2554,
+                    "type": "buy"
+                },
+                {
+                    "name": "Watch",
+                    "price": 6,
+                    "id": 2036,
+                    "type": "buy"
+                },
+                {
+                    "name": "Wooden Hammer",
+                    "price": 15,
+                    "id": 2556,
+                    "type": "buy"
+                }
+            ]
+        },
+        "farewells": [
+            "bye",
+            "goodbye",
+            "farewell"
+        ],
+        "greetings": [
+            "hello",
+            "hi",
+            "greetings"
+        ],
+        "sayings": {
+            "texts": [
+                "Looking for tools? I have the best selection in town!",
+                "Need supplies for your adventure? Come see Ahmet!",
+                "Quality tools at fair prices!"
+            ],
+            "rate": 250,
+            "chance": 0.5
+        },
+        "script": "ahmet.js"
+    }
+}

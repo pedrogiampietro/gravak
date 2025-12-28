@@ -277,6 +277,7 @@ BaseContainer.prototype.addThingSmart = function (thing) {
    * Adds an item following Tibia behavior:
    * - For stackables: tries to merge with existing stack first
    * - For non-stackables: inserts at slot 0 and shifts other items down
+   * - If container is full, tries to add to nested containers recursively
    */
 
   // First, check if stackable item can merge with existing stack
@@ -292,6 +293,17 @@ BaseContainer.prototype.addThingSmart = function (thing) {
   // For non-stackables (or stackables with no existing stack), insert at front
   // Check if container is full
   if (this.isFull()) {
+    // Try to add to nested containers recursively
+    for (let i = 0; i < this.__slots.length; i++) {
+      let item = this.__slots[i];
+      if (item !== null && item.isContainer && item.isContainer()) {
+        // Access the actual BaseContainer via .container property
+        let nestedContainer = item.container || item;
+        if (nestedContainer.addThingSmart(thing)) {
+          return true;
+        }
+      }
+    }
     return false;
   }
 

@@ -19,11 +19,29 @@
   },
   "mordecai": {
     "position": {
-      "x": 32095,
-      "y": 32203,
+      "x": 32399,
+      "y": 32222,
       "z": 8
     },
     "enabled": true,
     "definition": "mordecai.json"
+  },
+  "hanna": {
+    "position": {
+      "x": 32407,
+      "y": 32219,
+      "z": 8
+    },
+    "enabled": true,
+    "definition": "hanna.json"
+  },
+  "ahmet": {
+    "position": {
+      "x": 32377,
+      "y": 32200,
+      "z": 8
+    },
+    "enabled": true,
+    "definition": "ahmet.json"
   }
 }
