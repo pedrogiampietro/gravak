@@ -9,31 +9,31 @@
         {
             "minLevel": 9,
             "maxLevel": 20,
-            "multiplier": 9999
+            "multiplier": 400
         },
         {
             "minLevel": 21,
             "maxLevel": 50,
-            "multiplier": 5
+            "multiplier": 300
         },
         {
             "minLevel": 51,
             "maxLevel": 100,
-            "multiplier": 4
+            "multiplier": 200
         },
         {
             "minLevel": 101,
             "maxLevel": 150,
-            "multiplier": 3
+            "multiplier": 100
         },
         {
             "minLevel": 151,
             "maxLevel": 200,
-            "multiplier": 2
+            "multiplier": 50
         },
         {
             "minLevel": 201,
-            "multiplier": 1
+            "multiplier": 10
         }
     ]
 }
