@@ -12,6 +12,11 @@ const Pathfinder = function () {
   // Final destination for continuous autowalking (when destination is far)
   this.__finalDestination = null;
 
+  // Lock to prevent concurrent pathfinding operations
+  this.__isProcessing = false;
+  this.__lastPathfindTime = 0;
+  this.__pathfindCooldown = 100; // Minimum ms between pathfinding calls
+
 }
 
 Pathfinder.prototype.search = function (from, to) {
@@ -218,14 +223,27 @@ Pathfinder.prototype.__navigateToNextWaypoint = function (currentPos) {
 
 Pathfinder.prototype.findPath = function (begin, stop, isFinalDestination = true) {
 
-
   /*
    * Function Pathfinder.findPath
    * Does client-side pathfinding with continuous walking support
    */
 
-  // Store final destination for continuous walking
+  let currentTime = performance.now();
+
+  // For new user-initiated clicks (isFinalDestination=true), check cooldown
   if (isFinalDestination) {
+    // Check cooldown to prevent rapid click issues
+    if (currentTime - this.__lastPathfindTime < this.__pathfindCooldown) {
+      // If player is currently moving, simply update the destination
+      if (gameClient.player.isMoving()) {
+        this.__finalDestination = stop;
+        return;
+      }
+    }
+    this.__lastPathfindTime = currentTime;
+
+    // Clear any existing path cache to prevent stacking
+    this.__pathfindCache = new Array();
     this.__finalDestination = stop;
   }
 
@@ -473,6 +491,16 @@ Pathfinder.prototype.handlePathfind = function () {
    * Function Pathfinder.handlePathfind
    * Handles the next pathfinding action
    */
+
+  // Prevent concurrent pathfinding execution
+  if (this.__isProcessing) {
+    return;
+  }
+
+  // Check if the player is already moving - if so, wait for movement to complete
+  if (gameClient.player && gameClient.player.isMoving()) {
+    return;
+  }
 
   let nextMove = this.getNextMove();
 
