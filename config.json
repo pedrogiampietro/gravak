@@ -35,7 +35,7 @@
       "LEVEL": 1
     },
     "ON_ALREADY_ONLINE": "replace",
-    "EXTERNAL_HOST": "ws://localhost/gameworld",
+    "EXTERNAL_HOST": "wss://gravak.fun/gameworld",
     "VERSION": "0.0.0",
     "CLIENT_VERSION": "740",
     "DATE": "2022-03-24",
