@@ -35,7 +35,7 @@ body {
 
 .bar-holder {
   position: relative;
-  height: 14px;
+  height: 12px;
   background-color: #222;
   border: 1px solid black;
   margin: 1px 0;
@@ -62,9 +62,9 @@ body {
   left: 0;
   width: 100%;
   text-align: center;
-  font-size: 10px;
+  font-size: 9px;
   color: white;
-  line-height: 13px;
+  line-height: 11px;
   text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
   pointer-events: none;
 }
@@ -78,8 +78,9 @@ body {
   display: flex;
   width: 100%;
   background-image: url("/png/bg2.png");
-  margin: 1px;
+  margin: 0px 0px 1px 0px;
   border: 1px solid black;
+  height: 40px;
 }
 
 .battle-window-target-title {
@@ -91,8 +92,8 @@ body {
 }
 
 .battle-window-target-canvas>canvas {
-  width: 64px;
-  height: 64px;
+  width: 32px;
+  height: 32px;
 }
 
 .battle-window-target-stats {

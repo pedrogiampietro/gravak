@@ -55,3 +55,14 @@
   height: 2px;
   width: 100%;
 }
+
+/* NPC Icon styles */
+.npc-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin: 4px auto 0 auto;
+  margin-left: 40px;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.8));
+}

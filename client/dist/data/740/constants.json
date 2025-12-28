@@ -34,7 +34,8 @@
       "FRIEND_REMOVE": 16,
       "FRIEND_ADD": 17,
       "BUY_OFFER": 18,
-      "OPEN_KEYRING": 19
+      "OPEN_KEYRING": 19,
+      "THING_USE_ON_CREATURE": 20
     },
     "SERVER": {
       "LATENCY": 0,
