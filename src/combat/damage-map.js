@@ -105,24 +105,14 @@ DamageMap.prototype.distributeExperience = function () {
 
     // Experience to share
     if (finalExperience > 0) {
-      // Save current level before adding experience
-      let levelBefore = attacker.getLevel();
-
-      // Add experience using skills.incrementSkill (not incrementProperty!)
+      // Add experience using skills.incrementSkill
+      // This internally handles level up detection and calls onLevelUp if needed
       attacker.skills.incrementSkill(CONST.PROPERTIES.EXPERIENCE, finalExperience);
       attacker.write(new EmotePacket(attacker, String(finalExperience), CONST.COLOR.WHITE));
 
+      // Send experience update to client
       let expAfter = attacker.skills.getSkillValue(CONST.PROPERTIES.EXPERIENCE);
-      let levelAfter = attacker.getLevel();
-
-      // ALWAYS send experience update to client (even if no level up)
       attacker.write(new CreaturePropertyPacket(attacker.getId(), CONST.PROPERTIES.EXPERIENCE, expAfter));
-
-      // Check if level changed
-      if (levelAfter > levelBefore) {
-        // Player leveled up! Send level update and message
-        attacker.onLevelUp(levelBefore, levelAfter);
-      }
     }
 
   });

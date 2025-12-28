@@ -64,7 +64,10 @@ const CharacterCreator = function () {
       "keyring": [],
       "depot": [],
       "inbox": [],
-      "equipment": [{ "slot": 6, "item": { "id": 1988 } }],
+      "equipment": [
+        { "slot": 5, "item": { "id": 2398 } },
+        { "slot": 6, "item": { "id": 1988 } }
+      ],
     },
     "friends": []
   });

@@ -12,15 +12,15 @@ module.exports = function oracle() {
         towns: {
             "venore": {
                 name: "Venore",
-                temple: { x: 32957, y: 32076, z: 7 }
+                temple: { x: 32957, y: 32076, z: 8 }
             },
             "thais": {
                 name: "Thais",
-                temple: { x: 32369, y: 32241, z: 7 }
+                temple: { x: 32369, y: 32241, z: 8 }
             },
             "carlin": {
                 name: "Carlin",
-                temple: { x: 32360, y: 31782, z: 7 }
+                temple: { x: 32360, y: 31782, z: 8 }
             }
         },
         vocations: {
@@ -155,14 +155,14 @@ function confirmState(state, player, message) {
         // Update player's temple position directly
         player.templePosition = newPosition;
 
-        // Send magic effect at current position
-        player.broadcastMagicEffect(CONST.EFFECT.MAGIC.TELEPORT);
+        // Send magic effect at current position before teleport
+        gameServer.world.sendMagicEffect(player.position, CONST.EFFECT.MAGIC.TELEPORT);
 
         // Teleport player to the new town temple
         gameServer.world.creatureHandler.teleportCreature(player, newPosition);
 
-        // Send magic effect at new position
-        player.broadcastMagicEffect(CONST.EFFECT.MAGIC.TELEPORT);
+        // Send magic effect at new position after teleport
+        gameServer.world.sendMagicEffect(newPosition, CONST.EFFECT.MAGIC.TELEPORT);
 
         this.say("SO BE IT!");
         this.getFocusHandler().reset();
