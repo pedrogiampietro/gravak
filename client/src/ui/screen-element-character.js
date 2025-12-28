@@ -11,6 +11,9 @@ const CharacterElement = function (creature) {
 
   // Update settings
   this.setName(creature.name);
+
+  // Show NPC icon if this creature is an NPC
+  this.__setupNpcIcon();
 };
 
 CharacterElement.prototype = Object.create(ScreenElement.prototype);
@@ -154,4 +157,27 @@ CharacterElement.prototype.setTextPosition = function () {
 
   // Delegate to the generic move function
   this.__updateTextPosition(offset);
+};
+
+CharacterElement.prototype.__setupNpcIcon = function () {
+  /*
+   * Function CharacterElement.__setupNpcIcon
+   * Sets up the NPC icon below the character name if the creature is an NPC
+   */
+
+  // Check if creature type is NPC (type === 2)
+  if (this.__creature.type !== CONST.TYPES.NPC) {
+    return;
+  }
+
+  // Get the icon element
+  let iconElement = this.element.querySelector(".npc-icon");
+
+  if (!iconElement) {
+    return;
+  }
+
+  // Show the trade icon for NPCs (shopkeepers/traders)
+  iconElement.src = "/png/npc_icons/icon_trade.png";
+  iconElement.style.display = "block";
 };

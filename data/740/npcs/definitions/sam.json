@@ -1,0 +1,584 @@
+{
+    "creatureStatistics": {
+        "name": "Sam",
+        "health": 150,
+        "maxHealth": 150,
+        "mana": 0,
+        "maxMana": 0,
+        "attack": 1,
+        "attackSlowness": 40,
+        "defense": 10,
+        "speed": 30,
+        "outfit": {
+            "id": 130,
+            "details": {
+                "head": 23,
+                "body": 93,
+                "legs": 95,
+                "feet": 0
+            }
+        }
+    },
+    "behaviour": {
+        "wanderRange": 2,
+        "openDoors": true,
+        "ignoreCharacters": true
+    },
+    "conversation": {
+        "hearingRange": 5,
+        "keywords": {
+            "job": "I am a blacksmith. I buy and sell all kinds of weapons and armor.",
+            "name": "My name is Sam. I've been forging weapons for decades.",
+            "weapons": "I have {swords}, {axes}, {clubs} and {hammers}. Just say {trade} to see everything!",
+            "armor": "I sell {helmets}, {armors}, {legs}, {boots} and {shields}. Check my {trade}!",
+            "swords": "I have everything from simple swords to magic longswords!",
+            "axes": "From hatchets to the legendary stonecutter axe!",
+            "clubs": "Maces, hammers, and even the mighty thunder hammer!",
+            "shields": "From simple wooden shields to the blessed shield!",
+            "helmets": "Crown helmets, royal helmets, and more!",
+            "boots": "Steel boots, boots of haste, even golden boots!",
+            "help": "I buy and sell weapons and armor. Just say {trade} to see my offers."
+        },
+        "trade": {
+            "items": [
+                {
+                    "name": "Ancient Shield",
+                    "price": 900,
+                    "id": 2532,
+                    "type": "buy"
+                },
+                {
+                    "name": "Bone Shield",
+                    "price": 80,
+                    "id": 2541,
+                    "type": "buy"
+                },
+                {
+                    "name": "Black Shield",
+                    "price": 800,
+                    "id": 2529,
+                    "type": "buy"
+                },
+                {
+                    "name": "Crown Shield",
+                    "price": 8000,
+                    "id": 2519,
+                    "type": "buy"
+                },
+                {
+                    "name": "Dark Shield",
+                    "price": 400,
+                    "id": 2521,
+                    "type": "buy"
+                },
+                {
+                    "name": "Dragon Shield",
+                    "price": 4000,
+                    "id": 2516,
+                    "type": "buy"
+                },
+                {
+                    "name": "Scarab Shield",
+                    "price": 2000,
+                    "id": 2540,
+                    "type": "buy"
+                },
+                {
+                    "name": "Steel Shield",
+                    "price": 90,
+                    "id": 2509,
+                    "type": "buy"
+                },
+                {
+                    "name": "Tower Shield",
+                    "price": 8000,
+                    "id": 2528,
+                    "type": "buy"
+                },
+                {
+                    "name": "Guardian Shield",
+                    "price": 200,
+                    "id": 2515,
+                    "type": "buy"
+                },
+                {
+                    "name": "Beholder Shield",
+                    "price": 1500,
+                    "id": 2518,
+                    "type": "buy"
+                },
+                {
+                    "name": "Dwarven Shield",
+                    "price": 100,
+                    "id": 2525,
+                    "type": "buy"
+                },
+                {
+                    "name": "Mastermind Shield",
+                    "price": 80000,
+                    "id": 2514,
+                    "type": "buy"
+                },
+                {
+                    "name": "Demon Shield",
+                    "price": 40000,
+                    "id": 2520,
+                    "type": "buy"
+                },
+                {
+                    "name": "Blessed Shield",
+                    "price": 150000,
+                    "id": 2523,
+                    "type": "buy"
+                },
+                {
+                    "name": "Great Shield",
+                    "price": 100000,
+                    "id": 2522,
+                    "type": "buy"
+                },
+                {
+                    "name": "Vampire Shield",
+                    "price": 25000,
+                    "id": 2534,
+                    "type": "buy"
+                },
+                {
+                    "name": "Medusa Shield",
+                    "price": 8000,
+                    "id": 2536,
+                    "type": "buy"
+                },
+                {
+                    "name": "Amazon Shield",
+                    "price": 4000,
+                    "id": 2537,
+                    "type": "buy"
+                },
+                {
+                    "name": "Royal Helmet",
+                    "price": 40000,
+                    "id": 2498,
+                    "type": "buy"
+                },
+                {
+                    "name": "Warrior Helmet",
+                    "price": 6000,
+                    "id": 2475,
+                    "type": "buy"
+                },
+                {
+                    "name": "Crusader Helmet",
+                    "price": 9000,
+                    "id": 2497,
+                    "type": "buy"
+                },
+                {
+                    "name": "Crown Helmet",
+                    "price": 5000,
+                    "id": 2491,
+                    "type": "buy"
+                },
+                {
+                    "name": "Devil Helmet",
+                    "price": 4000,
+                    "id": 2462,
+                    "type": "buy"
+                },
+                {
+                    "name": "Mystic Turban",
+                    "price": 500,
+                    "id": 2663,
+                    "type": "buy"
+                },
+                {
+                    "name": "Chain Helmet",
+                    "price": 35,
+                    "id": 2458,
+                    "type": "buy"
+                },
+                {
+                    "name": "Iron Helmet",
+                    "price": 30,
+                    "id": 2459,
+                    "type": "buy"
+                },
+                {
+                    "name": "Steel Boots",
+                    "price": 400000,
+                    "id": 2645,
+                    "type": "buy"
+                },
+                {
+                    "name": "Boots of Haste",
+                    "price": 40000,
+                    "id": 2195,
+                    "type": "buy"
+                },
+                {
+                    "name": "Golden Boots",
+                    "price": 100000,
+                    "id": 2646,
+                    "type": "buy"
+                },
+                {
+                    "name": "Magic Plate Armor",
+                    "price": 100000,
+                    "id": 2472,
+                    "type": "buy"
+                },
+                {
+                    "name": "Dragon Scale Mail",
+                    "price": 60000,
+                    "id": 2492,
+                    "type": "buy"
+                },
+                {
+                    "name": "Demon Armor",
+                    "price": 90000,
+                    "id": 2494,
+                    "type": "buy"
+                },
+                {
+                    "name": "Golden Armor",
+                    "price": 30000,
+                    "id": 2466,
+                    "type": "buy"
+                },
+                {
+                    "name": "Crown Armor",
+                    "price": 20000,
+                    "id": 2487,
+                    "type": "buy"
+                },
+                {
+                    "name": "Knight Armor",
+                    "price": 5000,
+                    "id": 2476,
+                    "type": "buy"
+                },
+                {
+                    "name": "Blue Robe",
+                    "price": 15000,
+                    "id": 2656,
+                    "type": "buy"
+                },
+                {
+                    "name": "Lady Armor",
+                    "price": 2500,
+                    "id": 2500,
+                    "type": "buy"
+                },
+                {
+                    "name": "Plate Armor",
+                    "price": 400,
+                    "id": 2463,
+                    "type": "buy"
+                },
+                {
+                    "name": "Brass Armor",
+                    "price": 200,
+                    "id": 2465,
+                    "type": "buy"
+                },
+                {
+                    "name": "Chain Armor",
+                    "price": 100,
+                    "id": 2464,
+                    "type": "buy"
+                },
+                {
+                    "name": "Golden Legs",
+                    "price": 80000,
+                    "id": 2470,
+                    "type": "buy"
+                },
+                {
+                    "name": "Crown Legs",
+                    "price": 15000,
+                    "id": 2488,
+                    "type": "buy"
+                },
+                {
+                    "name": "Knight Legs",
+                    "price": 6000,
+                    "id": 2477,
+                    "type": "buy"
+                },
+                {
+                    "name": "Plate Legs",
+                    "price": 500,
+                    "id": 2647,
+                    "type": "buy"
+                },
+                {
+                    "name": "Magic Longsword",
+                    "price": 150000,
+                    "id": 2390,
+                    "type": "buy"
+                },
+                {
+                    "name": "Warlord Sword",
+                    "price": 100000,
+                    "id": 2408,
+                    "type": "buy"
+                },
+                {
+                    "name": "Magic Sword",
+                    "price": 90000,
+                    "id": 2400,
+                    "type": "buy"
+                },
+                {
+                    "name": "Giant Sword",
+                    "price": 10000,
+                    "id": 2393,
+                    "type": "buy"
+                },
+                {
+                    "name": "Bright Sword",
+                    "price": 15000,
+                    "id": 2407,
+                    "type": "buy"
+                },
+                {
+                    "name": "Ice Rapier",
+                    "price": 4000,
+                    "id": 2396,
+                    "type": "buy"
+                },
+                {
+                    "name": "Fire Sword",
+                    "price": 3000,
+                    "id": 2392,
+                    "type": "buy"
+                },
+                {
+                    "name": "Serpent Sword",
+                    "price": 1500,
+                    "id": 2409,
+                    "type": "buy"
+                },
+                {
+                    "name": "Spike Sword",
+                    "price": 800,
+                    "id": 2383,
+                    "type": "buy"
+                },
+                {
+                    "name": "Two Handed Sword",
+                    "price": 400,
+                    "id": 2377,
+                    "type": "buy"
+                },
+                {
+                    "name": "Broad Sword",
+                    "price": 70,
+                    "id": 2413,
+                    "type": "buy"
+                },
+                {
+                    "name": "Short Sword",
+                    "price": 30,
+                    "id": 2406,
+                    "type": "buy"
+                },
+                {
+                    "name": "Sword",
+                    "price": 25,
+                    "id": 2376,
+                    "type": "buy"
+                },
+                {
+                    "name": "Dragon Lance",
+                    "price": 10000,
+                    "id": 2414,
+                    "type": "buy"
+                },
+                {
+                    "name": "Stonecutter Axe",
+                    "price": 90000,
+                    "id": 2431,
+                    "type": "buy"
+                },
+                {
+                    "name": "Guardian Halberd",
+                    "price": 7500,
+                    "id": 2427,
+                    "type": "buy"
+                },
+                {
+                    "name": "Fire Axe",
+                    "price": 10000,
+                    "id": 2432,
+                    "type": "buy"
+                },
+                {
+                    "name": "Knight Axe",
+                    "price": 2000,
+                    "id": 2430,
+                    "type": "buy"
+                },
+                {
+                    "name": "Double Axe",
+                    "price": 200,
+                    "id": 2387,
+                    "type": "buy"
+                },
+                {
+                    "name": "Halberd",
+                    "price": 200,
+                    "id": 2381,
+                    "type": "buy"
+                },
+                {
+                    "name": "Battle Axe",
+                    "price": 100,
+                    "id": 2378,
+                    "type": "buy"
+                },
+                {
+                    "name": "Hatchet",
+                    "price": 20,
+                    "id": 2388,
+                    "type": "buy"
+                },
+                {
+                    "name": "War Hammer",
+                    "price": 6000,
+                    "id": 2391,
+                    "type": "buy"
+                },
+                {
+                    "name": "Thunder Hammer",
+                    "price": 90000,
+                    "id": 2421,
+                    "type": "buy"
+                },
+                {
+                    "name": "Skull Staff",
+                    "price": 1000,
+                    "id": 2436,
+                    "type": "buy"
+                },
+                {
+                    "name": "Dragon Hammer",
+                    "price": 2000,
+                    "id": 2434,
+                    "type": "buy"
+                },
+                {
+                    "name": "Clerical Mace",
+                    "price": 200,
+                    "id": 2423,
+                    "type": "buy"
+                },
+                {
+                    "name": "Battle Hammer",
+                    "price": 60,
+                    "id": 2417,
+                    "type": "buy"
+                },
+                {
+                    "name": "Mace",
+                    "price": 30,
+                    "id": 2398,
+                    "type": "buy"
+                },
+                {
+                    "name": "Sword",
+                    "price": 50,
+                    "id": 2376,
+                    "type": "sell"
+                },
+                {
+                    "name": "Short Sword",
+                    "price": 60,
+                    "id": 2406,
+                    "type": "sell"
+                },
+                {
+                    "name": "Broad Sword",
+                    "price": 140,
+                    "id": 2413,
+                    "type": "sell"
+                },
+                {
+                    "name": "Mace",
+                    "price": 60,
+                    "id": 2398,
+                    "type": "sell"
+                },
+                {
+                    "name": "Battle Hammer",
+                    "price": 120,
+                    "id": 2417,
+                    "type": "sell"
+                },
+                {
+                    "name": "Battle Axe",
+                    "price": 200,
+                    "id": 2378,
+                    "type": "sell"
+                },
+                {
+                    "name": "Hatchet",
+                    "price": 40,
+                    "id": 2388,
+                    "type": "sell"
+                },
+                {
+                    "name": "Chain Helmet",
+                    "price": 70,
+                    "id": 2458,
+                    "type": "sell"
+                },
+                {
+                    "name": "Chain Armor",
+                    "price": 200,
+                    "id": 2464,
+                    "type": "sell"
+                },
+                {
+                    "name": "Brass Armor",
+                    "price": 400,
+                    "id": 2465,
+                    "type": "sell"
+                },
+                {
+                    "name": "Steel Shield",
+                    "price": 180,
+                    "id": 2509,
+                    "type": "sell"
+                },
+                {
+                    "name": "Dwarven Shield",
+                    "price": 200,
+                    "id": 2525,
+                    "type": "sell"
+                }
+            ]
+        },
+        "farewells": [
+            "bye",
+            "goodbye",
+            "farewell"
+        ],
+        "greetings": [
+            "hello",
+            "hi",
+            "greetings"
+        ],
+        "sayings": {
+            "texts": [
+                "Need a new sword? I have the best steel in town!",
+                "Armor and weapons! Everything a warrior needs!",
+                "Fresh from the forge! Come see my wares!",
+                "*hammering sounds*"
+            ],
+            "rate": 300,
+            "chance": 0.5
+        },
+        "script": "sam.js"
+    }
+}

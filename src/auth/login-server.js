@@ -217,7 +217,7 @@ LoginServer.prototype.__getAccount = function (queryObject, response) {
       // Return the host and port of the game server too in addition to the token
       response.end(JSON.stringify({
         "token": Buffer.from(JSON.stringify(this.__generateToken(queryObject.account))).toString("base64"),
-        "host": CONFIG.SERVER.EXTERNAL_HOST
+        "host": process.env.EXTERNAL_HOST || CONFIG.SERVER.EXTERNAL_HOST
       }));
 
     }.bind(this));

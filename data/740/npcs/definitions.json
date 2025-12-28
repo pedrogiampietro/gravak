@@ -52,5 +52,14 @@
     },
     "enabled": true,
     "definition": "oracle.json"
+  },
+  "sam": {
+    "position": {
+      "x": 32361,
+      "y": 32198,
+      "z": 8
+    },
+    "enabled": true,
+    "definition": "sam.json"
   }
 }
