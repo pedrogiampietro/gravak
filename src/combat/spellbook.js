@@ -92,27 +92,21 @@ Spellbook.prototype.handleSpell = function (sid, properties) {
    * Handles casting of a spell by an entity
    */
 
-  console.log("SID:", sid);
-
   // Ignore cast requests that are already on cooldown
   if (this.__spellCooldowns.has(this.GLOBAL_COOLDOWN) || this.__spellCooldowns.has(sid)) {
-    console.log("Spell on cooldown, skipping");
     return;
   }
 
   // Try to get the spell
   let spell = gameServer.database.getSpell(sid);
-  console.log("Spell from database:", spell ? "found" : "null");
 
   // Does not exist
   if (spell === null) {
-    console.log("Spell not found in database");
     return;
   }
 
   // The player does not own this spell
   if (!this.__availableSpells.has(sid)) {
-    console.log("Player does not have this spell");
     return;
   }
 

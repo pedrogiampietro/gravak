@@ -925,8 +925,6 @@ PacketReader.prototype.readSkills = function () {
 }
 
 PacketReader.prototype.readPlayerInfo = function () {
-  console.log("CLIENT: Reading Player Info Packet...");
-
   let id = this.readUInt32();
   let name = this.readString();
   let position = this.readPosition();
@@ -937,7 +935,6 @@ PacketReader.prototype.readPlayerInfo = function () {
   let attackSlowness = this.readUInt8();
 
   let vocation = this.readUInt8();
-  console.log("CLIENT: Read Vocation:", vocation);
 
   let equipment = this.readEquipment();
   let mounts = this.readOutfits();

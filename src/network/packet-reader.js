@@ -173,15 +173,12 @@ PacketReader.prototype.readMoveEvent = function (player) {
    */
 
   let type = this.readUInt8();
-  console.log("Type:", type);
 
   switch (type) {
     case 0:
       let padding = this.readUInt16();
       let containerId = this.readUInt32();
-      console.log("Container ID:", containerId);
       let container = player.containerManager.getContainerFromId(containerId);
-      console.log("Container found:", container ? container.constructor.name : null);
       return container;
     case 1:
       return process.gameServer.world.getTileFromWorldPosition(this.readWorldPosition());

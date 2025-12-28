@@ -1069,33 +1069,8 @@ Player.prototype.incrementProperty = function (type, amount) {
    * Increases the health of an entity
    */
 
-  // Add debug logs for health properties
-  if (
-    type === CONST.PROPERTIES.HEALTH ||
-    type === CONST.PROPERTIES.HEALTH_MAX
-  ) {
-    console.log(
-      `Current Health Max: ${this.getProperty(CONST.PROPERTIES.HEALTH_MAX)}`
-    );
-  }
-
   // Set the health of the creature
   this.properties.incrementProperty(type, amount);
-
-  // Log after increment
-  if (
-    type === CONST.PROPERTIES.HEALTH ||
-    type === CONST.PROPERTIES.HEALTH_MAX
-  ) {
-    console.log(
-      `After increment - Health: ${this.getProperty(CONST.PROPERTIES.HEALTH)}`
-    );
-    console.log(
-      `After increment - Health Max: ${this.getProperty(
-        CONST.PROPERTIES.HEALTH_MAX
-      )}`
-    );
-  }
 };
 
 Player.prototype.setProperty = function (type, value) {
@@ -1104,31 +1079,7 @@ Player.prototype.setProperty = function (type, value) {
    * Sets a property value
    */
 
-  // Add debug logs for health properties
-  if (
-    type === CONST.PROPERTIES.HEALTH ||
-    type === CONST.PROPERTIES.HEALTH_MAX
-  ) {
-    console.log(
-      `Current Health Max: ${this.getProperty(CONST.PROPERTIES.HEALTH_MAX)}`
-    );
-  }
-
   let result = this.properties.setProperty(type, value);
-
-  // Log after set
-  if (
-    type === CONST.PROPERTIES.HEALTH ||
-    type === CONST.PROPERTIES.HEALTH_MAX
-  ) {
-    console.log(
-      `After set - Health: ${this.getProperty(CONST.PROPERTIES.HEALTH)}`
-    );
-    console.log(
-      `After set - Health Max: ${this.getProperty(CONST.PROPERTIES.HEALTH_MAX)}`
-    );
-  }
-
   return result;
 };
 

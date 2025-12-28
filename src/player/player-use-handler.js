@@ -136,11 +136,6 @@ UseHandler.prototype.handleItemUse = function (packet) {
     return;
   }
 
-  console.log("Packet which constructor:", packet.which.constructor.name);
-  if (packet.which.constructor.name === "Tile") {
-    console.log("Tile ID:", packet.which.id);
-  }
-
   let item;
   // Delegate to the appropriate handler
   if (packet.which.constructor.name === "Tile") {
@@ -197,10 +192,6 @@ UseHandler.prototype.handleTileUse = function (tile) {
    * Function UseHandler.handleTileUse
    * Handles the tile use event
    */
-
-  console.log("Player pos:", this.__player.position.toString());
-  console.log("Tile pos:", tile.position.toString());
-  console.log("Besides:", this.__player.position.besides(tile.position));
 
   // For the rest of the actions the player must be besides the tile
   if (!this.__player.position.besides(tile.position)) {

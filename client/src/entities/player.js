@@ -32,10 +32,6 @@ const Player = function (data) {
     addonTwo: false,
   };
 
-  // Log incoming data for debugging
-  console.log("=== DEBUG OUTFIT INITIALIZATION ===");
-  console.log("Server outfit data:", data.outfit);
-
   // Convert outfit instance to plain object and ensure valid values
   const serverOutfit = data.outfit
     ? {
@@ -58,8 +54,6 @@ const Player = function (data) {
     ...serverOutfit,
     frameGroups: defaultOutfit.frameGroups,
   };
-
-  console.log("Final outfit structure:", data.outfit);
 
   // Inherit from creature
   Creature.call(this, data);
@@ -179,10 +173,6 @@ Player.prototype.setState = function (data) {
     this.state = {};
   }
 
-  console.log("=== DEBUG CLIENT STATE DATA ===");
-  console.log("Received data:", data);
-  console.log("Speed from server:", data.speed);
-
   // Keep player state
   this.skills = new Skills(data.skills, this.vocation);
   this.mounts = data.mounts || [];
@@ -208,19 +198,6 @@ Player.prototype.setState = function (data) {
   this.state.speed = typeof data.speed === "number" ? data.speed : 1020; // Default Tibia speed
   this.state.armor = data.armor || 0;
   this.state.attack = data.attack || 0;
-
-  // Debug log the state after setting values
-  console.log("=== DEBUG CLIENT STATE AFTER SET ===");
-  console.log("Raw state values:");
-  console.log(
-    "Health:",
-    this.state.health,
-    "Max Health:",
-    this.state.maxHealth
-  );
-  console.log("Mana:", this.state.mana, "Max Mana:", this.state.maxMana);
-  console.log("Speed:", this.state.speed);
-  console.log("Capacity:", this.state.capacity);
 
   // Update the UI
   this.setHealthStatus();
@@ -263,10 +240,6 @@ Player.prototype.setBarStatus = function (bar) {
 
   bar.firstElementChild.style.width = percentage + "%";
   bar.lastElementChild.innerHTML = `${currentValue}/${maxValue}`;
-
-  console.log(
-    `Setting ${bar.id} to ${currentValue}/${maxValue} (${percentage}%)`
-  );
 };
 
 Player.prototype.getManaFraction = function () {

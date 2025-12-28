@@ -357,7 +357,6 @@ Creature.prototype.setPosition = function (position) {
    */
 
   this.position = position;
-  console.log(`Creature position set to: ${this.position}`);
 };
 
 Creature.prototype.setDirection = function (direction) {
@@ -478,8 +477,6 @@ Creature.prototype.broadcast = function (packet) {
   let chunk = this.getChunk();
   if (chunk !== null) {
     chunk.broadcast(packet);
-  } else {
-    console.warn("Attempted to broadcast to a null chunk.");
   }
 };
 
@@ -516,24 +513,12 @@ Creature.prototype.increaseHealth = function (amount) {
    * Increases the health of the creature until a maximum
    */
 
-  // Add debug logs
-  console.log(
-    `Current Health before increase: ${this.getProperty(
-      CONST.PROPERTIES.HEALTH
-    )}`
-  );
-
   this.setProperty(
     CONST.PROPERTIES.HEALTH,
     (this.getProperty(CONST.PROPERTIES.HEALTH) + amount).clamp(
       0,
       this.getProperty(CONST.PROPERTIES.HEALTH_MAX)
     )
-  );
-
-  // Log after increase
-  console.log(
-    `Health after increase: ${this.getProperty(CONST.PROPERTIES.HEALTH)}`
   );
 };
 

@@ -141,16 +141,6 @@ PacketHandler.prototype.__calculateSkillLevelAndPercentage = function (skillType
   // Skill constants based on type
   let A, B, skillOffset;
 
-  // DEBUG LOG
-  if (skillType === CONST.PROPERTIES.CLUB) {
-    console.log("Skill Calc Debug:", {
-      type: "CLUB",
-      points: points,
-      vocation: vocation,
-      B_Constant: this.__getVocationSkillConstant(skillType, vocation)
-    });
-  }
-
   // Get A (skill constant) - same for all vocations
   switch (skillType) {
     case CONST.PROPERTIES.MAGIC: A = 1600; break;

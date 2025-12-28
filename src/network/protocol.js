@@ -888,7 +888,6 @@ const PlayerStatePacket = function (player) {
   this.writeUInt8(player.getProperty(CONST.PROPERTIES.ATTACK_SPEED));
   // Add vocation so client can use correct skill formulas
   let voc = player.getProperty(CONST.PROPERTIES.VOCATION);
-  console.log("SERVER: Sending PlayerLoginPacket. Vocation:", voc);
   this.writeUInt8(voc);
 
   this.writeEquipment(player.containerManager.equipment);

@@ -107,7 +107,6 @@ ActionHandler.prototype.handleActionRegeneration = function () {
 
     if (isSated) {
       manaRegen += 5;
-      console.log("=== MANA REGEN ===");
       this.__player.increaseMana(manaRegen);
     } else if (manaRegen > 0) {
       this.__player.increaseMana(manaRegen);

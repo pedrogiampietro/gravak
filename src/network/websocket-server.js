@@ -186,11 +186,6 @@ WebsocketServer.prototype.__handleLoginRequest = function (
         character = JSON.parse(character);
       }
 
-      // DEBUG: Log what was loaded from PostgreSQL
-      console.log("[DEBUG] Loaded character from PostgreSQL:", accountName);
-      console.log("[DEBUG] Health:", character.properties?.health);
-      console.log("[DEBUG] MaxHealth:", character.properties?.maxHealth);
-
       // Fallback: ensure name exists in properties (fixes corrupted data from previous saves)
       if (!character.properties.name) {
         character.properties.name = accountName;
@@ -332,14 +327,8 @@ WebsocketServer.prototype.__removePlayer = function (gameSocket) {
   try {
     // Make sure player exists and has valid properties
     if (!gameSocket.player) {
-      console.log("No player found in gameSocket during removal");
       return;
     }
-
-    console.log("=== REMOVING PLAYER ===");
-    console.log(
-      `Player name: ${gameSocket.player.getProperty(CONST.PROPERTIES.NAME)}`
-    );
 
     // Sync properties before removing from world
     gameSocket.player.syncProperties();

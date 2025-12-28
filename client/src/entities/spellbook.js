@@ -8,15 +8,11 @@ const Spellbook = function (spells) {
    */
 
   // The list of spell identifiers (sid) that are available
-  // The list of spell identifiers (sid) that are available
-  console.log("DEBUG: Spellbook constructor received:", spells);
-
   if (spells && Array.isArray(spells.availableSpells)) {
     this.spells = new Set(spells.availableSpells);
   } else if (Array.isArray(spells)) {
     this.spells = new Set(spells);
   } else {
-    console.warn("DEBUG: Invalid spellbook data received", spells);
     this.spells = new Set();
   }
 

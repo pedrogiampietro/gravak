@@ -8,8 +8,6 @@ const Skills = function (skills, vocation) {
   // Store vocation from player data (0 = none, 1 = knight, 2 = paladin, 3 = sorcerer, 4 = druid)
   this.vocation = vocation || 0;
 
-  console.log("Skills initialized with vocation:", this.vocation);
-
   // Experience table for calculating percentage to next level
   this.__experienceTable = Array.from({ length: 1000 }, (_, i) => {
     let x = i + 1;
