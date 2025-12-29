@@ -321,7 +321,7 @@ Player.prototype.isUnderground = function () {
    * Returns true if  the player is underground
    */
 
-  return this.getPosition().z < 8;
+  return this.getPosition().z > 7;
 };
 
 Player.prototype.setMovementBuffer = function (key) {

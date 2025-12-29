@@ -2,7 +2,7 @@
 
 const Geometry = requireModule("utils/geometry");
 
-const Position = function(x, y, z) {
+const Position = function (x, y, z) {
 
   /*
    * Class Position
@@ -41,15 +41,15 @@ const Position = function(x, y, z) {
 
 // Extract x-coordinate
 Object.defineProperty(Position.prototype, "x", {
-  "get": function() { return this.xy & ((1 << 16) - 1); }
+  "get": function () { return this.xy & ((1 << 16) - 1); }
 });
 
 // Extract y-coordinate
 Object.defineProperty(Position.prototype, "y", {
-  "get": function() { return this.xy >>> 16; }
+  "get": function () { return this.xy >>> 16; }
 });
 
-Position.prototype.isSameFloor = function(other) {
+Position.prototype.isSameFloor = function (other) {
 
   /*
    * Function Position.isSameFloor
@@ -60,7 +60,7 @@ Position.prototype.isSameFloor = function(other) {
 
 }
 
-Position.prototype.inLineOfSight = function(target) {
+Position.prototype.inLineOfSight = function (target) {
 
   /*
    * Function Position.inLineOfSight
@@ -68,26 +68,26 @@ Position.prototype.inLineOfSight = function(target) {
    */
 
   // Always true if two characters are adjacent
-  if(this.besides(target)) {
+  if (this.besides(target)) {
     return true;
   }
 
   // The positions must be on the same floor
-  if(this.z !== target.z) {
+  if (this.z !== target.z) {
     return false;
   }
 
   // Interpolate the positions
-  for(let position of Geometry.prototype.interpolate(this, target)) {
+  for (let position of Geometry.prototype.interpolate(this, target)) {
 
     let tile = gameServer.world.getTileFromWorldPosition(position);
 
-    if(tile === null) {
+    if (tile === null) {
       return;
     }
 
     // Found a tile that blocks projectiles
-    if(tile.isBlockProjectile()) {
+    if (tile.isBlockProjectile()) {
       return false;
     }
 
@@ -98,7 +98,7 @@ Position.prototype.inLineOfSight = function(target) {
 
 }
 
-Position.prototype.fromLiteral = function(position) {
+Position.prototype.fromLiteral = function (position) {
 
   /*
    * Function Position.fromLiteral
@@ -109,7 +109,7 @@ Position.prototype.fromLiteral = function(position) {
 
 }
 
-Position.prototype.getSquare = function(size) {
+Position.prototype.getSquare = function (size) {
 
   /*
    * Function Position.getSquare
@@ -120,7 +120,7 @@ Position.prototype.getSquare = function(size) {
 
 }
 
-Position.prototype.getRadius = function(radius) {
+Position.prototype.getRadius = function (radius) {
 
   /*
    * Function Position.getRadius
@@ -131,7 +131,7 @@ Position.prototype.getRadius = function(radius) {
 
 }
 
-Position.prototype.toString = function() {
+Position.prototype.toString = function () {
 
   /*
    * Function Position.toString
@@ -142,7 +142,7 @@ Position.prototype.toString = function() {
 
 }
 
-Position.prototype.copy = function() {
+Position.prototype.copy = function () {
 
   /*
    * Function Position.copy
@@ -153,7 +153,7 @@ Position.prototype.copy = function() {
 
 }
 
-Position.prototype.equals = function(position) {
+Position.prototype.equals = function (position) {
 
   /*
    * Function Position.equals
@@ -164,7 +164,7 @@ Position.prototype.equals = function(position) {
 
 }
 
-Position.prototype.addVector = function(x, y, z) {
+Position.prototype.addVector = function (x, y, z) {
 
   /*
    * Function Position.addVector
@@ -175,7 +175,7 @@ Position.prototype.addVector = function(x, y, z) {
 
 }
 
-Position.prototype.add = function(position) {
+Position.prototype.add = function (position) {
 
   /*
    * Function Position.add
@@ -186,7 +186,7 @@ Position.prototype.add = function(position) {
 
 }
 
-Position.prototype.getNESW = function() {
+Position.prototype.getNESW = function () {
 
   /*
    * Function Position.getNESW
@@ -202,7 +202,7 @@ Position.prototype.getNESW = function() {
 
 }
 
-Position.prototype.subtract = function(position) {
+Position.prototype.subtract = function (position) {
 
   /*
    * Function Position.subtract
@@ -213,14 +213,14 @@ Position.prototype.subtract = function(position) {
 
 }
 
-Position.prototype.getPositionFromDirection = function(direction) {
+Position.prototype.getPositionFromDirection = function (direction) {
 
   /*
    * Function Position.getPositionFromDirection
    * Returns the position based on the passed direction
    */
 
-  switch(direction) { 
+  switch (direction) {
     case CONST.DIRECTION.NORTH: return this.north();
     case CONST.DIRECTION.EAST: return this.east();
     case CONST.DIRECTION.SOUTH: return this.south();
@@ -234,7 +234,7 @@ Position.prototype.getPositionFromDirection = function(direction) {
 
 }
 
-Position.prototype.getFacingDirection = function(position) {
+Position.prototype.getFacingDirection = function (position) {
 
   /*
    * Function Position.getFacingDirection
@@ -245,7 +245,7 @@ Position.prototype.getFacingDirection = function(position) {
 
 }
 
-Position.prototype.west = function() {
+Position.prototype.west = function () {
 
   /*
    * Function Position.west
@@ -256,7 +256,7 @@ Position.prototype.west = function() {
 
 }
 
-Position.prototype.north = function() {
+Position.prototype.north = function () {
 
   /*
    * Function Position.north
@@ -267,7 +267,7 @@ Position.prototype.north = function() {
 
 }
 
-Position.prototype.east = function() {
+Position.prototype.east = function () {
 
   /*
    * Function Position.east
@@ -278,7 +278,7 @@ Position.prototype.east = function() {
 
 }
 
-Position.prototype.south = function() {
+Position.prototype.south = function () {
 
   /*
    * Function Position.south
@@ -289,29 +289,29 @@ Position.prototype.south = function() {
 
 }
 
-Position.prototype.up = function() {
+Position.prototype.up = function () {
 
   /*
    * Function Position.up
    * Returns up position
    */
 
-  return new Position(this.x, this.y, this.z + 1);
+  return new Position(this.x, this.y, this.z - 1);
 
 }
 
-Position.prototype.down = function() {
+Position.prototype.down = function () {
 
   /*
    * Function Position.down
    * Returns the downward position
    */
 
-  return new Position(this.x, this.y, this.z - 1);
+  return new Position(this.x, this.y, this.z + 1);
 
 }
 
-Position.prototype.northwest = function() {
+Position.prototype.northwest = function () {
 
   /*
    * Function Position.northwest
@@ -322,7 +322,7 @@ Position.prototype.northwest = function() {
 
 }
 
-Position.prototype.northeast = function() {
+Position.prototype.northeast = function () {
 
   /*
    * Function Position.northeast
@@ -333,7 +333,7 @@ Position.prototype.northeast = function() {
 
 }
 
-Position.prototype.southeast = function() {
+Position.prototype.southeast = function () {
 
   /*
    * Function Position.southeast
@@ -344,7 +344,7 @@ Position.prototype.southeast = function() {
 
 }
 
-Position.prototype.southwest = function() {
+Position.prototype.southwest = function () {
 
   /*
    * Function Position.southwest
@@ -355,29 +355,29 @@ Position.prototype.southwest = function() {
 
 }
 
-Position.prototype.ladderNorth = function() {
+Position.prototype.ladderNorth = function () {
 
   /*
    * Function Position.ladderNorth
    * Returns the position taking a ladder and north
    */
 
-  return new Position(this.x, this.y - 1, this.z + 1);
+  return new Position(this.x, this.y - 1, this.z - 1);
 
 }
 
-Position.prototype.ladder = function() {
+Position.prototype.ladder = function () {
 
   /*
    * Function Position.ladder
    * Returns the position after clicking a ladder which is up and south
    */
 
-  return new Position(this.x, this.y + 1, this.z + 1);
+  return new Position(this.x, this.y + 1, this.z - 1);
 
 }
 
-Position.prototype.random = function() {
+Position.prototype.random = function () {
 
   /*
    * Function Position.random
@@ -385,7 +385,7 @@ Position.prototype.random = function() {
    */
 
   // Draw a random sample
-  switch(Number.prototype.random(0, 3)) {
+  switch (Number.prototype.random(0, 3)) {
     case 0: return this.north();
     case 1: return this.east();
     case 2: return this.south();
@@ -394,7 +394,7 @@ Position.prototype.random = function() {
 
 }
 
-Position.prototype.isDiagonal = function(position) {
+Position.prototype.isDiagonal = function (position) {
 
   /*
    * Function Position.isDiagonal
@@ -405,7 +405,7 @@ Position.prototype.isDiagonal = function(position) {
 
 }
 
-Position.prototype.toJSON = function() {
+Position.prototype.toJSON = function () {
 
   /*
    * Function Position.toJSON
@@ -420,7 +420,7 @@ Position.prototype.toJSON = function() {
 
 }
 
-Position.prototype.manhattanDistance = function(position) {
+Position.prototype.manhattanDistance = function (position) {
 
   /*
    * Function Position.manhattanDistance
@@ -431,7 +431,7 @@ Position.prototype.manhattanDistance = function(position) {
 
 }
 
-Position.prototype.pythagoreanDistance = function(position) {
+Position.prototype.pythagoreanDistance = function (position) {
 
   /*
    * Function Position.pythagoreanDistance
@@ -442,14 +442,14 @@ Position.prototype.pythagoreanDistance = function(position) {
 
 }
 
-Position.prototype.isWithinRangeOf = function(position, range) {
+Position.prototype.isWithinRangeOf = function (position, range) {
 
   /*
    * Function Position.isWithinRangeOf
    * Returns true if the other passed position is within a certain range
    */
 
-  if(this.z !== position.z) {
+  if (this.z !== position.z) {
     return false;
   }
 
@@ -458,7 +458,7 @@ Position.prototype.isWithinRangeOf = function(position, range) {
 
 }
 
-Position.prototype.besides = function(position) {
+Position.prototype.besides = function (position) {
 
   /*
    * Function WorldPosition.besides
@@ -466,12 +466,12 @@ Position.prototype.besides = function(position) {
    */
 
   // Never besides
-  if(this.z !== position.z) {
+  if (this.z !== position.z) {
     return false;
   }
 
   // The same tile equals true
-  if(this.equals(position)) {
+  if (this.equals(position)) {
     return true;
   }
 
@@ -480,7 +480,7 @@ Position.prototype.besides = function(position) {
 
 }
 
-Position.prototype.isVisible = function(position, x, y) {
+Position.prototype.isVisible = function (position, x, y) {
 
   /*
    * Function Position.isVisible
@@ -491,7 +491,7 @@ Position.prototype.isVisible = function(position, x, y) {
 
 }
 
-Position.prototype.rotate2D = function(direction, x, y) {
+Position.prototype.rotate2D = function (direction, x, y) {
 
   /*
    * Function Position.__getSpellPosition

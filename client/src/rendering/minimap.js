@@ -185,7 +185,7 @@ Minimap.prototype.setRenderLayer = function (layer) {
   this.__renderLayer = Math.min(Math.max(0, layer), this.nLayers - 1);
 
   // We pretend that the surface is 0 (while it is actually 8)
-  document.getElementById("minimap-current-layer").innerHTML = this.__renderLayer - 8;
+  document.getElementById("minimap-current-layer").innerHTML = 7 - this.__renderLayer;
 
   this.cache();
 

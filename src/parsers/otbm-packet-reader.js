@@ -4,7 +4,7 @@ const PacketReader = requireModule("network/packet-reader");
 const Position = requireModule("utils/position");
 const OTBM_HEADERS = requireModule("parsers/otbm-headers");
 
-const OTBMPacketReader = function(buffer) {
+const OTBMPacketReader = function (buffer) {
 
   /*
    * Class OTBMPacketReader
@@ -19,7 +19,7 @@ const OTBMPacketReader = function(buffer) {
 OTBMPacketReader.prototype = Object.create(PacketReader.prototype);
 OTBMPacketReader.constructor = OTBMPacketReader;
 
-OTBMPacketReader.prototype.__escapeString = function(buffer) {
+OTBMPacketReader.prototype.__escapeString = function (buffer) {
 
   /*
    * Function OTBMPacketReader.__escapeString
@@ -29,13 +29,13 @@ OTBMPacketReader.prototype.__escapeString = function(buffer) {
   let iEsc = 0;
   let index;
 
-  while(true) {
-    
+  while (true) {
+
     // Find the next escape character
     index = buffer.subarray(iEsc++).indexOf(OTBM_HEADERS.OTBM_NODE_ESC);
-     
+
     // No more: stop iteration
-    if(index === -1) {
+    if (index === -1) {
       return buffer;
     }
 
@@ -51,7 +51,7 @@ OTBMPacketReader.prototype.__escapeString = function(buffer) {
 
 }
 
-OTBMPacketReader.prototype.readOTBMHeader = function() {
+OTBMPacketReader.prototype.readOTBMHeader = function () {
 
   /*
    * Function OTBMPacketReader.readOTBMHeader
@@ -68,23 +68,7 @@ OTBMPacketReader.prototype.readOTBMHeader = function() {
 
 }
 
-OTBMPacketReader.prototype.__readPositionInv = function() {
-    
-  /*
-   * Function OTBMPacketReader.__readPosition
-   * Reads an OTBM position
-   */ 
-    
-  // Four double bytes
-  return new Position( 
-    this.__readUInt16(),
-    this.__readUInt16(),
-    15 - this.__readUInt8()
-  );
-      
-} 
-
-OTBMPacketReader.prototype.__readPosition = function() {
+OTBMPacketReader.prototype.__readPositionInv = function () {
 
   /*
    * Function OTBMPacketReader.__readPosition
@@ -92,7 +76,7 @@ OTBMPacketReader.prototype.__readPosition = function() {
    */
 
   // Four double bytes
-  return new Position( 
+  return new Position(
     this.__readUInt16(),
     this.__readUInt16(),
     this.__readUInt8()
@@ -100,7 +84,23 @@ OTBMPacketReader.prototype.__readPosition = function() {
 
 }
 
-OTBMPacketReader.prototype.readOTBMTown = function() {
+OTBMPacketReader.prototype.__readPosition = function () {
+
+  /*
+   * Function OTBMPacketReader.__readPosition
+   * Reads an OTBM position
+   */
+
+  // Four double bytes
+  return new Position(
+    this.__readUInt16(),
+    this.__readUInt16(),
+    this.__readUInt8()
+  );
+
+}
+
+OTBMPacketReader.prototype.readOTBMTown = function () {
 
   /*
    * Function OTBMPacketReader.readOTBMTown
@@ -115,7 +115,7 @@ OTBMPacketReader.prototype.readOTBMTown = function() {
 
 }
 
-OTBMPacketReader.prototype.readOTBMWaypoint = function() {
+OTBMPacketReader.prototype.readOTBMWaypoint = function () {
 
   /*
    * Function OTBMPacketReader.readOTBMWaypoint
@@ -129,7 +129,7 @@ OTBMPacketReader.prototype.readOTBMWaypoint = function() {
 
 }
 
-OTBMPacketReader.prototype.__readUInt32 = function() {
+OTBMPacketReader.prototype.__readUInt32 = function () {
 
   /*
    * Function OTBMPacketReader.__readUInt32
@@ -140,7 +140,7 @@ OTBMPacketReader.prototype.__readUInt32 = function() {
 
 }
 
-OTBMPacketReader.prototype.__readUInt16 = function() {
+OTBMPacketReader.prototype.__readUInt16 = function () {
 
   /*
    * Function OTBMPacketReader.__readUInt16
@@ -151,7 +151,7 @@ OTBMPacketReader.prototype.__readUInt16 = function() {
 
 }
 
-OTBMPacketReader.prototype.__readUInt8 = function() {
+OTBMPacketReader.prototype.__readUInt8 = function () {
 
   /*
    * Function OTBMPacketReader.__readUInt8
@@ -161,7 +161,7 @@ OTBMPacketReader.prototype.__readUInt8 = function() {
   let value = this.readUInt8();
 
   // Not escaped: return this value
-  if(value !== OTBM_HEADERS.OTBM_NODE_ESC) {
+  if (value !== OTBM_HEADERS.OTBM_NODE_ESC) {
     return value;
   }
 
@@ -170,7 +170,7 @@ OTBMPacketReader.prototype.__readUInt8 = function() {
 
 }
 
-OTBMPacketReader.prototype.readOTBMHouseTile = function() {
+OTBMPacketReader.prototype.readOTBMHouseTile = function () {
 
   /*
    * Function OTBMPacketReader.readOTBMHouseTile
@@ -186,7 +186,7 @@ OTBMPacketReader.prototype.readOTBMHouseTile = function() {
 
 }
 
-OTBMPacketReader.prototype.readOTBMItem = function() {
+OTBMPacketReader.prototype.readOTBMItem = function () {
 
   /*
    * Function OTBMPacketReader.readOTBMItem
@@ -201,7 +201,7 @@ OTBMPacketReader.prototype.readOTBMItem = function() {
 
 }
 
-OTBMPacketReader.prototype.readOTBMTileArea = function() {
+OTBMPacketReader.prototype.readOTBMTileArea = function () {
 
   /*
    * Function OTBMPacketReader.readOTBMTileArea
@@ -215,7 +215,7 @@ OTBMPacketReader.prototype.readOTBMTileArea = function() {
 
 }
 
-OTBMPacketReader.prototype.readOTBMData = function() {
+OTBMPacketReader.prototype.readOTBMData = function () {
 
   /*
    * Function OTBMPacketReader.readOTBMData
@@ -228,7 +228,7 @@ OTBMPacketReader.prototype.readOTBMData = function() {
 
 }
 
-OTBMPacketReader.prototype.readOTBMTile = function() {
+OTBMPacketReader.prototype.readOTBMTile = function () {
 
   /*
    * Function OTBMPacketReader.readOTBMTile
@@ -244,7 +244,7 @@ OTBMPacketReader.prototype.readOTBMTile = function() {
 
 }
 
-OTBMPacketReader.prototype.__readString16 = function() {
+OTBMPacketReader.prototype.__readString16 = function () {
 
   /*
    * Function OTBMPacketReadere.__readString16
@@ -262,7 +262,7 @@ OTBMPacketReader.prototype.__readString16 = function() {
 
 }
 
-OTBMPacketReader.prototype.readAttributes = function() {
+OTBMPacketReader.prototype.readAttributes = function () {
 
   /*
    * Function OTBMPacketReadere.readAttributes
@@ -273,7 +273,7 @@ OTBMPacketReader.prototype.readAttributes = function() {
   let attributes = new Map();
 
   // Read buffer from beginning
-  while(this.isReadable()) {
+  while (this.isReadable()) {
     this.__setAttribute(attributes, this.__readUInt8());
   }
 
@@ -281,7 +281,7 @@ OTBMPacketReader.prototype.readAttributes = function() {
 
 }
 
-OTBMPacketReader.prototype.__setAttribute = function(attributes, type) {
+OTBMPacketReader.prototype.__setAttribute = function (attributes, type) {
 
   /*
    * Function OTBMPacketReadere.__setAttribute
@@ -289,7 +289,7 @@ OTBMPacketReader.prototype.__setAttribute = function(attributes, type) {
    */
 
   // Read the leading byte
-  switch(type) {
+  switch (type) {
 
     // The attributes
     case OTBM_HEADERS.OTBM_ATTR_HOUSEDOORID:

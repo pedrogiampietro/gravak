@@ -93,10 +93,13 @@ Renderer.prototype.updateTileCache = function () {
   let max = gameClient.player.getMaxFloor();
 
   // Collect all tiles up until the maximum floor to render
-  for (let i = 0; i < max; i++) {
+  for (let i = 7; i > max; i--) {
 
     let tiles = this.__getFloorTilesTiles(i);
-    this.__tileCache.push(tiles);
+    this.__tileCache.push({
+      tiles: tiles,
+      z: i
+    });
     this.numberOfTiles = this.numberOfTiles + tiles.length;
 
   }
@@ -332,7 +335,7 @@ Renderer.prototype.__renderWorld = function () {
 
   // Render all of the cached tiles: only needs to be updated when the character moves
   for (let i = 0; i < tileCache.length; i++) {
-    this.__renderFloor(tileCache[i], i);
+    this.__renderFloor(tileCache[i].tiles, tileCache[i].z);
   }
 
   // If requested render the weather canvas

@@ -100,7 +100,8 @@ if __name__ == "__main__":
 
   # Create handler with directory and login server config
   def handler(*args, **kwargs):
-    return ProxyHandler(*args, directory="client/dist", login_server=LOGIN_SERVER, **kwargs)
+    return ProxyHandler(*args, directory="client", login_server=LOGIN_SERVER, **kwargs)
+    # return ProxyHandler(*args, directory="client/dist", login_server=LOGIN_SERVER, **kwargs)
 
   # Create the server
   httpd = http.server.HTTPServer(ADDRESS, handler)

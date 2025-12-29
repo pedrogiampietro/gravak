@@ -1,4 +1,4 @@
-const Position = function(x, y, z) {
+const Position = function (x, y, z) {
 
   /*
    * Class Position
@@ -21,7 +21,7 @@ const Position = function(x, y, z) {
 
 Position.prototype.NULL = new Position(0, 0, 0);
 
-Position.prototype.subtract = function(position) {
+Position.prototype.subtract = function (position) {
 
   /*
    * Function Position.subtract
@@ -36,7 +36,7 @@ Position.prototype.subtract = function(position) {
 
 }
 
-Position.prototype.add = function(position) {
+Position.prototype.add = function (position) {
 
   /*
    * Function Position.add
@@ -51,7 +51,7 @@ Position.prototype.add = function(position) {
 
 }
 
-Position.prototype.above = function() {
+Position.prototype.above = function () {
 
   /*
    * Function Position.above
@@ -61,34 +61,16 @@ Position.prototype.above = function() {
   return new this.constructor(
     this.x,
     this.y,
-    this.z + 1
+    this.z - 1
   );
 
 }
 
-Position.prototype.unprojected = function() {
+Position.prototype.unprojected = function () {
 
   /*
    * Function Position.unprojected
    * Unprojects the current chunk position to 3D space
-   */
-
-  // Bind to sector height
-  let z = this.z % 8;
-
-  return new this.constructor(
-    this.x + z,
-    this.y + z,
-    z
-  );
-
-}
-
-Position.prototype.projected = function() {
-
-  /*
-   * Function Position.projected
-   * Projects the current world position on a flat surface
    */
 
   // Bind to sector height
@@ -102,14 +84,32 @@ Position.prototype.projected = function() {
 
 }
 
-Position.prototype.fromOpcode = function(opcode) {
+Position.prototype.projected = function () {
+
+  /*
+   * Function Position.projected
+   * Projects the current world position on a flat surface
+   */
+
+  // Bind to sector height
+  let z = this.z % 8;
+
+  return new this.constructor(
+    this.x + z,
+    this.y + z,
+    z
+  );
+
+}
+
+Position.prototype.fromOpcode = function (opcode) {
 
   /*
    * Function Position.fromOpcode
    * Maps the byte opcode to a direction
    */
 
-  switch(opcode) {
+  switch (opcode) {
     case CONST.DIRECTION.NORTH:
       return this.north();
     case CONST.DIRECTION.EAST:
@@ -130,7 +130,7 @@ Position.prototype.fromOpcode = function(opcode) {
 
 }
 
-Position.prototype.copy = function() {
+Position.prototype.copy = function () {
 
   /*
    * Function Position.copy
@@ -141,7 +141,7 @@ Position.prototype.copy = function() {
 
 }
 
-Position.prototype.west = function() {
+Position.prototype.west = function () {
 
   /*
    * Function Position.west
@@ -152,7 +152,7 @@ Position.prototype.west = function() {
 
 }
 
-Position.prototype.north = function() {
+Position.prototype.north = function () {
 
   /*
    * Function Position.north
@@ -163,7 +163,7 @@ Position.prototype.north = function() {
 
 }
 
-Position.prototype.east = function() {
+Position.prototype.east = function () {
 
   /*
    * Function Position.east
@@ -174,7 +174,7 @@ Position.prototype.east = function() {
 
 }
 
-Position.prototype.south = function() {
+Position.prototype.south = function () {
 
   /*
    * Function Position.south
@@ -185,7 +185,7 @@ Position.prototype.south = function() {
 
 }
 
-Position.prototype.northwest = function() {
+Position.prototype.northwest = function () {
 
   /*
    * Function Position.northwest
@@ -196,7 +196,7 @@ Position.prototype.northwest = function() {
 
 }
 
-Position.prototype.northeast = function() {
+Position.prototype.northeast = function () {
 
   /*
    * Function Position.northeast
@@ -207,7 +207,7 @@ Position.prototype.northeast = function() {
 
 }
 
-Position.prototype.southeast = function() {
+Position.prototype.southeast = function () {
 
   /*
    * Function Position.southeast
@@ -218,7 +218,7 @@ Position.prototype.southeast = function() {
 
 }
 
-Position.prototype.southwest = function() {
+Position.prototype.southwest = function () {
 
   /*
    * Function Position.southeast
@@ -229,29 +229,29 @@ Position.prototype.southwest = function() {
 
 }
 
-Position.prototype.up = function() {
+Position.prototype.up = function () {
 
   /*
    * Function Position.up
    * Returns the position above the current position
    */
 
-  return new this.constructor(this.x, this.y, this.z + 1);
+  return new this.constructor(this.x, this.y, this.z - 1);
 
 }
 
-Position.prototype.down = function() {
+Position.prototype.down = function () {
 
   /*
    * Function Position.down
    * Returns the position below the current position
    */
 
-  return new this.constructor(this.x, this.y, this.z - 1);
+  return new this.constructor(this.x, this.y, this.z + 1);
 
 }
 
-Position.prototype.random = function() {
+Position.prototype.random = function () {
 
   /*
    * Function Position.random
@@ -260,7 +260,7 @@ Position.prototype.random = function() {
 
   let random = Math.floor(Math.random() * Math.floor(4));
 
-  switch(random) {
+  switch (random) {
     case 0:
       return this.west();
     case 1:
@@ -273,21 +273,21 @@ Position.prototype.random = function() {
 
 }
 
-Position.prototype.getLookDirection = function(position) {
- 
+Position.prototype.getLookDirection = function (position) {
+
   /*
    * Function Position.getLookDirection
    * Returns the look direction towards another direction
    */
 
-  if(this.z !== position.z) {
+  if (this.z !== position.z) {
     return null;
   }
 
   let diff = position.subtract(this);
 
-  if(diff.x === 0) {
-    switch(diff.y) {
+  if (diff.x === 0) {
+    switch (diff.y) {
       case -1:
         return CONST.DIRECTION.NORTH;
       case 0:
@@ -297,8 +297,8 @@ Position.prototype.getLookDirection = function(position) {
     }
   }
 
-  if(diff.x === -1) {
-    switch(diff.y) {
+  if (diff.x === -1) {
+    switch (diff.y) {
       case -1:
         return CONST.DIRECTION.NORTH_WEST;
       case 0:
@@ -308,8 +308,8 @@ Position.prototype.getLookDirection = function(position) {
     }
   }
 
-  if(diff.x === 1) {
-    switch(diff.y) {
+  if (diff.x === 1) {
+    switch (diff.y) {
       case -1:
         return CONST.DIRECTION.NORTH_EAST;
       case 0:
@@ -323,7 +323,7 @@ Position.prototype.getLookDirection = function(position) {
 
 }
 
-Position.prototype.isDiagonal = function(position) {
+Position.prototype.isDiagonal = function (position) {
 
   /*
    * Function Position.isDiagonal
@@ -334,7 +334,7 @@ Position.prototype.isDiagonal = function(position) {
 
 }
 
-Position.prototype.toString = function() {
+Position.prototype.toString = function () {
 
   /*
    * Function Position.toString
@@ -345,7 +345,7 @@ Position.prototype.toString = function() {
 
 }
 
-Position.prototype.serialize = function() {
+Position.prototype.serialize = function () {
 
   /*
    * Function Position.serialize
@@ -360,7 +360,7 @@ Position.prototype.serialize = function() {
 
 }
 
-Position.prototype.equals = function(position) {
+Position.prototype.equals = function (position) {
 
   /*
    * Function Position.equals
@@ -368,12 +368,12 @@ Position.prototype.equals = function(position) {
    */
 
   return this.x === position.x &&
-         this.y === position.y &&
-         this.z === position.z;
+    this.y === position.y &&
+    this.z === position.z;
 
 }
 
-Position.prototype.inRange = function(position, range) {
+Position.prototype.inRange = function (position, range) {
 
   /*
    * Function Position.inRange
@@ -382,11 +382,11 @@ Position.prototype.inRange = function(position, range) {
 
   // Must be on same floor
   return this.z === position.z &&
-         (Math.sqrt(Math.pow((this.x - position.x), 2) + Math.pow((this.y - position.y), 2)) | 0) < range
+    (Math.sqrt(Math.pow((this.x - position.x), 2) + Math.pow((this.y - position.y), 2)) | 0) < range
 
 }
 
-Position.prototype.besides = function(position) {
+Position.prototype.besides = function (position) {
 
   /*
    * Function WorldPosition.besides
@@ -394,7 +394,7 @@ Position.prototype.besides = function(position) {
    */
 
   // Not same floor
-  if(this.z !== position.z) {
+  if (this.z !== position.z) {
     return false;
   }
 

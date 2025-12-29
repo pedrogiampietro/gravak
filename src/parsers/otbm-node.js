@@ -4,7 +4,7 @@ const OTBM_HEADERS = requireModule("parsers/otbm-headers");
 const OTBMPacketReader = requireModule("parsers/otbm-packet-reader");
 const Position = requireModule("utils/position");
 
-const OTBMNode = function(parentNode, buffer) {
+const OTBMNode = function (parentNode, buffer) {
 
   /* 
    * Class OTBMNode
@@ -25,14 +25,14 @@ const OTBMNode = function(parentNode, buffer) {
 
 }
 
-OTBMNode.prototype.getAttribute = function(attribute) {
+OTBMNode.prototype.getAttribute = function (attribute) {
 
   /*
    * Function OTBMNode.getAttribute
    * Returns the attribute of a node
    */
 
-  if(!this.hasAttribute(attribute)) {
+  if (!this.hasAttribute(attribute)) {
     return null;
   }
 
@@ -40,7 +40,7 @@ OTBMNode.prototype.getAttribute = function(attribute) {
 
 }
 
-OTBMNode.prototype.hasAttribute = function(attribute) {
+OTBMNode.prototype.hasAttribute = function (attribute) {
 
   /*
    * Function OTBMNode.hasAttribute
@@ -51,7 +51,7 @@ OTBMNode.prototype.hasAttribute = function(attribute) {
 
 }
 
-OTBMNode.prototype.getPosition = function() {
+OTBMNode.prototype.getPosition = function () {
 
   /*
    * Function OTBMNode.getPosition
@@ -59,16 +59,16 @@ OTBMNode.prototype.getPosition = function() {
    */
 
   // An item refers to the parent tile
-  if(this.type === OTBM_HEADERS.OTBM_ITEM) {
+  if (this.type === OTBM_HEADERS.OTBM_ITEM) {
     return this.parentNode.getPosition();
   }
 
   // A tile takes it position from the parent tile area 
-  if(this.type === OTBM_HEADERS.OTBM_TILE || this.type === OTBM_HEADERS.OTBM_HOUSETILE) {
+  if (this.type === OTBM_HEADERS.OTBM_TILE || this.type === OTBM_HEADERS.OTBM_HOUSETILE) {
     return new Position(
       this.properties.x + this.parentNode.properties.position.x,
       this.properties.y + this.parentNode.properties.position.y,
-      15 - this.parentNode.properties.position.z // Swap the z-coordinate
+      this.parentNode.properties.position.z // Use the raw z-coordinate
     );
   }
 
@@ -76,7 +76,7 @@ OTBMNode.prototype.getPosition = function() {
 
 }
 
-OTBMNode.prototype.__readProperties = function(packet) {
+OTBMNode.prototype.__readProperties = function (packet) {
 
   /*
    * Function OTBMNode.__readProperties
@@ -84,7 +84,7 @@ OTBMNode.prototype.__readProperties = function(packet) {
    */
 
   // Map to handler
-  switch(this.type) {
+  switch (this.type) {
     case OTBM_HEADERS.OTBM_MAP_HEADER: return packet.readOTBMHeader();
     case OTBM_HEADERS.OTBM_MAP_DATA: return packet.readOTBMData();
     case OTBM_HEADERS.OTBM_TILE_AREA: return packet.readOTBMTileArea();

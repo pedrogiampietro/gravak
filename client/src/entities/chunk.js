@@ -1,4 +1,4 @@
-const Chunk = function(id, position, tiles) {
+const Chunk = function (id, position, tiles) {
 
   /*
    * Class Chunk
@@ -23,7 +23,7 @@ const Chunk = function(id, position, tiles) {
 
 }
 
-Chunk.prototype.besides = function(chunk) {
+Chunk.prototype.besides = function (chunk) {
 
   /*
    * Function Chunk.besides
@@ -34,7 +34,7 @@ Chunk.prototype.besides = function(chunk) {
 
 }
 
-Chunk.prototype.getNumberTiles = function() {
+Chunk.prototype.getNumberTiles = function () {
 
   /*
    * Function Chunk.getNumberTiles
@@ -46,7 +46,7 @@ Chunk.prototype.getNumberTiles = function() {
 
 }
 
-Chunk.prototype.getNumberTilesLayer = function() {
+Chunk.prototype.getNumberTilesLayer = function () {
 
   /*
    * Function Chunk.getNumberTilesLayer;
@@ -58,7 +58,7 @@ Chunk.prototype.getNumberTilesLayer = function() {
 
 }
 
-Chunk.prototype.getFloorTiles = function(floor) {
+Chunk.prototype.getFloorTiles = function (floor) {
 
   /*
    * Function Chunk.getFloorTiles
@@ -77,7 +77,7 @@ Chunk.prototype.getFloorTiles = function(floor) {
 
 }
 
-Chunk.prototype.getTileFromWorldPosition = function(position) {
+Chunk.prototype.getTileFromWorldPosition = function (position) {
 
   /*
    * Function Chunk.getTileFromWorldPosition
@@ -88,7 +88,7 @@ Chunk.prototype.getTileFromWorldPosition = function(position) {
 
 }
 
-Chunk.prototype.getFirstTileFromTop = function(position) {
+Chunk.prototype.getFirstTileFromTop = function (position) {
 
   /*
    * Function Chunk.getFirstTileFromTop
@@ -96,16 +96,16 @@ Chunk.prototype.getFirstTileFromTop = function(position) {
    */
 
   // Must not look above the player
-  let maximum = Math.max(0, gameClient.player.getMaxFloor() - 1);
-  let minimum = 0;
+  let maximum = Chunk.prototype.DEPTH - 1;
+  let minimum = gameClient.player.getMaxFloor() + 1;
 
   // Go down all floors to find the first encountered tile
-  for(let z = maximum; z >= minimum; z--) {
+  for (let z = minimum; z <= maximum; z++) {
 
     let tile = this.__getTileFromWorldPosition(new Position(position.x, position.y, z));
 
     // Discovered a tile: return it
-    if(tile.id !== 0 || tile.items.length > 0) {
+    if (tile.id !== 0 || tile.items.length > 0) {
       return tile;
     }
 
@@ -115,40 +115,40 @@ Chunk.prototype.getFirstTileFromTop = function(position) {
 
 }
 
-Chunk.prototype.getFirstFloorFromBottomProjected = function(position) {
+Chunk.prototype.getFirstFloorFromBottomProjected = function (position) {
 
   // Start one above the position
-  let minimum = (position.z % Chunk.prototype.DEPTH) + 1;
+  let minimum = Chunk.prototype.DEPTH - (position.z % Chunk.prototype.DEPTH);
 
   // The maximum is of course the minimum + 7 but never more than 8!
   let maximum = Math.max(minimum, Chunk.prototype.DEPTH);
 
   // Go over all the upper floors and check if occupied
-  for(let z = 1; z <= maximum - minimum; z++) {
+  for (let z = 1; z <= maximum - minimum; z++) {
 
     // Project the tile position
     let tilePosition = position;
-    
+
     // Get the sector tile
-    let tile = gameClient.world.getTileFromWorldPosition(new Position(tilePosition.x + z, tilePosition.y + z, tilePosition.z + z));
-    
-    if(tile === null) {
+    let tile = gameClient.world.getTileFromWorldPosition(new Position(tilePosition.x + z, tilePosition.y + z, tilePosition.z - z));
+
+    if (tile === null) {
       continue;
     }
-    
+
     // A tile exist above the player: stop looking except for when transparent (e.g., stairs)
-    if(tile.id !== 0 && !tile.isTranslucent()) {
-      return (tilePosition.z + z) % 8;
+    if (tile.id !== 0 && !tile.isTranslucent()) {
+      return (tilePosition.z - z) % 8;
     }
 
   }
 
   // Can see everything
-  return Chunk.prototype.DEPTH;
+  return -1;
 
 }
 
-Chunk.prototype.getFirstFloorFromBottom = function(position) {
+Chunk.prototype.getFirstFloorFromBottom = function (position) {
 
   /*
    * Function Chunk.getFirstFloorFromBottom
@@ -162,29 +162,29 @@ Chunk.prototype.getFirstFloorFromBottom = function(position) {
   );
 
   // Start one above the position
-  let minimum = (position.z % Chunk.prototype.DEPTH) + 1;
+  let minimum = Chunk.prototype.DEPTH - (position.z % Chunk.prototype.DEPTH);
 
   // The maximum is of course the minimum + 7 but never more than 8!
   let maximum = Math.max(minimum, Chunk.prototype.DEPTH);
 
   // Go over all the upper floors and check if occupied
-  for(let z = 1; z <= maximum - minimum; z++) {
+  for (let z = 1; z <= maximum - minimum; z++) {
 
-    for(let i = 0; i < positions.length; i++) {
+    for (let i = 0; i < positions.length; i++) {
 
       // Project the tile position
       let tilePosition = positions[i];
 
       // Get the sector tile
-      let tile = gameClient.world.getTileFromWorldPosition(new Position(tilePosition.x + z, tilePosition.y + z, tilePosition.z + z));
+      let tile = gameClient.world.getTileFromWorldPosition(new Position(tilePosition.x + z, tilePosition.y + z, tilePosition.z - z));
 
-      if(tile === null) {
+      if (tile === null) {
         continue;
       }
 
       // A tile exist above the player: stop looking except for when transparent (e.g., stairs)
-      if((tile.id !== 0 && !tile.isTranslucent()) || tile.items.length > 0) {
-        return (tilePosition.z + z) % 8;
+      if ((tile.id !== 0 && !tile.isTranslucent()) || tile.items.length > 0) {
+        return (tilePosition.z - z) % 8;
       }
 
     }
@@ -192,11 +192,11 @@ Chunk.prototype.getFirstFloorFromBottom = function(position) {
   }
 
   // Can see everything
-  return Chunk.prototype.DEPTH;
+  return -1;
 
 }
 
-Chunk.prototype.__createTiles = function(tiles) {
+Chunk.prototype.__createTiles = function (tiles) {
 
   /*
    * Function Chunk.__createTiles
@@ -205,9 +205,9 @@ Chunk.prototype.__createTiles = function(tiles) {
 
   // Chunk to world position
   let worldPosition = this.__getWorldPosition();
- 
+
   // Refactor
-  return tiles.map(function(tile, i) {
+  return tiles.map(function (tile, i) {
 
     // Add relative tile position within the chunk
     let relativeTilePosition = this.__getPositionFromIndex(i);
@@ -222,14 +222,14 @@ Chunk.prototype.__createTiles = function(tiles) {
 
 }
 
-Chunk.prototype.__getTileFromIndex = function(index) {
+Chunk.prototype.__getTileFromIndex = function (index) {
 
   /*
    * Function Sector.__getTileFromIndex
    * Returns the tile from a given index (if valid)
    */
 
-  if(index < 0 || index >= this.tiles.length) {
+  if (index < 0 || index >= this.tiles.length) {
     return null;
   }
 
@@ -238,7 +238,7 @@ Chunk.prototype.__getTileFromIndex = function(index) {
 
 }
 
-Chunk.prototype.__getTileFromWorldPosition = function(worldPosition) {
+Chunk.prototype.__getTileFromWorldPosition = function (worldPosition) {
 
   /*
    * Function Sector.__getTileFromWorldPosition
@@ -246,7 +246,7 @@ Chunk.prototype.__getTileFromWorldPosition = function(worldPosition) {
    */
 
   // No tiles in the chunk
-  if(this.tiles === null) {
+  if (this.tiles === null) {
     return null;
   }
 
@@ -254,7 +254,7 @@ Chunk.prototype.__getTileFromWorldPosition = function(worldPosition) {
 
 }
 
-Chunk.prototype.__getWorldPosition = function() {
+Chunk.prototype.__getWorldPosition = function () {
 
   /*
    * Function Chunk.__getWorldPosition
@@ -269,7 +269,7 @@ Chunk.prototype.__getWorldPosition = function() {
 
 }
 
-Chunk.prototype.__getPositionFromIndex = function(index) {
+Chunk.prototype.__getPositionFromIndex = function (index) {
 
   /*
    * Function Chunk.__getPositionFromIndex
@@ -277,8 +277,8 @@ Chunk.prototype.__getPositionFromIndex = function(index) {
    */
 
   // Problem somehow
-  if(index < 0 || index >= Chunk.prototype.WIDTH * Chunk.prototype.HEIGHT * Chunk.prototype.DEPTH) {
-    throw("Could not map chunk index to world position.");
+  if (index < 0 || index >= Chunk.prototype.WIDTH * Chunk.prototype.HEIGHT * Chunk.prototype.DEPTH) {
+    throw ("Could not map chunk index to world position.");
   }
 
   // Determine the x, y, z coordinate of the tile based on the tile index (mod size)
@@ -290,7 +290,7 @@ Chunk.prototype.__getPositionFromIndex = function(index) {
 
 }
 
-Chunk.prototype.__getTileIndex = function(worldPosition) {
+Chunk.prototype.__getTileIndex = function (worldPosition) {
 
   /*
    * Function Sector.__getTileIndex

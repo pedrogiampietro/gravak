@@ -345,8 +345,8 @@ World.prototype.getChunkPositionFromWorldPosition = function (worldPosition) {
    */
 
   // Project the z-component tile on the main floor
-  let x = worldPosition.x - (worldPosition.z % Chunk.prototype.DEPTH);
-  let y = worldPosition.y - (worldPosition.z % Chunk.prototype.DEPTH);
+  let x = worldPosition.x + (worldPosition.z % Chunk.prototype.DEPTH);
+  let y = worldPosition.y + (worldPosition.z % Chunk.prototype.DEPTH);
 
   // Simple division to get the sector x, y
   let sx = (x / Chunk.prototype.WIDTH) | 0;

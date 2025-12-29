@@ -7,7 +7,7 @@ const Tile = requireModule("entities/tile");
 
 const { CreatureStatePacket, ChunkPacket } = requireModule("network/protocol");
 
-const Chunk = function(id, chunkPosition) {
+const Chunk = function (id, chunkPosition) {
 
   /*
    *
@@ -50,7 +50,7 @@ Chunk.prototype.WIDTH = CONFIG.WORLD.CHUNK.WIDTH;
 Chunk.prototype.HEIGHT = CONFIG.WORLD.CHUNK.HEIGHT;
 Chunk.prototype.DEPTH = CONFIG.WORLD.CHUNK.DEPTH;
 
-Chunk.prototype.difference = function(chunk) {
+Chunk.prototype.difference = function (chunk) {
 
   /*
    * Function Chunk.difference
@@ -68,7 +68,7 @@ Chunk.prototype.difference = function(chunk) {
 
 }
 
-Chunk.prototype.createTile = function(position, id) {
+Chunk.prototype.createTile = function (position, id) {
 
   /*
    * Function Chunk.createTile
@@ -79,7 +79,7 @@ Chunk.prototype.createTile = function(position, id) {
   let layer = position.z % this.DEPTH;
 
   // Layer does not exist: reserve for the tiles
-  if(this.layers[layer] === null) {
+  if (this.layers[layer] === null) {
     this.layers[layer] = new Array(this.WIDTH * this.HEIGHT).fill(null);
   }
 
@@ -90,7 +90,7 @@ Chunk.prototype.createTile = function(position, id) {
 
 }
 
-Chunk.prototype.getTileFromWorldPosition = function(position) {
+Chunk.prototype.getTileFromWorldPosition = function (position) {
 
   /*
    * Function Chunk.getTileFromWorldPosition
@@ -99,7 +99,7 @@ Chunk.prototype.getTileFromWorldPosition = function(position) {
 
   let layer = position.z % this.DEPTH;
 
-  if(this.layers[layer] === null) {
+  if (this.layers[layer] === null) {
     return null;
   }
 
@@ -109,7 +109,7 @@ Chunk.prototype.getTileFromWorldPosition = function(position) {
 
 }
 
-Chunk.prototype.serialize = function(targetSocket) {
+Chunk.prototype.serialize = function (targetSocket) {
 
   /*
    * Function Chunk.serialize
@@ -117,12 +117,12 @@ Chunk.prototype.serialize = function(targetSocket) {
    */
 
   // Write the chunk itself
-  targetSocket.write(new ChunkPacket(this)); 
+  targetSocket.write(new ChunkPacket(this));
 
-  for(let chunkPlayer of this.players) {
+  for (let chunkPlayer of this.players) {
 
     // Do not send information on self
-    if(targetSocket.player === chunkPlayer) {
+    if (targetSocket.player === chunkPlayer) {
       continue;
     }
 
@@ -132,17 +132,17 @@ Chunk.prototype.serialize = function(targetSocket) {
   }
 
   // Write the other creatures (npcs & monsters)
-  for(let npc of this.npcs) {
+  for (let npc of this.npcs) {
     targetSocket.write(new CreatureStatePacket(npc));
   }
 
-  for(let monster of this.monsters) {
+  for (let monster of this.monsters) {
     targetSocket.write(new CreatureStatePacket(monster));
   }
 
 }
 
-Chunk.prototype.broadcast = function(packet) {
+Chunk.prototype.broadcast = function (packet) {
 
   /*
    * Function Chunk.broadcast
@@ -154,7 +154,7 @@ Chunk.prototype.broadcast = function(packet) {
 
 }
 
-Chunk.prototype.broadcastFloor = function(floor, packet) {
+Chunk.prototype.broadcastFloor = function (floor, packet) {
 
   /*
    * Function Chunk.broadcastFloor
@@ -166,14 +166,14 @@ Chunk.prototype.broadcastFloor = function(floor, packet) {
 
 }
 
-Chunk.prototype.removeCreature = function(creature) {
+Chunk.prototype.removeCreature = function (creature) {
 
   /*
    * Function Chunk.removeCreature
    * Removes the creature reference from the chunk
    */
 
-  switch(creature.constructor) {
+  switch (creature.constructor) {
     case Player: return this.players.delete(creature);
     case Monster: return this.monsters.delete(creature);
     case NPC: return this.npcs.delete(creature);
@@ -181,14 +181,14 @@ Chunk.prototype.removeCreature = function(creature) {
 
 }
 
-Chunk.prototype.addCreature = function(creature) {
+Chunk.prototype.addCreature = function (creature) {
 
   /*
    * Function Chunk.addCreature
    * Adds a creature to the correct entity set of the chunk
    */
 
-  switch(creature.constructor) {
+  switch (creature.constructor) {
     case Player: return this.players.add(creature);
     case Monster: return this.monsters.add(creature);
     case NPC: return this.npcs.add(creature);
@@ -196,7 +196,7 @@ Chunk.prototype.addCreature = function(creature) {
 
 }
 
-Chunk.prototype.__getTileIndex = function(worldPosition) {
+Chunk.prototype.__getTileIndex = function (worldPosition) {
 
   /*
    * Function Chunk.__getTileIndex
@@ -205,15 +205,15 @@ Chunk.prototype.__getTileIndex = function(worldPosition) {
 
   // Project the z-component. The coordinates are truncated to the chunk size
   let z = (worldPosition.z % this.DEPTH);
-  let x = (worldPosition.x - z) % this.WIDTH;
-  let y = (worldPosition.y - z) % this.HEIGHT;
+  let x = (worldPosition.x + z) % this.WIDTH;
+  let y = (worldPosition.y + z) % this.HEIGHT;
 
   // Return the tile from the chunk
   return x + (y * this.WIDTH);
-  
+
 }
 
-Chunk.prototype.internalBroadcast = function(packet) {
+Chunk.prototype.internalBroadcast = function (packet) {
 
   /*
    * Function Chunk.internalBroadcast
@@ -225,17 +225,17 @@ Chunk.prototype.internalBroadcast = function(packet) {
 
 }
 
-Chunk.prototype.__internalBroadcastFloor = function(floor, packet) {
+Chunk.prototype.__internalBroadcastFloor = function (floor, packet) {
 
   /*
    * Function Chunk.__internalBroadcastFloor
    * Broadcasts a packet to the players within the chunk itself (not neighbours)
    */
 
-  this.players.forEach(function(player) {
+  this.players.forEach(function (player) {
 
     // Check if the floor matches
-    if(player.position.z === floor) {
+    if (player.position.z === floor) {
       player.write(packet);
     }
 
