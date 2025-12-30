@@ -15,12 +15,12 @@ const specialLevers = {
     50001: {
         bridges: [
             {
-                x: 32100, y: 32205, z: 7,
+                x: 32100, y: 32205, z: 8,
                 bridgeItemId: 405,
                 borderItemId: 508
             },
             {
-                x: 32101, y: 32205, z: 7,
+                x: 32101, y: 32205, z: 8,
                 bridgeItemId: 405,
                 borderItemId: 509
             }

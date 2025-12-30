@@ -3,7 +3,7 @@
     "position": {
       "x": 32097,
       "y": 32219,
-      "z": 8
+      "z": 7
     },
     "enabled": true,
     "definition": "cipfried.json"
@@ -12,7 +12,7 @@
     "position": {
       "x": 32109,
       "y": 32204,
-      "z": 8
+      "z": 7
     },
     "enabled": true,
     "definition": "obi.json"
@@ -21,7 +21,7 @@
     "position": {
       "x": 32399,
       "y": 32222,
-      "z": 8
+      "z": 7
     },
     "enabled": true,
     "definition": "mordecai.json"
@@ -30,7 +30,7 @@
     "position": {
       "x": 32407,
       "y": 32219,
-      "z": 8
+      "z": 7
     },
     "enabled": true,
     "definition": "hanna.json"
@@ -39,7 +39,7 @@
     "position": {
       "x": 32377,
       "y": 32200,
-      "z": 8
+      "z": 7
     },
     "enabled": true,
     "definition": "ahmet.json"
@@ -48,7 +48,7 @@
     "position": {
       "x": 32104,
       "y": 32190,
-      "z": 9
+      "z": 6
     },
     "enabled": true,
     "definition": "oracle.json"
@@ -57,7 +57,7 @@
     "position": {
       "x": 32361,
       "y": 32198,
-      "z": 8
+      "z": 7
     },
     "enabled": true,
     "definition": "sam.json"

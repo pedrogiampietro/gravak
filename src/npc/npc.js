@@ -24,7 +24,7 @@ const NPC = function (data) {
 
   // Handler for NPC conversations
   this.conversationHandler = new ConversationHandler(this, data.conversation);
-  this.behaviourHandler = new NPCBehaviour(this, data.behaviourHandler);
+  this.behaviourHandler = new NPCBehaviour(this, data.behaviour);
   this.cutsceneHandler = new CutsceneHandler(this);
 
   // All creatures have action functions that can be added: these are executed whenever available
