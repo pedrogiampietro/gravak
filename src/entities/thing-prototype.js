@@ -1,9 +1,9 @@
 "use strict";
 
 const EventEmitter = require("../core/eventemitter");
-const { OTBBitFlag }  = require("../utils/bitflag");
+const { OTBBitFlag } = require("../utils/bitflag");
 
-const ThingPrototype = function(data) {
+const ThingPrototype = function (data) {
 
   /*
    *
@@ -26,7 +26,7 @@ const ThingPrototype = function(data) {
 ThingPrototype.prototype = Object.create(EventEmitter.prototype);
 ThingPrototype.prototype.constructor = ThingPrototype;
 
-ThingPrototype.prototype.hasContent = function() {
+ThingPrototype.prototype.hasContent = function () {
 
   /*
    * Function ThingPrototype.hasContent
@@ -37,7 +37,7 @@ ThingPrototype.prototype.hasContent = function() {
 
 }
 
-ThingPrototype.prototype.isWeapon = function() {
+ThingPrototype.prototype.isWeapon = function () {
 
   /*
    * Function ThingPrototype.isWeapon
@@ -48,7 +48,7 @@ ThingPrototype.prototype.isWeapon = function() {
 
 }
 
-ThingPrototype.prototype.isEquipment = function() {
+ThingPrototype.prototype.isEquipment = function () {
 
   /*
    * Function ThingPrototype.isEquipment
@@ -59,7 +59,7 @@ ThingPrototype.prototype.isEquipment = function() {
 
 }
 
-ThingPrototype.prototype.isDoor = function() {
+ThingPrototype.prototype.isDoor = function () {
 
   /*
    * Function ThingPrototype.isDoor
@@ -70,7 +70,7 @@ ThingPrototype.prototype.isDoor = function() {
 
 }
 
-ThingPrototype.prototype.isDestroyable = function() {
+ThingPrototype.prototype.isDestroyable = function () {
 
   /*
    * Function ThingPrototype.isDestroyable
@@ -81,7 +81,7 @@ ThingPrototype.prototype.isDestroyable = function() {
 
 }
 
-ThingPrototype.prototype.isRotateable = function() {
+ThingPrototype.prototype.isRotateable = function () {
 
   /*
    * Function ThingPrototype.isRotateable
@@ -92,7 +92,7 @@ ThingPrototype.prototype.isRotateable = function() {
 
 }
 
-ThingPrototype.prototype.isDistanceReadable = function() {
+ThingPrototype.prototype.isDistanceReadable = function () {
 
   /*
    * Function ThingPrototype.isDistanceReadable
@@ -103,13 +103,13 @@ ThingPrototype.prototype.isDistanceReadable = function() {
 
 }
 
-ThingPrototype.prototype.isMailbox = function() {
+ThingPrototype.prototype.isMailbox = function () {
 
   return this.__isType("mailbox");
 
 }
 
-ThingPrototype.prototype.isReadable = function() {
+ThingPrototype.prototype.isReadable = function () {
 
   /*
    * Function Thing.isReadable
@@ -120,7 +120,18 @@ ThingPrototype.prototype.isReadable = function() {
 
 }
 
-ThingPrototype.prototype.isStackable = function() {
+ThingPrototype.prototype.isWriteable = function () {
+
+  /*
+   * Function Thing.isWriteable
+   * Returns true if the thing can be written on (labels, letters, etc.)
+   */
+
+  return this.__has("writeable") && this.properties.writeable === true;
+
+}
+
+ThingPrototype.prototype.isStackable = function () {
 
   /*
    * Function ThingPrototype.isStackable
@@ -131,7 +142,7 @@ ThingPrototype.prototype.isStackable = function() {
 
 }
 
-ThingPrototype.prototype.isTeleporter = function() {
+ThingPrototype.prototype.isTeleporter = function () {
 
   /*
    * Function ThingPrototype.isTeleporter
@@ -142,7 +153,7 @@ ThingPrototype.prototype.isTeleporter = function() {
 
 }
 
-ThingPrototype.prototype.isDepot = function() {
+ThingPrototype.prototype.isDepot = function () {
 
   /*
    * Function ThingPrototype.isDepot
@@ -153,13 +164,13 @@ ThingPrototype.prototype.isDepot = function() {
 
 }
 
-ThingPrototype.prototype.isField = function() {
+ThingPrototype.prototype.isField = function () {
 
   return this.__has("field");
 
 }
 
-ThingPrototype.prototype.isMagicField = function() {
+ThingPrototype.prototype.isMagicField = function () {
 
   /*
    * Function ThingPrototype.isMagicField
@@ -170,7 +181,7 @@ ThingPrototype.prototype.isMagicField = function() {
 
 }
 
-ThingPrototype.prototype.isTrashholder = function() {
+ThingPrototype.prototype.isTrashholder = function () {
 
   /*
    * Function Thing.isTrashholder
@@ -181,7 +192,7 @@ ThingPrototype.prototype.isTrashholder = function() {
 
 }
 
-ThingPrototype.prototype.isPickupable = function() {
+ThingPrototype.prototype.isPickupable = function () {
 
   /*
    * Function Thing.isPickupable
@@ -192,7 +203,7 @@ ThingPrototype.prototype.isPickupable = function() {
 
 }
 
-ThingPrototype.prototype.isFluidContainer = function() {
+ThingPrototype.prototype.isFluidContainer = function () {
 
   /*
    * Function Thing.isFluidContainer
@@ -203,7 +214,7 @@ ThingPrototype.prototype.isFluidContainer = function() {
 
 }
 
-ThingPrototype.prototype.isSplash = function() {
+ThingPrototype.prototype.isSplash = function () {
 
   /*
    * Function Thing.isSplash
@@ -214,7 +225,7 @@ ThingPrototype.prototype.isSplash = function() {
 
 }
 
-ThingPrototype.prototype.isContainer = function() {
+ThingPrototype.prototype.isContainer = function () {
 
   /*
    * Function Thing.isContainer
@@ -225,7 +236,7 @@ ThingPrototype.prototype.isContainer = function() {
 
 }
 
-ThingPrototype.prototype.__isType = function(type) {
+ThingPrototype.prototype.__isType = function (type) {
 
   /*
    * Function Thing.__isType
@@ -233,12 +244,12 @@ ThingPrototype.prototype.__isType = function(type) {
    */
 
   // Somehow does not have properties
-  if(this.properties === null) {
+  if (this.properties === null) {
     return false;
   }
 
   // Does not have a type
-  if(!this.__has("type")) {
+  if (!this.__has("type")) {
     return false;
   }
 
@@ -246,7 +257,7 @@ ThingPrototype.prototype.__isType = function(type) {
 
 }
 
-ThingPrototype.prototype.__has = function(type) {
+ThingPrototype.prototype.__has = function (type) {
 
   /*
    * Function ThingPrototype.__has

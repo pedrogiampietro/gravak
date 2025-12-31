@@ -298,6 +298,11 @@ Keyboard.prototype.__handleReturnKey = function () {
    * Callback event fired when the return key is pressed
    */
 
+  // If we are typing in a textarea (like book-text-area), allow Enter for newlines
+  if (document.activeElement && document.activeElement.tagName === "TEXTAREA") {
+    return; // Let the default behavior happen (insert newline)
+  }
+
   // Enter when modal is opened: handle confirmation
   if (gameClient.interface.modalManager.isOpened()) {
     return gameClient.interface.modalManager.handleConfirm();

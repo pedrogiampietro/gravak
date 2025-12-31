@@ -415,4 +415,36 @@ PacketHandler.prototype.__addThingToTrashholder = function (fromItem, fromWhere,
 
 }
 
+PacketHandler.prototype.writeText = function (player, packet) {
+
+  /*
+   * Function PacketHandler.writeText
+   * Handles writing text to an item (labels, letters, books)
+   */
+
+  // Read the item ID and content from packet
+  let itemId = packet.readUInt32();
+  let content = packet.readString();
+
+  // Find the item in player's inventory
+  // The itemId is the server-side thing ID
+  let item = player.containerManager.findItemById(itemId);
+
+  if (item === null) {
+    return player.sendCancelMessage("You cannot edit this item.");
+  }
+
+  // Check if item is writeable
+  if (!item.isWriteable || !item.isWriteable()) {
+    return player.sendCancelMessage("This item cannot be edited.");
+  }
+
+  // Set the content
+  item.setContent(content);
+
+  // Send confirmation message
+  player.sendCancelMessage("Your text has been saved.");
+
+}
+
 module.exports = PacketHandler;

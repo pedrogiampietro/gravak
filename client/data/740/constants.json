@@ -37,7 +37,8 @@
       "OPEN_KEYRING": 19,
       "THING_USE_ON_CREATURE": 20,
       "FIGHT_MODE": 21,
-      "CHASE_MODE": 22
+      "CHASE_MODE": 22,
+      "WRITE_TEXT": 23
     },
     "SERVER": {
       "LATENCY": 0,

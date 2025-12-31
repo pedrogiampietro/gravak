@@ -246,4 +246,81 @@ ContainerManager.prototype.__openContainer = function (container) {
 
 }
 
+ContainerManager.prototype.findItemById = function (itemId) {
+
+  /*
+   * Function ContainerManager.findItemById
+   * Finds an item by its unique Thing ID in equipment, backpack, and opened containers
+   */
+
+  // Search in equipment slots using peekIndex
+  for (let i = 0; i < 10; i++) {
+    let item = this.equipment.peekIndex(i);
+    if (item !== null && item.id === itemId) {
+      return item;
+    }
+    // Check if item is a container with contents
+    if (item !== null && item.container) {
+      let found = this.__searchContainerForItem(item.container, itemId);
+      if (found !== null) {
+        return found;
+      }
+    }
+  }
+
+  // Search in opened containers
+  for (let [guid, container] of this.__openedContainers) {
+    if (!container || !container.container) {
+      continue;
+    }
+    let found = this.__searchContainerForItem(container.container, itemId);
+    if (found !== null) {
+      return found;
+    }
+  }
+
+  // Search in depot
+  if (!this.depot.isClosed()) {
+    let found = this.__searchContainerForItem(this.depot.container, itemId);
+    if (found !== null) {
+      return found;
+    }
+  }
+
+  return null;
+
+}
+
+ContainerManager.prototype.__searchContainerForItem = function (container, itemId) {
+
+  /*
+   * Function ContainerManager.__searchContainerForItem
+   * Recursively searches a container for an item by ID
+   */
+
+  if (!container || !container.__slots) {
+    return null;
+  }
+
+  for (let i = 0; i < container.__slots.length; i++) {
+    let item = container.__slots[i];
+    if (item === null) {
+      continue;
+    }
+    if (item.id === itemId) {
+      return item;
+    }
+    // Recursively search nested containers
+    if (item.container) {
+      let found = this.__searchContainerForItem(item.container, itemId);
+      if (found !== null) {
+        return found;
+      }
+    }
+  }
+
+  return null;
+
+}
+
 module.exports = ContainerManager;

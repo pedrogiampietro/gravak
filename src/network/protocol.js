@@ -763,13 +763,17 @@ const ReadTextPacket = function (item) {
   let content = this.encodeString(item.getContent());
   let name = this.encodeString(item.getName());
 
+  // Check if item is writeable (labels, letters, etc.)
+  let isWriteable = item.isWriteable ? item.isWriteable() : false;
+
   PacketWriter.call(
     this,
     CONST.PROTOCOL.SERVER.ITEM_TEXT,
-    content.getEncodedLength() + name.getEncodedLength() + 1
+    content.getEncodedLength() + name.getEncodedLength() + 5
   );
 
-  this.writeBoolean(false);
+  this.writeUInt32(item.id); // Item ID for reference when saving
+  this.writeBoolean(isWriteable);
   this.writeBuffer(content);
   this.writeBuffer(name);
 };

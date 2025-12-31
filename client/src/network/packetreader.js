@@ -142,6 +142,7 @@ PacketReader.prototype.readReadable = function () {
    */
 
   return new Object({
+    "itemId": this.readUInt32(),
     "writeable": this.readBoolean(),
     "content": this.readString(),
     "name": this.readString()

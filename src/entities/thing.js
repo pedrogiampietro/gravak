@@ -594,6 +594,17 @@ Thing.prototype.isReadable = function () {
 
 }
 
+Thing.prototype.isWriteable = function () {
+
+  /*
+   * Function Thing.isWriteable
+   * Returns true when the thing can be written on (labels, letters, etc.)
+   */
+
+  return this.getPrototype().isWriteable();
+
+}
+
 Thing.prototype.isDistanceWeapon = function () {
 
   /*

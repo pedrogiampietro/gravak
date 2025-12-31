@@ -1,6 +1,6 @@
 "use strict";
 
-const Inbox = function(player, inbox) {
+const Inbox = function (player, inbox) {
 
   /*
    * Class Inbox
@@ -11,13 +11,13 @@ const Inbox = function(player, inbox) {
   this.__items = new Array();
 
   // Serialize all the items
-  inbox.forEach(function(item) {
+  inbox.forEach(function (item) {
     this.__items.push(process.gameServer.database.parseThing(item));
   }, this);
 
 }
 
-Inbox.prototype.addThing = function(thing) {
+Inbox.prototype.addThing = function (thing) {
 
   /*
    * Class Inbox.addThing
@@ -29,7 +29,7 @@ Inbox.prototype.addThing = function(thing) {
 
 }
 
-Inbox.prototype.toJSON = function() {
+Inbox.prototype.toJSON = function () {
 
   /*
    * Class Inbox.toJSON
@@ -40,21 +40,21 @@ Inbox.prototype.toJSON = function() {
 
 }
 
-Inbox.prototype.pop = function(position) {
+Inbox.prototype.pop = function (position) {
 
   /*
    * Class Inbox.pop
    * Returns the top item of the mailbox (first in last out)
    */
 
-  if(this.isEmpty()) {
+  if (this.isEmpty()) {
     process.gameServer.world.sendMagicEffect(position, CONST.EFFECT.MAGIC.POFF);
     return this.__player.sendCancelMessage("There are no items in your inbox.");
   }
 
   let thing = this.__items[this.__items.length - 1];
 
-  if(!this.__player.containerManager.equipment.canPushItem(thing)) {
+  if (!this.__player.containerManager.equipment.canPushItem(thing)) {
     return this.__sendToDepot(thing, position);
   }
 
@@ -66,7 +66,7 @@ Inbox.prototype.pop = function(position) {
 
 }
 
-Inbox.prototype.__sendToDepot = function(thing, position) {
+Inbox.prototype.__sendToDepot = function (thing, position) {
 
   /*
    * Class Inbox.__sendToDepot
@@ -74,7 +74,7 @@ Inbox.prototype.__sendToDepot = function(thing, position) {
    */
 
   // There is no space in the depot
-  if(!this.__player.containerManager.depot.canAddFirstEmpty(thing)) {
+  if (!this.__player.containerManager.depot.canAddFirstEmpty(thing)) {
     process.gameServer.world.sendMagicEffect(position, CONST.EFFECT.MAGIC.POFF);
     return this.__player.sendCancelMessage("You cannot carry this item and there is no space in your depot.");
   }
@@ -87,7 +87,7 @@ Inbox.prototype.__sendToDepot = function(thing, position) {
 }
 
 
-Inbox.prototype.isEmpty = function() {
+Inbox.prototype.isEmpty = function () {
 
   /*
    * Class Inbox.isEmpty

@@ -233,6 +233,11 @@ NetworkManager.prototype.__readPacket = function (gameSocket, packet) {
       return gameSocket.player.useHandler.handleActionUseOnCreature(packet.readItemUseOnCreature(gameSocket.player));
     }
 
+    // Write text to item (labels, letters, books)
+    case CONST.PROTOCOL.CLIENT.WRITE_TEXT: {
+      return this.packetHandler.writeText(gameSocket.player, packet);
+    }
+
     // Unknown opcode sent: close the socket immediately
     default: {
       return gameSocket.close();

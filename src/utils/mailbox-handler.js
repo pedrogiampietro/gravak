@@ -1,4 +1,4 @@
-const MailboxHandler = function() {
+const MailboxHandler = function () {
 
   /*
    * Class MailboxHandler
@@ -13,7 +13,7 @@ MailboxHandler.prototype.UNSTAMPED_LETTER = 2597;
 MailboxHandler.prototype.STAMPED_LETTER = 2598;
 MailboxHandler.prototype.LABEL = 2599;
 
-MailboxHandler.prototype.canMailItem = function(thing) {
+MailboxHandler.prototype.canMailItem = function (thing) {
 
   /*
    * Function MailboxHandler.canMailItem
@@ -24,21 +24,21 @@ MailboxHandler.prototype.canMailItem = function(thing) {
 
 }
 
-MailboxHandler.prototype.sendThing = function(fromWhere, toWhere, player, thing) {
+MailboxHandler.prototype.sendThing = function (fromWhere, toWhere, player, thing) {
 
   /*
    * Function MailboxHandler.sendThing
    * Sub function for sending a parcel when adding to the mailbox
    */
 
-  switch(thing.id) {
+  switch (thing.id) {
     case this.UNSTAMPED_LETTER: return this.__sendLetter(fromWhere, toWhere, player, thing);
     case this.UNSTAMPED_PARCEL: return this.__sendParcel(fromWhere, toWhere, player, thing);
   }
 
 }
 
-MailboxHandler.prototype.writeParcel = function(name, thing, callback) {
+MailboxHandler.prototype.writeParcel = function (name, thing, callback) {
 
   /*
    * Function MailboxHandler.writeLetter
@@ -50,11 +50,11 @@ MailboxHandler.prototype.writeParcel = function(name, thing, callback) {
   let newParcel = process.gameServer.database.createThing(this.STAMPED_PARCEL);
   thing.copyProperties(newParcel);
 
-  this.__mailThing(name, newParcel, callback); 
+  this.__mailThing(name, newParcel, callback);
 
 }
 
-MailboxHandler.prototype.writeLetter = function(name, content, callback) {
+MailboxHandler.prototype.writeLetter = function (name, content, callback) {
 
   /*
    * Function MailboxHandler.writeLetter
@@ -66,25 +66,25 @@ MailboxHandler.prototype.writeLetter = function(name, content, callback) {
   let newLetter = process.gameServer.database.createThing(this.STAMPED_LETTER);
   newLetter.setContent(content);
 
-  this.__mailThing(name, newLetter, callback); 
+  this.__mailThing(name, newLetter, callback);
 
 }
 
-MailboxHandler.prototype.__getLabel = function(parcel) {
+MailboxHandler.prototype.__getLabel = function (parcel) {
 
   /*
    * Function MailboxHandler.__getLabel
    * Attempts to find a label inside the parcel
    */
 
-  for(let thing of parcel.container.__slots) {
+  for (let thing of parcel.container.__slots) {
 
-    if(thing === null) {
+    if (thing === null) {
       continue;
     }
 
     // Found a label!
-    if(thing.id === this.LABEL) {
+    if (thing.id === this.LABEL) {
       return thing;
     }
 
@@ -94,7 +94,7 @@ MailboxHandler.prototype.__getLabel = function(parcel) {
 
 }
 
-MailboxHandler.prototype.__mailThing = function(name, thing, callback) {
+MailboxHandler.prototype.__mailThing = function (name, thing, callback) {
 
   /*
    * Function MailboxHandler.__addItemsOffline
@@ -102,10 +102,10 @@ MailboxHandler.prototype.__mailThing = function(name, thing, callback) {
    */
 
   // Check whether the player is online
-  let player = process.gameServer.world.getPlayerByName(name);
+  let player = process.gameServer.world.creatureHandler.getPlayerByName(name);
 
   // If the player is not online we have to add the items to the gamefile
-  if(player === null) {
+  if (player === null) {
     return this.__addItemsOffline(name, thing, callback);
   }
 
@@ -116,30 +116,19 @@ MailboxHandler.prototype.__mailThing = function(name, thing, callback) {
 
 }
 
-MailboxHandler.prototype.__addItemsOffline = function(owner, thing, callback) {
+MailboxHandler.prototype.__addItemsOffline = function (owner, thing, callback) {
 
   /*
    * Function MailboxHandler.__addItemsOffline
    * Writes a letter to a player that is offline by doing an atomic update
    */
 
-  // Atomic update of the player gamefile
-  process.gameServer.server.websocketServer.accountManager.atomicUpdate(owner, function(error, json) {
-
-    if(error) {
-      return callback(true);
-    }
-
-    // Update the players inbox
-    json.inbox.push(thing);
-
-    callback(false);
-
-  });
+  // Use the account database to update the character's inbox
+  process.gameServer.HTTPServer.websocketServer.accountDatabase.updateCharacterInbox(owner, thing, callback);
 
 }
 
-MailboxHandler.prototype.__sendParcel = function(fromWhere, toWhere, player, thing) {
+MailboxHandler.prototype.__sendParcel = function (fromWhere, toWhere, player, thing) {
 
   /*
    * Function MailboxHandler.__sendParcel
@@ -149,13 +138,22 @@ MailboxHandler.prototype.__sendParcel = function(fromWhere, toWhere, player, thi
   // Attempt to get the label from the parcel
   let label = this.__getLabel(thing);
 
-  if(label === null) {
+  if (label === null) {
     return player.sendCancelMessage("You must add a label to your parcel.");
   }
 
-  // Attempt to get the name of the recipient
-  let recipient = label.getContent();
-  if(recipient === "") {
+  // Attempt to get the name of the recipient from the label content
+  // Label format: Line 1 = recipient name, Line 2 = city (optional)
+  let labelContent = label.getContent();
+  if (labelContent === "") {
+    return player.sendCancelMessage("You must add the recipient to your label.");
+  }
+
+  // Extract only the first line (recipient name)
+  let lines = labelContent.split("\n");
+  let recipient = lines[0].trim();
+
+  if (recipient === "") {
     return player.sendCancelMessage("You must add the recipient to your label.");
   }
 
@@ -163,10 +161,10 @@ MailboxHandler.prototype.__sendParcel = function(fromWhere, toWhere, player, thi
   thing.freeze();
 
   // Writing a parcel is an async task (may be I/O)
-  this.writeParcel(recipient, thing, function(error) {
+  this.writeParcel(recipient, thing, function (error) {
 
     // There was an error writing the letter: do nothing
-    if(error) {
+    if (error) {
       thing.unfreeze();
       process.gameServer.world.sendMagicEffect(toWhere.position, CONST.EFFECT.MAGIC.POFF);
       return player.sendCancelMessage("A recipient with this name does not exist.");
@@ -179,7 +177,7 @@ MailboxHandler.prototype.__sendParcel = function(fromWhere, toWhere, player, thi
 
 }
 
-MailboxHandler.prototype.__sendLetter = function(fromWhere, toWhere, player, thing) {
+MailboxHandler.prototype.__sendLetter = function (fromWhere, toWhere, player, thing) {
 
   /*
    * Function MailboxHandler.__sendLetter
@@ -190,7 +188,7 @@ MailboxHandler.prototype.__sendLetter = function(fromWhere, toWhere, player, thi
   let recipient = lines.slice(0, 2).join("");
   let isolatedContent = lines.slice(2).join("\n");
 
-  if(recipient === "") {
+  if (recipient === "") {
     return player.sendCancelMessage("You must add the recipient to your letter.");
   }
 
@@ -198,10 +196,10 @@ MailboxHandler.prototype.__sendLetter = function(fromWhere, toWhere, player, thi
   thing.freeze();
 
   // Sending a letter is an I/O task
-  this.writeLetter(recipient, isolatedContent, function(error) {
+  this.writeLetter(recipient, isolatedContent, function (error) {
 
     // There was an error writing the letter: do nothing
-    if(error) {
+    if (error) {
       thing.unfreeze();
       process.gameServer.world.sendMagicEffect(toWhere.position, CONST.EFFECT.MAGIC.POFF);
       return player.sendCancelMessage("A recipient with this name does not exist.");

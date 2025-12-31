@@ -396,3 +396,22 @@ const ChaseModePacket = function (mode) {
 
 ChaseModePacket.prototype = Object.create(PacketWriter.prototype);
 ChaseModePacket.prototype.constructor = ChaseModePacket;
+
+const WriteTextPacket = function (itemId, content) {
+
+  /*
+   * Class WriteTextPacket
+   * Wrapper for sending written text content to the server (labels, letters, etc.)
+   */
+
+  let encodedContent = this.encodeString(content);
+
+  PacketWriter.call(this, CONST.PROTOCOL.CLIENT.WRITE_TEXT, 4 + encodedContent.stringLength);
+
+  this.writeUInt32(itemId);
+  this.writeBuffer(encodedContent.stringEncoded);
+
+}
+
+WriteTextPacket.prototype = Object.create(PacketWriter.prototype);
+WriteTextPacket.prototype.constructor = WriteTextPacket;

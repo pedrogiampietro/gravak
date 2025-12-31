@@ -250,4 +250,62 @@ AccountDatabase.prototype.getAccountCredentials = async function (account, callb
   }
 };
 
+AccountDatabase.prototype.updateCharacterInbox = async function (ownerName, item, callback) {
+  /*
+   * Function AccountDatabase.updateCharacterInbox
+   * Updates the inbox of an offline player by adding an item
+   */
+
+  try {
+    // Clean and normalize the owner name (trim whitespace, capitalize first letter)
+    let cleanName = ownerName.trim();
+    if (cleanName.length === 0) {
+      return callback(true);
+    }
+    cleanName = cleanName.charAt(0).toUpperCase() + cleanName.slice(1).toLowerCase();
+
+    // Find the account by character name (case-insensitive search)
+    const result = await this.db
+      .select({ character: accounts.character, account: accounts.account })
+      .from(accounts)
+      .where(eq(accounts.name, cleanName))
+      .limit(1);
+
+    if (result.length === 0) {
+      return callback(true); // Player not found
+    }
+
+    // Parse character data
+    let character = result[0].character;
+    if (typeof character === "string") {
+      character = JSON.parse(character);
+    }
+    if (typeof character === "string") {
+      character = JSON.parse(character);
+    }
+
+    // Ensure inbox exists
+    if (!character.inbox) {
+      character.inbox = [];
+    }
+
+    // Add item to inbox
+    character.inbox.push(item);
+
+    // Save updated character
+    await this.db
+      .update(accounts)
+      .set({
+        character: JSON.stringify(character),
+        updatedAt: new Date(),
+      })
+      .where(eq(accounts.account, result[0].account));
+
+    callback(false); // Success
+  } catch (error) {
+    console.error("Error updating character inbox:", error);
+    callback(true);
+  }
+};
+
 module.exports = AccountDatabase;
