@@ -21,9 +21,15 @@
   padding: 4px;
   text-align: center;
   word-break: break-word;
-  max-width: 256px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  font-weight: bold;
+  text-shadow:
+    -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,
+    -2px 0 0 #000, 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000;
+  /* Thicker outline */
+  font-family: "Verdana", sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  max-width: 500px;
+  white-space: nowrap;
 }
 
 .text-window {

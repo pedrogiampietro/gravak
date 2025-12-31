@@ -50,6 +50,16 @@
   <input type="file" id="asset-selector" style="display: none" multiple>
   <input id="load-save" type="file" style="display: none">
 
+
+  <!-- Quest Tracker -->
+  <div id="quest-tracker">
+    <div class="tracker-header">Quest Tracker</div>
+    <div class="tracker-quest-name"></div>
+    <div class="tracker-mission-list">
+      <div class="tracker-mission">No quest tracked.</div>
+    </div>
+  </div>
+
   <!-- Battle Window -->
   <div id="battle-window-target" class="battle-window-target-wrapper">
     <div class="battle-window-target-stats">
@@ -138,7 +148,7 @@
   <div style="display: none;">
     <div id="slot-prototype" class="slot">
       <canvas width="32" height="32"></canvas>
-      <span class="count">
+      <span class="count"></span>
     </div>
   </div>
 
@@ -198,6 +208,8 @@
     <div class="body"></div>
     <div class="footer"></div>
   </div>
+
+
 
   <!-- Skill Window -->
   <div id="skill-window" class="window">
@@ -578,61 +590,66 @@
                   <label class="checkbox-label" for="enable-lighting">
                     <input type="checkbox" id="enable-lighting" autocomplete="off"> Enable Lighting
                   </label>
-                </div>
-                <div class="checkboxes">
                   <label class="checkbox-label" for="enable-weather">
-                    <input type="checkbox" id="enable-weather"> Enable Weather
+                    <input type="checkbox" id="enable-weather" autocomplete="off"> Enable Weather
                   </label>
-                </div>
-                <div class="checkboxes">
                   <label class="checkbox-label" for="enable-sound">
-                    <input type="checkbox" id="enable-sound"> Enable Sound
+                    <input type="checkbox" id="enable-sound" autocomplete="off"> Enable Sound
+                  </label>
+                  <label class="checkbox-label" for="show-performance">
+                    <input type="checkbox" id="show-performance" autocomplete="off"> Show Performance
+                  </label>
+                  <label class="checkbox-label" for="anti-aliasing">
+                    <input type="checkbox" id="anti-aliasing" autocomplete="off"> Anti-Aliasing
                   </label>
                 </div>
 
-                <br>
-                Sound Volume <span id="volume-slider-value" style="float: right;"></span>
-                <br>
-                <div style="display: flex">
-                  <input style="flex: 1 1 auto;" id="volume-slider" type="range" min="0" max="100" value="50"
-                    class="slider" id="myRange">
-                </div>
-                <br>
-                <button onclick="gameClient.interface.requestFullScreen()">Fullscreen</button>
                 <hr>
-                Fixed Resolution
-                <div class="checkboxes">
-                  <input type="checkbox" id="enable-resolution">
-                  <select id="resolution" style="text-align: center;"></select>
+
+                <div class="settings-row">
+                  <label>Volume:</label>
+                  <input type="range" id="volume-slider" min="0" max="100" value="100">
+                  <span id="volume-slider-value" style="width: 35px; display: inline-block;">100%</span>
                 </div>
-                <div class="checkboxes">
-                  <label class="checkbox-label" for="anti-aliasing">
-                    <input type="checkbox" id="anti-aliasing"> Anti-Aliasing
-                  </label>
-                </div>
-                <div class="checkboxes">
-                  <label class="checkbox-label" for="show-performance">
-                    <input type="checkbox" id="show-performance"> Show Performance Stats
-                  </label>
-                </div>
+
                 <hr>
-                FPS Mode
-                <div class="checkboxes">
-                  <select id="fps-mode" style="text-align: center; width: 100%;">
-                    <option value="60">60 FPS (V-Sync)</option>
-                    <option value="120">120 FPS</option>
-                    <option value="0">Unlimited</option>
+
+                <div class="settings-row">
+                  <label>FPS Limit:</label>
+                  <select id="fps-mode">
+                    <option value="0">VSync</option>
+                    <option value="1">60 FPS</option>
+                    <option value="2">Max</option>
                   </select>
                 </div>
-                <hr>
-                Mouse Control Mode
-                <div class="checkboxes">
-                  <select id="mouse-control-mode" style="text-align: center; width: 100%;">
-                    <option value="regular">Regular Control</option>
-                    <option value="classic">Classic Control</option>
+
+                <div class="settings-row">
+                  <label>Mouse Control:</label>
+                  <select id="mouse-control-mode">
+                    <option value="regular">Regular</option>
+                    <option value="classic">Classic (Right-click use)</option>
                   </select>
+                </div>
+
+                <div class="settings-row">
+                  <label>Resolution:</label>
+                  <select id="resolution">
+                  </select>
+                </div>
+
+                <div class="checkboxes">
+                  <label class="checkbox-label" for="enable-resolution"><input type="checkbox" id="enable-resolution">
+                    Custom Resolution</label>
                 </div>
               </div>
+            </div>
+
+            <!-- Quest Log Modal -->
+            <div id="quest-log-modal" class="modal"
+              style="width: auto; height: auto; background: transparent; padding: 0; box-shadow: none; border: none;">
+              <!-- The content is injected by window-questlog.js (now modal-questlog.js) -->
+              <div class="modal-header" style="display: none;">Quest Log</div>
+              <div class="modal-body" style="padding: 0;"></div>
             </div>
 
             <!-- Readable Modal -->
@@ -643,10 +660,13 @@
                 <div style="position: relative;">
                   <textarea id="book-text-area"></textarea>
                   <!-- Transparent pane above text-area: disabled elements do not register mouseup events.. -->
-                  <div style="background-color: none; width: 100%; height: 260px; position: absolute; top: 0px;"></div>
+                  <div
+                    style="background-color: none; width: 100%; height: 260px; position: absolute; top: 0px; pointer-events: none;">
+                  </div>
                 </div>
                 <hr>
                 <div class="modal-footer">
+                  <button id="book-save-button" action="confirm" value="Save" style="display: none;">Save</button>
                   <button action="cancel" value="Cancel">Close</button>
                 </div>
               </div>
@@ -1154,17 +1174,17 @@
 
                 <div id="shoulder-slot" class="slot" slotIndex="7">
                   <canvas width="32" height="32"></canvas>
-                  <span class="count">
+                  <span class="count"></span>
                 </div>
 
                 <div id="left-slot" class="slot" slotIndex="5">
                   <canvas width="32" height="32"></canvas>
-                  <span class="count">
+                  <span class="count"></span>
                 </div>
 
                 <div id="ring-slot" class="slot" slotIndex="8">
                   <canvas width="32" height="32"></canvas>
-                  <span class="count">
+                  <span class="count"></span>
                 </div>
 
                 <div id="player-capacity" class="equipment-padding">Cap <br> 100</div>
@@ -1174,54 +1194,85 @@
               <div class="equipment-column">
                 <div id="head-slot" class="slot" slotIndex="0">
                   <canvas width="32" height="32"></canvas>
-                  <span class="count">
+                  <span class="count"></span>
                 </div>
 
                 <div id="armor-slot" class="slot" slotIndex="1">
                   <canvas width="32" height="32"></canvas>
-                  <span class="count">
+                  <span class="count"></span>
                 </div>
 
                 <div id="legs-slot" class="slot" slotIndex="2">
                   <canvas width="32" height="32"></canvas>
-                  <span class="count">
+                  <span class="count"></span>
                 </div>
 
                 <div id="boots-slot" class="slot" slotIndex="3">
                   <canvas width="32" height="32"></canvas>
-                  <span class="count">
+                  <span class="count"></span>
                 </div>
               </div>
 
               <div class="equipment-column">
                 <div id="backpack-slot" class="slot" slotIndex="6">
                   <canvas width="32" height="32"></canvas>
-                  <span class="count">
+                  <span class="count"></span>
                 </div>
 
                 <div id="right-slot" class="slot" slotIndex="4">
                   <canvas width="32" height="32"></canvas>
-                  <span class="count">
+                  <span class="count"></span>
                 </div>
 
                 <div id="quiver-slot" class="slot" slotIndex="9">
                   <canvas width="32" height="32"></canvas>
-                  <span class="count">
+                  <span class="count"></span>
                 </div>
 
                 <div class="equipment-padding"><button style="height: 100%;" id="keyring">Keys</button></div>
 
               </div>
 
+              <!-- Fight Mode Selector (Vertical Column) -->
+              <div class="equipment-column fight-mode-column">
+                <div id="fight-mode-selector" class="fight-mode-selector">
+                  <button data-mode="offensive" title="Full Attack" class="fight-mode-btn">
+                    ⚔
+                  </button>
+                  <button data-mode="balanced" title="Balanced" class="fight-mode-btn active">
+                    ⚖
+                  </button>
+                  <button data-mode="defensive" title="Full Defense" class="fight-mode-btn">
+                    🛡
+                  </button>
+                  <span class="mode-separator"></span>
+                  <button data-chase="stand" title="Stand (Don't Follow)" class="chase-mode-btn active">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                      <path
+                        d="M12 2C13.1 2 14 2.9 14 4S13.1 6 12 6 10 5.1 10 4 10.9 2 12 2M10.5 7H13.5C14.6 7 15.5 7.9 15.5 9V14.5H13.5V22H10.5V14.5H8.5V9C8.5 7.9 9.4 7 10.5 7Z" />
+                    </svg>
+                  </button>
+                  <button data-chase="chase" title="Chase (Follow Target)" class="chase-mode-btn">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                      <path
+                        d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
             </div>
 
             <div id="status-bar" class="status-bar"></div>
+
+
 
           </div>
 
           <div class="equipment-buttons">
             <button id="openSkills">Stats</button>
             <button id="openBattle">Battle</button>
+            <button id="openQuests">Quests</button>
             <button id="openOutfit">Outfit</button>
             <button id="openFriends">Friends</button>
             <button id="openSettings">Settings</button>

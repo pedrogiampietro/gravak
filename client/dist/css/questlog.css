@@ -1,0 +1,284 @@
+/* Modern Sleek Dark Theme for Quest Log */
+
+/* Modal Backdrop / Wrapper tweaks (if needed globally) */
+#quest-log-modal .body {
+    padding: 0;
+    display: block;
+    overflow: hidden;
+    background: #1e1e1e;
+    /* Deep dark background */
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    /* Soft deep shadow */
+}
+
+/* Main Window Layout */
+.quest-log-window {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 400px;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    /* Modern sans-serif */
+    font-size: 12px;
+    color: #e0e0e0;
+    padding: 16px;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #1e1e1e 0%, #252525 100%);
+}
+
+/* Section Headers */
+.quest-log-window .section-header {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    margin-bottom: 8px;
+    font-weight: 600;
+    padding-left: 4px;
+}
+
+/* Panels (Lists) */
+.quest-list-container,
+.quest-details-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.quest-list-container {
+    margin-right: 16px;
+    max-width: 250px;
+}
+
+/* List Backgrounds */
+.quest-log-window .quest-list,
+.quest-log-window .quest-details {
+    flex: 1;
+    overflow-y: auto;
+    background-color: #2a2a2a;
+    border-radius: 6px;
+    padding: 6px;
+    border: 1px solid #333;
+    /* Soft inner shadow for depth */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Quest Entries */
+.quest-log-window .quest-entry {
+    padding: 8px 10px;
+    cursor: pointer;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    margin-bottom: 2px;
+}
+
+.quest-log-window .quest-entry:hover {
+    background-color: #383838;
+    color: #fff;
+    transform: translateX(2px);
+}
+
+.quest-log-window .quest-entry.selected {
+    background-color: #3e5f8a;
+    /* Muted blue for selection */
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.quest-log-window .quest-entry .quest-name {
+    font-weight: 500;
+}
+
+/* Status Indicators */
+.quest-log-window .quest-entry .quest-check {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #444;
+    /* Default Incomplete */
+    transition: background-color 0.3s;
+}
+
+.quest-log-window .quest-entry.completed .quest-check {
+    background-color: #4caf50;
+    /* Green for completed */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+}
+
+/* We hide the checkmark text and use the circle */
+.quest-log-window .quest-entry.completed .quest-check::before {
+    content: "";
+}
+
+/* Mission Entries */
+.quest-log-window .mission-entry {
+    margin-bottom: 12px;
+    background: #333;
+    padding: 10px;
+    border-radius: 4px;
+    border-left: 3px solid #555;
+}
+
+.quest-log-window .mission-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-size: 13px;
+}
+
+.quest-log-window .mission-name .mission-check {
+    color: #4caf50;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.quest-log-window .mission-description {
+    color: #bbb;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* Footer Area */
+.footer-panel {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #333;
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+.footer-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    min-width: 140px;
+}
+
+/* Inputs & Selects */
+.tibia-input,
+.tibia-select {
+    background: #2a2a2a;
+    border: 1px solid #444;
+    color: #ddd;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 11px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tibia-input:focus,
+.tibia-select:focus {
+    border-color: #5d87bf;
+}
+
+/* Custom Checkbox */
+.tibia-checkbox-group {
+    display: flex;
+    gap: 12px;
+}
+
+.tibia-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #aaa;
+    font-size: 11px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.tibia-checkbox:hover {
+    color: #ccc;
+}
+
+/* Could add custom SVG checkbox here, but retaining native for simplicity with dark color-scheme */
+.tibia-checkbox input {
+    accent-color: #3e5f8a;
+}
+
+
+/* Buttons */
+.tibia-btn-group {
+    display: flex;
+    gap: 8px;
+}
+
+.tibia-button {
+    background: #3e5f8a;
+    color: white;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tibia-button:hover {
+    background: #4a6fa0;
+    transform: translateY(-1px);
+}
+
+.tibia-button:active {
+    background: #355075;
+    transform: translateY(0);
+}
+
+.tibia-button[action="close"] {
+    background: #444;
+}
+
+.tibia-button[action="close"]:hover {
+    background: #555;
+}
+
+/* Scrollbars */
+.quest-log-window ::-webkit-scrollbar {
+    width: 6px;
+}
+
+.quest-log-window ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.quest-log-window ::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 3px;
+}
+
+.quest-log-window ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Empty State */
+.empty-state {
+    color: #666;
+    text-align: center;
+    margin-top: 30%;
+    font-style: italic;
+    opacity: 0.7;
+}
