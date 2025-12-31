@@ -20548,7 +20548,8 @@
             "runeSpellName": "adito grav",
             "weight": 120,
             "charges": 3,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2262": {
@@ -20561,7 +20562,8 @@
             "runeSpellName": "adevo mas vis",
             "weight": 120,
             "charges": 2,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2263": {
@@ -20573,7 +20575,8 @@
             "name": "sudden death rune",
             "weight": 120,
             "charges": 1,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2264": {
@@ -20584,7 +20587,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2265": {
@@ -20597,7 +20601,8 @@
             "runeSpellName": "adura gran",
             "weight": 120,
             "charges": 1,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2266": {
@@ -20610,7 +20615,8 @@
             "runeSpellName": "adana pox",
             "weight": 120,
             "charges": 1,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2267": {
@@ -20621,7 +20627,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2268": {
@@ -20634,7 +20641,8 @@
             "runeSpellName": "adori vita vis",
             "weight": 120,
             "charges": 1,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2269": {
@@ -20645,7 +20653,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2270": {
@@ -20656,7 +20665,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2271": {
@@ -20667,7 +20677,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2272": {
@@ -20678,7 +20689,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2273": {
@@ -20691,7 +20703,8 @@
             "runeSpellName": "adura vita",
             "weight": 120,
             "charges": 1,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2274": {
@@ -20703,7 +20716,8 @@
             "name": "spell rune",
             "weight": 120,
             "charges": 1,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2275": {
@@ -20714,7 +20728,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2276": {
@@ -20725,7 +20740,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2277": {
@@ -20738,7 +20754,8 @@
             "runeSpellName": "adevo grav vis",
             "weight": 120,
             "charges": 3,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2278": {
@@ -20751,7 +20768,8 @@
             "runeSpellName": "adana ani",
             "weight": 120,
             "charges": 1,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2279": {
@@ -20764,7 +20782,8 @@
             "runeSpellName": "adevo mas grav vis",
             "weight": 120,
             "charges": 4,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2280": {
@@ -20775,7 +20794,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2281": {
@@ -20786,7 +20806,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2282": {
@@ -20797,7 +20818,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2283": {
@@ -20808,7 +20830,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2284": {
@@ -20819,7 +20842,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2285": {
@@ -20832,7 +20856,8 @@
             "runeSpellName": "adevo grav pox",
             "weight": 120,
             "charges": 3,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2286": {
@@ -20845,7 +20870,8 @@
             "runeSpellName": "adevo mas pox",
             "weight": 120,
             "charges": 2,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2287": {
@@ -20858,7 +20884,8 @@
             "runeSpellName": "adori",
             "weight": 120,
             "charges": 5,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2288": {
@@ -20869,7 +20896,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2289": {
@@ -20882,7 +20910,8 @@
             "runeSpellName": "adevo mas grav pox",
             "weight": 120,
             "charges": 4,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2290": {
@@ -20895,7 +20924,8 @@
             "runeSpellName": "adeta sio",
             "weight": 120,
             "charges": 1,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2291": {
@@ -20908,7 +20938,8 @@
             "runeSpellName": "adevo ina",
             "weight": 120,
             "charges": 1,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2292": {
@@ -20921,7 +20952,8 @@
             "runeSpellName": "adevo res pox",
             "weight": 120,
             "charges": 1,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2293": {
@@ -20934,7 +20966,8 @@
             "runeSpellName": "adevo grav tera",
             "weight": 120,
             "charges": 3,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2294": {
@@ -20945,7 +20978,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2295": {
@@ -20956,7 +20990,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2296": {
@@ -20967,7 +21002,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2297": {
@@ -20978,7 +21014,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2298": {
@@ -20989,7 +21026,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2299": {
@@ -21000,7 +21038,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2300": {
@@ -21011,7 +21050,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2301": {
@@ -21024,7 +21064,8 @@
             "runeSpellName": "adevo grav flam",
             "weight": 120,
             "charges": 3,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2302": {
@@ -21037,7 +21078,8 @@
             "runeSpellName": "adori flam",
             "weight": 120,
             "charges": 2,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2303": {
@@ -21050,7 +21092,8 @@
             "runeSpellName": "adevo mas grav flam",
             "weight": 120,
             "charges": 4,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2304": {
@@ -21063,7 +21106,8 @@
             "runeSpellName": "adori gran flam",
             "weight": 120,
             "charges": 2,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2305": {
@@ -21076,7 +21120,8 @@
             "runeSpellName": "adevo mas flam",
             "weight": 120,
             "charges": 2,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2306": {
@@ -21087,7 +21132,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2307": {
@@ -21098,7 +21144,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2308": {
@@ -21111,7 +21158,8 @@
             "runeSpellName": "adevo res flam",
             "weight": 120,
             "charges": 2,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2309": {
@@ -21122,7 +21170,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2310": {
@@ -21135,7 +21184,8 @@
             "runeSpellName": "adito tera",
             "weight": 120,
             "charges": 3,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2311": {
@@ -21148,7 +21198,8 @@
             "runeSpellName": "adori gran",
             "weight": 120,
             "charges": 5,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2312": {
@@ -21159,7 +21210,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2313": {
@@ -21172,7 +21224,8 @@
             "runeSpellName": "adevo mas hur",
             "weight": 120,
             "charges": 3,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2314": {
@@ -21183,7 +21236,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2315": {
@@ -21194,7 +21248,8 @@
             "article": "a",
             "name": "spell rune",
             "weight": 120,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2316": {
@@ -21207,7 +21262,8 @@
             "runeSpellName": "adana mort",
             "weight": 120,
             "charges": 1,
-            "type": "rune"
+            "type": "rune",
+            "stackable": true
         }
     },
     "2317": {

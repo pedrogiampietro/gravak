@@ -755,11 +755,11 @@ Thing.prototype.isBlockSolid = function () {
 Thing.prototype.isStackable = function () {
 
   /*
-   * Function Thing.isMoveable
-   * Returns TRUE when the item is moveable
+   * Function Thing.isStackable
+   * Returns TRUE when the item is stackable
    */
 
-  return this.hasFlag(OTBBitFlag.prototype.flags.FLAG_STACKABLE);
+  return this.hasFlag(OTBBitFlag.prototype.flags.FLAG_STACKABLE) || !!this.getAttribute("stackable");
 
 }
 

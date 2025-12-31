@@ -27,7 +27,7 @@ const Item = function (id) {
 Item.prototype = Object.create(Thing.prototype);
 Item.prototype.constructor = Item;
 
-Item.prototype.MAXIMUM_STACK_COUNT = 100;
+Item.prototype.MAXIMUM_STACK_COUNT = 255;
 
 Item.prototype.setWeight = function (weight) {
 

@@ -7,13 +7,21 @@ module.exports = function destroyField(source, target) {
    * Code that handles the sudden death rune
    */
 
-  let item = target.peekItem(0xFF);
+  let item;
 
-  if(item === null) {
+  // Target can be a tile (has peekItem) or the item itself
+  if (typeof target.peekItem === "function") {
+    item = target.peekItem(0xFF);
+  } else {
+    // Assume target is the item itself
+    item = target;
+  }
+
+  if (item === null) {
     return process.gameServer.world.sendMagicEffect(source.position, CONST.EFFECT.MAGIC.POFF);
   }
 
-  if(!item.getPrototype().isMagicField()) {
+  if (!item.getPrototype().isMagicField()) {
     return process.gameServer.world.sendMagicEffect(source.position, CONST.EFFECT.MAGIC.POFF);
   }
 

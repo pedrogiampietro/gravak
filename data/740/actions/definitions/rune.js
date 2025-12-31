@@ -9,7 +9,7 @@ module.exports = function useRuneWith(player, item, tile) {
   let to = tile.position;
 
   // Check possible
-  if(!from.inLineOfSight(to)) {
+  if (!from.inLineOfSight(to)) {
     return player.sendCancelMessage("Target is not in line of sight.");
   }
 
@@ -17,18 +17,24 @@ module.exports = function useRuneWith(player, item, tile) {
   let rune = process.gameServer.database.getRune(item.id);
 
   // The rune does not exist
-  if(rune === null) {
+  if (rune === null) {
     return player.sendCancelMessage("The rune does nothing.");
   }
 
   // Call the configured rune function: return of true means succesful cast and we reduce a charge
-  if(rune.call(null, player, tile)) {
-    item.charges--;
-  }
+  if (rune.call(null, player, tile)) {
 
-  // No more charges: delete the item
-  if(item.charges === 0) {
-    item.remove(1);
+    if (item.isStackable()) {
+      item.removeCount(1);
+    } else {
+      item.charges--;
+
+      // No more charges: delete the item
+      if (item.charges === 0) {
+        item.remove(1);
+      }
+    }
+
   }
 
 }

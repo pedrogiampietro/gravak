@@ -266,6 +266,13 @@ Mouse.prototype.__handleContextMenu = function (event) {
   // Track right button state
   this.__rightButtonDown = true;
 
+  // Use-With cancellation: Right-click cancels the action
+  if (this.__multiUseObject !== null) {
+    this.__multiUseObject = null;
+    this.setCursor("auto");
+    return;
+  }
+
   // Check if left button is already down - both buttons = Look
   if (this.__leftButtonDown) {
     // Close any open menu first
@@ -423,6 +430,13 @@ Mouse.prototype.__handleItemUseWith = function (fromObject, toObject) {
    * Handles a click on a container
    */
 
+  // Toggle behavior: If targeting the same object (clicking the source again), cancel the action
+  if (fromObject.which === toObject.which && fromObject.index === toObject.index) {
+    this.__multiUseObject = null;
+    this.setCursor("auto");
+    return;
+  }
+
   gameClient.send(new ItemUseWithPacket(fromObject, toObject));
 
   // Reset the multi-use items and cursor
@@ -508,6 +522,13 @@ Mouse.prototype.__handleMouseDown = function (event) {
 
   // Set the selected event
   this.__setSelectedObject(event);
+
+  // Use-With cancellation: Click on void (canvas/slot not targeted) cancels the action
+  if (this.__multiUseObject !== null && (this.__mouseDownObject === null || this.__mouseDownObject.which === null)) {
+    this.__multiUseObject = null;
+    this.setCursor("auto");
+    return;
+  }
 
   if (!gameClient.keyboard.isShiftDown() && !gameClient.keyboard.isControlDown()) {
     this.setCursor("grabbing");

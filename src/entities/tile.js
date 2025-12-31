@@ -517,7 +517,7 @@ Tile.prototype.deleteIndex = function (index) {
 
 }
 
-Tile.prototype.deleteThing = function (thing) {
+Tile.prototype.deleteThing = function (thing, count) {
 
   /*
    * Function Tile._removeItemReference
@@ -534,6 +534,12 @@ Tile.prototype.deleteThing = function (thing) {
   // The requested item does not exist in the container
   if (index === -1) {
     return -1;
+  }
+
+  // Count provided: delegate to removeIndex
+  if (typeof count !== "undefined") {
+    this.removeIndex(index, count);
+    return index;
   }
 
   this.__deleteThing(thing, index);

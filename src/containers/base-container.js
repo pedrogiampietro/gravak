@@ -195,7 +195,7 @@ BaseContainer.prototype.removeIndex = function (index, count) {
 
 }
 
-BaseContainer.prototype.deleteThing = function (thing) {
+BaseContainer.prototype.deleteThing = function (thing, count) {
 
   /*
    * Function BaseContainer.deleteThing
@@ -208,6 +208,12 @@ BaseContainer.prototype.deleteThing = function (thing) {
   // The requested item does not exist in the container
   if (index === -1) {
     return -1;
+  }
+
+  // Count provided: delegate to removeIndex
+  if (typeof count !== "undefined") {
+    this.removeIndex(index, count);
+    return index;
   }
 
   return this.__remove(index);
@@ -422,6 +428,11 @@ BaseContainer.prototype.__replaceFungibleItem = function (index, item, count) {
 
   // Create the new item
   let newItem = item.createFungibleThing(count);
+
+  // CRITICAL FIX: The new item must inherit the parent of the item it replaces
+  if (item.getParent()) {
+    newItem.setParent(item.getParent());
+  }
 
   // Set in slot directly
   this.__setItem(newItem, index);

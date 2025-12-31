@@ -177,7 +177,7 @@ Container.prototype.removeIndex = function (index, amount) {
 
 }
 
-Container.prototype.deleteThing = function (thing) {
+Container.prototype.deleteThing = function (thing, count) {
 
   /*
    * Function Container.deleteThing
@@ -189,14 +189,28 @@ Container.prototype.deleteThing = function (thing) {
     return -1;
   }
 
-  let index = this.container.deleteThing(thing);
+  // Calculate weight to remove before modifying the thing
+  let weightToRemove = thing.getWeight();
+  let partial = false;
+
+  // Handle partial removal for stackables
+  if (count && thing.isStackable() && count < thing.count) {
+    weightToRemove = thing.weight * count;
+    partial = true;
+  }
+
+  let index = this.container.deleteThing(thing, count);
 
   if (index === -1) {
     return -1;
   }
 
-  this.__updateParentWeightRecursion(-thing.getWeight());
-  thing.setParent(null);
+  this.__updateParentWeightRecursion(-weightToRemove);
+
+  // Only detach parent if fully removed
+  if (!partial) {
+    thing.setParent(null);
+  }
 
   return index;
 

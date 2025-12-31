@@ -1,4 +1,4 @@
-const ObjectBuffer = function() {
+const ObjectBuffer = function () {
 
   /*
    * Class ObjectBuffer
@@ -77,7 +77,7 @@ ObjectBuffer.prototype.attributes = new Object({
   "ThingAttrLast": 255
 });
 
-ObjectBuffer.prototype.getOutfit = function(id) {
+ObjectBuffer.prototype.getOutfit = function (id) {
 
   /*
    * Function ObjectBuffer.getOutfit
@@ -85,7 +85,7 @@ ObjectBuffer.prototype.getOutfit = function(id) {
    */
 
   // Invalid
-  if(id < 0 || id > this.outfitCount) {
+  if (id < 0 || id > this.outfitCount) {
     return null;
   }
 
@@ -93,7 +93,7 @@ ObjectBuffer.prototype.getOutfit = function(id) {
 
 }
 
-ObjectBuffer.prototype.getAnimation = function(id) {
+ObjectBuffer.prototype.getAnimation = function (id) {
 
   /*
    * Function ObjectBuffer.getAnimation
@@ -101,7 +101,7 @@ ObjectBuffer.prototype.getAnimation = function(id) {
    */
 
   // Invalid
-  if(id < 0 || id > this.effectCount) {
+  if (id < 0 || id > this.effectCount) {
     return null;
   }
 
@@ -109,14 +109,14 @@ ObjectBuffer.prototype.getAnimation = function(id) {
 
 }
 
-ObjectBuffer.prototype.getAnimationId = function(id) {
+ObjectBuffer.prototype.getAnimationId = function (id) {
 
   /*
    * Function ObjectBuffer.getAnimationId
    * Returns the internal animation identifier of an external animation identifier 
    */
 
-  if(id < 1 || id > this.effectCount) {
+  if (id < 1 || id > this.effectCount) {
     return null;
   }
 
@@ -124,13 +124,13 @@ ObjectBuffer.prototype.getAnimationId = function(id) {
 
 }
 
-ObjectBuffer.prototype.getVersion = function() {
+ObjectBuffer.prototype.getVersion = function () {
 
   return this.__version;
 
 }
 
-ObjectBuffer.prototype.getDistanceAnimationId = function(id) {
+ObjectBuffer.prototype.getDistanceAnimationId = function (id) {
 
   /*
    * Function ObjectBuffer.getDistanceAnimationId
@@ -138,7 +138,7 @@ ObjectBuffer.prototype.getDistanceAnimationId = function(id) {
    */
 
   // Invalid identifiers
-  if(id < 1 || id > this.distanceCount) {
+  if (id < 1 || id > this.distanceCount) {
     return null;
   }
 
@@ -146,7 +146,7 @@ ObjectBuffer.prototype.getDistanceAnimationId = function(id) {
 
 }
 
-ObjectBuffer.prototype.getDistanceAnimation = function(id) {
+ObjectBuffer.prototype.getDistanceAnimation = function (id) {
 
   /*
    * Function ObjectBuffer.getDistanceAnimation
@@ -157,7 +157,7 @@ ObjectBuffer.prototype.getDistanceAnimation = function(id) {
 
 }
 
-ObjectBuffer.prototype.get = function(id) {
+ObjectBuffer.prototype.get = function (id) {
 
   /*
    * ObjectBuffer.get
@@ -165,7 +165,7 @@ ObjectBuffer.prototype.get = function(id) {
    */
 
   // Does not exist?
-  if(!this.dataObjects.hasOwnProperty(id)) {
+  if (!this.dataObjects.hasOwnProperty(id)) {
     return null;
   }
 
@@ -173,7 +173,7 @@ ObjectBuffer.prototype.get = function(id) {
 
 }
 
-ObjectBuffer.prototype.load = function(name, event) {
+ObjectBuffer.prototype.load = function (name, event) {
 
   /*
    * Function ObjectBuffer.load
@@ -183,13 +183,13 @@ ObjectBuffer.prototype.load = function(name, event) {
   try {
     this.__load(name, event.target.result);
     gameClient.database.storeFile(name, event.target.result);
-  } catch(exception) {
+  } catch (exception) {
     gameClient.interface.modalManager.open("floater-connecting", exception);
   }
 
 }
 
-ObjectBuffer.prototype.__getOutfitIdentifier = function(id) {
+ObjectBuffer.prototype.__getOutfitIdentifier = function (id) {
 
   /*
    * Function ObjectBuffer.__getOutfitIdentifier
@@ -201,7 +201,7 @@ ObjectBuffer.prototype.__getOutfitIdentifier = function(id) {
 
 }
 
-ObjectBuffer.prototype.__isOutfit = function(id) {
+ObjectBuffer.prototype.__isOutfit = function (id) {
 
   /*
    * Function ObjectBuffer.__isOutfit
@@ -212,7 +212,7 @@ ObjectBuffer.prototype.__isOutfit = function(id) {
 
 }
 
-ObjectBuffer.prototype.__hasFrameGroups = function(id) {
+ObjectBuffer.prototype.__hasFrameGroups = function (id) {
 
   /*
    * Function ObjectBuffer.__hasFrameGroups
@@ -223,7 +223,7 @@ ObjectBuffer.prototype.__hasFrameGroups = function(id) {
 
 }
 
-ObjectBuffer.prototype.__load = function(name, buffer) {
+ObjectBuffer.prototype.__load = function (name, buffer) {
 
   /*
    * Function ObjectBuffer.__load
@@ -239,8 +239,8 @@ ObjectBuffer.prototype.__load = function(name, buffer) {
   let signature = packet.readUInt32().toString(16).toUpperCase();
 
   // Verify the 4 byte data signature
-  if(!this.SIGNATURES.hasOwnProperty(signature)) {
-    throw("Unknown Tibia.dat file supplied.");
+  if (!this.SIGNATURES.hasOwnProperty(signature)) {
+    throw ("Unknown Tibia.dat file supplied.");
   }
 
   this.__version = this.SIGNATURES[signature];
@@ -254,16 +254,22 @@ ObjectBuffer.prototype.__load = function(name, buffer) {
   this.totalObjectCount = (this.itemCount + this.outfitCount + this.effectCount + this.distanceCount);
 
   // Item identifiers start at 100. Do not ask me why..
-  for(let id = 100; id <= this.totalObjectCount; id++) {
+  for (let id = 100; id <= this.totalObjectCount; id++) {
 
     // Create a new data object
     let dataObject = new DataObject(this.__readFlags(packet));
+
+    // Force stackable flag for known item ranges (e.g. runes)
+    // Runes are usually 2261 to 2316
+    if (id >= 2261 && id <= 2316) {
+      dataObject.flags.set(PropBitFlag.prototype.flags.DatFlagStackable);
+    }
 
     // Update the group count if this is an outfit
     dataObject.setGroupCount(this.__hasFrameGroups(id) ? packet.readUInt8() : 1);
 
     // Should increment over the group count: do not use index..
-    for(let _ = 0; _ < dataObject.groupCount; _++) {
+    for (let _ = 0; _ < dataObject.groupCount; _++) {
 
       // Create a new frame group
       let frameGroup = new FrameGroup();
@@ -278,7 +284,7 @@ ObjectBuffer.prototype.__load = function(name, buffer) {
       frameGroup.setSize(width, height);
 
       // If big then skip the following byte
-      if(width > 1 || height > 1) {
+      if (width > 1 || height > 1) {
         packet.readUInt8();
       }
 
@@ -295,7 +301,7 @@ ObjectBuffer.prototype.__load = function(name, buffer) {
       frameGroup.setAnimationLength(packet.readUInt8());
 
       // These are frame durations: read them!
-      if(frameGroup.isAnimated() && this.__version >= 1050) {
+      if (frameGroup.isAnimated() && this.__version >= 1050) {
 
         let animationLengths = new Array();
 
@@ -304,7 +310,7 @@ ObjectBuffer.prototype.__load = function(name, buffer) {
         frameGroup.start = packet.readInt8();
 
         // Read the animation lengths
-        for(let i = 0; i < frameGroup.animationLength; i++) {
+        for (let i = 0; i < frameGroup.animationLength; i++) {
           animationLengths.push(packet.readAnimationLength());
         }
 
@@ -313,7 +319,7 @@ ObjectBuffer.prototype.__load = function(name, buffer) {
       }
 
       // Read all the sprite identifiers
-      for(let i = 0; i < frameGroup.getNumberSprites(); i++) {
+      for (let i = 0; i < frameGroup.getNumberSprites(); i++) {
         frameGroup.sprites.push(this.__version >= 960 ? packet.readUInt32() : packet.readUInt16());
       }
 
@@ -334,7 +340,7 @@ ObjectBuffer.prototype.__load = function(name, buffer) {
 
 }
 
-ObjectBuffer.prototype.__createLoopedAnimations = function() {
+ObjectBuffer.prototype.__createLoopedAnimations = function () {
 
   LoopedAnimation.prototype.DRAWBLOOD = new LoopedAnimation(this.getAnimationId(1));
   LoopedAnimation.prototype.LOSEENERGY = new LoopedAnimation(this.getAnimationId(2));
@@ -364,7 +370,7 @@ ObjectBuffer.prototype.__createLoopedAnimations = function() {
 
 }
 
-ObjectBuffer.prototype.__mapVersionFlag = function(flag) {
+ObjectBuffer.prototype.__mapVersionFlag = function (flag) {
 
   /*
    * Function ObjectBuffer.__mapVersionFlag
@@ -372,36 +378,36 @@ ObjectBuffer.prototype.__mapVersionFlag = function(flag) {
    */
 
   // This always means the final flag regardless of the version
-  if(flag === this.attributes.ThingAttrLast) {
+  if (flag === this.attributes.ThingAttrLast) {
     return flag;
   }
 
   // Specific .dat version handling
-  if(this.__version >= 1000) {
+  if (this.__version >= 1000) {
 
-    if(flag === 16) {
+    if (flag === 16) {
       return this.attributes.ThingAttrNoMoveAnimation;
-    } else if(flag > 16) {
-      return flag - 1;	
+    } else if (flag > 16) {
+      return flag - 1;
     }
 
-  } else if(this.__version >= 755) {
+  } else if (this.__version >= 755) {
 
-    if(flag == 23) {
+    if (flag == 23) {
       return this.attributes.ThingAttrFloorChange;
     }
 
-  } else if(this.__version >= 740) {
+  } else if (this.__version >= 740) {
 
     // Increment flags 1 to 15
-    if(flag > 0 && flag <= 15) {
-      if(flag === 5) return this.attributes.ThingAttrMultiUse;
-      if(flag === 6) return this.attributes.ThingAttrForceUse;
+    if (flag > 0 && flag <= 15) {
+      if (flag === 5) return this.attributes.ThingAttrMultiUse;
+      if (flag === 6) return this.attributes.ThingAttrForceUse;
       return flag + 1;
     } else {
-    
+
       // Switch around some flags
-      switch(flag) {
+      switch (flag) {
         case 16: return this.attributes.ThingAttrLight;
         case 17: return this.attributes.ThingAttrFloorChange;
         case 18: return this.attributes.ThingAttrFullGround;
@@ -423,7 +429,7 @@ ObjectBuffer.prototype.__mapVersionFlag = function(flag) {
 
 }
 
-ObjectBuffer.prototype.__readFlags = function(packet) {
+ObjectBuffer.prototype.__readFlags = function (packet) {
 
   /*
    * Function ObjectBuffer.__readFlags
@@ -434,11 +440,11 @@ ObjectBuffer.prototype.__readFlags = function(packet) {
   let properties = new Object();
 
   // Read all the data file flags
-  while(true) {
+  while (true) {
 
     let flag = this.__mapVersionFlag(packet.readUInt8());
 
-    switch(flag) {
+    switch (flag) {
 
       // End byte: we are finished reading the data flags
       case this.attributes.ThingAttrLast: {
@@ -571,7 +577,7 @@ ObjectBuffer.prototype.__readFlags = function(packet) {
 
       case this.attributes.ThingAttrDisplacement: {
         flags.set(PropBitFlag.prototype.flags.DatFlagDisplacement);
-        if(this.__version >= 755) {
+        if (this.__version >= 755) {
           packet.readLight();
         }
         break;
@@ -664,7 +670,7 @@ ObjectBuffer.prototype.__readFlags = function(packet) {
       }
 
       default: {
-        throw("Could not parse flag " + flag.toString(16) + " of Tibia.dat");
+        throw ("Could not parse flag " + flag.toString(16) + " of Tibia.dat");
       }
 
     }
