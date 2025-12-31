@@ -1,4 +1,4 @@
-const ScreenElementManager = function() {
+const ScreenElementManager = function () {
 
   /*
    * Class ScreenElementManager
@@ -13,7 +13,7 @@ const ScreenElementManager = function() {
 
 }
 
-ScreenElementManager.prototype.clear = function() {
+ScreenElementManager.prototype.clear = function () {
 
   /*
    * Function ScreenElementManager.clear
@@ -21,13 +21,13 @@ ScreenElementManager.prototype.clear = function() {
    */
 
   // Remove all character elements from the DOM
-  Object.values(gameClient.world.activeCreatures).forEach(function(creature) {
+  Object.values(gameClient.world.activeCreatures).forEach(function (creature) {
     creature.characterElement.remove();
   });
 
 }
 
-ScreenElementManager.prototype.render = function() {
+ScreenElementManager.prototype.render = function () {
 
   /*
    * Function ScreenElementManager.render
@@ -38,10 +38,10 @@ ScreenElementManager.prototype.render = function() {
   this.__renderCharacterElements();
 
   // Render other text bubbles on the screen
-  this.activeTextElements.forEach(function(screenElement) {
+  this.activeTextElements.forEach(function (screenElement) {
 
     // Only update the position of the text when it is floating or when the player moves
-    if(gameClient.player.isMoving() || screenElement.constructor.name === "FloatingElement") {
+    if (gameClient.player.isMoving() || screenElement.constructor.name === "FloatingElement") {
       return screenElement.setTextPosition();
     }
 
@@ -49,7 +49,7 @@ ScreenElementManager.prototype.render = function() {
 
 }
 
-ScreenElementManager.prototype.__renderCharacterElements = function() {
+ScreenElementManager.prototype.__renderCharacterElements = function () {
 
   /*
    * Function ScreenElementManager.__renderCharacterElements
@@ -57,25 +57,21 @@ ScreenElementManager.prototype.__renderCharacterElements = function() {
    */
 
   // Go over all the creatures that are active
-  Object.values(gameClient.world.activeCreatures).forEach(function(creature) {
+  Object.values(gameClient.world.activeCreatures).forEach(function (creature) {
 
     // Do not show the name element when on another floor
-    if(gameClient.player.getPosition().z !== creature.getPosition().z) {
+    if (gameClient.player.getPosition().z !== creature.getPosition().z) {
       return creature.characterElement.hide();
     }
 
     // Do not waste time rendering creatures that are not visible
-    if(!gameClient.player.canSeeSmall(creature)) {
+    if (!gameClient.player.canSeeSmall(creature)) {
       return creature.characterElement.hide();
     }
 
     // Color of nameplate
-    if(creature !== gameClient.player) {
-      if(gameClient.player.getMaxFloor() > creature.getMaxFloor()) {
-        creature.characterElement.setGrey();
-      } else {
-        creature.characterElement.setDefault();
-      }
+    if (creature !== gameClient.player) {
+      creature.characterElement.setDefault();
     }
 
     // Update the position of the name tag
@@ -85,7 +81,7 @@ ScreenElementManager.prototype.__renderCharacterElements = function() {
 
 }
 
-ScreenElementManager.prototype.add = function(element) {
+ScreenElementManager.prototype.add = function (element) {
 
   /*
    * Function ScreenElementManager.add
@@ -96,9 +92,9 @@ ScreenElementManager.prototype.add = function(element) {
 
 }
 
-ScreenElementManager.prototype.createFloatingTextElement = function(message, position, color) {
+ScreenElementManager.prototype.createFloatingTextElement = function (message, position, color) {
 
-  if(document.hidden) {
+  if (document.hidden) {
     return null;
   }
 
@@ -107,7 +103,7 @@ ScreenElementManager.prototype.createFloatingTextElement = function(message, pos
 
 }
 
-ScreenElementManager.prototype.__createTextElement = function(messageElement) {
+ScreenElementManager.prototype.__createTextElement = function (messageElement) {
 
   // Keep a reference to all active elements
   this.activeTextElements.add(messageElement);
@@ -126,19 +122,19 @@ ScreenElementManager.prototype.__createTextElement = function(messageElement) {
 
 }
 
-ScreenElementManager.prototype.createTextElement = function(entity, message, color) {
+ScreenElementManager.prototype.createTextElement = function (entity, message, color) {
 
   /*
    * Function ScreenElementManager.createTextElement
    * Creates a text element and puts it on the screen
    */
 
-  if(entity.type !== 1) {
+  if (entity.type !== 1) {
     gameClient.interface.channelManager.getChannel("Default").addMessage(message, entity.type, entity.name, color);
   }
 
   // Do not add the element when the document is hidden from view
-  if(document.hidden) {
+  if (document.hidden) {
     return null;
   }
 
@@ -147,7 +143,7 @@ ScreenElementManager.prototype.createTextElement = function(entity, message, col
 
 }
 
-ScreenElementManager.prototype.deleteTextElement = function(textElement) {
+ScreenElementManager.prototype.deleteTextElement = function (textElement) {
 
   /*
    * Function ScreenElementManager.deleteTextElement
@@ -161,9 +157,9 @@ ScreenElementManager.prototype.deleteTextElement = function(textElement) {
   this.activeTextElements.delete(textElement);
 
   // More text to show
-  if(textElement instanceof MessageElement) {
+  if (textElement instanceof MessageElement) {
 
-    if(textElement.__entity.textBuffer.length === 0) {
+    if (textElement.__entity.textBuffer.length === 0) {
       return;
     }
 
