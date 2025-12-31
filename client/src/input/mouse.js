@@ -430,8 +430,28 @@ Mouse.prototype.__handleItemUseWith = function (fromObject, toObject) {
    * Handles a click on a container
    */
 
+  let match = false;
+
+  // Robust check: Compare containers by GUID or Tiles by Position
+  if (fromObject.which && toObject.which && fromObject.index === toObject.index) {
+    // Both are Containers
+    if (fromObject.which.constructor.name === "Container" && toObject.which.constructor.name === "Container") {
+      if (fromObject.which.guid === toObject.which.guid) {
+        match = true;
+      }
+    }
+    // Both are Tiles
+    else if (fromObject.which.constructor.name === "Tile" && toObject.which.constructor.name === "Tile") {
+      let p1 = fromObject.which.position;
+      let p2 = toObject.which.position;
+      if (p1.x === p2.x && p1.y === p2.y && p1.z === p2.z) {
+        match = true;
+      }
+    }
+  }
+
   // Toggle behavior: If targeting the same object (clicking the source again), cancel the action
-  if (fromObject.which === toObject.which && fromObject.index === toObject.index) {
+  if (match) {
     this.__multiUseObject = null;
     this.setCursor("auto");
     return;
