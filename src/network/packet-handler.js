@@ -362,8 +362,8 @@ PacketHandler.prototype.__moveItem = function (player, fromWhere, fromIndex, toW
     existthing = toWhere.getTopItem();
   }
 
-  // Use smart placement for containers (auto-stack and first empty slot)
-  if (toWhere.isContainer && toWhere.isContainer()) {
+  // Use smart placement for containers and depot (auto-stack and first empty slot)
+  if (toWhere.constructor.name === "DepotContainer" || (toWhere.isContainer && toWhere.isContainer())) {
     // Use addThingSmart which handles stacking and empty slot logic
     let added = toWhere.addThingSmart(movedItem);
     if (!added) {

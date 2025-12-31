@@ -184,6 +184,40 @@ DepotContainer.prototype.addThing = function (thing, index) {
 
 }
 
+DepotContainer.prototype.addThingSmart = function (thing) {
+
+  /*
+   * Function DepotContainer.addThingSmart
+   * Smart add that auto-organizes: stacks stackables and fills from first slot
+   */
+
+  if (!thing.isPickupable() && thing.id !== 2594 && thing.id !== 2593) {
+    return false;
+  }
+
+  // Delegate to the base container's smart add
+  let result = this.container.addThingSmart(thing);
+
+  if (result) {
+    // Save a ref from item -> parent
+    thing.setParent(this);
+  }
+
+  return result;
+
+}
+
+DepotContainer.prototype.isContainer = function () {
+
+  /*
+   * Function DepotContainer.isContainer
+   * Returns true since depot is a container type
+   */
+
+  return true;
+
+}
+
 DepotContainer.prototype.addFirstEmpty = function (thing) {
 
   /*
