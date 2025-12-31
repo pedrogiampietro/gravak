@@ -12,7 +12,7 @@ const Minimap = function () {
 
   // Minimap state of the current zoom level and what layer is being renderer
   this.__zoomLevel = 0;
-  this.__renderLayer = 0;
+  this.__renderLayer = 7; // Default to surface level (Z=7)
 
   this.__imageBuffers = new Array();
   this.__currentIndex = null;
@@ -184,8 +184,8 @@ Minimap.prototype.setRenderLayer = function (layer) {
   // Clamp the layer
   this.__renderLayer = Math.min(Math.max(0, layer), this.nLayers - 1);
 
-  // We pretend that the surface is 0 (while it is actually 8)
-  document.getElementById("minimap-current-layer").innerHTML = 7 - this.__renderLayer;
+  // We show the absolute Z value as requested
+  document.getElementById("minimap-current-layer").innerHTML = this.__renderLayer;
 
   this.cache();
 

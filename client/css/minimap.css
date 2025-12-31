@@ -3,30 +3,88 @@
   margin: 8px;
   justify-content: center;
   align-items: center;
+  padding-right: 40px;
+  /* Space for buttons */
 }
 
 .minimap-wrapper {
+  width: 160px;
   height: 160px;
   display: block;
   position: relative;
 }
 
+/* The circular map area - Gravak red theme */
 .minimap-wrapper canvas {
-  background-color: black;
+  background-color: #0a0a0a;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 3px #1a0a0a,
+    0 0 0 5px #8b2020,
+    0 0 0 7px #5a1515,
+    0 0 0 9px #2a0808,
+    0 0 20px rgba(139, 32, 32, 0.5);
 }
 
 .minimap-wrapper .crosshair {
   position: absolute;
   left: 76px;
   top: 72px;
+  color: #ff6b6b;
+  z-index: 5;
+  text-shadow: 1px 1px 2px black;
+}
+
+#clock-time {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(20, 5, 5, 0.85);
+  color: #ff9999;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: bold;
+  z-index: 15;
+  border: 1px solid rgba(139, 32, 32, 0.6);
+}
+
+/* Button stack - positioned outside the map */
+.minimap-wrapper .button-stack {
+  position: absolute;
+  width: 22px;
+  top: 0;
+  right: -30px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 20;
+}
+
+.minimap-wrapper .button-stack .symbol-button {
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #6a2020 0%, #3a1010 100%);
+  border: 1px solid #8b3030;
+  color: #ffaaaa;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  padding: 0;
+}
+
+.minimap-wrapper .button-stack .symbol-button:hover {
+  background: linear-gradient(180deg, #8a3030 0%, #5a2020 100%);
+  border-color: #ab4040;
   color: white;
 }
 
-.minimap-wrapper .button-stack {
-  position: absolute;
-  width: 18px;
-  height: 160px;
-  padding: 4px;
-  top: 0px;
-  right: 4px;
+.minimap-wrapper .button-stack .symbol-button:active {
+  background: linear-gradient(180deg, #4a1515 0%, #2a0808 100%);
 }
