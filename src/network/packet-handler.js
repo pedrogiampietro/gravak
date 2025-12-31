@@ -129,6 +129,11 @@ PacketHandler.prototype.moveItem = function (player, packet) {
       return this.mailboxHandler.sendThing(fromWhere, toWhere, player, fromItem);
     }
 
+    // Check if the tile itself is blocking (mountains, walls, etc.)
+    if (toWhere.isBlockSolid()) {
+      return player.sendCancelMessage("You cannot throw there.");
+    }
+
     // Thrown inside a teleport or stair?
     toWhere = gameServer.world.lattice.findDestination(player, toWhere);
 
