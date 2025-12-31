@@ -238,6 +238,12 @@ NetworkManager.prototype.__readPacket = function (gameSocket, packet) {
       return this.packetHandler.writeText(gameSocket.player, packet);
     }
 
+    // Quest Log Request
+    case CONST.PROTOCOL.CLIENT.QUEST_LOG: {
+      console.log("NetworkManager: Received QUEST_LOG packet.");
+      return this.packetHandler.handleQuestLog(gameSocket.player, packet.readQuestLog());
+    }
+
     // Unknown opcode sent: close the socket immediately
     default: {
       return gameSocket.close();

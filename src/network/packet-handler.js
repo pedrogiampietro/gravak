@@ -447,4 +447,29 @@ PacketHandler.prototype.writeText = function (player, packet) {
 
 }
 
+PacketHandler.prototype.handleQuestLog = function (player, questId) {
+  /*
+   * Function PacketHandler.handleQuestLog
+   * Handles request for quest log data
+   */
+
+  console.log("PacketHandler: handleQuestLog called for questId:", questId);
+
+  const { QuestLogPacket, QuestLinePacket } = requireModule("network/protocol");
+
+  if (questId === 0) {
+    // Send Quest List
+    let quests = gameServer.questManager.getQuestList(player);
+    console.log("PacketHandler: Sending quest list with " + quests.length + " quests.");
+    player.socketHandler.write(new QuestLogPacket(quests));
+  } else {
+    // Send Quest Missions
+    let missions = gameServer.questManager.getQuestMissions(player, questId);
+    console.log("PacketHandler: Sending quest missions for quest " + questId);
+    if (missions.length > 0) {
+      player.socketHandler.write(new QuestLinePacket(questId, missions));
+    }
+  }
+}
+
 module.exports = PacketHandler;

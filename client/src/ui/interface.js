@@ -47,6 +47,9 @@ const Interface = function () {
   // Tooltip manager
   this.tooltip = new Tooltip();
 
+  // Quest Tracker Overlay
+  this.questTracker = new QuestTracker();
+
   // Enable all the listeners in the DOM
   this.__enableListeners();
 
@@ -997,6 +1000,9 @@ Interface.prototype.__enableListeners = function () {
   document
     .getElementById("openBattle")
     .addEventListener("click", this.toggleWindow.bind(this, "battle-window"));
+  document
+    .getElementById("openQuests")
+    .addEventListener("click", this.modalManager.open.bind(this.modalManager, "quest-log-modal"));
   document
     .getElementById("openFriends")
     .addEventListener("click", this.toggleWindow.bind(this, "friend-window"));

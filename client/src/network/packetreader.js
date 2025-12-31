@@ -1106,3 +1106,37 @@ PacketReader.prototype.readTradeOffer = function () {
   });
 
 }
+
+PacketReader.prototype.readQuestLog = function () {
+  /*
+   * Function PacketReader.readQuestLog
+   * Reads the quest log list
+   */
+  let length = this.readUInt16();
+  let quests = [];
+  for (let i = 0; i < length; i++) {
+    quests.push({
+      id: this.readUInt16(),
+      name: this.readString(),
+      completed: this.readBoolean()
+    });
+  }
+  return quests;
+}
+
+PacketReader.prototype.readQuestLine = function () {
+  /*
+   * Function PacketReader.readQuestLine
+   * Reads the quest missions
+   */
+  let questId = this.readUInt16();
+  let length = this.readUInt8();
+  let missions = [];
+  for (let i = 0; i < length; i++) {
+    missions.push({
+      name: this.readString(),
+      description: this.readString()
+    });
+  }
+  return { id: questId, missions: missions }; // Return object wrapper if needed, or modify logic
+}

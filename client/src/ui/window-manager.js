@@ -16,6 +16,7 @@ const WindowManager = function () {
     "battle-window": new BattleWindow(document.getElementById("battle-window")),
     "skill-window": new SkillWindow(document.getElementById("skill-window")),
     "friend-window": new FriendWindow(document.getElementById("friend-window")),
+
   });
 
   this.stacks = document.getElementsByClassName("column");
@@ -25,6 +26,7 @@ const WindowManager = function () {
   this.getWindow("battle-window").addTo(this.getStack("right"));
   this.getWindow("skill-window").addTo(this.getStack("right"));
   this.getWindow("friend-window").addTo(this.getStack("right"));
+
 
   // State object of the mouse
   this.state = new State();

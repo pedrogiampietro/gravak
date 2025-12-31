@@ -44,6 +44,7 @@ Keyboard.prototype.KEYS = new Object({
   KEY_M: 77,
   KEY_S: 83,
   KEY_W: 87,
+  KEY_Q: 81,
   F1: 112,
   F2: 113,
   F3: 114,
@@ -398,6 +399,15 @@ Keyboard.prototype.__keyDown = function (event) {
     if (this.isControlDown()) {
       event.preventDefault();
       gameClient.interface.channelManager.closeCurrentChannel();
+    }
+  }
+
+  // Ctrl+Q to toggle Quest Log
+  if (event.keyCode === Keyboard.prototype.KEYS.KEY_Q) {
+    if (this.isControlDown()) {
+      event.preventDefault();
+      gameClient.interface.modalManager.open("quest-log-modal");
+      return;
     }
   }
 

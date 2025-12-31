@@ -1,0 +1,48 @@
+[
+    {
+        "id": 1,
+        "name": "The Rookie",
+        "missions": [
+            {
+                "id": 1,
+                "name": "Talk to the Oracle",
+                "description": "Go to the temple and talk to the Oracle to choose your vocation.",
+                "storageKey": 1001,
+                "storageValue": 1
+            },
+            {
+                "id": 2,
+                "name": "First Equipment",
+                "description": "Find the chest in the sewers to get your first equipment.",
+                "storageKey": 1001,
+                "storageValue": 2
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Rat Plague",
+        "missions": [
+            {
+                "id": 1,
+                "name": "Exterminate Rats",
+                "description": "Kill 10 rats in the basement.",
+                "storageKey": 1002,
+                "storageValue": 1
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "The Magician",
+        "missions": [
+            {
+                "id": 1,
+                "name": "Cast Light",
+                "description": "Cast the Light spell (utevo lux) to prove your magical ability.",
+                "storageKey": 2001,
+                "storageValue": 1
+            }
+        ]
+    }
+]

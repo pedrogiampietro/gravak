@@ -231,6 +231,14 @@ NetworkManager.prototype.readPacket = function (packet) {
       return this.packetHandler.handleTradeOffer(packet.readTradeOffer());
     }
 
+    case CONST.PROTOCOL.SERVER.QUEST_LOG: {
+      return this.packetHandler.handleQuestLog(packet.readQuestLog());
+    }
+
+    case CONST.PROTOCOL.SERVER.QUEST_LINE: {
+      return this.packetHandler.handleQuestLine(packet.readQuestLine());
+    }
+
     case 40: {
       return this.packetHandler.handleDeath();
     }

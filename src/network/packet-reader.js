@@ -301,13 +301,20 @@ PacketReader.prototype.readWorldPosition = function () {
    * Reads a world position from the packet
    */
 
-  // Four double bytes
   return new Position(
     this.readUInt16(),
     this.readUInt16(),
     this.readUInt16()
   );
 
+}
+
+PacketReader.prototype.readQuestLog = function () {
+  /*
+   * Function PacketReader.readQuestLog
+   * Reads the quest log request (quest ID)
+   */
+  return this.readUInt16();
 }
 
 module.exports = PacketReader;

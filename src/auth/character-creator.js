@@ -69,7 +69,8 @@ const CharacterCreator = function () {
         { "slot": 6, "item": { "id": 1988 } }
       ],
     },
-    "friends": []
+    "friends": [],
+    "storage": {}
   });
 
 }

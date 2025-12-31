@@ -5,6 +5,7 @@ const Enum = requireModule("utils/enum");
 const GameLoop = requireModule("core/gameloop");
 const HTTPServer = requireModule("network/http-server");
 const IPCSocket = requireModule("ipc/ipcsocket");
+const QuestManager = requireModule("core/quest-manager");
 
 const GameServer = function () {
 
@@ -41,6 +42,9 @@ const GameServer = function () {
 
   // The IPC socket for communicating with the server
   this.IPCSocket = new IPCSocket();
+
+  // Quest Manager
+  this.questManager = new QuestManager();
 
   // State variables to keep the current server status
   this.__serverStatus = null;

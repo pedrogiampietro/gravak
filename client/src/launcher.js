@@ -20,6 +20,7 @@
     "src/core/database.js",
     "src/ui/fight-mode-selector.js",
     "src/ui/tooltip.js",
+    "src/ui/quest-tracker.js",
     "src/ui/interface.js",
     "src/network/packet-handler.js",
     "src/utils/enum.js",
@@ -59,6 +60,7 @@
     "src/ui/window.js",
     "src/ui/window-friend.js",
     "src/ui/window-skill.js",
+
     "src/ui/window-battle.js",
     "src/ui/chat-resizer.js",
     "src/rendering/debugger.js",
@@ -113,6 +115,7 @@
     "src/ui/modals/modal-chat.js",
     "src/ui/modals/modal-readable.js",
     "src/ui/modals/modal-offer.js",
+    "src/ui/window-questlog.js",
     "src/core/event-queue.js",
     "src/utils/heap-event.js",
     "src/utils/binary-heap.js",

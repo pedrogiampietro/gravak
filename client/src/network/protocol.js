@@ -415,3 +415,19 @@ const WriteTextPacket = function (itemId, content) {
 
 WriteTextPacket.prototype = Object.create(PacketWriter.prototype);
 WriteTextPacket.prototype.constructor = WriteTextPacket;
+
+const QuestLogPacket = function (questId) {
+  /*
+   * Class QuestLogPacket
+   * Wrapper for requesting quest log or specific quest details
+   * If questId is provided, it requests details for that quest (QuestLine)
+   * If questId is 0 or undefined, it requests the main list
+   */
+
+  PacketWriter.call(this, CONST.PROTOCOL.CLIENT.QUEST_LOG, 2);
+
+  this.writeUInt16(questId || 0);
+
+}
+QuestLogPacket.prototype = Object.create(PacketWriter.prototype);
+QuestLogPacket.prototype.constructor = QuestLogPacket;

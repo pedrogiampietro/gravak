@@ -938,6 +938,49 @@ const FoodTimerPacket = function (remainingSeconds) {
 FoodTimerPacket.prototype = Object.create(PacketWriter.prototype);
 FoodTimerPacket.prototype.constructor = FoodTimerPacket;
 
+const QuestLogPacket = function (quests) {
+  /*
+   * Class QuestLogPacket
+   * Packet to send the list of quests
+   */
+
+  // Use MAX_PACKET_SIZE since we need to encode strings dynamically
+  PacketWriter.call(this, CONST.PROTOCOL.SERVER.QUEST_LOG, this.MAX_PACKET_SIZE);
+
+  this.writeUInt16(quests.length);
+
+  quests.forEach(quest => {
+    this.writeUInt16(quest.id);
+    let encodedName = this.encodeString(quest.name);
+    this.writeBuffer(encodedName);
+    this.writeBoolean(quest.completed);
+  }, this);
+};
+QuestLogPacket.prototype = Object.create(PacketWriter.prototype);
+QuestLogPacket.prototype.constructor = QuestLogPacket;
+
+const QuestLinePacket = function (questId, missions) {
+  /*
+   * Class QuestLinePacket
+   * Packet to send missions of a specific quest
+   */
+
+  // Use MAX_PACKET_SIZE since we need to encode strings dynamically
+  PacketWriter.call(this, CONST.PROTOCOL.SERVER.QUEST_LINE, this.MAX_PACKET_SIZE);
+
+  this.writeUInt16(questId);
+  this.writeUInt8(missions.length);
+
+  missions.forEach(mission => {
+    let encodedName = this.encodeString(mission.name);
+    this.writeBuffer(encodedName);
+    let encodedDescription = this.encodeString(mission.description);
+    this.writeBuffer(encodedDescription);
+  }, this);
+};
+QuestLinePacket.prototype = Object.create(PacketWriter.prototype);
+QuestLinePacket.prototype.constructor = QuestLinePacket;
+
 module.exports = {
   CancelMessagePacket,
   ChannelDefaultPacket,
@@ -982,4 +1025,6 @@ module.exports = {
   ToggleConditionPacket,
   WorldTimePacket,
   FoodTimerPacket,
+  QuestLogPacket,
+  QuestLinePacket
 };

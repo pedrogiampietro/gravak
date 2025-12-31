@@ -61,6 +61,9 @@ const Player = function (data) {
   this.containerManager = new ContainerManager(this, data.containers);
   this.spellbook = new Spellbook(this, data.spellbook);
 
+  // Storage for quests/values
+  this.storage = data.storage || {};
+
   // Update current capacity based on equipped items weight
   this.__updateCurrentCapacity();
 
@@ -103,6 +106,40 @@ Player.prototype.addPlayerProperties = function (properties) {
 
 Player.prototype.getTarget = function () {
   return this.actionHandler.targetHandler.getTarget();
+};
+
+Player.prototype.getStorage = function (key) {
+  /*
+   * Function Player.getStorage
+   * Returns the value for a storage key
+   */
+
+  return this.storage[key] || -1;
+};
+
+Player.prototype.setStorage = function (key, value) {
+  /*
+   * Function Player.setStorage
+   * Sets the value for a storage key
+   */
+
+  this.storage[key] = value;
+  console.log("Storage Updated - Key: %s, Value: %s".format(key, value));
+
+  // Check if this storage key is related to a quest
+  if (gameServer.questManager) {
+    const quest = gameServer.questManager.getQuestForStorage(key);
+    if (quest) {
+      // Notify the player
+      const { ServerMessagePacket, QuestLogPacket } = requireModule("network/protocol");
+      this.write(new ServerMessagePacket("Your quest log has been updated."));
+      console.log("Quest Log Updated for player %s (Quest: %s)".format(this.name, quest.name));
+
+      // Send the updated quest list
+      let quests = gameServer.questManager.getQuestList(this);
+      this.write(new QuestLogPacket(quests));
+    }
+  }
 };
 
 Player.prototype.getTextColor = function () {
@@ -713,6 +750,7 @@ Player.prototype.toJSON = function () {
     spellbook: this.spellbook.toJSON(),
     containers: this.containerManager.toJSON(),
     friends: this.friendlist.toJSON(),
+    storage: this.storage,
     lastVisit: Date.now(),
   });
 };

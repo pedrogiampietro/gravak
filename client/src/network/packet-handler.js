@@ -1387,3 +1387,36 @@ PacketHandler.prototype.__handleDamageEnvironment = function (targetCreature, da
   targetCreature.increaseHealth(-damage);
 
 }
+
+PacketHandler.prototype.handleQuestLog = function (quests) {
+  /*
+   * Function PacketHandler.handleQuestLog
+   * Handles the quest list packet
+   */
+  console.log("Client PacketHandler: handleQuestLog called with " + quests.length + " quests.");
+  let window = gameClient.interface.modalManager.get("quest-log-modal");
+  if (window) {
+    console.log("Client PacketHandler: Updating Quest Log Window.");
+    window.setQuests(quests);
+  } else {
+    console.error("Client PacketHandler: Quest Log Window not found!");
+  }
+}
+
+PacketHandler.prototype.handleQuestLine = function (data) {
+  /*
+   * Function PacketHandler.handleQuestLine
+   * Handles the quest line packet (missions)
+   */
+
+  // Update Quest Log Window if open
+  let window = gameClient.interface.modalManager.get("quest-log-modal");
+  if (window) {
+    window.setQuestDetails(data.id, data.missions);
+  }
+
+  // Update Quest Tracker if this is the tracked quest
+  if (gameClient.interface.questTracker && gameClient.interface.questTracker.activeQuestId === data.id) {
+    gameClient.interface.questTracker.updateMissions(data.missions);
+  }
+}

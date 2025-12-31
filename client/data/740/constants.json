@@ -38,7 +38,8 @@
       "THING_USE_ON_CREATURE": 20,
       "FIGHT_MODE": 21,
       "CHASE_MODE": 22,
-      "WRITE_TEXT": 23
+      "WRITE_TEXT": 23,
+      "QUEST_LOG": 24
     },
     "SERVER": {
       "LATENCY": 0,
@@ -81,7 +82,9 @@
       "SPELL_REMOVE": 38,
       "CREATURE_PROPERTY": 37,
       "CHANNEL_JOIN": 50,
-      "FOOD_TIMER": 51
+      "FOOD_TIMER": 51,
+      "QUEST_LOG": 52,
+      "QUEST_LINE": 53
     }
   },
   "DIRECTION": {

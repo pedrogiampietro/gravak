@@ -170,9 +170,9 @@ InteractiveWindow.prototype.toggle = function () {
       bestStack.appendChild(this.__element);
     }
 
-    this.__element.style.display = "flex";
+    this.open();
   } else {
-    this.__element.style.display = "none";
+    this.close();
   }
 
 }
