@@ -60,6 +60,11 @@ FloatingElement.prototype.setTextPosition = function () {
   // Animate upwards
   offset.top -= Math.floor(0.05 * age);
 
+  // Offset to the Right-South (Southeast) as requested
+  // Moving it roughly 0.5 tiles right and down from center
+  offset.left += 0.5 * fraction;
+  offset.top += 0.5 * fraction;
+
   // Update the opacity of the element
   if (age > 500) {
     this.element.style.opacity = 1 - ((age - 500) / 250);
