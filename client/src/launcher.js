@@ -19,6 +19,7 @@
     "src/ui/status-bar.js",
     "src/core/database.js",
     "src/ui/fight-mode-selector.js",
+    "src/ui/tooltip.js",
     "src/ui/interface.js",
     "src/network/packet-handler.js",
     "src/utils/enum.js",

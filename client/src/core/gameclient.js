@@ -50,6 +50,14 @@ const GameClient = function () {
   this.__tickInterval = 0;
   this.serverVersion = null;
 
+  // Load item definitions
+  this.itemDefinitions = {};
+  fetch("./definitions.json").then(response => {
+    return response.json();
+  }).then(data => {
+    this.itemDefinitions = data;
+  });
+
   document.getElementById("client-version").innerHTML = this.CLIENT_VERSION;
 
 }

@@ -44,6 +44,9 @@ const Interface = function () {
   // Manager for the text window
   this.screenElementManager = new ScreenElementManager();
 
+  // Tooltip manager
+  this.tooltip = new Tooltip();
+
   // Enable all the listeners in the DOM
   this.__enableListeners();
 

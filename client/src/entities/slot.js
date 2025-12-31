@@ -20,6 +20,17 @@ Slot.prototype.setElement = function (element) {
   this.element = element;
   this.canvas = new Canvas(element.firstElementChild, 32, 32);
 
+  // Add tooltip listeners
+  element.addEventListener("mouseover", function () {
+    if (this.item) {
+      gameClient.interface.tooltip.show(this.item, this.element);
+    }
+  }.bind(this));
+
+  element.addEventListener("mouseout", function () {
+    gameClient.interface.tooltip.hide();
+  }.bind(this));
+
 }
 
 Slot.prototype.createDOM = function (index) {
@@ -32,6 +43,8 @@ Slot.prototype.createDOM = function (index) {
   let element = document.getElementById("slot-prototype").cloneNode(true);
   element.setAttribute("slotIndex", index);
   element.removeAttribute("id");
+
+
 
   this.setElement(element);
 
