@@ -4,7 +4,7 @@ const EventEmitter = require("../core/eventemitter");
 const GenericLock = requireModule("utils/generic-lock");
 const TalkStateHandler = requireModule("npc/npc-talk-state-handler");
 
-const FocusHandler = function(conversationHandler) {
+const FocusHandler = function (conversationHandler) {
 
   /*
    * Class FocusHandler
@@ -48,14 +48,14 @@ FocusHandler.prototype.constructor = FocusHandler;
 
 FocusHandler.prototype.IDLE_TIMEOUT_FRAMES = 250;
 
-FocusHandler.prototype.extendFocus = function(duration) {
+FocusHandler.prototype.extendFocus = function (duration) {
 
   /*
    * Function FocusHandler.extendFocus
    * Extend the focus of the NPC by a given or default amount
    */
 
-  if(!this.isInConversation()) {
+  if (!this.isInConversation()) {
     return;
   }
 
@@ -64,14 +64,18 @@ FocusHandler.prototype.extendFocus = function(duration) {
 
 }
 
-FocusHandler.prototype.setFocus = function(player) {
+FocusHandler.prototype.setFocus = function (player) {
 
   /*
    * Function FocusHandler.setFocus
    * Sets the focus of a NPC to the player
    */
 
-  if(this.isInConversation()) {
+  console.log("=== FocusHandler.setFocus called ===");
+  console.log("Player:", player.name);
+
+  if (this.isInConversation()) {
+    console.log("Already in conversation, returning early");
     return;
   }
 
@@ -79,15 +83,20 @@ FocusHandler.prototype.setFocus = function(player) {
   this.__conversationFocus = player;
 
   // Subscribe to player movement and logout events
-  this.__conversationFocusMovementEvent = player.on("move", this.emit.bind(this, "focusMove"))
+  console.log("Subscribing to player 'move' event...");
+  this.__conversationFocusMovementEvent = player.on("move", this.emit.bind(this, "focusMove"));
+  console.log("Movement event callback stored:", this.__conversationFocusMovementEvent ? "yes" : "no");
+
   this.__conversationFocusLogoutEvent = player.on("logout", this.emit.bind(this, "focusLogout"));
 
   // Set up an idle event
   this.extendFocus(this.IDLE_TIMEOUT_FRAMES);
 
+  console.log("=== FocusHandler.setFocus completed ===");
+
 }
 
-FocusHandler.prototype.getTalkStateHandler = function() {
+FocusHandler.prototype.getTalkStateHandler = function () {
 
   /*
    * Function FocusHandler.getTalkStateHandler
@@ -98,7 +107,7 @@ FocusHandler.prototype.getTalkStateHandler = function() {
 
 }
 
-FocusHandler.prototype.reset = function() {
+FocusHandler.prototype.reset = function () {
 
   /*
    * Function FocusHandler.reset
@@ -106,7 +115,7 @@ FocusHandler.prototype.reset = function() {
    */
 
   // Has no focus
-  if(!this.isInConversation()) {
+  if (!this.isInConversation()) {
     return;
   }
 
@@ -126,7 +135,7 @@ FocusHandler.prototype.reset = function() {
 
 }
 
-FocusHandler.prototype.getFocus = function() {
+FocusHandler.prototype.getFocus = function () {
 
   /*
    * Function ConversationHandler.getFocus
@@ -137,7 +146,7 @@ FocusHandler.prototype.getFocus = function() {
 
 }
 
-FocusHandler.prototype.isInConversation = function(player) {
+FocusHandler.prototype.isInConversation = function (player) {
 
   /*
    * Function ConversationHandler.isInConversation
@@ -147,7 +156,7 @@ FocusHandler.prototype.isInConversation = function(player) {
   let focus = this.getFocus();
 
   // No parameter passed: check if in any conversation
-  if(player === undefined) {
+  if (player === undefined) {
     return focus !== null;
   }
 

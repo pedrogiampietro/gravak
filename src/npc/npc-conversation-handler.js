@@ -91,7 +91,11 @@ ConversationHandler.prototype.__handleFocusMove = function () {
    * Callback that is fired when the focus moves around 
    */
 
+  console.log("=== NPC __handleFocusMove triggered ===");
+
   let focus = this.getFocus();
+
+  console.log("NPC:", this.npc.name, "Focus:", focus ? focus.name : "null");
 
   // Always face the focus
   this.npc.faceCreature(focus);

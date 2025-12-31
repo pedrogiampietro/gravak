@@ -3,6 +3,7 @@
 const Actions = requireModule("utils/actions");
 const TargetHandler = requireModule("combat/target-handler");
 const Condition = requireModule("combat/condition");
+const Pathfinder = requireModule("utils/pathfinder");
 
 const ActionHandler = function (player) {
 
@@ -19,6 +20,7 @@ const ActionHandler = function (player) {
   // Add the available player actions that are checked every server tick
   this.actions.add(this.handleActionAttack);
   this.actions.add(this.handleActionRegeneration);
+  this.actions.add(this.handleActionChase);
 
 }
 
@@ -114,6 +116,77 @@ ActionHandler.prototype.handleActionRegeneration = function () {
   }
 
   this.actions.lock(this.handleActionRegeneration, this.REGENERATION_DURATION);
+
+}
+
+ActionHandler.prototype.CHASE_DURATION = 5;
+
+ActionHandler.prototype.handleActionChase = function () {
+
+  /*
+   * Function Player.handleActionChase
+   * Handles automatic chasing of target when chase mode is enabled
+   */
+
+  // Always lock to prevent spamming
+  this.actions.lock(this.handleActionChase, this.CHASE_DURATION);
+
+  // Only chase if chase mode is CHASE (1)
+  if (this.__player.chaseMode !== CONST.CHASE_MODE.CHASE) {
+    return;
+  }
+
+  // No target to chase
+  if (!this.targetHandler.hasTarget()) {
+    return;
+  }
+
+  // Prevent chase if dead
+  if (this.__player.isDead) {
+    return;
+  }
+
+  // Already moving, don't interrupt
+  if (this.__player.movementHandler.isMoving()) {
+    return;
+  }
+
+  // Already besides target, no need to chase
+  if (this.targetHandler.isBesidesTarget()) {
+    return;
+  }
+
+  // Check if the target is still valid
+  let target = this.targetHandler.getTarget();
+  if (!gameServer.world.creatureHandler.isCreatureActive(target)) {
+    return;
+  }
+
+  // Use A* pathfinding to find path to target (stop at adjacent tile)
+  let path = gameServer.world.findPath(
+    this.__player,
+    this.__player.getPosition(),
+    target.getPosition(),
+    Pathfinder.prototype.ADJACENT
+  );
+
+  // No path found
+  if (path.length === 0) {
+    return;
+  }
+
+  // Get the next tile to move to (last in path since path is reversed)
+  let nextTile = path.pop();
+
+  if (nextTile === null) {
+    return;
+  }
+
+  // Calculate the direction to move
+  let direction = this.__player.getPosition().getFacingDirection(nextTile.position);
+
+  // Move the player in that direction
+  this.__player.movementHandler.handleMovement(direction);
 
 }
 

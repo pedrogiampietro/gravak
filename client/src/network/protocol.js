@@ -364,3 +364,35 @@ const LatencyPacket = function () {
 
 LatencyPacket.prototype = Object.create(PacketWriter.prototype);
 LatencyPacket.prototype.constructor = LatencyPacket;
+
+const FightModePacket = function (mode) {
+
+  /*
+   * Class FightModePacket
+   * Wrapper for fight mode change packet (OFFENSIVE, BALANCED, DEFENSIVE)
+   */
+
+  PacketWriter.call(this, CONST.PROTOCOL.CLIENT.FIGHT_MODE, 1);
+
+  this.writeUInt8(mode);
+
+}
+
+FightModePacket.prototype = Object.create(PacketWriter.prototype);
+FightModePacket.prototype.constructor = FightModePacket;
+
+const ChaseModePacket = function (mode) {
+
+  /*
+   * Class ChaseModePacket
+   * Wrapper for chase mode change packet (STAND, CHASE)
+   */
+
+  PacketWriter.call(this, CONST.PROTOCOL.CLIENT.CHASE_MODE, 1);
+
+  this.writeUInt8(mode);
+
+}
+
+ChaseModePacket.prototype = Object.create(PacketWriter.prototype);
+ChaseModePacket.prototype.constructor = ChaseModePacket;

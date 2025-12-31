@@ -74,6 +74,12 @@ const Player = function (data) {
 
   // Last visited
   this.lastVisit = data.lastVisit;
+
+  // Combat mode state (default to balanced)
+  this.fightMode = CONST.FIGHT_MODE.BALANCED;
+
+  // Chase mode state (default to stand)
+  this.chaseMode = CONST.CHASE_MODE.STAND;
 };
 
 Player.prototype = Object.create(Creature.prototype);
@@ -794,7 +800,7 @@ Player.prototype.getAttack = function () {
   const BALANCED = 1;
   const DEFENSIVE = 2;
 
-  let mode = OFFENSIVE;
+  let mode = this.fightMode;
 
   let B = this.getBaseDamage();
   let W = 20;
@@ -820,6 +826,42 @@ Player.prototype.getDefense = function () {
    */
 
   return this.getProperty(CONST.PROPERTIES.DEFENSE);
+};
+
+Player.prototype.setFightMode = function (mode) {
+  /*
+   * Function Player.setFightMode
+   * Sets the combat fight mode (OFFENSIVE, BALANCED, DEFENSIVE)
+   */
+
+  // Validate the mode
+  if (mode < CONST.FIGHT_MODE.OFFENSIVE || mode > CONST.FIGHT_MODE.DEFENSIVE) {
+    return;
+  }
+
+  this.fightMode = mode;
+
+  // Log for debugging
+  let modeName = ["OFFENSIVE", "BALANCED", "DEFENSIVE"][mode];
+  console.log(`[FIGHT_MODE] ${this.name} changed to ${modeName}`);
+};
+
+Player.prototype.setChaseMode = function (mode) {
+  /*
+   * Function Player.setChaseMode
+   * Sets the chase mode (STAND, CHASE)
+   */
+
+  // Validate the mode
+  if (mode < CONST.CHASE_MODE.STAND || mode > CONST.CHASE_MODE.CHASE) {
+    return;
+  }
+
+  this.chaseMode = mode;
+
+  // Log for debugging
+  let modeName = ["STAND", "CHASE"][mode];
+  console.log(`[CHASE_MODE] ${this.name} changed to ${modeName}`);
 };
 
 Player.prototype.purchase = function (offer, count) {

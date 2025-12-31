@@ -21,6 +21,9 @@ const Interface = function () {
   // Manager for hotbar
   this.hotbarManager = new HotbarManager();
 
+  // Manager for fight mode selector (Full Attack, Balanced, Full Defense)
+  this.fightModeSelector = new FightModeSelector();
+
   // Manager for notifications
   this.notificationManager = new NotificationManager();
 

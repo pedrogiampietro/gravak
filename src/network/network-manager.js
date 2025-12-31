@@ -218,6 +218,16 @@ NetworkManager.prototype.__readPacket = function (gameSocket, packet) {
       return gameSocket.player.movementHandler.handleMovement(packet.readUInt8());
     }
 
+    // Fight mode change (OFFENSIVE, BALANCED, DEFENSIVE)
+    case CONST.PROTOCOL.CLIENT.FIGHT_MODE: {
+      return gameSocket.player.setFightMode(packet.readUInt8());
+    }
+
+    // Chase mode change (STAND, CHASE)
+    case CONST.PROTOCOL.CLIENT.CHASE_MODE: {
+      return gameSocket.player.setChaseMode(packet.readUInt8());
+    }
+
     // Use item on creature (from battle list)
     case CONST.PROTOCOL.CLIENT.THING_USE_ON_CREATURE: {
       return gameSocket.player.useHandler.handleActionUseOnCreature(packet.readItemUseOnCreature(gameSocket.player));

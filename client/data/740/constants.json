@@ -35,7 +35,9 @@
       "FRIEND_ADD": 17,
       "BUY_OFFER": 18,
       "OPEN_KEYRING": 19,
-      "THING_USE_ON_CREATURE": 20
+      "THING_USE_ON_CREATURE": 20,
+      "FIGHT_MODE": 21,
+      "CHASE_MODE": 22
     },
     "SERVER": {
       "LATENCY": 0,
@@ -94,6 +96,15 @@
     "SOUTH_WEST": 5,
     "NORTH_EAST": 6,
     "NORTH_WEST": 7
+  },
+  "FIGHT_MODE": {
+    "OFFENSIVE": 0,
+    "BALANCED": 1,
+    "DEFENSIVE": 2
+  },
+  "CHASE_MODE": {
+    "STAND": 0,
+    "CHASE": 1
   },
   "TYPES": {
     "PLAYER": 0,

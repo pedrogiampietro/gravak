@@ -44,7 +44,7 @@ PacketHandler.prototype.handlePropertyChange = function (packet) {
       creature.speed = packet.value;
       return;
     case CONST.PROPERTIES.DIRECTION:
-      return creature.__setLookDirection(packet.value);
+      return creature.setTurnBuffer(packet.value);
     case 30: // LEVEL
       if (creature === gameClient.player) {
         // Store the level for experience percentage calculation

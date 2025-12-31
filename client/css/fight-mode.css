@@ -1,0 +1,109 @@
+/* Fight Mode Selector Styles */
+
+/* This container is now inside an equipment-column */
+.fight-mode-selector {
+  display: flex;
+  flex-direction: column;
+  /* Vertical layout */
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  /* More spacing between buttons */
+  padding: 4px;
+  margin-left: 4px;
+  /* Space from inventory slots */
+  background: none;
+  /* remove background to blend with equipment panel */
+}
+
+.fight-mode-btn,
+.chase-mode-btn {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  padding: 0;
+  border: 1px solid #444;
+  /* Darker border */
+  border-radius: 4px;
+  /* Softer corners */
+  background-color: #222;
+  /* Darker background */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  color: #888;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fight-mode-btn svg,
+.chase-mode-btn svg {
+  pointer-events: none;
+}
+
+.fight-mode-btn:hover,
+.chase-mode-btn:hover {
+  border-color: #777;
+  background-color: #333;
+  color: #fff;
+  transform: scale(1.1);
+  /* Slight zoom effect */
+}
+
+.fight-mode-btn.active,
+.chase-mode-btn.active {
+  background-color: #333;
+  color: #fff;
+  z-index: 1;
+  /* Bring above */
+}
+
+/* Specific styling for active states to make them "glow" */
+
+/* Offensive - Red Glow */
+.fight-mode-btn[data-mode="offensive"].active {
+  border-color: #ff3333;
+  box-shadow: 0 0 8px rgba(255, 51, 51, 0.6);
+  color: #ffcccc;
+}
+
+/* Balanced - Yellow/Orange Glow */
+.fight-mode-btn[data-mode="balanced"].active {
+  border-color: #ffaa00;
+  box-shadow: 0 0 8px rgba(255, 170, 0, 0.6);
+  color: #ffeedd;
+}
+
+/* Defensive - Green Glow */
+.fight-mode-btn[data-mode="defensive"].active {
+  border-color: #33ff33;
+  box-shadow: 0 0 8px rgba(51, 255, 51, 0.6);
+  color: #ccffcc;
+}
+
+/* Stand - Gray/White Glow */
+.chase-mode-btn[data-chase="stand"].active {
+  border-color: #aaaaaa;
+  box-shadow: 0 0 8px rgba(170, 170, 170, 0.6);
+  color: #ffffff;
+}
+
+/* Chase - Blue Glow */
+.chase-mode-btn[data-chase="chase"].active {
+  border-color: #3399ff;
+  box-shadow: 0 0 8px rgba(51, 153, 255, 0.6);
+  color: #cceeff;
+}
+
+/* Separator between fight modes and chase modes */
+.mode-separator {
+  height: 1px;
+  width: 100%;
+  background-color: #444;
+  margin: 2px 0;
+  display: block;
+}
