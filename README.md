@@ -1,4 +1,4 @@
-# 🎮 Tibia Browser Engine
+# 🎮 Gravak
 
 An **HTML5 Open Tibia Client & Server** built with modern web technologies. Play Tibia 7.4 directly in your browser!
 
