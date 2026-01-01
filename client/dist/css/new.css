@@ -293,6 +293,7 @@ button.symbol-button {
   justify-content: center;
   flex: 1 1 auto;
   min-width: 0;
+  overflow: hidden;
 }
 
 #clock-time {
@@ -316,6 +317,7 @@ button.symbol-button {
   justify-content: center;
   flex: 1 1 auto;
   background-image: url("/png/bg.png");
+  overflow: hidden;
 }
 
 .main .lower {

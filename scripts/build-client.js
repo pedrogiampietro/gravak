@@ -89,6 +89,8 @@ async function build() {
     await fs.copy(path.join(CLIENT_DIR, 'data'), path.join(DIST_DIR, 'data'));
     await fs.copy(path.join(CLIENT_DIR, 'png'), path.join(DIST_DIR, 'png'));
     await fs.copy(path.join(CLIENT_DIR, 'sounds'), path.join(DIST_DIR, 'sounds'));
+    await fs.copy(path.join(CLIENT_DIR, 'definitions.json'), path.join(DIST_DIR, 'definitions.json'));
+    console.log('Copied definitions.json');
 
     // 7. Bundle and Minify CSS
     console.log('Bundling CSS...');
