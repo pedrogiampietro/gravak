@@ -11,8 +11,8 @@ const CharacterCreator = function () {
    */
 
   this.blueprint = new Object({
-    "position": new Position(32097, 32215, 8),
-    "templePosition": new Position(32097, 32215, 8),
+    "position": new Position(32097, 32215, 7),
+    "templePosition": new Position(32097, 32215, 7),
     "properties": {
       "vocation": CONST.VOCATION.NONE,
       "role": CONST.ROLES.NONE,
