@@ -417,6 +417,130 @@ NetworkManager.prototype.connect = function () {
 
 }
 
+NetworkManager.prototype.connectWithWallet = async function (characterName) {
+
+  /*
+   * Function NetworkManager.connectWithWallet
+   * Authenticates via Phantom wallet (Solana) instead of username/password.
+   * If characterName is provided it is sent for new wallet registration.
+   */
+
+  const statusEl = document.getElementById("phantom-status");
+  const setStatus = (msg, color) => { if (statusEl) { statusEl.textContent = msg; statusEl.style.color = color || "#aaa"; } };
+
+  // Check Phantom is installed
+  if (!window.solana || !window.solana.isPhantom) {
+    setStatus("Phantom not found. Install it at phantom.app", "#f66");
+    return;
+  }
+
+  try {
+    // Connect wallet (shows Phantom popup if not already connected)
+    setStatus("Connecting wallet…");
+    await window.solana.connect();
+    const publicKey = window.solana.publicKey.toString();
+
+    // Build timestamped challenge message
+    const message = "Gravak login: " + Date.now();
+    const msgBytes = new TextEncoder().encode(message);
+
+    // Ask user to sign the challenge
+    setStatus("Please sign the message in Phantom…");
+    const { signature } = await window.solana.signMessage(msgBytes, "utf8");
+
+    // Convert Uint8Array signature to base64 (safe for all array sizes)
+    const sigBase64 = btoa(Array.from(signature).map(b => String.fromCharCode(b)).join(""));
+
+    setStatus("Authenticating…");
+
+    // POST to server wallet endpoint (proxied via client-server.py /api/login/wallet)
+    const body = { publicKey, signature: sigBase64, message };
+    if (characterName) body.name = characterName;
+
+    const response = await fetch("/api/login/wallet", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body)
+    });
+
+    // New wallet needs a name
+    if (response.status === 422) {
+      const json = await response.json().catch(() => ({}));
+      if (json.needsName) {
+        setStatus("Enter your character name below ↓", "#ffcc00");
+
+        // Show inline name picker inside the login modal
+        let picker = document.getElementById("wallet-inline-picker");
+        if (!picker) {
+          picker = document.createElement("div");
+          picker.id = "wallet-inline-picker";
+          picker.style.cssText = "margin-top:8px; text-align:center;";
+          picker.innerHTML =
+            '<input id="wallet-name-input" type="text" placeholder="Character name (letters only)" ' +
+            'maxlength="20" style="width:90%; padding:5px; background:#222; color:#fff; border:1px solid #666; border-radius:3px;">' +
+            '<div id="wallet-name-err" style="font-size:11px; color:#f44; min-height:14px; margin-top:3px;"></div>' +
+            '<button id="wallet-name-ok" style="margin-top:5px; padding:5px 18px; background:#512da8; color:#fff; border:none; border-radius:3px; cursor:pointer;">Create Character</button>';
+
+          // Insert right after the Phantom status line
+          const statusEl2 = document.getElementById("phantom-status");
+          if (statusEl2 && statusEl2.parentNode) {
+            statusEl2.parentNode.insertBefore(picker, statusEl2.nextSibling);
+          }
+        }
+
+        picker.style.display = "block";
+        const nameInput = document.getElementById("wallet-name-input");
+        const nameErr   = document.getElementById("wallet-name-err");
+        const nameOk    = document.getElementById("wallet-name-ok");
+        nameInput.value = "";
+        nameErr.textContent = "";
+        nameInput.focus();
+
+        nameOk.onclick = () => {
+          const chosen = nameInput.value.trim();
+          if (!/^[a-zA-Z]{2,20}$/.test(chosen)) {
+            nameErr.textContent = "Letters only, 2–20 characters.";
+            return;
+          }
+          picker.style.display = "none";
+          setStatus("Creating character…", "#aaa");
+          this.connectWithWallet(chosen);
+        };
+
+        // Also allow Enter key
+        nameInput.onkeydown = (e) => { if (e.key === "Enter") nameOk.click(); };
+        return;
+      }
+    }
+
+    if (response.status === 409) {
+      setStatus("Name already taken. Try again.", "#f66");
+      return;
+    }
+
+    if (!response.ok) {
+      setStatus("Login failed (" + response.status + "). Try again.", "#f66");
+      return;
+    }
+
+    const json = await response.json();
+    setStatus("Wallet connected! Entering world…", "#4f4");
+
+    // Open WebSocket — identical to classic login flow
+    this.socket = new WebSocket(this.getConnectionString(json));
+    this.socket.binaryType = "arraybuffer";
+    this.socket.onopen = this.__handleConnection.bind(this);
+    this.socket.onmessage = this.__handlePacket.bind(this);
+    this.socket.onclose = this.__handleClose.bind(this);
+    this.socket.onerror = this.__handleError.bind(this);
+
+  } catch (err) {
+    // User rejected in Phantom or other error
+    setStatus(err.message || "Connection cancelled.", "#f88");
+  }
+
+}
+
 NetworkManager.prototype.__handlePacket = function (event) {
 
   /*

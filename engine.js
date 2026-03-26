@@ -11,6 +11,16 @@ if (require.main === module) {
    * Function called when the engine script is executed
    */
 
+  // Prevent any unhandled error from crashing the whole server
+  process.on("uncaughtException", function(err) {
+    console.error("[UNCAUGHT EXCEPTION] Server kept alive:", err.message);
+    console.error(err.stack);
+  });
+
+  process.on("unhandledRejection", function(reason) {
+    console.error("[UNHANDLED REJECTION] Server kept alive:", reason);
+  });
+
   console.log("Starting NodeJS Gravak Open Tibia Server");
   console.log("Creating server with version %s".format(CONFIG.SERVER.CLIENT_VERSION));
   console.log("Setting data directory to %s".format(getDataFile("")));

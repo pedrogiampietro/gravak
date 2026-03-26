@@ -8,7 +8,7 @@ module.exports = function oracle() {
     // Configuration - Temple positions for each town
     const config = {
         minLevel: 8,
-        maxLevel: 10,
+        maxLevel: 50,
         towns: {
             "venore": {
                 name: "Venore",

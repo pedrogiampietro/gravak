@@ -330,13 +330,13 @@
     let infoPanel = createElement("div", "info-panel", content);
 
     let title = createElement("div", "info-title", infoPanel);
-    title.innerText = "Welcome to Gravak";
+    title.innerText = "Welcome to Zillaz";
 
     let text = createElement("div", "info-text", infoPanel);
-    text.innerHTML = "Preparing the world for your arrival.<br>Sharpen your swords and ready your spells!";
+    text.innerHTML = "Preparing the world for your arrival.<br>Connect your wallet and enter the world!";
 
     let update = createElement("div", "update-item", infoPanel);
-    update.innerText = "Latest Update: New spells & UI enhancements";
+    update.innerText = "© 2025 Zillaz. All rights reserved.";
     // ---------------------------------------------------------
 
     // UI Layer (Progress bar)
@@ -352,9 +352,9 @@
 
     // Random simple tips
     const tips = [
-      "Tip: Use 'exura' to heal quickly.",
-      "Tip: Right-click adds items to trade.",
-      "Tip: Explore the depths for rare loot.",
+      "Tip: Connect your Phantom wallet to get started.",
+      "Tip: Right-click items to trade.",
+      "Tip: Explore the world for rare loot.",
       "Tip: Press Enter to chat."
     ];
     // Rotate tip every few seconds? Or just show one randomized

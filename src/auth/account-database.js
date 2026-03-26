@@ -250,6 +250,59 @@ AccountDatabase.prototype.getAccountCredentials = async function (account, callb
   }
 };
 
+AccountDatabase.prototype.getAccountByWallet = async function (walletAddress, callback) {
+  /*
+   * Function AccountDatabase.getAccountByWallet
+   * Returns the account row for a given Solana wallet address (public key)
+   */
+
+  try {
+    const result = await this.db
+      .select({ account: accounts.account, name: accounts.name })
+      .from(accounts)
+      .where(eq(accounts.walletAddress, walletAddress))
+      .limit(1);
+
+    if (result.length === 0) {
+      return callback(null, undefined);
+    }
+
+    callback(null, result[0]);
+  } catch (error) {
+    console.error("Error getting account by wallet:", error);
+    callback(error, null);
+  }
+};
+
+AccountDatabase.prototype.createWalletAccount = async function (walletAddress, characterName, callback) {
+  /*
+   * Function AccountDatabase.createWalletAccount
+   * Creates a new account linked to a Solana wallet (no password)
+   * walletAddress is used as the internal account identifier
+   */
+
+  try {
+    const name = characterName.charAt(0).toUpperCase() + characterName.slice(1).toLowerCase();
+    const character = this.characterCreator.create(name, "male");
+
+    await this.db.insert(accounts).values({
+      account: walletAddress,           // wallet pubkey as account id
+      hash: null,                       // no password for wallet accounts
+      walletAddress: walletAddress,
+      name: name,
+      character: JSON.stringify(character),
+    });
+
+    callback(null, { account: walletAddress, name });
+  } catch (insertError) {
+    if (insertError.code === "23505") {
+      return callback(409, null);
+    }
+    console.error("Error creating wallet account:", insertError);
+    callback(500, null);
+  }
+};
+
 AccountDatabase.prototype.updateCharacterInbox = async function (ownerName, item, callback) {
   /*
    * Function AccountDatabase.updateCharacterInbox

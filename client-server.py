@@ -37,18 +37,27 @@ class ProxyHandler(http.server.SimpleHTTPRequestHandler):
             super().do_OPTIONS()
     
     def _proxy_request(self, method):
-        """Proxy the request to the login server"""
+        """Proxy the request to the login server, forwarding body and Content-Type"""
         # Remove /api/login prefix and keep query string
         path = self.path.replace("/api/login", "")
         if not path:
             path = "/"
-        
+
         target_url = self.login_server + path
-        
+
+        # Read request body for POST requests
+        body = None
+        content_type = self.headers.get("Content-Type", "")
+        content_length = int(self.headers.get("Content-Length", 0))
+        if content_length > 0:
+            body = self.rfile.read(content_length)
+
         try:
-            # Create request
-            req = urllib.request.Request(target_url, method=method)
-            
+            # Create request, forwarding body and Content-Type
+            req = urllib.request.Request(target_url, data=body, method=method)
+            if content_type:
+                req.add_header("Content-Type", content_type)
+
             # Forward the request
             with urllib.request.urlopen(req, timeout=10) as response:
                 # Send response back to client
@@ -57,11 +66,18 @@ class ProxyHandler(http.server.SimpleHTTPRequestHandler):
                 self.send_header("Content-Type", response.headers.get("Content-Type", "application/json"))
                 self.end_headers()
                 self.wfile.write(response.read())
-                
+
         except urllib.error.HTTPError as e:
+            body_content = b""
+            try:
+                body_content = e.read()
+            except Exception:
+                pass
             self.send_response(e.code)
             self.send_header("Access-Control-Allow-Origin", "*")
+            self.send_header("Content-Type", "application/json")
             self.end_headers()
+            self.wfile.write(body_content)
         except urllib.error.URLError as e:
             self.send_response(503)
             self.send_header("Access-Control-Allow-Origin", "*")
@@ -84,7 +100,7 @@ if __name__ == "__main__":
 
   # Address where the resources are hosted
   ADDRESS = ("0.0.0.0", 8000)
-  LOGIN_SERVER = "http://localhost:1337"
+  LOGIN_SERVER = "http://127.0.0.1:1337"
 
   # Parse input
   if len(sys.argv) == 1:

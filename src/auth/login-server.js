@@ -5,6 +5,8 @@ const crypto = require("crypto");
 const http = require("http");
 const fs = require("fs");
 const url = require("url");
+const nacl = require("tweetnacl");
+const bs58 = require("bs58").default;
 
 const AccountDatabase = requireModule("auth/account-database");
 
@@ -94,7 +96,7 @@ LoginServer.prototype.__isValidCreateAccount = function (queryObject) {
 
   /*
    * LoginServer.__isValidCreateAccount
-   * Returns true if the request to create the account is valid 
+   * Returns true if the request to create the account is valid
    */
 
   for (let property of ["account", "password", "name", "sex"]) {
@@ -146,6 +148,104 @@ LoginServer.prototype.__createAccount = function (queryObject, response) {
 
 }
 
+LoginServer.prototype.__handleWalletLogin = function (body, response) {
+
+  /*
+   * LoginServer.__handleWalletLogin
+   * Authenticates a Solana Phantom wallet login.
+   * Verifies Ed25519 signature, then auto-creates or loads the account.
+   *
+   * Expected body: { publicKey, signature (base64), message, name? }
+   */
+
+  let { publicKey, signature, message, name } = body;
+
+  // Validate required fields
+  if (!publicKey || !signature || !message) {
+    response.statusCode = 400;
+    response.end(JSON.stringify({ error: "Missing publicKey, signature, or message" }));
+    return;
+  }
+
+  // Replay-attack protection: message must be "Gravak login: {timestamp}" within ±30s
+  const match = message.match(/^Gravak login: (\d+)$/);
+  if (!match) {
+    response.statusCode = 400;
+    response.end(JSON.stringify({ error: "Invalid message format" }));
+    return;
+  }
+  const msgTimestamp = parseInt(match[1], 10);
+  if (Math.abs(Date.now() - msgTimestamp) > 30000) {
+    response.statusCode = 401;
+    response.end(JSON.stringify({ error: "Message expired" }));
+    return;
+  }
+
+  // Verify Ed25519 signature
+  let valid = false;
+  try {
+    const msgBytes = Buffer.from(message);
+    const sigBytes = Buffer.from(signature, "base64");
+    const pkBytes = bs58.decode(publicKey);
+    valid = nacl.sign.detached.verify(msgBytes, sigBytes, pkBytes);
+  } catch (err) {
+    response.statusCode = 400;
+    response.end(JSON.stringify({ error: "Invalid signature encoding" }));
+    return;
+  }
+
+  if (!valid) {
+    response.statusCode = 401;
+    response.end(JSON.stringify({ error: "Signature verification failed" }));
+    return;
+  }
+
+  // Look up existing wallet account
+  this.accountDatabase.getAccountByWallet(publicKey, function (error, existing) {
+    if (error) {
+      response.statusCode = 500;
+      return response.end();
+    }
+
+    // Wallet already registered — return token directly
+    if (existing) {
+      response.writeHead(200, { "Content-Type": "application/json" });
+      return response.end(JSON.stringify({
+        "token": Buffer.from(JSON.stringify(this.__generateToken(existing.account))).toString("base64"),
+        "host": process.env.EXTERNAL_HOST || CONFIG.SERVER.EXTERNAL_HOST
+      }));
+    }
+
+    // New wallet — name is required
+    if (!name || !/^[a-zA-Z]{2,20}$/.test(name)) {
+      response.statusCode = 422;
+      response.writeHead(422, { "Content-Type": "application/json" });
+      return response.end(JSON.stringify({ error: "Name required for new wallet", needsName: true }));
+    }
+
+    // Create new wallet account
+    this.accountDatabase.createWalletAccount(publicKey, name, function (error, created) {
+      if (error === 409) {
+        response.statusCode = 409;
+        response.end(JSON.stringify({ error: "Name already taken" }));
+        return;
+      }
+      if (error) {
+        response.statusCode = 500;
+        return response.end();
+      }
+
+      response.writeHead(200, { "Content-Type": "application/json" });
+      response.end(JSON.stringify({
+        "token": Buffer.from(JSON.stringify(this.__generateToken(created.account))).toString("base64"),
+        "host": process.env.EXTERNAL_HOST || CONFIG.SERVER.EXTERNAL_HOST
+      }));
+    }.bind(this));
+
+  }.bind(this));
+
+}
+
 LoginServer.prototype.__handleRequest = function (request, response) {
 
   /*
@@ -158,8 +258,15 @@ LoginServer.prototype.__handleRequest = function (request, response) {
   // Enabled CORS to allow requests from JavaScript
   response.setHeader("Access-Control-Allow-Origin", "*");
   response.setHeader("Access-Control-Allow-Methods", "OPTIONS, GET, POST");
+  response.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
-  // Only GET (for tokens) and POST (for account creation)
+  // Handle CORS preflight
+  if (request.method === "OPTIONS") {
+    response.statusCode = 204;
+    return response.end();
+  }
+
+  // Only GET (for tokens) and POST (for account creation / wallet login)
   if (request.method !== "GET" && request.method !== "POST") {
     response.statusCode = 501;
     return response.end();
@@ -167,6 +274,23 @@ LoginServer.prototype.__handleRequest = function (request, response) {
 
   // Data submitted in the querystring
   let requestObject = url.parse(request.url, true);
+
+  // Wallet login endpoint
+  if (requestObject.pathname === "/wallet") {
+    if (request.method !== "POST") {
+      response.statusCode = 405;
+      return response.end();
+    }
+
+    let rawBody = "";
+    request.on("data", chunk => rawBody += chunk);
+    request.on("end", () => {
+      let body = {};
+      try { body = JSON.parse(rawBody); } catch(e) {}
+      this.__handleWalletLogin(body, response);
+    });
+    return;
+  }
 
   if (requestObject.pathname !== "/") {
     response.statusCode = 404;
@@ -194,6 +318,12 @@ LoginServer.prototype.__getAccount = function (queryObject, response) {
 
     // Does not exist
     if (result === undefined) {
+      response.statusCode = 401;
+      return response.end();
+    }
+
+    // Wallet-only account has no hash
+    if (!result.hash) {
       response.statusCode = 401;
       return response.end();
     }
