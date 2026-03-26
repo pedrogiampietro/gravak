@@ -42,11 +42,11 @@ DefaultChannel.prototype.send = function (player, packet) {
 
   // Whispers
   if (packet.loudness === 0) {
-    return player.internalCreatureWhisper(message, color);
+    return player.speechHandler.internalCreatureWhisper(message, color);
   }
 
   if (packet.loudness === 2) {
-    return player.internalCreatureYell(message, color);
+    return player.speechHandler.internalCreatureYell(message, color);
   }
 
   // Write to the default game screen and the default chat channel

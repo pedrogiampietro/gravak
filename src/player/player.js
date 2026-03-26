@@ -566,10 +566,63 @@ Player.prototype.handleDeath = function () {
   if (corpse !== null) {
     gameServer.world.addTopThing(this.getPosition(), corpse);
     gameServer.world.addSplash(2016, this.getPosition(), corpse.getFluidType());
+
+    // --- Tibia classic: drop backpack + random equipment into corpse ---
+    // 1. Always drop the backpack
+    let backpack = this.containerManager.equipment.peekIndex(CONST.EQUIPMENT.BACKPACK);
+    if (backpack !== null) {
+      this.containerManager.equipment.removeIndex(CONST.EQUIPMENT.BACKPACK);
+      corpse.addFirstEmpty(backpack);
+    }
+
+    // 2. Randomly drop equipped items (each slot has ~20% drop chance, classic formula)
+    const dropSlots = [
+      CONST.EQUIPMENT.HELMET,
+      CONST.EQUIPMENT.ARMOR,
+      CONST.EQUIPMENT.LEGS,
+      CONST.EQUIPMENT.BOOTS,
+      CONST.EQUIPMENT.RIGHT,
+      CONST.EQUIPMENT.LEFT,
+      CONST.EQUIPMENT.NECKLACE,
+      CONST.EQUIPMENT.RING,
+      CONST.EQUIPMENT.QUIVER
+    ];
+
+    dropSlots.forEach(slot => {
+      let item = this.containerManager.equipment.peekIndex(slot);
+      if (item !== null && Math.random() < 0.2) {
+        this.containerManager.equipment.removeIndex(slot);
+        corpse.addFirstEmpty(item);
+      }
+    });
   }
 
   // Mark that player should respawn at temple on next login
   this.__spawnAtTemple = true;
+
+  // Auto-teleport to temple after 3 seconds
+  setTimeout(() => {
+    try {
+      if (!this.socketHandler || !this.socketHandler.__controllingSocket) {
+        return;
+      }
+
+      // Restore health and mana using setProperty (the correct API)
+      let healthMax = this.getProperty(CONST.PROPERTIES.HEALTH_MAX);
+      let manaMax = this.getProperty(CONST.PROPERTIES.MANA_MAX);
+      this.setProperty(CONST.PROPERTIES.HEALTH, healthMax);
+      this.setProperty(CONST.PROPERTIES.MANA, manaMax);
+      this.isDead = false;
+      this.__spawnAtTemple = false;
+
+      // Teleport to temple
+      gameServer.world.sendMagicEffect(this.templePosition, CONST.EFFECT.MAGIC.TELEPORT);
+      gameServer.world.creatureHandler.teleportCreature(this, this.templePosition);
+      gameServer.world.sendMagicEffect(this.templePosition, CONST.EFFECT.MAGIC.TELEPORT);
+    } catch (err) {
+      console.error("[handleDeath] Error during temple respawn:", err.message);
+    }
+  }, 3000);
 };
 
 Player.prototype.consumeAmmunition = function () {

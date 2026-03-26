@@ -1023,6 +1023,14 @@ Interface.prototype.__enableListeners = function () {
     .getElementById("enter-game")
     .addEventListener("click", this.enterGame.bind(this));
 
+  // Phantom wallet connect button
+  const phantomBtn = document.getElementById("connect-phantom");
+  if (phantomBtn) {
+    phantomBtn.addEventListener("click", function () {
+      gameClient.networkManager.connectWithWallet();
+    });
+  }
+
   // Visibility change
   addEventListener("visibilitychange", this.__handleVisibiliyChange.bind(this));
 
